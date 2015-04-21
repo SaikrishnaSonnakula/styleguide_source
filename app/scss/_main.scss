@@ -1,0 +1,36 @@
+//Kae: Do not use Bootstrap icon font.
+//$icon-font-path: "bootstrap-sass-official/assets/fonts/bootstrap/";
+
+// Kae: refer to http://getbootstrap.com/customize/#less-variables for available variables
+// Also refer to bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_scaffolding.scss
+// for variables control the Typography and links
+// Kae: define $lib to set the correct icon and font path in lib development mode.
+// NOTE: all other feature should not define $lib, it's for lib project itself
+$lib: true;
+
+@import "variables"; // KP variables
+
+// Bootstrap
+@import 'bootstrap'; // KP bootstrap options
+@import "bootstrap-jasny";
+
+@import "icon";
+@import "font";
+@import "mixins"; // kp mixin
+
+
+// KP base styles
+@import "base/_layout.scss";
+@import "base/_button.scss";
+@import "base/_color.scss";
+@import "base/_component.scss";
+@import "base/_form.scss";
+@import "base/_typography.scss";
+@import "base/_error.scss";
+
+// KP class/Component
+@import "widgets";
+
+
+////////////////////////////////////////////////////////////////////////////////
+// State: Styles with state (e.g. viewport size) variation

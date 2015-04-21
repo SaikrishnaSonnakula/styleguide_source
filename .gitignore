@@ -1,0 +1,15 @@
+/node_modules
+/bower_components
+/target
+/.requirements_checksum
+/.vagrant
+/npm-debug.log
+/phantomjsdriver.log
+/.idea
+/message-center.iml
+/test/endtoend/screenshots
+/test/coverage/node_modules
+/test/coverage/bower_components
+test/coverage/browser.json
+test/coverage/contract.json
+test/coverage/unit.json

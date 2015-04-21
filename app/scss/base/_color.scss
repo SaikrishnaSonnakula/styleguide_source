@@ -1,0 +1,42 @@
+// Variable colors
+
+$white:					#ffffff;
+
+$gray-darker:            #333333; //bootstrap override
+$gray-dark:              lighten(#000, 20%) !default; //bootstrap override
+$gray:                   #464646; //bootstrap override
+$gray-light:             #636363; //bootstrap override
+$gray-lighter:           #c8c8c8; //bootstrap override
+ 
+$brand-primary:          #005081 !default; //bootstrap override
+$brand-success:          #416020 !default; //bootstrap override
+$brand-info:             #005081 !default; //bootstrap override
+$brand-warning:          #b70e1e !default; //bootstrap override 
+$brand-danger:           #b70e1e !default; //bootstrap override 
+$brand-warning-bg:       #f2dede;          //bootstrap override 
+$validation-red:         #a94442;
+
+
+// Background colors 
+$gray-bg:               #ededed;
+$body-bg:               $gray-bg; 
+
+$blue:                  #006D9D;
+$blue-teal:				#005081;
+$blue-light:			#0079AA;
+$blue-dark: 			#005081;
+$blue-link: 			#005EA6;
+
+// Feature colors
+
+$green:					#ABCC39;  //Message center
+$green-light:			#F3F8E2;
+
+$orange:				#FF9F00;  //Appointment center
+$orange-light:			#FFF5E5;
+
+$cyan:					#80C3E6;  //Sign in , Pharmacy Center
+$cyan-light:			#DFF0F9;
+
+$purple:				#A4B1E3;  //Medical records
+$purple-light:			#E4E7F7;

@@ -1,0 +1,51 @@
+// Button variables
+
+
+.kp-button button{ 
+	width:100%
+}
+
+.kp-button .btn-white{
+	color: $blue;
+	background-color:$white;
+	border:1px solid $gray-light;
+}
+
+.kp-button .btn-primary.disabled{
+	color:$gray-darker;
+	background-color:$gray-lighter;
+	border:none;
+	opacity:.5;
+}
+
+.kp-button .btn-primary{
+	border:none;
+}
+
+.kp-button .col-md-6, 
+.kp-button .col-md-12,
+.kp-button .col-sm-6, 
+.kp-button .col-sm-12{padding: 1em 3%}
+
+
+
+
+
+
+
+
+/* two button horizontal small view */
+.kp-button .col-md-6, 
+.kp-button .col-md-12,
+.kp-button .col-sm-6, 
+.kp-button .col-sm-12{
+	padding: 1em 3%
+}
+
+.kp-button .btn-lg{
+	width:100%
+}
+
+.kp-button .btn-primary{
+	border:none;
+}

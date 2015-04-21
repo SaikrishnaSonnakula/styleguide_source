@@ -1,0 +1,27 @@
+// Breakpoint
+@import "breakpoint-sass/stylesheets/breakpoint";
+// We can use all of the Breakpoint control variables with respond-to as well!
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: false;
+
+$breakpoints: add-breakpoint('screen-sm', $screen-sm $screen-md);
+$breakpoints: add-breakpoint('screen-md', $screen-md $screen-lg);
+$breakpoints: add-breakpoint('screen-lg', $screen-lg);
+
+// Clearable input
+input.clearable {
+  background-color: #fff;
+  background-image: url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=);
+  background-repeat: no-repeat;
+  background-position: right -10px center;
+
+  border: 1px solid #999;
+  padding: 3px 18px 3px 4px; /* Use the same right padding (18) in jQ! */
+  border-radius: 3px;
+  transition: background 0.4s;
+}
+.clearable.x  { background-position: right 10px center; }
+.clearable.onX{ cursor: pointer; }
+
+
+

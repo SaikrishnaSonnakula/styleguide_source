@@ -1,0 +1,22 @@
+{
+  "name": "styleguide",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-usemin": "~0.1.10",
+    "grunt-rev": "~0.1.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-concurrent": "v1.0.0",
+    "grunt-bower-requirejs": "2.0.0",
+    "grunt-mkdir": "~0.1.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-sass": "^0.18.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-handlebars": "~0.9.1",
+    "build-plugin": "git+ssh://git@stash.kp.org/rwd/build-plugin.git"
+  }
+}
