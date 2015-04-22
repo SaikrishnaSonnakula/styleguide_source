@@ -18,7 +18,6 @@ $lib: true;
 @import "font";
 @import "mixins"; // kp mixin
 
-
 // KP base styles
 @import "base/_layout.scss";
 @import "base/_button.scss";
@@ -27,10 +26,6 @@ $lib: true;
 @import "base/_form.scss";
 @import "base/_typography.scss";
 @import "base/_error.scss";
-
-// KP class/Component
-@import "widgets";
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // State: Styles with state (e.g. viewport size) variation

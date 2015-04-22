@@ -1,7 +1,4 @@
-$font-path: 'lib/app/font/';
-@if variable-exists(lib) {
-  $font-path: '../font/';
-}
+$font-path: '../font/';
 
 @font-face {
 	font-family: 'Gotham 4r';
