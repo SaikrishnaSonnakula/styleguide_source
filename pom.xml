@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.kp.wpp.utils</groupId><artifactId>parentpom_was8</artifactId><version>3.0.0</version>
+  </parent>
+
+  <groupId>org.kp.rwd</groupId> <artifactId>styleguide</artifactId> <version>${version}</version>
+  <packaging>war</packaging>
+
+  <name>RWD Styleguide</name>
+
+  <organization>
+    <name>Kaiser Permanente - Information Technology</name>
+    <url>http://www.kaiserpermanente.org</url>
+  </organization>
+
+  <scm>
+    <connection>scm:git:ssh://git@stash.kp.org/rwd/styleguide.git</connection>
+    <developerConnection>scm:git:ssh://git@stash.kp.org/rwd/styleguide.git</developerConnection>
+    <url>https://stash.kp.org/projects/RWD/repos/styleguide/browse</url>
+  </scm>
+
+  <build>
+    <plugins>
+      <plugin> <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <webResources>
+            <resource> <directory>target/dist</directory> </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
