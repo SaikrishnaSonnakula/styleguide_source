@@ -1,42 +1,70 @@
-// Variable colors
+// NOTE:
+// When adding a color, make sure you add it to the
+// color list in app/scripts/colors.js to be shown in the
+// styleguide
 
-$white:					#ffffff;
+// Basic Colors
+$default-color: #FFFFFF;
+.default-color { background-color: $default-color; }
 
-$gray-darker:            #333333; //bootstrap override
-$gray-dark:              lighten(#000, 20%) !default; //bootstrap override
-$gray:                   #464646; //bootstrap override
-$gray-light:             #636363; //bootstrap override
-$gray-lighter:           #c8c8c8; //bootstrap override
- 
-$brand-primary:          #005081 !default; //bootstrap override
-$brand-success:          #416020 !default; //bootstrap override
-$brand-info:             #005081 !default; //bootstrap override
-$brand-warning:          #b70e1e !default; //bootstrap override 
-$brand-danger:           #b70e1e !default; //bootstrap override 
-$brand-warning-bg:       #f2dede;          //bootstrap override 
-$validation-red:         #a94442;
+$kp-blue: #006D9D;
+.kp-blue { background-color: $kp-blue; }
+
+$bg-dark: #EBEBEB;
+.bg-dark { background-color: $bg-dark; }
+
+$bg-med: #EDEDED;
+.bg-med { background-color: $bg-med; }
+
+$bg-light: #FFFFFF;
+.bg-light { background-color: $bg-light; }
+
+$bg-invert: #111111;
+.bg-invert { background-color: $bg-invert; }
+
+$border-color: #C8C8C8;
+
+$accent-dark: #005081;
+$accent-med: #005EA6;
+$link-color: $accent-med;
+
+$error-color: #c73b3b;
+
+// Feature Colors
+$message-center-dark:      #ABCC39;
+.message-center-dark { background-color: $message-center-dark; }
+
+$message-center-light:     #F3F8E2;
+.message-center-light { background-color: $message-center-light; }
+
+$appointment-center-dark:  #FF9F00;
+.appointment-center-dark { background-color: $appointment-center-dark; }
+
+$appointment-center-light: #FFF5E5;
+.appointment-center-light { background-color: $appointment-center-light; }
+
+$signin-dark:              #80C3E6;
+.signin-dark { background-color: $signin-dark; }
+
+$signin-light:             #DFF0F9;
+.signin-light { background-color: $signin-light; }
+
+$pharmacy-center-dark:     #80C3E6;
+.pharmacy-center-dark { background-color: $pharmacy-center-dark; }
+
+$pharmacy-center-light:    #DFF0F9;
+.pharmacy-center-light { background-color: $pharmacy-center-light; }
+
+$mmr-dark:                 #A4B1E3;
+.mmr-dark { background-color: $mmr-dark; }
+
+$mmr-light:                #E4E7F7;
+.mmr-light { background-color: $mmr-light; }
 
 
-// Background colors 
-$gray-bg:               #ededed;
-$body-bg:               $gray-bg; 
+// Text Colors
+$text-dark: #333333;
+$text-med: #464646;
+$text-light: #636363;
+$text-invert: #FFFFFF;
 
-$blue:                  #006D9D;
-$blue-teal:				#005081;
-$blue-light:			#0079AA;
-$blue-dark: 			#005081;
-$blue-link: 			#005EA6;
-
-// Feature colors
-
-$green:					#ABCC39;  //Message center
-$green-light:			#F3F8E2;
-
-$orange:				#FF9F00;  //Appointment center
-$orange-light:			#FFF5E5;
-
-$cyan:					#80C3E6;  //Sign in , Pharmacy Center
-$cyan-light:			#DFF0F9;
-
-$purple:				#A4B1E3;  //Medical records
-$purple-light:			#E4E7F7;
