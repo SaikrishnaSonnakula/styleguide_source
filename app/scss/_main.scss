@@ -14,9 +14,8 @@ $lib: true;
 @import 'bootstrap'; // KP bootstrap options
 @import "bootstrap-jasny";
 
-@import "../icon/css/icon.scss";
-
 @import "font";
+@import "icon";
 @import "mixins"; // kp mixin
 
 // KP base styles
