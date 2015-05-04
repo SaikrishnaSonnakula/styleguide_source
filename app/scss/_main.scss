@@ -10,6 +10,9 @@ $lib: true;
 
 @import "variables"; // KP variables
 
+// Final design styles
+@import "color";
+
 // Bootstrap
 @import 'bootstrap'; // KP bootstrap options
 @import "bootstrap-jasny";

@@ -1,0 +1,43 @@
+// NOTE:
+// When adding a color, make sure you add it to the
+// color list in app/scripts/colors.js to be shown in the
+// styleguide
+
+$interactive-blue: #006BA6;
+.interactive-blue { background-color: $interactive-blue; }
+
+$kp-blue: #006D9D;
+.kp-blue { background-color: $kp-blue; }
+
+$light-grey: #E6E6E6;
+.light-grey { background-color: $light-grey; }
+
+$dark-grey: #595959;
+.dark-grey { background-color: $dark-grey; }
+
+// Basic Colors
+$white: #FFFFFF;
+.white {
+  background-color: $white;
+  border: 1px solid $light-grey;
+}
+
+
+// Secondary Colors
+$mid-green:   #56A534;
+.mid-green { background-color: $mid-green; }
+
+$deep-orange:   #E5661F;
+.deep-orange { background-color: $deep-orange; }
+
+$mid-teal:      #00A19B;
+.mid-teal { background-color: $mid-teal; }
+
+$deep-blue:   #003B71;
+.deep-blue { background-color: $deep-blue; }
+
+$deep-green:   #4A7628;
+.deep-green { background-color: $deep-green; }
+
+$mid-violet:   #E5661F;
+.mid-violet { background-color: $mid-violet; }

@@ -1,29 +1,24 @@
 define([], function(){
   var colorSections = [
     {
-      name: "Basic Colors",
+      name: "Primary Colors",
       colors: [
-        'default-color',
         'kp-blue',
-        'bg-dark',
-        'bg-med',
-        'bg-light',
-        'bg-invert'
+        'dark-grey',
+        'light-grey',
+        'white',
+        'interactive-blue'
       ]
     },
     {
-      name: "Feature Colors",
+      name: "Secondary Colors",
       colors: [
-        'message-center-dark',
-        'message-center-light',
-        'appointment-center-dark',
-        'appointment-center-light',
-        'signin-dark',
-        'signin-light',
-        'pharmacy-center-dark',
-        'pharmacy-center-light',
-        'mmr-dark',
-        'mmr-light'
+        'mid-green',
+        'deep-orange',
+        'mid-teal',
+        'deep-blue',
+        'deep-green',
+        'mid-violet'
       ]
     },
   ];
