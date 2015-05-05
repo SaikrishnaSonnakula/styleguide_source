@@ -11,7 +11,6 @@ $feature-icon-size: 28pt;
   line-height: $feature-icon-size;
   vertical-align: middle;
   text-align: center;
-  margin-top: -($feature-icon-size / 2);
 
   &.icon-message {
     font-size: ($feature-icon-size / 2) + 4pt;

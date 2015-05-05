@@ -18,15 +18,12 @@
   <body>
     <header>
     </header>
-    <main>
+    <main style="display: none">
       <nav>
         <ul>
-          <li>
-            <a href="#colors-section">Colors</a>
-          </li>
-          <li>
-            <a href="#icons-section">Icons</a>
-          </li>
+          <li><a href="#colors-section">Colors</a></li>
+          <li><a href="#icons">Icons</a></li>
+          <li><a href="#feature-layout">Feature Layout</a></li>
         </ul>
       </nav>
 
@@ -46,7 +43,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="icons">
           <h2>Icons</h2>
           <p>
             There is a common icon font for all RWD apps.
@@ -70,17 +67,26 @@
           </div>
         </section>
 
-        <section>
-          <h2>Features</h2>
+        <section id="feature-layout">
+          <h2>Feature Layout</h2>
           <p>
             Features that take advatage of the feature layout classes should be wrapped by an element with the class <code>kp-feature</code>
           </p>
-
-          <h3>Feature Layout</h3>
           <p>
-            The feature menu represents the main links associated with a feature. On mobile, it will be visible on the landing page, and hidden on every other screen. On desktop, it will be represented as a side panel of navigation.
+            The feature layout is composed of of 4 sections:
           </p>
-
+          <p>
+            The <code>feature-header</code> represents the feature title (and icon), shown below the KP header.
+          </p>
+          <p>
+            The <code>feature-menu</code> represents the main links associated with a feature. On mobile, it will be visible on the landing page, and hidden on every other screen. On desktop, it will be represented as a side panel of navigation. Add the <code>active</code> class to the <code>a</code> element representing the active route.
+          </p>
+          <p>
+            The <code>feature-description</code> represents a short description of the feature. This is only shown on the mobile landing page.
+          </p>
+          <p>
+            The <code>feature-content</code> should wrap any other content on the page relating to the feature.
+          </p>
           <div class="example">
             <div class="kp-feature">
               <div class="feature-header">

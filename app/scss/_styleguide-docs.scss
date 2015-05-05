@@ -75,26 +75,21 @@ article {
   }
 
   &.minor {
-    @extend .small-example;
+    margin-bottom: 1em;
+
+    .code, .result {
+      @extend .col-md-6;
+      @extend .col-sm-12;
+    }
+
+    .result {
+      padding-left: 2em;
+    }
   }
 }
 
 .example-note {
   color: #999;
-}
-
-.small-example {
-  @extend .row;
-  margin-bottom: 20px;
-
-  .code, .result {
-    @extend .col-md-6;
-    @extend .col-sm-12;
-  }
-
-  .result {
-    padding-left: 10px;
-  }
 }
 
 .color-section {

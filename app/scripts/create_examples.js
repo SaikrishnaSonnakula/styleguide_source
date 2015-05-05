@@ -21,6 +21,8 @@ define(['jquery'], function($){
       $code.prepend("<h4>Code</h4>");
 
       var $result = $el.clone();
+      $result.removeClass();
+      $result.addClass("result")
       $result.prepend("<h4>Result</h4>");
       $result.append($exampleNote);
 

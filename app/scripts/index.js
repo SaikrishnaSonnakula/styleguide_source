@@ -5,5 +5,6 @@ define(['jquery', 'add_colors', 'create_examples'], function($, addColors, creat
   $(function() {
     addColors();
     createExamples();
+    $("main").show();
   });
 });
