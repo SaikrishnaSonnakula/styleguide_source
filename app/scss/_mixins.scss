@@ -4,10 +4,6 @@
 $breakpoint-no-query-fallbacks: true;
 $breakpoint-to-ems: false;
 
-$breakpoints: add-breakpoint('screen-sm', $screen-sm $screen-md);
-$breakpoints: add-breakpoint('screen-md', $screen-md $screen-lg);
-$breakpoints: add-breakpoint('screen-lg', $screen-lg);
-
 // Clearable input
 input.clearable {
   background-color: #fff;

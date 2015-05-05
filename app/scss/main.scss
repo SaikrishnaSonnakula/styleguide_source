@@ -1,5 +1,7 @@
 @import 'main';
 
+$border-color: #ccc;
+
 * {
   font-family: "Gotham 4r";
 }
@@ -47,6 +49,41 @@ article {
 
   h1 {
     margin-top: 0px;
+  }
+
+  section {
+    margin-bottom: 5em;
+  }
+}
+
+.example {
+  @extend .row;
+  margin-bottom: 2em;
+
+  .code, .result {
+    @extend .col-lg-12;
+  }
+
+  .kp-feature {
+    border: 1px $border-color solid;
+  }
+
+  &.minor {
+    @extend .small-example;
+  }
+}
+
+.small-example {
+  @extend .row;
+  margin-bottom: 20px;
+
+  .code, .result {
+    @extend .col-md-6;
+    @extend .col-sm-12;
+  }
+
+  .result {
+    padding-left: 10px;
   }
 }
 

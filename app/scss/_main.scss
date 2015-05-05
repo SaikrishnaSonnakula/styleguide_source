@@ -10,21 +10,26 @@ $lib: true;
 
 @import "variables"; // KP variables
 
-// Final design styles
-@import "color";
-
 // Bootstrap
 @import 'bootstrap'; // KP bootstrap options
 @import "bootstrap-jasny";
 
+// Final design styles
+@import "color";
+@import "responsive";
+@import "typography";
+@import "list";
+@import "feature";
+
+// Old styles
 @import "font";
 @import "icon";
 @import "mixins"; // kp mixin
 
 // KP base styles
+@import "base/_color.scss";
 @import "base/_layout.scss";
 @import "base/_button.scss";
-@import "base/_color.scss";
 @import "base/_component.scss";
 @import "base/_form.scss";
 @import "base/_typography.scss";

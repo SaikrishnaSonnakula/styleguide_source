@@ -1,0 +1,11 @@
+$desktop: $screen-lg-min;
+
+.mobile-only {
+  @extend .hidden-lg;
+}
+
+.desktop-only {
+  @extend .hidden-xs;
+  @extend .hidden-sm;
+  @extend .hidden-md;
+}

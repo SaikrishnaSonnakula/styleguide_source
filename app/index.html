@@ -7,7 +7,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
+    <script src="prism.js"></script>
     <script data-main="index" src="requirejs.js"></script>
+    <link rel="stylesheet" href="prism.css" />
     <link rel="stylesheet" href="main.css" />
 
     <meta charset="UTF-8">
@@ -33,6 +35,10 @@
           Responsive Web Design Styleguide
         </h1>
 
+        <p>
+          NOTE: This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
+        </p>
+
         <section id="colors-section">
           <h2>Colors</h2>
 
@@ -42,7 +48,131 @@
 
         <section>
           <h2>Icons</h2>
-          <a href="icon/demo.html">Icon library</a>
+          <p>
+            There is a common icon font for all RWD apps.
+          </p>
+          <p>
+            <b><a href="icon/demo.html">See the full list of icons</a></b>
+          </p>
+
+          <div class="minor example">
+            <div class="icon-medical-savings"></div>
+          </div>
+
+          <h3>Feature Icons</h3>
+          <p>
+            Feature icons are colored, styled icons representing each feature. You can use the
+            <code>.feature-icon</code> class in your scss or html to acheive this effect.
+          </p>
+
+          <div class="minor example">
+            <div class="feature-icon icon-rx"></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Features</h2>
+          <p>
+            Features that take advatage of the feature layout classes should be wrapped by an element with the class <code>kp-feature</code>
+          </p>
+
+          <h3>Feature Layout</h3>
+          <p>
+            The feature menu represents the main links associated with a feature. On mobile, it will be visible on the landing page, and hidden on every other screen. On desktop, it will be represented as a side panel of navigation.
+          </p>
+
+          <div class="example">
+            <div class="kp-feature">
+              <div class="feature-header">
+                <div class="feature-icon icon-rx"></div>
+                <h1>My Feature Name</h1>
+              </div>
+
+              <div class="feature-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco.
+              </div>
+
+              <div class="feature-menu">
+                <ul class="link-list">
+                  <li>
+                    <a href="#">
+                        Feature Link
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                        Another Feature Link
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-content">
+                <h2>Feature Content</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Activating the Landing Page on Mobile</h3>
+          <p>
+            To designate that the current page is the landing page, add the <code>landing-page</code> class to a parent element. This will hide the feature content, and use the <code>.feature-header</code>, <code>.feature-description</code>, and <code>.feature-menu</code> elements to form the landing page. See the example below:
+          </p>
+
+          <p>
+            <b>Note:</b> This example should look match the previous example when on desktop. On mobile though, it will show the landing page instead of the page content. If your viewing on a desktop, change the size of your browser to see the effect.
+          </p>
+
+          <div class="example">
+            <div class="kp-feature landing-page">
+              <div class="feature-header">
+                <div class="feature-icon icon-rx"></div>
+                <h1>My Feature Name</h1>
+              </div>
+
+              <div class="feature-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco.
+              </div>
+
+              <div class="feature-menu">
+                <ul class="link-list">
+                  <li>
+                    <a href="#">
+                        Feature Link
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                        Another Feature Link
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-content">
+                <h2>Feature Content</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </article>
     </main>
