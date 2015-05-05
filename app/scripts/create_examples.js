@@ -3,22 +3,26 @@ define(['jquery'], function($){
     var trimMarkup = function(markup) {
       var firstTab;
 
-      return $.map(markup.split("\n"), function(line){
-        if(line && !firstTab) {
+      return $.trim($.map(markup.split("\n"), function(line){
+        if($.trim(line) && !firstTab) {
           firstTab = line.search(/[^\s]/);
         }
         return line.substring(firstTab);
-      }).join("\n");
+      }).join("\n"));
     };
 
     $(".example").each(function(i, el) {
+      var $el = $(el);
+      var $exampleNote = $el.find(".example-note");
+      $exampleNote.remove();
+
       var $code = $("<div class='code'></div>");
-      $code.append($("<pre></pre>").append($("<code class='language-markup'></code>").text(trimMarkup(el.innerHTML))));
+      $code.append($("<pre></pre>").append($("<code class='language-markup'></code>").text(trimMarkup($el.html()))));
       $code.prepend("<h4>Code</h4>");
 
-      var $el = $(el);
       var $result = $el.clone();
       $result.prepend("<h4>Result</h4>");
+      $result.append($exampleNote);
 
       $el.html("");
       $el.append($code);
