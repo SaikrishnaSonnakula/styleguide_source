@@ -30,6 +30,11 @@ $list-element-padding: 0.7em;
       padding-bottom: $list-element-padding / 2;
       padding-left: 0px;
       border-bottom: none;
+
+      &.active {
+        font-family: "Gotham 7r";
+        color: $interactive-blue;
+      }
     }
   }
 

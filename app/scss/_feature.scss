@@ -93,5 +93,9 @@ $feature-gutter: 2rem;
     .feature-description {
       @extend .mobile-only;
     }
+
+    a.landing-page {
+      @extend .active;
+    }
   }
 }
