@@ -13,6 +13,7 @@ $lib: true;
 // Bootstrap
 @import 'bootstrap'; // KP bootstrap options
 @import "bootstrap-jasny";
+@import "breakpoint";
 
 // Final design styles
 @import "color";
