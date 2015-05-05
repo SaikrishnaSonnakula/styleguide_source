@@ -11,16 +11,18 @@ $lib: true;
 @import "variables"; // KP variables
 
 // Bootstrap
-@import 'bootstrap'; // KP bootstrap options
+@import "bootstrap"; // KP bootstrap options
 @import "bootstrap-jasny";
 @import "breakpoint";
 
 // Final design styles
 @import "color";
 @import "responsive";
+@import "accessibility";
 @import "typography";
 @import "list";
 @import "feature";
+@import "header";
 
 // Old styles
 @import "font";

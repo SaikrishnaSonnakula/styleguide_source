@@ -16,7 +16,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
+    <header id="styleguide-header">
     </header>
     <main style="display: none">
       <nav>
@@ -64,6 +64,24 @@
 
           <div class="minor example">
             <div class="feature-icon icon-rx"></div>
+          </div>
+        </section>
+
+        <section id="feature-layout">
+          <h2>Header</h2>
+          <p>
+            If you don't want content underneath the header to be hidden, you can add an
+            element with the class <code>kp-header-buffer</code> directly underneath the
+            header element. This element will push content beneath the header.
+          </p>
+          <div class="example">
+            <div class="kp-header" role="banner">
+              <div class="header-left">Left</div>
+              <span class="screenreader-only">Kaiser Permanente</span>
+              <div class="header-right">Right</div>
+            </div>
+            <div class="kp-header-buffer"></div>
+            <div>Other content</div>
           </div>
         </section>
 

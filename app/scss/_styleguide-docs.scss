@@ -1,5 +1,12 @@
 $border-color: #ccc;
 
+// Note: in order for the documentation to work correctly, replace
+// 'position: fixed' with 'position: absolute'
+.kp-header {
+  position: absolute !important;
+}
+
+
 * {
   font-family: "Gotham 4r";
 }
@@ -62,7 +69,12 @@ article {
     @extend .col-lg-12;
   }
 
-  .kp-feature {
+  .result {
+    float:left;
+  }
+
+  .result-pane {
+    position: relative;
     border: 1px $border-color solid;
   }
 
@@ -83,7 +95,11 @@ article {
     }
 
     .result {
-      padding-left: 2em;
+      padding-left: 1em;
+    }
+
+    .result-pane {
+      padding: 1em;
     }
   }
 }

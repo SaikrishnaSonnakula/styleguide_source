@@ -1,0 +1,50 @@
+$header-height: 50px;
+$header-border-width: 1px;
+.kp-header {
+<<<<<<< HEAD
+  position: sticky; //fixed
+=======
+  position: fixed;
+>>>>>>> 5975071... [Shane Tommy] Header, along with some result pane improvements.
+  z-index: 1;
+  top: 0px;
+  height: $header-height + $header-border-width;
+  background-color: $white;
+  background-position: 50% 50%;
+  background-image: url('images/kplogo.png');
+  background-size: 250px;
+  background-repeat: no-repeat;
+  border-bottom: $header-border-width solid #ccc;
+
+  display: table;
+  width: 100%;
+
+  .header-left {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 1%;
+  }
+
+  .header-right {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 1%;
+  }
+<<<<<<< HEAD
+=======
+
+  &:after {
+    display: block;
+    height: $header-height + $header-border-width;
+    width: 100%;
+  }
+>>>>>>> 5975071... [Shane Tommy] Header, along with some result pane improvements.
+}
+
+.kp-header-buffer {
+  display: block;
+  height: $header-height + $header-border-width;
+  width: 100%;
+}

@@ -22,7 +22,8 @@ define(['jquery'], function($){
 
       var $result = $el.clone();
       $result.removeClass();
-      $result.addClass("result")
+      $result = $("<div class='result-pane'></div>").append($result);
+      $result = $("<div class='result'></div>").append($result);
       $result.prepend("<h4>Result</h4>");
       $result.append($exampleNote);
 
