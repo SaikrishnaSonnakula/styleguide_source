@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       cwd: 'vendor',
       expand: true,
       src: ['**/*'],
-      dest: 'target/development'
+      dest: 'target/dist'
     }])
   );
 };
