@@ -1,0 +1,121 @@
+$border-color: #ccc;
+
+* {
+  font-family: "Gotham 4r";
+}
+
+header {
+  width: 100%;
+  height: 160px;
+  background-color: $bg-dark;
+  background-position: 50% 50%;
+  background-image: url('images/kplogo.png');
+  background-size: 300px;
+  background-repeat: no-repeat;
+  border-bottom: $kp-blue 10px solid;
+}
+
+main {
+  padding: 40px;
+  @extend .row;
+  background-color: $bg-light;
+}
+
+nav {
+  @extend .col-md-3;
+  @extend .col-xs-12;
+
+  ul {
+    font-size: 14pt;
+    font-weight: bold;
+    @extend .list-unstyled;
+  }
+
+  a {
+    color: $text-med;
+    text-decoration: none !important;
+
+    &:hover {
+      margin-left: 0.2em;
+    }
+  }
+}
+
+article {
+  @extend .col-md-9;
+  @extend .col-xs-12;
+
+  h1 {
+    margin-top: 0px;
+  }
+
+  section {
+    margin-bottom: 5em;
+  }
+}
+
+.example {
+  @extend .row;
+  margin-bottom: 2em;
+
+  .code, .result {
+    @extend .col-lg-12;
+  }
+
+  .kp-feature {
+    border: 1px $border-color solid;
+  }
+
+  .code {
+    margin-top: 1 0px;
+  }
+
+  pre {
+    margin-bottom: 20px;
+  }
+
+  &.minor {
+    @extend .small-example;
+  }
+}
+
+.example-note {
+  color: #999;
+}
+
+.small-example {
+  @extend .row;
+  margin-bottom: 20px;
+
+  .code, .result {
+    @extend .col-md-6;
+    @extend .col-sm-12;
+  }
+
+  .result {
+    padding-left: 10px;
+  }
+}
+
+.color-section {
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+.colors {
+  @extend .row;
+}
+
+.color {
+  @extend .col-lg-4;
+  @extend .col-md-6;
+  @extend .col-sm-12;
+  float: left;
+  padding: 10px 20px 10px 0;
+
+  .swatch {
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
