@@ -9,9 +9,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
-a:hover, a:active, a:focus {
-  text-decoration: none;
-}
 
 .uppercase {
   text-transform: uppercase;
@@ -23,6 +20,12 @@ a:hover, a:active, a:focus {
   margin-top: 0px;
 }
 
+a, a:hover, a:active, a:focus {
+  &.section-heading {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+}
 .section-heading {
   display: block;
   font-size: 14pt;
