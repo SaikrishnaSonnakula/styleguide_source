@@ -19,8 +19,11 @@ $feature-icon-size: 28pt;
 
 $mobile-feature-gutter: 1.3rem;
 $feature-gutter: 2rem;
+$max-content-width: 1080px;
 .kp-feature {
   @extend .row;
+  margin: 0px auto;
+  max-width: $max-content-width;
 
   @include breakpoint($desktop) {
     padding-top: $feature-gutter;
