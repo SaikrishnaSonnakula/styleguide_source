@@ -1,3 +1,5 @@
+$heading-padding: 0.5em;
+
 body {
   font-family: "Gotham 4r";
   color: $dark-grey;
@@ -7,10 +9,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .page-heading {
   font-size: 22pt;
   font-weight: normal;
   margin-top: 0px;
+}
+
+.section-heading {
+  font-size: 14pt;
+  background-color: $light-grey;
+  width: 100%;
+  padding: $heading-padding;
+
+  .heading-right {
+    float: right;
+  }
+
+  th {
+    font-weight: normal;
+    padding: $heading-padding;
+  }
 }
 
 
