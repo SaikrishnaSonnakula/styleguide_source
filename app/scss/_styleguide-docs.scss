@@ -1,4 +1,5 @@
-$border-color: #ccc;
+$border-color: #ddd;
+$content-padding-mobile: 20px;
 
 // Note: in order for the documentation to work correctly, replace
 // 'position: fixed' with 'position: absolute'
@@ -7,7 +8,7 @@ $border-color: #ccc;
 }
 
 
-* {
+.result * {
   font-family: "Gotham 4r";
 }
 
@@ -23,9 +24,12 @@ header {
 }
 
 main {
-  padding: 40px;
   @extend .row;
   background-color: $bg-light;
+
+  @include breakpoint($desktop) {
+    padding: 40px;
+  }
 }
 
 nav {
@@ -36,6 +40,11 @@ nav {
     font-size: 14pt;
     font-weight: bold;
     @extend .list-unstyled;
+
+
+    @include breakpoint($desktop) {
+      text-align: left;
+    }
   }
 
   a {
@@ -52,12 +61,44 @@ article {
   @extend .col-md-9;
   @extend .col-xs-12;
 
-  h1 {
+  >h1 {
     margin-top: 0px;
   }
 
   section {
     margin-bottom: 5em;
+  }
+}
+
+article, section, .doc {
+  >h2 {
+    color: $kp-blue;
+    padding-bottom: 10px;
+    border-bottom: 1px $border-color solid;
+    margin-bottom: 20px;
+  }
+
+  >h3 {
+    font-family: "Gotham 4r";
+    font-size: 24px;
+  }
+
+  >p {
+    margin-bottom: 20px;
+  }
+
+  >p, >h1, >h2, >h3, >h4, >h5, >h6 {
+    font-family: Verdana;
+    padding-left: $content-padding-mobile;
+    padding-right: $content-padding-mobile;
+  }
+
+  @include breakpoint($desktop) {
+    >p, >h1, >h2, >h3, >h4, >h5, >h6 {
+      font-family: Verdana;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
 }
 
@@ -67,15 +108,19 @@ article {
 
   .code, .result {
     @extend .col-lg-12;
+    @extend .doc;
   }
 
   .result {
+    width: 100%;
     float:left;
   }
 
   .result-pane {
     position: relative;
     border: 1px $border-color solid;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 
   .code {
@@ -90,16 +135,51 @@ article {
     margin-bottom: 1em;
 
     .code, .result {
-      @extend .col-md-6;
       @extend .col-sm-12;
-    }
 
-    .result {
-      padding-left: 1em;
+      >h4 { display: none; }
     }
 
     .result-pane {
-      padding: 1em;
+      border: none;
+
+      @include breakpoint($desktop) {
+        border: 1px $border-color solid;
+      }
+    }
+  }
+
+  &.element {
+    border-bottom: 1px $border-color solid;
+    .result-pane {
+      border: none;
+      margin-left: $content-padding-mobile;
+
+      @include breakpoint($desktop) {
+        margin-left: 0;
+      }
+    }
+
+    margin-bottom: 1em;
+
+    .code {
+      @extend .col-md-9;
+    }
+
+    .result {
+      @extend .col-md-3;
+    }
+
+    .code, .result {
+      @extend .col-sm-12;
+
+      >h4 { display: none; }
+    }
+
+    @include breakpoint($desktop) {
+      .result {
+        padding-left: 1em;
+      }
     }
   }
 }
@@ -110,6 +190,7 @@ article {
 
 .color-section {
   @include clearfix;
+  @extend .doc;
   margin-bottom: 20px;
 }
 
@@ -122,11 +203,29 @@ article {
   @extend .col-md-6;
   @extend .col-sm-12;
   float: left;
-  padding: 10px 20px 10px 0;
+  padding: 10px $content-padding-mobile;
+
+  @include breakpoint($desktop) {
+    padding-left: 0px;
+  }
 
   .swatch {
     height: 80px;
     width: 100%;
     border-radius: 5px;
+  }
+}
+
+#font-sizes {
+  font-family: "Gotham 4r";
+  margin-bottom: 40px;
+  margin-left: $content-padding-mobile;
+
+  @include breakpoint($desktop) {
+    margin-left: 0;
+  }
+
+  >div {
+    margin-bottom: 20px;
   }
 }

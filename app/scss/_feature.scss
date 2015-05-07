@@ -49,7 +49,6 @@ $max-content-width: 1080px;
       h1 {
         vertical-align: center;
         line-height: $feature-icon-size;
-        font-size: $feature-icon-size;
         display: inline-block;
         margin: 0px;
         margin-left: 0.3em;
@@ -75,6 +74,10 @@ $max-content-width: 1080px;
 
   .feature-content {
     @extend .col-lg-9;
+
+    h1, h2, h3, h4, h5, h6, p {
+      padding-left: $text-padding;
+    }
   }
 
   &:not(.landing-page) {

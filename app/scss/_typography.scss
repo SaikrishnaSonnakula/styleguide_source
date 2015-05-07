@@ -1,7 +1,17 @@
-$heading-padding: 0.5em;
+$base-font: 14px;
+$medium-font: 120%;
+$large-font: 190%;
+$extra-large-font: 250%;
+
+$text-padding: 1rem;
 $paragraph-margin: 10px;
 
+html {
+  font-size: $base-font;
+}
+
 body {
+  font-size: $base-font;
   font-family: "Gotham 4r";
   color: $dark-grey;
 }
@@ -11,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 14pt;
+  font-size: $base-font;
   margin-bottom: $paragraph-margin;
 }
 
@@ -24,29 +34,34 @@ a {
 }
 
 h1 {
-  font-size: 18pt;
+  font-size: $large-font;
 
   @include breakpoint($desktop) {
-    font-size: 36pt;
+    font-size: $extra-large-font;
   }
 }
+
+.medium-font { font-size: $medium-font; }
+.large-font { font-size: $large-font; }
+.extra-large-font { font-size: $extra-large-font; }
 
 .uppercase {
   text-transform: uppercase;
 }
 
 .page-heading {
-  font-size: 22pt;
+  font-size: $large-font;
   font-weight: normal;
   margin-top: 0px;
+  padding-left: $text-padding;
 }
 
 .section-heading {
   display: block;
-  font-size: 14pt;
+  font-size: $medium-font;
   background-color: $light-grey;
   width: 100%;
-  padding: $heading-padding;
+  padding: $text-padding;
 
   .heading-right {
     float: right;
@@ -54,7 +69,7 @@ h1 {
 
   th {
     font-weight: normal;
-    padding: $heading-padding;
+    padding: $text-padding;
   }
 
 }

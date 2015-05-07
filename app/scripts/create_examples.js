@@ -18,18 +18,18 @@ define(['jquery'], function($){
 
       var $code = $("<div class='code'></div>");
       $code.append($("<pre></pre>").append($("<code class='language-markup'></code>").text(trimMarkup($el.html()))));
-      $code.prepend("<h4>Code</h4>");
+      //$code.prepend("<h4>Code</h4>");
 
       var $result = $el.clone();
       $result.removeClass();
       $result = $("<div class='result-pane'></div>").append($result);
       $result = $("<div class='result'></div>").append($result);
-      $result.prepend("<h4>Result</h4>");
+      //$result.prepend("<h4>Result</h4>");
       $result.append($exampleNote);
 
       $el.html("");
-      $el.append($code);
       $el.append($result);
+      $el.append($code);
 
       Prism.highlightAll();
     });
