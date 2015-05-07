@@ -1,5 +1,10 @@
 $desktop: $screen-lg-min;
 
+
+$small-break: new-breakpoint(max-width $screen-sm, 6);
+$medium-break: new-breakpoint(max-width $screen-md, 12);
+$large-break: new-breakpoint(max-width $screen-lg, 12);
+
 .mobile-only {
   @extend .hidden-lg;
 }
@@ -8,4 +13,25 @@ $desktop: $screen-lg-min;
   @extend .hidden-xs;
   @extend .hidden-sm;
   @extend .hidden-md;
+}
+
+.hidden-xs{
+	@include media($small-break) {
+      display:none !important;
+    }
+}
+.hidden-sm{
+	@include media($small-break) {
+      display:none !important;
+    }
+}
+.hidden-md{
+	@include media($medium-break) {
+      display:none !important;
+    }
+}
+.hidden-lg{
+	@include media($large-break) {
+      display:none !important;
+    }
 }
