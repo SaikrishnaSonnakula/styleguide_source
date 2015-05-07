@@ -11,6 +11,7 @@ $base-border-radius: 5px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
+  width:100%;
   font-size: $base-font;
   -webkit-font-smoothing: antialiased;
   font-family: "Gotham 7r";
@@ -22,6 +23,14 @@ $base-border-radius: 5px;
   vertical-align: middle;
   white-space: nowrap;
   text-transform: uppercase;
+
+  @include breakpoint($desktop){
+    width:auto;
+
+    &.block {
+      width: 100%;
+    }
+  }
 
   &:hover,
   &:focus {
@@ -42,9 +51,6 @@ $base-border-radius: 5px;
   }
   &.mini{
     font-size:$mini-font;
-  }
-  &.block {
-    width: 100%;
   }
 }
 
