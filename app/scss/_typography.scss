@@ -1,4 +1,6 @@
 $base-font: 14px;
+$mini-font: 70%;
+$small-font: 80%;
 $medium-font: 120%;
 $large-font: 190%;
 $extra-large-font: 250%;
@@ -40,7 +42,8 @@ h1 {
     font-size: $extra-large-font;
   }
 }
-
+.mini-font { font-size:$mini-font; }
+.small-font { font-size:$small-font; }
 .medium-font { font-size: $medium-font; }
 .large-font { font-size: $large-font; }
 .extra-large-font { font-size: $extra-large-font; }
