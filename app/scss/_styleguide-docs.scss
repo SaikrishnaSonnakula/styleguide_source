@@ -129,7 +129,12 @@ article, section, .doc {
   &.minor {
     margin-bottom: 1em;
 
+    .result {
+      padding-right: 20px;
+    }
+
     .code, .result {
+      @extend .col-md-6;
       @extend .col-sm-12;
 
       >h4 { display: none; }

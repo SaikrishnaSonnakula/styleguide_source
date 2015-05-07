@@ -1,5 +1,5 @@
 $desktop: $screen-lg-min;
-
+$mobile: max-width $screen-lg-min;
 
 $small-break: new-breakpoint(max-width $screen-sm, 6);
 $medium-break: new-breakpoint(max-width $screen-md, 12);
