@@ -44,4 +44,6 @@ module.exports = function(grunt) {
       dest: 'target/dist'
     }])
   );
+
+  grunt.registerTask("prepush", ["sass"]);
 };
