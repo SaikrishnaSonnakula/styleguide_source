@@ -21,17 +21,17 @@ $mobile-feature-gutter: 1.3rem;
 $feature-gutter: 2rem;
 $max-content-width: 1080px;
 .kp-feature {
-  @extend .row;
+  @include outer-container($max-content-width);
   margin: 0px auto;
-  max-width: $max-content-width;
 
-  @include breakpoint($desktop) {
+  @include media($large-screen) {
     padding-top: $feature-gutter;
     padding-left: $feature-gutter;
   }
 
   .feature-header {
-    display: block;
+    display: none;
+    @include media($large-screen) { display: block; }
 
     h1 {
       text-align: center;
@@ -43,7 +43,7 @@ $max-content-width: 1080px;
       margin: $mobile-feature-gutter auto;
     }
 
-    @include breakpoint($desktop) {
+    @include media($large-screen) {
       margin-bottom: $feature-gutter;
 
       h1 {
@@ -63,40 +63,45 @@ $max-content-width: 1080px;
   }
 
   .feature-description {
-    text-align: center;
-    padding: 0 $mobile-feature-gutter;
-    padding-bottom: $mobile-feature-gutter;
+    display: none;
   }
 
   .feature-menu {
-    @extend .col-lg-3;
+    display: none;
+
+    @include media($large-screen) {
+      @include span-columns(3);
+    }
   }
 
   .feature-content {
-    @extend .col-lg-9;
-
-    h1, h2, h3, h4, h5, h6, p {
-      padding-left: $text-padding;
-    }
-  }
-
-  &:not(.landing-page) {
-    .feature-menu, .feature-header {
-      @extend .desktop-only;
-    }
-
-    .feature-description {
-      display: none;
+    @include media($large-screen) {
+      @include span-columns(9);
     }
   }
 
   &.landing-page {
+    .feature-header, .feature-menu {
+      display: block;
+    }
+
     .feature-content {
-      @extend .desktop-only;
+      display: none;
+
+      @include media($large-screen) {
+        display: block;
+      }
     }
 
     .feature-description {
-      @extend .mobile-only;
+      display: block;
+      text-align: center;
+      padding: 0 $mobile-feature-gutter;
+      padding-bottom: $mobile-feature-gutter;
+
+      @include media($large-screen) {
+        display: none !important;
+      }
     }
 
     a.landing-page {

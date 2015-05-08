@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  padding-left: $text-padding;
+}
+
 p {
   font-size: $base-font;
   margin-bottom: $paragraph-margin;
