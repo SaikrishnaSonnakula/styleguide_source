@@ -33,9 +33,10 @@ define([], function(){
 
   return function() {
     colorSections.forEach(function(section){
-      var $section = $('<div class="color-section"><h3>' + section.name + '</h3></div>');
+      var $section = $('<div class="color-section"></div>');
 
       $('#colors').append($section);
+      $section.before('<h3>' + section.name + '</h3>');
 
       section.colors.forEach(function(color){
         var $color = $('<div class="color"></div>');

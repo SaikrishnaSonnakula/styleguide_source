@@ -1,6 +1,8 @@
 $border-color: #ddd;
 $content-padding-mobile: 20px;
 $small-padding: 0.5em;
+$styleguide-gutter: 40px;
+$main-max-width: ($large-screen-max * 16/12) + ($styleguide-gutter * 2);
 
 // Note: in order for the documentation to work correctly, replace
 // 'position: fixed' with 'position: absolute'
@@ -20,42 +22,41 @@ header {
 }
 
 main {
-  @extend .row;
-  background-color: $bg-light;
-
-  @include breakpoint($desktop) {
-    padding: 40px;
+  @include outer-container($main-max-width);
+  @include media($large-screen) {
+    padding: $styleguide-gutter;
   }
 }
 
 nav {
-  @extend .col-md-3;
-  @extend .col-xs-12;
+  display: none;
 
-  ul {
-    font-size: 14pt;
-    font-weight: bold;
-    @extend .list-unstyled;
+  @include media($large-screen) {
+    @include span-columns(3);
+    display: block;
 
-
-    @include breakpoint($desktop) {
+    ul {
+      font-size: 14pt;
+      font-weight: bold;
       text-align: left;
+      @extend .list-unstyled; //BOOTSTRAP...
     }
-  }
 
-  a {
-    color: $text-med;
-    text-decoration: none !important;
+    a {
+      color: $text-med;
+      text-decoration: none !important;
 
-    &:hover {
-      margin-left: 0.2em;
+      &:hover {
+        margin-left: 0.2em;
+      }
     }
   }
 }
 
 article {
-  @extend .col-md-9;
-  @extend .col-xs-12;
+  @include media($large-screen) {
+    @include span-columns(9);
+  }
 
   >h1 {
     margin-top: 0px;
@@ -99,60 +100,53 @@ article, section, .doc {
 }
 
 .example {
-  @extend .row;
+  @include row;
   margin-bottom: 2em;
 
-  .code, .result {
-    @extend .col-lg-12;
+  .code {
     @extend .doc;
+
+    pre {
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
   }
 
   .result {
+    @extend .doc;
     width: 100%;
-    float:left;
-  }
 
-  .result-pane {
-    position: relative;
-    border: 1px $border-color solid;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-
-  .code {
-    margin-top: 1 0px;
-  }
-
-  pre {
-    margin-bottom: 20px;
+    .result-pane {
+      position: relative;
+      border: 1px $border-color solid;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &.minor {
     margin-bottom: 1em;
 
-    .result {
-      margin-top: 0.5em;
-      padding-right: 20px;
-    }
-
-    .code, .result {
-      @extend .col-md-6;
-      @extend .col-sm-12;
-
-      >h4 { display: none; }
-    }
-
-    .result-pane {
+    .result .result-pane {
       border: none;
+      border-top: 1px $border-color solid;
+    }
 
-      @include breakpoint($desktop) {
-        border: 1px $border-color solid;
+    @include media($large-screen) {
+      .code, .result {
+        @include span-columns(6);
+
+        .result-pane {
+          border: 1px $border-color solid;
+        }
       }
     }
   }
 
   &.element {
+    margin-bottom: 1em;
     border-bottom: 1px $border-color solid;
+
     .result-pane {
       border: none;
       margin-left: $content-padding-mobile;
@@ -162,25 +156,14 @@ article, section, .doc {
       }
     }
 
-    margin-bottom: 1em;
+    @include media($large-screen) {
+      .code {
+        @include span-columns(9);
+      }
 
-    .code {
-      @extend .col-md-9;
-    }
-
-    .result {
-      @extend .col-md-3;
-    }
-
-    .code, .result {
-      @extend .col-sm-12;
-
-      >h4 { display: none; }
-    }
-
-    @include breakpoint($desktop) {
       .result {
-        padding-left: 1em;
+        @include span-columns(3);
+        .result-pane { padding: 0px; }
       }
     }
   }
@@ -223,24 +206,22 @@ article, section, .doc {
 }
 
 .color-section {
-  @include clearfix;
+  @include outer-container(100%);
   @extend .doc;
   margin-bottom: 20px;
 }
 
-.colors {
-  @extend .row;
-}
-
 .color {
-  @extend .col-lg-4;
-  @extend .col-md-6;
-  @extend .col-sm-12;
-  float: left;
   padding: 10px $content-padding-mobile;
 
-  @include breakpoint($desktop) {
-    padding-left: 0px;
+  @include media($medium-screen) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega(3n);
   }
 
   .swatch {
@@ -255,7 +236,7 @@ article, section, .doc {
   margin-bottom: 40px;
   margin-left: $content-padding-mobile;
 
-  @include breakpoint($desktop) {
+  @include media($large-screen) {
     margin-left: 0;
   }
 

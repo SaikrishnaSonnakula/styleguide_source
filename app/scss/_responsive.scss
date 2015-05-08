@@ -9,7 +9,7 @@ $large-screen-max: 1050px;
 
 $small-screen: new-breakpoint(max-width $small-screen-max, 12);
 $medium-screen-min: $small-screen-max + 1px;
-$medium-screen: new-breakpoint($medium-screen-min, 12);
+$medium-screen: new-breakpoint(min-width #{$medium-screen-min} max-width #{$medium-screen-max}, 12);
 $mobile-screen: new-breakpoint(max-width $medium-screen-max, 12);
 $large-screen-min: $medium-screen-max + 1px;
 $large-screen: new-breakpoint($large-screen-min, 12);
