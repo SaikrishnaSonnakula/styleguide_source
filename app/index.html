@@ -17,6 +17,13 @@
   </head>
   <body>
     <header id="styleguide-header">
+      <div class="current-breakpoint">
+        Current Breakpoint:
+        <span class="small-only">Small</span>
+        <span class="medium-only">Medium</span>
+        <span class="large-only">Large</span>
+        <span class="largest-only">Large (Beyond Max)</span>
+      </div>
     </header>
     <main style="display: none">
       <nav>
@@ -39,6 +46,59 @@
         <p>
           NOTE: This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
         </p>
+
+        <section id="responsive">
+          <h2>Responsive Design</h2>
+          <p>
+            There are 3 breakpoints for small, medium, and large screens. There
+            are a variety of helper variables and classes in the styleguide, to
+            easily define style differences for these 3 form factors. Reference
+            the helper at the bottom of the screen to know what form factor your
+            current screen falls under.
+          </p>
+
+          <h4>Small</h4>
+          <p>0 to <code>$small-screen-max</code> (414px)</p>
+
+          <h4>Medium</h4>
+          <p><code>$medium-screen-min</code> (415px) to <code>$medium-screen-max</code> (720px)</li></p>
+
+          <h4>Large</h4>
+          <p><code>$large-screen-min</code> (721px) to <code>$large-screen-max</code> (1050px)</p>
+
+          <h3>Using Breakpoints</h3>
+          <p>
+            You should write your CSS in a <strong>mobile first</strong> structure.
+            This means all styles by default will apply to the mobile form factor.
+            Media tags can be added for additional modifications for the medium and
+            large form factors.
+          </p>
+          <p>
+            TODO: ADD EXAMPLE OF MOBILE FIRST CSS
+          </p>
+
+          <h3>Responsive Helper Classes</h3>
+          <p>
+            You can use the <code>mobile-only</code> and <code>desktop-only</code>
+            classes to easily designate elements that should be shown only on certain
+            form factors.
+          </p>
+          <p>
+            <strong>Note:</strong> You might notice there are only two. Currently,
+            mobile corresponds with the medium and small breakpoints, and desktop
+            corresponds with the large form factor. This is for convenience, as the
+            small and medium forms share the same designs.
+          </p>
+
+          <div class="minor example">
+            <p class="mobile-only">
+              I like your slick mobile device.
+            </p>
+            <p class="desktop-only">
+              I like your powerful desktop machine.
+            </p>
+          </div>
+        </section>
 
         <section id="colors-section">
           <h2>Colors</h2>

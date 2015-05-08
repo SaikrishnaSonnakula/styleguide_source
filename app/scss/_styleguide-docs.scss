@@ -1,5 +1,6 @@
 $border-color: #ddd;
 $content-padding-mobile: 20px;
+$small-padding: 0.5em;
 
 // Note: in order for the documentation to work correctly, replace
 // 'position: fixed' with 'position: absolute'
@@ -130,6 +131,7 @@ article, section, .doc {
     margin-bottom: 1em;
 
     .result {
+      margin-top: 0.5em;
       padding-right: 20px;
     }
 
@@ -186,6 +188,38 @@ article, section, .doc {
 
 .example-note {
   color: #999;
+}
+
+.current-breakpoint {
+  position: fixed;
+  width: 100%;
+  background: $light-grey;
+  padding: $small-padding;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+
+  .medium-only { display:none; }
+  .large-only { display:none; }
+  .largest-only { display:none; }
+
+  @include media($medium-screen) {
+    .small-only { display: none; }
+    .medium-only { display: inline; }
+  }
+
+  @include media($large-screen) {
+    .small-only { display: none; }
+    .medium-only { display: none; }
+    .large-only { display: inline; }
+  }
+
+  @include media($largest-screen) {
+    .small-only { display: none; }
+    .medium-only { display: none; }
+    .large-only { display: none; }
+    .largest-only { display: inline; }
+  }
 }
 
 .color-section {
