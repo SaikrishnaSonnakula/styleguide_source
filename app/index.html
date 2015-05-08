@@ -70,11 +70,35 @@
           <p>
             You should write your CSS in a <strong>mobile first</strong> structure.
             This means all styles by default will apply to the mobile form factor.
-            Media tags can be added for additional modifications for the medium and
-            large form factors.
+            The media tags, <code>$medium-screen</code> and <code>$large-screen</code>,
+            can be used to alter styles for additional modifications for the medium
+            and large form factors. We use the
+            <a href="http://neat.bourbon.io/">Neat library</a> for breakpoint
+            specific code. Check out the documentation there for more detailed information.
           </p>
           <p>
-            TODO: ADD EXAMPLE OF MOBILE FIRST CSS
+            <div class="example minor">
+              <pre class="code language-scss">
+                .responsive-example {
+                  font-size: 12px;
+                  color: $light-grey;
+
+                  @include media($medium-screen) {
+                    font-size: 20px;
+                    color: $dark-grey;
+                  }
+
+                  @include media($large-screen) {
+                    font-size: 32px;
+                    color: $deep-blue;
+                  }
+                }
+              </pre>
+
+              <p class="responsive-example">
+                I get louder when the screen gets bigger.
+              </p>
+            </div>
           </p>
 
           <h3>Responsive Helper Classes</h3>
