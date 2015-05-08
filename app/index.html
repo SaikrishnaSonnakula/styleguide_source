@@ -176,7 +176,13 @@
           </div>
 
           <h3>Collapsable Tables</h3>
-          <p>Collapsable tables will condense into a single-column list format on small form-factors. On large form factors, they will look identical to normal tables.</p>
+          <p>
+            Collapsable tables will condense into a single-column list with the headings hidden on small form-factors. On large form factors, they will look identical to normal tables.
+          </p>
+          <p>
+            If you want a table cell to remain a column in all form factors. Add the class
+            <code>keep-column</code> to the <code>td</code> element. <strong>Note:</strong> this will only work correctly for columns on the far left or far right of the table.
+          </p>
           <div class="minor example">
             <table class="table collapsable">
               <tr>
