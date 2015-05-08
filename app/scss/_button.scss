@@ -63,7 +63,7 @@ $base-border-radius: 5px;
 }
 .select-dropdown {
   @extend .outline-button;
-
+  @extend .icon-arrow-down;
   &.disabled {
   }
 }
