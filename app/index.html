@@ -10,6 +10,7 @@
     <script src="prism.js"></script>
     <script data-main="index" src="requirejs.js"></script>
     <link rel="stylesheet" href="prism.css" />
+    <link rel="stylesheet" href="fixedsticky.css" />
     <link rel="stylesheet" href="main.css" />
 
     <meta charset="UTF-8">
@@ -26,15 +27,25 @@
       </div>
     </header>
     <main style="display: none">
-      <nav>
+      <nav class="fixedsticky">
         <ul>
+          <li><a href="#responsive-section">Responsive Design</a></li>
           <li><a href="#colors-section">Colors</a></li>
+<<<<<<< HEAD
           <li><a href="#icons">Icons</a></li>
 	  <li><a href="#typography">Typography</a></li>
 	  <li><a href="#buttons-style">Buttons</a></li>
 	  <li><a href="#tables">Tables</a></li>
 	  <li><a href="#header">Header</a></li>
           <li><a href="#feature-layout">Feature Layout</a></li>
+=======
+          <li><a href="#icons-section">Icons</a></li>
+          <li><a href="#typography-section">Typography</a></li>
+          <li><a href="#buttons-section">Buttons</a></li>
+          <li><a href="#tables-section">Tables</a></li>
+          <li><a href="#header-section">Header</a></li>
+          <li><a href="#feature-layout-section">Feature Layout</a></li>
+>>>>>>> Tweak docs, add spiffy menu.
         </ul>
       </nav>
 
@@ -47,7 +58,7 @@
           NOTE: This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
         </p>
 
-        <section id="responsive">
+        <section id="responsive-section">
           <h2>Responsive Design</h2>
           <p>
             There are 3 breakpoints for small, medium, and large screens. There
@@ -131,7 +142,7 @@
           </div>
         </section>
 
-        <section id="icons">
+        <section id="icons-section">
           <h2>Icons</h2>
           <p>
             There is a common icon font for all RWD apps.
@@ -153,7 +164,7 @@
           </div>
         </section>
 
-        <section id="typography">
+        <section id="typography-section">
           <h2>Typography</h2>
           <div id="font-sizes">
             <div class="mini-font">Mini Font</div>
@@ -192,7 +203,7 @@
             </a>
           </div>
         </section>
-        <section id="buttons-style">
+        <section id="buttons-section">
           <h2>Buttons</h2>
 
           <div class="element example">
@@ -237,7 +248,7 @@
 
           </section>
 
-        <section id="tables">
+        <section id="tables-section">
           <h2>Tables</h2>
           <div class="minor example">
             <table class="table">
@@ -291,7 +302,7 @@
           </div>
         </section>
 
-	<section id="header">
+        <section id="header-section">
           <h2>Header</h2>
           <p>
             If you don't want content underneath the header to be hidden, you can add an
@@ -309,7 +320,7 @@
           </div>
         </section>
 
-        <section id="feature-layout">
+        <section id="feature-layout-section">
           <h2>Feature Layout</h2>
           <p>
             Features that take advatage of the feature layout classes should be wrapped by an element with the class <code>kp-feature</code>

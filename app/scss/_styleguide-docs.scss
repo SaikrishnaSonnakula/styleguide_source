@@ -33,6 +33,7 @@ nav {
 
   @include media($large-screen) {
     @include span-columns(3);
+    top: $styleguide-gutter;
     display: block;
 
     ul {
@@ -56,6 +57,7 @@ nav {
 article {
   @include media($large-screen) {
     @include span-columns(9);
+    float: right;
   }
 
   >h1 {
@@ -150,6 +152,7 @@ article, section, .doc {
     .result-pane {
       border: none;
       margin-left: $content-padding-mobile;
+      margin-right: $content-padding-mobile;
 
       @include breakpoint($desktop) {
         margin-left: 0;
@@ -158,11 +161,11 @@ article, section, .doc {
 
     @include media($large-screen) {
       .code {
-        @include span-columns(9);
+        @include span-columns(8);
       }
 
       .result {
-        @include span-columns(3);
+        @include span-columns(4);
         .result-pane { padding: 0px; }
       }
     }
