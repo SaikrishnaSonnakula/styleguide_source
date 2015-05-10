@@ -40,7 +40,7 @@ a {
 h1 {
   font-size: $large-font;
 
-  @include breakpoint($desktop) {
+  @include media($desktop) {
     font-size: $extra-large-font;
   }
 }

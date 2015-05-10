@@ -6,7 +6,7 @@ $medium-break: new-breakpoint(max-width $screen-md, 12);
 $large-break: new-breakpoint(max-width $screen-lg, 12);
 
 .mobile-only {
-  @include breakpoint($desktop) {
+  @include media($desktop) {
     display: none !important;
   }
 }
