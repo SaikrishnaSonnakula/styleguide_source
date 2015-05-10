@@ -59,11 +59,14 @@ $base-border-radius: 5px;
       background-color: lighten($button-color, 50);
       color: $button-hover-color;
     }
+    .icon-arrow-down{
+      float:right;
+    }
   }
 }
 .select-dropdown {
   @extend .outline-button;
-  @extend .icon-arrow-down;
   &.disabled {
   }
+  text-align: left;
 }
