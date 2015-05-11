@@ -1,11 +1,9 @@
-define(['jquery', 'add_colors', 'create_examples'], function($, addColors, createExamples) {
+define(['jquery', 'add_colors', 'create_examples', 'vendor/fixedsticky'], function($, addColors, createExamples) {
 
-  require(['fixedsticky'], function() {
-    $(function() {
-      $(".fixedsticky").fixedsticky();
-      addColors();
-      createExamples();
-      $("main").show();
-    });
-  })
+  $(function() {
+    $(".fixedsticky").fixedsticky();
+    addColors();
+    createExamples();
+    $("main").show();
+  });
 });
