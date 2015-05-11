@@ -29,7 +29,9 @@ main {
 }
 
 nav {
-  display: none;
+  &, .fixedsticky-dummy {
+    display: none;
+  }
 
   @include media($large-screen) {
     @include span-columns(3);
@@ -238,6 +240,28 @@ article, section, .doc {
   font-family: "Gotham 4r";
   margin-bottom: 40px;
   margin-left: $content-padding-mobile;
+
+  .font-size {
+    div {
+      line-height: 50px;
+      vertical-align: center;
+    }
+
+    code {
+      display: block;
+      margin-top: 1em;
+    }
+
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
 
   @include media($large-screen) {
     margin-left: 0;
