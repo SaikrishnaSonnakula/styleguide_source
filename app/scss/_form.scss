@@ -1,0 +1,19 @@
+input[type="checkbox"] {
+  @include appearance(none);
+  display: block;
+  font-family: "icon";
+  color: $kp-blue;
+  border: 1px solid $kp-blue;
+  font-size: 0.6rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  text-align: center;
+  padding-top: 0.1rem;
+
+  margin: 0.1rem;
+  margin-right: 0.4rem;
+
+  &:checked {
+    @extend .icon-checkmark;
+  }
+}
