@@ -12,6 +12,9 @@ $feature-icon-size: 28pt;
   vertical-align: middle;
   text-align: center;
 
+  &.icon-stethoscope,
+  &.icon-doctor-male-profile,
+  &.icon-member-card,
   &.icon-message {
     font-size: ($feature-icon-size / 2) + 4pt;
   }
