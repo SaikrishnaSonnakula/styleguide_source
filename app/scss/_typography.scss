@@ -90,7 +90,39 @@ h2 {
     font-weight: normal;
     padding: $text-padding;
   }
+}
 
+tr.section-heading {
+  display: table-row;
+  th, td { border-bottom: none !important; }
+}
+
+.context-bar {
+  color: $white;
+  background-color: $kp-blue;
+  font-size: $medium-font;
+  width: 100%;
+  padding: $content-gutter/2 $content-gutter;
+
+  @include media($large-screen) {
+    background-color: $light-grey;
+    color: $kp-blue;
+    line-height: $large-font;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    @include media($large-screen) {
+      color: $kp-blue;
+    }
+  }
+}
+
+.bold-heading {
+  font-size: $medium-font;
+  font-weight:bold;
 }
 
 a, a:hover, a:active, a:focus {
