@@ -9,7 +9,7 @@ define([], function(){
         'light-grey',
         'white',
         'interactive-blue',
-        'error-red'
+        'red-error'
       ]
     },
     {

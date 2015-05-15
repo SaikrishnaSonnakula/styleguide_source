@@ -5,6 +5,7 @@ $medium-font: 120%;
 $large-font: 190%;
 $extra-large-font: 250%;
 
+$normal-font: "Gotham 4r";
 $bold-font: "Gotham 7r";
 
 html {
@@ -134,3 +135,14 @@ a, a:hover, a:active, a:focus {
   font-weight:bold;
 }
 
+.flash {
+  padding: $content-gutter;
+
+  @include media($large-screen) {
+    border-radius: $border-radius;
+  }
+
+  &.info {
+    background-color: $light-grey;
+  }
+}
