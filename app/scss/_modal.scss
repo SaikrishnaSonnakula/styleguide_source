@@ -103,5 +103,16 @@
         }
       }
     }
+
+    .modal-buttons {
+      padding-top: $content-gutter;
+      text-align: center;
+
+      @include media($large-screen) {
+        .button {
+          margin-bottom: 0px;
+        }
+      }
+    }
   }
 }
