@@ -25,6 +25,9 @@ $white: #FFFFFF;
   border: 1px solid $light-grey;
 }
 
+$red-error: #c73b3b;
+.red-error { background-color: $red-error; }
+
 $border-color: $light-grey;
 
 // Secondary Colors

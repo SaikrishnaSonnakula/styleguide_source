@@ -19,9 +19,16 @@ $lib: true;
 @import "bourbon";
 @import "neat";
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+  -moz-box-sizing: border-box; /* Needed for Firefox */
+  box-sizing: border-box
+}
 
 $content-gutter: 1rem;
 $small-spacing: 0.5rem;
+$text-padding: 1rem;
+$paragraph-margin: 1.5rem;
 
 // Final design styles
 @import "color";
@@ -34,6 +41,7 @@ $small-spacing: 0.5rem;
 @import "form";
 @import "table";
 @import "list";
+@import "modal";
 @import "feature";
 @import "header";
 

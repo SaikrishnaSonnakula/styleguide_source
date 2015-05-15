@@ -1,0 +1,107 @@
+.modal-showing {
+  overflow: hidden;
+}
+
+.kp-modal {
+  &.modal-showing {
+    display: block;
+
+    .modal-fade-screen {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-fade-screen .modal-inner {
+      @include media($medium-screen) {
+        top: 0.5em;
+      }
+
+      @include media($large-screen) {
+        top: 0.5em;
+      }
+    }
+  }
+
+  .modal-fade-screen { // overlay
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    @include media($medium-screen) {
+      padding-top: 10em;
+    }
+
+    @include media($large-screen) {
+      padding-top: 10em;
+    }
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-inner {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: $white;
+    margin: 0;
+    overflow: auto;
+
+    @include media($medium-screen) {
+      position: relative;
+      margin: auto;
+      max-height: 70%;
+      width: 60%;
+    }
+
+    @include media($large-screen) {
+      position: relative;
+      margin: auto;
+      width: 50%;
+    }
+
+    .content {
+      padding: $content-gutter;
+    }
+
+    .modal-header {
+      padding: $content-gutter;
+      position: relative;
+      border-bottom: 1px solid $border-color;
+      color: $kp-blue;
+      text-align: center;
+      font-size: $medium-font;
+
+      .modal-close {
+        @include position(absolute, null $content-gutter/2 $content-gutter null);
+        @include size(1.2em);
+        cursor: pointer;
+
+        &:after,
+        &:before {
+          @include position(absolute, 2px 2px 0 50%);
+          @include transform(rotate(45deg));
+          @include size(0.15em 1.2em);
+          background: $kp-blue;
+          content: '';
+          display: block;
+          margin: -3px 0 0 -1px;
+        }
+
+        &:hover:after,
+        &:hover:before {
+          background: $kp-blue;
+        }
+
+        &:before {
+          @include transform(rotate(-45deg));
+        }
+      }
+    }
+  }
+}

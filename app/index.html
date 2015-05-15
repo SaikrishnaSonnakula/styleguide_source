@@ -47,7 +47,7 @@
         </h1>
 
         <p>
-          NOTE: This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
+          <strong>Note:</strong> This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
         </p>
 
         <section id="responsive-section">
@@ -430,6 +430,38 @@
         </section>
 
         <section id="header-section">
+          <h2>Modal</h2>
+
+          <div class="element example">
+            <pre class="code language-javascript">
+              $("#modal-link").click(function() {
+                $("body, #my-modal").addClass("modal-showing");
+              });
+
+              $(".modal-close, .modal-fade-screen").click(function() {
+                $("body, #my-modal").removeClass("modal-showing");
+              });
+            </pre>
+
+            <a id="modal-link">Bring in the modal.</a>
+
+            <div class="kp-modal" id="my-modal">
+              <div class="modal-fade-screen">
+                <div class="modal-inner">
+                  <div class="modal-header">
+                    Modal space
+                    <div class="modal-close"></div>
+                  </div>
+
+                  <div class="content">
+                    Welcome to the modal space.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="header-section">
 
           <h2>Header</h2>
           <p>
@@ -441,7 +473,9 @@
             <div class="kp-header" role="banner">
               <div class="header-left">Left</div>
               <span class="screenreader-only">Kaiser Permanente</span>
-              <div class="header-right">Right</div>
+              <div class="header-right">
+                <a class="icon-button icon-trashcan"></a>
+              </div>
             </div>
             <div class="kp-header-buffer"></div>
             <div>Other content</div>

@@ -1,10 +1,6 @@
 
 
 // Header
-.kp-header{
-	padding:1em $gutter .5em $gutter;
-	padding-bottom:$spacer-large
-}
 .kp-global-logo{
 	@include center-block();
 	@extend .col-sm-4;

@@ -7,17 +7,15 @@ $extra-large-font: 250%;
 
 $bold-font: "Gotham 7r";
 
-$text-padding: 1rem;
-$paragraph-margin: 10px;
-
 html {
   font-size: $base-font;
 }
 
 body {
+  background-color: $white;
+  color: $dark-grey;
   font-size: $base-font;
   font-family: "Gotham 4r";
-  color: $dark-grey;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,6 +34,12 @@ p {
 
 a {
   color: $interactive-blue;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+  }
 
   &:hover {
     color: $kp-blue;
@@ -53,15 +57,13 @@ h1 {
 h2 {
   @extend .page-heading;
 }
+
 .mini-font { font-size:$mini-font; }
 .small-font { font-size:$small-font; }
 .medium-font { font-size: $medium-font; }
 .large-font { font-size: $large-font; }
 .extra-large-font { font-size: $extra-large-font; }
-
-.uppercase {
-  text-transform: uppercase;
-}
+.uppercase { text-transform: uppercase; }
 
 .page-heading {
   font-size: $medium-font;
@@ -97,6 +99,13 @@ tr.section-heading {
   th, td { border-bottom: none !important; }
 }
 
+a, a:hover, a:active, a:focus {
+  &.section-heading {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+}
+
 .context-bar {
   color: $white;
   background-color: $kp-blue;
@@ -125,9 +134,3 @@ tr.section-heading {
   font-weight:bold;
 }
 
-a, a:hover, a:active, a:focus {
-  &.section-heading {
-    color: $dark-grey;
-    text-decoration: none;
-  }
-}

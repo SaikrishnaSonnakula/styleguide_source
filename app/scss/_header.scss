@@ -11,6 +11,7 @@ $header-border-width: 1px;
   background-size: 250px;
   background-repeat: no-repeat;
   border-bottom: $header-border-width solid #ccc;
+  padding: 0 $content-gutter;
 
   display: table;
   width: 100%;
@@ -19,14 +20,29 @@ $header-border-width: 1px;
     display: table-cell;
     vertical-align: middle;
     text-align: left;
-    padding-left: 1%;
   }
 
   .header-right {
     display: table-cell;
     vertical-align: middle;
     text-align: right;
-    padding-right: 1%;
+  }
+
+  .icon-button {
+    width: 4%;
+    height: 80%;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    height: $header-height;
+    line-height: $header-height;
+    vertical-align: middle;
+    font-size: 150%;
+    color: $kp-blue;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
   }
 }
 

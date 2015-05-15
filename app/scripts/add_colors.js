@@ -8,7 +8,8 @@ define([], function(){
         'mid-grey',
         'light-grey',
         'white',
-        'interactive-blue'
+        'interactive-blue',
+        'error-red'
       ]
     },
     {

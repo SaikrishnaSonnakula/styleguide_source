@@ -10,6 +10,15 @@ define(['jquery', 'add_colors', 'create_examples', 'vendor/fixedsticky'], functi
     $(".fixedsticky").fixedsticky();
     addColors();
     createExamples();
+
+    $("#modal-link").click(function() {
+      $("body, #my-modal").addClass("modal-showing");
+    });
+
+    $(".modal-close, .modal-fade-screen").click(function() {
+      $("body, #my-modal").removeClass("modal-showing");
+    });
+
     $("main").show();
   });
 });
