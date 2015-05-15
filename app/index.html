@@ -426,7 +426,7 @@
                 $("body, #my-modal").addClass("modal-showing");
               });
 
-              $(".modal-close, .modal-fade-screen").click(function() {
+              $(".modal-close, .modal-fade-screen, #nothing").click(function() {
                 $("body, #my-modal").removeClass("modal-showing");
               });
             </pre>
@@ -442,7 +442,14 @@
                   </div>
 
                   <div class="content">
-                    Welcome to the modal space.
+                    Welcome to the modal space. What do you do?
+
+                    <div class="modal-buttons">
+                      <a id="nothing" class="button outline-button">Do nothing</a>
+                      <a href="http://stars.chromeexperiments.com/" class="button">
+                        Ponder about space time
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -560,7 +567,6 @@
             </div>
           </div>
           </section>
-         
       </article>
     </main>
   </body>
