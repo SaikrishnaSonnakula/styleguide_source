@@ -255,21 +255,82 @@
       	  </div>
         </section>
          <section id="form-section">
-            <h2>Form Elements</h2>
-            <h3>Checkboxes</h3>
-            <div class="element example">
-              <input type="checkbox"/>
-            </div>
-            <h3>Select Dropdown</h3>
-            <div class="minor example">
-              <div class="select-dropdown">
-                <select>
-                  <option>Golden State Warriors</option>
-                  <option>San Francisco 49ers</option>
-                  <option>San Francisco Giants</option>
-                </select>
+            <h2>Forms</h2>
+            <p>
+              Group labels and input fields inside of a <code>.form-group</code>
+              div for styles to apply. There are several form elements you can use.
+              See the examples below to see how to use the form elements:
+            </p>
+
+            <div class="large-element example">
+              <div class="form-group">
+                <label for="name-field">Name</label>
+                <input type="text" id="name-field"/>
               </div>
             </div>
+
+            <div class="large-element example">
+              <div class="form-group">
+                <label for="about-field">About</label>
+                <textarea id="about-field"></textarea>
+              </div>
+            </div>
+
+            <div class="large-element example">
+              <div class="form-group">
+                <label for="team-field">Favorite Team</label>
+                <div id="team-field" class="select-dropdown">
+                  <select>
+                    <option>Golden State Warriors</option>
+                    <option>San Francisco 49ers</option>
+                    <option>San Francisco Giants</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="large-element example">
+              <div class="form-group">
+                <label for="shows-list">Shows you watch</label>
+                <ul id="shows-list" class="check-list">
+                  <li>
+                    <input type="checkbox" id="survivor" disabled/>
+                    <label for="survivor">Survivor</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="oprah"/>
+                    <label for="oprah">Oprah</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="silicon-valley"/>
+                    <label for="silicon-valley">Silicon Valley</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="csi-miami"/>
+                    <label for="csi-miami">CSI Miami</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p>
+              Use the <code>.field-note</code> class to add a note underneath the
+              form element.
+            </p>
+            <div class="large-element example">
+              <div class="form-group">
+                <label for="feelings-field">
+                  How are you feeling today?
+                </label>
+                <input type="text" id="feelings-field"/>
+                <div class="field-note">
+                  <strong>Note:</strong>
+                  We will not hold your answer against you.
+                  Feel free to speak from your heart.
+                </div>
+              </div>
+            </div>
+
             <h3>Button Dropdown control</h3>
             <p>This is a select menu form option that will be styled accordingly. It is a form control but looks like a button and used in navigation </p>
 

@@ -1,3 +1,16 @@
+.form-group {
+  textarea {
+    width: 100%;
+    padding: $content-gutter;
+    border-color: $border-color;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: $small-spacing;
+  }
+}
+
 .select-dropdown {
   position: relative;
   font-family: "icon";
@@ -24,6 +37,30 @@
   }
 }
 
+.check-list {
+  @extend .list-unstyled; // BACKBONE...
+
+  input[type="checkbox"] {
+    float: left;
+    margin: $content-gutter;
+    margin-top: $content-gutter + 0.3rem;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    padding: $content-gutter;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  input[type="checkbox"]:disabled + label {
+    color: $mid-grey;
+    cursor: default;
+  }
+}
+
+
 input[type="checkbox"] {
   @include appearance(none);
   display: block;
@@ -37,7 +74,19 @@ input[type="checkbox"] {
   padding-top: 0.1rem;
   margin-right: 0.4rem;
 
+  &:before {
+    content: " ";
+    color: $white;
+  }
+
   &:checked {
     @extend .icon-checkmark;
+    &:before { color: $kp-blue; }
+  }
+
+  &:disabled {
+    border-color: $mid-grey;
+    cursor: default;
+    &:before { color: $mid-grey !important; }
   }
 }

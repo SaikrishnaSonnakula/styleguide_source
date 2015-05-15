@@ -147,6 +147,18 @@ article, section, .doc {
     }
   }
 
+  &.large-element {
+    @extend .minor;
+
+    @include media($large-screen) {
+      .result {
+        .result-pane {
+          padding-top: 0;
+          border: none;
+        }
+      }
+    }
+  }
   &.element {
     margin-bottom: 1em;
     border-bottom: 1px $border-color solid;

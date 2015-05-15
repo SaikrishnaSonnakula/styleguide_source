@@ -19,6 +19,10 @@ $lib: true;
 @import "bourbon";
 @import "neat";
 
+
+$content-gutter: 1rem;
+$small-spacing: 0.5rem;
+
 // Final design styles
 @import "color";
 @import "responsive";

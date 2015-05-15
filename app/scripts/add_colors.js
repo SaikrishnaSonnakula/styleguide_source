@@ -5,6 +5,7 @@ define([], function(){
       colors: [
         'kp-blue',
         'dark-grey',
+        'mid-grey',
         'light-grey',
         'white',
         'interactive-blue'
