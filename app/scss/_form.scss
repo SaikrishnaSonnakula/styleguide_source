@@ -1,4 +1,10 @@
 .form-group {
+  margin-bottom: $paragraph-margin;
+
+  .field-note {
+    margin-top: $small-spacing;
+  }
+
   textarea {
     width: 100%;
     padding: $content-gutter;
