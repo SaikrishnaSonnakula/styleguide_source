@@ -50,7 +50,7 @@ a {
 h1 {
   font-size: $large-font;
 
-  @include media($desktop) {
+  @include media($large-screen) {
     font-size: $extra-large-font;
   }
 }

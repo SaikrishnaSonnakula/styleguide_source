@@ -33,7 +33,7 @@ a.button, a.button:hover, a.button:focus {
   white-space: nowrap;
   text-transform: uppercase;
 
-  @include media($desktop) {
+  @include media($large-screen) {
     width: auto;
 
     &.block {

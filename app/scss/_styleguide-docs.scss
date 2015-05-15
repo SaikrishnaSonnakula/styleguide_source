@@ -94,7 +94,7 @@ article, section, .doc {
     padding-right: $content-padding-mobile;
   }
 
-  @include breakpoint($desktop) {
+  @include breakpoint($large-screen) {
     >p, >h1, >h2, >h3, >h4, >h5, >h6 {
       font-family: Verdana;
       padding-left: 0px;
