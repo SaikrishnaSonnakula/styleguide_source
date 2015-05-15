@@ -1,3 +1,5 @@
+$vertical-button-padding: 1em;
+$horizontal-button-padding: 1.5em;
 $button-color: $interactive-blue;
 $button-hover-color: $kp-blue;
 $button-disable-color: lighten($deep-blue, 45);
@@ -64,6 +66,7 @@ $base-border-radius: 5px;
     }
   }
 }
+
 .select-drop-down-menu{
   @extend .outline-button;
   @extend .button;
@@ -82,11 +85,4 @@ $base-border-radius: 5px;
   // padding: $base-spacing / 3;
   transition: border-color;
   width: 100%;
-}
-.select-dropdown {
-  @extend .outline-button;
-  // background-image: url('http://upload.wikimedia.org/wikipedia/commons/a/ac/Approve_icon.svg');
-  &.disabled {
-  }
-  text-align: left;
 }
