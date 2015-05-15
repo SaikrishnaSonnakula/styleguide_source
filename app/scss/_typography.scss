@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6, p {
   padding-left: $text-padding;
+  margin-bottom: $paragraph-margin;
 }
 
 p {
@@ -48,6 +49,10 @@ h1 {
     font-size: $extra-large-font;
   }
 }
+
+h2 {
+  @extend .page-heading;
+}
 .mini-font { font-size:$mini-font; }
 .small-font { font-size:$small-font; }
 .medium-font { font-size: $medium-font; }
@@ -59,10 +64,15 @@ h1 {
 }
 
 .page-heading {
-  font-size: $large-font;
-  font-weight: normal;
-  margin-top: 0px;
+  font-size: $medium-font;
+  padding-right: $content-gutter;
+  margin-top: 2 * $content-gutter;
   padding-left: $text-padding;
+
+  @include media($large-screen) {
+    margin-top: 0px;
+    font-size: $large-font;
+  }
 }
 
 .section-heading {
