@@ -1,22 +1,21 @@
-$list-element-padding: 0.7em;
-
 .link-list {
   @extend .list-unstyled; // BACKBONE...
   border-top: 1px solid $light-grey;
 
   @include media($large-screen) {
+    margin-left: $content-gutter;
     border-top: none;
   }
 
   a, a:hover, a:active {
     display: block;
     text-decoration: none;
-    padding: $list-element-padding;
+    padding: $content-gutter;
     border-bottom: 1px solid $light-grey;
 
     @include media($large-screen) {
-      padding-top: $list-element-padding / 2;
-      padding-bottom: $list-element-padding / 2;
+      padding-top: $small-spacing;
+      padding-bottom: $small-spacing;
       padding-left: 0px;
       border-bottom: none;
 
