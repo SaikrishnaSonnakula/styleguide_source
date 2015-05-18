@@ -28,12 +28,16 @@ main {
   }
 }
 
+.fixedsticky-dummy {
+  display: none !important;
+}
+
 nav {
-  &, .fixedsticky-dummy {
+  &, {
     display: none;
   }
 
-  @include media($large-screen) {
+  @include media($largest-screen) {
     @include span-columns(3);
     top: $styleguide-gutter;
     display: block;
@@ -57,13 +61,13 @@ nav {
 }
 
 article {
-  @include media($large-screen) {
+  @include media($largest-screen) {
     @include span-columns(9);
     float: right;
   }
 
   >h1 {
-    margin-top: 0px;
+    margin-top: $paragraph-margin;
   }
 
   section {
