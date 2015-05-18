@@ -1,6 +1,10 @@
 .form-group {
   margin-bottom: $paragraph-margin;
 
+  label {
+    margin-bottom: $small-spacing;
+  }
+
   .field-note {
     margin-top: $small-spacing;
   }

@@ -26,10 +26,13 @@ $lib: true;
 }
 
 $border-radius: 5px;
-$content-gutter: 1rem;
 $small-spacing: 0.5rem;
 $text-padding: 1rem;
-$paragraph-margin: 1.5rem;
+$content-gutter: 1rem;
+$medium-spacing: 1rem;
+$gutter-spacing: $medium-spacing;
+$large-spacing: 1.5rem;
+$paragraph-margin: $large-spacing;
 
 // Final design styles
 @import "color";

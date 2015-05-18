@@ -77,6 +77,7 @@ article {
 
 article, section, .doc {
   >h2 {
+    font-size: $large-font;
     color: $kp-blue;
     padding-bottom: 10px;
     border-bottom: 1px $border-color solid;
@@ -94,13 +95,8 @@ article, section, .doc {
 
   >p, >h1, >h2, >h3, >h4, >h5, >h6 {
     font-family: Verdana;
-    padding-left: $content-padding-mobile;
-    padding-right: $content-padding-mobile;
-  }
 
-  @include breakpoint($large-screen) {
-    >p, >h1, >h2, >h3, >h4, >h5, >h6 {
-      font-family: Verdana;
+    @include media($large-screen) {
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -233,7 +229,7 @@ article, section, .doc {
 }
 
 .color {
-  padding: 10px $content-padding-mobile;
+  padding: 10px $content-gutter;
 
   @include media($medium-screen) {
     @include span-columns(6);
@@ -249,6 +245,58 @@ article, section, .doc {
     height: 80px;
     width: 100%;
     border-radius: 5px;
+  }
+}
+
+.spacing-examples {
+  @include outer-container(100%);
+  @extend .doc;
+  margin-bottom: 20px;
+}
+
+.spacing-example {
+  display: inline-block;
+  margin-left: $gutter-spacing;
+  margin-right: $gutter-spacing;
+  margin-bottom: $large-spacing * 2;
+
+  &:hover {
+    background-color: #FDF78A;
+
+    .form-group {
+      background-color: #FDF78A;
+    }
+  }
+
+  p {
+    width: 100%;
+    background-color: $white;
+  }
+
+  .small-spacing {
+    background-color: $white;
+    padding-left: $gutter-spacing;
+    padding-right: $gutter-spacing;
+
+    label { width: 100%; }
+    .form-group {
+      margin-bottom: 0;
+    }
+    label, .field-note {
+      background-color: white;
+    }
+  }
+
+  .medium-spacing {
+    margin: $content-gutter;
+    background-color: white;
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega(3n);
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
