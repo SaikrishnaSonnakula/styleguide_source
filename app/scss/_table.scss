@@ -34,7 +34,7 @@ table.table{
     vertical-align: middle;
   }
 
-  @include media($small-screen) {
+  @include media($mobile-screen) {
     &.collapsable {
       th {
         display:none;
