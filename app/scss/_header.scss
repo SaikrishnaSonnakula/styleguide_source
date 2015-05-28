@@ -5,30 +5,27 @@ $header-border-width: 1px;
   z-index: 1;
   top: 0px;
   height: $header-height + $header-border-width;
-  // background-color: $white;
-  // background-position: 50% 50%;
-  // background-image: url('images/kplogo.png');
-  // background-size: 250px;
-  // background-repeat: no-repeat;
+  background-color: $white;
+  background-position: 50% 50%;
+  background-image: url('images/kplogo.png');
+  background-size: 250px;
+  background-repeat: no-repeat;
   border-bottom: $header-border-width solid #ccc;
   padding: 0 $content-gutter;
 
   display: table;
-  // width: 100%;
-  @include span-columns(12);
+  width: 100%;
 
   .header-left {
-     position: absolute;
-     top:10px;
-     left:4px;
-     height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
   }
 
   .header-right {
-     position: absolute;
-     top:0;
-     right:4px;
-     height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
   }
 
   .icon-button {
@@ -47,72 +44,6 @@ $header-border-width: 1px;
       text-decoration: none;
     }
   }
-  .kp-logo{
-      margin:0 auto;
-      display: block;
-      vertical-align: middle;
-      text-align: center;
-    a{
-      display: inline-block;
-      width:250px;
-      height:35px;
-      background-image:url(images/kplogo.svg);
-      background-position: 50% 50%;
-      background-size: 250px;
-      background-repeat: no-repeat;
-    }
-  }
-  @include media($large-screen) {
-    height:$header-height+70px;
-    background:$white;
-    .kp-logo{
-      float:left;  
-    }
-    .header-left{
-      @extend .mobile-only;
-    }
-    .header-right{
-      @extend .mobile-only;
-    }
-    .master-rwd-nav{
-       width:auto;
-      .rwd-primary-nav-list{
-        @include span-columns(12);
-        display:inline-block;
-        float:left;
-        .rwd-primary-nav-link{
-          width: auto;
-          float:left;
-          font-size: $base-font;
-          text-transform: uppercase;
-          text-align: center;
-           @include media($medium-screen){
-            font-size: $font-size-small;
-           }
-           &:active{
-            padding:0;
-            padding:0;
-           }
-          a{
-            display: block;
-            padding: 0.75em .5em;
-            margin:0;
-            color: $dark-grey;
-            &:hover{
-              color: $kp-blue;
-            }
-            &.onState{
-             color: $kp-blue; 
-            }
-            &:active{
-              color: $interactive-blue; 
-            }
-          }
-        }
-      }
-    }
-  }
-
 }
 
 .kp-header-buffer {
