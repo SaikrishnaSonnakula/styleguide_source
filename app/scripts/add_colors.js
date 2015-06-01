@@ -9,6 +9,9 @@ define([], function(){
         'light-grey',
         'white',
         'interactive-blue',
+        'dark-blue',
+        'pale-blue',
+        'light-blue',
         'red-error'
       ]
     },

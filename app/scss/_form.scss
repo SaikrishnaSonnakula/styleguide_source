@@ -32,6 +32,12 @@
     @extend .block;
 
     text-transform: uppercase;
+
+    &:hover, &:focus {
+      color: $button-color;
+      background-color: $white;
+    }
+
     &:active {
       text-transform: none;
     }
