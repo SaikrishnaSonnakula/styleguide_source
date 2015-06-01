@@ -8,7 +8,7 @@ Include this styleguide repo in your `bower.json`
 
     "dependencies": {
       "..." : "...",
-      "styleguide": "ssh://git@stash.kp.org/rwd/styleguide.git"
+      "styleguide": "git+ssh://git@stash.kp.org/rwd/styleguide.git"
     }
 
 Then run `bower install` - watch all the front-end stuff bower installs. You should see something similar to the following in your output:
