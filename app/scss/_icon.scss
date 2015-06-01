@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'icon';
-  src: url('font/icon.eot');
-  src: url('font/icon.eot') format('embedded-opentype'),
-       url('font/icon.woff') format('woff'),
-       url('font/icon.ttf') format('truetype'),
-       url('font/icon.svg') format('svg');
+  font-family: 'kp';
+  src: url('../font/icon.eot?16094792');
+  src: url('../font/icon.eot?16094792#iefix') format('embedded-opentype'),
+       url('../font/icon.woff?16094792') format('woff'),
+       url('../font/icon.ttf?16094792') format('truetype'),
+       url('../font/icon.svg?16094792#kp') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,14 +13,14 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'icon';
-    src: url('../font/icon.svg?53688287#icon') format('svg');
+    font-family: 'kp';
+    src: url('../font/kp.svg?16094792#kp') format('svg');
   }
 }
 */
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "icon";
+  font-family: "kp";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -35,7 +35,7 @@
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
  
@@ -46,83 +46,89 @@
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
  
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-paperclip:before { content: '\e800'; } /* '' */
-.icon-chat:before { content: '\e801'; } /* '' */
-.icon-check-box:before { content: '\e802'; } /* '' */
-.icon-doctor-male:before { content: '\e803'; } /* '' */
-.icon-doctor-female:before { content: '\e804'; } /* '' */
-.icon-modern-facilities:before { content: '\e805'; } /* '' */
-.icon-play-video:before { content: '\e806'; } /* '' */
-.icon-checkmark:before { content: '\e807'; } /* '' */
-.icon-plus:before { content: '\e808'; } /* '' */
-.icon-medical-savings:before { content: '\e809'; } /* '' */
-.icon-member-male:before { content: '\e80a'; } /* '' */
-.icon-member-female:before { content: '\e80b'; } /* '' */
-.icon-pdf-1:before { content: '\e80c'; } /* '' */
-.icon-stethoscope:before { content: '\e80d'; } /* '' */
-.icon-star:before { content: '\e80e'; } /* '' */
-.icon-touch:before { content: '\e80f'; } /* '' */
-.icon-info:before { content: '\e810'; } /* '' */
-.icon-list-view:before { content: '\e811'; } /* '' */
-.icon-globe:before { content: '\e812'; } /* '' */
-.icon-heart:before { content: '\e813'; } /* '' */
-.icon-doctor-male-profile:before { content: '\e814'; } /* '' */
-.icon-calculator:before { content: '\e815'; } /* '' */
-.icon-doctor-female-profile:before { content: '\e816'; } /* '' */
-.icon-award:before { content: '\e817'; } /* '' */
-.icon-doc:before { content: '\e818'; } /* '' */
-.icon-attachment:before { content: '\e819'; } /* '' */
-.icon-compose-1:before { content: '\e81a'; } /* '' */
-.icon-more:before { content: '\e81b'; } /* '' */
-.icon-message:before { content: '\e81c'; } /* '' */
-.icon-preferences:before { content: '\e81d'; } /* '' */
-.icon-questions:before { content: '\e81e'; } /* '' */
-.icon-print:before { content: '\e81f'; } /* '' */
-.icon-secured:before { content: '\e820'; } /* '' */
-.icon-rx:before { content: '\e821'; } /* '' */
-.icon-time:before { content: '\e822'; } /* '' */
-.icon-graph:before { content: '\e823'; } /* '' */
-.icon-arrow:before { content: '\e824'; } /* '' */
-.icon-specialty-care:before { content: '\e825'; } /* '' */
-.icon-member-card:before { content: '\e826'; } /* '' */
-.icon-locations:before { content: '\e827'; } /* '' */
-.icon-medical-record:before { content: '\e828'; } /* '' */
-.icon-home:before { content: '\e829'; } /* '' */
-.icon-find:before { content: '\e82a'; } /* '' */
-.icon-forms:before { content: '\e82b'; } /* '' */
-.icon-email:before { content: '\e82c'; } /* '' */
-.icon-copay:before { content: '\e82d'; } /* '' */
-.icon-date:before { content: '\e82e'; } /* '' */
-.icon-document:before { content: '\e82f'; } /* '' */
-.icon-call:before { content: '\e830'; } /* '' */
-.icon-dollar:before { content: '\e831'; } /* '' */
-.icon-arrow-down:before { content: '\e832'; } /* '' */
-.icon-arrow-up:before { content: '\e833'; } /* '' */
-.icon-pdf:before { content: '\e834'; } /* '' */
-.icon-png:before { content: '\e835'; } /* '' */
-.icon-jpg:before { content: '\e836'; } /* '' */
-.icon-gif:before { content: '\e837'; } /* '' */
-.icon-bmp:before { content: '\e838'; } /* '' */
-.icon-circle-checkmark:before { content: '\e839'; } /* '' */
-.icon-circle-plus:before { content: '\e83a'; } /* '' */
-.icon-web-camera:before { content: '\e83b'; } /* '' */
-.icon-pencil:before { content: '\e83c'; } /* '' */
-.icon-trashcan:before { content: '\e83d'; } /* '' */
-.icon-down-arrow:before { content: '\e83e'; } /* '' */
+
+.icon-doctor-male-profile:before { content: '\e800'; } /* '' */
+.icon-calculator:before { content: '\e801'; } /* '' */
+.icon-doctor-female-profile:before { content: '\e802'; } /* '' */
+.icon-member-female:before { content: '\e803'; } /* '' */
+.icon-pdf-1:before { content: '\e804'; } /* '' */
+.icon-stethoscope:before { content: '\e805'; } /* '' */
+.icon-star:before { content: '\e806'; } /* '' */
+.icon-touch:before { content: '\e807'; } /* '' */
+.icon-info:before { content: '\e808'; } /* '' */
+.icon-list-view:before { content: '\e809'; } /* '' */
+.icon-globe:before { content: '\e80a'; } /* '' */
+.icon-heart:before { content: '\e80b'; } /* '' */
+.icon-medical-record:before { content: '\e80c'; } /* '' */
+.icon-home:before { content: '\e80d'; } /* '' */
+.icon-find:before { content: '\e80e'; } /* '' */
+.icon-print:before { content: '\e80f'; } /* '' */
+.icon-secured:before { content: '\e810'; } /* '' */
+.icon-rx:before { content: '\e811'; } /* '' */
+.icon-time:before { content: '\e812'; } /* '' */
+.icon-graph:before { content: '\e813'; } /* '' */
+.icon-arrow:before { content: '\e814'; } /* '' */
+.icon-specialty-care:before { content: '\e815'; } /* '' */
+.icon-member-card:before { content: '\e816'; } /* '' */
+.icon-locations:before { content: '\e817'; } /* '' */
+.icon-pencil:before { content: '\e818'; } /* '' */
+.icon-trashcan:before { content: '\e819'; } /* '' */
+.icon-down-arrow:before { content: '\e81a'; } /* '' */
+.icon-arrow-up:before { content: '\e81b'; } /* '' */
+.icon-pdf:before { content: '\e81c'; } /* '' */
+.icon-png:before { content: '\e81d'; } /* '' */
+.icon-jpg:before { content: '\e81e'; } /* '' */
+.icon-gif:before { content: '\e81f'; } /* '' */
+.icon-bmp:before { content: '\e820'; } /* '' */
+.icon-circle-checkmark:before { content: '\e821'; } /* '' */
+.icon-circle-plus:before { content: '\e822'; } /* '' */
+.icon-web-camera:before { content: '\e823'; } /* '' */
+.icon-plus:before { content: '\e824'; } /* '' */
+.icon-medical-savings:before { content: '\e825'; } /* '' */
+.icon-member-male:before { content: '\e826'; } /* '' */
+.icon-wifi:before { content: '\e827'; } /* '' */
+.icon-facility:before { content: '\e828'; } /* '' */
+.icon-camera-photo:before { content: '\e829'; } /* '' */
+.icon-piggybank:before { content: '\e82a'; } /* '' */
+.icon-alert:before { content: '\e82b'; } /* '' */
+.icon-reply:before { content: '\e82c'; } /* '' */
+.icon-paperclip:before { content: '\e82d'; } /* '' */
+.icon-chat:before { content: '\e82e'; } /* '' */
+.icon-check-box:before { content: '\e82f'; } /* '' */
+.icon-doctor-male:before { content: '\e830'; } /* '' */
+.icon-doctor-female:before { content: '\e831'; } /* '' */
+.icon-modern-facilities:before { content: '\e832'; } /* '' */
+.icon-play-video:before { content: '\e833'; } /* '' */
+.icon-checkmark:before { content: '\e834'; } /* '' */
+.icon-award:before { content: '\e835'; } /* '' */
+.icon-doc:before { content: '\e836'; } /* '' */
+.icon-attachment:before { content: '\e837'; } /* '' */
+.icon-compose-1:before { content: '\e838'; } /* '' */
+.icon-more:before { content: '\e839'; } /* '' */
+.icon-forms:before { content: '\e83a'; } /* '' */
+.icon-email:before { content: '\e83b'; } /* '' */
+.icon-copay:before { content: '\e83c'; } /* '' */
+.icon-date:before { content: '\e83d'; } /* '' */
+.icon-document:before { content: '\e83e'; } /* '' */
 .icon-none-available:before { content: '\e83f'; } /* '' */
 .icon-circle-x:before { content: '\e840'; } /* '' */
 .icon-refresh:before { content: '\e841'; } /* '' */
 .icon-alarm:before { content: '\e842'; } /* '' */
 .icon-up-arrow:before { content: '\e843'; } /* '' */
-.icon-shoppingcart:before { content: '\e844'; } /* '' */
-.icon-compose:before { content: '\e845'; } /* '' */
-.icon-chevron-arrow:before { content: '\e846'; } /* '' */
-.icon-wifi:before { content: '\e847'; } /* '' */
-.icon-facility:before { content: '\e848'; } /* '' */
-.icon-camera-photo:before { content: '\e849'; } /* '' */
-.icon-piggybank:before { content: '\e84a'; } /* '' */
-.icon-alert:before { content: '\e84b'; } /* '' */
-.icon-reply:before { content: '\e84c'; } /* '' */
+.icon-message:before { content: '\e844'; } /* '' */
+.icon-preferences:before { content: '\e845'; } /* '' */
+.icon-questions:before { content: '\e846'; } /* '' */
+.icon-call:before { content: '\e847'; } /* '' */
+.icon-dollar:before { content: '\e848'; } /* '' */
+.icon-arrow-down:before { content: '\e849'; } /* '' */
+.icon-shoppingcart:before { content: '\e84a'; } /* '' */
+.icon-compose:before { content: '\e84b'; } /* '' */
+.icon-chevron-arrow:before { content: '\e84c'; } /* '' */
+.icon-menu:before { content: '\e84d'; } /* '' */
