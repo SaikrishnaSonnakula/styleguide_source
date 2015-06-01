@@ -1,8 +1,10 @@
+$button-color: $interactive-blue;
+$button-disable-color: $pale-blue;
+$button-outline-hover-color: $light-blue;
+$button-hover-color: $dark-blue;
+
 $vertical-button-padding: 1em;
 $horizontal-button-padding: 1.5em;
-$button-color: $interactive-blue;
-$button-hover-color: $kp-blue;
-$button-disable-color: lighten($deep-blue, 25);
 $base-border-radius: 5px;
 
 a.button, a.button:hover, a.button:focus {
@@ -11,10 +13,10 @@ a.button, a.button:hover, a.button:focus {
 
 .button {
   @include appearance(none);
+  color: $white;
   background-color: $button-color;
   border: none;
   border-radius: $base-border-radius;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   width: 100%;
@@ -41,7 +43,7 @@ a.button, a.button:hover, a.button:focus {
     }
   }
   &:hover, &:focus {
-    background-color: $deep-blue;
+    background-color: $button-hover-color;
     color: #fff;
   }
   &:disabled, .disabled {
@@ -65,8 +67,7 @@ a.button, a.button:hover, a.button:focus {
     color: $button-color;
 
     &:hover, &:focus {
-      background-color: lighten($button-color, 50);
-      color: $button-hover-color;
+      background-color: $button-outline-hover-color;
     }
     .icon-arrow-down{
       float:right;
