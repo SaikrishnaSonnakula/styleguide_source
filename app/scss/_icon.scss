@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'kp';
+  font-family: 'icon';
   src: url('font/icon.eot');
   src: url('font/icon.eot') format('embedded-opentype'),
        url('font/icon.woff') format('woff'),
@@ -20,7 +20,7 @@
 */
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "kp";
+  font-family: "icon";
   font-style: normal;
   font-weight: normal;
   speak: none;
