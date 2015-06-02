@@ -1,4 +1,3 @@
-
 // Core variables and mixins
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
@@ -6,16 +5,16 @@
 // Reset and dependencies
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/type";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/code";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
-//@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+
+/*
+//@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+//@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+//@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
 
 // Components
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
@@ -49,4 +48,4 @@
 // Utility classes
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
-
+*/
