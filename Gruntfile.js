@@ -46,4 +46,5 @@ module.exports = function(grunt) {
   );
 
   grunt.registerTask("prepush", ["sass"]);
+  grunt.registerTask("ci", ["sass"]);
 };
