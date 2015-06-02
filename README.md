@@ -34,3 +34,10 @@ When we started with this project, much of our work was started with bootstrap (
 ###Bourbon / Neat / other stuff
 
 We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstrap. Instead, it's a library of Mixins that allow one to decide what to use. It's minimalistic in nature, but offers additional features through NEAT which is a bourbon framework that offers grids and layout helpers.
+
+##Contributing to Styleguide
+
+###Adding Icons
+We use http://fontello.com/ to help us generate icon sets. You must first import the `config.json` under `/app/icon/config.json` into Fontello. This will ensure that we have the latest icon set from fontello.
+
+Make you selection of new icons, then download the zip file.
