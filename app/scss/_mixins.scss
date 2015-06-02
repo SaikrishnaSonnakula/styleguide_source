@@ -1,5 +1,5 @@
 // Breakpoint
-@import "breakpoint-sass/stylesheets/breakpoint";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
 // We can use all of the Breakpoint control variables with respond-to as well!
 $breakpoint-no-query-fallbacks: true;
 $breakpoint-to-ems: false;
@@ -18,6 +18,3 @@ input.clearable {
 }
 .clearable.x  { background-position: right 10px center; }
 .clearable.onX{ cursor: pointer; }
-
-
-
