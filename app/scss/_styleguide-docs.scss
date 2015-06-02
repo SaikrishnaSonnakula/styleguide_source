@@ -168,7 +168,7 @@ article, section, .doc {
       margin-left: $content-padding-mobile;
       margin-right: $content-padding-mobile;
 
-      @include breakpoint($large-screen) {
+      @include media($large-screen) {
         margin-left: 0;
       }
     }

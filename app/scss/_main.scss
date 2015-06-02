@@ -1,18 +1,5 @@
-//Kae: Do not use Bootstrap icon font.
-//$icon-font-path: "bootstrap-sass-official/assets/fonts/bootstrap/";
-
-// Kae: refer to http://getbootstrap.com/customize/#less-variables for available variables
-// Also refer to bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_scaffolding.scss
-// for variables control the Typography and links
-// Kae: define $lib to set the correct icon and font path in lib development mode.
-// NOTE: all other feature should not define $lib, it's for lib project itself
-$lib: true;
-
-@import "variables"; // KP variables
-
 // Bootstrap
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap"; // KP bootstrap options
-// @import "bower_components/bootstrap-jasny/scss/jasny-bootstrap.scss";
 @import "bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 //Bourbon
@@ -38,6 +25,7 @@ $paragraph-margin: $large-spacing;
 @import "color";
 @import "responsive";
 @import "accessibility";
+@import "font";
 @import "icon";
 @import "icon-custom";
 @import "typography";
@@ -48,8 +36,3 @@ $paragraph-margin: $large-spacing;
 @import "modal";
 @import "feature";
 @import "header";
-
-// Old styles
-@import "font";
-@import "icon";
-@import "mixins"; // kp mixin
