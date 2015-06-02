@@ -13,7 +13,7 @@ $main-max-width: ($large-screen-max * 16/12) + ($styleguide-gutter * 2);
 header {
   width: 100%;
   height: 160px;
-  background-color: $bg-dark;
+  background-color: $light-grey;
   background-position: 50% 50%;
   background-image: url('images/kplogo.png');
   background-size: 300px;
@@ -45,12 +45,12 @@ nav {
     ul {
       font-size: 14pt;
       font-weight: bold;
-      text-align: left;
+      align: left;
       @extend .list-unstyled; //BOOTSTRAP...
     }
 
     a {
-      color: $text-med;
+      color: $dark-grey;
       text-decoration: none !important;
 
       &:hover {
