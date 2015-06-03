@@ -1,15 +1,15 @@
 // Core variables and mixins
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/print";
 
 // Core CSS
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/type";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
 
 /*
 //@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
