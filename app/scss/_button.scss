@@ -40,6 +40,7 @@ a.button, a.button:hover, a.button:focus {
 
     &.block {
       width: 100%;
+      min-width: 0px;
     }
   }
   &:hover, &:focus {
