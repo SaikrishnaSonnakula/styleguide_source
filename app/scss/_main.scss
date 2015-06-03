@@ -18,6 +18,7 @@ $medium-spacing: 1rem;
 $gutter-spacing: $medium-spacing;
 $large-spacing: 1.5rem;
 $paragraph-margin: $large-spacing;
+$header-spacing: 4em;
 
 // Final design styles
 @import "color";
@@ -27,6 +28,7 @@ $paragraph-margin: $large-spacing;
 @import "icon";
 @import "icon-custom";
 @import "typography";
+@import "alert";
 @import "button";
 @import "form";
 @import "table";

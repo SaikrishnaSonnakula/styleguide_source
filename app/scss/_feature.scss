@@ -34,7 +34,6 @@ $max-content-width: 1080px;
 
   .feature-header {
     display: none;
-    @include media($large-screen) { display: block; }
 
     h1 {
       text-align: center;
@@ -47,7 +46,8 @@ $max-content-width: 1080px;
     }
 
     @include media($large-screen) {
-      margin-bottom: $feature-gutter;
+      display: block;
+      margin-bottom: $header-spacing;
 
       h1 {
         vertical-align: center;
@@ -60,7 +60,9 @@ $max-content-width: 1080px;
 
       .feature-icon {
         display: inline-block;
-        margin-top: 0;
+        line-height: auto;
+        vertical-align: top;
+        margin: 0px;
       }
     }
   }
@@ -80,6 +82,20 @@ $max-content-width: 1080px;
   .feature-content {
     @include media($large-screen) {
       @include span-columns(9);
+    }
+
+    .feature-alert {
+      position: static;
+      padding: $medium-spacing;
+      display: none;
+
+      @include media($large-screen) {
+        margin-top: -$header-spacing;
+      }
+
+      &.active {
+        display: block;
+      }
     }
   }
 

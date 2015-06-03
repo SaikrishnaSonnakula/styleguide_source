@@ -286,11 +286,31 @@
             <h2 class="context-bar">Context Bar</h2>
           </div>
 
-          <h3>Flash Messages</h3>
+          <h3>Alerts</h3>
           <div class="large-element example">
-            <div class="flash info">
-              <strong>Note</strong>:
-              This is a info flash
+            <div class="alert-info">
+              Heads up!
+              This alert needs your attention,
+              but it's not super important.
+            </div>
+          </div>
+          <div class="large-element example">
+            <div class="alert-error">
+              Oh snap!
+              Change a few things up and try submitting again.
+            </div>
+          </div>
+          <div class="large-element example">
+            <div class="alert-success">
+              Well done!
+              You successfully read this important alert message.
+            </div>
+          </div>
+          <div class="large-element example">
+            <div class="alert-loading">
+              <span class="message">
+                Loading...
+              </span>
             </div>
           </div>
         </section>
@@ -645,6 +665,51 @@
               </div>
 
               <div class="feature-content">
+                <h2>Feature Content</h2>
+                <p>Feature content goes here!</p>
+              </div>
+            </div>
+          </div>
+
+
+          <h3>Feature Alerts</h3>
+          <p>
+            If you need an alert for the entire screen, put it in an element with the <code>feature-alert</code> class in the top of your <code>.feature-content</code> element. This will pull the notification up, and push the content down
+            appropriately to highlight the alert.
+          </p>
+          <p>
+            Use the <code>active</code> class to make the notification visible.
+          </p>
+
+          <div class="example">
+            <div class="kp-feature">
+              <div class="feature-header">
+                <div class="feature-icon icon-rx"></div>
+                <h1>My Feature Name</h1>
+              </div>
+
+              <div class="feature-description">
+                This is a slick description of my feature.
+              </div>
+
+              <div class="feature-menu">
+                <ul class="link-list">
+                  <li><a class="landing-page" href="#">
+                    Desktop Landing Page
+                  </a></li>
+                  <li><a href="#">
+                    Another Feature Link
+                  </a></li>
+                </ul>
+              </div>
+
+              <div class="feature-content">
+                <div class="feature-alert active">
+                  <div class="alert-info">
+                    Hey, look at me!
+                  </div>
+                </div>
+
                 <h2>Feature Content</h2>
                 <p>Feature content goes here!</p>
               </div>
