@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="kp-header" role="banner">
+      <div class="header-left">
+	<button id="master-mobile-menu" class="menu-button"> <span class="screenreader-only">Menu Navigation click to expand</span><span class="icon-list-view"></span></button>
+      </div>
+      <span class="screenreader-only">Kaiser Permanente</span>
+      <div class="header-right">
+
+      </div>
+    </div>
+    <div id="master-nav-menu-id" class="master-nav-menu">
+      <nav lang="en-US">
+	<ul id="prime-nav" class="prime-nav">
+	  <li class="nav-prime-li">
+	    <a href="/health/care/consumer/my-health-manager">My health manager</a>
+	    <ul class="secondary-nav">
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/my-health-manager/new-members">New members:
+		Get started</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/mycare/consumer/my-health-manager/my-medical-record">My medical
+		record</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/mycare/consumer/my-health-manager/pharmacy">Pharmacy
+		center</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/mycare/consumer/my-health-manager/appointment-center">Appointment
+		center</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/mycare/consumer/my-health-manager/my-plan-and-coverage">My coverage
+		&amp; costs</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/mycare/consumer/my-health-manager/message-center">My message
+		center</a></span>
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="nav-prime-li">
+	    <a href="/health/care/consumer/health-wellness">Health &amp; wellness</a>
+	    <ul class="secondary-nav">
+	      <li class="first-child">
+		<span class="nav-span"><a href="/health/care/consumer/health-wellness/live-healthy">Live
+		healthy</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/health-wellness/conditions-diseases">Conditions &amp;
+		diseases</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/health-wellness/drugs-and-natural-medicines">Drugs &amp; natural
+		medicines</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/health-wellness/programs-classes">Programs
+		&amp; classes</a></span>
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="nav-prime-li">
+	    <a href="/health/care/consumer/shop-health-plans">Shop health plans</a>
+	    <ul class="secondary-nav">
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/shop-health-plans/individual-and-families">Individual &amp;
+		family plans</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/shop-health-plans/medicare">Medicare</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/shop-health-plans/employees">Employer-sponsored
+		plans</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/shop-health-plans/administrators-and-employers">Administrators &amp;
+		employers</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/shop-health-plans/plan-decision-tools">Which plan
+		is for me?</a></span>
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="nav-prime-li">
+	    <a href="/health/care/consumer/locate-our-services" title="Locate our services">Locate our services</a>
+	    <ul class="secondary-nav">
+	      <li class="first-child">
+		<span class="nav-span"><a href="/health/care/consumer/locate-our-services/doctors-and-locations">Find doctors &amp;
+		locations</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/poc?uri=center:forms-and-publications">Forms &amp;
+		publications</a></span>
+	      </li>
+	      <li>
+		<span class="nav-span"><a href="/health/care/consumer/locate-our-services/member-services">Member
+		Services</a></span>
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+      </nav>
+    </div>
+    <script>
+    $(function(){
+      $('#master-mobile-menu').click(function(e) {
+	$('#master-nav-menu').toggle();
+      });
+      $('.nav-prime-li').on('click', function(e){
+	e.preventDefault();
+	$('.secondary-nav',this).toggle();
+	$(this).toggleClass('expanded');
+      });
+    });
+
+    </script>
+  </body>
+</html>
