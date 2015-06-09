@@ -2,4 +2,8 @@
   text-align: center;
   padding-top: 105pt;
   width: 100%;
+
+  & > * {
+    margin: 0 auto;
+  }
 }
