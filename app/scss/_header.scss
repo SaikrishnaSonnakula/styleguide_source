@@ -52,6 +52,7 @@ $header-border-width: 1px;
     @extend .link-list;
     @include span-columns(12);
     margin-top: $header-height + $header-border-width;
+    background:#fff;
     nav {
 	@include span-columns(12);
 	a {
