@@ -16,35 +16,35 @@ $header-border-width: 1px;
     display: table;
     width: 100%;
     .header-left {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: left;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
     }
     .header-right {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
     }
     .icon-button {
-	width: 4%;
-	height: 80%;
-	cursor: pointer;
-	display: inline-block;
-	width: auto;
-	height: $header-height;
-	line-height: $header-height;
-	vertical-align: middle;
-	font-size: 150%;
-	color: $kp-blue;
-	&:hover, &:focus {
-	    text-decoration: none;
-	}
+        width: 4%;
+        height: 80%;
+        cursor: pointer;
+        display: inline-block;
+        width: auto;
+        height: $header-height;
+        line-height: $header-height;
+        vertical-align: middle;
+        font-size: 150%;
+        color: $kp-blue;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
     }
     .menu-button {
-	@extend .icon-button;
-	background: none;
-	border: none;
-	font-size: 120%;
+        @extend .icon-button;
+        background: none;
+        border: none;
+        font-size: 130%;
     }
 }
 
@@ -52,60 +52,60 @@ $header-border-width: 1px;
     @extend .link-list;
     @include span-columns(12);
     margin-top: $header-height + $header-border-width;
-    background:#fff;
+    background: #fff;
     nav {
-	@include span-columns(12);
-	a {
-	    &:hover {
-		margin: 0;
-	    }
-	}
+        @include span-columns(12);
+        a {
+            &:hover {
+                margin: 0;
+            }
+        }
     }
     .prime-nav {
-	@include span-columns(12);
-	display: inline-block;
-	float: left;
-	.nav-prime-li {
-	    position: relative;
-	    font-family: icon;
-	    @extend .icon-arrow-down;
-	    a {
-		&:hover, &:focus {}
-	    }
-	    &:hover, &:focus {
-		margin: 0;
-		padding: 0;
-	    }
-	    .secondary-nav {
-		display: none;
-		li {
-		    a {
-			border: none;
-			padding-left: $gutter-spacing + 2;
-		    }
-		    &:last-child {
-			border-bottom: 1px $mid-grey solid;
-		    }
-		}
-	    }
-	    &:before {
-		@include transform(rotate(-90deg));
-		color: $light-grey;
-		position: absolute;
-		right: 0px;
-		pointer-events: none;
-		top: $vertical-button-padding;
-		right: $horizontal-button-padding;
-	    }
-	    &.expanded {
-		a {
-		    border-bottom: none;
-		}
-		&:before {
-		    @include transform(rotate(0));
-		}
-	    }
-	}
+        @include span-columns(12);
+        display: inline-block;
+        float: left;
+        .nav-prime-li {
+            position: relative;
+            font-family: icon;
+            @extend .icon-arrow-down;
+            a {
+                &:hover, &:focus {}
+            }
+            &:hover, &:focus {
+                margin: 0;
+                padding: 0;
+            }
+            .secondary-nav {
+                display: none;
+                li {
+                    a {
+                        border: none;
+                        padding-left: $gutter-spacing + 2;
+                    }
+                    &:last-child {
+                        border-bottom: 1px $mid-grey solid;
+                    }
+                }
+            }
+            &:before {
+                @include transform(rotate(-90deg));
+                color: $light-grey;
+                position: absolute;
+                right: 0px;
+                pointer-events: none;
+                top: $vertical-button-padding;
+                right: $horizontal-button-padding;
+            }
+            &.expanded {
+                a {
+                    border-bottom: none;
+                }
+                &:before {
+                    @include transform(rotate(0));
+                }
+            }
+        }
     }
 }
 
