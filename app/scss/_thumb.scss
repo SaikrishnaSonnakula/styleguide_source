@@ -1,37 +1,10 @@
-.thumbnail {
-    display: inline-block;
-    min-height: 60px;
-    min-width: 60px;
-    border: 1px #ccc solid;
-    &.thb-largest {}
-    &.thb-large {}
-    &.thb-medium {}
-    &.thb-small {}
-    &.thb-smallest {}
-}
-
-.thumbnail-container {
+//Thumbnails. yah.
+@mixin thumbnail-container($thumbwidth, $thumbheight){
     position: relative;
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    @include size(60px 60px);
-
-    &.thb-largest {
-      @include size(360px 270px);
-    }
-    &.thb-large {
-      @include size(260px 180px);
-    }
-    &.thb-medium {
-      @include size(160px 120px);
-    }
-    &.thb-small {
-      @include size(80px 80px);
-    }
-    &.thb-smallest {
-      @include size(60px 60px);
-    }
+    @include size($thumbwidth $thumbheight);
     img {
       @include transform(translate(-50%, -50%));
       position: absolute;
@@ -43,4 +16,20 @@
       max-width: 100%;
       max-height: 100%;
     }
+
+}
+.thumbnail-smallest{
+  @include thumbnail-container(60px, 60px);
+}
+.thumbnail-small{
+  @include thumbnail-container(80px, 80px);
+}
+.thumbnail-medium{
+  @include thumbnail-container(160px, 120px);
+}
+.thumbnail-large{
+  @include thumbnail-container(260px, 180px);
+}
+.thumbnail-largest{
+  @include thumbnail-container(360px, 270px);
 }
