@@ -5,7 +5,7 @@ $medium-font: 120%;
 $large-font: 190%;
 $extra-large-font: 250%;
 
-$normal-font: "Gotham 4r";
+$normal-font: "Verdana", "Geneva", sans-serif;
 $bold-font: "Gotham 7r";
 
 html {
@@ -16,7 +16,7 @@ body {
   background-color: $white;
   color: $dark-grey;
   font-size: $base-font;
-  font-family: "Gotham 4r";
+  font-family: $normal-font;
 }
 
 h1, h2, h3, h4, h5, h6 {
