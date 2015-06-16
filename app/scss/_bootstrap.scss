@@ -10,6 +10,11 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+
+// Components
+$progress-bar-color: $interactive-blue;
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
+
 /*
 //@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
 //@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
@@ -30,7 +35,6 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/jumbotron";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/thumbnails";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/media";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/list-group";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/panels";
