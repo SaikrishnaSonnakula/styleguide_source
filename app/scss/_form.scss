@@ -73,16 +73,20 @@
 
   input[type="checkbox"] {
     float: left;
-    margin: $content-gutter;
-    margin-top: $content-gutter + 0.3rem;
+    margin-top: 0.5rem;
+  }
+
+  li {
+    padding-top: $content-gutter;
   }
 
   label {
-    display: inline-block;
+    display: block;
+    padding-top: 0.2em;
+    padding-right: $content-gutter;
     cursor: pointer;
-    padding: $content-gutter;
     margin-top: 0px;
-    padding-left: 0px;
+    margin-left: 1.8rem;
   }
 
   input[type="checkbox"]:disabled + label {
@@ -91,10 +95,14 @@
   }
 }
 
-
-input[type="checkbox"] {
+@mixin check-or-radio {
   @include appearance(none);
   display: block;
+  float: left;
+}
+
+input[type="checkbox"] {
+  @include check-or-radio;
   font-family: "icon";
   color: $kp-blue;
   border: 1px solid $kp-blue;
@@ -124,13 +132,14 @@ input[type="checkbox"] {
 }
 
 input[type='radio'] { //novjot will make it perfect
-    @include appearance(none);
+    @include check-or-radio;
     border:$kp-blue 2px solid;
     border-radius:50%;
     font-size: 0.6rem;
-    width:18px;
-    height:18px;
+    width: 18px;
+    height: 18px;
     text-align: center;
+
     &:before{
       content:'';
       display:block;
@@ -139,6 +148,7 @@ input[type='radio'] { //novjot will make it perfect
       margin: 20% auto;
       border-radius:50%;
     }
+
     &:checked:before{
       background: $kp-blue;
       margin: 3px;
