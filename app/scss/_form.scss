@@ -162,3 +162,11 @@ input[type='radio'] { //novjot will make it perfect
       }
     }
 }
+
+.fixed-input {
+  border-radius: $base-border-radius;
+  background-color: $light-grey;
+  width: 100%;
+  padding: $medium-spacing $large-spacing;
+  font-family: $bold-font;
+}
