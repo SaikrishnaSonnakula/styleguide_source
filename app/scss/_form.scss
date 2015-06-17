@@ -3,6 +3,7 @@
 
   label {
     margin-bottom: $small-spacing;
+    font-weight:normal;
   }
 
   select, .button {
@@ -55,6 +56,9 @@
 
     &:active {
       text-transform: none;
+    }
+    &.not-changed{
+      color: $dark-grey;
     }
   }
 
