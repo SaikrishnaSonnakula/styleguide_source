@@ -90,7 +90,7 @@ $max-content-width: 1080px;
       display: none;
 
       @include media($large-screen) {
-        margin-top: -$header-spacing;
+        margin-top:0;
       }
 
       &.active {
