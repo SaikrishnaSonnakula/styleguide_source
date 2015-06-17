@@ -18,6 +18,8 @@ Then run `bower install` - watch all the front-end stuff bower installs. You sho
     bower styleguide#*  checkout master
     bower styleguide#*  resolved ssh://git@stash.kp.org/rwd/styleguide.git#19b64a1850
 
+##Including styleguide into your projects
+
 ##Gulp project usage
 Still figuring this out. You will experience import SASS errors when you import stylguide on a gulp project.
 
@@ -26,6 +28,8 @@ Still figuring this out. You will experience import SASS errors when you import 
 ##What's in Styleguide
 
 There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
+
+
 
 ###Bootstrap (deprecating)
 
