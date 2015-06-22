@@ -47,16 +47,14 @@
     @extend .outline-button;
     @extend .block;
 
-    text-transform: uppercase;
+    text-align: left;
+    text-transform: none;
 
     &:hover, &:focus {
       color: $button-color;
       background-color: $white;
     }
 
-    &:active {
-      text-transform: none;
-    }
     &.not-changed{
       color: $dark-grey;
     }

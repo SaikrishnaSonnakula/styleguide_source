@@ -57,10 +57,11 @@
 
   .alert-message {
     @extend .message;
+    display: block;
   }
 
   &:before {
-    display: inline;
+    display: inline-block;
     float: none;
   }
 }

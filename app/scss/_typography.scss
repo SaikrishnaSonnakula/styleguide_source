@@ -48,6 +48,10 @@ a {
   &:hover {
     color: $kp-blue;
   }
+
+  // Remove focus outline for firefox
+  &:focus {outline:none;}
+  &::-moz-focus-inner {border:0;}
 }
 
 h1 {
