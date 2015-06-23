@@ -21,7 +21,7 @@
     border-color: $border-color;
   }
 
-  input[type="text"] {
+  input[type="text"], input[type="password"] {
     width: 100%;
     padding: $small-spacing;
   }
