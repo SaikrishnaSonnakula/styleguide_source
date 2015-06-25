@@ -1,9 +1,9 @@
 $base-font: 14px;
-$mini-font: 70%;
-$small-font: 80%;
-$medium-font: 120%;
-$large-font: 190%;
-$extra-large-font: 250%;
+$mini-font: 0.7rem;
+$small-font: 0.8rem;
+$medium-font: 1.2rem;
+$large-font: 1.9rem;
+$extra-large-font: 2.5rem;
 
 $normal-font: "Verdana", "Geneva", sans-serif;
 $bold-font: "Gotham 7r";
@@ -77,7 +77,7 @@ h3{
 .uppercase { text-transform: uppercase; }
 
 .page-heading {
-  font-size: $medium-font;
+  font-size: $large-font;
   font-family: $brand-font;
   padding-right: $content-gutter;
   margin-top: 2 * $content-gutter;
