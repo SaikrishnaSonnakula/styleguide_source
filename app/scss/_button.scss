@@ -75,23 +75,3 @@ a.button, a.button:hover, a.button:focus {
     }
   }
 }
-
-.select-drop-down-menu{
-  @extend .outline-button;
-  @extend .button;
-  margin-bottom: 5px;
-  max-width: 100%;
-  width: auto;
-  background-color: $white;
-  border: 1px $button-color solid;
-  border-radius: $base-border-radius;
-  box-shadow: none;
-  box-sizing: border-box;
-  display: block;
-  // font-family: $base-font-family;
-  // font-size: $base-font-size;
-  // margin-bottom: $base-spacing / 2;
-  // padding: $base-spacing / 3;
-  transition: border-color;
-  width: 100%;
-}
