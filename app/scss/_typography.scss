@@ -145,15 +145,3 @@ a, a:hover, a:active, a:focus {
   font-size: $medium-font;
   font-weight:bold;
 }
-
-.flash {
-  padding: $content-gutter;
-
-  @include media($large-screen) {
-    border-radius: $border-radius;
-  }
-
-  &.info {
-    background-color: $light-grey;
-  }
-}

@@ -1,3 +1,15 @@
+.flash {
+  padding: $content-gutter;
+
+  @include media($large-screen) {
+    border-radius: $border-radius;
+  }
+
+  &.info {
+    background-color: $light-grey;
+  }
+}
+
 @mixin alert {
   @extend .flash;
   @extend [class^="icon-"];
@@ -13,6 +25,11 @@
     display: block;
     float: left;
   }
+}
+
+.alert-bland {
+  @extend .flash;
+  background-color: $light-grey;
 }
 
 .alert-error {
