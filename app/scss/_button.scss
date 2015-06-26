@@ -12,6 +12,8 @@ a.button, a.button:hover, a.button:focus {
 }
 
 @mixin rounded-input {
+  @include appearance(none);
+
   display: inline-block;
   padding: $vertical-button-padding $horizontal-button-padding;
   margin-bottom: $content-gutter;
@@ -33,7 +35,6 @@ a.button, a.button:hover, a.button:focus {
 
 .button {
   @include rounded-input;
-  @include appearance(none);
 
   color: $white;
   background-color: $button-color;
