@@ -109,6 +109,31 @@ $header-border-width: 1px;
     }
 }
 
+.mobile-header-content {
+  position: fixed;
+  top: 0;
+  right: $gutter-spacing;
+  z-index: 2;
+
+  .icon-button {
+    width: 4%;
+    height: 80%;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    height: $header-height;
+    line-height: $header-height;
+    vertical-align: middle;
+    font-size: 150%;
+    color: $kp-blue;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+
+    @media print { display: none; }
+  }
+}
+
 .kp-header-buffer {
     display: block;
     height: $header-height + $header-border-width;
