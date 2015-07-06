@@ -9,6 +9,12 @@ $normal-font: "Verdana", "Geneva", sans-serif;
 $bold-font: "Gotham 7r";
 $brand-font: "Gotham 4r";
 
+@mixin undecorated-link {
+  &, &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
 html {
   font-size: $base-font;
 }

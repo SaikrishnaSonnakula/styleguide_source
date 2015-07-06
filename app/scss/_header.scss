@@ -1,51 +1,96 @@
 $header-height: 50px;
 $header-border-width: 1px;
 
+$mobile-header-height: $header-height;
+$mobile-header-border-width: $header-border-width;
+
+$desktop-header-margin-top: 3rem;
+$desktop-header-height: 6rem;
+
 .kp-header {
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-    height: $header-height + $header-border-width;
-    background-color: $white;
-    background-position: 50% 50%;
-    background-image: url("images/kplogo.png");
-    background-size: 250px;
-    background-repeat: no-repeat;
-    border-bottom: $header-border-width solid #ccc;
-    padding: 0 $content-gutter;
-    display: table;
-    width: 100%;
-    .header-left {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: left;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  height: $mobile-header-height + $mobile-header-border-width;
+  background-color: $white;
+  background-position: 50% 50%;
+  background-image: url("images/kplogo.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  border-bottom: $mobile-header-border-width solid #ccc;
+  padding: 0 $content-gutter;
+  width: 100%;
+
+  @include media($large-screen) {
+    top: $desktop-header-margin-top;
+    height: $desktop-header-height;
+    background: $interactive-blue none;
+
+    font-family: $brand-font;
+    font-size: $medium-font;
+    color: $white;
+
+    white-space: nowrap;
+
+    a {
+      @include undecorated-link;
+      color: $white;
     }
-    .header-right {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: right;
+  }
+
+  .header-left {
+    @include media($large-screen) { display: none; }
+  }
+
+  .icon-button {
+    width: 4%;
+    height: 80%;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    height: $header-height;
+    line-height: $header-height;
+    vertical-align: middle;
+    font-size: 150%;
+    color: $kp-blue;
+    &:hover, &:focus {
+      text-decoration: none;
     }
-    .icon-button {
-        width: 4%;
-        height: 80%;
-        cursor: pointer;
-        display: inline-block;
-        width: auto;
-        height: $header-height;
-        line-height: $header-height;
-        vertical-align: middle;
-        font-size: 150%;
-        color: $kp-blue;
-        &:hover, &:focus {
-            text-decoration: none;
-        }
-    }
-    .menu-button {
-        @extend .icon-button;
-        background: none;
-        border: none;
-        font-size: 130%;
-    }
+  }
+
+  .menu-button {
+    @extend .icon-button;
+    background: none;
+    border: none;
+    font-size: 130%;
+  }
+}
+
+.header-menu {
+  display: none;
+  @include media($large-screen) { display: block; }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  li {
+    display: inline-block;
+    line-height: $desktop-header-height;
+    vertical-align: middle;
+    margin-right: $medium-spacing;
+  }
+}
+
+.kp-header-buffer {
+  display: block;
+  height: $header-height + $header-border-width;
+  width: 100%;
+
+  @include media($large-screen) {
+    height: $desktop-header-height + $desktop-header-margin-top;
+  }
 }
 
 .master-nav-menu {
@@ -130,10 +175,4 @@ $header-border-width: 1px;
 
     @media print { display: none; }
   }
-}
-
-.kp-header-buffer {
-    display: block;
-    height: $header-height + $header-border-width;
-    width: 100%;
 }
