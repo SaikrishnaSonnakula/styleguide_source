@@ -22,9 +22,16 @@ $desktop-header-height: 6rem;
   width: 100%;
 
   @include media($large-screen) {
-    top: $desktop-header-margin-top;
-    height: $desktop-header-height;
-    background: $interactive-blue none;
+    background-color: $interactive-blue;
+    background-position: $large-spacing 50%;
+    background-image: url("images/kp-icon.svg");
+    background-size: rem(40);
+    background-repeat: no-repeat;
+    padding-left: 100px;
+
+    top: 0px;
+    border-top: $desktop-header-margin-top solid $white;
+    height: $desktop-header-height + $desktop-header-margin-top;
     border-bottom: 0px;
 
     font-family: $brand-font;
@@ -111,6 +118,10 @@ $desktop-header-height: 6rem;
       line-height: $desktop-header-height;
       vertical-align: middle;
       margin-right: $medium-spacing;
+
+      &:hover {
+        background-color: $interactive-blue;
+      }
     }
   }
 }
