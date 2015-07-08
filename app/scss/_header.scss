@@ -22,9 +22,17 @@ $desktop-header-height: 6rem;
   width: 100%;
 
   @include media($large-screen) {
-    top: $desktop-header-margin-top;
-    height: $desktop-header-height;
-    background: $interactive-blue none;
+    background-color: $interactive-blue;
+    background-position: $large-spacing 50%;
+    background-image: url("images/kp-icon.svg");
+    background-size: rem(40);
+    background-repeat: no-repeat;
+    padding-left: 100px;
+
+    top: 0px;
+    border-top: $desktop-header-margin-top solid $white;
+    height: $desktop-header-height + $desktop-header-margin-top;
+    border-bottom: 0px;
 
     font-family: $brand-font;
     font-size: $medium-font;
@@ -67,19 +75,54 @@ $desktop-header-height: 6rem;
 }
 
 .header-menu {
-  display: none;
-  @include media($large-screen) { display: block; }
+  @include transition(all 0.2s $ease-out-cubic);
+
+  background-color: $interactive-blue;
+  font-size: $medium-font;
+  width: 400px;
+  position: fixed;
+  top: $header-height;
+  bottom: 0px;
+
+  left: -400px;
+  &.showing { left: 0px; }
 
   ul {
     list-style: none;
     margin-bottom: 0;
+    padding-left: 0px;
   }
 
-  li {
-    display: inline-block;
-    line-height: $desktop-header-height;
-    vertical-align: middle;
-    margin-right: $medium-spacing;
+  li a {
+    @include undecorated-link;
+    display: block;
+    color: $white;
+    padding: $medium-spacing;
+
+    &:hover {
+      background-color: $kp-blue;
+    }
+  }
+
+  @include media($large-screen) {
+    width: auto;
+    position: static;
+    display: block;
+
+    li {
+      display: inline-block;
+    }
+
+    li a {
+      padding: 0;
+      line-height: $desktop-header-height;
+      vertical-align: middle;
+      margin-right: $medium-spacing;
+
+      &:hover {
+        background-color: $interactive-blue;
+      }
+    }
   }
 }
 
