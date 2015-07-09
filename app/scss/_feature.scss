@@ -79,6 +79,21 @@ $max-content-width: 1080px;
     }
   }
 
+  .feature-button {
+    @extend .button;
+    margin-left: $mobile-feature-gutter;
+    margin-right: $mobile-feature-gutter;
+    width: inherit;
+    display: block;
+
+    @include media($large-screen) {
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
   .feature-content {
     @include media($large-screen) {
       @include span-columns(9);
