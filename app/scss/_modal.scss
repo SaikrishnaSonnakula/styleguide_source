@@ -9,25 +9,24 @@
     .modal-fade-screen {
       opacity: 1;
       visibility: visible;
+
     }
 
     .modal-fade-screen .modal-inner {
       @include media($large-screen) {
-        top: 0.5em;
+        @include transform(translateY(50px));
       }
     }
   }
 
   .modal-fade-screen { // overlay
+    @include transition(opacity 0.4s $ease-out-cubic);
     @include position(fixed, 0px 0px 0px 0px);
     background: rgba(0,0,0, 0.65);
     opacity: 0;
     visibility: hidden;
     z-index: 99999999999;
-
-    @include media($large-screen) {
-      padding-top: 10em;
-    }
+    padding-top: 3em;
 
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
@@ -45,6 +44,9 @@
     overflow: auto;
 
     @include media($large-screen) {
+      @include transform(translateY(20px));
+      @include transition(transform 0.2s ease);
+      @include transition-delay(0.2s);
       position: relative;
       margin: auto;
       width: 50%;
@@ -52,6 +54,10 @@
 
     .content {
       padding: $content-gutter;
+
+      @include media($large-screen) {
+        padding-bottom: 0px;
+      }
     }
 
     .modal-header {
@@ -63,29 +69,11 @@
       font-size: $medium-font;
 
       .modal-close {
+        @extend .icon-cancel;
         @include position(absolute, null $content-gutter/2 $content-gutter null);
         @include size(1.2em);
         cursor: pointer;
-
-        &:after,
-        &:before {
-          @include position(absolute, 2px 2px 0 50%);
-          @include transform(rotate(45deg));
-          @include size(0.15em 1.2em);
-          background: $kp-blue;
-          content: '';
-          display: block;
-          margin: -3px 0 0 -1px;
-        }
-
-        &:hover:after,
-        &:hover:before {
-          background: $kp-blue;
-        }
-
-        &:before {
-          @include transform(rotate(-45deg));
-        }
+        font-family: "icon";
       }
     }
 
@@ -93,14 +81,8 @@
       padding-top: $content-gutter;
       text-align: center;
 
-     @include media($medium-screen) {
+      @include media($medium-screen) {
         .button { width: auto; }
-      }
-
-      @include media($large-screen) {
-        .button {
-          margin-bottom: 0px;
-        }
       }
     }
   }

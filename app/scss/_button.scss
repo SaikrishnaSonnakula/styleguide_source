@@ -34,6 +34,7 @@ a.button, a.button:hover, a.button:focus {
 }
 
 .button {
+  @include transition(background-color 0.2s ease);
   @include rounded-input;
 
   color: $white;
@@ -50,6 +51,7 @@ a.button, a.button:hover, a.button:focus {
       min-width: 0px;
     }
   }
+
   &:hover, &:focus {
     background-color: $button-hover-color;
     color: #fff;
