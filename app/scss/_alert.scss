@@ -17,6 +17,7 @@
   padding-left: 4rem;
   margin-bottom: 0;
   border-radius: $small-spacing; // CHANGE ME
+  border: 2px solid $light-grey;
   font-weight: bold;
 
   &:before {
@@ -28,16 +29,17 @@
 }
 
 .alert-bland {
+  border: 2px solid $light-grey;
   @extend .flash;
-  background-color: $light-grey;
 }
 
 .alert-error {
   @include alert;
   @extend .icon-alert;
-  background-color: lighten($red-error, 40);
+  border-color: lighten($red-error, 40);
 
   &:before {
+    font-size: 18pt;
     color: $red-error;
   }
 }
@@ -45,11 +47,11 @@
 .alert-success {
   @include alert;
   @extend .icon-circle-checkmark;
-  background-color: lighten($deep-green, 60);
+  border-color: lighten($deep-green, 60);
   color: $dark-grey;
 
   &:before {
-    font-size: 16pt;
+    font-size: 18pt;
     color: $deep-green;
   }
 }
@@ -57,11 +59,11 @@
 .alert-info {
   @include alert;
   @extend .icon-info-circled;
-  background-color: lighten($interactive-blue, 50);
+  border-color: lighten($interactive-blue, 50);
   color: $dark-grey;
 
   &:before {
-    font-size: 16pt;
+    font-size: 18pt;
     color: $interactive-blue;
   }
 }
@@ -69,7 +71,6 @@
 .alert-loading {
   @include alert;
   @extend .icon-loading;
-  background-color: $light-grey;
   text-align: center;
 
   .alert-message {
