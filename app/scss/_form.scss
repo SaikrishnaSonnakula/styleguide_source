@@ -1,4 +1,6 @@
-  .form-group {
+.form-group {
+  padding-left: $content-gutter;
+  padding-right: $content-gutter;
   margin-bottom: $paragraph-margin;
 
   label {
@@ -21,7 +23,7 @@
     border-color: $border-color;
   }
 
-  input[type="text"], input[type="password"] {
+  #{$all-text-inputs} {
     width: 100%;
     padding: $small-spacing;
   }
@@ -34,6 +36,27 @@
       display: inline-block;
       margin-bottom: 0;
     }
+  }
+}
+
+.form-group.error {
+  #{$all-text-inputs}, textarea {
+    border-style: solid;
+    border-color: $red-error;
+  }
+
+  .field-note {
+    color: $red-error;
+  }
+
+  ul.check-list {
+    border-top: 2px solid $red-error;
+    border-bottom: 2px solid $red-error;
+    margin-left: -$content-gutter;
+    margin-right: -$content-gutter;
+    padding-left: $content-gutter;
+    padding-right: $content-gutter;
+    background-color: lighten($red-error, 40);
   }
 }
 
@@ -74,6 +97,16 @@
 
 .check-list {
   @extend .list-unstyled; // BACKBONE...
+  padding-bottom: $content-gutter;
+  margin-left: -$content-gutter;
+  margin-right: -$content-gutter;
+  padding-left: $content-gutter;
+  padding-right: $content-gutter;
+
+  @include media($large-screen) {
+    padding-left: $content-gutter;
+    padding-right: $content-gutter;
+  }
 
   input[type="checkbox"] {
     float: left;
@@ -137,6 +170,7 @@ input[type="checkbox"] {
 
 input[type='radio'] { //novjot will make it perfect
   @include check-or-radio;
+  background-color: $white;
   border:$kp-blue 2px solid;
   border-radius:50%;
   font-size: 0.6rem;

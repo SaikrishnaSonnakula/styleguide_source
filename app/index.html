@@ -383,6 +383,7 @@
                 <input type="text" id="name-field"/>
               </div>
             </div>
+
             <div class="large-element example">
               <div class="form-group">
                 <label for="password-field">Password</label>
@@ -455,25 +456,25 @@
 
             <div class="large-element example">
               <div class="form-group">
-                  <label for="shows-list">Sports you watch</label>
-                  <ul id="shows-list" class="check-list">
-                      <li>
-                          <input type="radio" name="sports-radio" id="c1" disabled="">
-                          <label for="c1">Cricket [disabled]</label>
-                      </li>
-                      <li>
-                          <input type="radio" name="sports-radio" id="c2">
-                          <label for="c2">Basketball</label>
-                      </li>
-                      <li>
-                          <input type="radio" name="sports-radio" id="c3">
-                          <label for="c3">Soccer</label>
-                      </li>
-                      <li>
-                          <input type="radio" name="sports-radio" id="c4">
-                          <label for="c4">Baseball</label>
-                      </li>
-                  </ul>
+                <label for="shows-list">Sports you watch</label>
+                <ul id="shows-list" class="check-list">
+                  <li>
+                    <input type="radio" name="sports-radio" id="c1" disabled="">
+                    <label for="c1">Cricket [disabled]</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="sports-radio" id="c2">
+                    <label for="c2">Basketball</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="sports-radio" id="c3">
+                    <label for="c3">Soccer</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="sports-radio" id="c4">
+                    <label for="c4">Baseball</label>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -491,6 +492,40 @@
                   <strong>Note:</strong>
                   We will not hold your answer against you.
                   Feel free to speak from your heart.
+                </div>
+              </div>
+            </div>
+
+            <h3>Error States</h3>
+            <p>
+              Use the <code>.error</code> class to designate that there is
+              an error with the field.
+            </p>
+            <div class="large-element example">
+              <div class="form-group error">
+                <label for="city-field">City</label>
+                <input type="text" id="city-field"/>
+                <div class="field-note">
+                  Hey, you can't leave this field blank.
+                </div>
+              </div>
+            </div>
+
+            <div class="large-element example">
+              <div class="form-group error">
+                <label for="m-radio">Manditory selection</label>
+                <ul id="m-radio" class="check-list">
+                  <li>
+                    <input type="radio" name="m-radio" id="d1">
+                    <label for="d1">Yes</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="m-radio" id="d2">
+                    <label for="d2">No</label>
+                  </li>
+                </ul>
+                <div class="field-note">
+                  Didn't you read, this field is mandatory.
                 </div>
               </div>
             </div>
