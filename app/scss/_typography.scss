@@ -69,7 +69,10 @@ h1 {
 }
 
 h2 {
-  @extend .page-heading;
+  font-size: $large-font;
+  // @include media($large-screen) {
+  //   @extend .page-heading;
+  // }
 }
 h3{
   font-size:$medium-font;
