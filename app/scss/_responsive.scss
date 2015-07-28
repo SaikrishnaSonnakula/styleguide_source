@@ -1,7 +1,7 @@
 $default-feature: min-width;
 
 $small-screen-max: 414px;
-$medium-screen-max: 720px;
+$medium-screen-max: 815px;
 $large-screen-max: 1050px;
 
 $small-screen: new-breakpoint(max-width $small-screen-max, 12);
