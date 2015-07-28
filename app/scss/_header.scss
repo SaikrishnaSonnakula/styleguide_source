@@ -212,6 +212,9 @@ $desktop-header-height: 6rem;
     height: $header-height;
     vertical-align: middle;
     color: $kp-blue;
+    line-height: $header-height;
+    font-size: 150%;
+
     &:hover, &:focus {
         text-decoration: none;
     }
