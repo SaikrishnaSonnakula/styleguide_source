@@ -9,7 +9,7 @@ $desktop-header-height: 6rem;
 
 .kp-header {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0px;
   height: $mobile-header-height + $mobile-header-border-width;
   background-color: $white;
