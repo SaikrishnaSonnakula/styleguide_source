@@ -72,6 +72,22 @@ $desktop-header-height: 6rem;
     border: none;
     font-size: 130%;
   }
+  .primary-nav {
+    @include media($large-screen) {
+	float: left;
+    }
+  }
+
+  .utility-menu {
+      float: none;
+      border-top: 1px #fff solid;
+      @include media(max-width 805px) {}
+
+      @include media($large-screen) {
+	  float: right;
+	  border-top: none;
+      }
+  }
 }
 
 .header-menu {
