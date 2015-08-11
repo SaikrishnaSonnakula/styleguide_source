@@ -51,6 +51,7 @@ $desktop-header-height: 6rem;
   }
 
   .icon-button {
+    z-index: 11;
     width: 4%;
     height: 80%;
     cursor: pointer;
@@ -217,7 +218,9 @@ $desktop-header-height: 6rem;
   position: fixed;
   top: 0;
   right: $gutter-spacing;
-  z-index: 2;
+  z-index: 11;
+
+  @include media($large-screen) { display: none; }
 
   .icon-button {
     width: 4%;
