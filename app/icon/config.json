@@ -1127,6 +1127,20 @@
       ]
     },
     {
+      "uid": "88e18ac788f793076f902655dce2d033",
+      "css": "chevron-arrow-left",
+      "code": 59478,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+	"path": "M179.6 500.6L665 996.5 781.6 876.3 413.4 500.1 781.8 119.9 664.6 0.2 179.6 500.6Z",
+	"width": 962
+      },
+      "search": [
+	"kp_chevron_arrow_left"
+      ]
+    },
+    {
       "uid": "5d2d07f112b8de19f2c0dbfec3e42c05",
       "css": "spin5",
       "code": 59472,
