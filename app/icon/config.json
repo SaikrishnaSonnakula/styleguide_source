@@ -1133,11 +1133,11 @@
       "src": "custom_icons",
       "selected": true,
       "svg": {
-	"path": "M179.6 500.6L665 996.5 781.6 876.3 413.4 500.1 781.8 119.9 664.6 0.2 179.6 500.6Z",
-	"width": 962
+        "path": "M179.6 500.6L665 996.5 781.6 876.3 413.4 500.1 781.8 119.9 664.6 0.2 179.6 500.6Z",
+        "width": 962
       },
       "search": [
-	"kp_chevron_arrow_left"
+        "kp_chevron_arrow_left"
       ]
     },
     {
