@@ -63,6 +63,7 @@
 .select-dropdown {
   select {
     @extend .form-control;
+    height: calc(1em + #{$vertical-button-padding * 2});
 
     &.not-changed{
       color: $dark-grey;
