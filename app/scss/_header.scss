@@ -96,12 +96,12 @@ $desktop-header-height: 6rem;
 
   background-color: $interactive-blue;
   font-size: $medium-font;
-  width: 400px;
+  width: $small-screen-max;
   position: fixed;
   top: $header-height;
   bottom: 0px;
 
-  left: -400px;
+  left: -$small-screen-max;
   &.showing { left: 0px; }
 
   ul {
