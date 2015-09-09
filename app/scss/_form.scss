@@ -61,37 +61,12 @@
 }
 
 .select-dropdown {
-  position: relative;
-  font-family: "icon";
-  @extend .icon-arrow-down;
-
   select {
-    @include rounded-input;
-
-    background-color: $white;
-    border: 1px $button-color solid;
-    color: $button-color;
-
-    text-align: left;
-    text-transform: none;
-
-    &:hover, &:focus {
-      color: $button-color;
-      background-color: $white;
-    }
+    @extend .form-control;
 
     &.not-changed{
       color: $dark-grey;
     }
-  }
-
-  &:before {
-    color: $kp-blue;
-    position: absolute;
-    right: 0px;
-    pointer-events: none;
-    top: $vertical-button-padding;
-    right: $horizontal-button-padding;
   }
 }
 
