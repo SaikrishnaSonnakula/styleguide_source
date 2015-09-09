@@ -133,68 +133,18 @@
 }
 
 @mixin check-or-radio {
-  @include appearance(none);
   display: block;
   float: left;
 }
 
 input[type="checkbox"] {
   @include check-or-radio;
-  font-family: "icon";
-  color: $kp-blue;
-  border: 1px solid $kp-blue;
-  font-size: 0.6rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  text-align: center;
   padding-top: 0.2em;
   margin-right: 0.4rem;
-
-  &:before {
-    content: ".";
-    line-height: 1em;
-    color: $white;
-  }
-
-  &:checked {
-    @extend .icon-checkmark;
-    &:before { color: $kp-blue; }
-  }
-
-  &:disabled {
-    border-color: $mid-grey;
-    cursor: default;
-    &:before { color: $mid-grey !important; }
-  }
 }
 
-input[type='radio'] { 
+input[type='radio'] {
   @include check-or-radio;
-  background-color: $white;
-  border:$kp-blue 2px solid;
-  border-radius:50%;
-  font-size: 0.6rem;
-  width: 18px;
-  height: 18px;
-  text-align: center;
-
-  &:before{
-    content:'';
-    display:block;
-    width:8px;
-    height:8px;
-    margin: 20% auto;
-    border-radius:50%;
-  }
-
-  &:checked:before{
-    background: $kp-blue;
-    margin: 3px;
-    border-radius: 50%;
-    @include media($large-screen){
-      margin: 2.9px;
-    }
-  }
 }
 
 .fixed-input {
