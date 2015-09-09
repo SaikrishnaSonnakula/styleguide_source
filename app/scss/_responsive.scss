@@ -12,6 +12,9 @@ $large-screen-min: $medium-screen-max + 1px;
 $large-screen: new-breakpoint($large-screen-min, 12);
 $largest-screen: new-breakpoint($large-screen-max, 12);
 
+$large-screen-header-max: $large-screen-min + 60px;
+$large-screen-header-specific: new-breakpoint(min-width #{$large-screen-min} max-width #{$large-screen-header-max}, 12);
+
 .mobile-only {
   @include media($large-screen) {
     display: none !important;

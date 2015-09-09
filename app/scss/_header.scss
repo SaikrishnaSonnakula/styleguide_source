@@ -71,7 +71,7 @@ $desktop-header-height: 6rem;
     @extend .icon-button;
     background: none;
     border: none;
-    font-size: 130%;
+    font-size: 1.3rem;
   }
   .primary-nav {
     @include media($large-screen) {
@@ -121,11 +121,14 @@ $desktop-header-height: 6rem;
     }
   }
 
+  @include media($large-screen-header-specific){
+    font-size: 1.09rem;
+  }
+
   @include media($large-screen) {
     width: auto;
     position: static;
     display: block;
-
     li {
       display: inline-block;
     }
