@@ -94,7 +94,7 @@ $desktop-header-height: 6rem;
 .header-menu {
   @include transition(all 0.2s $ease-out-cubic);
 
-  background-color: $interactive-blue;
+  background-color: $dark-blue;
   font-size: $medium-font;
   width: $small-screen-max;
   position: fixed;
