@@ -22,7 +22,7 @@ $desktop-header-height: 6rem;
   width: 100%;
 
   @include media($large-screen) {
-    background-color: $interactive-blue;
+    background-color: $kp-blue;
     background-position: $large-spacing 50%;
     background-image: url("images/kp-icon.svg");
     background-size: rem(40);
