@@ -14,6 +14,8 @@
     font-weight: 400;
     border-color: transparent;
     border-radius: 0;
+    width: 100%;
+    text-align: left;
   }
 
   a, a:hover, a:active,
@@ -36,11 +38,13 @@
     }
   }
 
-  a, a:active {
+  a, a:active,
+  button, button:active {
     color: $dark-grey;
   }
 
-  a:hover {
+  a:hover,
+  button:hover {
     color: $interactive-blue;
   }
 }
