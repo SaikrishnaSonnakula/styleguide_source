@@ -7,7 +7,17 @@
     border-top: none;
   }
 
-  a, a:hover, a:active {
+  button {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    border-color: transparent;
+    border-radius: 0;
+  }
+
+  a, a:hover, a:active,
+  button, button:hover, button:active {
     display: block;
     text-decoration: none;
     padding: $content-gutter;
