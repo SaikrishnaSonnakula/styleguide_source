@@ -74,6 +74,9 @@
         @include size(1.2em);
         cursor: pointer;
         font-family: "icon";
+        padding: 0;
+        border: none;
+        background: none;
       }
     }
 
