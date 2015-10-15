@@ -1,0 +1,21 @@
+.icon-right-chevron-arrow {
+  @extend .mirror-left;
+  @extend .icon-chevron-arrow;
+  display: inline-block;
+}
+
+$loading-icon-size: 2em;
+.icon-loading{
+  @extend .icon-spin5;
+  pointer: progress;
+
+  &:before {
+    font-size: $loading-icon-size;
+    @extend .animate-spin;
+  }
+
+  .message {
+    line-height: $loading-icon-size;
+    vertical-align: top;
+  }
+}

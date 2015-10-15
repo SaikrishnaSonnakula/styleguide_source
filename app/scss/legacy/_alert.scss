@@ -1,0 +1,84 @@
+.flash {
+  padding: $content-gutter;
+
+  @include media($large-screen) {
+    border-radius: $border-radius;
+  }
+
+  &.info {
+    background-color: $light-grey;
+  }
+}
+
+@mixin alert {
+  @extend .flash;
+  @extend [class^="icon-"];
+
+  padding-left: 4rem;
+  margin-bottom: 0;
+  border-radius: $small-spacing; // CHANGE ME
+  border: 2px solid $light-grey;
+  font-weight: bold;
+
+  &:before {
+    font-size: $large-font;
+    margin-left: -3rem;
+    display: block;
+    float: left;
+  }
+}
+
+.alert-bland {
+  border: 2px solid $light-grey;
+  @extend .flash;
+}
+
+.alert-error {
+  @include alert;
+  @extend .icon-alert;
+  border-color: lighten($red-error, 40);
+
+  &:before {
+    font-size: 18pt;
+    color: $red-error;
+  }
+}
+
+.alert-success {
+  @include alert;
+  @extend .icon-circle-checkmark;
+  border-color: lighten($deep-green, 60);
+  color: $dark-grey;
+
+  &:before {
+    font-size: 18pt;
+    color: $deep-green;
+  }
+}
+
+.alert-info {
+  @include alert;
+  @extend .icon-info-circled;
+  border-color: lighten($interactive-blue, 50);
+  color: $dark-grey;
+
+  &:before {
+    font-size: 18pt;
+    color: $interactive-blue;
+  }
+}
+
+.alert-loading {
+  @include alert;
+  @extend .icon-loading;
+  text-align: center;
+
+  .alert-message {
+    @extend .message;
+  }
+
+  &:before {
+    display: inline-block;
+    float: none;
+  }
+}

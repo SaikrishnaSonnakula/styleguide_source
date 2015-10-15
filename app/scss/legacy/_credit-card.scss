@@ -1,0 +1,24 @@
+.credit-card{
+  width:79px;
+  height:45px;
+  margin: 2px;
+  &.visa{
+    background-image: url(images/credit-cards/visa.png);
+  }
+  &.master{
+    background-image: url(images/credit-cards/mastercard.png);
+  }
+  &.amex{
+    background-image: url(images/credit-cards/amex.png);
+  }
+  &.discover{
+    background-image: url(images/credit-cards/discover.png);
+  }
+}
+.geolocation-icon{
+    background-image: url(images/credit-cards/geolocation-icon.png);
+    width:20px;
+    height:20px;
+    margin: 2px;
+    background-size:100%;
+  }

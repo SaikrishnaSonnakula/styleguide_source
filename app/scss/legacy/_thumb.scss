@@ -1,0 +1,35 @@
+//Thumbnails. yah.
+@mixin thumbnail-container($thumbwidth, $thumbheight){
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    @include size($thumbwidth $thumbheight);
+    img {
+      @include transform(translate(-50%, -50%));
+      position: absolute;
+      border: 1px solid $border-color;
+      top: 50%;
+      left: 50%;
+      height: auto;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+}
+.thumbnail-smallest{
+  @include thumbnail-container(60px, 60px);
+}
+.thumbnail-small{
+  @include thumbnail-container(80px, 80px);
+}
+.thumbnail-medium{
+  @include thumbnail-container(160px, 120px);
+}
+.thumbnail-large{
+  @include thumbnail-container(260px, 180px);
+}
+.thumbnail-largest{
+  @include thumbnail-container(360px, 270px);
+}

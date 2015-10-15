@@ -21,11 +21,15 @@ define(['jquery', 'add_colors', 'create_examples', 'vendor/fixedsticky'], functi
     easterEgg();
 
     $("#modal-link").click(function() {
-      $("body, #my-modal").addClass("modal-showing");
+      $("#my-modal").addClass("modal-showing");
+      $("#my-modal").attr('aria-hidden','false');
+      $(".modal-inner" ,"#my-modal").attr('tabindex', '0').focus();
     });
 
     $(".modal-close, .modal-fade-screen").click(function() {
-      $("body, #my-modal").removeClass("modal-showing");
+      $("#my-modal").removeClass("modal-showing");
+      $("#my-modal").attr('aria-hidden','true');
+      $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
     });
 
     $("main").show();
