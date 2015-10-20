@@ -10,7 +10,7 @@
     .modal-fade-screen {
       opacity: 1;
       visibility: visible;
-
+      overflow: auto;
     }
     .modal-fade-screen .modal-inner {
       @include media($large-screen) {
