@@ -84,3 +84,23 @@ a.button, a.button:hover, a.button:focus {
     }
   }
 }
+
+.button-group {
+  @extend .form-group;
+
+  .primary {
+    @extend .button;
+  }
+
+  .secondary {
+    @extend .button;
+    @extend .outline-button;
+    margin-top: $gutter-spacing;
+
+    @include media($large-screen) {
+      float: left;
+      margin-right: $gutter-spacing;
+      margin-top: 0;
+    }
+  }
+}
