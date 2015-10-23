@@ -1,2 +1,12 @@
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+$progress-bar-color: $interactive-blue;
+@import "~/bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
+
 @import '~bourbon/app/assets/stylesheets/bourbon';
 @import '~bourbon-neat';

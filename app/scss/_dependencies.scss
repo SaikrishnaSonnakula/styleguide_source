@@ -1,3 +1,12 @@
-@import "bootstrap";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+$progress-bar-color: $interactive-blue;
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
+
 @import "bourbon";
 @import "neat";
