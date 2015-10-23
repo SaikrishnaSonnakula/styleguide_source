@@ -7,6 +7,7 @@
     "grunt-cli": "~0.1.13",
     "build-plugin": "git+ssh://git@stash.kp.org/rwd/build-plugin.git"
   },
+  "main": "_main-npm.scss",
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
     "bourbon": "^4.2.4",
