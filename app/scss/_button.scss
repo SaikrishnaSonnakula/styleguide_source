@@ -90,6 +90,7 @@ a.button, a.button:hover, a.button:focus {
 
   .primary {
     @extend .button;
+    margin-top: $gutter-spacing;
   }
 
   .secondary {
@@ -100,7 +101,6 @@ a.button, a.button:hover, a.button:focus {
     @include media($large-screen) {
       float: left;
       margin-right: $gutter-spacing;
-      margin-top: 0;
     }
   }
 }
