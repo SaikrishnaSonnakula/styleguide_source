@@ -1,4 +1,4 @@
-define([], function(){
+define(['jquery'], function($){
   var colorSections = [
     {
       name: "Primary Colors",
