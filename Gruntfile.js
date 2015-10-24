@@ -68,6 +68,14 @@ module.exports = function(grunt) {
             {cwd: directories.dist, src: ['**'], expand: true }
           ]
         },
+        app_config: {
+          options: {
+            archive: directories.target + '/' + name + '-app-config.tgz'
+          },
+          files: [
+            { cwd: directories.app_config.src, src: ['*.json'], expand: true}
+          ]
+        }
       }
     });
 
@@ -84,11 +92,11 @@ module.exports = function(grunt) {
       grunt.file.write(directories.dist + "/version.json", JSON.stringify(version));
     });
 
-
-    grunt.registerTask('package', 'package into tgz file for distribution.', [
+    grunt.registerTask('package', 'package into a tgz file for distribution.', [
       'build',
       'version',
       'compress:app',
+      'compress:app_config'
     ]);
   }
   setupPackage(grunt);
