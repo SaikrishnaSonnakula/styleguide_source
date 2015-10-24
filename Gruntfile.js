@@ -103,5 +103,5 @@ module.exports = function(grunt) {
     'webpack:dist',
   ]);
 
-  grunt.registerTask('ci', ['build']);
+  grunt.registerTask('ci', ['build', 'package']);
 };
