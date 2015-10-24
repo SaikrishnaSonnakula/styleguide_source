@@ -8,7 +8,11 @@ module.exports = function(grunt) {
     app: "app",
     target: "target",
     development: "target/development",
-    dist: "target/dist"
+    dist: "target/dist",
+    app_config: {
+      src: "app_config",
+      target: "target/app_config"
+    }
   };
 
   grunt.loadNpmTasks('grunt-webpack');
