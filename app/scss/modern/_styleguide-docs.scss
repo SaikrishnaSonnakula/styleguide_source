@@ -1,0 +1,342 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
+
+$border-color: #ddd;
+$content-padding-mobile: 20px;
+$small-padding: 0.5em;
+$styleguide-gutter: 40px;
+$main-max-width: ($large-screen-max * 16/12) + ($styleguide-gutter * 2);
+
+// Note: in order for the documentation to work correctly, replace
+// 'position: fixed' with 'position: absolute'
+.kp-header {
+  position: absolute !important;
+}
+
+header {
+  width: 100%;
+  height: 170px;
+  background-color: $kp-blue;
+  background-position: 50% 30%;
+  background-image: url('images/kp-icon.svg');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  border-bottom: $kp-blue 10px solid;
+
+  h1 {
+    padding-top: 120px;
+    text-align: center;
+    color: $white;
+  }
+}
+
+main {
+  @include outer-container($main-max-width);
+  padding: $gutter-spacing;
+}
+
+.fixedsticky-dummy {
+  display: none !important;
+}
+
+nav {
+  &, {
+    display: none;
+  }
+
+  @include media($largest-screen) {
+    @include span-columns(3);
+    top: $styleguide-gutter;
+    display: block;
+
+    ul {
+      font-size: 14pt;
+      font-weight: bold;
+      align: left;
+      @extend .list-unstyled; //BOOTSTRAP...
+    }
+
+    a {
+      color: $dark-grey;
+      text-decoration: none !important;
+
+      &:hover {
+        margin-left: 0.2em;
+      }
+    }
+  }
+}
+
+article {
+  @include media($largest-screen) {
+    @include span-columns(9);
+    float: right;
+  }
+
+  >h1 {
+    margin-top: $paragraph-margin;
+  }
+
+  section {
+    margin-bottom: 5em;
+  }
+}
+
+article, section, .doc {
+  >h2 {
+    font-size: $large-font;
+    color: $kp-blue;
+    padding-bottom: 10px;
+    border-bottom: 1px $border-color solid;
+    margin-bottom: 20px;
+  }
+
+  >h3 {
+    font-family: "Gotham 4r";
+    font-size: 24px;
+  }
+
+  >p {
+    margin-bottom: 20px;
+  }
+
+  >p, >h1, >h2, >h3, >h4, >h5, >h6 {
+    font-family: Verdana;
+
+    @include media($large-screen) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+.example {
+  @include row;
+  margin-bottom: 2em;
+
+  .code {
+    @extend .doc;
+
+    pre {
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .result {
+    @extend .doc;
+    width: 100%;
+
+    .result-pane {
+      position: relative;
+      border: 1px $border-color solid;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &.minor {
+    margin-bottom: 1em;
+
+    .result .result-pane {
+      border: none;
+      border-top: 1px $border-color solid;
+    }
+
+    @include media($large-screen) {
+      .code, .result {
+        @include span-columns(6);
+
+        .result-pane {
+          border: 1px $border-color solid;
+        }
+      }
+    }
+  }
+
+  &.large-element {
+    @extend .minor;
+
+    @include media($large-screen) {
+      .result {
+        .result-pane {
+          padding-top: 0;
+          border: none;
+        }
+      }
+    }
+  }
+  &.element {
+    margin-bottom: 1em;
+    border-bottom: 1px $border-color solid;
+
+    .result-pane {
+      border: none;
+      margin-left: $content-padding-mobile;
+      margin-right: $content-padding-mobile;
+
+      @include media($large-screen) {
+        margin-left: 0;
+      }
+    }
+
+    @include media($large-screen) {
+      .code {
+        @include span-columns(8);
+      }
+
+      .result {
+        @include span-columns(4);
+        .result-pane { padding: 0px; }
+      }
+    }
+  }
+}
+
+.example-note {
+  color: #999;
+}
+
+.current-breakpoint {
+  position: fixed;
+  width: 100%;
+  background: $light-grey;
+  padding: $small-padding;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+
+  .medium-only { display:none; }
+  .large-only { display:none; }
+  .largest-only { display:none; }
+
+  @include media($medium-screen) {
+    .small-only { display: none; }
+    .medium-only { display: inline; }
+  }
+
+  @include media($large-screen) {
+    .small-only { display: none; }
+    .medium-only { display: none; }
+    .large-only { display: inline; }
+  }
+
+  @include media($largest-screen) {
+    .small-only { display: none; }
+    .medium-only { display: none; }
+    .large-only { display: none; }
+    .largest-only { display: inline; }
+  }
+}
+
+.color-section {
+  @include outer-container(100%);
+  @extend .doc;
+  margin-bottom: 20px;
+}
+
+.color {
+  padding: 10px $content-gutter;
+
+  @include media($medium-screen) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  .swatch {
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.spacing-examples {
+  @include outer-container(100%);
+  @extend .doc;
+  margin-bottom: 20px;
+}
+
+.spacing-example {
+  display: inline-block;
+  margin-left: $gutter-spacing;
+  margin-right: $gutter-spacing;
+  margin-bottom: $large-spacing * 2;
+
+  &:hover {
+    background-color: #FDF78A;
+
+    .form-group {
+      background-color: #FDF78A;
+    }
+  }
+
+  p {
+    width: 100%;
+    background-color: $white;
+  }
+
+  .small-spacing {
+    background-color: $white;
+    padding-left: $gutter-spacing;
+    padding-right: $gutter-spacing;
+
+    label { width: 100%; }
+    .form-group {
+      margin-bottom: 0;
+    }
+    label, .field-note {
+      background-color: white;
+    }
+  }
+
+  .medium-spacing {
+    margin: $content-gutter;
+    background-color: white;
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega(3n);
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+#font-sizes {
+  margin-bottom: 40px;
+  margin-left: $content-padding-mobile;
+
+  .font-size {
+    div {
+      line-height: 50px;
+      vertical-align: center;
+    }
+
+    code {
+      display: block;
+      margin-top: 1em;
+    }
+
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  @include media($large-screen) {
+    margin-left: 0;
+  }
+
+  >div {
+    margin-bottom: 20px;
+  }
+}
