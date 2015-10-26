@@ -1,10 +1,13 @@
 var path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'app/scripts/index.js'),
+  entry: {
+    main: path.resolve(__dirname, 'app/scripts/index.js'),
+    modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
+  },
   output: {
     path: path.resolve(__dirname, 'target/development'),
-    filename: 'app.bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [{
