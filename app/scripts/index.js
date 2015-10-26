@@ -1,6 +1,6 @@
 require('fixedsticky.css');
 require('prism.css');
-require('../scss/main.scss');
+require('../scss/preview.scss');
 
 import $ from 'jquery';
 import addColors from './add_colors';
