@@ -28,11 +28,51 @@
       </nav>
 
       <article class="styleguide-content">
-        <div class="shane">
+        <section id="about-section">
+          <h2 class="styleguide-section-heading">
+            About
+          </h2>
           <p>
-            <strong>Note:</strong> This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
+            The Web Design Styleguide (or as we call it, the styleguide) is both a styleguide document, which you can see here on this site, <em>and</em> a library of styling assets, like images, fonts, and stylesheets. This document was built with the same assets that are imported into responsive KP applications.
           </p>
-        </div>
+
+          <p>
+            If your interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk on Styleguide Driven Development by Nicole Sullivan</a>.
+          </p>
+        </section>
+
+        <section id="installation-section">
+          <h2 class="styleguide-section-heading">
+            Installation
+          </h2>
+
+          <p>
+            The styleguide is NPM module. You can install it by running the following command in your project directory:
+          </p>
+            
+          <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
+
+          <p>
+            Then, include the styles your sass file:
+          </p>
+
+          <pre><code class="language-scss">@import "styleguide/modern"</code></pre>
+
+          <p>
+            Since the styleguide contains a variety of front-end assets, which all need to be handled the
+            right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
+
+            If you are using the Build Plugin, you're all set!
+          </p>
+
+          <p>
+            If for some reason you can not use the Build Plugin, you will need to build the assets manually.
+            We will soon be documenting this process, but in the mean time, please contact
+            <a href="mailto:shane.russell@kp.org">shane.russell@kp.org</a>
+            or
+            <a href="mailto:tommy.wu@kp.org">tommy.wu@kp.org</a> for assistance.
+          </p>
+        </section>
 
         <section id="colors-section">
           <h2 class="styleguide-section-heading">

@@ -35,6 +35,5 @@ $(function() {
     $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
   });
 
-
   $("main").show();
 });
