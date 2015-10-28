@@ -6,9 +6,16 @@ var colorSections = [
     colors: [
       'kp-blue',
       'interactive-blue',
-      'white'
+      'interactive-blue-dark',
+      'interactive-blue-darker',
+      'inky-blue',
+      'dolphin',
+      'graphite-dark',
+      'graphite',
+      'graphite-light',
+      'pebble'
     ]
-  },
+  }
 ];
 
 var getHex = function($el) {

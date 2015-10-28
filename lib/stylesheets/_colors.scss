@@ -1,19 +1,45 @@
-// REMOVE ME
-$light-grey: #E6E6E6;
-.light-grey { background-color: $light-grey; }
-
-$dark-grey: #595959;
-.dark-grey { background-color: $dark-grey; }
-// REMOVE ME
-
 $interactive-blue: #3e66f7;
 .interactive-blue { background-color: $interactive-blue; }
 
 $kp-blue: #006ba6;
 .kp-blue { background-color: $kp-blue; }
 
-$white: #ffffff;
-.white {
-  background-color: $white;
-  border: 1px solid $light-grey;
+$interactive-blue-dark: #3A60E9;
+.interactive-blue-dark {
+	background-color: $interactive-blue-dark;
+}
+
+$interactive-blue-darker: #3659D9;
+.interactive-blue-darker {
+	background-color: $interactive-blue-darker;
+}
+
+$inky-blue: #0D1C3D;
+.inky-blue {
+	background-color: $inky-blue;
+}
+
+$dolphin: #6B7487;
+.dolphin {
+	background-color: $dolphin;
+}
+
+$graphite-dark: #D3D6DC;
+.graphite-dark {
+	background-color: $graphite-dark;
+}
+
+$graphite: #E9EBEE;
+.graphite {
+	background-color: $graphite;
+}
+
+$graphite-light: #F4F5F6;
+.graphite-light {
+	background-color: $graphite-light;
+}
+
+$pebble: #FAFAFA;
+.pebble {
+	background-color: $pebble;
 }

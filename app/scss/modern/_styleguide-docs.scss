@@ -7,7 +7,7 @@ $main-max-width: ($large-screen-max * 16/12) + ($styleguide-gutter * 2);
 code {
   color: $kp-blue;
   padding: 1px;
-  background-color: $light-grey;
+  background-color: $graphite;
 }
 
 .styleguide-header {
@@ -23,7 +23,7 @@ code {
   border-bottom: $kp-blue 10px solid;
   padding-top: 120px;
   text-align: center;
-  color: $white;
+  color: white;
 }
 
 .styleguide-content {
@@ -56,7 +56,7 @@ code {
     }
 
     a {
-      color: $dark-grey;
+      color: $dolphin;
       text-decoration: none !important;
 
       &:hover {
@@ -84,7 +84,7 @@ code {
 }
 
 .styleguide-subheading {
-  color: $dark-grey;
+  color: $dolphin;
   font-family: $brand-font;
   font-size: $medium-font;
 }
@@ -95,6 +95,8 @@ code {
 }
 
 .color {
+  margin-bottom: $gutter-spacing;
+
   @include media($medium-screen) {
     @include span-columns(6);
     @include omega(2n);
