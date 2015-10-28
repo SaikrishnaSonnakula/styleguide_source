@@ -24,7 +24,19 @@ var colorSections = [
       'tiger-lily',
       'grass',
       'aqua',
-      'dusk'
+      'dusk',
+      'plum',
+      'acai',
+      'burnt-sienna',
+      'moss',
+      'ocean',
+      'midnight',
+      'lavender',
+      'rose',
+      'tangerine',
+      'leaf',
+      'robin-egg',
+      'sky'
     ]
   }
 ];
