@@ -15,6 +15,17 @@ var colorSections = [
       'graphite-light',
       'pebble'
     ]
+  }, 
+  {
+    name: "Feature Colors",
+    colors: [
+      'lilac',
+      'fuchsia',
+      'tiger-lily',
+      'grass',
+      'aqua',
+      'dusk'
+    ]
   }
 ];
 
