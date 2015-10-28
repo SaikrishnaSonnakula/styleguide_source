@@ -6,6 +6,7 @@ var colorSections = [
     colors: [
       'kp-blue',
       'interactive-blue',
+      'white'
     ]
   },
 ];
@@ -23,7 +24,7 @@ export default function() {
     var $section = $('<div class="color-section"></div>');
 
     $('#colors').append($section);
-    $section.before('<h3>' + section.name + '</h3>');
+    $section.before('<h3 class="styleguide-subheading">' + section.name + '</h3>');
 
     section.colors.forEach(function(color){
       var $color = $('<div class="color"></div>');

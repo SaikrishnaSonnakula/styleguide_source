@@ -13,20 +13,12 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header id="styleguide-header">
-      <h1>
-        Web Design Styleguide
-      </h1>
-      <div class="current-breakpoint">
-        Current Breakpoint:
-        <span class="small-only">Small</span>
-        <span class="medium-only">Medium</span>
-        <span class="large-only">Large</span>
-        <span class="largest-only">Large (Beyond Max)</span>
-      </div>
+    <header class="styleguide-header">
+      Web Design Styleguide
     </header>
-    <main style="display: none">
-      <nav class="fixedsticky">
+
+    <main class="styleguide-main" style="display: none">
+      <nav class="styleguide-navigation fixedsticky">
         <ul>
           <li><a href="#installation-section">Installation</a></li>
           <li><a href="#colors-section">Colors</a></li>
@@ -35,14 +27,17 @@
         </ul>
       </nav>
 
-      <article>
-
-        <p>
-          <strong>Note:</strong> This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
-        </p>
+      <article class="styleguide-content">
+        <div class="shane">
+          <p>
+            <strong>Note:</strong> This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
+          </p>
+        </div>
 
         <section id="colors-section">
-          <h2>Colors</h2>
+          <h2 class="styleguide-section-heading">
+            Colors
+          </h2>
 
           <div id="colors">
           </div>

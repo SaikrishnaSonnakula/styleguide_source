@@ -1,0 +1,15 @@
+// document.scss
+//
+// Contains all css rules for element selectors.
+// WARNING: Rules here can have unforseen effects. Keep as minimal as possible.
+
+html {
+  font-size: $base-font;
+  font-family: $text-font;
+}
+
+// Use spacing value for base margin values
+p, ul {
+  margin-top: $gutter-spacing;
+  margin-bottom: $gutter-spacing;
+}

@@ -1,0 +1,24 @@
+$base-font: 16px;
+$mini-font: 0.7rem;
+$small-font: 0.8rem;
+$medium-font: 1.1rem;
+$large-font: 1.8rem;
+$extra-large-font: 2.3rem;
+
+$text-font: "Verdana", "Geneva", sans-serif;
+$bold-font: "Gotham 7r";
+$brand-font: "Gotham 4r";
+
+%base-heading {
+  font-family: $brand-font;
+}
+
+// HEADING CLASSES
+.page-heading {
+  @extend %base-heading;
+  font-size: $large-font;
+
+  @include media($large-screen) {
+    font-size: $extra-large-font;
+  }
+}
