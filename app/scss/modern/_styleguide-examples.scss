@@ -1,0 +1,13 @@
+.responsive-example {
+  color: $graphite;
+
+  @include media($medium-screen) {
+    font-size: 20px;
+    color: $dolphin;
+  }
+
+  @include media($large-screen) {
+    font-size: 32px;
+    color: $kp-blue;
+  }
+}
