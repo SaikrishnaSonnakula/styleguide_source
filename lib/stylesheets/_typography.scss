@@ -1,24 +1,22 @@
-$base-font: 16px;
-$mini-font: 0.7rem;
-$small-font: 0.8rem;
-$medium-font: 1.1rem;
-$large-font: 1.8rem;
-$extra-large-font: 2.3rem;
+$base-font-size: 16px;
+$em-base: $base-font-size; // used for bourbon
+
+$tiny-font-size: rem(14);
+$small-font-size: rem(18);
+$medium-font-size: rem(24);
+$large-font-size: rem(36);
+$xl-font-size: rem(48);
+$xxl-font-size: rem(68);
 
 $base-font-family: "Gotham 4r";
-$bold-font: "Gotham 7r";
-$brand-font: "Gotham 4r";
-
-%base-heading {
-  font-family: $brand-font;
-}
+$bold-font-family: "Gotham 7r";
 
 // HEADING CLASSES
 .page-heading {
   @extend %base-heading;
-  font-size: $large-font;
+  font-size: $medium-font-size;
 
   @include media($large-screen) {
-    font-size: $extra-large-font;
+    font-size: $large-font-size;
   }
 }

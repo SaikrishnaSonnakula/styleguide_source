@@ -3,13 +3,25 @@
 // Contains all css rules for element selectors.
 // WARNING: Rules here can have unforseen effects. Keep as minimal as possible.
 
+// Set base font size on html for rem calculation
 html {
-  font-size: $base-font;
+  font-size: $base-font-size;
+}
+
+// set base body font values
+body {
+  font-size: $small-font-size;
   font-family: $base-font-family;
 }
 
 // Use spacing value for base margin values
-p, ul {
-  margin-top: $gutter-spacing;
-  margin-bottom: $gutter-spacing;
+p, ul, h1, h2, h3, h4 {
+  margin-top: $paragraph-margin;
+  margin-bottom: $paragraph-margin;
 }
+
+// Set base heading sizes
+h1 { font-size: $xxl-font-size }
+h2 { font-size: $xl-font-size }
+h3 { font-size: $large-font-size }
+h4 { font-size: $medium-font-size }
