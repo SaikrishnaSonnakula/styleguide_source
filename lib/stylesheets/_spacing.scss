@@ -1,17 +1,9 @@
-$border-radius: 5px;
-$small-spacing: 0.5rem;
-$text-padding: 1rem;
-$content-gutter: 1rem;
-$medium-spacing: 45px;
+$tiny-spacing: 5px;
+$small-spacing: 15px;
+$medium-spacing: 25px;
+$large-spacing: 40px;
+$xl-spacing: 60px;
+$xxl-spacing: 90px;
+
 $gutter-spacing: $medium-spacing;
-$large-spacing: 1.5rem;
-$paragraph-margin: $large-spacing;
-$header-spacing: 3.571em;
-
-$tiny-spacing: 18px;
-$small-spacing: 30px;
-$medium-spacing: 45px;
-$large-spacing: 60px;
-$xl-spacing: 90px;
-
-$paragraph-margin: $small-spacing;
+$paragraph-margin: $medium-spacing;

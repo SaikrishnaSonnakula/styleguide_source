@@ -42,6 +42,12 @@ code {
 
   margin-left: $gutter-spacing;
   margin-right: $gutter-spacing;
+
+  @include media($largest-screen) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $large-screen-max - ($gutter-spacing * 2);
+  }
 }
 
 .styleguide-navigation {
