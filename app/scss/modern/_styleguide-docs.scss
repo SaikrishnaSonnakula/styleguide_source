@@ -7,8 +7,9 @@ $styleguide-gutter: 40px;
 $main-max-width: ($large-screen-max * 16/12) + ($styleguide-gutter * 2);
 
 code {
+  line-height: $medium-font-size;
+  padding: 2px;
   color: $kp-blue;
-  padding: 1px;
   background-color: $graphite;
 }
 

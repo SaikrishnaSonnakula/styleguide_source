@@ -5,9 +5,18 @@ var colorSections = [
     name: "KP Colors",
     colors: [
       'kp-blue',
-      'interactive-blue',
-      'interactive-blue-dark',
-      'interactive-blue-darker',
+      [
+        'interactive-blue',
+        'link-color'
+      ],
+      [
+        'interactive-blue-dark',
+        'button-hover-color'
+      ],
+      [
+        'interactive-blue-darker',
+        'link-hover-color'
+      ],
       'inky-blue',
       'dolphin',
       'graphite-dark',
@@ -15,7 +24,7 @@ var colorSections = [
       'graphite-light',
       'pebble'
     ]
-  }, 
+  },
   {
     name: "Feature Colors",
     colors: [
@@ -49,6 +58,20 @@ var getHex = function($el) {
   return '#'+ r.toString(16) + g.toString(16) + b.toString(16);
 };
 
+function appendColor(color, $section) {
+  var $color = $('<div class="color"></div>');
+  var colors = [].concat(color);
+  $section.append($color);
+
+  var $swatch = $('<div class="swatch '+ colors[0] +'"></div>');
+  $color.append($swatch);
+
+  colors.forEach(function(color) {
+    $color.append('<code>$' + color + '</code><br/>');
+  });
+  $color.append('<code>' + getHex($swatch) + '</code>');
+};
+
 export default function() {
   colorSections.forEach(function(section){
     var $section = $('<div class="color-section"></div>');
@@ -57,15 +80,7 @@ export default function() {
     $section.before('<h3 class="styleguide-subheading">' + section.name + '</h3>');
 
     section.colors.forEach(function(color){
-      var $color = $('<div class="color"></div>');
-      $section.append($color);
-
-      var $swatch = $('<div class="swatch '+ color +'"></div>');
-      $color.append($swatch);
-
-      $color.append('<code>$' + color + '</code><br/>');
-      $color.append('<code>' + getHex($swatch) + '</code>');
-    })
-
+      appendColor(color, $section);
+    });
   })
 };
