@@ -1,0 +1,10 @@
+.feed-item {
+  .feed-item-content {
+    margin-bottom: $medium-spacing;
+    color: $dolphin;
+  }
+
+  .feed-item-tag {
+    @extend .item-tag;
+  }
+}
