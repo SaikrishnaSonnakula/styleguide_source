@@ -1,3 +1,8 @@
+// _webpack-dependencies.scss
+//
+// Imports for all third party dependencies. Written to be
+// used with webpack.
+
 @import '../../vendor/normalize';
 @import '~bourbon/app/assets/stylesheets/bourbon';
 @import '~bourbon-neat';
