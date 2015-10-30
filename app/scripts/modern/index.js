@@ -5,6 +5,7 @@ require('../../scss/modern/index.scss');
 import $ from 'jquery';
 import addColors from './add_colors';
 import createExamples from '../create_examples';
+import addSpacing from './add_spacing';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 
@@ -22,6 +23,7 @@ $(function() {
   addColors();
   createExamples();
   easterEgg();
+  addSpacing();
 
   $("#modal-link").click(function() {
     $("#my-modal").addClass("modal-showing");

@@ -163,6 +163,13 @@ code {
     background-color: $pebble;
     padding: $small-padding;
 
+    // Make spacing variables available to auto document.
+    &.-tiny { top: $tiny-spacing; }
+    &.-small { top: $small-spacing; }
+    &.-medium { top: $medium-spacing; }
+    &.-large { top: $large-spacing; }
+    &.-xl { top: $xl-spacing; }
+
     @include media($medium-screen) {
       @include span-columns(6);
       @include omega(2n);
@@ -172,6 +179,10 @@ code {
       @include span-columns(4);
       @include omega(3n);
     }
+  }
+
+  .spacing-value {
+    font-family: $bold-font-family;
   }
 
   .spacing-highlight {
