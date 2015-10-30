@@ -1,5 +1,11 @@
+// _color-aliases.scss
+//
+// alias KP colors to semantic purposes.
+//
+// NOTE: if you want a variable here to be added to the docs
+// please add it to the list in add_colors.js
+
 $link-color: $interactive-blue;
 $link-hover-color: $interactive-blue-darker;
-$button-hover-color: $interactive-blue-dark;
-$text-dark: $inky-blue;
+$button-hover-color: $interactive-blue-dark;$text-dark: $inky-blue;
 $text-light: $dolphin;

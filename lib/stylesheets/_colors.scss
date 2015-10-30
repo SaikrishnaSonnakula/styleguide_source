@@ -1,3 +1,12 @@
+// _colors.scss
+//
+// Color variables and background classes for all KP
+// color values. Only include base colors in this file,
+// not aliases.
+//
+// NOTE: if you want a variable here to be added to the docs
+// please add it to the list in add_colors.js
+
 $interactive-blue: #3e66f7;
 .interactive-blue { background-color: $interactive-blue; }
 
