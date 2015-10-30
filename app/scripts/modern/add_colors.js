@@ -17,8 +17,14 @@ var colorSections = [
         'interactive-blue-darker',
         'link-hover-color'
       ],
-      'inky-blue',
-      'dolphin',
+      [
+        'inky-blue',
+        'text-dark'
+      ],
+      [
+        'dolphin',
+        'text-light'
+      ],
       'graphite-dark',
       'graphite',
       'graphite-light',
