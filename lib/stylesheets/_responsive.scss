@@ -1,28 +1,19 @@
+
+$mobile-max: 320px;
+$tablet-max: 768px;
+$desktop-small-max: 1024px;
+$desktop-max: 1400px;
+
+$tablet-min: $mobile-max+1px;
+$desktop-small-min: $tablet-max+1px;
+$desktop-min: $desktop-small-max+1px;
+$desktop-large-min: $desktop-max+1px;
+
+
 $default-feature: min-width;
 
-$small-screen-max: 414px;
-$medium-screen-max: 815px;
-$large-screen-max: 1050px;
-
-$small-screen: new-breakpoint(max-width $small-screen-max, 12);
-$medium-screen-min: $small-screen-max + 1px;
-$medium-screen: new-breakpoint(min-width #{$medium-screen-min} max-width #{$medium-screen-max}, 12);
-$mobile-screen: new-breakpoint(max-width $medium-screen-max, 12);
-$large-screen-min: $medium-screen-max + 1px;
-$large-screen: new-breakpoint($large-screen-min, 12);
-$largest-screen: new-breakpoint($large-screen-max, 12);
-
-$large-screen-header-max: $large-screen-min + 60px;
-$large-screen-header-specific: new-breakpoint(min-width #{$large-screen-min} max-width #{$large-screen-header-max}, 12);
-
-.mobile-only {
-  @include media($large-screen) {
-    display: none !important;
-  }
-}
-
-.desktop-only {
-  @include media($mobile-screen) {
-    display: none !important;
-  }
-}
+$mobile: new-breakpoint(max-width $mobile-max, 4);
+$tablet: new-breakpoint(min-width $tablet-min max-width $tablet-max, 12);
+$desktop-small: new-breakpoint(min-width $desktop-small-min max-width $desktop-small-max, 12);
+$desktop: new-breakpoint(min-width $desktop-min max-width $desktop-max, 12);
+$desktop-large: new-breakpoint(min-width $desktop-large-min, 12);
