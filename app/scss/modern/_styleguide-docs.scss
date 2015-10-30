@@ -4,7 +4,7 @@ $border-color: #ddd;
 $content-padding-mobile: 20px;
 $small-padding: 0.5em;
 $styleguide-gutter: $gutter-spacing;
-$main-max-width: ($large-screen-max * 16/12);
+$main-max-width: ($large-screen-max);
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
 
 code {

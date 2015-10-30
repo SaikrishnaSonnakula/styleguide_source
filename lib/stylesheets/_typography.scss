@@ -13,8 +13,8 @@ $bold-font-family: "Gotham 7r";
 
 // HEADING CLASSES
 .page-heading {
-  @extend %base-heading;
   font-size: $medium-font-size;
+  color: $inky-blue;
 
   @include media($large-screen) {
     font-size: $large-font-size;
@@ -34,6 +34,13 @@ $bold-font-family: "Gotham 7r";
   font-size: $small-font-size;
   letter-spacing: -0.5px;
   color: $inky-blue;
+}
+
+.section-heading {
+  font-size: $medium-font-size;
+  letter-spacing: -0.75px;
+  color: $dolphin;
+  font-weight: normal;
 }
 // FONT STYLE CLASSES
 
