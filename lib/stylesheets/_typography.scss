@@ -20,3 +20,29 @@ $bold-font-family: "Gotham 7r";
     font-size: $large-font-size;
   }
 }
+
+.item-heading {
+  margin-bottom: $tiny-spacing;
+  font-size: $medium-font-size;
+  letter-spacing: -1px;
+  color: $inky-blue;
+}
+
+.item-subheading {
+  margin-top: 0px;
+  margin-bottom: $tiny-spacing;
+  font-size: $small-font-size;
+  letter-spacing: -0.5px;
+  color: $inky-blue;
+}
+// FONT STYLE CLASSES
+
+.item-tag {
+  text-transform: uppercase;
+  font-size: $tiny-font-size;
+  color: $dolphin;
+}
+
+.auxillary {
+  //...
+}

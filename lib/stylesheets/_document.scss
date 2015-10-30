@@ -16,8 +16,8 @@ body {
 
 // Use spacing value for base margin values
 p, ul, h1, h2, h3, h4 {
-  margin-top: $paragraph-margin;
-  margin-bottom: $paragraph-margin;
+  margin-top: $paragraph-spacing;
+  margin-bottom: $paragraph-spacing;
 }
 
 // Set base heading sizes

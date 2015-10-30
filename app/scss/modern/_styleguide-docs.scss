@@ -88,12 +88,14 @@ code {
 .styleguide-section-heading {
   font-size: $large-font-size;
   color: $kp-blue;
-  padding-bottom: 10px;
+  padding-bottom: 10px; //TODO: remove this magic number
   border-bottom: 1px $border-color solid;
-  margin-bottom: 20px;
+  margin-bottom: 20px; //TODO: remove this magic number
+  margin-top: $large-spacing;
 }
 
 .styleguide-subheading {
+  margin-top: $large-spacing;
   color: $dolphin;
   font-size: $medium-font-size;
 }
@@ -104,7 +106,7 @@ code {
 }
 
 .color {
-  margin-bottom: $paragraph-margin;
+  margin-bottom: $paragraph-spacing;
   font-size: $small-font-size;
 
   @include media($medium-screen) {
@@ -128,7 +130,7 @@ code {
   @include clearfix;
 
   .font-variable {
-    margin-bottom: $paragraph-margin;
+    margin-bottom: $paragraph-spacing;
     background-color: $pebble;  
 
     div {
@@ -152,6 +154,44 @@ code {
     }
   }
 }
+
+.spacing-examples {
+  @include clearfix;
+
+  .spacing-example {
+    margin-bottom: $paragraph-spacing;
+    background-color: $pebble;
+    padding: $small-padding;
+
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  .spacing-highlight {
+    @include clearfix;
+    * { background-color: $pebble; }
+  }
+
+  .spacing-example:hover .spacing-highlight {
+    background-color: #FDF78A;
+  }
+
+  .large-spacing {
+    margin-bottom: $large-spacing;
+  }
+
+  .xl-spacing {
+    margin: $xl-spacing;
+  }
+}
+
 
 .tiny-font-size { font-size: $tiny-font-size; }
 .small-font-size { font-size: $small-font-size; }
