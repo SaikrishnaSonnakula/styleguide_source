@@ -16,7 +16,7 @@ $bold-font-family: "Gotham 7r";
   font-size: $medium-font-size;
   color: $inky-blue;
 
-  @include media($large-screen) {
+  @include media($desktop) {
     font-size: $large-font-size;
   }
 }
