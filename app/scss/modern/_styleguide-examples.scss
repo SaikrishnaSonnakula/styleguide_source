@@ -35,7 +35,7 @@
       border-top: 1px $border-color solid;
     }
 
-    @include media($large-screen) {
+    @include media($desktop-up) {
       .code, .result {
         @include span-columns(6);
 
@@ -49,7 +49,7 @@
   &.-large-element {
     @extend .minor;
 
-    @include media($large-screen) {
+    @include media($desktop-up) {
       .result {
         .result-pane {
           padding-top: 0;
@@ -67,7 +67,7 @@
       border: none;
     }
 
-    @include media($large-screen) {
+    @include media($desktop-up) {
       .code {
         @include span-columns(8);
       }
@@ -87,12 +87,12 @@
 .responsive-example {
   color: $graphite;
 
-  @include media($medium-screen) {
+  @include media($tablet) {
     font-size: 20px;
     color: $dolphin;
   }
 
-  @include media($large-screen) {
+  @include media($desktop-small-up) {
     font-size: 32px;
     color: $kp-blue;
   }

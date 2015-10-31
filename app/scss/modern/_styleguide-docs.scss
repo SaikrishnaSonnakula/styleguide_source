@@ -4,7 +4,7 @@ $border-color: #ddd;
 $content-padding-mobile: 20px;
 $small-padding: 0.5em;
 $styleguide-gutter: $gutter-spacing;
-$main-max-width: ($large-screen-max);
+$main-max-width: ($desktop-max);
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
 
 code {
@@ -54,7 +54,7 @@ code {
 .styleguide-navigation {
   display: none;
 
-  @include media($largest-screen) {
+  @include media($desktop-large) {
     @include span-columns(3);
     top: $styleguide-gutter;
     display: block;
@@ -79,7 +79,7 @@ code {
 }
 
 .styleguide-content {
-  @include media($largest-screen) {
+  @include media($desktop-large) {
     @include span-columns(9);
     float: right;
   }
@@ -109,12 +109,12 @@ code {
   margin-bottom: $paragraph-spacing;
   font-size: $small-font-size;
 
-  @include media($medium-screen) {
+  @include media($tablet) {
     @include span-columns(6);
     @include omega(2n);
   }
 
-  @include media($large-screen) {
+  @include media($desktop-small-up) {
     @include span-columns(4);
     @include omega(3n);
   }
@@ -143,12 +143,12 @@ code {
       display: block;
     }
 
-    @include media($medium-screen) {
+    @include media($tablet) {
       @include span-columns(6);
       @include omega(2n);
     }
 
-    @include media($large-screen) {
+    @include media($desktop-small-up) {
       @include span-columns(4);
       @include omega(3n);
     }
@@ -170,12 +170,12 @@ code {
     &.-large { top: $large-spacing; }
     &.-xl { top: $xl-spacing; }
 
-    @include media($medium-screen) {
+    @include media($tablet) {
       @include span-columns(6);
       @include omega(2n);
     }
 
-    @include media($large-screen) {
+    @include media($desktop-small-up) {
       @include span-columns(4);
       @include omega(3n);
     }
@@ -203,6 +203,52 @@ code {
   }
 }
 
+
+// Responsive breakpoint
+.current-breakpoint {
+  position: fixed;
+  width: 100%;
+  background: $graphite;
+  padding: $small-padding;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+
+  .mobile-only {
+    display: none;
+    @include media($mobile) {
+      display: inline;    
+    }
+  }
+
+  .tablet-only {
+    display: none;
+    @include media($tablet) {
+      display: inline;
+    }
+  }
+
+  .small-desktop-only {
+    display: none;
+    @include media($desktop-small) {
+      display: inline;
+    }
+  }
+
+  .desktop-only {
+    display: none;
+    @include media($desktop) {
+      display: inline;
+    }
+  }
+
+  .large-desktop-only {
+    display: none;
+    @include media($desktop-large) {
+      display: inline;
+    }
+  }
+}
 
 .tiny-font-size { font-size: $tiny-font-size; }
 .small-font-size { font-size: $small-font-size; }

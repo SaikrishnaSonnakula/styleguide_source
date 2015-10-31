@@ -1,5 +1,5 @@
 
-$mobile-max: 320px;
+$mobile-max: 414px;
 $tablet-max: 768px;
 $desktop-small-max: 1024px;
 $desktop-max: 1400px;
@@ -9,11 +9,15 @@ $desktop-small-min: $tablet-max+1px;
 $desktop-min: $desktop-small-max+1px;
 $desktop-large-min: $desktop-max+1px;
 
-
 $default-feature: min-width;
 
 $mobile: new-breakpoint(max-width $mobile-max, 4);
-$tablet: new-breakpoint(min-width $tablet-min max-width $tablet-max, 12);
-$desktop-small: new-breakpoint(min-width $desktop-small-min max-width $desktop-small-max, 12);
-$desktop: new-breakpoint(min-width $desktop-min max-width $desktop-max, 12);
+$tablet: new-breakpoint(min-width #{$tablet-min} max-width #{$tablet-max}, 12);
+$desktop-small: new-breakpoint(min-width #{$desktop-small-min} max-width #{$desktop-small-max}, 12);
+$desktop: new-breakpoint(min-width #{$desktop-min} max-width #{$desktop-max}, 12);
 $desktop-large: new-breakpoint(min-width $desktop-large-min, 12);
+
+$tablet-up: new-breakpoint(min-width $tablet-min, 12);
+$desktop-small-up: new-breakpoint(min-width $desktop-small-min, 12);
+$desktop-up: new-breakpoint(min-width $desktop-min, 12);
+
