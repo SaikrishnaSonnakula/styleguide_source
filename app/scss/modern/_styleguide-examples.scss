@@ -65,12 +65,6 @@
 
     .result-pane {
       border: none;
-      margin-left: $content-padding-mobile;
-      margin-right: $content-padding-mobile;
-
-      @include media($large-screen) {
-        margin-left: 0;
-      }
     }
 
     @include media($large-screen) {
@@ -80,7 +74,6 @@
 
       .result {
         @include span-columns(4);
-        .result-pane { padding: 0px; }
       }
     }
   }

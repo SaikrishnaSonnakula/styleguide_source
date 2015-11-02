@@ -1,0 +1,33 @@
+$button-color: $interactive-blue;
+$button-padding: $small-spacing;
+$button-min-width: 10em;
+
+%rounded-input {
+  @include appearance(none);
+
+  display: inline-block;
+  padding: $button-padding;
+  min-width: $button-min-width;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+.button {
+  @extend %rounded-input;
+  @include transition(background-color 0.2s ease);
+
+  background-color: $button-color;
+  color: white;
+
+  &:hover, &:focus {
+    background-color: $button-hover-color;
+    color: white;
+  }
+}
