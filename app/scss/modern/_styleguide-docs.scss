@@ -4,7 +4,7 @@ $border-color: #ddd;
 $content-padding-mobile: 20px;
 $small-padding: 0.5em;
 $styleguide-gutter: $gutter-spacing;
-$main-max-width: ($desktop-max);
+$main-max-width: $desktop-small-max;
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
 
 code {
@@ -131,7 +131,7 @@ code {
 
   .font-variable {
     margin-bottom: $paragraph-spacing;
-    background-color: $pebble;  
+    background-color: $pebble;
 
     div {
       padding-left: $small-spacing;
@@ -217,7 +217,7 @@ code {
   .mobile-only {
     display: none;
     @include media($mobile) {
-      display: inline;    
+      display: inline;
     }
   }
 
