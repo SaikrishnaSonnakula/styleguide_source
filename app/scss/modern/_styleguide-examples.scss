@@ -4,6 +4,7 @@
 
   .code {
     @extend .doc;
+    font-size: $tiny-font-size;
 
     pre {
       margin-top: 0px;

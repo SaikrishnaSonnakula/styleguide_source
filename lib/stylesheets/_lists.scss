@@ -2,3 +2,25 @@
   padding-left: 0;
   list-style: none;
 }
+
+.horizontal-list {
+  @extend %list-unstyled;
+
+  li {
+    display: inline-block;
+    padding-right: $small-spacing;
+  }
+
+  &.-divided {
+    li {
+      padding-right: $small-spacing;
+      border-right: 1px solid $graphite-dark;
+      margin-right: $small-spacing;
+    }
+
+    li:last-child {
+      border-right: 0;
+      margin-right: 0;
+    }
+  }
+}
