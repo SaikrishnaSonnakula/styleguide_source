@@ -31,3 +31,12 @@ $button-min-width: 10em;
     color: white;
   }
 }
+
+.link {
+  @include appearance(none);
+
+  border-color: transparent;
+  background-color: transparent;
+  color: $link-color;
+  text-decoration: none;
+}
