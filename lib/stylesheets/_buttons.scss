@@ -32,6 +32,12 @@ $button-border-size: 3px;
     color: white;
   }
 
+
+  &.-inverted {
+    background-color: white;
+    color: $button-color;
+  }
+
   &.-outline {
     background-color: transparent;
     border: $button-border-size solid white;
