@@ -1,6 +1,7 @@
 $button-color: $interactive-blue;
 $button-padding: $small-spacing;
 $button-min-width: 10em;
+$button-border-size: 3px;
 
 %rounded-input {
   @include appearance(none);
@@ -29,6 +30,11 @@ $button-min-width: 10em;
   &:hover, &:focus {
     background-color: $button-hover-color;
     color: white;
+  }
+
+  &.-outline {
+    background-color: transparent;
+    border: $button-border-size solid white;
   }
 }
 
