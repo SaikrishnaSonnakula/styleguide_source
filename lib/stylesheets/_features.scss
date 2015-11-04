@@ -1,0 +1,23 @@
+$action-box-height: 286px;
+$action-box-vertical-padding: $large-spacing;
+$content-top-offset: $xl-spacing;
+$outer-gutter-spacing: $small-spacing;
+
+.action-box {
+  min-height: $action-box-height;
+  color: white;
+  padding-top: $action-box-vertical-padding;
+  padding-bottom: $action-box-vertical-padding + $content-top-offset;
+  padding-left: $outer-gutter-spacing;
+  padding-right: $outer-gutter-spacing;
+  text-align: center;
+}
+
+.feature-content {
+  @extend %content-container;
+  margin-top: -$content-top-offset;
+  background-color: white;
+  margin-left: $outer-gutter-spacing;
+  margin-right: $outer-gutter-spacing;
+  padding: $gutter-spacing;
+}

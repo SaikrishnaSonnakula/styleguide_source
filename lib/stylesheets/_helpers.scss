@@ -1,0 +1,9 @@
+%content-container {
+  &::before {
+    clear: both;
+    content: "";
+    display: table;
+    margin-top: -1px;
+    height: 0;
+  }
+}
