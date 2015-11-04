@@ -14,10 +14,11 @@ $default-feature: min-width;
 $mobile: new-breakpoint(max-width $mobile-max, 4);
 $tablet: new-breakpoint(min-width #{$tablet-min} max-width #{$tablet-max}, 12);
 $desktop-small: new-breakpoint(min-width #{$desktop-small-min} max-width #{$desktop-small-max}, 12);
-$desktop: new-breakpoint(min-width #{$desktop-min} max-width #{$desktop-max}, 12);
+$desktop-medium: new-breakpoint(min-width #{$desktop-min} max-width #{$desktop-max}, 12);
 $desktop-large: new-breakpoint(min-width $desktop-large-min, 12);
 
 $tablet-up: new-breakpoint(min-width $tablet-min, 12);
 $desktop-small-up: new-breakpoint(min-width $desktop-small-min, 12);
 $desktop-up: new-breakpoint(min-width $desktop-min, 12);
 
+$desktop: $desktop-small-up;

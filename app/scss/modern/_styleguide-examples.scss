@@ -93,7 +93,7 @@
     color: $dolphin;
   }
 
-  @include media($desktop-small-up) {
+  @include media($desktop) {
     font-size: 32px;
     color: $kp-blue;
   }

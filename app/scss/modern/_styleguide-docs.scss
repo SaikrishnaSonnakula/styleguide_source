@@ -114,7 +114,7 @@ code {
     @include omega(2n);
   }
 
-  @include media($desktop-small-up) {
+  @include media($desktop) {
     @include span-columns(4);
     @include omega(3n);
   }
@@ -148,7 +148,7 @@ code {
       @include omega(2n);
     }
 
-    @include media($desktop-small-up) {
+    @include media($desktop) {
       @include span-columns(4);
       @include omega(3n);
     }
@@ -175,7 +175,7 @@ code {
       @include omega(2n);
     }
 
-    @include media($desktop-small-up) {
+    @include media($desktop) {
       @include span-columns(4);
       @include omega(3n);
     }
