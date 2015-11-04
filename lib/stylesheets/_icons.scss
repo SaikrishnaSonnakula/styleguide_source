@@ -1,0 +1,19 @@
+$feature-icon-desktop-size: 70px;
+$feature-icon-mobile-size: 45px;
+
+.feature-icon {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  width: $feature-icon-mobile-size;
+  height: $feature-icon-mobile-size;
+  border-radius: 50%;
+  background-color: $graphite;
+
+  @include media($desktop) {
+    width: $feature-icon-desktop-size;
+    height: $feature-icon-desktop-size;
+    font-size: $medium-font-size;
+  }
+}
