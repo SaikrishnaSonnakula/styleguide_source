@@ -37,5 +37,9 @@ $(function() {
     $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
   });
 
+  $("#my-collapsible-feed-item").click(function() {
+    $("#my-collapsible-feed-item").toggleClass("-open");
+  })
+
   $("main").show();
 });

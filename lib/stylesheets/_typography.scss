@@ -1,7 +1,7 @@
 $base-font-size: 16px;
 $em-base: $base-font-size; // used for bourbon
 
-$tiny-font-size: rem(14);
+$tiny-font-size: rem(15);
 $small-font-size: rem(18);
 $medium-font-size: rem(24);
 $large-font-size: rem(36);
@@ -23,17 +23,26 @@ $bold-font-family: "Gotham 7r";
 
 .item-heading {
   margin-bottom: $tiny-spacing;
-  font-size: $medium-font-size;
+  font-size: $small-font-size;
   letter-spacing: -1px;
   color: $inky-blue;
+  font-weight: normal;
+
+  @include media($desktop) {
+    font-size: $medium-font-size;
+  }
 }
 
 .item-subheading {
   margin-top: 0px;
-  margin-bottom: $tiny-spacing;
-  font-size: $small-font-size;
+  font-size: $tiny-font-size;
   letter-spacing: -0.5px;
   color: $inky-blue;
+  font-weight: normal;
+
+  @include media($desktop) {
+    font-size: $small-font-size;
+  }
 }
 
 .section-heading {

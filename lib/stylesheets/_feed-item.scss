@@ -1,10 +1,74 @@
+
+$mobile-item-icon-padding: $small-spacing;
+$mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-padding);
+$desktop-item-icon-padding: $medium-spacing;
+$desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
+
 .feed-item {
-  .feed-item-content {
+  border: $button-border-size solid transparent;
+
+  .item-main, .item-gutter {
+    margin-top: $medium-spacing;
     margin-bottom: $medium-spacing;
+  }
+
+  .feed-icon {
+    @extend .feature-icon;
+  }
+
+  .item-body {
     color: $dolphin;
   }
 
-  .feed-item-tag {
-    @extend .item-tag;
+  .item-tag {
+    margin-top: $medium-spacing;
+  }
+
+  .item-gutter {
+    width: $mobile-item-gutter-width;
+    float: left;
+    padding-left: $mobile-item-icon-padding;
+    padding-right: $mobile-item-icon-padding;
+
+    @include media($desktop) {
+      width: $desktop-item-gutter-width;
+      float: left;
+      padding-left: $desktop-item-icon-padding;
+      padding-right: $desktop-item-icon-padding;
+    }
+  }
+
+  .item-main {
+    @include clearfix;
+    margin-left: $mobile-item-gutter-width;
+
+    @include media($desktop) {
+      margin-left: $desktop-item-gutter-width;
+    }
+  }
+
+  .item-collapsible {
+    @extend %hide-fade-in;
+    @include transition(opacity 0.3s ease-in-out);
+
+    color: $dolphin;
+  }
+
+  &.-open {
+    .item-collapsible {
+      @extend %show-fade-in;
+    }
+  }
+
+  &.-collapsible {
+    cursor: pointer;
+
+    &:hover {
+      border-color: $graphite-light;
+    }
+
+    .item-collapsible {
+      cursor: default;
+    }
   }
 }

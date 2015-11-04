@@ -222,7 +222,7 @@
             <div class="spacing-example -medium">
               <div class="feed-item">
                 <div class="spacing-highlight">
-                  <p class="feed-item-content">
+                  <p class="item-body">
                     Medium spacing
                   </p>
                 </div>
@@ -328,6 +328,9 @@
 
         <section id="features-section">
           <h2 class="styleguide-section-heading">Features</h2>
+          <h3 class="styleguide-subheading">
+            Feature Layout
+          </h3>
 
           <div class="example">
             <div class="action-box grass">
@@ -338,6 +341,68 @@
               <p>
                 This is a feature
               </p>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Feed Items
+          </h3>
+
+          <div class="example">
+            <div class="feed-item">
+              <div class="item-gutter">
+                <div class="feed-icon aqua">WW</div>
+              </div>
+
+              <div class="item-main">
+                <h3 class="item-heading">
+                  You have a Feed Item
+                </h3>
+                <h4 class="item-subheading">
+                  from Styleguide
+                </h4>
+                <div class="item-body">
+                  This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                </div>
+                <div class="item-tag">
+                  Tagz
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            For feed items with collapsable content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
+            elements with the <code>collapsible-content</code> class.
+          </p>
+
+          <div class="example">
+            <div id="my-collapsible-feed-item" class="feed-item -collapsible">
+              <div class="item-gutter">
+                <div class="feed-icon fuchsia">IJ</div>
+              </div>
+
+              <div class="item-main">
+                <h3 class="item-heading">
+                  Feed Item with Additional Content
+                </h3>
+
+                <h4 class="item-subheading">
+                  from Styleguide
+                </h4>
+
+                <div class="item-body">
+                  Click me to see the extra content!
+                </div>
+
+                <p class="item-collapsible">
+                  Extra content.
+                </p>
+
+                <div class="item-tag">
+                  Tagz
+                </div>
+              </div>
             </div>
           </div>
         </section>

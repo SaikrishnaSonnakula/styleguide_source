@@ -7,3 +7,20 @@
     height: 0;
   }
 }
+
+// show & hide an element with the intent to fade it in.
+%hide-fade-in {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  float: left;
+}
+
+%show-fade-in {
+  visibility: visible;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  float: none;
+}
