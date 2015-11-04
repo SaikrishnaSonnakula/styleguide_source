@@ -237,7 +237,7 @@ code {
 
   .desktop-only {
     display: none;
-    @include media($desktop) {
+    @include media($desktop-medium) {
       display: inline;
     }
   }
