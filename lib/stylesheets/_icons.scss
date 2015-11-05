@@ -1,5 +1,6 @@
 $feature-icon-desktop-size: 70px;
 $feature-icon-mobile-size: 45px;
+$path-to-icon: '../icon/brand';
 
 .feature-icon {
   @include display(flex);
@@ -21,11 +22,11 @@ $feature-icon-mobile-size: 45px;
 //redshift icons - temporary solution =( poo poo poo
 @font-face {
   font-family: 'kp-icons';
-  src:url('../icon/brand/kp-icons.eot?-hyrsgm');
-  src:url('../icon/brand/kp-icons.eot?#iefix-hyrsgm') format('embedded-opentype'),
-    url('../icon/brand/kp-icons.ttf?-hyrsgm') format('truetype'),
-    url('../icon/brand/kp-icons.woff?-hyrsgm') format('woff'),
-    url('../icon/brand/kp-icons.svg?-hyrsgm#icomoon') format('svg');
+  src:url($path-to-icon+'/kp-icons.eot?-hyrsgm');
+  src:url($path-to-icon+'/kp-icons.eot?#iefix-hyrsgm') format('embedded-opentype'),
+    url($path-to-icon+'/kp-icons.ttf?-hyrsgm') format('truetype'),
+    url($path-to-icon+'/kp-icons.woff?-hyrsgm') format('woff'),
+    url($path-to-icon+'/kp-icons.svg?-hyrsgm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
