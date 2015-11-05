@@ -26,10 +26,10 @@ p, ul, h1, h2, h3, h4 {
 }
 
 // Set base heading sizes
-h1 { font-size: $xxl-font-size }
-h2 { font-size: $xl-font-size }
-h3 { font-size: $large-font-size }
-h4 { font-size: $medium-font-size }
+h1 { font-size: $xl-font-size }
+h2 { font-size: $large-font-size }
+h3 { font-size: $medium-font-size }
+h4 { font-size: $small-font-size }
 
 // Base link coloring
 a, a:visited {
