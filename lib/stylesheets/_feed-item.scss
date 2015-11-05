@@ -20,10 +20,6 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     color: $dolphin;
   }
 
-  .item-tag {
-    margin-top: $medium-spacing;
-  }
-
   .item-gutter {
     width: $mobile-item-gutter-width;
     float: left;
@@ -44,6 +40,10 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
 
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
+    }
+
+    .item-tag {
+      margin-top: $medium-spacing;
     }
   }
 
@@ -70,5 +70,9 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     .item-collapsible {
       cursor: default;
     }
+  }
+
+  .item-secondary {
+
   }
 }
