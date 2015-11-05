@@ -194,13 +194,11 @@ code {
     background-color: #FDF78A;
   }
 
-  .large-spacing {
-    margin-bottom: $large-spacing;
-  }
 
-  .xl-spacing {
-    margin: $xl-spacing;
-  }
+  .spacing-example.-tiny .item-subheading { margin-bottom: 0; }
+  .medium-spacing { margin-bottom: $medium-spacing !important; }
+  .large-spacing { margin-bottom: $large-spacing; }
+  .xl-spacing { margin-top: $xl-spacing; }
 }
 
 
