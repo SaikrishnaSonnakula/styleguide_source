@@ -1,12 +1,19 @@
 $base-font-size: 16px;
 $em-base: $base-font-size; // used for bourbon
 
-$tiny-font-size: rem(15);
-$small-font-size: rem(18);
-$medium-font-size: rem(24);
-$large-font-size: rem(36);
-$xl-font-size: rem(48);
-$xxl-font-size: rem(68);
+$tiny-font-px: 15px;
+$small-font-px: 18px;
+$medium-font-px: 24px;
+$large-font-px: 36px;
+$xl-font-px: 48px;
+$xxl-font-px: 68px;
+
+$tiny-font-size: rem($tiny-font-px);
+$small-font-size: rem($small-font-px);
+$medium-font-size: rem($medium-font-px);
+$large-font-size: rem($large-font-px);
+$xl-font-size: rem($xl-font-px);
+$xxl-font-size: rem($xxl-font-px);
 
 $base-font-family: "Gotham 4r";
 $bold-font-family: "Gotham 7r";
