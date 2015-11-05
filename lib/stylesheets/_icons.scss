@@ -1,6 +1,6 @@
 $feature-icon-desktop-size: 70px;
 $feature-icon-mobile-size: 45px;
-$path-to-icon: '../icon/brand';
+$path-to-icon: '../font/brand';
 
 .feature-icon {
   @include display(flex);
