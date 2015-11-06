@@ -78,12 +78,14 @@ code {
 
 .styleguide-navigation {
   display: none;
+  padding-top: $small-spacing;
 
   ul {
     @extend %list-unstyled;
     font-size: $small-font-size;
     font-weight: bold;
     align: left;
+    margin-top: $tiny-spacing;
   }
 
   a {
@@ -100,7 +102,8 @@ code {
     @include transition(all 0.2s $ease-out-cubic);
 
     display: block;
-    position: fixed !important;
+    z-index: 10;
+    position: fixed;
     background-color: $graphite;
     width: 50%;
     top: $mobile-header-height !important;

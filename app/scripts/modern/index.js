@@ -25,7 +25,7 @@ $(function() {
   easterEgg();
   addSpacing();
 
-  $("#menu-button").click(function() {
+  $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");
   })
 
