@@ -123,6 +123,13 @@ code {
   }
 }
 
+.styleguide-nav-heading {
+  color: $inky-blue;
+  font-size: $small-font-size;
+  font-family: $bold-font-family;
+  margin-bottom: $tiny-spacing;
+}
+
 .styleguide-content {
   padding-top: $mobile-header-height;
 

@@ -411,6 +411,12 @@
           </p>
 
           <div class="example">
+            <pre class="code language-javascript">
+              $("#my-collapsible-feed-item").click(function() {
+                $("#my-collapsible-feed-item").toggleClass("-open");
+              });
+            </pre>
+
             <div id="my-collapsible-feed-item" class="feed-item -collapsible">
               <div class="item-gutter">
                 <div class="feed-icon fuchsia">IJ</div>
@@ -437,6 +443,33 @@
                   Tagz
                 </div>
               </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Heading Dropdown
+          </h3>
+
+          <p>
+           Dropdown that contains a list of links used for navigation. Used on the top of many features. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
+          </p>
+
+          <div class="example -padded">
+            <pre class="code language-javascript">
+              $("#best-nba-team .-heading").click(function() {
+                $("#best-nba-team").toggleClass("-open");
+              });
+            </pre>
+
+            <div id="best-nba-team" class="heading-dropdown">
+              <button class="-heading">
+                Golden State Warriors
+              </button>
+              <ul class="-options">
+                <li class="-active"><a href="#warriors">Golden State Warriors</a></li>
+                <li><a href="#lakers">LA Lakers</a></li>
+                <li><a href="#clippers">LA Clippers</a></li>
+              </ul>
             </div>
           </div>
         </section>

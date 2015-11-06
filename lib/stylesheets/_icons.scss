@@ -20,6 +20,8 @@ $path-to-icon: '../font/brand';
 }
 
 //redshift icons - temporary solution =( poo poo poo
+$dropdown-character: "\e61c";
+
 @font-face {
   font-family: 'kp-icons';
   src:url($path-to-icon+'/kp-icons.eot?-hyrsgm');

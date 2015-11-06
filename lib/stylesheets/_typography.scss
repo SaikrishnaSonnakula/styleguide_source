@@ -21,6 +21,7 @@ $bold-font-family: "Gotham 7r";
 // HEADING CLASSES
 .page-heading {
   font-size: $large-font-size;
+  font-weight: bold;
   color: $inky-blue;
 
   @include media($desktop) {
@@ -69,4 +70,14 @@ $bold-font-family: "Gotham 7r";
 .auxiliary-text {
   font-size: $tiny-font-size;
   color: $dolphin;
+}
+
+.inverted-link {
+  &, &:visited {
+    color: $text-light;
+  }
+
+  &:hover, &:focus {
+    color: $interactive-blue;
+  }
 }

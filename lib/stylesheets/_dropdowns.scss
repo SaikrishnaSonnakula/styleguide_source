@@ -1,0 +1,47 @@
+$dropdown-options-max-height: 200px;
+
+.heading-dropdown {
+  .-heading {
+    @extend %button-unstyled;
+    @extend .page-heading;
+    cursor: pointer;
+
+    &:after {
+      @extend .kp-icon;
+      @include transition(all 0.4s $ease-out-cubic);
+      display: inline-block;
+      font-size: $medium-font-size;
+      color: $interactive-blue;
+      content: $dropdown-character;
+    }
+  }
+
+  &.-open .-heading:after{
+    @include transform(rotate(180deg));
+  }
+
+  .-options {
+    @extend %list-unstyled;
+    @include transition(max-height 0.4s $ease-out-cubic);
+    font-size: $medium-font-size;
+    margin-top: $large-spacing;
+    overflow: hidden;
+    max-height: 0px;
+
+    > li {
+      margin-top: $small-spacing;
+    }
+
+    a {
+      @extend .inverted-link;
+    }
+
+    .-active {
+      font-weight: bold;
+    }
+  }
+
+  &.-open .-options {
+    max-height: $dropdown-options-max-height;
+  }
+}

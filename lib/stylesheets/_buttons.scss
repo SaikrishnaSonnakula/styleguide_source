@@ -44,11 +44,14 @@ $button-border-size: 3px;
   }
 }
 
-.link {
+%button-unstyled {
   @include appearance(none);
-
   border-color: transparent;
   background-color: transparent;
-  color: $link-color;
   text-decoration: none;
+}
+
+.link {
+  @extend %button-unstyled;
+  color: $link-color;
 }
