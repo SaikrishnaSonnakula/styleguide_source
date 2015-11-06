@@ -25,6 +25,10 @@ $(function() {
   easterEgg();
   addSpacing();
 
+  $("#menu-button").click(function() {
+    $("#navbar").toggleClass("hidden");
+  })
+
   $("#modal-link").click(function() {
     $("#my-modal").addClass("modal-showing");
     $("#my-modal").attr('aria-hidden','false');
@@ -39,7 +43,8 @@ $(function() {
 
   $("#my-collapsible-feed-item").click(function() {
     $("#my-collapsible-feed-item").toggleClass("-open");
-  })
+  });
+
 
   $("main").show();
 });

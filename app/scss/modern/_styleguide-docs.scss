@@ -6,6 +6,7 @@ $small-padding: 0.5em;
 $styleguide-gutter: $gutter-spacing;
 $main-max-width: $desktop-small-max;
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
+$mobile-header-height: 50px;
 
 code {
   line-height: $medium-font-size;
@@ -18,17 +19,39 @@ code {
 .styleguide-header {
   @extend .page-heading;
 
-  width: 100%;
-  height: 170px;
   background-color: $kp-blue;
-  background-position: 50% 30%;
-  background-image: url('images/kp-icon.svg');
-  background-size: 100px;
-  background-repeat: no-repeat;
-  border-bottom: $kp-blue 10px solid;
-  padding-top: 120px;
-  text-align: center;
   color: white;
+  background-image: url('images/kp-icon.svg');
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  position: fixed;
+  background-size: 40px;
+  height: $mobile-header-height;
+  line-height: $mobile-header-height;
+  vertical-align: middle;
+  padding-left: $gutter-spacing;
+  padding-right: $gutter-spacing;
+  text-align: right;
+  font-size: $medium-font-size;
+  width: 100%;
+  z-index: 11;
+
+  @include media($desktop) {
+    width: 100%;
+    height: 170px;
+    border-bottom: $kp-blue 10px solid;
+    background-size: 100px;
+    padding-top: 120px;
+    text-align: center;
+    position: relative;
+  }
+}
+
+.device-menu-button {
+  @extend .device-only;
+  float: left;
+  line-height: $mobile-header-height;
+  vertical-align: middle;
 }
 
 .styleguide-content {
@@ -53,35 +76,50 @@ code {
 }
 
 .styleguide-navigation {
-  display: none;
+  @include transition(all 0.2s $ease-out-cubic);
 
-  @include media($desktop-large) {
-    @include span-columns(3);
+  display: block;
+  position: fixed;
+  background-color: $graphite;
+  width: 50%;
+  top: $mobile-header-height;
+  left: 0px;
+  bottom: 0px;
+  padding-left: $gutter-spacing;
+
+  ul {
+    @extend %list-unstyled;
+    font-size: $small-font-size;
+    font-weight: bold;
+    align: left;
+  }
+
+  a {
+    color: $dolphin;
+    text-decoration: none !important;
+
+    &:hover {
+      margin-left: 0.2em;
+      color: $interactive-blue;
+    }
+  }
+
+  &.hidden {
+    left: -$tablet-max;
+  }
+
+  @include media($desktop) {
+    @include span-columns(2);
     top: $styleguide-gutter;
-    display: block;
-
-    ul {
-      @extend %list-unstyled;
-      font-size: $medium-font-size;
-      font-weight: bold;
-      align: left;
-    }
-
-    a {
-      color: $dolphin;
-      text-decoration: none !important;
-
-      &:hover {
-        margin-left: 0.2em;
-        color: $interactive-blue;
-      }
-    }
+    display: block !important;
+    position: relative;
+    background-color: white;
   }
 }
 
 .styleguide-content {
-  @include media($desktop-large) {
-    @include span-columns(9);
+  @include media($desktop) {
+    @include span-columns(10);
     float: right;
   }
 }
