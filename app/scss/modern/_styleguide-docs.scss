@@ -25,6 +25,7 @@ code {
   background-position: 50% 30%;
   background-repeat: no-repeat;
   position: fixed;
+  top: 0px;
   background-size: 40px;
   height: $mobile-header-height;
   line-height: $mobile-header-height;
@@ -76,16 +77,7 @@ code {
 }
 
 .styleguide-navigation {
-  @include transition(all 0.2s $ease-out-cubic);
-
-  display: block;
-  position: fixed;
-  background-color: $graphite;
-  width: 50%;
-  top: $mobile-header-height;
-  left: 0px;
-  bottom: 0px;
-  padding-left: $gutter-spacing;
+  display: none;
 
   ul {
     @extend %list-unstyled;
@@ -104,22 +96,36 @@ code {
     }
   }
 
-  &.hidden {
-    left: -$tablet-max;
+  @include media($device) {
+    @include transition(all 0.2s $ease-out-cubic);
+
+    display: block;
+    position: fixed;
+    background-color: $graphite;
+    width: 50%;
+    top: $mobile-header-height !important;
+    left: 0px;
+    bottom: 0px;
+    padding-left: $gutter-spacing;
+
+    &.hidden {
+      left: -$tablet-max;
+    }
   }
 
   @include media($desktop) {
     @include span-columns(2);
     top: $styleguide-gutter;
-    display: block !important;
-    position: relative;
-    background-color: white;
+    display: block;
   }
 }
 
 .styleguide-content {
+  padding-top: $mobile-header-height;
+
   @include media($desktop) {
     @include span-columns(10);
+    padding-top: 0px;
     float: right;
   }
 }
