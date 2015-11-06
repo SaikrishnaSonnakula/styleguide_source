@@ -384,21 +384,21 @@
 
           <div class="example">
             <div class="feed-item">
-              <div class="item-gutter">
-                <div class="feed-icon aqua">WW</div>
+              <div class="-gutter">
+                <div class="feature-icon aqua">WW</div>
               </div>
 
-              <div class="item-main">
+              <div class="-main">
                 <h3 class="item-heading">
                   You have a Feed Item
                 </h3>
                 <h4 class="item-subheading">
                   from Styleguide
                 </h4>
-                <div class="item-body">
+                <div class="-body">
                   This is a feed item. It's used in all sorts of Kaiser Permanente applications.
                 </div>
-                <div class="item-tag">
+                <div class="-footer item-tag">
                   Tagz
                 </div>
               </div>
@@ -412,34 +412,36 @@
 
           <div class="example">
             <pre class="code language-javascript">
-              $("#my-collapsible-feed-item").click(function() {
+              $("#my-collapsible-feed-item .-click-to-expand").on('click', function() {
                 $("#my-collapsible-feed-item").toggleClass("-open");
               });
             </pre>
 
             <div id="my-collapsible-feed-item" class="feed-item -collapsible">
-              <div class="item-gutter">
-                <div class="feed-icon fuchsia">IJ</div>
+              <div class="-gutter">
+                <div class="feature-icon fuchsia">IJ</div>
               </div>
 
-              <div class="item-main">
-                <h3 class="item-heading">
-                  Feed Item with Additional Content
-                </h3>
+              <div class="-main">
+                <button class="-click-to-expand">
+                  <h3 class="item-heading">
+                    Feed Item with Additional Content
+                  </h3>
 
-                <h4 class="item-subheading">
-                  from Styleguide
-                </h4>
+                  <h4 class="item-subheading">
+                    from Styleguide
+                  </h4>
 
-                <div class="item-body">
-                  Click me to see the extra content!
-                </div>
+                  <div class="-body">
+                    Click me to see the extra content!
+                  </div>
+                </button>
 
-                <p class="item-collapsible">
+                <p class="-body -collapsible">
                   Extra content.
                 </p>
 
-                <div class="item-tag">
+                <div class="-footer item-tag">
                   Tagz
                 </div>
               </div>

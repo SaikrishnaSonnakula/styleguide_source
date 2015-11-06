@@ -1,26 +1,18 @@
-
 $mobile-item-icon-padding: $small-spacing;
 $mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-padding);
 $desktop-item-icon-padding: $medium-spacing;
 $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
-
 .feed-item {
   border: $button-border-size solid transparent;
 
-  .item-main, .item-gutter {
+  %-section {
     margin-top: $medium-spacing;
     margin-bottom: $medium-spacing;
   }
 
-  .feed-icon {
-    @extend .feature-icon;
-  }
+  .-gutter {
+    @extend %-section;
 
-  .item-body {
-    color: $dolphin;
-  }
-
-  .item-gutter {
     width: $mobile-item-gutter-width;
     float: left;
     padding-left: $mobile-item-icon-padding;
@@ -34,45 +26,42 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     }
   }
 
-  .item-main {
+  .-main {
+    @extend %-section;
     @include clearfix;
     margin-left: $mobile-item-gutter-width;
+    margin-top: $medium-spacing;
+    margin-bottom: $medium-spacing;
 
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
     }
 
-    .item-tag {
-      margin-top: $medium-spacing;
+  }
+
+  .-body {
+    color: $dolphin;
+
+    &.-collapsible {
+      @extend %hide-fade-in;
+      @include transition(opacity 0.3s ease-in-out);
     }
   }
 
-  .item-collapsible {
-    @extend %hide-fade-in;
-    @include transition(opacity 0.3s ease-in-out);
+  .-click-to-expand {
+    @extend %button-unstyled;
+    .item-heading { margin-top: 0px; }
+  }
 
-    color: $dolphin;
+  .-footer {
+    margin-top: $medium-spacing;
   }
 
   &.-open {
-    .item-collapsible {
-      @extend %show-fade-in;
-    }
+    .-body.-collapsible { @extend %show-fade-in; }
   }
 
   &.-collapsible {
-    cursor: pointer;
-
-    &:hover {
-      border-color: $graphite-light;
-    }
-
-    .item-collapsible {
-      cursor: default;
-    }
-  }
-
-  .item-secondary {
-
+    &:hover { border-color: $graphite-light; }
   }
 }

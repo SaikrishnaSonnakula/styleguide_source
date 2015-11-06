@@ -46,9 +46,11 @@ $button-border-size: 3px;
 
 %button-unstyled {
   @include appearance(none);
-  border-color: transparent;
+  border: 0px solid transparent;
   background-color: transparent;
   text-decoration: none;
+  text-align: left;
+  padding: 0;
 }
 
 .link {
