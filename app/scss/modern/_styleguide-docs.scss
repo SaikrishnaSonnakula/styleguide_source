@@ -100,7 +100,7 @@ code {
     @include transition(all 0.2s $ease-out-cubic);
 
     display: block;
-    position: fixed;
+    position: fixed !important;
     background-color: $graphite;
     width: 50%;
     top: $mobile-header-height !important;
@@ -131,12 +131,16 @@ code {
 }
 
 .styleguide-section-heading {
-  font-size: $large-font-size;
+  font-size: $medium-font-size;
   color: $kp-blue;
   padding-bottom: 10px; //TODO: remove this magic number
   border-bottom: 1px $border-color solid;
   margin-bottom: 20px; //TODO: remove this magic number
   margin-top: $large-spacing;
+
+  @include media($desktop) {
+    font-size: $large-font-size;
+  }
 }
 
 .styleguide-subheading {
