@@ -1,18 +1,43 @@
 $dropdown-options-max-height: 200px;
+$dropdown-mobile-height: 50px;
 
 .heading-dropdown {
   .-heading {
     @extend %button-unstyled;
     @extend .page-heading;
     cursor: pointer;
+    width: 100%;
+    height: $dropdown-mobile-height;
+    line-height: $dropdown-mobile-height;
+    background-color: $graphite;
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+    outline: none;
+
+    @include media($desktop) {
+      width: auto;
+      height: auto;
+      line-height: inherit;
+      padding: 0px;
+      background-color: transparent;
+    }
 
     &:after {
       @extend .kp-icon;
       @include transition(all 0.4s $ease-out-cubic);
       display: inline-block;
-      font-size: $medium-font-size;
+      font-size: $tiny-font-size;
       color: $interactive-blue;
       content: $dropdown-character;
+      float: right;
+      line-height: $dropdown-mobile-height;
+      background-color: transparent;
+
+      @include media($desktop) {
+        line-height: inherit;
+        float: none;
+        font-size: $medium-font-size;
+      }
     }
   }
 
@@ -23,10 +48,16 @@ $dropdown-options-max-height: 200px;
   .-options {
     @extend %list-unstyled;
     @include transition(max-height 0.4s $ease-out-cubic);
-    font-size: $medium-font-size;
-    margin-top: $large-spacing;
     overflow: hidden;
+    margin-top: 0px;
     max-height: 0px;
+    padding-left: $small-spacing;
+
+    @include media($desktop) {
+      margin-top: $large-spacing;
+      font-size: $medium-font-size;
+      padding-left: 0;
+    }
 
     > li {
       margin-top: $small-spacing;

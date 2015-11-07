@@ -28,6 +28,14 @@
     padding: $small-spacing;
   }
 
+
+  @include media($desktop) {
+    &.-padded-desktop .result-pane {
+      padding: $small-spacing;
+    }
+  }
+
+
   &.-minor {
     margin-bottom: 1em;
 

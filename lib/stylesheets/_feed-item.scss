@@ -2,6 +2,7 @@ $mobile-item-icon-padding: $small-spacing;
 $mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-padding);
 $desktop-item-icon-padding: $medium-spacing;
 $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
+
 .feed-item {
   border: $button-border-size solid transparent;
 
