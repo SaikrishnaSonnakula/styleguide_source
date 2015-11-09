@@ -45,8 +45,12 @@ $(function() {
     $("#my-collapsible-feed-item").toggleClass("-open");
   });
 
-  $("#best-nba-team .-heading").click(function() {
+  $("#best-nba-team .-value").click(function() {
     $("#best-nba-team").toggleClass("-open");
+  });
+
+  $("#neighborhood .-value").click(function() {
+    $("#neighborhood").toggleClass("-open");
   });
 
   $("main").show();

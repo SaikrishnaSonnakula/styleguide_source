@@ -1,10 +1,9 @@
 $dropdown-options-max-height: 200px;
 $dropdown-mobile-height: 50px;
 
-.heading-dropdown {
-  .-heading {
+.dropdown {
+  .-value {
     @extend %button-unstyled;
-    @extend .page-heading;
     cursor: pointer;
     width: 100%;
     height: $dropdown-mobile-height;
@@ -36,7 +35,6 @@ $dropdown-mobile-height: 50px;
       @include media($desktop) {
         line-height: inherit;
         float: none;
-        font-size: $medium-font-size;
       }
     }
   }
@@ -54,8 +52,6 @@ $dropdown-mobile-height: 50px;
     padding-left: $small-spacing;
 
     @include media($desktop) {
-      margin-top: $large-spacing;
-      font-size: $medium-font-size;
       padding-left: 0;
     }
 
@@ -74,5 +70,24 @@ $dropdown-mobile-height: 50px;
 
   &.-open .-options {
     max-height: $dropdown-options-max-height;
+  }
+}
+
+.dropdown.-heading {
+  .-value {
+    @extend .page-heading;
+
+    &:after {
+      @include media($desktop) {
+        font-size: $medium-font-size;
+      }
+    }
+  }
+
+  .-options {
+    @include media($desktop) {
+      margin-top: $large-spacing;
+      font-size: $medium-font-size;
+    }
   }
 }
