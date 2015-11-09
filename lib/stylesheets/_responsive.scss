@@ -19,7 +19,7 @@ $desktop-large: new-breakpoint(min-width $desktop-large-min, 12);
 
 $tablet-up: new-breakpoint(min-width $tablet-min, 12);
 $desktop-small-up: new-breakpoint(min-width $desktop-small-min, 12);
-$desktop-up: new-breakpoint(min-width $desktop-min, 12);
+$desktop-medium-up: new-breakpoint(min-width $desktop-min, 12);
 
 $device: new-breakpoint(max-width $tablet-max, 12);
 $desktop: $desktop-small-up;

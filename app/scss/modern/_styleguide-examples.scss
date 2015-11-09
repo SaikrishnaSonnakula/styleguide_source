@@ -44,7 +44,7 @@
       border-top: 1px $border-color solid;
     }
 
-    @include media($desktop-up) {
+    @include media($desktop-medium-up) {
       .code, .result {
         @include span-columns(6);
 
@@ -58,7 +58,7 @@
   &.-large-element {
     @extend .minor;
 
-    @include media($desktop-up) {
+    @include media($desktop-medium-up) {
       .result {
         .result-pane {
           padding-top: 0;
@@ -76,7 +76,7 @@
       border: none;
     }
 
-    @include media($desktop-up) {
+    @include media($desktop-medium-up) {
       .code {
         @include span-columns(8);
       }
