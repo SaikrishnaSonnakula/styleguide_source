@@ -39,7 +39,7 @@ $dropdown-mobile-height: 50px;
     }
   }
 
-  &.-open .-heading:after{
+  &.-open .-value:after{
     @include transform(rotate(180deg));
   }
 
