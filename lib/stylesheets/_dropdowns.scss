@@ -51,12 +51,17 @@ $dropdown-mobile-height: 50px;
     max-height: 0px;
     padding-left: $small-spacing;
 
+    @include media($device) {
+      margin-bottom: 0;
+    }
+
     @include media($desktop) {
       padding-left: 0;
     }
 
     > li {
       margin-top: $small-spacing;
+      margin-bottom: $small-spacing;
     }
 
     a {
