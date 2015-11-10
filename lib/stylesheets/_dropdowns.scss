@@ -8,7 +8,6 @@ $dropdown-mobile-height: 50px;
     width: 100%;
     height: $dropdown-mobile-height;
     line-height: $dropdown-mobile-height;
-    background-color: $graphite;
     padding-left: $small-spacing;
     padding-right: $small-spacing;
     outline: none;
@@ -18,7 +17,6 @@ $dropdown-mobile-height: 50px;
       height: auto;
       line-height: inherit;
       padding: 0px;
-      background-color: transparent;
     }
 
     &:after {
@@ -28,13 +26,11 @@ $dropdown-mobile-height: 50px;
       font-size: $tiny-font-size;
       color: $interactive-blue;
       content: $dropdown-character;
-      float: right;
       line-height: $dropdown-mobile-height;
       background-color: transparent;
 
       @include media($desktop) {
         line-height: inherit;
-        float: none;
       }
     }
   }
@@ -81,10 +77,20 @@ $dropdown-mobile-height: 50px;
 .dropdown.-heading {
   .-value {
     @extend .page-heading;
+    background-color: $graphite;
+    font-family: $bold-font-family;
+    font-weight: normal;
+
+    @include media($desktop) {
+      background-color: transparent;
+    }
 
     &:after {
+      float: right;
+
       @include media($desktop) {
         font-size: $medium-font-size;
+        float: none;
       }
     }
   }
