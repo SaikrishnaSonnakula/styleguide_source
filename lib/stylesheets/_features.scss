@@ -1,7 +1,6 @@
 $action-box-height: 286px;
 $action-box-vertical-padding: $large-spacing;
 $content-top-offset: $xl-spacing;
-$outer-gutter-spacing: $small-spacing;
 
 .action-box {
   min-height: $action-box-height;
@@ -16,11 +15,17 @@ $outer-gutter-spacing: $small-spacing;
 .feature-content {
   @extend %content-container;
   background-color: white;
+  max-width: $max-width;
 
   @include media($desktop){
     margin-left: $outer-gutter-spacing;
     margin-right: $outer-gutter-spacing;
     padding: $gutter-spacing;
     margin-top: -$content-top-offset;
+  }
+
+  @include media($desktop-large) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
