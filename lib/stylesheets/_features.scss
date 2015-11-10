@@ -15,9 +15,12 @@ $outer-gutter-spacing: $small-spacing;
 
 .feature-content {
   @extend %content-container;
-  margin-top: -$content-top-offset;
   background-color: white;
-  margin-left: $outer-gutter-spacing;
-  margin-right: $outer-gutter-spacing;
-  padding: $gutter-spacing;
+
+  @include media($desktop){
+    margin-left: $outer-gutter-spacing;
+    margin-right: $outer-gutter-spacing;
+    padding: $gutter-spacing;
+    margin-top: -$content-top-offset;
+  }
 }
