@@ -62,7 +62,7 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     .-body.-collapsible { @extend %show-fade-in; }
   }
 
-  &.-collapsible {
+  &.-collapsible, &.-clickable {
     &:hover { border-color: $graphite-light; }
   }
 }
