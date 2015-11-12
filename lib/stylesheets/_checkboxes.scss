@@ -8,10 +8,16 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
   left: -9999px;
 
   & + label {
+    display: inline-block;
     position: relative;
     padding-left: $checkbox-size-mobile + $small-spacing;
     cursor: pointer;
     padding-top: $checkbox-border-width;
+    min-width: $checkbox-size-mobile;
+
+    &.-screenreader {
+      padding-left: 0;
+    }
 
     &:before {
       content: '';
