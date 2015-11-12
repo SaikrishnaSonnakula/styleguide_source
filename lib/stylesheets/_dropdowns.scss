@@ -56,11 +56,12 @@ $dropdown-mobile-height: 50px;
     }
 
     > li {
+      color: $text-light;
       margin-top: $small-spacing;
       margin-bottom: $small-spacing;
     }
 
-    a {
+    a, button {
       @extend .inverted-link;
     }
 
