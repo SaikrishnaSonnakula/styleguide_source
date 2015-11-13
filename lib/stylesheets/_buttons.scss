@@ -35,6 +35,26 @@ $button-border-size: 3px;
     color: white;
   }
 
+  &.-action {
+    background-color: transparent;
+    border-color: white;
+
+    &:hover, &:focus {
+      background-color: white;
+      color: $action-color-light;
+    }
+
+    &.-inverted {
+      border-color: white;
+      color: $action-color-bg;
+
+      &:hover, &:focus {
+        background-color: white;
+        color: $action-color-light;
+      }
+    }
+  }
+
   &.-inverted {
     background-color: white;
     color: $button-color;
@@ -44,11 +64,6 @@ $button-border-size: 3px;
       background-color: $button-color;
       color: white;
     }
-  }
-
-  &.-outline {
-    background-color: transparent;
-    border-color: white;
   }
 }
 

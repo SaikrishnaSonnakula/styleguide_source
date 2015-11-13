@@ -21,6 +21,7 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
 
     &:before {
       content: '';
+      z-index: $midground;
       position: absolute;
       left:0;
       top: 2px;
@@ -35,6 +36,7 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
     }
 
     &:after {
+      z-index: $midground;
       content: '✔';
       position: absolute;
       top: 6px;

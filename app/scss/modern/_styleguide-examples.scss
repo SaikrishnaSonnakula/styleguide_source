@@ -1,3 +1,11 @@
+.-hide-action-buttons {
+  @include media($device) {
+    .action-button-pair {
+      display: none !important;
+    }
+  }
+}
+
 .example {
   @include row;
   margin-bottom: 2em;

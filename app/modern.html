@@ -298,12 +298,23 @@
           </div>
 
           <p>
-            If you need a button on top of a feature color. Use the <code>-outline</code> class:
+            If you need a button inside of an action box. Use the <code>-action</code> class:
           </p>
           <div class="example -element">
-            <div class="aqua" style="padding: 1em;">
-              <button class="button -outline">
-                Outline button
+            <div class="action-color" style="padding: 1em;">
+              <button class="button -action">
+                Action button
+              </button>
+            </div>
+          </div>
+
+          <p>
+            <code>-inverted</code> also works with the <code>-action</code> class.
+          </p>
+          <div class="example -element">
+            <div class="action-color" style="padding: 1em;">
+              <button class="button -action -inverted">
+                Action Inverted button
               </button>
             </div>
           </div>
@@ -367,7 +378,7 @@
           </h3>
 
           <div class="example">
-            <div class="action-box grass">
+            <div class="action-box">
               <h3>Action Box</h3>
             </div>
             <div class="feature-content">
@@ -377,6 +388,33 @@
               </p>
             </div>
           </div>
+
+          <h3 class="styleguide-subheading">
+            Action Box
+          </h3>
+
+          <p>
+            Action buttons will show as fixed buttons on the bottom of the screen.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-action-button-pair">Toggle Showing This Example
+            </button>
+          </p>
+
+          <div class="example -hide-action-buttons" id="action-button-pair">
+            <div class="action-box">
+              <div class="action-button-pair">
+                <button class="button -action">
+                  Yes!
+                </button>
+                <button class="button -action -inverted">
+                  No
+                </button>
+              </div>
+            </div>
+          </div>
+
 
           <h3 class="styleguide-subheading">
             Feed Items

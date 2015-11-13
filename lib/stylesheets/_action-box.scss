@@ -1,0 +1,61 @@
+$action-color-bg: $grass !default;
+$action-color-light: #5FA621 !default;
+
+$action-button-mobile-position: fixed !default;
+$action-box-height: 150px;
+$action-box-vertical-padding: $large-spacing;
+$content-top-offset: $xl-spacing;
+
+.action-color {
+	color: white;
+	background-color: $action-color-bg;
+}
+
+.action-box {
+	@extend .action-color;
+	
+	height: 0; 
+	overflow: hidden; 
+	color: white; 
+	background-color: 
+	$action-color-bg; 
+	position: relative;
+	
+	@include media($desktop) {
+		height: auto;
+		min-height: $action-box-height;
+		padding-top: $action-box-vertical-padding;
+		padding-bottom: $action-box-vertical-padding + $content-top-offset;
+		padding-left: $outer-gutter-spacing;
+		padding-right: $outer-gutter-spacing;
+		text-align: center;
+	}
+}
+
+.action-button-pair {
+	@include media($device) {
+		@include outer-container;
+		z-index: $foreground;
+
+		position: $action-button-mobile-position;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		margin: $tiny-spacing;
+
+		.button {
+			@include span-columns(6);
+			border-color: $interactive-blue !important;
+
+			&.-action {
+				background-color: white;
+				color: $interactive-blue;
+			}
+
+			&.-action.-inverted {
+				color: white;
+				background-color: $interactive-blue;
+			}
+		}
+	}
+}

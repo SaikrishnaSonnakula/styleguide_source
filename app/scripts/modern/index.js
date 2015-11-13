@@ -53,5 +53,9 @@ $(function() {
     $("#neighborhood").toggleClass("-open");
   });
 
+  $("#toggle-action-button-pair").click(function() {
+    $("#action-button-pair").toggleClass("-hide-action-buttons");
+  })
+
   $("main").show();
 });
