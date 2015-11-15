@@ -28,6 +28,7 @@ $dropdown-mobile-height: 50px;
       content: $dropdown-character;
       line-height: $dropdown-mobile-height;
       background-color: transparent;
+      padding-left: 10px;
 
       @include media($desktop) {
         line-height: inherit;
