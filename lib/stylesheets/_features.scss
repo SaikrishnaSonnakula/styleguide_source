@@ -1,5 +1,6 @@
 .feature-content {
   @extend %content-container;
+  position: relative;
   background-color: white;
   max-width: $max-width;
   z-index: $midground;

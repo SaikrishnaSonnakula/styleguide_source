@@ -13,14 +13,13 @@ $content-top-offset: $xl-spacing;
 
 .action-box {
 	@extend .action-color;
-	
-	height: 0; 
-	overflow: hidden; 
-	color: white; 
-	background-color: 
-	$action-color-bg; 
+	height: 0;
+	overflow: hidden;
+	color: white;
+	background-color: $action-color-bg;
 	position: relative;
-	
+	z-index: $background;
+
 	@include media($desktop) {
 		height: auto;
 		min-height: $action-box-height;
