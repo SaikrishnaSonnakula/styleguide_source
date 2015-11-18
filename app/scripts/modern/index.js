@@ -29,16 +29,53 @@ $(function() {
     $("#navbar").toggleClass("hidden");
   })
 
-  $("#modal-link").click(function() {
+  var focusedElementBeforeModal = null;
+  var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+  $("#modal-button").click(function() {
     $("#my-modal").addClass("modal-showing");
     $("#my-modal").attr('aria-hidden','false');
-    $(".modal-inner" ,"#my-modal").attr('tabindex', '0').focus();
+    $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+    focusedElementBeforeModal = $(':focus');
+    var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
+    firstElem.focus();
   });
 
-  $(".modal-close, .modal-fade-screen").click(function() {
+  $("#nothing").click(function(ev) {
     $("#my-modal").removeClass("modal-showing");
-    $("#my-modal").attr('aria-hidden','true');
-    $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
+    $("#my-modal").attr("aria-hidden", 'true');
+    $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+    $(".modal-inner #modal-description").removeAttr('tabindex');
+    $("#modal-button").attr('tabindex', '0');
+    focusedElementBeforeModal.focus();
+    ev.preventDefault();
+  });
+
+  $("#my-modal").keydown(function(ev){
+    if(!ev.shiftKey && ev.which === 27) {
+      $("#nothing").click();
+      ev.preventDefault();
+    }
+    if (ev.which == 9) {
+        var children = $("#my-modal").find('*');
+
+        var focusableItems = children.filter(focusableElementsString).filter(':visible')
+        var focusedItem = jQuery(':focus');
+        var numberOfFocusableItems = focusableItems.length
+        var focusedItemIndex = focusableItems.index(focusedItem);
+
+        if (ev.shiftKey) {//shift+tab
+          if (focusedItemIndex == 0) {
+            focusableItems.get(numberOfFocusableItems - 1).focus();
+            ev.preventDefault();
+          }
+        } else {
+          if (focusedItemIndex == numberOfFocusableItems - 1) {
+            focusableItems.get(0).focus();
+            ev.preventDefault();
+          }
+        }
+    }
   });
 
   $("#my-collapsible-feed-item .-click-to-expand").click(function() {

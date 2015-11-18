@@ -36,6 +36,7 @@
           <li><a href="#spacing-section">Spacing</a></li>
           <li><a href="#buttons-section">Buttons</a></li>
           <li><a href="#lists-section">Lists</a></li>
+          <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
           <li><a href="#features-section">Features</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
@@ -337,6 +338,86 @@
               <li>San Francisco</li>
               <li>Los Angeles</li>
             </ul>
+          </div>
+        </section>
+
+        <section id="modal-section">
+          <h2>Modal</h2>
+
+          <div class="element example">
+            <pre class="code language-javascript">   
+                var focusedElementBeforeModal = null;
+                var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+                $("#modal-button").click(function() {
+                  $("#my-modal").addClass("modal-showing");
+                  $(".current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+                  focusedElementBeforeModal = $(':focus');
+                  var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
+                  firstElem.focus();
+                });
+
+                $("#nothing").click(function(ev) {
+                  $("#my-modal").removeClass("modal-showing");
+                  $("#my-modal").attr("aria-hidden", 'true');
+                  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+                  $(".modal-inner #modal-description").removeAttr('tabindex');
+                  $("#modal-button").attr('tabindex', '0');
+                  focusedElementBeforeModal.focus();
+                  ev.preventDefault();
+                });
+
+                $("#my-modal").keydown(function(ev){
+                  if(!ev.shiftKey && ev.which === 27) {
+                    $("#nothing").click();
+                    ev.preventDefault();
+                  }
+                  if (ev.which == 9) {
+                      var children = $("#my-modal").find('*');
+
+                      var focusableItems = children.filter(focusableElementsString).filter(':visible')
+                      var focusedItem = jQuery(':focus');
+                      var numberOfFocusableItems = focusableItems.length
+                      var focusedItemIndex = focusableItems.index(focusedItem);
+
+                      if (ev.shiftKey) {//shift+tab
+                        if (focusedItemIndex == 0) {
+                          focusableItems.get(numberOfFocusableItems - 1).focus();
+                          ev.preventDefault();
+                        }
+                      } else {
+                        if (focusedItemIndex == numberOfFocusableItems - 1) {
+                          focusableItems.get(0).focus();
+                          ev.preventDefault();
+                        }
+                      }
+                  }
+                });
+            </pre>
+          
+            <div class="action-color" style="padding: 1em;">
+              <button id="modal-button" class="button -action -inverted">
+                Bring in the modal
+              </button>
+            </div>
+            
+            <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+              <div class="modal-fade-screen">
+                <div class="modal-inner">
+                  <div id="modal-description" class="content">
+                    Welcome to the modal space. What do you do?
+                  </div>  
+                  <div class="modal-buttons">
+                    <button id="nothing" class="button -action">
+                      Do nothing
+                    </button>
+                    <button id="do-something" class="button -action -inverted">
+                      Action
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
