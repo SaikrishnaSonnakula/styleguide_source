@@ -1,0 +1,11 @@
+.four-columns {
+  @include row(table);
+
+  .-column {
+    @include pad;
+    
+    @include media($desktop) {
+      @include span-columns(3);
+    }
+  }
+}
