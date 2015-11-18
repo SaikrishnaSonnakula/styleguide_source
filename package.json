@@ -22,7 +22,8 @@
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.10.1"
+    "webpack-dev-server": "^1.10.1",
+    "build-plugin": "git+ssh://git@stash.kp.org/rwd/build-plugin.git"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
