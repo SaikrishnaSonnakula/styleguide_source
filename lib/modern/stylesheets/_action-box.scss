@@ -18,7 +18,6 @@ $content-top-offset: $xl-spacing;
 	color: white;
 	background-color: $action-color-bg;
 	position: relative;
-	z-index: $background;
 
 	@include media($desktop) {
 		height: auto;
