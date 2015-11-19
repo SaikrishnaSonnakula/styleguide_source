@@ -55,8 +55,8 @@
 
     .content {
       padding: $gutter-spacing;
-      margin-bottom: $large-spacing;
-    	margin-top: $large-spacing;      
+      margin-bottom: $gutter-spacing;
+      margin-top: $gutter-spacing;      
 
       text-align: center;
 
@@ -69,36 +69,34 @@
       text-align: center;
 
       padding-top: $gutter-spacing;
-			padding-left: $small-spacing;
-    	padding-right: $small-spacing;
-
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
       margin-bottom: $small-spacing;
             
       .button{
-      	margin-bottom: $gutter-spacing;
-      	width: 100%;
+        margin-bottom: $gutter-spacing;
+        width: 100%;
+        @include media($desktop){
+          width: auto;
+          margin-right: $small-spacing;
+          margin-left: $small-spacing;
+        }
 
-	      @include media($desktop){
-	      	width: auto;
-		   		margin-right: $small-spacing;
-    	  	margin-left: $small-spacing;
-   			}
+        &.-action {
+          color: $interactive-blue;
+          background-color: white;
+          border-color: $interactive-blue;
+        }
 
-	      &.-action {
-					color: $interactive-blue;
-					background-color: white;
-					border-color: $interactive-blue;
-	      }
-	      
-	      &.-action.-inverted {
-					color: white;
-					background-color: $interactive-blue;
-	      }
-	      
-	      @include media($desktop-medium-up) {
-	        .button { width: auto; }
-	      }
-	    }
-  	}
-	}
+        &.-action.-inverted {
+          color: white;
+          background-color: $interactive-blue;
+        }
+
+        @include media($desktop-medium-up) {
+          .button { width: auto; }
+        }
+      }
+    }
+  }
 }
