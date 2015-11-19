@@ -43,14 +43,10 @@ $bold-font-family: "Gotham 7r";
 
 .item-subheading {
   margin-top: 0px;
-  font-size: $tiny-font-size;
+  font-size: $small-font-size;
   letter-spacing: -0.5px;
   color: $inky-blue;
   font-weight: normal;
-
-  @include media($desktop) {
-    font-size: $small-font-size;
-  }
 }
 
 .section-heading {
