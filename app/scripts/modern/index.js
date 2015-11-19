@@ -49,6 +49,10 @@ $(function() {
     $("#best-nba-team").toggleClass("-open");
   });
 
+  $("#best-nfl-team .-value").click(function(el) {
+    $(el.target).parent().toggleClass("-open");
+  });
+
   $("#neighborhood .-value").click(function() {
     $("#neighborhood").toggleClass("-open");
   });
