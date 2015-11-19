@@ -674,6 +674,54 @@
               </ul>
             </div>
           </div>
+
+          <h3 class="styleguide-subheading">
+            Navigation Accordion
+          </h3>
+
+          <p>
+           Accordion that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
+          </p>
+
+          <div class="example -padded-desktop">
+            <pre class="code language-javascript">
+              $("#best-nfl-team .-value").click(function(el) {
+                $(el.target).parent().toggleClass("-open");
+              });
+            </pre>
+
+            <div id="best-nfl-team" class="accordion">
+              <div class="dropdown">
+                <button class="-heading">
+                  Chicago Bears
+                </button>
+                <div class="-content">
+                  Chicago Bears!
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="-heading">
+                  Baltimore Ravens
+                </button>
+                <div class="-content">
+                  Baltimore Ravens!
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="-heading">
+                  Green Bay Packers
+                </button>
+                <div class="-content">
+                  Green Bay Packers!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+           Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
+          </p>
+
         </section>
 
         <section id="layouts-section">
