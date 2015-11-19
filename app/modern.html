@@ -685,13 +685,13 @@
 
           <div class="example -padded-desktop">
             <pre class="code language-javascript">
-              $("#best-nfl-team .-value").click(function(el) {
+              $("#best-nfl-team .-heading").click(function(el) {
                 $(el.target).parent().toggleClass("-open");
               });
             </pre>
 
             <div id="best-nfl-team" class="accordion">
-              <div class="dropdown">
+              <div class="-section">
                 <button class="-heading">
                   Chicago Bears
                 </button>
@@ -699,7 +699,7 @@
                   Chicago Bears!
                 </div>
               </div>
-              <div class="dropdown">
+              <div class="-section">
                 <button class="-heading">
                   Baltimore Ravens
                 </button>
@@ -707,7 +707,7 @@
                   Baltimore Ravens!
                 </div>
               </div>
-              <div class="dropdown">
+              <div class="-section">
                 <button class="-heading">
                   Green Bay Packers
                 </button>
@@ -719,7 +719,7 @@
           </div>
 
           <p>
-           Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
+           Add <code>.-heading</code> to the accordion to style it as the main dropdown used on the top of many features.
           </p>
 
         </section>

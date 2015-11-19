@@ -1,0 +1,109 @@
+$accordion-options-max-height: 200px;
+$accordion-mobile-height: 50px;
+$accordion-character:$dropdown-character;
+
+.accordion {
+  .-section {
+  .-heading {
+    @extend %button-unstyled;
+    cursor: pointer;
+    width: 100%;
+    height: $accordion-mobile-height;
+    line-height: $accordion-mobile-height;
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+    outline: none;
+
+    @include media($desktop) {
+      width: auto;
+      height: auto;
+      line-height: inherit;
+      padding: 0px;
+    }
+
+    &:after {
+      @extend .kp-icon;
+      @include transition(all 0.4s $ease-out-cubic);
+      display: inline-block;
+      font-size: $tiny-font-size;
+      color: $interactive-blue;
+      content: $accordion-character;
+      line-height: $accordion-mobile-height;
+      background-color: transparent;
+
+      @include media($desktop) {
+        line-height: inherit;
+      }
+    }
+  }
+
+  &.-open .-heading:after{
+    @include transform(rotate(-180deg));
+  }
+
+  .-content {
+    @extend %list-unstyled;
+    @include transition(max-height 0.4s $ease-out-cubic);
+    overflow: hidden;
+    margin-top: 0px;
+    max-height: 0px;
+    padding-left: $small-spacing;
+
+    @include media($device) {
+      margin-bottom: 0;
+    }
+
+    @include media($desktop) {
+      padding-left: 0;
+    }
+
+    > li {
+      color: $text-light;
+      margin-top: $small-spacing;
+      margin-bottom: $small-spacing;
+    }
+
+    a, button {
+      @extend .inverted-link;
+    }
+
+    .-active {
+      font-weight: bold;
+    }
+  }
+
+  &.-open .-content {
+    max-height: $accordion-options-max-height;
+  }
+  }
+}
+
+.accordion.-heading {
+  .-heading {
+    @extend .page-heading;
+    background-color: $graphite;
+    font-family: $bold-font-family;
+    font-weight: normal;
+
+    @include media($desktop) {
+      background-color: transparent;
+    }
+
+    &:after {
+      float: right;
+
+      @include media($desktop) {
+        font-size: $medium-font-size;
+        float: none;
+      }
+    }
+  }
+
+  .-content {
+    @include media($desktop) {
+      margin-top: $large-spacing;
+      font-size: $medium-font-size;
+    }
+  }
+}
+
