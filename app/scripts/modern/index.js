@@ -49,7 +49,7 @@ $(function() {
     $("#best-nba-team").toggleClass("-open");
   });
 
-  $("#best-nfl-team .-value").click(function(el) {
+  $("#best-nfl-team .-heading").click(function(el) {
     $(el.target).parent().toggleClass("-open");
   });
 
