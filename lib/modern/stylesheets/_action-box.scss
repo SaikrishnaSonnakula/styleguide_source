@@ -48,12 +48,38 @@ $content-top-offset: $xl-spacing;
 			&.-action {
 				background-color: white;
 				color: $interactive-blue;
+				
+				&:hover, &:focus {
+					color: $interactive-blue;
+				}
 			}
 
 			&.-action.-inverted {
 				color: white;
 				background-color: $interactive-blue;
+
+				&:hover, &:focus {
+					color: $interactive-blue;
+				}
 			}
+
+			&.-primary {
+				border-color: $interactive-blue;
+				background-color: $interactive-blue;
+				color: white;
+			}
+
+		}
+	}
+	@include media($desktop){
+		&.-center{
+			@include outer-container;
+			@include span-columns(4.5);
+			@include shift(3.5);
+		}
+		.button{
+			margin-left: $tiny-spacing;
+			margin-right: $tiny-spacing
 		}
 	}
 }
