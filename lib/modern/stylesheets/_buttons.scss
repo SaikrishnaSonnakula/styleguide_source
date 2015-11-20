@@ -35,6 +35,11 @@ $button-border-size: 3px;
     color: white;
   }
 
+  &.-block {
+    display: block;
+    width: 100%;
+  }
+
   &.-action {
     background-color: transparent;
     border-color: white;
@@ -52,7 +57,7 @@ $button-border-size: 3px;
         background-color: white;
         color: $action-color-light;
       }
-    }
+    }   
   }
 
   &.-inverted {
