@@ -8,6 +8,7 @@ import createExamples from '../create_examples';
 import addSpacing from './add_spacing';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
+import responsiveTable from './responsive_table';
 
 var easterEgg = function() {
   $("#name-field").keyup(function() {
@@ -24,6 +25,7 @@ $(function() {
   createExamples();
   easterEgg();
   addSpacing();
+  responsiveTable();
 
   $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");
