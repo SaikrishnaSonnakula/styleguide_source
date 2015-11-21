@@ -23,6 +23,7 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.12.1",
     "webpack-dev-server": "^1.10.1",
+    "ng-annotate-loader": "0.0.10",
     "build-plugin": "git+ssh://git@stash.kp.org/rwd/build-plugin.git"
   },
   "dependencies": {
