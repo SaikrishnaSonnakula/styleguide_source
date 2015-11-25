@@ -56,6 +56,10 @@ $dropdown-character: "\e61c";
   }
 }
 
+.icon-cancel:before {
+  content: "x";
+}
+
 // Icon Characters (copy and paste from icomoon styles)
 .icon-commonservices:before {
   content: "\e82a";

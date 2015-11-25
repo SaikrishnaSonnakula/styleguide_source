@@ -85,3 +85,10 @@ $button-border-size: 3px;
   @extend %button-unstyled;
   color: $link-color;
 }
+.-close {
+  @extend .icon-cancel;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: $xl-font-size
+}
