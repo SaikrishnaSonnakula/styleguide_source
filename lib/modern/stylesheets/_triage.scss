@@ -1,0 +1,45 @@
+$icon-radius: $feature-icon-mobile-size + 5px;
+
+.triage-container{
+  @include outer-container(100%);
+
+  background-color: $grass;
+  text-align: center;
+  padding: $gutter-spacing;
+
+  color: white;
+  .-action-list{
+    @include media($desktop){
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+  button.link{
+    padding: $small-spacing;
+    color: white;
+    min-width: 100%;
+
+    .feature-icon {
+      width: $icon-radius;
+      height: $icon-radius;
+      background-color: transparent;
+      padding: $small-spacing;
+      margin-right: $small-spacing;
+      float: left;
+      border: solid 1px;
+    }
+    .name{
+      font-size: $small-font-size;
+      display: block;
+      margin-bottom: $tiny-spacing;
+      &.-empty{
+        padding-top: $tiny-spacing;
+      }
+    }
+    .name-for{
+      color: $graphite;
+      font-size: $tiny-font-size;
+      white-space: normal
+    }
+  }
+}
