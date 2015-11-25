@@ -33,7 +33,7 @@ $icon-radius: $feature-icon-mobile-size + 5px;
       display: block;
       margin-bottom: $tiny-spacing;
       &.-empty{
-        padding-top: $tiny-spacing;
+        padding-top: $small-spacing;
       }
     }
     .name-for{
