@@ -9,6 +9,8 @@ $icon-radius: $feature-icon-mobile-size + 5px;
 
   color: white;
   .-action-list{
+    margin-top: $gutter-spacing;
+    min-width: $mobile-max;
     @include media($desktop){
       @include span-columns(8);
       @include shift(2);
