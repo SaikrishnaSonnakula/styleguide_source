@@ -30,7 +30,7 @@ $content-top-offset: $xl-spacing;
 	}
 }
 
-.action-button-pair {
+.action-button {
 	@include media($device) {
 		@include outer-container;
 		z-index: $foreground;
@@ -64,6 +64,7 @@ $content-top-offset: $xl-spacing;
 			}
 
 			&.-primary {
+				@extend .-block;
 				border-color: $interactive-blue;
 				background-color: $interactive-blue;
 				color: white;
@@ -72,14 +73,14 @@ $content-top-offset: $xl-spacing;
 		}
 	}
 	@include media($desktop){
-		&.-center{
-			@include outer-container;
-			@include span-columns(4.5);
-			@include shift(3.5);
-		}
-		.button{
+		.button {
 			margin-left: $tiny-spacing;
-			margin-right: $tiny-spacing
+			margin-right: $tiny-spacing;
+			&.-action.-primary {
+				@include outer-container;
+				@include span-columns(4.5);
+				@include shift(3.5);
+			}
 		}
 	}
 }
