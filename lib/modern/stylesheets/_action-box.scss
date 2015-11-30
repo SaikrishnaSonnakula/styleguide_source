@@ -11,6 +11,11 @@ $content-top-offset: $xl-spacing;
 	background-color: $action-color-bg;
 }
 
+.action-message{
+	font-size: $large-font-size;
+	text-align: center;
+}
+
 .action-box {
 	@extend .action-color;
 	height: 0;
