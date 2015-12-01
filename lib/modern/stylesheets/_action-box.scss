@@ -11,13 +11,16 @@ $action-color-light: #5FA621;
 }
 
 .action-message{
-	font-size: $large-font-size;
+	font-size: $medium-font-size;
 	text-align: center;
+	@include media($desktop){
+		font-size: $large-font-size;
+	}
 }
 
 .action-box {
 	@extend .action-color;
-	height: 0;
+
 	overflow: hidden;
 	position: relative;
 
