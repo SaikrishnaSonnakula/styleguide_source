@@ -53,33 +53,6 @@ $(function() {
     ev.preventDefault();
   });
 
-  $("#my-modal").keydown(function(ev){
-    if(!ev.shiftKey && ev.which === 27) {
-      $("#nothing").click();
-      ev.preventDefault();
-    }
-    if (ev.which == 9) {
-        var children = $("#my-modal").find('*');
-
-        var focusableItems = children.filter(focusableElementsString).filter(':visible')
-        var focusedItem = jQuery(':focus');
-        var numberOfFocusableItems = focusableItems.length
-        var focusedItemIndex = focusableItems.index(focusedItem);
-
-        if (ev.shiftKey) {//shift+tab
-          if (focusedItemIndex == 0) {
-            focusableItems.get(numberOfFocusableItems - 1).focus();
-            ev.preventDefault();
-          }
-        } else {
-          if (focusedItemIndex == numberOfFocusableItems - 1) {
-            focusableItems.get(0).focus();
-            ev.preventDefault();
-          }
-        }
-    }
-  });
-
   $("#my-collapsible-feed-item .-click-to-expand").click(function() {
     $("#my-collapsible-feed-item").toggleClass("-open");
   });
