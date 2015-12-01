@@ -1,6 +1,6 @@
 .-hide-action-buttons {
   @include media($device) {
-    .action-button {
+    .action-button, .primary-action {
       display: none !important;
     }
   }

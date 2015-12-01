@@ -96,7 +96,7 @@ $(function() {
     $("#action-button-pair").toggleClass("-hide-action-buttons");
   })  
 
-  $("#toggle-main-action-button-pair").click(function() {
+  $("#toggle-primary-action-button").click(function() {
     $("#action-button").toggleClass("-hide-action-buttons");
   })
 

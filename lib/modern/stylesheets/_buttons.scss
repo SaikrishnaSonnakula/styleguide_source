@@ -2,6 +2,8 @@ $button-color: $interactive-blue;
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-border-size: 3px;
+$action-color-bg: $interactive-blue !default;
+$action-color-light: $interactive-blue !default;
 
 %rounded-input {
   @include appearance(none);
@@ -31,8 +33,9 @@ $button-border-size: 3px;
   border: $button-border-size solid transparent;
 
   &:hover, &:focus {
-    background-color: $button-hover-color;
-    color: white;
+    background-color: transparent;
+    color: $action-color-bg;
+    border-color: $action-color-bg;
   }
 
   &.-block {

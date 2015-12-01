@@ -317,34 +317,12 @@
           </div>
 
           <p>
-            If you need a button inside of an action box. Use the <code>-action</code> class:
-          </p>
-          <div class="example -element">
-            <div class="action-color" style="padding: 1em;">
-              <button class="button -action">
-                Action button
-              </button>
-            </div>
-          </div>
-
-          <p>
             If you need a button on block level - those that span the full width of a parent. Use the <code>-block</code> class:
           </p>
           <div class="example -element">
             <button class="button -block">
               Block button
             </button>
-          </div>
-
-          <p>
-            <code>-inverted</code> also works with the <code>-action</code> class.
-          </p>
-          <div class="example -element">
-            <div class="action-color" style="padding: 1em;">
-              <button class="button -action -inverted">
-                Action Inverted button
-              </button>
-            </div>
           </div>
         </section>
 
@@ -421,12 +399,10 @@
                 });
             </pre>
           
-            <div class="action-color" style="padding: 1em;">
-              <button id="modal-button" class="button -action -inverted">
-                Bring in the modal
-              </button>
-            </div>
-            
+            <button id="modal-button" class="button">
+              Bring in the modal
+            </button>
+          
             <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
               <div class="modal-fade-screen">
                 <div class="modal-inner">
@@ -528,17 +504,15 @@
           </p>
 
           <p class="device-only">
-            <button class="button" id="toggle-main-action-button-pair">Toggle Example
+            <button class="button" id="toggle-primary-action-button">Toggle Example
             </button>
           </p>
 
           <div class="example -padded -hide-action-buttons" id="action-button">
             <div class="action-box">
-              <div class="action-button">
-                <button class="button -action -primary">
-                  Take Action
-                </button>
-              </div>
+              <button class="primary-action">
+                Primary Action
+              </button>
             </div>
           </div>
 
