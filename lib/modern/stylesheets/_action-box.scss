@@ -42,6 +42,9 @@ $action-color-light: #5FA621;
 		right: 0px;
 		bottom: 0px;
 		margin: $tiny-spacing;
+		&:hover, &:focus {
+			background-color: white;
+		}
 	}
   @include media($desktop){
 	  @include outer-container;
