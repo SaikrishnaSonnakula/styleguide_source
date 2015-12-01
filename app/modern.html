@@ -93,8 +93,32 @@
 
         <section id="responsive-section">
           <h2 class="styleguide-section-heading">Responsive</h2>
+          <p>For easy of development the following SASS variables are provided that contain defined breakpoints.</p>
           <div id="responsive-table">
           </div>
+
+          <h4>Usage</h4>
+          If you want to apply a specific style to let say the <code>$mobile</code> view try this:
+          <pre class="code language-scss" data-langauge="scss">
+            <code class="code">
+          .element{
+            @include media($mobile) {
+              background-color: black;
+            }
+          }
+            </code>
+          </pre>
+          Here's another example if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
+          <pre class="code language-scss"><code class="code">
+.element{
+  @include media($desktop-large) {
+    display:block;
+  }
+  @include media($handheld){
+    display:none;
+  }
+}           </code>
+          </pre>
         </section>
 
         <section id="colors-section">
