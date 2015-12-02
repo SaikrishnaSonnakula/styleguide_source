@@ -1,0 +1,50 @@
+$icon-radius: $feature-icon-mobile-size;
+
+.error-container {
+  @include outer-container(100%);
+  border: 1px solid $graphite-light;
+  padding: 15px;
+
+  .error-contents {
+    position: relative;
+    top: 16px;
+  }
+
+  .feature-icon {
+    width: $icon-radius;
+    height: $icon-radius;
+    float: left;
+  }
+
+  .error-body {
+    max-width: 60%;
+    position: relative;
+    left: 15px;
+
+    .error-header {
+      font-family: $bold-font-family;
+      font-size: $small-font-size;
+      display: block;
+    }
+
+    .error-message {
+      display: block;
+      text-align: left;
+      overflow: hidden;
+      font-size: $tiny-font-size;
+    }
+  }
+
+    .error-action-buttons {
+      float: right;
+      position: relative;
+      bottom: 51px;
+
+      .button {
+        min-width: 8.5em;
+        font-size: $tiny-font-size;
+      }
+
+    }
+
+}
