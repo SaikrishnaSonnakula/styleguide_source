@@ -2,8 +2,8 @@ $action-button-mobile-position: fixed !default;
 $action-box-height: 150px;
 $action-box-vertical-padding: $large-spacing;
 $content-top-offset: $xl-spacing;
-$action-color-bg: $grass;
-$action-color-light: #5FA621;
+$action-color-bg: $grass !default;
+$action-color-light: #5FA621 !default;
 
 .action-color {
 	color: white;

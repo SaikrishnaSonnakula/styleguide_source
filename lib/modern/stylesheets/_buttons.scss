@@ -34,8 +34,8 @@ $action-color-light: $interactive-blue !default;
 
   &:hover, &:focus {
     background-color: transparent;
-    color: $action-color-bg;
-    border-color: $action-color-bg;
+    color: $button-hover-color;
+    border-color: $button-hover-color;
   }
 
   &.-block {
