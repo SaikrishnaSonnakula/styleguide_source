@@ -3,48 +3,58 @@ $icon-radius: $feature-icon-mobile-size;
 .error-container {
   @include outer-container(100%);
   border: 1px solid $graphite-light;
-  padding: 15px;
+  padding: $small-spacing;
 
-  .error-contents {
+  .-contents {
     position: relative;
-    top: 16px;
+    top: $small-spacing + 1px;
+
+    @include media($mobile){
+      position: initial;
+      top: none;
+    }
   }
 
   .feature-icon {
-    width: $icon-radius;
-    height: $icon-radius;
     float: left;
   }
 
-  .error-body {
+  .-body {
     max-width: 60%;
     position: relative;
-    left: 15px;
+    left: $small-spacing;
 
-    .error-header {
+    @include media($mobile){
+      max-width: none;
+    }
+
+    .-header {
       font-family: $bold-font-family;
       font-size: $small-font-size;
       display: block;
     }
 
-    .error-message {
+    .-message {
       display: block;
-      text-align: left;
-      overflow: hidden;
       font-size: $tiny-font-size;
+
+      @include media($mobile){
+        padding-left: $large-spacing + 3px;
+        padding-right: $small-spacing - $tiny-spacing;
+      }
     }
   }
 
-    .error-action-buttons {
-      float: right;
+  .-action-buttons {
+    float: right;
+    position: relative;
+    bottom: $xl-spacing - 10px;
+
+    @include media($mobile){
+      float: none;
       position: relative;
-      bottom: 51px;
-
-      .button {
-        min-width: 8.5em;
-        font-size: $tiny-font-size;
-      }
-
+      bottom: -$tiny-spacing;
+      left: $tiny-spacing + $small-spacing + $medium-spacing;
     }
-
+  }
 }
