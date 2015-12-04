@@ -54,3 +54,9 @@ We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstra
 We use [Fontello](http://fontello.com/) to help us generate icon sets. You must first import the `config.json` under `/app/icon/config.json` into Fontello. This will ensure that we have the latest icon set from fontello.
 
 Make you selection of new icons, then download the zip file.
+
+
+##Todo
+- Clean up this readme to make it purposeful and relevent for developers
+- icons documentation
+- AEM export command?
