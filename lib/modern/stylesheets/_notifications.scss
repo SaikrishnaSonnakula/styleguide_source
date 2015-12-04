@@ -1,6 +1,6 @@
 $icon-radius: $feature-icon-mobile-size;
 
-.error-container {
+.notifications-container {
   @include outer-container(100%);
   border: 1px solid $graphite-light;
   padding: $small-spacing;
@@ -26,6 +26,10 @@ $icon-radius: $feature-icon-mobile-size;
 
     @include media($mobile){
       max-width: none;
+    }
+
+    &.-alert {
+      max-width: 100%;
     }
 
     .-header {
