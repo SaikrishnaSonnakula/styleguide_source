@@ -41,18 +41,13 @@ $icon-radius: $feature-icon-mobile-size;
     .-message {
       display: block;
       font-size: $tiny-font-size;
-
-      @include media($mobile){
-        padding-left: $large-spacing + 3px;
-        padding-right: $small-spacing - $tiny-spacing;
-      }
     }
   }
 
   .-action-buttons {
     float: right;
     position: relative;
-    bottom: $xl-spacing - 10px;
+    bottom: $xxl-spacing - $large-spacing;
 
     @include media($mobile){
       float: none;
