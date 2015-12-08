@@ -7,7 +7,7 @@ $icon-radius: $feature-icon-mobile-size;
 
   .-contents {
     position: relative;
-    top: $small-spacing + 1px;
+    top: $small-spacing;
 
     @include media($mobile){
       position: initial;
