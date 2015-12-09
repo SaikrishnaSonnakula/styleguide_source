@@ -62,6 +62,7 @@ $(function() {
   });
 
   $("#best-nfl-team .-heading").click(function(el) {
+    $("#best-nfl-team .-heading").parent().removeClass("-open");
     $(el.target).parent().toggleClass("-open");
   });
 
