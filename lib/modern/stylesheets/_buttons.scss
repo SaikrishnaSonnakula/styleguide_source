@@ -42,7 +42,6 @@ $action-color-light: $interactive-blue !default;
     display: block;
     width: 100%;
   }
-
   &.-action {
     background-color: transparent;
     border-color: white;
@@ -71,6 +70,15 @@ $action-color-light: $interactive-blue !default;
     &:hover, &:focus {
       background-color: $button-color;
       color: white;
+    }
+  }
+
+  &.-disabled {
+    background-color: $button-disable-color;
+    &:hover {
+      color: white;
+      cursor: default;
+      border-color: $button-disable-color;
     }
   }
 }
