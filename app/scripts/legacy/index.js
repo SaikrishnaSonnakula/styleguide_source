@@ -1,10 +1,10 @@
 require('fixedsticky.css');
 require('prism.css');
-require('../scss/preview.scss');
+require('../../scss/legacy/index.scss');
 
 import $ from 'jquery';
 import addColors from './add_colors';
-import createExamples from './create_examples';
+import createExamples from '../create_examples';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 
