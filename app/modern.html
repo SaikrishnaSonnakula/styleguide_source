@@ -685,9 +685,14 @@
 
           <div class="example -padded-desktop">
             <pre class="code language-javascript">
-              $("#best-nfl-team .-heading").click(function(el) {
-                $(el.target).parent().toggleClass("-open");
-              });
+  			$("#best-nfl-team .-heading").click(function(el) {
+    			if ($(el.target).parent().hasClass("-open")) {
+        			$(el.target).parent().toggleClass("-open");
+    			} else {
+        			$("#best-nfl-team .-heading").parent().removeClass("-open");
+        			$(el.target).parent().toggleClass("-open");
+    			}   
+  			});
             </pre>
 
             <div id="best-nfl-team" class="accordion">
