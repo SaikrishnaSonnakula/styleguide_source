@@ -1,6 +1,7 @@
 $accordion-options-max-height: 200px;
 $accordion-mobile-height: 50px;
-$accordion-character:$dropdown-character;
+$accordion-closed-character:'+';
+$accordion-opened-character:'-';
 
 .accordion {
   .-section {
@@ -21,13 +22,14 @@ $accordion-character:$dropdown-character;
       padding: 0px;
     }
 
-    &:after {
+    &:before {
       @extend .kp-icon;
       @include transition(all 0.4s $ease-out-cubic);
       display: inline-block;
       font-size: $tiny-font-size;
+      font-weight:bold;
       color: $interactive-blue;
-      content: $accordion-character;
+      content: $accordion-closed-character;
       line-height: $accordion-mobile-height;
       background-color: transparent;
 
@@ -37,8 +39,9 @@ $accordion-character:$dropdown-character;
     }
   }
 
-  &.-open .-heading:after{
-    @include transform(rotate(-180deg));
+  &.-open .-heading:before{
+    @include transform(rotate(-180deg));	
+    content: $accordion-opened-character;
   }
 
   .-content {
@@ -74,6 +77,9 @@ $accordion-character:$dropdown-character;
 
   &.-open .-content {
     max-height: $accordion-options-max-height;
+    border:1px solid #eee;
+    border-radius:16px;
+    padding:16px;
   }
   }
 }
@@ -102,7 +108,7 @@ $accordion-character:$dropdown-character;
   .-content {
     @include media($desktop) {
       margin-top: $large-spacing;
-      font-size: $medium-font-size;
+      font-size: $tiny-font-size;
     }
   }
 }
