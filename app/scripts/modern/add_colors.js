@@ -14,6 +14,10 @@ var colorSections = [
         'button-hover-color'
       ],
       [
+        'disable-blue',
+        'button-disable-color'
+      ],
+      [
         'interactive-blue-darker',
         'link-hover-color'
       ],

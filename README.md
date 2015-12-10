@@ -51,12 +51,12 @@ We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstra
 
 ### Adding Icons
 
-We use [Fontello](http://fontello.com/) to help us generate icon sets. You must first import the `config.json` under `/app/icon/config.json` into Fontello. This will ensure that we have the latest icon set from fontello.
+We have a whole suite of Icons approved by design and brand. We're working on displaying all 88+ Icons so you (designer/developer) can see what we have available. If you see an Icon that you think should be in styleguide please contact jennifer.m.beasley@kp.org. You can find her on hipchat.
 
-Make you selection of new icons, then download the zip file.
+Refer to `/modern.html#icons-section`
 
 
 ##Todo
-- Clean up this readme to make it purposeful and relevent for developers
 - icons documentation
+- Clean up this readme to make it purposeful and relevent for developers
 - AEM export command?
