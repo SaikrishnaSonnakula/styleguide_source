@@ -2,6 +2,8 @@ $button-color: $interactive-blue;
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-border-size: 3px;
+$action-color-bg: $interactive-blue !default;
+$action-color-light: $interactive-blue !default;
 
 %rounded-input {
   @include appearance(none);
@@ -31,8 +33,14 @@ $button-border-size: 3px;
   border: $button-border-size solid transparent;
 
   &:hover, &:focus {
-    background-color: $button-hover-color;
-    color: white;
+    background-color: transparent;
+    color: $button-hover-color;
+    border-color: $button-hover-color;
+  }
+
+  &.-block {
+    display: block;
+    width: 100%;
   }
 
   &.-action {
@@ -52,7 +60,7 @@ $button-border-size: 3px;
         background-color: white;
         color: $action-color-light;
       }
-    }
+    }   
   }
 
   &.-inverted {
@@ -79,4 +87,11 @@ $button-border-size: 3px;
 .link {
   @extend %button-unstyled;
   color: $link-color;
+}
+.-close {
+  @extend .icon-cancel;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: $xl-font-size
 }

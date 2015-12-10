@@ -8,6 +8,7 @@ import createExamples from '../create_examples';
 import addSpacing from './add_spacing';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
+import responsiveTable from './responsive_table';
 
 var easterEgg = function() {
   $("#name-field").keyup(function() {
@@ -24,21 +25,32 @@ $(function() {
   createExamples();
   easterEgg();
   addSpacing();
+  responsiveTable();
 
   $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");
   })
 
-  $("#modal-link").click(function() {
+  var focusedElementBeforeModal = null;
+  var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+  $("#modal-button").click(function() {
     $("#my-modal").addClass("modal-showing");
     $("#my-modal").attr('aria-hidden','false');
-    $(".modal-inner" ,"#my-modal").attr('tabindex', '0').focus();
+    $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+    focusedElementBeforeModal = $(':focus');
+    var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
+    firstElem.focus();
   });
 
-  $(".modal-close, .modal-fade-screen").click(function() {
+  $("#nothing").click(function(ev) {
     $("#my-modal").removeClass("modal-showing");
-    $("#my-modal").attr('aria-hidden','true');
-    $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
+    $("#my-modal").attr("aria-hidden", 'true');
+    $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+    $(".modal-inner #modal-description").removeAttr('tabindex');
+    $("#modal-button").attr('tabindex', '0');
+    focusedElementBeforeModal.focus();
+    ev.preventDefault();
   });
 
   $("#my-collapsible-feed-item .-click-to-expand").click(function() {
@@ -64,6 +76,10 @@ $(function() {
 
   $("#toggle-action-button-pair").click(function() {
     $("#action-button-pair").toggleClass("-hide-action-buttons");
+  })  
+
+  $("#toggle-primary-action-button").click(function() {
+    $("#action-button").toggleClass("-hide-action-buttons");
   })
 
   $("main").show();

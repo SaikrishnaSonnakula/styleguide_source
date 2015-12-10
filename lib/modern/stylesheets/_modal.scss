@@ -1,0 +1,102 @@
+.modal-showing {
+  overflow: hidden;
+}
+
+.kp-modal {
+  &.modal-showing {
+    display: block;
+
+    .modal-fade-screen {
+      opacity: 1;
+      visibility: visible;
+      overflow: auto;
+    }
+    .modal-fade-screen .modal-inner {
+      @include media($desktop) {
+        @include transform(translateY(50px));
+      }
+    }
+  }
+
+  .modal-fade-screen { // overlay
+    @include transition(opacity 0.4s $ease-out-cubic);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999999999;
+    padding-top: 3em;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-inner {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: white;
+    margin: 0;
+    overflow: auto;
+    &:focus {
+      border:2px $kp-blue solid;
+    }
+    @include media($desktop) {
+      @include transform(translateY(20px));
+      @include transition(transform 0.2s ease);
+      @include transition-delay(0.2s);
+      position: relative;
+      margin: auto;
+      width: 50%;
+    }
+
+    .content {
+      padding: $gutter-spacing;
+      margin-bottom: $gutter-spacing;
+      margin-top: $gutter-spacing;      
+
+      text-align: center;
+
+      @include media($desktop) {
+        padding-bottom: 0px;
+      }
+    }
+
+    .modal-buttons {
+      text-align: center;
+
+      padding-top: $gutter-spacing;
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+      margin-bottom: $small-spacing;
+            
+      .button{
+        margin-bottom: $gutter-spacing;
+        width: 100%;
+        @include media($desktop){
+          width: auto;
+          margin-right: $small-spacing;
+          margin-left: $small-spacing;
+        }
+
+        &.-action {
+          color: $interactive-blue;
+          background-color: white;
+          border-color: $interactive-blue;
+        }
+
+        &.-action.-inverted {
+          color: white;
+          background-color: $interactive-blue;
+        }
+
+        @include media($desktop-medium-up) {
+          .button { width: auto; }
+        }
+      }
+    }
+  }
+}

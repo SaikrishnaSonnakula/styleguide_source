@@ -1,24 +1,28 @@
-$action-color-bg: $grass !default;
-$action-color-light: #5FA621 !default;
-
 $action-button-mobile-position: fixed !default;
 $action-box-height: 150px;
 $action-box-vertical-padding: $large-spacing;
 $content-top-offset: $xl-spacing;
+$action-color-bg: $grass !default;
+$action-color-light: #5FA621 !default;
 
 .action-color {
 	color: white;
 	background-color: $action-color-bg;
 }
 
+.action-message{
+	font-size: $medium-font-size;
+	text-align: center;
+	@include media($desktop){
+		font-size: $large-font-size;
+	}
+}
+
 .action-box {
 	@extend .action-color;
-	height: 0;
+
 	overflow: hidden;
-	color: white;
-	background-color: $action-color-bg;
 	position: relative;
-	z-index: $background;
 
 	@include media($desktop) {
 		height: auto;
@@ -31,11 +35,41 @@ $content-top-offset: $xl-spacing;
 	}
 }
 
-.action-button-pair {
+.primary-action {
+	@extend .button;
+	@include media($device) {
+		z-index: $foreground;
+		width: 100%;
+		position: $action-button-mobile-position;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		&:hover, &:focus {
+			background-color: white;
+		}
+	}
+  @include media($desktop){
+	  @include outer-container;
+		@include span-columns(4.5);
+		@include shift(3.5);
+
+		color: white;
+		background-color: $action-color-bg;
+		border-color: white;
+
+		&:hover, &:focus {
+			color: $action-color-bg;
+			border-color: white;
+			background-color: white;
+		}
+  }
+}
+
+.action-button {
 	@include media($device) {
 		@include outer-container;
 		z-index: $foreground;
-
+		
 		position: $action-button-mobile-position;
 		left: 0px;
 		right: 0px;
@@ -44,16 +78,35 @@ $content-top-offset: $xl-spacing;
 
 		.button {
 			@include span-columns(6);
-			border-color: $interactive-blue !important;
-
 			&.-action {
+				border-color: $interactive-blue;
 				background-color: white;
 				color: $interactive-blue;
+				
+				&.-inverted {
+					background-color: $interactive-blue;
+					border-color: $interactive-blue;
+					color: white;
+					&:hover, &:focus {
+	        	background-color: white;
+  	      	color: $interactive-blue;
+    	  	}
+				}
 			}
-
+		}
+	}
+	@include media($desktop){
+		.button {
+			margin-left: $tiny-spacing;
+			margin-right: $tiny-spacing;
+			&.-action:hover{
+				color: $action-color-bg;
+			}
 			&.-action.-inverted {
-				color: white;
-				background-color: $interactive-blue;
+				color: $action-color-bg;
+				&:hover, &:focus {
+        	color: $action-color-light;
+      	}
 			}
 		}
 	}

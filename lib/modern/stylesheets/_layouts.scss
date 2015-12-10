@@ -9,3 +9,36 @@
     }
   }
 }
+
+.three-columns {
+  @include row(table);
+
+  .-column {
+    @include pad;
+    
+    @include media($desktop) {
+      @include span-columns(4);
+    }
+  }
+}
+
+.two-columns {
+  @include row(table);
+
+  .-column {
+    @include pad;
+    
+    @include media($desktop) {
+      @include span-columns(9);
+    }
+  }
+  
+  .-column.-aside {
+    
+    @include media($desktop) {
+      @include span-columns(3);
+    }
+  }
+}
+
+@include reset-display;

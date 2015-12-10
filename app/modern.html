@@ -31,11 +31,13 @@
       <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
         <ul>
           <li><a href="#installation-section">Installation</a></li>
+          <li><a href="#responsive-section">Responsive</a></li>
           <li><a href="#colors-section">Colors</a></li>
           <li><a href="#typography-section">Typography</a></li>
           <li><a href="#spacing-section">Spacing</a></li>
           <li><a href="#buttons-section">Buttons</a></li>
           <li><a href="#lists-section">Lists</a></li>
+          <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
           <li><a href="#features-section">Features</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
@@ -87,6 +89,36 @@
             or
             <a href="mailto:tommy.wu@kp.org">tommy.wu@kp.org</a> for assistance.
           </p>
+        </section>
+
+        <section id="responsive-section">
+          <h2 class="styleguide-section-heading">Responsive</h2>
+          <p>For easy of development the following SASS variables are provided that contain defined breakpoints.</p>
+          <div id="responsive-table">
+          </div>
+
+          <h4>Usage</h4>
+          If you want to apply a specific style to let say the <code>$mobile</code> view try this:
+          <pre class="code language-scss" data-langauge="scss">
+            <code class="code">
+          .element{
+            @include media($mobile) {
+              background-color: black;
+            }
+          }
+            </code>
+          </pre>
+          Here's another example if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
+          <pre class="code language-scss"><code class="code">
+.element{
+  @include media($desktop-large) {
+    display:block;
+  }
+  @include media($handheld){
+    display:none;
+  }
+}           </code>
+          </pre>
         </section>
 
         <section id="colors-section">
@@ -299,25 +331,22 @@
           </div>
 
           <p>
-            If you need a button inside of an action box. Use the <code>-action</code> class:
+              You can make a close button look this:
           </p>
-          <div class="example -element">
-            <div class="action-color" style="padding: 1em;">
-              <button class="button -action">
-                Action button
+
+          <div class="example -element -padded">
+              <button class="-close" role="button">
+                <span class="screenreader-only">close</span>
               </button>
-            </div>
           </div>
 
           <p>
-            <code>-inverted</code> also works with the <code>-action</code> class.
+            If you need a button on block level - those that span the full width of a parent. Use the <code>-block</code> class:
           </p>
           <div class="example -element">
-            <div class="action-color" style="padding: 1em;">
-              <button class="button -action -inverted">
-                Action Inverted button
-              </button>
-            </div>
+            <button class="button -block">
+              Block button
+            </button>
           </div>
         </section>
 
@@ -337,6 +366,58 @@
               <li>San Francisco</li>
               <li>Los Angeles</li>
             </ul>
+          </div>
+        </section>
+
+        <section id="modal-section">
+          <h2 class="styleguide-section-heading">Modal</h2>
+ 
+          <div class="example -padded">
+            <pre class="code language-javascript">   
+                var focusedElementBeforeModal = null;
+                var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+               
+                $("#modal-button").click(function() {
+                  $("#my-modal").addClass("modal-showing");
+                  $("#my-modal").attr('aria-hidden','false');
+                  $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+                  focusedElementBeforeModal = $(':focus');
+                  var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
+                  firstElem.focus();
+                });
+
+                $("#nothing").click(function(ev) {
+                  $("#my-modal").removeClass("modal-showing");
+                  $("#my-modal").attr("aria-hidden", 'true');
+                  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+                  $(".modal-inner #modal-description").removeAttr('tabindex');
+                  $("#modal-button").attr('tabindex', '0');
+                  focusedElementBeforeModal.focus();
+                  ev.preventDefault();
+                });
+            </pre>
+          
+            <button id="modal-button" class="button">
+              Bring in the modal
+            </button>
+          
+            <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+              <div class="modal-fade-screen">
+                <div class="modal-inner">
+                  <div id="modal-description" class="content">
+                    Welcome to the modal space. What do you do?
+                  </div>  
+                  <div class="modal-buttons">
+                    <button id="nothing" class="button -action">
+                      Do nothing
+                    </button>
+                    <button id="do-something" class="button -action -inverted">
+                      Action
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -379,14 +460,40 @@
           </h3>
 
           <div class="example">
-            <div class="action-box">
-              <h3>Action Box</h3>
+            <div class="feature">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
             </div>
-            <div class="feature-content">
-              <h1 class="page-heading">My Feature</h1>
-              <p>
-                This is a feature
-              </p>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Active action box
+          </h3>
+          
+          <p>
+            In device mode, active action box occupies full screen and hide feature-content. 
+            In desktop mode, active action box pushes feature-content down.
+            To active the action box, add <code>-action-box-active</code> to the feature element.
+          </p>
+
+          <div class="example">
+            <div class="feature -action-box-active">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
             </div>
           </div>
 
@@ -395,7 +502,7 @@
           </h3>
 
           <p>
-            Action buttons will show as fixed buttons on the bottom of the screen.
+            Action buttons will show as fixed buttons on the bottom of the screen for device.
           </p>
 
           <p class="device-only">
@@ -403,9 +510,9 @@
             </button>
           </p>
 
-          <div class="example -hide-action-buttons" id="action-button-pair">
+          <div class="example -padded -hide-action-buttons" id="action-button-pair">
             <div class="action-box">
-              <div class="action-button-pair">
+              <div class="action-button">
                 <button class="button -action">
                   Yes!
                 </button>
@@ -413,6 +520,23 @@
                   No
                 </button>
               </div>
+            </div>
+          </div>
+
+          <p>
+            Main action button will show as fixed buttons on the bottom of the screen for device.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-primary-action-button">Toggle Example
+            </button>
+          </p>
+
+          <div class="example -padded -hide-action-buttons" id="action-button">
+            <div class="action-box">
+              <button class="primary-action">
+                Primary Action
+              </button>
             </div>
           </div>
 
@@ -611,6 +735,70 @@
               </div>
             </div>
           </div>
+
+         <h3 class="styleguide-subheading">
+            Three column Layout
+          </h3>
+          
+          <div class="example">
+            <div class="three-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+              
+              <div class="-column fuchsia">
+                Column 2
+              </div>
+
+              <div class="-column tangerine">
+                Column 3
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Two column Layout
+          </h3>
+                   
+          <div class="example">
+            <div class="two-columns">
+              <div class="-column -aside grass">
+                Column 1
+              </div>
+              
+              <div class="-column aqua">
+                Column 2
+              </div>
+              
+            </div>
+          </div>
+
+                    <div class="example">
+            <div class="two-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+              
+              <div class="-column aqua">
+                Column 2
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="example">
+            <div class="two-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+              
+              <div class="-column -aside aqua">
+                Column 2
+              </div>
+              
+            </div>
+          </div>
+          
         </section>
       </article>
     </main>

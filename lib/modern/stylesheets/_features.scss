@@ -17,3 +17,27 @@
     margin-right: auto;
   }
 }
+.feature.-action-box-active {
+  @include media($device){
+    .action-box{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      margin: 0;
+      z-index: 10;
+      overflow: auto;  
+    }
+    .feature-content {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  @include media($desktop){
+    .feature-content{
+      margin-top: 0px;
+    }
+  }
+}
