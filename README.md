@@ -12,9 +12,20 @@ The styleguide is NPM module. You can install it by running the following comman
 
 Then, include the styles your sass file:
 
-    @import "styleguide/modern"
+    @import "~styleguide/modern-webpack";
 
-### Bower
+Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/repos/kp-header-component/browse)
+
+####Other options
+Styleguide allows you to opt-in various SCSS elements. For example if you're developing a component where all you need are the fonts, you're allowed to reference just the `font.scss` like so:
+
+```
+    @import "~styleguide/lib/modern/stylesheets/fonts";
+
+```
+You can view the list of SCSS styles in the repo: [Styleguide lib]:(https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets)
+
+### Bower (deprecated)
 
 Include this styleguide repo in your `bower.json`
 
@@ -39,15 +50,21 @@ Still figuring this out. You will experience import SASS errors when you import 
 
 There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
 
-### Bootstrap (deprecating)
-
-When we started with this project, much of our work was started with bootstrap (SASS). With Stylegude we've been able to abstract the bootstrap classes to be KP specific classes by using `@extend`. With that said, we no longer supporting styleguide with bootstrap, but instead we are using [Bourbon](http://bourbon.io/).
-
 ### Bourbon / Neat
 
 We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstrap. Instead, it's a library of _Mixins_ that allow one to have more control over styles. It's minimalistic in nature, but offers additional features through [Neat](http://neat.bourbon.io/) which is a Bourbon add-on that offers grids and layout helpers.
 
+### Bootstrap (deprecating)
+
+When we started with this project, much of our work was started with bootstrap (SASS). With Stylegude we've been able to abstract the bootstrap classes to be KP specific classes by using `@extend`. With that said, we no longer supporting styleguide with bootstrap, but instead we are using [Bourbon](http://bourbon.io/).
+
+
 ## Contributing to Styleguide
+We're following a pull request model for contribution. [Pull requests](https://www.atlassian.com/git/tutorials/making-a-pull-request/). You create a branch `git checkout -b [branch-name-that-makes-sense]`, then you make your changes and commit them then your'e ready to push to origin - `git push -u origin [branch-name-that-makes-sense]`
+
+Go to: `https://stash.kp.org/projects/RWD/repos/styleguide/branches` to confirm that your branch is there (if you didn't already notice in your command prompt), then under 'action' request a pull request.
+
+We're still figuring out this process but the important part is creating the pull requests and add approvers like [Tommy](https://stash.kp.org/users/i183632), [Linda](https://stash.kp.org/users/l151042), [Michael](https://stash.kp.org/users/k948046)
 
 ### Adding Icons
 
