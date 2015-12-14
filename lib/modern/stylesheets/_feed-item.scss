@@ -34,14 +34,25 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     margin-top: $medium-spacing;
     margin-bottom: $medium-spacing;
 
+    .-errorheading {
+      font-weight: bold;
+    }
+
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
     }
-
   }
 
   .-body {
     color: $dolphin;
+
+    &.-errorbody {
+      max-width: 60%;
+
+      @include media($mobile) {
+        max-width: 100%;
+      }
+    }
 
     &.-collapsible {
       @extend %hide-fade-in;

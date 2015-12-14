@@ -5,55 +5,16 @@ $icon-radius: $feature-icon-mobile-size;
   border: 1px solid $graphite-light;
   padding: $small-spacing;
 
-  .-contents {
-    position: relative;
-    top: $small-spacing;
-
-    @include media($mobile){
-      position: initial;
-      top: none;
-    }
-  }
-
-  .feature-icon {
-    float: left;
-  }
-
-  .-body {
-    max-width: 60%;
-    position: relative;
-    left: $small-spacing;
-
-    @include media($mobile){
-      max-width: none;
-    }
-
-    &.-alert {
-      max-width: 100%;
-    }
-
-    .-header {
-      font-family: $bold-font-family;
-      font-size: $small-font-size;
-      display: block;
-    }
-
-    .-message {
-      display: block;
-      font-size: $tiny-font-size;
-    }
-  }
-
   .-action-buttons {
     float: right;
     position: relative;
-    bottom: $xxl-spacing - $large-spacing;
+    bottom: $xl-spacing;
 
     @include media($mobile){
       float: none;
       position: relative;
-      bottom: -$tiny-spacing;
-      left: $tiny-spacing + $small-spacing + $medium-spacing;
+      top: $small-spacing;
+      left: -$small-spacing;
     }
   }
 }
