@@ -13,16 +13,26 @@ The styleguide is NPM module. You can install it by running the following comman
 
 ###Modern styles with Webpack
 If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
-Then, include the styles your sass file if you are using modern styles and using webpack: 
+If you are using modern styles and using webpack then import the following sass file :
 
     @import "~styleguide/modern-webpack";
+
+Legacy:
+
+    @import "~styleguide/main-webpack";
+
 
 Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/repos/kp-header-component/browse)
 
 ###Not on webpack or using our build-plugin
 
-    @import "[node_modules or bower_components]/styleguide/lib/legacy/stylesheets/main"
+    //legacy
+    @import "~styleguide/main";
 
+    //modern
+    @import "~styleguide/modern";
+
+*Please note*, at some point we will be deprecating legacy - and `styleguide/main` will have the modern styles.
 
 ####Other optioe
 Styleguide allows you to opt-in various SCSS elements. For example if you're developing a component where all you need are the fonts, you're allowed to reference just the `font.scss` like so:
