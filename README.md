@@ -13,7 +13,7 @@ The styleguide is NPM module. You can install it by running the following comman
 
 ###Modern styles with Webpack
 If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
-If you are using modern styles and using webpack then import the following sass file :
+If you are using modern styles and using webpack then import the following sass file:
 
     @import "~styleguide/modern-webpack";
 
@@ -34,7 +34,7 @@ Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/r
 
 *Please note*, at some point we will be deprecating legacy - and `styleguide/main` will have the modern styles.
 
-####Other optioe
+####Other options
 Styleguide allows you to opt-in various SCSS elements. For example if you're developing a component where all you need are the fonts, you're allowed to reference just the `font.scss` like so:
 
 ```
