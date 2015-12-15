@@ -1,22 +1,30 @@
 # KP Styleguide
 
 The styleguide to rule them all!
-
-## Usage
-
+##Install
 ### NPM
 
 The styleguide is NPM module. You can install it by running the following command in your project directory:
 
     npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
 
-Then, include the styles your sass file:
+
+##Usage
+
+###Modern styles with Webpack
+If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
+Then, include the styles your sass file if you are using modern styles and using webpack: 
 
     @import "~styleguide/modern-webpack";
 
 Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/repos/kp-header-component/browse)
 
-####Other options
+###Not on webpack or using our build-plugin
+
+    @import "[node_modules or bower_components]/styleguide/lib/legacy/stylesheets/main"
+
+
+####Other optioe
 Styleguide allows you to opt-in various SCSS elements. For example if you're developing a component where all you need are the fonts, you're allowed to reference just the `font.scss` like so:
 
 ```
