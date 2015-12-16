@@ -62,3 +62,4 @@ Refer to `/modern.html#icons-section`
 - AEM export command?
 - Pixel reference documented (automated) so designers can speak their language
 - Gothom Light
+- Change checkbox icon
