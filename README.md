@@ -61,3 +61,4 @@ Refer to `/modern.html#icons-section`
 - Clean up this readme to make it purposeful and relevent for developers
 - AEM export command?
 - Pixel reference documented (automated) so designers can speak their language
+- Gothom Light
