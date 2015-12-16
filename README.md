@@ -27,10 +27,12 @@ Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/r
 ###Not on webpack or using our build-plugin
 
     //legacy
-    @import "~styleguide/main";
+    @import "styleguide/main";
 
     //modern
-    @import "~styleguide/modern";
+    @import "styleguide/modern";
+
+The node_modules directory will have to be in your SCSS build path. This is particularly important if you're not using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse).
 
 *Please note*, at some point we will be deprecating legacy - and `styleguide/main` will have the modern styles.
 
