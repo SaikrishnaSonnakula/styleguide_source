@@ -5,6 +5,10 @@ $accordion-opened-character:'-';
 
 .accordion {
     .-section {
+        padding-bottom:12px;
+		border-bottom:2px solid #ccc;
+		margin-bottom:4px;
+
         .-heading {
             @extend %button-unstyled;
             cursor: pointer;
@@ -29,6 +33,7 @@ $accordion-opened-character:'-';
                 font-size: $tiny-font-size;
                 font-weight:bold;
                 color: $interactive-blue;
+			    width:20px;
                 content: $accordion-closed-character;
                 line-height: $accordion-mobile-height;
                 background-color: transparent;
@@ -37,16 +42,25 @@ $accordion-opened-character:'-';
                     line-height: inherit;
                 }
             }
+            .-subheading {
+                display:block;
+                margin-left:25px;
+                color:#888;
+                font-size:90%;
+                clear:both;
+                width:100%;
+            }
         }
 
         &.-open .-heading:before{
-            @include transform(rotate(-180deg));    
             content: $accordion-opened-character;
+			width:20px;
         }
 
         .-content {
             @extend %list-unstyled;
-            @include transition(max-height 0.4s $ease-out-cubic);
+            @include transition(opacity 0.6s $ease-out-cubic);
+			opacity:0;
             overflow: hidden;
             margin-top: 0px;
             max-height: 0px;
@@ -77,9 +91,9 @@ $accordion-opened-character:'-';
 
         &.-open .-content {
             max-height: $accordion-options-max-height;
-            border:1px solid #eee;
-            border-radius:16px;
-            padding:16px;
+            padding:2px;
+            padding-left:25px;
+			opacity:1;
         }
     }
 }
