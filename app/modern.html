@@ -40,6 +40,7 @@
           <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
           <li><a href="#features-section">Features</a></li>
+          <li><a href="#dropdowns-section">Dropdowns</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
           <li><a href="#icons-section">Icons</a></li>
         </ul>
@@ -102,11 +103,11 @@
           If you want to apply a specific style to let say the <code>$mobile</code> view try this:
           <pre class="code language-scss" data-langauge="scss">
             <code class="code">
-          .element{
-            @include media($mobile) {
-              background-color: black;
+            .element{
+              @include media($mobile) {
+                background-color: black;
+              }
             }
-          }
             </code>
           </pre>
           Here's another example if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
@@ -118,7 +119,7 @@
   @include media($handheld){
     display:none;
   }
-}           </code>
+}</code>
           </pre>
         </section>
 
@@ -628,15 +629,16 @@
               </div>
             </div>
           </div>
+        </section>
 
-          <h3 class="styleguide-subheading">
-            Navigation Dropdowns
-          </h3>
-
+        <section id="dropdowns-section">
+          <h2 class="styleguide-subheading">
+            Dropdowns
+          </h2>
           <p>
            Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
           </p>
-
+          <p><small>Accordions coming soon email michael.chisari@kp.org</small></p>
           <div class="example -padded-desktop">
             <pre class="code language-javascript">
               $("#best-nba-team .-value").click(function() {
@@ -673,7 +675,7 @@
             </div>
           </div>
         </section>
-        
+
         <section id="layouts-section">
           <h2 class="styleguide-section-heading">Layouts (Experimental)</h2>
           
