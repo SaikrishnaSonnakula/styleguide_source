@@ -39,9 +39,11 @@
           <li><a href="#lists-section">Lists</a></li>
           <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
-          <li><a href="#features-section">Features</a></li>
-          <li><a href="#errors-section">Notifications</a></li>
+          <li><a href="#features-section">Features</a></li
+          <li><a href="#dropdowns-section">Dropdowns</a></li>
+          <li><a href="#errors-section">Errors Notifications</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
+          <li><a href="#icons-section">Icons</a></li>
         </ul>
       </nav>
 
@@ -94,8 +96,32 @@
 
         <section id="responsive-section">
           <h2 class="styleguide-section-heading">Responsive</h2>
+          <p>For easy of development the following SASS variables are provided that contain defined breakpoints.</p>
           <div id="responsive-table">
           </div>
+
+          <h4>Usage</h4>
+          If you want to apply a specific style to let say the <code>$mobile</code> view try this:
+          <pre class="code language-scss" data-langauge="scss">
+            <code class="code">
+            .element{
+              @include media($mobile) {
+                background-color: black;
+              }
+            }
+            </code>
+          </pre>
+          Here's another example if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
+          <pre class="code language-scss"><code class="code">
+.element{
+  @include media($desktop-large) {
+    display:block;
+  }
+  @include media($handheld){
+    display:none;
+  }
+}</code>
+          </pre>
         </section>
 
         <section id="colors-section">
@@ -325,6 +351,16 @@
               Block button
             </button>
           </div>
+
+
+          <p>
+            If you need a stabled button you can add the following class <code>-disabled</code>
+          </p>
+          <div class="example -element">
+            <button class="button -disabled">
+              Disabled button
+            </button>
+          </div>
         </section>
 
         <section id="lists-section">
@@ -437,14 +473,40 @@
           </h3>
 
           <div class="example">
-            <div class="action-box">
-              <h3 class="action-message">Action Message</h3>
+            <div class="feature">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
             </div>
-            <div class="feature-content">
-              <h1 class="page-heading">My Feature</h1>
-              <p>
-                This is a feature
-              </p>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Active action box
+          </h3>
+
+          <p>
+            In device mode, active action box occupies full screen and hide feature-content.
+            In desktop mode, active action box pushes feature-content down.
+            To active the action box, add <code>-action-box-active</code> to the feature element.
+          </p>
+
+          <div class="example">
+            <div class="feature -action-box-active">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
             </div>
           </div>
 
@@ -491,6 +553,13 @@
             </div>
           </div>
 
+          <div class="example -padded -hide-action-buttons" id="action-button">
+            <div class="action-box">
+              <button class="disable-button">
+                Disabled button
+              </button>
+            </div>
+          </div>
 
           <h3 class="styleguide-subheading">
             Feed Items
@@ -561,15 +630,16 @@
               </div>
             </div>
           </div>
+        </section>
 
-          <h3 class="styleguide-subheading">
-            Navigation Dropdowns
-          </h3>
-
+        <section id="dropdowns-section">
+          <h2 class="styleguide-subheading">
+            Dropdowns
+          </h2>
           <p>
            Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
           </p>
-
+          <p><small>Accordions coming soon email michael.chisari@kp.org</small></p>
           <div class="example -padded-desktop">
             <pre class="code language-javascript">
               $("#best-nba-team .-value").click(function() {
@@ -608,51 +678,23 @@
         </section>
 
         <section id="errors-section">
-          <h2 class="styleguide-section-heading">Notifications</h2>
+          <h2 class="styleguide-section-heading">Errors Notifications</h2>
 
           <h3 class="styleguide-subheading">
             Generic Errors
           </h3>
 
           <div class="example">
-            <div class="notifications-container">
-              <div class="feed-item">
-                <div class="-gutter">
-                  <div class="feature-icon aqua">EE</div>
+            <div class="error-container">
+              <div class="error-contents">
+                <div class="feature-icon">EE</div>
+                <div class="error-body">
+                  <span class="error-header">Lorem ipsum dolor sit amet</span>
+                  <span class="error-message">consectetur adipiscing elit, sed do eiusmod tempor Retry incididunt</span>
                 </div>
-                <div class="-main">
-                  <h4 class="item-heading -errorheading">
-                    You have a Feed Item
-                  </h4>
-                  <div class="-body -errorbody">
-                    This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-                  </div>
-                  <div class="-action-buttons">
-                    <button class="button -small">Retry</button>
-                    <button class="button -small -inverted">Cancel</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="styleguide-subheading">
-            Alerts-Information
-          </h3>
-
-          <div class="example">
-            <div class="notifications-container">
-              <div class="feed-item">
-                <div class="-gutter">
-                  <div class="feature-icon aqua">AI</div>
-                </div>
-                <div class="-main">
-                  <h4 class="item-heading -errorheading">
-                    You have a Feed Item
-                  </h4>
-                  <div class="-body">
-                    This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-                  </div>
+                <div class="error-action-buttons">
+                  <button class="button">Retry</button>
+                  <button class="button -inverted">Cancel</button>
                 </div>
               </div>
             </div>
@@ -749,7 +791,25 @@
 
             </div>
           </div>
+        </section>
 
+        <section id="icons-section">
+          <h2>Icons</h2>
+          <p>
+            We have a whole suite of Icons approved by design and brand. We're working on displaying all 88+ Icons so you (designer/developer) can see what we have available. If you see an Icon that you think should be in styleguide please contact jennifer.m.beasley@kp.org. You can find her on hipchat.
+          </p>
+          <h3>Multiple sizes of icons</h3>
+          <div class="example -minor -padded">
+            <div class="icon-results-solid2 icon-md"></div>
+            This is medium sized icon
+            <hr>
+            <div class="icon-reminder icon-lg"></div>
+            This is a large sized icon
+          </div>
+
+          <pre class="code language-scss">
+
+          </pre>
         </section>
       </article>
     </main>

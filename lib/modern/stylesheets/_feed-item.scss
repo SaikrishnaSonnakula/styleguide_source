@@ -45,6 +45,7 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
 
   .-body {
     color: $dolphin;
+    font-size: $small-font-size;
 
     &.-errorbody {
       max-width: 60%;

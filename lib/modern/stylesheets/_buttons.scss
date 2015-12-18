@@ -2,7 +2,7 @@ $button-color: $interactive-blue;
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
-$button-border-size: 3px;
+$button-border-size: 2px;
 $action-color-bg: $interactive-blue !default;
 $action-color-light: $interactive-blue !default;
 
@@ -34,16 +34,15 @@ $action-color-light: $interactive-blue !default;
   border: $button-border-size solid transparent;
 
   &:hover, &:focus {
-    background-color: transparent;
-    color: $action-color-bg;
-    border-color: $action-color-bg;
+    background-color: $button-hover-color;
+    color: white;
+    border-color: $button-hover-color;
   }
 
   &.-block {
     display: block;
     width: 100%;
   }
-
   &.-action {
     background-color: transparent;
     border-color: white;
@@ -79,7 +78,17 @@ $action-color-light: $interactive-blue !default;
     min-width: $button-small-min-width;
     font-size: $tiny-font-size;
   }
+
+  &:disabled, .-disabled {
+    background-color: $button-disable-color;
+    &:hover {
+      color: white;
+      cursor: not-allowed;
+      border-color: $button-disable-color;
+    }
+  }
 }
+
 
 %button-unstyled {
   @include appearance(none);
