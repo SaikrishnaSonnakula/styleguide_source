@@ -1,0 +1,20 @@
+$icon-radius: $feature-icon-mobile-size;
+
+.notifications-container {
+  @include outer-container(100%);
+  border: 1px solid $graphite-light;
+  padding: $small-spacing;
+
+  .-action-buttons {
+    float: right;
+    position: relative;
+    bottom: $xl-spacing;
+
+    @include media($mobile){
+      float: none;
+      position: relative;
+      top: $small-spacing;
+      left: -$small-spacing;
+    }
+  }
+}

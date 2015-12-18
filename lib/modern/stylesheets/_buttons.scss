@@ -1,6 +1,7 @@
 $button-color: $interactive-blue;
 $button-padding: $small-spacing;
 $button-min-width: 10em;
+$button-small-min-width: 8em;
 $button-border-size: 2px;
 $action-color-bg: $interactive-blue !default;
 $action-color-light: $interactive-blue !default;
@@ -59,7 +60,7 @@ $action-color-light: $interactive-blue !default;
         background-color: white;
         color: $action-color-light;
       }
-    }   
+    }
   }
 
   &.-inverted {
@@ -73,6 +74,11 @@ $action-color-light: $interactive-blue !default;
     }
   }
 
+  &.-small {
+    min-width: $button-small-min-width;
+    font-size: $tiny-font-size;
+  }
+
   &:disabled, .-disabled {
     background-color: $button-disable-color;
     &:hover {
@@ -82,6 +88,7 @@ $action-color-light: $interactive-blue !default;
     }
   }
 }
+
 
 %button-unstyled {
   @include appearance(none);

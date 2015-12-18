@@ -39,8 +39,9 @@
           <li><a href="#lists-section">Lists</a></li>
           <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
-          <li><a href="#features-section">Features</a></li>
+          <li><a href="#features-section">Features</a></li
           <li><a href="#dropdowns-section">Dropdowns</a></li>
+          <li><a href="#errors-section">Notifications</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
           <li><a href="#icons-section">Icons</a></li>
         </ul>
@@ -68,7 +69,7 @@
           <p>
             The styleguide is NPM module. You can install it by running the following command in your project directory:
           </p>
-            
+
           <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
 
           <p>
@@ -241,7 +242,7 @@
                 </h3>
               </div>
               <p>
-                <code>$tiny-spacing</code> is the smallest amount of spacing between two elements. Elements separated by tiny spacing will have a strong spacial connection, such as in this heading and subheading. 
+                <code>$tiny-spacing</code> is the smallest amount of spacing between two elements. Elements separated by tiny spacing will have a strong spacial connection, such as in this heading and subheading.
               </p>
             </div>
 
@@ -356,7 +357,7 @@
             If you need a stabled button you can add the following class <code>-disabled</code>
           </p>
           <div class="example -element">
-            <button class="button -disabled" disabled>
+            <button class="button -disabled">
               Disabled button
             </button>
           </div>
@@ -383,12 +384,12 @@
 
         <section id="modal-section">
           <h2 class="styleguide-section-heading">Modal</h2>
- 
+
           <div class="example -padded">
-            <pre class="code language-javascript">   
+            <pre class="code language-javascript">
                 var focusedElementBeforeModal = null;
                 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
-               
+
                 $("#modal-button").click(function() {
                   $("#my-modal").addClass("modal-showing");
                   $("#my-modal").attr('aria-hidden','false');
@@ -408,17 +409,17 @@
                   ev.preventDefault();
                 });
             </pre>
-          
+
             <button id="modal-button" class="button">
               Bring in the modal
             </button>
-          
+
             <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
               <div class="modal-fade-screen">
                 <div class="modal-inner">
                   <div id="modal-description" class="content">
                     Welcome to the modal space. What do you do?
-                  </div>  
+                  </div>
                   <div class="modal-buttons">
                     <button id="nothing" class="button -action">
                       Do nothing
@@ -488,9 +489,9 @@
           <h3 class="styleguide-subheading">
             Active action box
           </h3>
-          
+
           <p>
-            In device mode, active action box occupies full screen and hide feature-content. 
+            In device mode, active action box occupies full screen and hide feature-content.
             In desktop mode, active action box pushes feature-content down.
             To active the action box, add <code>-action-box-active</code> to the feature element.
           </p>
@@ -548,6 +549,14 @@
             <div class="action-box">
               <button class="primary-action">
                 Primary Action
+              </button>
+            </div>
+          </div>
+
+          <div class="example -padded -hide-action-buttons" id="action-button">
+            <div class="action-box">
+              <button class="disable-button">
+                Disabled button
               </button>
             </div>
           </div>
@@ -668,23 +677,76 @@
           </div>
         </section>
 
+        <section id="errors-section">
+          <h2 class="styleguide-section-heading">Notifications</h2>
+
+          <h3 class="styleguide-subheading">
+            Generic Errors
+          </h3>
+
+          <div class="example">
+            <div class="notifications-container">
+              <div class="feed-item">
+                <div class="-gutter">
+                  <div class="feature-icon aqua">EE</div>
+                </div>
+                  <div class="-main">
+                    <h4 class="item-heading -errorheading">
+                      You have a Feed Item
+                    </h4>
+                    <div class="-body -errorbody">
+                      This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                    </div>
+                    <div class="-action-buttons">
+                      <button class="button -small">Retry</button>
+                      <button class="button -small -inverted">Cancel</button>
+                    </div>
+                  </div>
+               </div>
+             </div>
+           </div>
+
+           <h3 class="styleguide-subheading">
+             Alerts-Information
+           </h3>
+
+           <div class="example">
+             <div class="notifications-container">
+               <div class="feed-item">
+                 <div class="-gutter">
+                   <div class="feature-icon aqua">AI</div>
+                 </div>
+                 <div class="-main">
+                   <h4 class="item-heading -errorheading">
+                     You have a Feed Item
+                   </h4>
+                   <div class="-body">
+                     This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                   </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
         <section id="layouts-section">
           <h2 class="styleguide-section-heading">Layouts (Experimental)</h2>
-          
+
           <h3 class="styleguide-subheading">
             Four column Layout
           </h3>
-          
+
           <div class="example">
             <div class="four-columns">
               <div class="-column grass">
                 Column 1
               </div>
-              
+
               <div class="-column aqua">
                 Column 2
               </div>
-              
+
               <div class="-column fuchsia">
                 Column 3
               </div>
@@ -698,13 +760,13 @@
          <h3 class="styleguide-subheading">
             Three column Layout
           </h3>
-          
+
           <div class="example">
             <div class="three-columns">
               <div class="-column grass">
                 Column 1
               </div>
-              
+
               <div class="-column fuchsia">
                 Column 2
               </div>
@@ -718,17 +780,17 @@
           <h3 class="styleguide-subheading">
             Two column Layout
           </h3>
-                   
+
           <div class="example">
             <div class="two-columns">
               <div class="-column -aside grass">
                 Column 1
               </div>
-              
+
               <div class="-column aqua">
                 Column 2
               </div>
-              
+
             </div>
           </div>
 
@@ -737,11 +799,11 @@
               <div class="-column grass">
                 Column 1
               </div>
-              
+
               <div class="-column aqua">
                 Column 2
               </div>
-              
+
             </div>
           </div>
 
@@ -750,14 +812,13 @@
               <div class="-column grass">
                 Column 1
               </div>
-              
+
               <div class="-column -aside aqua">
                 Column 2
               </div>
-              
+
             </div>
           </div>
-          
         </section>
 
         <section id="icons-section">
@@ -777,8 +838,6 @@
           <pre class="code language-scss">
 
           </pre>
-
-
         </section>
       </article>
     </main>
