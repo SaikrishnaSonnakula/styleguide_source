@@ -73,11 +73,11 @@ $action-color-light: $interactive-blue !default;
     }
   }
 
-  &.-disabled {
+  &:disabled, .-disabled {
     background-color: $button-disable-color;
     &:hover {
       color: white;
-      cursor: default;
+      cursor: not-allowed;
       border-color: $button-disable-color;
     }
   }
