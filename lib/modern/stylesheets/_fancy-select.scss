@@ -44,6 +44,8 @@ $select-options-max-height: 300px !default;
 
   }
   .-options {
+      @include transition(all 0.4s $ease-in-out-cubic);
+
     .-option:first-of-type{
       height: 0px;
       display: none;
