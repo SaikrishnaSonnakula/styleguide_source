@@ -1,27 +1,37 @@
-$select-bg-color: $grass !default;
 $select-font-color: white !default;
 $select-options-max-height: 300px !default;
 
+@mixin decorated-selection {
+  @extend .-block;
+  background-color: transparent;
+
+  min-width: 100%;
+  height: 100%;
+  line-height: inherit;
+  white-space: normal;
+
+  margin-top: $small-spacing;
+  margin-bottom: $small-spacing;
+  padding-bottom: $small-spacing;
+
+  border: none;
+  border-bottom: solid 1px white;
+
+  font-size: $small-font-size;
+  @include media($desktop){
+    font-size: $medium-font-size;
+  }
+}
+
 .fancy-select {
   @extend .dropdown;
-  background-color: $select-bg-color;
+  background-color: transparent;
 
   .-value {
-    border: none;
-    background-color: transparent;
+    @include decorated-selection;
     color: $select-font-color;
-    min-width: 100%;
-    border-bottom: solid 1px white;
 
-    height: 100%;
-    line-height: inherit;
-    white-space: normal;
-
-    margin-top: $small-spacing;
-    margin-bottom: $small-spacing;
-    padding-bottom: $small-spacing;
-
-    font-size: $small-font-size;
+    padding-left: 0px;
 
     &:after {
       line-height: normal;
@@ -31,9 +41,7 @@ $select-options-max-height: 300px !default;
         font-size: $medium-font-size;
       }
     }
-    @include media($desktop){
-      font-size: $medium-font-size;
-    }
+
   }
   .-options {
     .-option:first-of-type{
@@ -43,7 +51,7 @@ $select-options-max-height: 300px !default;
     }
 
     .-option {
-      @extend .button.-block;
+      @extend .-block;
       background-color: transparent;
       border: none;
       outline: none;
@@ -61,5 +69,15 @@ $select-options-max-height: 300px !default;
   
   &.-open .-options {
     max-height: $select-options-max-height;
+  }
+}
+
+.-item {
+  @include decorated-selection;
+  text-align: left;
+  border-bottom: solid 1px white;
+  
+  .name {
+    display: inline-block;
   }
 }
