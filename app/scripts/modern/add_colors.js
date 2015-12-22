@@ -80,7 +80,7 @@ function appendColor(color, $section) {
     $color.append('<code>$' + color + '</code><br/>');
   });
   $color.append('<code>' + getHex($swatch) + '</code>');
-};
+}
 
 export default function() {
   colorSections.forEach(function(section){
@@ -92,5 +92,5 @@ export default function() {
     section.colors.forEach(function(color){
       appendColor(color, $section);
     });
-  })
-};
+  });
+}

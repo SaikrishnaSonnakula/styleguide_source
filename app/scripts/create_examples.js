@@ -27,7 +27,7 @@ define(['jquery'], function($){
         $extraCode.attr("class", $extraCodeEl.attr("class"));
       }
 
-      $code.append($extraCode)
+      $code.append($extraCode);
       $code.append($("<pre></pre>").append($("<code class='language-markup'></code>").text(trimMarkup($el.html()))));
 
       var $result = $el.clone();
@@ -42,5 +42,5 @@ define(['jquery'], function($){
 
       Prism.highlightAll();
     });
-  }
+  };
 });

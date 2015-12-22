@@ -111,3 +111,11 @@ $action-color-light: #5FA621 !default;
 		}
 	}
 }
+
+.-center-piece {
+  @include pad;
+  @include outer-container(95%);
+  @include media($desktop){
+    @include outer-container(80%);
+  }
+}

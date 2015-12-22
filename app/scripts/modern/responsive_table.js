@@ -61,7 +61,7 @@ export default function responsiveTable(args) {
         return $td.html('Yes');
       }
       return $td.addClass('rose').html('No');
-    };
+    }
 
     $tr.append(breakpointTD('mobile'));
     $tr.append(breakpointTD('tablet'));

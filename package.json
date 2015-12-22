@@ -22,10 +22,18 @@
     "shelljs": "^0.3.0",
     "style-loader": "^0.12.3",
     "underscore": "^1.8.3",
+    "underscore.string": "~3.0.1",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.1",
     "webpack-dev-server": "^1.10.1",
-    "ng-annotate-loader": "0.0.10"
+    "ng-annotate-loader": "0.0.10",
+    "backbone": "~1.1.2",
+    "rsvp": "3.1.0",
+    "chai": "^2.1.0",
+    "chai-accessible": "git+ssh://git@stash.kp.org/rwd/chai-accessible.git",
+    "chai-as-promised": "^5.1.0",
+    "chai-jquery": "~2.0.0",
+    "chai-spies": "~0.5.1"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
