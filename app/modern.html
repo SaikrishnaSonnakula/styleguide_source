@@ -709,9 +709,31 @@
                 <option value="B">Banana</option>
               </select>
             </div>
+
+            <!-- Comment intented for explanation purpose, do not use any of below in your code. 
+            The rendered markup as below.
+
+            <label for="select-from" class="screenreader-only">
+              Select from:
+            </label>
+            <div class="fancy-select">
+              <select id="select-from" class="screenreader-only">
+                <option value="" selected="true"></option>
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+
+              <button class="-value">Select from: </button>
+              <div class="-options">
+                <button value="" class="-option -active"></button>
+                <button value="A" class="-option">Apple</button>
+                <button value="B" class="-option">Banana</button>
+              </div>
+            </div>
+            -->
           </div>
 
-          <p>When you only need show one selection, to keep align with the style above, you could use <code>-item</code></p>.
+          <p>When you only need to show one option in the style above, you could use <code>-item</code>.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
               <div class="-item">
