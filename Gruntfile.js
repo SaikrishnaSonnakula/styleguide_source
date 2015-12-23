@@ -18,5 +18,16 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.config.set('copy', {
+    dist: {
+      files: [{
+        expand: true,
+        cwd: 'app',
+        src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
+        dest: 'target/dist'
+      }]
+    }
+  });
+
   grunt.registerTask('ci', ['build', 'package']);
 };
