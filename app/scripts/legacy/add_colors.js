@@ -40,20 +40,20 @@ define(['jquery'], function($){
     colorSections.forEach(function(section){
       var $section = $('<div class="color-section"></div>');
 
-      $('#colors').append($section);
-      $section.before('<h3>' + section.name + '</h3>');
+      if($('#colors').length){
+        $('#colors').append($section);
+        $section.before('<h3>' + section.name + '</h3>');
 
-      section.colors.forEach(function(color){
-        var $color = $('<div class="color"></div>');
-        $section.append($color);
+        section.colors.forEach(function(color){
+          var $color = $('<div class="color"></div>');
+          $section.append($color);
 
-        var $swatch = $('<div class="swatch '+ color +'"></div>');
-        $color.append($swatch);
-
-        $color.append('<code>$' + color + '</code><br/>');
-        $color.append('<code>' + getHex($swatch) + '</code>');
-      });
-
+          var $swatch = $('<div class="swatch '+ color +'"></div>');
+          $color.append($swatch);
+          $color.append('<code>$' + color + '</code><br/>');
+          $color.append('<code>' + getHex($swatch) + '</code>');
+        })
+      }
     });
   };
 });
