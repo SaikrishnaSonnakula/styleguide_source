@@ -22,7 +22,9 @@ var easterEgg = function() {
 
 $(function() {
   $(".fixedsticky").fixedsticky();
-  addColors();
+  if($("#colors-section") && $("#colors-section").length!==0){
+    addColors();
+  }
   createExamples();
   easterEgg();
   addSpacing();
