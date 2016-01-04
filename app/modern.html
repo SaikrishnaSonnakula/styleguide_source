@@ -39,7 +39,7 @@
           <li><a href="#lists-section">Lists</a></li>
           <li><a href="#modal-section">Modal</a></li>
           <li><a href="#forms-section">Forms</a></li>
-          <li><a href="#features-section">Features</a></li
+          <li><a href="#features-section">Features</a></li>
           <li><a href="#dropdowns-section">Dropdowns</a></li>
           <li><a href="#errors-section">Notifications</a></li>
           <li><a href="#layouts-section">Layouts</a></li>
@@ -59,6 +59,11 @@
           <p>
             If your interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk on Styleguide Driven Development by Nicole Sullivan</a>.
           </p>
+
+          <h3 class="styleguide-section-subheading">Javascript UI elements</h3>
+          
+          <p>We have added new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, in this page there are complex UI elements generated with the help of javascript.</p>
+
         </section>
 
         <section id="installation-section">
@@ -83,8 +88,7 @@
             right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
 
             If you are using the Build Plugin, you're all set!
-          </p>
-
+          </p>  
           <p>
             If for some reason you can not use the Build Plugin, you will need to build the assets manually out for AEM integration.
             We will soon be documenting this process, but in the mean time, please contact
@@ -352,12 +356,11 @@
             </button>
           </div>
 
-
           <p>
             If you need a stabled button you can add the following class <code>-disabled</code>
           </p>
           <div class="example -element">
-            <button class="button -disabled">
+            <button class="button -disabled" disabled>
               Disabled button
             </button>
           </div>
@@ -472,6 +475,9 @@
             Feature Layout
           </h3>
 
+          <p>
+            Note: This shows feature-content style up to $desktop-medium, due to the width of the example display, the style is hidden with the example box.
+          </p>
           <div class="example">
             <div class="feature">
               <div class="action-box">
@@ -499,7 +505,7 @@
           <div class="example">
             <div class="feature -action-box-active">
               <div class="action-box">
-                <h3 class="action-message">Action Message</h3>
+                <h3 class="action-message">Action Message in Active Action Box</h3>
               </div>
               <div class="feature-content">
                 <h1 class="page-heading">My Feature</h1>
@@ -553,11 +559,13 @@
             </div>
           </div>
 
-          <div class="example -padded -hide-action-buttons" id="action-button">
+          <p>
+           Add <code>.-center-piece</code> to center your feature content. Self adjust to fit small form factor. Color only for indicating padding space purpose.
+          </p>
+ 
+          <div class="example -padded">
             <div class="action-box">
-              <button class="disable-button">
-                Disabled button
-              </button>
+              <div class="-center-piece fuchsia">Fancy Center Piece</div>
             </div>
           </div>
 
@@ -633,7 +641,8 @@
         </section>
 
         <section id="dropdowns-section">
-          <h2 class="styleguide-subheading">
+
+          <h2 class="styleguide-section-heading">
             Dropdowns
           </h2>
           <p>
@@ -676,7 +685,7 @@
             </div>
           </div>
         </section>
-
+        
         <section id="errors-section">
           <h2 class="styleguide-section-heading">Notifications</h2>
 
@@ -727,9 +736,7 @@
               </div>
             </div>
           </div>
-
         </section>
-
         <section id="layouts-section">
           <h2 class="styleguide-section-heading">Layouts (Experimental)</h2>
 
@@ -794,7 +801,7 @@
             </div>
           </div>
 
-                    <div class="example">
+          <div class="example">
             <div class="two-columns">
               <div class="-column grass">
                 Column 1
@@ -819,6 +826,7 @@
 
             </div>
           </div>
+
         </section>
 
         <section id="icons-section">

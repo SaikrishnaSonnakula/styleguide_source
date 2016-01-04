@@ -9,6 +9,7 @@ import addSpacing from './add_spacing';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
+import fancySelect from 'lib/modern/scripts/fancy_select';
 
 var easterEgg = function() {
   $("#name-field").keyup(function() {
@@ -21,15 +22,19 @@ var easterEgg = function() {
 
 $(function() {
   $(".fixedsticky").fixedsticky();
-  addColors();
+  if($("#colors-section") && $("#colors-section").length!==0){
+    addColors();
+  }
   createExamples();
   easterEgg();
   addSpacing();
   responsiveTable();
 
+  fancySelect($("#select-from"));
+
   $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");
-  })
+  });
 
   var focusedElementBeforeModal = null;
   var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
@@ -67,11 +72,11 @@ $(function() {
 
   $("#toggle-action-button-pair").click(function() {
     $("#action-button-pair").toggleClass("-hide-action-buttons");
-  })  
+  });
 
   $("#toggle-primary-action-button").click(function() {
     $("#action-button").toggleClass("-hide-action-buttons");
-  })
+  });
 
   $("main").show();
 });

@@ -1,0 +1,86 @@
+$select-font-color: white !default;
+$select-options-max-height: 300px !default;
+
+@mixin decorated-selection {
+  @extend .-block;
+  background-color: transparent;
+
+  min-width: 100%;
+  height: 100%;
+  line-height: inherit;
+  white-space: normal;
+
+  margin-top: $small-spacing;
+  margin-bottom: $small-spacing;
+  padding-bottom: $small-spacing;
+  padding-top: $small-spacing;
+
+  border: none;
+  border-bottom: solid 1px white;
+
+  font-size: $small-font-size;
+  @include media($desktop){
+    font-size: $medium-font-size;
+  }
+}
+
+.fancy-select {
+  @extend .dropdown;
+  background-color: transparent;
+
+  .-value {
+    @include decorated-selection;
+    color: $select-font-color;
+
+    padding-left: 0px;
+
+    &:after {
+      line-height: normal;
+      color: $select-font-color;
+      float: right;
+      @include media($desktop){
+        font-size: $medium-font-size;
+      }
+    }
+
+  }
+  .-options {
+      @include transition(all 0.4s $ease-in-out-cubic);
+
+    .-option:first-of-type{
+      height: 0px;
+      display: none;
+      visibility: hidden;
+    }
+
+    .-option {
+      @extend .-block;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: $tiny-font-size;
+      outline: none;
+      color: $select-font-color;  
+      
+      &.-active, &:hover, &:focus{
+        color: $select-font-color;  
+        font-family: $bold-font-family;
+      }  
+    }
+  }  
+  
+  &.-open .-options {
+    max-height: $select-options-max-height;
+  }
+}
+
+.-item {
+  @include decorated-selection;
+  text-align: left;
+  border-bottom: solid 1px white;
+  
+  .name {
+    display: inline-block;
+  }
+}

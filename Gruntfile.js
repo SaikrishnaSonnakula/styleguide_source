@@ -14,7 +14,10 @@ module.exports = function(grunt) {
       loaders: [{
         test: require.resolve('./vendor/fixedsticky'),
         loader: 'imports?jQuery=jquery'
-      }]
+      }],
+      alias:{
+        'chai-accessible': 'chai-accessible/src/chai-accessible'
+      }
     }
   });
 
@@ -27,6 +30,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.registerTask('ci', ['build', 'package']);
+  grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
+  
 };

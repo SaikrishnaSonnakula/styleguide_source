@@ -23,6 +23,11 @@ $action-color-light: $interactive-blue !default;
   -webkit-font-smoothing: antialiased;
 }
 
+.-block {
+  display: block;
+  width: 100%;
+}
+
 .button {
   @extend %rounded-input;
   @include transition(background-color 0.2s ease,
@@ -38,11 +43,7 @@ $action-color-light: $interactive-blue !default;
     color: white;
     border-color: $button-hover-color;
   }
-
-  &.-block {
-    display: block;
-    width: 100%;
-  }
+  
   &.-action {
     background-color: transparent;
     border-color: white;
