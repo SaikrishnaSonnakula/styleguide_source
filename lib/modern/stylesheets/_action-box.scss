@@ -46,6 +46,7 @@ $action-color-light: #5FA621 !default;
 		bottom: 0px;
 		&:hover, &:focus {
 			background-color: white;
+			color: $interactive-blue;
 		}
 	}
   @include media($desktop){
