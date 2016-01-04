@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <script src="modern.bundle.js"></script>
 
     <meta charset="UTF-8">
@@ -57,12 +56,12 @@
           </p>
 
           <p>
-            If your interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk on Styleguide Driven Development by Nicole Sullivan</a>.
+            If you're interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk</a> on Styleguide Driven Development by Nicole Sullivan.
           </p>
 
           <h3 class="styleguide-section-subheading">Javascript UI elements</h3>
-          
-          <p>We have added new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, in this page there are complex UI elements generated with the help of javascript.</p>
+
+          <p>We have added a new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, in this page there are complex UI elements generated with the help of JavaScript.</p>
 
         </section>
 
@@ -78,7 +77,7 @@
           <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
 
           <p>
-            Then, include the styles your sass file:
+            Then, include the styles in your sass file:
           </p>
 
           <pre><code class="language-scss">@import "styleguide/modern"</code></pre>
@@ -88,9 +87,9 @@
             right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
 
             If you are using the Build Plugin, you're all set!
-          </p>  
+          </p>
           <p>
-            If for some reason you can not use the Build Plugin, you will need to build the assets manually out for AEM integration.
+            If for some reason you cannot use the Build Plugin, you will need to build the assets manually out for AEM integration.
             We will soon be documenting this process, but in the mean time, please contact
             <a href="mailto:Vladimir Zelmanov/CA/KAIPERM@KAIPERM">Vladimir Zelmanov/CA/KAIPERM@KAIPERM</a>
             or
@@ -100,12 +99,12 @@
 
         <section id="responsive-section">
           <h2 class="styleguide-section-heading">Responsive</h2>
-          <p>For easy of development the following SASS variables are provided that contain defined breakpoints.</p>
+          <p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
           <div id="responsive-table">
           </div>
 
           <h4>Usage</h4>
-          If you want to apply a specific style to let say the <code>$mobile</code> view try this:
+          If you want to apply a specific style to let's say the <code>$mobile</code> view try this:
           <pre class="code language-scss" data-langauge="scss">
             <code class="code">
             .element{
@@ -115,7 +114,7 @@
             }
             </code>
           </pre>
-          Here's another example if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
+          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
           <pre class="code language-scss"><code class="code">
 .element{
   @include media($desktop-large) {
@@ -140,7 +139,7 @@
         <section id="typography-section">
           <h2 class="styleguide-section-heading">Typography</h2>
           <p>
-            These varibles represent the different sizes and styles of fonts in KP apps. If you are modifing <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
+            These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
           </p>
           <h3 class="styleguide-subheading">
             Font Family Variables
@@ -232,8 +231,8 @@
         </section>
         <section id="spacing-section">
           <h2 class="styleguide-section-heading">Spacing</h2>
-          <p>There are several varibles that can help you more effectively choose
-          spacing for your feature specific styling. <strong>Hover over an element
+          <p>There are several variables that can help you more effectively choose
+          spacing for your feature-specific styling. <strong>Hover over an element
           to see the spacing highlighted.</strong></p>
           <div class="spacing-examples">
             <div class="spacing-example -tiny">
@@ -306,7 +305,7 @@
         <section id="buttons-section">
           <h2 class="styleguide-section-heading">Buttons</h2>
           <p>
-            <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning, choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
+            <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
           </p>
           <div class="example -element -padded">
             <button class="button">
@@ -348,7 +347,7 @@
           </div>
 
           <p>
-            If you need a button on block level - those that span the full width of a parent. Use the <code>-block</code> class:
+            If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
           </p>
           <div class="example -element">
             <button class="button -block">
@@ -357,7 +356,7 @@
           </div>
 
           <p>
-            If you need a stabled button you can add the following class <code>-disabled</code>
+            If you need a disabled button you can add the following class <code>-disabled</code>
           </p>
           <div class="example -element">
             <button class="button -disabled" disabled>
@@ -476,7 +475,7 @@
           </h3>
 
           <p>
-            Note: This shows feature-content style up to $desktop-medium, due to the width of the example display, the style is hidden with the example box.
+            Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
           </p>
           <div class="example">
             <div class="feature">
@@ -497,9 +496,9 @@
           </h3>
 
           <p>
-            In device mode, active action box occupies full screen and hide feature-content.
+            In device mode, active action box occupies full screen and hides feature-content.
             In desktop mode, active action box pushes feature-content down.
-            To active the action box, add <code>-action-box-active</code> to the feature element.
+            To activate the action box, add <code>-action-box-active</code> to the feature element.
           </p>
 
           <div class="example">
@@ -521,7 +520,7 @@
           </h3>
 
           <p>
-            Action buttons will show as fixed buttons on the bottom of the screen for device.
+            Action buttons will show as fixed buttons on the bottom of the screen for the device.
           </p>
 
           <p class="device-only">
@@ -543,7 +542,7 @@
           </div>
 
           <p>
-            Main action button will show as fixed buttons on the bottom of the screen for device.
+            Main action buttons will show as fixed buttons on the bottom of the screen for device.
           </p>
 
           <p class="device-only">
@@ -560,9 +559,9 @@
           </div>
 
           <p>
-           Add <code>.-center-piece</code> to center your feature content. Self adjust to fit small form factor. Color only for indicating padding space purpose.
+           Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.
           </p>
- 
+
           <div class="example -padded">
             <div class="action-box">
               <div class="-center-piece fuchsia">Fancy Center Piece</div>
@@ -597,7 +596,7 @@
           </div>
 
           <p>
-            For feed items with collapsable content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
+            For feed items with collapsible content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
             elements with the <code>collapsible-content</code> class.
           </p>
 
@@ -648,7 +647,7 @@
           <p>
            Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
           </p>
-          <p><small>Accordions coming soon email michael.chisari@kp.org</small></p>
+          <p><small>Accordions coming soon - email <a href="mailto:michael.chisari@kp.org">michael.chisari@kp.org</a></small></p>
           <div class="example -padded-desktop">
             <pre class="code language-javascript">
               $("#best-nba-team .-value").click(function() {
@@ -685,7 +684,7 @@
             </div>
           </div>
         </section>
-        
+
         <section id="errors-section">
           <h2 class="styleguide-section-heading">Notifications</h2>
 
@@ -832,15 +831,15 @@
         <section id="icons-section">
           <h2>Icons</h2>
           <p>
-            We have a whole suite of Icons approved by design and brand. We're working on displaying all 88+ Icons so you (designer/developer) can see what we have available. If you see an Icon that you think should be in styleguide please contact jennifer.m.beasley@kp.org. You can find her on hipchat.
+            We have a whole suite of Icons approved by design and brand. We're working on displaying all 88+ Icons so you (designer/developer) can see what we have available. If you see an Icon that you think should be in styleguide please contact <a href="mailto:jennifer.m.beasley@kp.org">jennifer.m.beasley@kp.org</a>. You can find her on HipChat.
           </p>
           <h3>Multiple sizes of icons</h3>
           <div class="example -minor -padded">
             <div class="icon-results-solid2 icon-md"></div>
-            This is medium sized icon
+            This is medium-sized icon
             <hr>
             <div class="icon-reminder icon-lg"></div>
-            This is a large sized icon
+            This is a large-sized icon
           </div>
 
           <pre class="code language-scss">
