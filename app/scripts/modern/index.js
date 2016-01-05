@@ -11,22 +11,12 @@ import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 
-var easterEgg = function() {
-  $("#name-field").keyup(function() {
-    if($('#name-field').val().trim() === "vlad") {
-      $(".example, h2, h3, p").addClass("animate-spin");
-      $("nav ul").html("VLAD MODE<br>WELCOME TO STYLETOWN!");
-    }
-  });
-};
-
 $(function() {
   $(".fixedsticky").fixedsticky();
   if($("#colors-section") && $("#colors-section").length!==0){
     addColors();
   }
   createExamples();
-  easterEgg();
   addSpacing();
   responsiveTable();
 
