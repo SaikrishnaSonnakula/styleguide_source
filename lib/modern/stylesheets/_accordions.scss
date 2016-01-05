@@ -49,6 +49,10 @@ $accordion-opened-character:'-';
 		font-size:90%;
 		clear:both;
 		width:100%;
+		@include media($tablet) {
+		    top: -34px;
+		    position: relative;
+		}
 	    }
 	}
 
