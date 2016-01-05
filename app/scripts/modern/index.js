@@ -59,12 +59,11 @@ $(function() {
   $("#best-nfl-team .-heading").click(function(el) {
     if ($(el.target).parent().hasClass("-open")) {
 	$(el.target).attr('aria-hidden','false');
-	$(el.target).parent().toggleClass("-open");
     } else {
 	$("#best-nfl-team .-heading").parent().removeClass("-open");
 	$(el.target).attr('aria-hidden','true');
-	$(el.target).parent().toggleClass("-open");
     }
+    $(el.target).parent().toggleClass("-open");
   });
 
   $("#neighborhood .-value").click(function() {
