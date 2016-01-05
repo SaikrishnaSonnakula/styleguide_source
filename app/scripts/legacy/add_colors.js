@@ -52,7 +52,7 @@ define(['jquery'], function($){
           $color.append($swatch);
           $color.append('<code>$' + color + '</code><br/>');
           $color.append('<code>' + getHex($swatch) + '</code>');
-        })
+        });
       }
     });
   };
