@@ -2,8 +2,8 @@ $input-border-width: 1px;
 
 .form-control {
   padding: $small-spacing - $input-border-width;
-  border: solid $input-border-width $graphite;
+  border: solid $input-border-width color(graphite);
   vertical-align: middle;
-  color: $dolphin;
+  color: color(dolphin);
   margin-right: $small-spacing;
 }

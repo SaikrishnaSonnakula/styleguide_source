@@ -102,15 +102,15 @@
 
 
 .responsive-example {
-  color: $graphite;
+  color: color(graphite);
 
   @include media($tablet) {
     font-size: 20px;
-    color: $dolphin;
+    color: color(dolphin);
   }
 
   @include media($desktop) {
     font-size: 32px;
-    color: $kp-blue;
+    color: color(kp-blue);
   }
 }

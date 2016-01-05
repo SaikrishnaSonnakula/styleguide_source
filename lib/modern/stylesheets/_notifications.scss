@@ -2,7 +2,7 @@ $icon-radius: $feature-icon-mobile-size;
 
 .notifications-container {
   @include outer-container(100%);
-  border: 1px solid $graphite-light;
+  border: 1px solid color(graphite-light);
   padding: $small-spacing;
 
   .-action-buttons {

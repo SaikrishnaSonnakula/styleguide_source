@@ -46,7 +46,7 @@ $action-color-light: #5FA621 !default;
 		bottom: 0px;
 		&:hover, &:focus {
 			background-color: white;
-			color: $interactive-blue;
+			color: color(interactive-blue);
 		}
 	}
   @include media($desktop){
@@ -80,17 +80,17 @@ $action-color-light: #5FA621 !default;
 		.button {
 			@include span-columns(6);
 			&.-action {
-				border-color: $interactive-blue;
+				border-color: color(interactive-blue);
 				background-color: white;
-				color: $interactive-blue;
+				color: color(interactive-blue);
 				
 				&.-inverted {
-					background-color: $interactive-blue;
-					border-color: $interactive-blue;
+					background-color: color(interactive-blue);
+					border-color: color(interactive-blue);
 					color: white;
 					&:hover, &:focus {
 	        	background-color: white;
-  	      	color: $interactive-blue;
+  	      	color: color(interactive-blue);
     	  	}
 				}
 			}

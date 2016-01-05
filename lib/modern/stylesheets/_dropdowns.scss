@@ -24,7 +24,7 @@ $dropdown-mobile-height: 50px;
       @include transition(all 0.4s $ease-out-cubic);
       display: inline-block;
       font-size: $tiny-font-size;
-      color: $interactive-blue;
+      color: color(interactive-blue);
       content: $dropdown-character;
       line-height: $dropdown-mobile-height;
       background-color: transparent;
@@ -78,7 +78,7 @@ $dropdown-mobile-height: 50px;
 .dropdown.-heading {
   .-value {
     @extend .page-heading;
-    background-color: $graphite;
+    background-color: color(graphite);
     font-family: $bold-font-family;
     font-weight: normal;
 

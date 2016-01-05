@@ -27,11 +27,11 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
       top: 2px;
       width: $checkbox-size-mobile;
       height: $checkbox-size-mobile;
-      border: $checkbox-border-width solid $dolphin;
+      border: $checkbox-border-width solid color(dolphin);
       background: white;
 
       &:hover {
-        border-color: $inky-blue;
+        border-color: color(inky-blue);
       }
     }
 
@@ -43,14 +43,14 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
       left: 3px;
       font-size: 18px;
       line-height: 0.8;
-      color: $inky-blue;
+      color: color(inky-blue);
       transition: all .2s;
     }
   }
 
   &:focus {
     & + label:before {
-      border: $checkbox-border-width solid $inky-blue;
+      border: $checkbox-border-width solid color(inky-blue);
     }
   }
 }
@@ -58,13 +58,13 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
 //disabled
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
-  background-color: $graphite-dark;
+  background-color: color(graphite-dark);
 }
 [type="checkbox"]:disabled:checked + label:after {
-  color: $dolphin;
+  color: color(dolphin);
 }
 [type="checkbox"]:disabled + label {
-  color: $dolphin;
+  color: color(dolphin);
   cursor: not-allowed !important;
 }
 

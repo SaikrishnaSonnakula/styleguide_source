@@ -44,7 +44,7 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
   }
 
   .-body {
-    color: $dolphin;
+    color: color(dolphin);
     font-size: $small-font-size;
 
     &.-errorbody {
@@ -75,6 +75,6 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
   }
 
   &.-collapsible, &.-clickable {
-    &:hover { border-color: $graphite-light; }
+    &:hover { border-color: color(graphite-light); }
   }
 }
