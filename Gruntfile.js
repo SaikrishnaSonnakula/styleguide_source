@@ -4,6 +4,8 @@ var buildPlugin = require('build-plugin/webpack');
 var path = require('path');
 
 module.exports = function(grunt) {
+  grunt.loadNpmTasks('grunt-md2html');
+
   buildPlugin(grunt, {
     webpack: {
       entry: {
@@ -27,6 +29,35 @@ module.exports = function(grunt) {
         files: [{
           src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
         }]
+      }
+    },
+    md2html: {
+      docs: {
+        options: {
+          layout: '_md_layout.html',
+          templateData: {
+            title: function(path){
+              var extractedTitleFromPath = path.substring(path.lastIndexOf('/')+1, path.lastIndexOf('.'));
+              var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text){
+                  return text.charAt(0).toUpperCase() +
+                  text.substr(1).toLowerCase();
+              });
+              return nameInTitleCase;
+            }
+          }
+        },
+        files: [{
+          expand: true,
+          src: ['*.md'],
+          dest: 'target/dist',
+          ext: '.html'
+        }]
+      }
+    },
+    watch: {
+      dist: {
+        files: ['*.md'],
+        tasks: ['md2html']
       }
     }
   });
