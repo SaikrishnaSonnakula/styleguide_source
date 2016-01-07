@@ -96,8 +96,7 @@ $accordion-opened-character:'-';
 
 	&.-open .-content {
 	    max-height: $accordion-options-max-height;
-	    padding:2px;
-	    padding-left:25px;
+	    padding: 0 0 0 $medium-spacing;
 			opacity:1;
 	}
     }
