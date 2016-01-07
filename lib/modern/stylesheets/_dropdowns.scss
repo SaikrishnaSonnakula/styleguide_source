@@ -88,6 +88,7 @@ $dropdown-mobile-height: 50px;
 
     &:after {
       float: right;
+      margin: $tiny-spacing 0 0 $medium-spacing;
 
       @include media($desktop) {
         font-size: $medium-font-size;
