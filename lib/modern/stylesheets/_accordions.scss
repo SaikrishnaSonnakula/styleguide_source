@@ -5,9 +5,9 @@ $accordion-opened-character:'-';
 
 .accordion {
     .-section {
-	padding-bottom:12px;
+	padding-bottom:$small-spacing;
 		border-bottom:2px solid #ccc;
-		margin-bottom:4px;
+		margin-bottom:$tiny-spacing;
 
 	.-heading {
 	    @extend %button-unstyled;
@@ -23,7 +23,7 @@ $accordion-opened-character:'-';
 		width: auto;
 		height: auto;
 		line-height: inherit;
-		padding: 0px;
+		padding: 0;
 	    }
 
 	    &:before {
@@ -45,13 +45,13 @@ $accordion-opened-character:'-';
 	}
 	.-subheading {
 	      display:block;
-	      margin-left:25px;
-	      color:#888;
+	      margin-left:$medium-spacing;
+	      color:$text-light;
 	      font-size:$small-font-size;
 	      clear:both;
 	      width:100%;
 	      @include media($tablet) {
-		  top: -34px;
+		  top: (-$medium-spacing);
 		  font-size:$tiny-font-size;
 		  position: relative;
 	      }
