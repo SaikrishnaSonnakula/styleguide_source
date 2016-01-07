@@ -42,19 +42,19 @@ $accordion-opened-character:'-';
 		    line-height: inherit;
 		}
 	    }
-	    .-subheading {
-		display:block;
-		margin-left:25px;
-		color:#888;
-		font-size:$small-font-size;
-		clear:both;
-		width:100%;
-		@include media($tablet) {
-		    top: -34px;
-		    font-size:$tiny-font-size;
-		    position: relative;
-		}
-	    }
+	}
+	.-subheading {
+	      display:block;
+	      margin-left:25px;
+	      color:#888;
+	      font-size:$small-font-size;
+	      clear:both;
+	      width:100%;
+	      @include media($tablet) {
+		  top: -34px;
+		  font-size:$tiny-font-size;
+		  position: relative;
+	      }
 	}
 
 	&.-open .-heading:before{
