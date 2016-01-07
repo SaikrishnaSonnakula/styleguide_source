@@ -1,10 +1,10 @@
-$button-color: $interactive-blue;
+$button-color: color(interactive-blue);
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-border-size: 2px;
-$action-color-bg: $interactive-blue !default;
-$action-color-light: $interactive-blue !default;
+$action-color-bg: color(interactive-blue) !default;
+$action-color-light: color(interactive-blue) !default;
 
 %rounded-input {
   @include appearance(none);

@@ -10,7 +10,7 @@ $path-to-icon: './assets/fonts' !default;
   width: $feature-icon-mobile-size;
   height: $feature-icon-mobile-size;
   border-radius: 50%;
-  background-color: $graphite;
+  background-color: color(graphite);
 
   @include media($desktop) {
     width: $feature-icon-desktop-size;
@@ -577,11 +577,11 @@ $dropdown-character: "\e61c";
 }
 
 .icon-location-solid:before {
-  color: $kp-blue;
+  color: color(kp-blue);
 }
 
 .icon-kp-solid:before {
-  color: $kp-blue;
+  color: color(kp-blue);
 }
 $salmon : #ed0;
 .icon-class-solid:before {
@@ -589,11 +589,11 @@ $salmon : #ed0;
 }
 
 .icon-assessment:before {
-  color: $dolphin;
+  color: color(dolphin);
 }
 
 .icon-plan-solid:before {
-  color: $dolphin;
+  color: color(dolphin);
 }
 $macha : red;
 .icon-speach-solid:before {
@@ -601,19 +601,19 @@ $macha : red;
 }
 
 .icon-rx-solid:before {
-  color: $lilac;
+  color: color(lilac);
 }
 
 .icon-results-solid:before {
-  color: $lilac;
+  color: color(lilac);
 }
 
 .icon-pay-solid:before {
-  color: $dolphin;
+  color: color(dolphin);
 }
 
 .icon-hospital-hollow:before {
-  color: $kp-blue;
+  color: color(kp-blue);
 }
 
 .icon-heart-solid:before {
@@ -625,7 +625,7 @@ $harvest : #8b4513;
 }
 
 .icon-doctor-hollow:before {
-  color: $kp-blue;
+  color: color(kp-blue);
 }
 $tomato: #ff0000;
 .icon-article-solid:before {
@@ -633,7 +633,7 @@ $tomato: #ff0000;
 }
 
 .icon-download:before {
-  color: $interactive-blue;
+  color: color(interactive-blue);
 }
 
 // .icon-expand {

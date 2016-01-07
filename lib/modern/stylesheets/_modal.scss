@@ -42,7 +42,7 @@
     margin: 0;
     overflow: auto;
     &:focus {
-      border:2px $kp-blue solid;
+      border:2px color(kp-blue) solid;
     }
     @include media($desktop) {
       @include transform(translateY(20px));
@@ -72,7 +72,7 @@
       padding-left: $small-spacing;
       padding-right: $small-spacing;
       margin-bottom: $small-spacing;
-            
+
       .button{
         margin-bottom: $gutter-spacing;
         width: 100%;
@@ -83,14 +83,14 @@
         }
 
         &.-action {
-          color: $interactive-blue;
+          color: color(interactive-blue);
           background-color: white;
-          border-color: $interactive-blue;
+          border-color: color(interactive-blue);
         }
 
         &.-action.-inverted {
           color: white;
-          background-color: $interactive-blue;
+          background-color: color(interactive-blue);
         }
 
         @include media($desktop-medium-up) {

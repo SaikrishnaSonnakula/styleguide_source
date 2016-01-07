@@ -7,27 +7,27 @@ var colorSections = [
       'kp-blue',
       [
         'interactive-blue',
-        'link-color'
+        '$link-color'
       ],
       [
         'interactive-blue-dark',
-        'button-hover-color'
+        '$button-hover-color'
       ],
       [
         'disable-blue',
-        'button-disable-color'
+        '$button-disable-color'
       ],
       [
         'interactive-blue-darker',
-        'link-hover-color'
+        '$link-hover-color'
       ],
       [
         'inky-blue',
-        'text-dark'
+        '$text-dark'
       ],
       [
         'dolphin',
-        'text-light'
+        '$text-light'
       ],
       'graphite-dark',
       'graphite',
@@ -77,7 +77,7 @@ function appendColor(color, $section) {
   $color.append($swatch);
 
   colors.forEach(function(color) {
-    $color.append('<code>$' + color + '</code><br/>');
+    $color.append('<code>' + color + '</code><br/>');
   });
   $color.append('<code>' + getHex($swatch) + '</code>');
 }

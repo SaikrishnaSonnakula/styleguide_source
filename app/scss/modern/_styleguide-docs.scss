@@ -11,15 +11,15 @@ $mobile-header-height: 50px;
 code {
   line-height: $medium-font-size;
   padding: 2px;
-  color: $kp-blue;
-  background-color: $graphite;
+  color: color(kp-blue);
+  background-color: color(graphite);
   font-size: $tiny-font-size;
 }
 
 .styleguide-header {
   @extend .page-heading;
 
-  background-color: $kp-blue;
+  background-color: color(kp-blue);
   color: white;
   background-image: url('images/kp-icon.svg');
   background-position: 50% 30%;
@@ -40,7 +40,7 @@ code {
   @include media($desktop) {
     width: 100%;
     height: 170px;
-    border-bottom: $kp-blue 10px solid;
+    border-bottom: color(kp-blue) 10px solid;
     background-size: 100px;
     padding-top: 120px;
     text-align: center;
@@ -89,12 +89,12 @@ code {
   }
 
   a {
-    color: $dolphin;
+    color: color(dolphin);
     text-decoration: none !important;
 
     &:hover {
       margin-left: 0.2em;
-      color: $interactive-blue;
+      color: color(interactive-blue);
     }
   }
 
@@ -104,7 +104,7 @@ code {
     display: block;
     z-index: 10;
     position: fixed;
-    background-color: $graphite;
+    background-color: color(graphite);
     width: 50%;
     top: $mobile-header-height !important;
     left: 0px;
@@ -124,7 +124,7 @@ code {
 }
 
 .styleguide-nav-heading {
-  color: $inky-blue;
+  color: color(inky-blue);
   font-size: $small-font-size;
   font-family: $bold-font-family;
   margin-bottom: $tiny-spacing;
@@ -142,7 +142,7 @@ code {
 
 .styleguide-section-heading {
   font-size: $medium-font-size;
-  color: $kp-blue;
+  color: color(kp-blue);
   padding-bottom: 10px; //TODO: remove this magic number
   border-bottom: 1px $border-color solid;
   margin-bottom: 20px; //TODO: remove this magic number
@@ -155,7 +155,7 @@ code {
 
 .styleguide-subheading {
   margin-top: $large-spacing;
-  color: $dolphin;
+  color: color(dolphin);
   font-size: $medium-font-size;
 }
 
@@ -190,7 +190,7 @@ code {
 
   .font-variable {
     margin-bottom: $paragraph-spacing;
-    background-color: $pebble;
+    background-color: color(pebble);
 
     div {
       padding-left: $small-spacing;
@@ -237,7 +237,7 @@ table.table {
   width: 100%;
 
   th {
-    border-bottom: 2px solid $dolphin;
+    border-bottom: 2px solid color(dolphin);
     font-family: $bold-font-family;
     padding: $medium-spacing 0;
     text-align: left;
@@ -245,7 +245,7 @@ table.table {
   td {
     text-align: center;
     width: auto;
-    border-bottom: 1px solid $graphite-dark;
+    border-bottom: 1px solid color(graphite-dark);
     padding: $medium-spacing 0;
   }
   td:first-child {
@@ -267,7 +267,7 @@ table.table {
 
   .spacing-example {
     margin-bottom: $paragraph-spacing;
-    background-color: $pebble;
+    background-color: color(pebble);
     padding: $small-padding;
 
     // Make spacing variables available to auto document.
@@ -294,7 +294,7 @@ table.table {
 
   .spacing-highlight {
     @include clearfix;
-    * { background-color: $pebble; }
+    * { background-color: color(pebble); }
   }
 
   .spacing-example:hover .spacing-highlight {
@@ -313,7 +313,7 @@ table.table {
 .current-breakpoint {
   position: fixed;
   width: 100%;
-  background: $graphite;
+  background: color(graphite);
   padding: $small-padding;
   text-align: center;
   z-index: 1;

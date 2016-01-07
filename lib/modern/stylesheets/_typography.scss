@@ -22,7 +22,7 @@ $bold-font-family: "Gotham 7r";
 .page-heading {
   font-size: $small-font-size;
   font-weight: bold;
-  color: $inky-blue;
+  color: color(inky-blue);
 
   @include media($desktop) {
     font-size: $large-font-size;
@@ -33,7 +33,7 @@ $bold-font-family: "Gotham 7r";
   margin-bottom: $tiny-spacing;
   font-size: $small-font-size;
   letter-spacing: -1px;
-  color: $inky-blue;
+  color: color(inky-blue);
   font-weight: normal;
 
   @include media($desktop) {
@@ -45,14 +45,14 @@ $bold-font-family: "Gotham 7r";
   margin-top: 0px;
   font-size: $small-font-size;
   letter-spacing: -0.5px;
-  color: $inky-blue;
+  color: color(inky-blue);
   font-weight: normal;
 }
 
 .section-heading {
   font-size: $medium-font-size;
   letter-spacing: -0.75px;
-  color: $dolphin;
+  color: color(dolphin);
   font-weight: normal;
 }
 // FONT STYLE CLASSES
@@ -60,12 +60,12 @@ $bold-font-family: "Gotham 7r";
 .item-tag {
   text-transform: uppercase;
   font-size: $tiny-font-size;
-  color: $dolphin;
+  color: color(dolphin);
 }
 
 .auxiliary-text {
   font-size: $tiny-font-size;
-  color: $dolphin;
+  color: color(dolphin);
 }
 
 .inverted-link {
@@ -74,6 +74,6 @@ $bold-font-family: "Gotham 7r";
   }
 
   &:hover, &:focus {
-    color: $interactive-blue;
+    color: color(interactive-blue);
   }
 }

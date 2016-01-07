@@ -7,147 +7,60 @@
 // NOTE: if you want a variable here to be added to the docs
 // please add it to the list in add_colors.js
 
-$interactive-blue: #3e66f7;
-.interactive-blue { background-color: $interactive-blue !important; }
+$colors: (
+	"interactive-blue": #3e66f7,
+	"kp-blue": #006ba6,
+	"interactive-blue-dark": #3A60E9,
+	"interactive-blue-darker": #3659D9,
+	"disable-blue": #829cfb,
+	"inky-blue": #0D1C3D,
+	"dolphin": #6B7487,
+	"graphite-dark": #D3D6DC,
+	"graphite": #E9EBEE,
+	"graphite-light": #F4F5F6,
+	"pebble": #FAFAFA,
+	"lilac": #8B4BBF,
+	"fuchsia": #C11666,
+	"tiger-lily": #D64400,
+	"grass": #448400,
+	"aqua": #00838A,
+	"dusk": #5F6E90,
+	"plum": #44116C,
+	"acai": #7B1350,
+	"burnt-sienna": #972900,
+	"moss": #255200,
+	"ocean": #005358,
+	"midnight": #334161,
+	"lavender": #E3C6FB,
+	"rose": #FF9FBA,
+	"tangerine": #FFEAC6,
+	"leaf": #DBFDB7,
+	"robin-egg": #D9FFFA,
+	"sky": #BDECFF
+);
 
-$kp-blue: #006ba6;
-.kp-blue { background-color: $kp-blue !important; }
-
-$interactive-blue-dark: #3A60E9;
-.interactive-blue-dark {
-	background-color: $interactive-blue-dark !important;
+@function color($key){
+	@if not map-has-key($colors, $key){
+		@warn "Color `#{$key}` is not defined in color map";
+	}
+	@return map-get($colors, $key);
 }
 
-$interactive-blue-darker: #3659D9;
-.interactive-blue-darker {
-	background-color: $interactive-blue-darker !important;
+@function set-text-color($bgcolor) {
+  @if (lightness($bgcolor) > 50) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
 }
 
-$disable-blue: #829cfb;
-.disable-blue {
-	background-color: $disable-blue !important;
+@each $name, $bgcolor in $colors {
+	.#{$name} {
+		background-color: $bgcolor !important;
+		color: set-text-color($bgcolor);
+		&.-inverted {
+		  background-color: color(graphite-light) !important;
+		  color: $bgcolor;
+		}
+	}
 }
-
-$inky-blue: #0D1C3D;
-.inky-blue {
-	background-color: $inky-blue !important;
-}
-
-$dolphin: #6B7487;
-.dolphin {
-	background-color: $dolphin !important;
-}
-
-$graphite-dark: #D3D6DC;
-.graphite-dark {
-	background-color: $graphite-dark !important;
-}
-
-$graphite: #E9EBEE;
-.graphite {
-	background-color: $graphite !important;
-}
-
-$graphite-light: #F4F5F6;
-.graphite-light {
-	background-color: $graphite-light !important;
-}
-
-$pebble: #FAFAFA;
-.pebble {
-	background-color: $pebble !important;
-}
-
-$lilac: #8B4BBF;
-.lilac {
-	background-color: $lilac !important;
-}
-
-$fuchsia: #C11666;
-.fuchsia {
-	color: white;
-	background-color: $fuchsia !important;
-}
-
-$tiger-lily: #D64400;
-.tiger-lily {
-	background-color: $tiger-lily !important;
-}
-
-$grass: #448400;
-.grass {
-	color: white;
-	background-color: $grass !important;
-}
-
-$aqua: #00838A;
-.aqua {
-	color: white;
-	background-color: $aqua !important;
-}
-
-$dusk: #5F6E90;
-.dusk {
-	background-color: $dusk !important;
-}
-
-$plum: #44116C;
-.plum {
-	background-color: $plum !important;
-}
-
-$acai: #7B1350;
-.acai {
-	background-color: $acai !important;
-}
-
-$burnt-sienna: #972900;
-.burnt-sienna {
-	background-color: $burnt-sienna !important;
-}
-
-$moss: #255200;
-.moss {
-	background-color: $moss !important;
-}
-
-$ocean: #005358;
-.ocean {
-	background-color: $ocean !important;
-}
-
-$midnight: #334161;
-.midnight {
-	background-color: $midnight !important;
-}
-
-$lavender: #E3C6FB;
-.lavender {
-	background-color: $lavender !important;
-}
-
-$rose: #FF9FBA;
-.rose {
-	background-color: $rose !important;
-}
-
-$tangerine: #FFEAC6;
-.tangerine {
-	background-color: $tangerine !important;
-}
-
-$leaf: #DBFDB7;
-.leaf {
-	background-color: $leaf !important;
-}
-
-$robin-egg: #D9FFFA;
-.robin-egg {
-	background-color: $robin-egg !important;
-}
-
-$sky: #BDECFF;
-.sky {
-	background-color: $sky !important;
-}
-
