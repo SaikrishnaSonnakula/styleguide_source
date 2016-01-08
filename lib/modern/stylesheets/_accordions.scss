@@ -32,8 +32,8 @@ $accordion-opened-character:'-';
 		display: inline-block;
 		font-size: $tiny-font-size;
 		font-weight:bold;
-		color: $interactive-blue;
-			    width:20px;
+		color: color(interactive-blue);
+		width:20px;
 		content: $accordion-closed-character;
 		line-height: $accordion-mobile-height;
 		background-color: transparent;
@@ -44,28 +44,28 @@ $accordion-opened-character:'-';
 	    }
 	}
 	.-subheading {
-	      display:block;
-	      margin-left:$medium-spacing;
-	      color:$text-light;
-	      font-size:$small-font-size;
-	      clear:both;
-	      width:100%;
+	      display: block;
+	      margin-left: $medium-spacing;
+	      color: color(text-light);
+	      font-size: $small-font-size;
+	      clear: both;
+	      width: 100%;
 	      @include media($tablet) {
 		  top: (-$medium-spacing);
-		  font-size:$tiny-font-size;
+		  font-size: $tiny-font-size;
 		  position: relative;
 	      }
 	}
 
 	&.-open .-heading:before{
 	    content: $accordion-opened-character;
-			width:20px;
+	    width:20px;
 	}
 
 	.-content {
 	    @extend %list-unstyled;
 	    @include transition(opacity 0.6s $ease-out-cubic);
-			opacity:0;
+	    opacity:0;
 	    overflow: hidden;
 	    margin-top: 0px;
 	    max-height: 0px;
@@ -80,7 +80,7 @@ $accordion-opened-character:'-';
 	    }
 
 	    > li {
-		color: $text-light;
+		color: color(text-light);
 		margin-top: $small-spacing;
 		margin-bottom: $small-spacing;
 	    }
@@ -105,7 +105,7 @@ $accordion-opened-character:'-';
 .accordion.-heading {
     .-heading {
 	@extend .page-heading;
-	background-color: $graphite;
+	background-color: color(graphite);
 	font-family: $bold-font-family;
 	font-weight: normal;
 
