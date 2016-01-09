@@ -644,7 +644,6 @@
         </section>
 
         <section id="dropdowns-section">
-
           <h2 class="styleguide-section-heading">
             Dropdowns
           </h2>
@@ -686,69 +685,6 @@
               </ul>
             </div>
           </div>
-
-	  <h3 class="styleguide-subheading">
-	    Content Accordion
-	  </h3>
-
-	  <p>
-	   Accordion that contains collapsing content.
-	  </p>
-
-	  <p>
-	   Add <code>.-heading</code> to the accordion to style it as the main dropdown used on the top of many features.
-	  </p>
-
-	  <div class="example -padded-desktop">
-	    <pre class="code language-javascript">
-	      $("#best-nfl-team .-heading").click(function(el) {
-		if ($(el.target).parent().hasClass("-open")) {
-		  $(el.target).attr('aria-hidden','false');
-		} else {
-		  $("#best-nfl-team .-heading").parent().removeClass("-open");
-		  $(el.target).attr('aria-hidden','true');
-		}
-		$(el.target).parent().toggleClass("-open");
-	      });
-	    </pre>
-
-	    <div id="best-nfl-team" class="accordion">
-	      <div class="-section" aria-describedby="bears-content" aria-labelledby="bears-heading" aria-hidden="true">
-		<button id="bears-heading" class="-heading">
-		  Chicago Bears
-		  <span class="-subheading">
-		    Chicago, Illinois
-		  </span>
-		</button>
-		<div id="bears-content" class="-content">
-		  The Bears have won nine NFL Championships and one Super Bowl and hold the NFL record for the most enshrinees in the Pro Football Hall of Fame and the most retired jersey numbers. The Bears have also recorded more regular season and overall victories than any other NFL franchise.
-		</div>
-	      </div>
-	      <div class="-section" aria-describedby="packers-content" aria-labelledby="packers-heading" aria-hidden="true">
-		<button id="packers-heading" class="-heading">
-		  Green Bay Packers
-		  <span class="-subheading">
-		    Green Bay, Wisconsin
-		  </span>
-		</button>
-		<div id="packers-content" class="-content">
-		  The Green Bay Packers are a professional American football team based in Green Bay, Wisconsin, that competes in the National Football League (NFL). They are members of the league's North division of the National Football Conference (NFC).
-		</div>
-	      </div>
-	      <div class="-section" aria-describedby="ravens-content" aria-labelledby="ravens-heading" aria-hidden="true">
-		<button id="ravens-heading" class="-heading">
-		  Baltimore Ravens
-		  <span class="-subheading">
-		    Baltimore, Maryland
-		  </span>
-		</button>
-		<div id="ravens-content" class="-content">
-		  The Ravens are members of the North division of the American Football Conference (AFC) in the National Football League (NFL). The team plays its home games at M&T Bank Stadium and is headquartered in Owings Mills.
-		</div>
-	      </div>
-	    </div>
-	  </div>
-
 	</section>
 
 	<section id="errors-section">

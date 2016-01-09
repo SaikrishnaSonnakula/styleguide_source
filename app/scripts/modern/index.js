@@ -57,7 +57,7 @@ $(function() {
     $("#best-nba-team").toggleClass("-open");
   });
 
-  accordion($("#best-nfl-team .-heading"));
+  accordion($("#hipstaccordion"));
 
   $("#neighborhood .-value").click(function() {
     $("#neighborhood").toggleClass("-open");
