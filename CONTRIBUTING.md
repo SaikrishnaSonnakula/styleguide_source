@@ -12,7 +12,7 @@ Welcome to contributing! We welcome all in the KP developer community contribute
 Pull requests are awesome! The way you would pull request is to fork Styleguide then clone it to your local and work on it there. When you're ready, you click on Pull request in Styleguide repo and go through the screens. You need a minimum of 2 approvers to approver and merge your PR.
 ###commit messges
 ###not breaking things
-
+###tests?
 
 ## Example Javascript block
 
