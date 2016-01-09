@@ -10,6 +10,7 @@ import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
+import accordion from 'lib/modern/scripts/accordion';
 
 $(function() {
   $(".fixedsticky").fixedsticky();
@@ -56,15 +57,7 @@ $(function() {
     $("#best-nba-team").toggleClass("-open");
   });
 
-  $("#best-nfl-team .-heading").click(function(el) {
-    if ($(el.target).parent().hasClass("-open")) {
-	$(el.target).attr('aria-hidden','false');
-    } else {
-	$("#best-nfl-team .-heading").parent().removeClass("-open");
-	$(el.target).attr('aria-hidden','true');
-    }
-    $(el.target).parent().toggleClass("-open");
-  });
+  accordion($("#best-nfl-team .-heading"));
 
   $("#neighborhood .-value").click(function() {
     $("#neighborhood").toggleClass("-open");
