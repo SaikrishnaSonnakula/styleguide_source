@@ -16,28 +16,29 @@ $accordion-opened-character:'-';
 	    left: 0;
 	    line-height: $large-font-size;
 	    position: absolute;
-	    @include transition(all 0.4s $ease-out-cubic);
 	}
 
 	&.-open {
 	    border: 0;
 	    &:before {
 		content: $accordion-opened-character;
-		@include transition(all 0.4s $ease-out-cubic);
-	}
-
+	    }
 	}
 
     }
 
     .-content {
-	display: none;
+	@include transition(opacity 0.4s $ease-out-cubic);
+	height: 0;
 	padding-left: $medium-spacing;
+	opacity: 0;
+	visibility: hidden;
 
 	&.-open {
 	    border-bottom: 2px solid color(graphite);
-	    display: block;
+	    height: 100%;
 	    opacity: 1;
+	    visibility: visible;
 	}
     }
 }
