@@ -1,132 +1,43 @@
-$accordion-options-max-height: 200px;
-$accordion-mobile-height: 50px;
 $accordion-closed-character:'+';
 $accordion-opened-character:'-';
-
 .accordion {
-    .-section {
-	padding-bottom:$small-spacing;
-		border-bottom:2px solid #ccc;
-		margin-bottom:$tiny-spacing;
-
-	.-heading {
-	    @extend %button-unstyled;
-	    cursor: pointer;
-	    width: 100%;
-	    height: $accordion-mobile-height;
-	    line-height: $accordion-mobile-height;
-	    padding-left: $small-spacing;
-	    padding-right: $small-spacing;
-	    outline: none;
-
-	    @include media($desktop) {
-		width: auto;
-		height: auto;
-		line-height: inherit;
-		padding: 0;
-	    }
-
-	    &:before {
-		@extend .kp-icon;
-		@include transition(all 0.4s $ease-out-cubic);
-		display: inline-block;
-		font-size: $tiny-font-size;
-		font-weight:bold;
-		color: color(interactive-blue);
-		width:20px;
-		content: $accordion-closed-character;
-		line-height: $accordion-mobile-height;
-		background-color: transparent;
-
-		@include media($desktop) {
-		    line-height: inherit;
-		}
-	    }
-	}
-	.-subheading {
-	      display: block;
-	      margin-left: $medium-spacing;
-	      color: color(text-light);
-	      font-size: $small-font-size;
-	      clear: both;
-	      width: 100%;
-	      @include media($tablet) {
-		  top: (-$medium-spacing);
-		  font-size: $tiny-font-size;
-		  position: relative;
-	      }
-	}
-
-	&.-open .-heading:before{
-	    content: $accordion-opened-character;
-	    width:20px;
-	}
-
-	.-content {
-	    @extend %list-unstyled;
-	    @include transition(opacity 0.6s $ease-out-cubic);
-	    opacity:0;
-	    overflow: hidden;
-	    margin-top: 0px;
-	    max-height: 0px;
-	    padding-left: $small-spacing;
-
-	    @include media($device) {
-		margin-bottom: 0;
-	    }
-
-	    @include media($desktop) {
-		padding-left: 0;
-	    }
-
-	    > li {
-		color: color(text-light);
-		margin-top: $small-spacing;
-		margin-bottom: $small-spacing;
-	    }
-
-	    a, button {
-		@extend .inverted-link;
-	    }
-
-	    .-active {
-		font-weight: bold;
-	    }
-	}
-
-	&.-open .-content {
-	    max-height: $accordion-options-max-height;
-	    padding: 0 0 0 $medium-spacing;
-			opacity:1;
-	}
-    }
-}
-
-.accordion.-heading {
     .-heading {
-	@extend .page-heading;
-	background-color: color(graphite);
-	font-family: $bold-font-family;
-	font-weight: normal;
+	@extend %button-unstyled;
+	cursor: pointer;
+	border-bottom: 2px solid color(graphite);
+	position: relative;
+	padding-left: $medium-spacing;
 
-	@include media($desktop) {
-	    background-color: transparent;
+	&:before {
+	    color: color(interactive-blue);
+	    content: $accordion-closed-character;
+	    display: block;
+	    font-size: $medium-font-size;
+	    left: 0;
+	    line-height: $large-font-size;
+	    position: absolute;
+	    @include transition(all 0.4s $ease-out-cubic);
 	}
 
-	&:after {
-	    float: right;
-
-	    @include media($desktop) {
-		font-size: $medium-font-size;
-		float: none;
-	    }
+	&.-open {
+	    border: 0;
+	    &:before {
+		content: $accordion-opened-character;
+		@include transition(all 0.4s $ease-out-cubic);
 	}
+
+	}
+
     }
 
     .-content {
-	@include media($desktop) {
-	    margin-top: $large-spacing;
-	    font-size: $tiny-font-size;
+	display: none;
+	padding-left: $medium-spacing;
+
+	&.-open {
+	    border-bottom: 2px solid color(graphite);
+	    display: block;
+	    opacity: 1;
 	}
     }
 }

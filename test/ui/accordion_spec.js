@@ -19,6 +19,7 @@ describe('accordion component', function() {
 	it('content should be hidden', function() {
 		return this.harness.run(function() {
 			this.verify(function(root) {
+				expect($(".accordion .-heading.-open", root)).to.not.exist;
 				expect($(".accordion .-content.-open", root)).to.not.exist;
 				expect($(".accordion .-content", root).attr('aria-hidden')).to.exist;
 				expect($(".accordion .-content", root).attr('aria-hidden')).to.equal('true');
@@ -31,6 +32,7 @@ describe('accordion component', function() {
 			this.click("#closed-accordion .-heading");
 			this.verify(function(root) {
 				expect($(".accordion .-content.-open", root)).to.exist;
+				expect($(".accordion .-heading.-open", root)).to.exist;
 				expect($(".accordion .-content", root).attr('aria-hidden')).to.not.exist;
 			});
 		});
@@ -42,7 +44,7 @@ describe('opened', function(){
 
 	beforeEach(function() {
 	this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion">' +
-		'<div class="-heading">' +
+		'<div class="-heading -open">' +
 		'Open Accordion Heading' + '</div>' +
 		'<div class="-content -open">' +
 		'<p>Accordion Content</p>' + '</div>', ['open-accordion']);
@@ -56,6 +58,7 @@ describe('opened', function(){
 		return this.harness.run(function() {
 			this.click("#open-accordion .-heading");
 			this.verify(function(root) {
+				expect($(".accordion .-heading.-open", root)).to.not.exist;
 				expect($(".accordion .-content.-open", root)).to.not.exist;
 				expect($(".accordion .-content", root).attr('aria-hidden')).to.equal('true');
 			});
@@ -81,7 +84,9 @@ describe('with multiple headings', function(){
 		return this.harness.run(function() {
 			this.click("#multiple-headings .-heading");
 			this.verify(function(root) {
+				expect($(".accordion .-heading.-open", root).length).to.equal(1);
 				expect($(".accordion .-content.-open", root).length).to.equal(1);
+				expect($(".accordion .-heading.-open", root).text()).to.equal('First Accordion Heading');
 				expect($(".accordion .-content.-open", root).text()).to.equal('First Accordion Content');
 			});
 		});
@@ -90,16 +95,18 @@ describe('with multiple headings', function(){
 
 	it('conceals content for direct adjacent sibling when heading is clicked', function() {
 	this.harness = createTestHarnessWith('<div id="multiple-open-headings" class="accordion">' +
-		 '<div class="-heading">' + 'First Open Heading' + '</div>' +
+		 '<div class="-heading -open">' + 'First Open Heading' + '</div>' +
 		 '<div class="-content -open"><p>First Accordion Content</p></div>' +
-		 '<div class="-heading">Second Accordion Heading</div>' +
+		 '<div class="-heading -open">Second Open Heading</div>' +
 		 '<div class="-content -open"><p>Second Open Accordion Content</p></div>' +
 		 '</div>', ['multiple-open-headings']);
 
 		return this.harness.run(function() {
 			this.click("#multiple-open-headings .-heading");
 			this.verify(function(root) {
+				expect($(".accordion .-heading.-open", root).length).to.equal(1);
 				expect($(".accordion .-content.-open", root).length).to.equal(1);
+				expect($(".accordion .-heading.-open", root).text()).to.equal('Second Open Heading');
 				expect($(".accordion .-content.-open", root).text()).to.equal('Second Open Accordion Content');
 			});
 		});
