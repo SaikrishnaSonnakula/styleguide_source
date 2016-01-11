@@ -1,44 +1,44 @@
 $accordion-closed-character:'+';
 $accordion-opened-character:'-';
 .accordion {
-    .-heading {
-	@extend %button-unstyled;
-	cursor: pointer;
-	border-bottom: 2px solid color(graphite);
-	position: relative;
-	padding-left: $medium-spacing;
+  .-heading {
+    @extend %button-unstyled;
+    cursor: pointer;
+    border-bottom: 2px solid color(graphite);
+    position: relative;
+    padding-left: $medium-spacing;
 
-	&:before {
-	    color: color(interactive-blue);
-	    content: $accordion-closed-character;
-	    display: block;
-	    font-size: $medium-font-size;
-	    left: 0;
-	    line-height: $large-font-size;
-	    position: absolute;
-	}
-
-	&.-open {
-	    border: 0;
-	    &:before {
-		content: $accordion-opened-character;
-	    }
-	}
-
+    &:before {
+      color: color(interactive-blue);
+      content: $accordion-closed-character;
+      display: block;
+      font-size: $medium-font-size;
+      left: 0;
+      line-height: $large-font-size;
+      position: absolute;
     }
 
-    .-content {
-	@include transition(opacity 0.4s $ease-out-cubic);
-	height: 0;
-	padding-left: $medium-spacing;
-	opacity: 0;
-	visibility: hidden;
-
-	&.-open {
-	    border-bottom: 2px solid color(graphite);
-	    height: 100%;
-	    opacity: 1;
-	    visibility: visible;
-	}
+    &.-open {
+      border: 0;
+      &:before {
+        content: $accordion-opened-character;
+      }
     }
+
+  }
+
+  .-content {
+    @include transition(opacity 0.4s $ease-out-cubic);
+    height: 0;
+    padding-left: $medium-spacing;
+    opacity: 0;
+    visibility: hidden;
+
+    &.-open {
+      border-bottom: 2px solid color(graphite);
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
