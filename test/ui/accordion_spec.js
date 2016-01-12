@@ -9,6 +9,7 @@ describe('accordion component', function() {
 
     beforeEach(function() {
       this.harness = createTestHarnessWith('<div id="closed-accordion" class="accordion">' +
+                                           '<div class="-group">' +
                                            '<div class="-heading">' + 'Default Accordion Heading' + '</div>' + '<div class="-content" aria-hidden="true">' + '<p>Hidden Accordion Content</p>' + '</div>', ['closed-accordion']);
     });
 
@@ -43,11 +44,9 @@ describe('accordion component', function() {
   describe('opened', function(){
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion">' +
-                                           '<div class="-heading -open">' +
-                                           'Open Accordion Heading' + '</div>' +
-                                           '<div class="-content -open">' +
-                                           '<p>Accordion Content</p>' + '</div>', ['open-accordion']);
+      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion"><div class="-group">' +
+                                           '<div class="-heading -open">Open Accordion Heading</div>' +
+                                           '<div class="-content -open"><p>Accordion Content</p></div></div>', ['open-accordion']);
     });
 
     afterEach(function() {
@@ -75,11 +74,14 @@ describe('accordion component', function() {
 
     it('reveals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-headings" class="accordion">' +
+                                           '<div class="-group">' +
                                            '<div class="-heading">' + 'First Accordion Heading' + '</div>' +
                                            '<div class="-content" aria-hidden="true"><p>First Accordion Content</p></div>' +
+                                           '</div>' +
+                                           '<div class="-group">' +
                                            '<div class="-heading">Second Accordion Heading</div>' +
                                            '<div class="-content" aria-hidden="true"><p>Second Hidden Accordion Content</p></div>' +
-                                           '</div>', ['multiple-headings']);
+                                           '</div></div>', ['multiple-headings']);
 
       return this.harness.run(function() {
         this.click("#multiple-headings .-heading");
@@ -95,11 +97,14 @@ describe('accordion component', function() {
 
     it('conceals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-open-headings" class="accordion">' +
+                                           '<div class="-group">' +
                                            '<div class="-heading -open">' + 'First Open Heading' + '</div>' +
                                            '<div class="-content -open"><p>First Accordion Content</p></div>' +
+                                           '</div>' +
+                                           '<div class="-group">' +
                                            '<div class="-heading -open">Second Open Heading</div>' +
                                            '<div class="-content -open"><p>Second Open Accordion Content</p></div>' +
-                                           '</div>', ['multiple-open-headings']);
+                                           '</div></div>', ['multiple-open-headings']);
 
       return this.harness.run(function() {
         this.click("#multiple-open-headings .-heading");
