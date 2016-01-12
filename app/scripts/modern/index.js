@@ -10,6 +10,7 @@ import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
+import accordion from 'lib/modern/scripts/accordion';
 
 $(function() {
   $(".fixedsticky").fixedsticky();
@@ -55,6 +56,8 @@ $(function() {
   $("#best-nba-team .-value").click(function() {
     $("#best-nba-team").toggleClass("-open");
   });
+
+  accordion($("#hipstaccordion"));
 
   $("#neighborhood .-value").click(function() {
     $("#neighborhood").toggleClass("-open");
