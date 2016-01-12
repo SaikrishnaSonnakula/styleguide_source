@@ -22,6 +22,7 @@ $(function() {
 
   fancySelect($("#select-from"));
   fancySelect($("#select-from-with-default"));
+  fancySelect($("#select-from-with-only-one"));
 
   $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");

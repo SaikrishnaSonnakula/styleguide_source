@@ -22,6 +22,20 @@ describe('fancy-select component', function() {
 		});
 	});
 
+	it('should not show selection mark if there is only one option', function() {
+		this.harness = createTestHarnessWith(
+			"<label for='my-select'>To:</label><select id='my-select'><option value='A'>Dr. Only Me</option>"
+		);
+
+		return this.harness.run(function() {
+			this.verify(function(root) {
+				expect($(".fancy-select .-item", root)).to.exist;
+				expect($(".fancy-select .-item label", root)).to.contain("To:");
+				expect($(".fancy-select .-item .name", root)).to.contain("Dr. Only Me");
+			});
+		});
+	});
+
 	it('appends label to selected value', function() {
 		this.harness = createTestHarnessWith(
 			"<label for='my-select'>Select:</label><select id='my-select'><option value='A' selected='true'>Apple</option><option value='B'>Banana</option></select>"
