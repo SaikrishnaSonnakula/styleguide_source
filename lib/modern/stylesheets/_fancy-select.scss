@@ -31,9 +31,7 @@ $select-options-max-height: 300px !default;
   .-value {
     @include decorated-selection;
     color: $select-font-color;
-
-    padding-left: 0px;
-
+    padding-left: 0;
     &:after {
       line-height: normal;
       color: $select-font-color;
@@ -47,14 +45,11 @@ $select-options-max-height: 300px !default;
 
   }
   .-options {
-      @include transition(all 0.4s $ease-in-out-cubic);
+    @include transition(all 0.4s $ease-in-out-cubic);
 
-    .-option:first-of-type{
-      height: 0px;
-      display: none;
-      visibility: hidden;
+    @include media($device){
+      padding-left: 0;
     }
-
     .-option {
       @extend .-block;
       background-color: transparent;
@@ -64,7 +59,7 @@ $select-options-max-height: 300px !default;
       font-size: $tiny-font-size;
       outline: none;
       color: $select-font-color;  
-      
+      padding-left: 0;
       &.-active, &:hover, &:focus{
         color: $select-font-color;  
         font-family: $bold-font-family;

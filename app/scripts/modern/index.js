@@ -21,6 +21,7 @@ $(function() {
   responsiveTable();
 
   fancySelect($("#select-from"));
+  fancySelect($("#select-from-with-default"));
 
   $("#menu-button, #navbar a").click(function() {
     $("#navbar").toggleClass("hidden");

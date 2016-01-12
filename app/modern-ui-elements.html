@@ -48,12 +48,12 @@
 
         </section>
 
-
         <section id="select-ui-element">
           <h2 class="styleguide-section-heading">Fancy Select</h2>
           <p>You can implement a fancy-select by adding proper import and then calling with the id of <code>select</code> element.</p>
           <p>Note: <code>div</code> and <code>class aqua</code> are just for display purposes, you would not need to add these inline styles to your code.</p>
 
+          <p>Example showing with a default selected option <code>Apple</code>.</p>
           <div class="example -padded">
             <pre class="code language-javascript">   
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
@@ -62,10 +62,9 @@
             </pre>
             <div class="aqua">
               <label for="select-from" class="screenreader-only">
-               Select from:
+               My Favorite:
               </label>
               <select id="select-from" class="screenreader-only">
-                <option value='' selected='true'></option>
                 <option value="A">Apple</option>
                 <option value="B">Banana</option>
               </select>
@@ -75,25 +74,38 @@
             The rendered markup as below.
 
             <label for="select-from" class="screenreader-only">
-              Select from:
+              My Favorite:
             </label>
             <div class="fancy-select">
               <select id="select-from" class="screenreader-only">
-                <option value="" selected="true"></option>
-                <option value="A">Apple</option>
+                <option value="A" selected="true">Apple</option>
                 <option value="B">Banana</option>
               </select>
 
               <button class="-value">Select from: </button>
               <div class="-options">
-                <button value="" class="-option -active"></button>
-                <button value="A" class="-option">Apple</button>
+                <button value="A" class="-option -active">Apple</button>
                 <button value="B" class="-option">Banana</button>
               </div>
             </div>
             -->
           </div>
 
+          <p>Example showing with the description <code>Select from</code> only for display: </p>
+          <p>By adding <code>value="default-option-for-display"</code> to the <code>option</code>, you could have default description set but not appear in the list of options when the dropdown is open.</p>
+          <div class="example -padded">
+            <div class="aqua">
+              <label for="select-from-with-default" class="screenreader-only">
+               My Favorite:
+              </label>
+              <select id="select-from-with-default" class="screenreader-only">
+                <option value='default-option-for-display' selected='true'>Select from</option>
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+          </div>
+          
           <p>When you only need to show one option in the style above, you could use <code>-item</code>.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
