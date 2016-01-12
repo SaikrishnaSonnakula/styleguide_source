@@ -10,14 +10,15 @@ describe('fancy-select component', function() {
 
 	it('should default to selected option', function() {
 		this.harness = createTestHarnessWith(
-			"<select id='my-select'><option value='A' selected='true'>Apple</option><option value='B'>Banana</option></select>"
+			"<label for='my-select'>To:</label><select id='my-select'><option value='A'>Apple</option><option value='B' selected='true'>Banana</option></select>"
 		);
 
 		return this.harness.run(function() {
 			this.verify(function(root) {
 				expect($(".fancy-select button.-value", root)).to.exist;
-				expect($(".fancy-select button.-option.-active", root)).to.contain("Apple");
-				expect($(".fancy-select .-value", root)).to.contain("Apple");
+				expect($(".fancy-select select", root).val()).to.equal('B');
+				expect($(".fancy-select button.-option.-active", root)).to.contain("Banana");
+				expect($(".fancy-select .-value", root)).to.contain("Banana");
 			});
 		});
 	});
@@ -71,9 +72,12 @@ describe('fancy-select component', function() {
 		});
 	});
 
-	it('only show description but not in dropdown', function() {
-		this.harness = createTestHarnessWith(
-			"<label for='my-select' title='Please select the following'>To:</label><select id='my-select'><option value='A'>Apple</option><option value='B'>Banana</option></select>"
+	it('only show description when there is no default option selected', function() {
+		this.harness = createTestHarnessWith("<label for='my-select' title='Please select the following'>To:</label>"+
+				"<select id='my-select'>"+
+				"<option value='A'>Apple</option>"+
+				"<option value='B'>Banana</option>"+
+			"</select>"
 		);
 
 		return this.harness.run(function() {
@@ -86,6 +90,41 @@ describe('fancy-select component', function() {
 			this.click(".fancy-select button.-option:eq(1)");
 			this.verify(function(root) {
 				expect($(".fancy-select .-value", root)).to.contain("To: Banana");
+			});
+		});
+	});
+
+	it('should not show description when there is default option selected', function() {
+		this.harness = createTestHarnessWith(
+			"<label for='my-select' title='Please select the following'>To:</label>" +
+			"<select id='my-select'>" +
+			"<option value='A'>Apple</option>" +
+			"<option value='B' selected='true'>Banana</option>" +
+			"</select>"
+		);
+
+		return this.harness.run(function() {
+			this.verify(function(root) {
+				expect($(".fancy-select button.-value", root)).to.exist;
+				expect($(".fancy-select .-value", root)).to.contain("To: Banana");
+				expect($(".fancy-select button.-option:eq(0)", root).html()).to.equal("Apple");
+			});
+		});
+	});
+
+	it('should default the first option as selected when there is no selected options and also no description', function() {
+		this.harness = createTestHarnessWith(
+			"<label for='my-select'>To:</label>" +
+			"<select id='my-select'>" +
+			"<option value='A'>Apple</option>" +
+			"<option value='B'>Banana</option>" +
+			"</select>"
+		);
+
+		return this.harness.run(function() {
+			this.verify(function(root) {
+				expect($(".fancy-select button.-value", root)).to.exist;
+				expect($(".fancy-select .-value", root)).to.contain("To: Apple");
 			});
 		});
 	});

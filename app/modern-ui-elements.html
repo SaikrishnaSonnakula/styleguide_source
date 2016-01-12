@@ -52,7 +52,9 @@
           <p>You can implement a fancy-select by adding proper import and then calling with the id of <code>select</code> element.</p>
           <p>Note: <code>div</code> and <code>class aqua</code> are just for display purposes, you would not need to add these inline styles to your code.</p>
 
-          <p>Example showing with a default selected option <code>Apple</code>.</p>
+          <p>Example is showing with a default selected option.</p>
+          <p><code>label</code> is used to prrefix the seletion.</p>
+          <p>If no option was specified in the option list like below, the first option will be the default selection, <code>Apple</code> in this case.</p>
           <div class="example -padded">
             <pre class="code language-javascript">
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
@@ -77,7 +79,7 @@
             </label>
             <div class="fancy-select">
               <select id="select-from" class="screenreader-only">
-                <option value="A" selected="true">Apple</option>
+                <option value="A">Apple</option>
                 <option value="B">Banana</option>
               </select>
 
@@ -90,7 +92,7 @@
             -->
           </div>
           
-          <p>Example showing when there is only one option</p>
+          <p>Example when there is only one option.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
               <label for="select-from-with-only-one" class="screenreader-only">
@@ -102,7 +104,7 @@
             </div>
           </div>
 
-          <p>Example showing with the description <code>Select from</code> only for display before selecting: </p>
+          <p>Example is showing with the description <code>Select from</code> only for display before selecting, </p>
           <p>By adding <code>title="Select from"</code> to the <code>label</code>, you could have default description set but not appear in the list of options when the dropdown is open.</p>
           <div class="example -padded">
             <div class="aqua">
@@ -116,6 +118,19 @@
             </div>
           </div>
           
+          <p>NOTE: the default description only apply when there is no selected option pre-specified.</p>
+          <div class="example -padded">
+            <div class="aqua">
+              <label for="select-from-with-default-but-selected" title="Select from" class="screenreader-only">
+               My Favorite:
+              </label>
+              <select id="select-from-with-default-but-selected" class="screenreader-only">
+                <option value="A">Apple</option>
+                <option value="B" selected="true">Banana</option>
+              </select>
+            </div>
+          </div>
+
           <p>When you only need to show one option in the pattern above, you could use <code>-item</code>.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
