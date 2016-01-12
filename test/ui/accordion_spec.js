@@ -20,8 +20,7 @@ describe('accordion component', function() {
     it('content should be hidden', function() {
       return this.harness.run(function() {
         this.verify(function(root) {
-          expect($(".accordion .-heading.-open", root)).to.not.exist;
-          expect($(".accordion .-content.-open", root)).to.not.exist;
+          expect($(".accordion .-group.-open", root)).to.not.exist;
           expect($(".accordion .-content", root).attr('aria-hidden')).to.exist;
           expect($(".accordion .-content", root).attr('aria-hidden')).to.equal('true');
         });
@@ -32,8 +31,7 @@ describe('accordion component', function() {
       return this.harness.run(function() {
         this.click("#closed-accordion .-heading");
         this.verify(function(root) {
-          expect($(".accordion .-content.-open", root)).to.exist;
-          expect($(".accordion .-heading.-open", root)).to.exist;
+          expect($(".accordion .-group.-open", root)).to.exist;
           expect($(".accordion .-content", root).attr('aria-hidden')).to.not.exist;
         });
       });
@@ -44,9 +42,9 @@ describe('accordion component', function() {
   describe('opened', function(){
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion"><div class="-group">' +
-                                           '<div class="-heading -open">Open Accordion Heading</div>' +
-                                           '<div class="-content -open"><p>Accordion Content</p></div></div>', ['open-accordion']);
+      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion"><div class="-group -open">' +
+                                           '<div class="-heading">Open Accordion Heading</div>' +
+                                           '<div class="-content"><p>Accordion Content</p></div></div>', ['open-accordion']);
     });
 
     afterEach(function() {
@@ -57,8 +55,7 @@ describe('accordion component', function() {
       return this.harness.run(function() {
         this.click("#open-accordion .-heading");
         this.verify(function(root) {
-          expect($(".accordion .-heading.-open", root)).to.not.exist;
-          expect($(".accordion .-content.-open", root)).to.not.exist;
+          expect($(".accordion .-group.-open", root)).to.not.exist;
           expect($(".accordion .-content", root).attr('aria-hidden')).to.equal('true');
         });
       });
@@ -86,10 +83,9 @@ describe('accordion component', function() {
       return this.harness.run(function() {
         this.click("#multiple-headings .-heading");
         this.verify(function(root) {
-          expect($(".accordion .-heading.-open", root).length).to.equal(1);
-          expect($(".accordion .-content.-open", root).length).to.equal(1);
-          expect($(".accordion .-heading.-open", root).text()).to.equal('First Accordion Heading');
-          expect($(".accordion .-content.-open", root).text()).to.equal('First Accordion Content');
+          expect($(".accordion .-group.-open", root).length).to.equal(1);
+          expect($(".accordion .-open .-heading", root).text()).to.equal('First Accordion Heading');
+          expect($(".accordion .-open .-content", root).text()).to.equal('First Accordion Content');
         });
       });
     });
@@ -97,22 +93,22 @@ describe('accordion component', function() {
 
     it('conceals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-open-headings" class="accordion">' +
-                                           '<div class="-group">' +
-                                           '<div class="-heading -open">' + 'First Open Heading' + '</div>' +
-                                           '<div class="-content -open"><p>First Accordion Content</p></div>' +
+                                           '<div class="-group -open">' +
+                                           '<div class="-heading">' + 'First Open Heading' + '</div>' +
+                                           '<div class="-content"><p>First Accordion Content</p></div>' +
                                            '</div>' +
-                                           '<div class="-group">' +
-                                           '<div class="-heading -open">Second Open Heading</div>' +
-                                           '<div class="-content -open"><p>Second Open Accordion Content</p></div>' +
+                                           '<div class="-group -open">' +
+                                           '<div class="-heading">Second Open Heading</div>' +
+                                           '<div class="-content"><p>Second Open Accordion Content</p></div>' +
                                            '</div></div>', ['multiple-open-headings']);
 
       return this.harness.run(function() {
         this.click("#multiple-open-headings .-heading");
         this.verify(function(root) {
-          expect($(".accordion .-heading.-open", root).length).to.equal(1);
-          expect($(".accordion .-content.-open", root).length).to.equal(1);
-          expect($(".accordion .-heading.-open", root).text()).to.equal('Second Open Heading');
-          expect($(".accordion .-content.-open", root).text()).to.equal('Second Open Accordion Content');
+          expect($(".accordion .-group.-open", root).length).to.equal(1);
+          expect($(".accordion .-open .-content", root).length).to.equal(1);
+          expect($(".accordion .-open .-heading", root).text()).to.equal('Second Open Heading');
+          expect($(".accordion .-open .-content", root).text()).to.equal('Second Open Accordion Content');
         });
       });
     });
