@@ -31,6 +31,7 @@
       <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
         <ul>
           <li><a href="#select-ui-element">Select</a></li>
+          <li><a href="#accordion">Accordion</a></li>
         </ul>
       </nav>
 
@@ -40,12 +41,10 @@
             READ ME FIRST
           </h2>
           <p class="fuchsia" style="padding: 15px;">ATTENTION: <br />
-            The following elements are still work in progress & subject to changes.<br />
-            Please be aware of that.
+            The following patterns are experimental & subject to change.<br />
+            If you find any issues with them, please contribute to fix them.
           </p>
-
-          <p>Elements on this page accompanied by javascript orchestration code.</p>
-
+          <p>The patterns on this page are ochestrated with javascript to fully function.</p>
         </section>
 
         <section id="select-ui-element">
@@ -55,7 +54,7 @@
 
           <p>Example showing with a default selected option <code>Apple</code>.</p>
           <div class="example -padded">
-            <pre class="code language-javascript">   
+            <pre class="code language-javascript">
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
 
               fancySelect($("#select-from"));
@@ -70,7 +69,7 @@
               </select>
             </div>
 
-            <!-- Comment intented for explanation purpose, do not use any of below in your code. 
+            <!-- Comment intented for explanation purpose, do not use any of below in your code.
             The rendered markup as below.
 
             <label for="select-from" class="screenreader-only">
@@ -117,7 +116,7 @@
             </div>
           </div>
           
-          <p>When you need to show an item in the style above, you could use <code>-item</code>.</p>
+          <p>When you only need to show one option in the pattern above, you could use <code>-item</code>.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
               <div class="-item">
@@ -126,7 +125,44 @@
               </div>
             </div>
           </div>
-        </section>  
+        </section>
+
+        <section id="accordion">
+          <h2 class="styleguide-section-heading">Accordion</h2>
+          <div class="example -padded">
+            <pre class="code language-javascript">
+              import accordion from 'styleguide/lib/modern/scripts/accordion';
+
+              accordion($("#hipstaccordion"));
+            </pre>
+            <div id="hipstaccordion" class="accordion" role="tablist">
+              <div class="-group">
+                <div class="-heading" role="tab">
+                  <h3 class="item-heading">Fanny Pack Four Dollar Toast</h3>
+                  <p class="auxiliary-text">Blue Bottle Sriracha</p>
+                </div>
+                <div class="-content" role="tabpanel" aria-expanded="false" aria-hidden="true">
+                  <h4 class="item-subheading">Cliche Flannel Tweet</h4>
+                  <p class="auxiliary-text">Brunch offal bushwick chambray biodiesel pitchfork
+                  slow-carb vice chicharrones lomo paleo. Tacos offal chicharrones craft beer, fanny pack lo-fi yr meditation wayfarers pug bicycle rights. 
+                  Occupy pop-up ennui, portland retro street art banjo kogi shabby chic 3 wolf moon. Crucifix echo park bespoke, ugh shoreditch semiotics neutra austin PBR&B etsy hella occupy.
+                  Banjo gentrify pop-up, kombucha poutine salvia quinoa shoreditch organic chambray art party ramps.</p>
+                </div>
+              </div>
+              <div class="-group">
+                <div class="-heading" role="tab">
+                  <h3 class="item-heading">Kombucha Church-Key Listicle</h3>
+                  <p class="auxiliary-text">Disrupt Waistcoat Marfa</p>
+                </div>
+                <div class="-content" role="tabpanel" aria-expanded="false" aria-hidden="true">
+                  <h4 class="item-subheading">Pour-over Wolf VHS Helvetica</h4>
+                  <p class="auxiliary-text">Kitsch keytar tacos hammock XOXO, austin meggings gentrify hoodie art party 3 wolf moon gochujang.
+                  Kombucha church-key listicle, typewriter forage mixtape locavore fingerstache synth you probably haven't heard of them leggings next level.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
   </body>
