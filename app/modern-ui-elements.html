@@ -103,22 +103,21 @@
             </div>
           </div>
 
-          <p>Example showing with the description <code>Select from</code> only for display: </p>
-          <p>By adding <code>value="default-option-for-display"</code> to the <code>option</code>, you could have default description set but not appear in the list of options when the dropdown is open.</p>
+          <p>Example showing with the description <code>Select from</code> only for display before selecting: </p>
+          <p>By adding <code>title="Select from"</code> to the <code>label</code>, you could have default description set but not appear in the list of options when the dropdown is open.</p>
           <div class="example -padded">
             <div class="aqua">
-              <label for="select-from-with-default" class="screenreader-only">
+              <label for="select-from-with-default" title="Select from" class="screenreader-only">
                My Favorite:
               </label>
               <select id="select-from-with-default" class="screenreader-only">
-                <option value='default-option-for-display' selected='true'>Select from</option>
                 <option value="A">Apple</option>
                 <option value="B">Banana</option>
               </select>
             </div>
           </div>
           
-          <p>When you only need to show one option in the style above, you could use <code>-item</code>.</p>
+          <p>When you need to show an item in the style above, you could use <code>-item</code>.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
               <div class="-item">

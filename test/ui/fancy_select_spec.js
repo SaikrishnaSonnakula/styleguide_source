@@ -71,20 +71,15 @@ describe('fancy-select component', function() {
 		});
 	});
 
-	it('only show default option as a description after label but not in dropdown', function() {
+	it('only show description but not in dropdown', function() {
 		this.harness = createTestHarnessWith(
-			"<label for='my-select'>To:</label><select id='my-select'><option value='default-option-for-display' selected='true'>Please select the following</option><option value='A'>Apple</option><option value='B'>Banana</option></select>"
+			"<label for='my-select' title='Please select the following'>To:</label><select id='my-select'><option value='A'>Apple</option><option value='B'>Banana</option></select>"
 		);
 
 		return this.harness.run(function() {
 			this.verify(function(root) {
 				expect($(".fancy-select button.-value", root)).to.exist;
 				expect($(".fancy-select .-value", root)).to.contain("To: Please select the following");
-				expect($(".fancy-select button.-option:eq(0)", root).html()).to.equal("Please select the following");
-			});
-
-			this.click(".fancy-select button.-value");
-			this.verify(function(root) {
 				expect($(".fancy-select button.-option:eq(0)", root).html()).to.equal("Apple");
 			});
 
