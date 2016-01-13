@@ -54,11 +54,6 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
         max-width: 100%;
       }
     }
-
-    &.-collapsible {
-      @extend %hide-fade-in;
-      @include transition(opacity 0.3s ease-in-out);
-    }
   }
 
   .-click-to-expand {
@@ -70,8 +65,13 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
     margin-top: $medium-spacing;
   }
 
+  .-collapsible {
+    @extend %hide-fade-in;
+    @include transition(opacity 0.3s ease-in-out);
+  }
+
   &.-open {
-    .-body.-collapsible { @extend %show-fade-in; }
+    .-collapsible { @extend %show-fade-in; }
   }
 
   &.-collapsible, &.-clickable {
