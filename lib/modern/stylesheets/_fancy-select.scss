@@ -31,14 +31,11 @@ $select-options-max-height: 300px !default;
   .-value {
     @include decorated-selection;
     color: $select-font-color;
-
-    padding-left: 0px;
-
+    padding-left: 0;
     &:after {
       line-height: normal;
       color: $select-font-color;
       float: right;
-      margin: $tiny-spacing 0 0 $medium-spacing;
 
       @include media($desktop){
         font-size: $medium-font-size;
@@ -47,14 +44,11 @@ $select-options-max-height: 300px !default;
 
   }
   .-options {
-      @include transition(all 0.4s $ease-in-out-cubic);
+    @include transition(all 0.4s $ease-in-out-cubic);
 
-    .-option:first-of-type{
-      height: 0px;
-      display: none;
-      visibility: hidden;
+    @include media($device){
+      padding-left: 0;
     }
-
     .-option {
       @extend .-block;
       background-color: transparent;
@@ -63,15 +57,15 @@ $select-options-max-height: 300px !default;
       text-align: left;
       font-size: $tiny-font-size;
       outline: none;
-      color: $select-font-color;  
-      
+      color: $select-font-color;
+      padding-left: 0;
       &.-active, &:hover, &:focus{
-        color: $select-font-color;  
+        color: $select-font-color;
         font-family: $bold-font-family;
-      }  
+      }
     }
-  }  
-  
+  }
+
   &.-open .-options {
     max-height: $select-options-max-height;
   }
@@ -81,7 +75,7 @@ $select-options-max-height: 300px !default;
   @include decorated-selection;
   text-align: left;
   border-bottom: solid 1px white;
-  
+
   .name {
     display: inline-block;
   }

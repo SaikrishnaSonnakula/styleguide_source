@@ -46,11 +46,15 @@
           </p>
           <p>The patterns on this page are ochestrated with javascript to fully function.</p>
         </section>
+
         <section id="select-ui-element">
           <h2 class="styleguide-section-heading">Fancy Select</h2>
           <p>You can implement a fancy-select by adding proper import and then calling with the id of <code>select</code> element.</p>
           <p>Note: <code>div</code> and <code>class aqua</code> are just for display purposes, you would not need to add these inline styles to your code.</p>
 
+          <p>Example is showing with a default selected option.</p>
+          <p><code>label</code> is used to prefix the seletion.</p>
+          <p>The first option is selected by default, <code>Apple</code> in this case.</p>
           <div class="example -padded">
             <pre class="code language-javascript">
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
@@ -59,10 +63,9 @@
             </pre>
             <div class="aqua">
               <label for="select-from" class="screenreader-only">
-               Select from:
+               My Favorite:
               </label>
               <select id="select-from" class="screenreader-only">
-                <option value='' selected='true'></option>
                 <option value="A">Apple</option>
                 <option value="B">Banana</option>
               </select>
@@ -72,34 +75,62 @@
             The rendered markup as below.
 
             <label for="select-from" class="screenreader-only">
-              Select from:
+              My Favorite:
             </label>
             <div class="fancy-select">
               <select id="select-from" class="screenreader-only">
-                <option value="" selected="true"></option>
                 <option value="A">Apple</option>
                 <option value="B">Banana</option>
               </select>
 
               <button class="-value">Select from: </button>
               <div class="-options">
-                <button value="" class="-option -active"></button>
-                <button value="A" class="-option">Apple</button>
+                <button value="A" class="-option -active">Apple</button>
                 <button value="B" class="-option">Banana</button>
               </div>
             </div>
             -->
           </div>
-
-          <p>When you only need to show one option in the pattern above, you could use <code>-item</code>.</p>
+          
+          <p>Example when there is only one option.</p>
           <div class="example -padded">
             <div class="aqua" style="min-height:80px;">
-              <div class="-item">
-                <label>To: </label>
-                <div class="name">Dr. Pete Mitchell</div>
-              </div>
+              <label for="select-from-with-only-one" class="screenreader-only">
+               My Favorite:
+              </label>
+              <select id="select-from-with-only-one" class="screenreader-only">
+                <option value='whatever-doesntmatter'>Dr. Only Me Option</option>
+              </select>
             </div>
           </div>
+
+          <p>Example is showing with the placeholder: <code>Select from</code>.</p>
+          <p>If you want to specify a placeholder, set <code>title="Select from"</code>on the <code>label</code></p>
+          <div class="example -padded">
+            <div class="aqua">
+              <label for="select-from-with-default" title="Select from" class="screenreader-only">
+               My Favorite:
+              </label>
+              <select id="select-from-with-default" class="screenreader-only">
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+          </div>
+          
+          <p>NOTE: the placeholder is over-ridden if you specify one of the options as selected="true".</p>
+          <div class="example -padded">
+            <div class="aqua">
+              <label for="select-from-with-default-but-selected" title="Select from" class="screenreader-only">
+               My Favorite:
+              </label>
+              <select id="select-from-with-default-but-selected" class="screenreader-only">
+                <option value="A">Apple</option>
+                <option value="B" selected="true">Banana</option>
+              </select>
+            </div>
+          </div>
+
         </section>
 
         <section id="accordion">
