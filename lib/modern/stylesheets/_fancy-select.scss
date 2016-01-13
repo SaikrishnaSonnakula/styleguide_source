@@ -58,15 +58,15 @@ $select-options-max-height: 300px !default;
       text-align: left;
       font-size: $tiny-font-size;
       outline: none;
-      color: $select-font-color;  
+      color: $select-font-color;
       padding-left: 0;
       &.-active, &:hover, &:focus{
-        color: $select-font-color;  
+        color: $select-font-color;
         font-family: $bold-font-family;
-      }  
+      }
     }
-  }  
-  
+  }
+
   &.-open .-options {
     max-height: $select-options-max-height;
   }
@@ -76,7 +76,7 @@ $select-options-max-height: 300px !default;
   @include decorated-selection;
   text-align: left;
   border-bottom: solid 1px white;
-  
+
   .name {
     display: inline-block;
   }
