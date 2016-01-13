@@ -53,8 +53,8 @@
           <p>Note: <code>div</code> and <code>class aqua</code> are just for display purposes, you would not need to add these inline styles to your code.</p>
 
           <p>Example is showing with a default selected option.</p>
-          <p><code>label</code> is used to prrefix the seletion.</p>
-          <p>If no option was specified in the option list like below, the first option will be the default selection, <code>Apple</code> in this case.</p>
+          <p><code>label</code> is used to prefix the seletion.</p>
+          <p>The first option is selected by default, <code>Apple</code> in this case.</p>
           <div class="example -padded">
             <pre class="code language-javascript">
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
@@ -99,13 +99,13 @@
                My Favorite:
               </label>
               <select id="select-from-with-only-one" class="screenreader-only">
-                <option value='whatever-doesntmatter' selected='true'>Dr. Only Me Option</option>
+                <option value='whatever-doesntmatter'>Dr. Only Me Option</option>
               </select>
             </div>
           </div>
 
-          <p>Example is showing with the description <code>Select from</code> only for display before selecting, </p>
-          <p>By adding <code>title="Select from"</code> to the <code>label</code>, you could have default description set but not appear in the list of options when the dropdown is open.</p>
+          <p>Example is showing with the placeholder: <code>Select from</code>.</p>
+          <p>If you want to specify a placeholder, set <code>title="Select from"</code>on the <code>label</code></p>
           <div class="example -padded">
             <div class="aqua">
               <label for="select-from-with-default" title="Select from" class="screenreader-only">
@@ -118,7 +118,7 @@
             </div>
           </div>
           
-          <p>NOTE: the default description only apply when there is no selected option pre-specified.</p>
+          <p>NOTE: the placeholder is over-ridden if you specify one of the options as selected="true".</p>
           <div class="example -padded">
             <div class="aqua">
               <label for="select-from-with-default-but-selected" title="Select from" class="screenreader-only">
