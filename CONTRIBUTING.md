@@ -5,7 +5,7 @@ Here are a few guidelines to get you started. If there's anything here that's no
 
 ### Quicklinks
 
-* [Feature Roadmap](Roadmap)
+* [Feature Roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md)
 * [Hipchat](https://kpmcoe.hipchat.com/chat/room/2258656)
 
 ## Guideline Contents
@@ -24,18 +24,18 @@ There are lots and lots of ways to get involved, this document covers:
 <a name="raising-issues"></a>
 ## Raising Issues
 
-Did you find a bug, defect, typo? Help us by bringing it up in Hipchat and check to see if it has been identified in our [roadmap]().
+Did you find a bug, defect, typo? Help us by bringing it up in Hipchat and check to see if it has been identified in our [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md).
 If you have a proposed solution, let us know by [submitting a pull-request](#pull-requests).
 
 <a name="features"></a>
 ## Feature Requests
 
-Please take a look at the [roadmap](Roadmap) to see if your suggestion is in our backlog.
+Please take a look at the [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md) to see if your suggestion is in our backlog.
 
 <a name="changes"></a>
 ## Change Requests
 
-Please take a look at the [roadmap](Roadmap) to see if your suggestion is in our backlog or reach out to us via Hipchat.
+Please take a look at the [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md) to see if your suggestion is in our backlog or reach out to us via Hipchat.
 
 ## Writing Documentation
 
