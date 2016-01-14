@@ -2,12 +2,12 @@
 
 * Utilizing UX personnel to validate things that should appear in styleguide vs unique patterns that are only feature specific.
 
-#### Backlog
+## Backlog
 
 * Sign on - possible use case for Error scenarios
 * New organization of Styleguide(?)
 
-#### Next
+## Next
 
 * Typography
 	* Adding Gotham Light
@@ -19,14 +19,17 @@
 * Restyle modal
 
 
-#### In Progress
+## In Progress
+
 * Documenting the process of what to do when someone finds something NOT on the styleguide and directing them to pull request information.
 
 * Ability to show things in progress or upcoming on styleguide
 
-#### Stable
+## Stable
+
 Current don't have any upcoming changes in the backlog or next.
 
+### Style
 * Responsive breakpoints
 * Colors
 * Spacing
@@ -37,3 +40,7 @@ Current don't have any upcoming changes in the backlog or next.
 	* Feed items
 * Dropdowns
 * Layouts (Experimental)
+
+### UI elements
+* Fancy select
+* Accordion
