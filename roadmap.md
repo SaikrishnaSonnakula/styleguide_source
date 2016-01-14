@@ -1,6 +1,9 @@
 # Feature roadmap
 
+##### Note: If you move a task to another section, please update this document.
+
 * Utilizing UX personnel to validate things that should appear in styleguide vs unique patterns that are only feature specific.
+
 
 ## Backlog
 
@@ -18,8 +21,9 @@
 * Icon font - update with a FPO icon.
 * Restyle modal
 
-
 ## In Progress
+
+Currently under development, not stable, may have change in the future.
 
 * Documenting the process of what to do when someone finds something NOT on the styleguide and directing them to pull request information.
 
