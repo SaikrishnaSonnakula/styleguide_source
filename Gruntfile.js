@@ -53,14 +53,16 @@ module.exports = function(grunt) {
           ext: '.html'
         }]
       }
-    },
-    watch: {
-      dist: {
-        files: ['*.md'],
-        tasks: ['md2html']
-      }
     }
   });
+
+  grunt.config.merge({
+    watch: {
+      files: ['*.md'],
+      tasks: ['md2html']
+    }
+  });
+  
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
   
 };
