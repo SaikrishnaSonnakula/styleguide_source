@@ -24,6 +24,13 @@ module.exports = function(grunt) {
   });
 
   grunt.config.merge({
+    copy: {
+      dist: {
+        files: [{
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
+        }]
+      }
+    },
     md2html: {
       docs: {
         options: {
@@ -54,16 +61,6 @@ module.exports = function(grunt) {
       files: ['*.md'],
       tasks: ['md2html']
     }
-  });
-
-  grunt.config.merge({
-    copy: {
-      dist: {
-        files: [{
-          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
-        }]
-      }
-    },
   });
 
   grunt.registerTask('prebuild', ['md2html']);
