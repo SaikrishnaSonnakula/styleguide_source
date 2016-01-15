@@ -54,7 +54,7 @@
 
           <p>Example is showing with a default selected option.</p>
           <p><code>label</code> is used to prefix the seletion.</p>
-          <p>The first option is selected by default, <code>Apple</code> in this case.</p>
+          <p>The first option is selected by default, <code>Apple</code> in this case. Long option text will be wrapped when it's needed.</p>
           <div class="example -padded">
             <pre class="code language-javascript">
               import fancySelect from 'styleguide/lib/modern/scripts/fancy_select';
@@ -66,7 +66,7 @@
                My Favorite:
               </label>
               <select id="select-from" class="screenreader-only">
-                <option value="A">Apple</option>
+                <option value="A">Apple is always my favorite fruit</option>
                 <option value="B">Banana</option>
               </select>
             </div>
@@ -79,13 +79,13 @@
             </label>
             <div class="fancy-select">
               <select id="select-from" class="screenreader-only">
-                <option value="A">Apple</option>
+                <option value="A">Apple is always my favorite fruit</option>
                 <option value="B">Banana</option>
               </select>
 
-              <button class="-value">Select from: </button>
+              <button class="-value">My Favorite: </button>
               <div class="-options">
-                <button value="A" class="-option -active">Apple</button>
+                <button value="A" class="-option -active">Apple is always my favorite fruit</button>
                 <button value="B" class="-option">Banana</button>
               </div>
             </div>
