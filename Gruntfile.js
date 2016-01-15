@@ -24,13 +24,6 @@ module.exports = function(grunt) {
   });
 
   grunt.config.merge({
-    copy: {
-      dist: {
-        files: [{
-          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
-        }]
-      }
-    },
     md2html: {
       docs: {
         options: {
@@ -61,6 +54,17 @@ module.exports = function(grunt) {
       }
     }
   });
+
+  grunt.config.merge({
+    copy: {
+      dist: {
+        files: [{
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
+        }]
+      }
+    },
+  });
+
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
   
 };
