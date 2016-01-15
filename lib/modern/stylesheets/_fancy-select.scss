@@ -32,6 +32,7 @@ $select-options-max-height: 300px !default;
     @include decorated-selection;
     color: $select-font-color;
     padding-left: 0;
+    margin: $tiny-spacing 0 0 $tiny-spacing;
     &:after {
       line-height: normal;
       color: $select-font-color;
