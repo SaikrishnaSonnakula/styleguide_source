@@ -65,6 +65,6 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.registerTask('prebuild', ['md2html']);
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
-  
 };
