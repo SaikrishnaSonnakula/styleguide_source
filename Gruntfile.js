@@ -46,12 +46,13 @@ module.exports = function(grunt) {
           ext: '.html'
         }]
       }
-    },
+    }
+  });
+
+  grunt.config.merge({
     watch: {
-      dist: {
-        files: ['*.md'],
-        tasks: ['md2html']
-      }
+      files: ['*.md'],
+      tasks: ['md2html']
     }
   });
 
