@@ -36,6 +36,7 @@ $select-options-max-height: 300px !default;
       line-height: normal;
       color: $select-font-color;
       float: right;
+      margin: $tiny-spacing 0 0 $tiny-spacing;
 
       @include media($desktop){
         font-size: $medium-font-size;
