@@ -52,16 +52,24 @@
       margin: auto;
       width: 50%;
     }
+    @include media($device) {
+      background: color(inky-blue);
+      opacity: 0.9;
+    }
 
     .content {
       padding: $gutter-spacing;
       margin-bottom: $gutter-spacing;
-      margin-top: $gutter-spacing;      
+      margin-top: $gutter-spacing;
 
       text-align: center;
+      word-wrap: break-word;
 
       @include media($desktop) {
         padding-bottom: 0px;
+      }
+      @include media($device) {
+        color: white;
       }
     }
 
@@ -86,11 +94,27 @@
           color: color(interactive-blue);
           background-color: white;
           border-color: color(interactive-blue);
+
+          @include media($device) {
+            position: relative;
+            top: $device-medium-spacing;
+            color: white;
+            background: transparent;
+            border-color: white;
+          }
         }
 
         &.-action.-inverted {
           color: white;
           background-color: color(interactive-blue);
+
+          @include media($device) {
+            position: relative;
+            top: -$device-medium-spacing;
+            color: $text-dark;
+            background: white;
+            border-color: white;
+          }
         }
 
         @include media($desktop-medium-up) {

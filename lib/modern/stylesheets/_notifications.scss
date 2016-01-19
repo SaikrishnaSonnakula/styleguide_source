@@ -10,11 +10,13 @@ $icon-radius: $feature-icon-mobile-size;
     position: relative;
     bottom: $xl-spacing;
 
-    @include media($mobile){
+    @include media($device){
       float: none;
       position: relative;
       top: $small-spacing;
       left: -$small-spacing;
     }
+
+
   }
 }
