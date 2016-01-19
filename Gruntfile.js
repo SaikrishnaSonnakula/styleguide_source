@@ -59,9 +59,14 @@ module.exports = function(grunt) {
   grunt.config.merge({
     copy: {
       dist: {
-        files: [{
-          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
-        }]
+        files: [
+          { src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'] },
+          { cwd: 'lib/modern',
+            expand: true,
+            src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
+            dest: 'target/dist'
+          }
+        ]
       }
     },
   });
