@@ -30,9 +30,9 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-        expect($(".fancy-select .-item", root)).to.exist;
-        expect($(".fancy-select .-item label", root)).to.contain("To:");
-        expect($(".fancy-select .-item .name", root)).to.contain("Dr. Only Me");
+        expect($(".fancy-select.-single", root)).to.exist;
+        expect($(".fancy-select select", root)).to.contain("Dr. Only Me");
+        expect($(".fancy-select .-value", root)).to.contain("To: Dr. Only Me");
       });
     });
   });
@@ -72,7 +72,7 @@ describe('fancy-select component', function() {
     });
   });
 
-  it('only show description when there is no default option selected', function() {
+  it('should only show placeholder when there is no default option selected', function() {
     this.harness = createTestHarnessWith("<label for='my-select' title='Please select the following'>To:</label>"+
         "<select id='my-select'>"+
         "<option value='A'>Apple</option>"+
