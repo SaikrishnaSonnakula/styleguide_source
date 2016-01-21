@@ -24,4 +24,4 @@ function toEm(px){
   let value = parseFloat(px);
   let emSize = parseFloat($("body").css("font-size"));
   return Math.round((value / emSize) * 100)/100;
-};
+}
