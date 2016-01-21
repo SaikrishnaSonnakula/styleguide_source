@@ -5,7 +5,7 @@ require('../../scss/modern/index.scss');
 import $ from 'jquery';
 import addColors from './add_colors';
 import createExamples from '../create_examples';
-import addSpacing from './add_spacing';
+import { addSpacing, addFontSizes } from './add_spacing';
 import _prism from 'prism';
 import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
@@ -19,6 +19,7 @@ $(function() {
   }
   createExamples();
   addSpacing();
+  addFontSizes();
   responsiveTable();
 
   fancySelect($("#select-from"));
