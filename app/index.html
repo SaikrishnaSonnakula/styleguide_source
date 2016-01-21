@@ -1,877 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UI Styleguide</title>
+    <title>Web Design Styleguide</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
-    <script src="main.bundle.js"></script>
+    <script src="modern.bundle.js"></script>
 
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header id="styleguide-header">
-      <div class="current-breakpoint">
-        Current Breakpoint:
-        <span class="small-only">Small</span>
-        <span class="medium-only">Medium</span>
-        <span class="large-only">Large</span>
-        <span class="largest-only">Large (Beyond Max)</span>
-      </div>
+    <header class="styleguide-header">
+      <span id="menu-button" class="device-menu-button icon-menu"></span>
+      <span class="desktop-only">Web Design</span> Styleguide
     </header>
-    <main style="display: none">
-      <nav class="fixedsticky">
+
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
+
+    <main class="styleguide-main" style="display: none">
+      <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
         <ul>
-          <li><a href="#responsive-section">Responsive Design</a></li>
+          <li><a href="#installation-section">Installation</a></li>
+          <li><a href="#responsive-section">Responsive</a></li>
           <li><a href="#colors-section">Colors</a></li>
-          <li><a href="#spacing-section">Spacing</a></li>
-          <li><a href="#icons-section">Icons</a></li>
-          <li><a href="icon/demo.html">Icon List</a></li>
           <li><a href="#typography-section">Typography</a></li>
+          <li><a href="#spacing-section">Spacing</a></li>
           <li><a href="#buttons-section">Buttons</a></li>
-          <li><a href="#form-section">Forms</a></li>
           <li><a href="#lists-section">Lists</a></li>
-      	  <li><a href="#thumbnails-section">Thumbs</a></li>
-          <li><a href="#tables-section">Tables</a></li>
           <li><a href="#modal-section">Modal</a></li>
-          <li><a href="#progress-bar-section">Progress Bar</a></li>
-          <li><a href="#header-section">Header</a></li>
-          <li><a href="#feature-layout-section">Feature Layout</a></li>
+          <li><a href="#forms-section">Forms</a></li>
+          <li><a href="#features-section">Features</a></li>
+          <li><a href="#dropdowns-section">Dropdowns</a></li>
+          <li><a href="#errors-section">Notifications</a></li>
+          <li><a href="#layouts-section">Layouts</a></li>
+          <li><a href="#icons-section">Icons</a></li>
         </ul>
       </nav>
 
-      <article>
-        <h1>
-          Responsive Web Design Styleguide
-        </h1>
+      <article class="styleguide-content">
+        <section id="about-section">
+          <h2 class="styleguide-section-heading">
+            About
+          </h2>
+          <p>
+            The Web Design Styleguide (or as we call it, the styleguide) is both a styleguide document, which you can see here on this site, <em>and</em> a library of styling assets, like images, fonts, and stylesheets. This document was built with the same assets that are imported into responsive KP applications.
+          </p>
+          <p>
+            If you're interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk</a> on Styleguide Driven Development by Nicole Sullivan.
+          </p>
 
-        <p>
-          <strong>Note:</strong> This is a living styleguide, and you will be seeing the active styles. To see what these styles look like on different form factors, change the size of your browser, or view this styleguide from a different device.
-        </p>
+          <h3 class="styleguide-section-subheading">Javascript UI elements</h3>
 
-        <h2>Developers</h2>
-        <p>
-          Please refer to the <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse">README</a> on stash for installation and usage of <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse">Styleguide</a>.
-        </p>
+          <p>We have added a new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, these are patterns that require the use of Javascript for specific behavior, for example, accordions and custom select menus.</p>
+
+          <p class="tangerine"><strong>If you are looking for legacy <a href="legacy.html">here it is</a></strong></p>
+        </section>
+
+        <section id="installation-section">
+          <h2 class="styleguide-section-heading">
+            Installation
+          </h2>
+
+          <p>
+            The styleguide is a NPM module. You can add it as a dependency to your project by running the following command in your project directory:
+          </p>
+
+          <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
+
+          <p>
+            Then, include the styles in your sass file:
+          </p>
+
+          <pre><code class="language-scss">@import "styleguide/modern"</code></pre>
+
+          <p>
+            Since the styleguide contains a variety of front-end assets, which all need to be handled the
+            right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
+
+            If you are using the Build Plugin, you're all set!
+          </p>
+          <p>
+            If for some reason you cannot use the Build Plugin, you will need to build the assets manually out for AEM integration.
+            We will soon be documenting this process, but in the mean time, please let us know in the HipChat Room "Styleguide Core"
+          </p>
+        </section>
 
         <section id="responsive-section">
-          <h2>Responsive Design</h2>
-          <p>
-            There are 3 breakpoints for small, medium, and large screens. There
-            are a variety of helper variables and classes in the styleguide, to
-            easily define style differences for these 3 form factors. Reference
-            the helper at the bottom of the screen to know what form factor your
-            current screen falls under.
-          </p>
-
-          <h4>Small</h4>
-          <p>0 to <code>$small-screen-max</code> (414px)</p>
-
-          <h4>Medium</h4>
-          <p><code>$medium-screen-min</code> (415px) to <code>$medium-screen-max</code> (815px)</li></p>
-
-          <h4>Large</h4>
-          <p><code>$large-screen-min</code> (816px) to <code>$large-screen-max</code> (1050px)</p>
-
-          <h3>Using Breakpoints</h3>
-          <p>
-            You should write your CSS in a <strong>mobile first</strong> structure.
-            This means all styles by default will apply to the mobile form factor.
-            The media tags, <code>$medium-screen</code> and <code>$large-screen</code>,
-            can be used to alter styles for additional modifications for the medium
-            and large form factors. We use the
-            <a href="http://neat.bourbon.io/">Neat library</a> for breakpoint
-            specific code. Check out the documentation there for more detailed information.
-          </p>
-          <p>
-            <div class="example minor">
-              <pre class="code language-scss">
-                .responsive-example {
-                  font-size: 12px;
-                  color: $light-grey;
-
-                  @include media($medium-screen) {
-                    font-size: 20px;
-                    color: $dark-grey;
-                  }
-
-                  @include media($large-screen) {
-                    font-size: 32px;
-                    color: $deep-blue;
-                  }
-                }
-              </pre>
-
-              <p class="responsive-example">
-                I get louder when the screen gets bigger.
-              </p>
-            </div>
-          </p>
-
-          <h3>Responsive Helper Classes</h3>
-          <p>
-            You can use the <code>mobile-only</code> and <code>desktop-only</code>
-            classes to easily designate elements that should be shown only on certain
-            form factors.
-          </p>
-          <p>
-            <strong>Note:</strong> You might notice there are only two. Currently,
-            mobile corresponds with the medium and small breakpoints, and desktop
-            corresponds with the large form factor. This is for convenience, as the
-            small and medium forms share the same designs.
-          </p>
-
-          <div class="minor example">
-            <p class="mobile-only">
-              I like your slick mobile device.
-            </p>
-            <p class="desktop-only">
-              I like your powerful desktop machine.
-            </p>
+          <h2 class="styleguide-section-heading">Responsive</h2>
+          <p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
+          <div id="responsive-table">
           </div>
+
+          <h4>Usage</h4>
+          If you want to apply a specific style to let's say the <code>$mobile</code> view try this:
+          <pre class="code language-scss" data-langauge="scss">
+            <code class="code">
+            .element{
+              @include media($mobile) {
+                background-color: black;
+              }
+            }
+            </code>
+          </pre>
+          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
+          <pre class="code language-scss"><code class="code">
+.element{
+  @include media($desktop-large) {
+    display:block;
+  }
+  @include media($handheld){
+    display:none;
+  }
+}</code>
+          </pre>
         </section>
 
         <section id="colors-section">
-          <h2>Colors</h2>
+          <h2 class="styleguide-section-heading">
+            Colors
+          </h2>
 
           <div id="colors">
-          </div>
-        </section>
-
-        <section id="spacing-section">
-          <h2>Spacing</h2>
-          <p>There are several varibles that can help you more effectively choose
-          spacing for your feature specific styling. <strong>Hover over an element
-          to see the spacing highlighted.</strong></p>
-
-          <div class="spacing-examples">
-            <div class="spacing-example">
-              <div class="small-spacing">
-                <div class="form-group">
-                  <label>Small Spacing</label>
-                  <input type="text"/>
-                  <div class="field-note">
-                    <code>$small-spacing</code> represents the smallest amount of
-                    spacing between two elements. The small space between a label
-                    and the field, or the spacing between field and it's note is an example of small
-                    spacing.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="spacing-example">
-              <div class="medium-spacing">
-                <code>$medium-spacing</code> represents the margin along the sides of
-                the page. That's why the variable <code>$gutter-spacing</code> can also
-                be used to refrence this spacing value.
-              </div>
-            </div>
-            <div class="spacing-example">
-              <p>
-                <code>$large-spacing</code> is often used for vertical space between
-                two elements on a page, such as an h2 and the content beneath it.
-              </p>
-              <p>
-                It's also used to seperate paragraphs from each other.
-              </p>
-              <p>
-                That's why you can also use the variable <code>$paragraph-spacing</code>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="icons-section">
-          <h2>Icons</h2>
-          <p>
-            There is a common icon font for all RWD apps.
-            <b><a href="icon/demo.html">See the full list of icons</a></b>
-          </p>
-
-          <div class="element example">
-            <div class="icon-medical-savings"></div>
-          </div>
-
-          <div class="element example">
-            <div class="icon-loading"><span class="message">Loading...</span></div>
-          </div>
-
-          <h3>Feature Icons</h3>
-          <p>
-            Feature icons are colored, styled icons representing each feature. You can use the
-            <code>.feature-icon</code> class in your scss or html to acheive this effect.
-          </p>
-
-          <div class="element example">
-            <div class="feature-icon icon-rx"></div>
-          </div>
-        </section>
-         <section id="credit-card-section">
-          <h2>Credit card images</h2>
-          <p>Images for icons are brought in through CSS background-image. If you'd like to add another Credit Card image please do so through the repo and put images in <code>images/credit-card</code> </p>
-          <div class="minor example">
-            <div class="credit-card visa"></div>
-            <div class="credit-card master"></div>
-            <div class="credit-card amex"></div>
-            <div class="credit-card discover"></div>
-            <div class="geolocation-icon"></div>
-          </div>
+            <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
+	    </p>
+	    <p>For example:</p>
+	    <pre class="code language-scss"><code class="code">.element {
+	      background-color: color(lilac);
+	    }</code></pre>
+	    <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
+	  </div>
         </section>
 
         <section id="typography-section">
-          <h2>Typography</h2>
-          <p> All fonts in the RWD app should be one of the following sizes. There are variables and classes you can use to use these font sizes. We are using <code>Verdana</code></p>
-
-          <div id="font-sizes">
-            <div class="font-size">
-              <div class="mini-font">Mini Font</div>
-              <code>$mini-font</code>
+          <h2 class="styleguide-section-heading">Typography</h2>
+          <p>
+            These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
+          </p>
+          <h3 class="styleguide-subheading">
+            Font Family Variables
+          </h3>
+          <div class="font-variables">
+            <div class="font-variable">
+              <div class="base-font-family">Base Font Family</div>
+              <code>$base-font-family</code>
             </div>
 
-            <div class="font-size">
-              <div class="small-font">Small Font</div>
-              <code>$small-font</code>
-            </div>
-
-            <div class="font-size">
-              <div class="base-font">Base Font</div>
-              <code>$base-font</code>
-            </div>
-
-            <div class="font-size">
-              <div class="medium-font">Medium Font</div>
-              <code>$medium-font</code>
-            </div>
-
-            <div class="font-size">
-              <div class="large-font">Large Font</div>
-              <code>$large-font</code>
-            </div>
-
-            <div class="font-size">
-              <div class="extra-large-font">Extra Large</div>
-              <code>$extra-large-font</code>
+            <div class="font-variable">
+              <div class="bold-font-family">Bold Font Family</div>
+              <code>$bold-font-family</code>
             </div>
           </div>
 
-          <h3>Heading Classes</h3>
+          <h3 class="styleguide-subheading">
+            Font Size Variables
+          </h3>
+          <div class="font-variables">
+            <div class="font-variable">
+              <div class="extra-tiny-font-size">Extra Tiny</div>
+              <code>$extra-tiny-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="tiny-font-size">Tiny</div>
+              <code>$tiny-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="small-font-size">Small</div>
+              <code>$small-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="medium-font-size">Medium</div>
+              <code>$medium-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="large-font-size">Large</div>
+              <code>$large-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="xl-font-size">XL</div>
+              <code>$xl-font-size</code>
+            </div>
+
+            <div class="font-variable">
+              <div class="xxl-font-size">XXL</div>
+              <code>$xxl-font-size</code>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Text Styles
+          </h3>
           <p>
             There are a variety of heading classes that can be applied to any
             element to give it the style of a heading. Use <code>h1</code>, <code>h2</code>, <code>h3</code>, etc, for semantic meaning, not for styling.
           </p>
-          <div class="minor example">
-            <h1>The H1 heading text</h1>
+          <div class="example -minor -padded">
+            <h1 class="page-heading">
+              Page Heading
+            </h1>
           </div>
-          <div class="minor example">
-            <h2>The H2 heading text</h2>
-          </div>
-          <div class="minor example">
-            <h3>The H3 heading text</h3>
-          </div>
-          <div class="minor example">
-            <h2 class="page-heading">Page Heading</h2>
-          </div>
-
-          <div class="minor example">
-            <h2 class="bold-heading">Bold heading</h2>
-          </div>
-
-          <div class="minor example">
-            <h3 class="section-heading">Section Heading</h3>
-          </div>
-
-          <div class="minor example">
-            <h3 class="section-heading uppercase">Section Heading</h3>
-          </div>
-
-          <p>
-            Use the heading-right within the heading for right aligned content
-            such as icons:
-          </p>
-          <div class="minor example">
-            <a href="#typography" class="section-heading">
+          <div class="example -minor -padded">
+            <h2 class="section-heading">
               Section Heading
-
-              <div class="heading-right">
-                <i class="icon-arrow-down"></i>
+            </h2>
+          </div>
+          <div class="example -minor -padded">
+            <h3 class="item-heading">
+              Item Heading
+            </h3>
+          </div>
+          <div class="example -minor -padded">
+            <h4 class="item-subheading">
+              Item Subheading
+            </h4>
+          </div>
+          <div class="example -minor -padded">
+            <span class="item-tag">
+              Tag (also used for dates)
+            </span>
+          </div>
+          <div class="example -minor -padded">
+            <span class="auxiliary-text">
+              Auxiliary text
+            </span>
+          </div>
+        </section>
+        <section id="spacing-section">
+          <h2 class="styleguide-section-heading">Spacing</h2>
+          <p>There are several variables that can help you more effectively choose
+          spacing for your feature-specific styling. <strong>Hover over an element
+          to see the spacing highlighted.</strong></p>
+          <div class="spacing-examples">
+            <div class="spacing-example -tiny">
+              <div class="spacing-highlight">
+                <h3 class="item-heading">
+                  Tiny Spacing
+                </h3>
+                <h3 class="item-subheading">
+                  example
+                </h3>
               </div>
+              <p>
+                <code>$tiny-spacing</code> is the smallest amount of spacing between two elements. Elements separated by tiny spacing will have a strong spacial connection, such as in this heading and subheading.
+              </p>
+            </div>
+
+            <div class="spacing-example -small">
+              <div class="spacing-highlight">
+                <p>Small spacing</p>
+                <p>the spacing between paragraphs.</p>
+              </div>
+
+              <p>
+                <code>$small-spacing</code> is small amount of spacing between two elements. Elements separated by small spacing will have a slight spacial connection, such as between paragraphs of body text. That's why you can also use the variable <code>$paragraph-spacing</code>.
+              </p>
+            </div>
+
+            <div class="spacing-example -medium">
+              <div class="feed-item">
+                <div class="spacing-highlight">
+                  <p class="item-body medium-spacing">
+                    Medium spacing
+                  </p>
+                </div>
+                <div class="item-tag">example</div>
+              </div>
+              <p>
+                <code>$medium-spacing</code> can be used if you need a larger amount of spacing between two elements than is between paragraphs.
+              </p>
+            </div>
+
+            <div class="spacing-example -large">
+              <div class="spacing-highlight">
+                <h3 class="large-spacing">
+                  Large Spacing
+                </h3>
+                <div class="feed-item-tag">example.</div>
+              </div>
+
+              <p>
+                <code>$large-spacing</code> can space out element groups from each other.
+              </p>
+            </div>
+
+            <div class="spacing-example -xl">
+              <div class="spacing-highlight">
+                <h3>XL Spacing</h3>
+                <div class="xl-spacing">
+                  example!
+                </div>
+              </div>
+
+              <p>
+                <code>$xl-spacing</code> is used to give a lot of visual separation, such as the gutter for hero elements.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="buttons-section">
+          <h2 class="styleguide-section-heading">Buttons</h2>
+          <p>
+            <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
+          </p>
+          <div class="example -element -padded">
+            <button class="button">
+              Button!
+            </button>
+          </div>
+          <div class="example -element -padded">
+            <a class="button">
+              Anchor Button
             </a>
           </div>
 
           <p>
-            Context bars will look like section headings in the large form factor.
-            In the small form factor, they are a colored bar representing some
-            context about the page.
+            For an inverted color, use the <code>-inverted</code> class.
           </p>
-          <div class="minor example">
-            <h2 class="context-bar">Context Bar</h2>
+          <div class="example -element -padded">
+            <button class="button -inverted">
+              Inverted Button
+            </button>
           </div>
 
-          <h3>Alerts</h3>
-          <div class="large-element example">
-            <div class="alert-bland">
-              <strong>Use this when:</strong>
-              <br/>
-              you need a really bland alert.
-            </div>
+          <p>
+            You can also make a <code>&lt;button&gt;</code> look like a link:
+          </p>
+          <div class="example -element -padded">
+            <button class="link">
+              Link Button
+            </button>
           </div>
-          <div class="large-element example">
-            <div class="alert-info">
-              <span class="screenreader-only">Icon of heads up</span>
-              Heads up!
-              This alert needs your attention,
-              but it's not super important.
-            </div>
+
+          <p>
+              You can make a close button look this:
+          </p>
+
+          <div class="example -element -padded">
+              <button class="-close" role="button">
+                <span class="screenreader-only">close</span>
+              </button>
           </div>
-          <div class="large-element example">
-            <div class="alert-error">
-              <span class="screenreader-only">Icon Error</span>
-              Oh snap!
-              Change a few things up and try submitting again.
-            </div>
+
+          <p>
+            If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
+          </p>
+          <div class="example -element">
+            <button class="button -block">
+              Block button
+            </button>
           </div>
-          <div class="large-element example">
-            <div class="alert-success">
-              <span class="screenreader-only">Icon Success</span>
-              Well done!
-              You successfully read this important alert message.
-            </div>
-          </div>
-          <div class="large-element example">
-            <div class="alert-loading">
-              <span class="alert-message">
-                Loading...
-              </span>
-            </div>
+
+          <p>
+            If you need a disabled button you can add the following class <code>-disabled</code>
+          </p>
+          <div class="example -element">
+            <button class="button -disabled" disabled>
+              Disabled button
+            </button>
           </div>
         </section>
-        <section id="buttons-section">
-          <h2>Buttons</h2>
-
-          <div class="element example">
-            <button class="button">Default</button>
-          </div>
-          <div class="element example">
-            <button class="button" disabled>Disabled Button</button>
-          </div>
-          <div class="element example">
-            <button class="button outline-button">Outline Button</button>
-          </div>
-          <div class="element example">
-            <button class="button large">Large Button</button>
-          </div>
-          <div class="element example">
-            <button class="button small">Small Button</button>
-          </div>
-          <div class="element example">
-            <button class="button mini">Mini Button</button>
-          </div>
-          <div class="minor example">
-            <button class="button block">Block Button</button>
-          </div>
-          <div class="large-element example">
-            <div class="button-group">
-              <button class="primary">Primary</button>
-              <button class="secondary">Secondary</button>
-            </div>
-          </div>
-        </section>
-
-         <section id="form-section">
-            <h2>Forms</h2>
-            <p>
-              Group labels and input fields inside of a <code>.form-group</code>
-              div for styles to apply. There are several form elements you can use.
-              See the examples below to see how to use the form elements:
-            </p>
-
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="name-field">Name</label>
-                <input type="text" id="name-field"/>
-              </div>
-            </div>
-
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="password-field">Password</label>
-                <input type="password" id="password-field"/>
-              </div>
-            </div>
-
-             <div class="large-element example">
-              <div class="form-group">
-                <label for="company-field">Company</label>
-                <div id="company-field" class="fixed-input">
-                  Kaiser Permanente
-                </div>
-              </div>
-            </div>
-
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="about-field">About</label>
-                <textarea id="about-field"></textarea>
-              </div>
-            </div>
-            <p>If you would like to have the gray default unchanged look you can apply to <code>select class="not-changed" </code> otherwise by default it will be blue.</p>
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="team-field">Favorite Team</label>
-                <div class="select-dropdown">
-                  <select id="team-field">
-                    <option>Golden State Warriors</option>
-                    <option>San Francisco 49ers</option>
-                    <option>San Francisco Giants</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            
-            <div class="large-element example">
-              <div class="form-group check-field">
-                <label for="kp-fan-checkbox">
-                  <input type="checkbox" id="kp-fan-checkbox"/>
-                  Check if you're a big fan of KP.
-                </label>
-              </div>
-            </div>
-
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="shows-list">Shows you watch</label>
-                <ul id="shows-list" class="check-list">
-                  <li>
-                    <input type="checkbox" id="survivor" disabled/>
-                    <label for="survivor">Survivor</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="oprah"/>
-                    <label for="oprah">Oprah</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="silicon-valley"/>
-                    <label for="silicon-valley">Silicon Valley</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="csi-miami"/>
-                    <label for="csi-miami">CSI Miami</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="shows-list">Sports you watch</label>
-                <ul id="shows-list" class="check-list">
-                  <li>
-                    <input type="radio" name="sports-radio" id="c1" disabled="">
-                    <label for="c1">Cricket [disabled]</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="sports-radio" id="c2">
-                    <label for="c2">Basketball</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="sports-radio" id="c3">
-                    <label for="c3">Soccer</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="sports-radio" id="c4">
-                    <label for="c4">Baseball</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <p>
-              Use the <code>.field-note</code> class to add a note underneath the
-              form element.
-            </p>
-            <div class="large-element example">
-              <div class="form-group">
-                <label for="feelings-field">
-                  How are you feeling today?
-                </label>
-                <input type="text" id="feelings-field"/>
-                <div class="field-note">
-                  <strong>Note:</strong>
-                  We will not hold your answer against you.
-                  Feel free to speak from your heart.
-                </div>
-              </div>
-            </div>
-
-            <h3>Error States</h3>
-            <p>
-              Use the <code>.error</code> class to designate that there is
-              an error with the field.
-            </p>
-            <div class="large-element example">
-              <div class="form-group error">
-                <label for="city-field">City</label>
-                <input type="text" id="city-field"/>
-                <div class="field-note">
-                  Hey, you can't leave this field blank.
-                </div>
-              </div>
-            </div>
-
-            <div class="large-element example">
-              <div class="form-group error">
-                <label for="m-radio">Manditory selection</label>
-                <ul id="m-radio" class="check-list">
-                  <li>
-                    <input type="radio" name="m-radio" id="d1">
-                    <label for="d1">Yes</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="m-radio" id="d2">
-                    <label for="d2">No</label>
-                  </li>
-                </ul>
-                <div class="field-note">
-                  Didn't you read, this field is mandatory.
-                </div>
-              </div>
-            </div>
-          </section>
 
         <section id="lists-section">
-          <h2>Lists</h2>
-          <div class="minor example">
-            <ul class="link-list">
-              <li> <a href="#">Link 1</a> </li>
-              <li> <a href="#">Link 2</a> </li>
+          <h2 class="styleguide-section-heading">Lists</h2>
+          <div class="example -padded">
+            <ul class="horizontal-list">
+              <li>Seattle</li>
+              <li>San Francisco</li>
+              <li>Los Angeles</li>
             </ul>
           </div>
-        </section>
-      	<section id="thumbnails-section">
-      	  <h2>Thumbs</h2>
-          <div class="example minor">
-            <div class="thumbnail-large">
-              <img src="http://fakeimg.pl/260x180/?text=260x180px"> 
-            </div>
-          </div>
-          <div class="example minor">
-            <div class="thumbnail-medium">
-              <img src="http://fakeimg.pl/160x120/?text=160x120px">
-            </div>
-          </div>
-          <div class="example minor">
-            <div class="thumbnail-small">
-              <img src="http://fakeimg.pl/80x80/?text=80x80px">
-            </div>
-          </div>
-          <div class="example minor">
-            <div class="thumbnail-smallest">
-              <img src="http://fakeimg.pl/60x60/?text=60x60px">
-            </div>
-          </div>
-          <div class="example minor">
-            <div class="thumbnail-largest"> 360x270
-              <img src="http://fakeimg.pl/360x270/?text=360x270px">
-            </div>
-          </div>
 
-      	 </section>
-        <section id="tables-section">
-          <h2>Tables</h2>
-          <div class="minor example">
-            <table class="table">
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>City</th>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>Shane Russell</td>
-                <td>San Francisco, CA</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>Tommy Wu</td>
-                <td>Pasadena, CA</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="minor example">
-            <table class="table">
-              <tr class="section-heading">
-                <th></th>
-                <th>Name</th>
-                <th>City</th>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>Shane Russell</td>
-                <td>San Francisco, CA</td>
-              </tr>
-            </table>
-          </div>
-          <h3>Collapsable Tables</h3>
-          <p>
-            Collapsable tables will condense into a single-column list with the headings hidden on small form-factors. On large form factors, they will look identical to normal tables.
-          </p>
-          <p>
-            If you want a table cell to remain a column in all form factors. Add the class
-            <code>keep-column</code> to the <code>td</code> element. <strong>Note:</strong> this will only work correctly for columns on the far left or far right of the table.
-          </p>
-          <div class="minor example">
-            <table class="table collapsable">
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>City</th>
-                <th>Active?</th>
-              </tr>
-              <tr>
-                <td class="keep-column"><input type="checkbox"></td>
-                <td>Shane Russell</td>
-                <td class="bottom">San Francisco, CA</td>
-                <td class="keep-column">active</td>
-              </tr>
-              <tr>
-                <td class="keep-column"><input type="checkbox"></td>
-                <td>Tommy Wu</td>
-                <td class="bottom">Pasadena, CA</td>
-                <td class="keep-column">active</td>
-              </tr>
-            </table>
+          <div class="example -padded">
+            <ul class="horizontal-list -divided">
+              <li>Seattle</li>
+              <li>San Francisco</li>
+              <li>Los Angeles</li>
+            </ul>
           </div>
         </section>
 
         <section id="modal-section">
-          <h2>Modal</h2>
+          <h2 class="styleguide-section-heading">Modal</h2>
 
-          <div class="element example">
+          <div class="example -padded">
             <pre class="code language-javascript">
-              
-              $("#modal-link").click(function() {
-                $("#my-modal").addClass("modal-showing");
-                $("#my-modal").attr('aria-hidden','false');
-                $(".modal-inner" ,"#my-modal").attr('tabindex', '0').focus();
-              });
+                var focusedElementBeforeModal = null;
+                var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
-              $(".modal-close, .modal-fade-screen").click(function() {
-                $("#my-modal").removeClass("modal-showing");
-                $("#my-modal").attr('aria-hidden','true');
-                $(".modal-inner" ,"#my-modal").removeAttr('tabindex');
+                $("#modal-button").click(function() {
+                  $("#my-modal").addClass("modal-showing");
+                  $("#my-modal").attr('aria-hidden','false');
+                  $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+                  focusedElementBeforeModal = $(':focus');
+                  var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
+                  firstElem.focus();
+                });
+
+                $("#nothing").click(function(ev) {
+                  $("#my-modal").removeClass("modal-showing");
+                  $("#my-modal").attr("aria-hidden", 'true');
+                  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+                  $(".modal-inner #modal-description").removeAttr('tabindex');
+                  $("#modal-button").attr('tabindex', '0');
+                  focusedElementBeforeModal.focus();
+                  ev.preventDefault();
+                });
+            </pre>
+
+            <button id="modal-button" class="button">
+              Bring in the modal
+            </button>
+
+            <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+              <div class="modal-fade-screen">
+                <div class="modal-inner">
+                  <div id="modal-description" class="content">
+                    Welcome to the modal space. What do you do?
+                  </div>
+                  <div class="modal-buttons">
+                    <button id="nothing" class="button -action">
+                      Do nothing
+                    </button>
+                    <button id="do-something" class="button -action -inverted">
+                      Action
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="forms-section">
+          <h2 class="styleguide-section-heading">Forms</h2>
+          <h3 class="styleguide-subheading">
+            Form Controls
+          </h3>
+
+          <div class="example -minor -padded">
+            <input type="text" class="form-control" placeholder="Name"/>
+          </div>
+
+          <div class="example -minor -padded">
+            <input type="checkbox" id="day" class="form-control"/>
+            <label for="day">Check if you're having a good day.</label>
+          </div>
+
+          <div class="example -minor -padded">
+            <input type="checkbox" id="kp-fan" class="form-control" checked disabled/>
+            <label for="kp-fan">Are you a fan of KP?</label>
+          </div>
+
+          <h3 class="styleguide-subheading">Horizontal Form</h3>
+          <div class="example -padded">
+            <div class="horizontal-form">
+              <input class="form-control" placeholder="Username"></input>
+              <input type="password" class="form-control" placeholder="Password"></input>
+              <button class="button">
+                Submit
+              </button>
+            </div>
+          </div
+        </section>
+
+        <section id="features-section">
+          <h2 class="styleguide-section-heading">Features</h2>
+          <h3 class="styleguide-subheading">
+            Feature Layout
+          </h3>
+
+          <p>
+            Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
+          </p>
+          <div class="example">
+            <div class="feature">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Active action box
+          </h3>
+
+          <p>
+            In device mode, active action box occupies full screen and hides feature-content.
+            In desktop mode, active action box pushes feature-content down.
+            To activate the action box, add <code>-action-box-active</code> to the feature element.
+          </p>
+
+          <div class="example">
+            <div class="feature -action-box-active">
+              <div class="action-box">
+                <h3 class="action-message">Action Message in Active Action Box</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Action Box
+          </h3>
+
+          <p>
+            Action buttons will show as fixed buttons on the bottom of the screen for the device.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-action-button-pair">Toggle Example
+            </button>
+          </p>
+
+          <div class="example -padded -hide-action-buttons" id="action-button-pair">
+            <div class="action-box">
+              <div class="action-button">
+                <button class="button -action">
+                  Yes!
+                </button>
+                <button class="button -action -inverted">
+                  No
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Main action buttons will show as fixed buttons on the bottom of the screen for device.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-primary-action-button">Toggle Example
+            </button>
+          </p>
+
+          <div class="example -padded -hide-action-buttons" id="action-button">
+            <div class="action-box">
+              <button class="primary-action">
+                Primary Action
+              </button>
+            </div>
+          </div>
+
+          <p>
+           Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.
+          </p>
+
+          <div class="example -padded">
+            <div class="action-box">
+              <div class="-center-piece fuchsia">Fancy Center Piece</div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Feed Items
+          </h3>
+
+          <div class="example">
+            <div class="feed-item">
+              <div class="-gutter">
+                <div class="feature-icon aqua">WW</div>
+              </div>
+
+              <div class="-main">
+                <h3 class="item-heading">
+                  You have a Feed Item
+                </h3>
+                <h4 class="item-subheading">
+                  from Styleguide
+                </h4>
+                <div class="-body">
+                  This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                </div>
+                <div class="-footer item-tag">
+                  Tagz
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            For feed items with collapsible content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
+            elements with the <code>collapsible-content</code> class.
+          </p>
+
+          <div class="example">
+            <pre class="code language-javascript">
+              $("#my-collapsible-feed-item .-click-to-expand").on('click', function() {
+                $("#my-collapsible-feed-item").toggleClass("-open");
               });
             </pre>
 
-            <a class="button large" id="modal-link">Bring in the modal</a>
+            <div id="my-collapsible-feed-item" class="feed-item -collapsible">
+              <div class="-gutter">
+                <div class="feature-icon fuchsia">IJ</div>
+              </div>
 
-            <div class="kp-modal" id="my-modal" role="dialog" aria-hidden="true">
-              <div class="modal-fade-screen">
-                <div class="modal-inner">
-                  <div class="modal-header">
-                    Modal space
+              <div class="-main">
+                <button class="-click-to-expand">
+                  <h3 class="item-heading">
+                    Feed Item with Additional Content
+                  </h3>
 
-                    <button class="modal-close"></button>
+                  <h4 class="item-subheading">
+                    from Styleguide
+                  </h4>
 
-                    <div class="modal-close" aria-label="close" role="button"></div>
+                  <div class="-body">
+                    Click me to see the extra content!
                   </div>
+                </button>
 
-                  <div class="content">
-                    Welcome to the modal space. What do you do?
+                <p class="-body -collapsible">
+                  Extra content.
+                </p>
 
-                    <div class="modal-buttons">
-                      <a id="nothing" class="button outline-button">Do nothing</a>
-                      <a href="http://stars.chromeexperiments.com/" class="button">
-                        Ponder about space time
-                      </a>
+                <div class="-footer item-tag">
+                  Tagz
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="dropdowns-section">
+          <h2 class="styleguide-section-heading">
+            Dropdowns
+          </h2>
+          <p>
+           Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
+          </p>
+          <div class="example -padded-desktop">
+            <pre class="code language-javascript">
+              $("#best-nba-team .-value").click(function() {
+                $("#best-nba-team").toggleClass("-open");
+              });
+            </pre>
+
+            <div id="best-nba-team" class="dropdown">
+              <button class="-value">
+                Golden State Warriors
+              </button>
+              <ul class="-options">
+                <li class="-active"><a href="#warriors">Golden State Warriors</a></li>
+                <li><a href="#lakers">LA Lakers</a></li>
+                <li><a href="#clippers">LA Clippers</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+           Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
+          </p>
+
+          <div class="example -padded-desktop">
+            <div id="neighborhood" class="dropdown -heading">
+              <button class="-value">
+                San Francisco
+              </button>
+              <ul class="-options">
+                <li class="-active"><a href="#mission">Mission</a></li>
+                <li><a href="#haight">Haight</a></li>
+                <li><a href="#nob-hill">Nob Hill</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="errors-section">
+          <h2 class="styleguide-section-heading">Notifications</h2>
+
+          <h3 class="styleguide-subheading">
+            Generic Errors
+          </h3>
+
+          <div class="example">
+            <div class="notifications-container">
+              <div class="feed-item">
+                <div class="-gutter">
+                  <div class="feature-icon aqua">EE</div>
+                </div>
+                  <div class="-main">
+                    <h4 class="item-heading -errorheading">
+                      You have a Feed Item
+                    </h4>
+                    <div class="-body -errorbody">
+                      This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                    </div>
+                    <div class="-action-buttons">
+                      <button class="button -small">Retry</button>
+                      <button class="button -small -inverted">Cancel</button>
                     </div>
                   </div>
-                </div>
+               </div>
+             </div>
+           </div>
+
+           <h3 class="styleguide-subheading">
+             Alerts-Information
+           </h3>
+
+           <div class="example">
+             <div class="notifications-container">
+               <div class="feed-item">
+                 <div class="-gutter">
+                   <div class="feature-icon aqua">AI</div>
+                 </div>
+                 <div class="-main">
+                   <h4 class="item-heading -errorheading">
+                     You have a Feed Item
+                   </h4>
+                   <div class="-body">
+                     This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                   </div>
+                 </div>
               </div>
             </div>
           </div>
         </section>
+        <section id="layouts-section">
+          <h2 class="styleguide-section-heading">Layouts (Experimental)</h2>
 
-        <section id="progress-bar-section">
-          <h2>Progress Bar</h2>
-          <p>Currenty, we're using the bootstrap progress bar.</p>
+          <h3 class="styleguide-subheading">
+            Four column Layout
+          </h3>
 
-          <div class="large-element example">
-            <div class="progress">
-              <div class="progress-bar"
-                   role="progressbar"
-                   aria-valuenow="60"
-                   aria-valuemin="0"
-                   aria-valuemax="100"
-                   style="width: 60%;">
-                <span class="screenreader-only">60% Complete</span>
+          <div class="example">
+            <div class="four-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+
+              <div class="-column aqua">
+                Column 2
+              </div>
+
+              <div class="-column fuchsia">
+                Column 3
+              </div>
+
+              <div class="-column tangerine">
+                Column 4
               </div>
             </div>
           </div>
+
+         <h3 class="styleguide-subheading">
+            Three column Layout
+          </h3>
+
+          <div class="example">
+            <div class="three-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+
+              <div class="-column fuchsia">
+                Column 2
+              </div>
+
+              <div class="-column tangerine">
+                Column 3
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Two column Layout
+          </h3>
+
+          <div class="example">
+            <div class="two-columns">
+              <div class="-column -aside grass">
+                Column 1
+              </div>
+
+              <div class="-column aqua">
+                Column 2
+              </div>
+
+            </div>
+          </div>
+
+          <div class="example">
+            <div class="two-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+
+              <div class="-column aqua">
+                Column 2
+              </div>
+
+            </div>
+          </div>
+
+          <div class="example">
+            <div class="two-columns">
+              <div class="-column grass">
+                Column 1
+              </div>
+
+              <div class="-column -aside aqua">
+                Column 2
+              </div>
+
+            </div>
+          </div>
+
         </section>
 
-        <section id="header-section">
-          <h2>Header</h2>
+        <section id="icons-section">
+          <h2 class="styleguide-section-heading">Icons</h2>
           <p>
-            The RWD header is a work in progress, and will be styled using the styleguide.
-            The app is stored in git at
-            <a href="https://stash.kp.org/projects/RWD/repos/kp-header">
-              https://stash.kp.org/projects/RWD/repos/kp-header
-            </a>.
+            We have a whole suite of Icons approved by design and brand. We're working on displaying all 88+ Icons so you (designer/developer) can see what we have available. If you see an Icon that you think should be in styleguide please contact <a href="mailto:jennifer.m.beasley@kp.org">jennifer.m.beasley@kp.org</a>. You can find her on HipChat.
           </p>
+          <h3 class="styleguide-subheading">Multiple sizes of icons</h3>
+          <div class="example -minor -padded">
+            <div class="icon-results-solid2 icon-md"></div>
+            This is medium-sized icon
+            <hr>
+            <div class="icon-reminder icon-lg"></div>
+            This is a large-sized icon
+          </div>
         </section>
-
-        <section id="feature-layout-section">
-          <h2>Feature Layout</h2>
-          <p>
-            Features that take advatage of the feature layout classes should be wrapped by an element with the class <code>kp-feature</code>
-          </p>
-          <p>
-            The feature layout is composed of of 4 sections:
-          </p>
-          <p>
-            The <code>feature-header</code> represents the feature title (and icon), shown below the KP header.
-          </p>
-          <p>
-            The <code>feature-menu</code> represents the main links associated with a feature. On mobile, it will be visible on the landing page, and hidden on every other screen. On desktop, it will be represented as a side panel of navigation. Add the <code>active</code> class to the <code>a</code> element representing the active route.
-          </p>
-          <p>
-            The <code>feature-description</code> represents a short description of the feature. This is only shown on the mobile landing page.
-          </p>
-          <p>
-            The <code>feature-content</code> should wrap any other content on the page relating to the feature.
-          </p>
-          <div class="example">
-            <div class="kp-feature">
-              <div class="feature-header">
-                <div class="feature-icon icon-rx"></div>
-                <h1>My Feature Name</h1>
-              </div>
-
-              <div class="feature-description">
-                This is a slick description of my feature.
-              </div>
-
-              <div class="feature-menu">
-                <a href="#" class="feature-button">Feature Button</a>
-                <ul class="link-list">
-                  <li><a class="landing-page" href="#">
-                    Desktop Landing Page
-                  </a></li>
-                  <li><a class="active" href="#">
-                    Another Feature Link
-                  </a></li>
-                </ul>
-              </div>
-
-              <div class="feature-content">
-                <h2>Feature Content</h2>
-                <p>Feature content goes here!</p>
-              </div>
-            </div>
-          </div>
-
-          <h3>Activating the Landing Page on Mobile</h3>
-          <p>
-            To designate that the current page is the landing page, add the <code>landing-page</code> class to a parent element. This will hide the feature content, and use the <code>.feature-header</code>, <code>.feature-description</code>, and <code>.feature-menu</code> elements to form the landing page.
-          </p>
-          <p>
-            If a link should be considered active on the landing page, add the <code>landing-page</code> class to it. In the example below we've added it to the "Desktop Landing Page" link in the feature menu.
-          </p>
-
-          <div class="example">
-            <p class="example-note">
-              <b>Note:</b> This example should look match the previous example when on desktop. On mobile though, it will show the landing page instead of the page content. If your viewing on a desktop, change the size of your browser to see the effect.
-            </p>
-
-            <div class="kp-feature landing-page">
-              <div class="feature-header">
-                <div class="feature-icon icon-rx"></div>
-                <h1>My Feature Name</h1>
-              </div>
-
-              <div class="feature-description">
-                This is a slick description of my feature.
-              </div>
-
-              <div class="feature-menu">
-                <a href="#" class="feature-button">Feature Button</a>
-                <ul class="link-list">
-                  <li><a class="landing-page" href="#">
-                    Desktop Landing Page
-                  </a></li>
-                  <li><a href="#">
-                    Another Feature Link
-                  </a></li>
-                </ul>
-              </div>
-
-              <div class="feature-content">
-                <h2>Feature Content</h2>
-                <p>Feature content goes here!</p>
-              </div>
-            </div>
-          </div>
-
-
-          <h3>Feature Alerts</h3>
-          <p>
-            If you need an alert for the entire screen, put it in an element with the <code>feature-alert</code> class in the top of your <code>.feature-content</code> element. This will pull the notification up, and push the content down
-            appropriately to highlight the alert.
-          </p>
-          <p>
-            Use the <code>active</code> class to make the notification visible.
-          </p>
-
-          <div class="example">
-            <div class="kp-feature">
-              <div class="feature-header">
-                <div class="feature-icon icon-rx"></div>
-                <h1>My Feature Name</h1>
-              </div>
-
-              <div class="feature-description">
-                This is a slick description of my feature.
-              </div>
-
-              <div class="feature-menu">
-                <ul class="link-list">
-                  <li><a class="landing-page" href="#">
-                    Desktop Landing Page
-                  </a></li>
-                  <li><a href="#">
-                    Another Feature Link
-                  </a></li>
-                </ul>
-              </div>
-
-              <div class="feature-content">
-                <div class="feature-alert active">
-                  <div class="alert-info">
-                    Hey, look at me!
-                  </div>
-                </div>
-
-                <h2>Feature Content</h2>
-                <p>Feature content goes here!</p>
-              </div>
-            </div>
-          </div>
-
-          <h3>Centered Messages for Empty screens</h3>
-          <p>If you need a small message centered in the middle of the screen. Use the class
-          <code>.empty-centered</code></p>
-
-          <div class="example">
-            <div class="empty-centered">
-              <h3>Hi! You have 0 things.</h3>
-            </div>
-          </div>
-          </section>
       </article>
     </main>
   </body>

@@ -1,6 +1,7 @@
 $base-font-size: 16px;
 $em-base: $base-font-size; // used for bourbon
 
+$extra-tiny-font-px: 12px;
 $tiny-font-px: 15px;
 $small-font-px: 18px;
 $medium-font-px: 24px;
@@ -8,6 +9,7 @@ $large-font-px: 36px;
 $xl-font-px: 48px;
 $xxl-font-px: 68px;
 
+$extra-tiny-font-size: rem($extra-tiny-font-px);
 $tiny-font-size: rem($tiny-font-px);
 $small-font-size: rem($small-font-px);
 $medium-font-size: rem($medium-font-px);
@@ -20,7 +22,7 @@ $bold-font-family: "Gotham 7r";
 
 // HEADING CLASSES
 .page-heading {
-  font-size: $small-font-size;
+  font-size: $medium-font-size;
   font-weight: bold;
   color: color(inky-blue);
 
@@ -43,29 +45,38 @@ $bold-font-family: "Gotham 7r";
 
 .item-subheading {
   margin-top: 0px;
-  font-size: $small-font-size;
+  font-size: $tiny-font-size;
   letter-spacing: -0.5px;
   color: color(inky-blue);
   font-weight: normal;
 }
 
 .section-heading {
-  font-size: $medium-font-size;
+  font-size: $small-font-size;
   letter-spacing: -0.75px;
   color: color(dolphin);
   font-weight: normal;
+  @include media($desktop) {
+    font-size: $medium-font-size;
+  }
 }
 // FONT STYLE CLASSES
 
 .item-tag {
   text-transform: uppercase;
-  font-size: $tiny-font-size;
+  font-size: $extra-tiny-font-size;
   color: color(dolphin);
+  @include media($desktop) {
+    font-size: $tiny-font-size;
+  }
 }
 
 .auxiliary-text {
-  font-size: $tiny-font-size;
+  font-size: $extra-tiny-font-size;
   color: color(dolphin);
+  @include media($desktop) {
+    font-size: $tiny-font-size;
+  }
 }
 
 .inverted-link {
