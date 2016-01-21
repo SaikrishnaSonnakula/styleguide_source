@@ -27,7 +27,11 @@ $select-options-max-height: 300px !default;
 .fancy-select {
   @extend .dropdown;
   background-color: transparent;
-
+  &.-single {
+    .-value:after{
+      display: none;
+    } 
+  }
   .-value {
     @include decorated-selection;
     color: $select-font-color;
@@ -42,8 +46,8 @@ $select-options-max-height: 300px !default;
         font-size: $medium-font-size;
       }
     }
-
   }
+  
   .-options {
     @include transition(all 0.4s $ease-in-out-cubic);
 
@@ -77,7 +81,4 @@ $select-options-max-height: 300px !default;
   text-align: left;
   border-bottom: solid 1px white;
 
-  .name {
-    display: inline-block;
-  }
 }
