@@ -81,6 +81,12 @@
       padding-right: $small-spacing;
       margin-bottom: $small-spacing;
 
+      @include media($device) {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
       .button{
         margin-bottom: $gutter-spacing;
         width: 100%;
