@@ -5,7 +5,11 @@ $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-ico
 $feed-item-border-size: 3px;
 
 .feed-item {
-  border:  $feed-item-border-size solid transparent;
+  @include transition(position 0.3s ease-in-out);
+  @include media($desktop){
+    border:  $feed-item-border-size solid transparent;
+  }
+
 
   %-section {
     margin-top: $medium-spacing;
@@ -72,7 +76,19 @@ $feed-item-border-size: 3px;
   }
 
   &.-open {
+    @extend %show-fade-in;
     .-collapsible { @extend %show-fade-in; }
+
+    @include media($handheld){
+      @include position(fixed, 0px 0px 0px 0px);
+      background: white;
+      .-main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+      }
+      z-index: $foreground;
+    }
   }
 
   &.-collapsible, &.-clickable {
