@@ -406,8 +406,8 @@
                   $("#my-modal").attr('aria-hidden','false');
                   $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
                   focusedElementBeforeModal = $(':focus');
-                  var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
-                  firstElem.focus();
+                  var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
+                  lastElem.focus();
                 });
 
                 $("#nothing").click(function(ev) {
@@ -429,14 +429,13 @@
               <div class="modal-fade-screen">
                 <div class="modal-inner">
                   <div id="modal-description" class="content">
-                    Welcome to the modal space. What do you do?
-                  </div>
+                    Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
                   <div class="modal-buttons">
                     <button id="nothing" class="button -action">
-                      Do nothing
+                      Secondary Action
                     </button>
                     <button id="do-something" class="button -action -inverted">
-                      Action
+                      Primary Action
                     </button>
                   </div>
                 </div>
