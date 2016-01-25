@@ -27,29 +27,29 @@ $bold-font-family: "Gotham 7r";
   color: color(inky-blue);
 
   @include media($desktop) {
-    font-size: $large-font-size;
+    font-size: $medium-font-size;
   }
 }
 
 .item-heading {
   margin-bottom: $tiny-spacing;
-  font-size: $small-font-size;
+  font-size: $medium-font-size;
   letter-spacing: -1px;
   color: color(inky-blue);
   font-weight: normal;
 
   @include media($desktop) {
-    font-size: $medium-font-size;
+    font-size: $small-font-size;
   }
 }
 
 .section-heading {
-  font-size: $small-font-size;
+  font-size: $medium-font-size;
   letter-spacing: -0.75px;
   color: color(dolphin);
   font-weight: normal;
   @include media($desktop) {
-    font-size: $medium-font-size;
+    font-size: $small-font-size;
   }
 }
 // FONT STYLE CLASSES
@@ -64,7 +64,7 @@ $bold-font-family: "Gotham 7r";
 }
 
 .auxiliary-text {
-  font-size: $extra-tiny-font-size;
+  font-size: $tiny-font-size;
   color: color(dolphin);
   @include media($desktop) {
     font-size: $tiny-font-size;
