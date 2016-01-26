@@ -55,7 +55,7 @@ $feed-item-border-size: 3px;
     &.-errorbody {
       max-width: 60%;
 
-      @include media($device) {
+      @include media($handheld) {
         max-width: 100%;
       }
     }
