@@ -36,7 +36,7 @@ code {
   text-align: right;
   font-size: $medium-font-size;
   width: 100%;
-  z-index: 11;
+  z-index: $z-header;
 
   @include media($desktop) {
     width: 100%;
