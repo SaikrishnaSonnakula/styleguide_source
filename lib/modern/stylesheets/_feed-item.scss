@@ -55,7 +55,7 @@ $feed-item-border-size: 3px;
     &.-errorbody {
       max-width: 60%;
 
-      @include media($handheld) {
+      @include media($mobile) {
         max-width: 100%;
       }
     }
@@ -98,7 +98,7 @@ $feed-item-border-size: 3px;
       opacity: 1;
     }
 
-    @include media($handheld){
+    @include media($mobile){
       @include position(fixed, 0px 0px 0px 0px);
       background: white;
       overflow: auto;
