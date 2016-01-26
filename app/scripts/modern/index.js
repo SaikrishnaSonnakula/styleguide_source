@@ -39,11 +39,11 @@ $(function() {
     $("#my-modal").attr('aria-hidden','false');
     $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
     focusedElementBeforeModal = $(':focus');
-    var firstElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').first();
-    firstElem.focus();
+    var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
+    lastElem.focus();
   });
 
-  $("#nothing").click(function(ev) {
+  $("#nothing, #do-something").click(function(ev) {
     $("#my-modal").removeClass("modal-showing");
     $("#my-modal").attr("aria-hidden", 'true');
     $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');

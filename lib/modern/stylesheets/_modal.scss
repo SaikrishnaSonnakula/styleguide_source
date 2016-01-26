@@ -1,3 +1,5 @@
+$button-mobile-color: white;
+
 .modal-showing {
   overflow: hidden;
 }
@@ -52,6 +54,7 @@
       margin: auto;
       width: 50%;
     }
+
     @include media($device) {
       background: color(inky-blue);
       opacity: 0.9;
@@ -63,28 +66,33 @@
       margin-top: $gutter-spacing;
 
       text-align: center;
-      word-wrap: break-word;
 
-      @include media($desktop) {
-        padding-bottom: 0px;
-      }
       @include media($device) {
+        font-size: $small-font-size;
         color: white;
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+      }
+      @include media($tablet){
+        font-size: $medium-font-size;
       }
     }
 
     .modal-buttons {
       text-align: center;
 
-      padding-top: $gutter-spacing;
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
+      padding: $gutter-spacing $small-spacing 0 $small-spacing;
       margin-bottom: $small-spacing;
-
+      
       @include media($device) {
-        position: absolute;
+        display: flex;
+        flex-flow: column;
+        position: fixed;
         bottom: 0;
         width: 100%;
+        margin-bottom: 0;
       }
 
       .button{
@@ -97,29 +105,27 @@
         }
 
         &.-action {
-          color: color(interactive-blue);
-          background-color: white;
-          border-color: color(interactive-blue);
+          order: 2;
+          color: $button-mobile-color;
+          background: transparent;
+          border-color: $button-mobile-color;
 
-          @include media($device) {
-            position: relative;
-            top: $device-medium-spacing;
-            color: white;
-            background: transparent;
-            border-color: white;
+          @include media($desktop) {
+            color: color(interactive-blue);
+            background-color: white;
+            border-color: color(interactive-blue);
           }
         }
 
         &.-action.-inverted {
-          color: white;
-          background-color: color(interactive-blue);
-
-          @include media($device) {
-            position: relative;
-            top: -$device-medium-spacing;
-            color: $text-dark;
-            background: white;
-            border-color: white;
+          order: 1;
+          color: $text-dark;
+          background: $button-mobile-color;
+          border-color: $button-mobile-color;
+ 
+          @include media($desktop) {
+            color: white;
+            background-color: color(interactive-blue);
           }
         }
 
