@@ -55,6 +55,7 @@ $(function() {
 
   $("#my-collapsible-feed-item .-click-to-expand").click(function() {
     $("#my-collapsible-feed-item").toggleClass("-open");
+    $("body").toggleClass("-handheld-overflow-hidden");
   });
 
   $("#best-nba-team .-value").click(function() {

@@ -41,3 +41,8 @@ a:hover, a:focus {
   color: $link-hover-color;
 }
 
+body.-handheld-overflow-hidden {
+  @include media($handheld) {
+    overflow: hidden;
+  }
+}

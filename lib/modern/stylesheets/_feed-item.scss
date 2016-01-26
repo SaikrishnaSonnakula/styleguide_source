@@ -88,6 +88,7 @@ $feed-item-border-size: 3px;
 	bottom: 0;
       }
       z-index: $foreground;
+      overflow: auto;
     }
   }
 
