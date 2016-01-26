@@ -70,6 +70,7 @@ $feed-item-border-size: 3px;
       max-width: 99%;
       margin-top: 0;
     }
+
     &:after {
       @extend .icon-cancel:before;
       line-height: $small-font-size;
@@ -105,9 +106,9 @@ $feed-item-border-size: 3px;
       z-index: $foreground;
 
       .-main {
-	position: absolute;
-	top: 0;
-	bottom: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
       }
     }
   }
