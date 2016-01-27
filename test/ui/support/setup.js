@@ -29,3 +29,5 @@ window.assert = chai.assert;
 window.currentURL = function() {
   return window.location.hash.replace("#", "");
 };
+var testsContext = require.context("../", true, /_spec$/);
+testsContext.keys().forEach(testsContext);
