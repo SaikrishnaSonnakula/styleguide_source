@@ -109,16 +109,17 @@
             }
             </code>
           </pre>
-          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
-          <pre class="code language-scss"><code class="code">
-.element{
-  @include media($desktop-large) {
-    display:block;
-  }
-  @include media($handheld){
-    display:none;
-  }
-}</code>
+          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
+          <pre class="code language-scss">
+          <code class="code">
+          .element{
+              @include media($desktop-large) {
+                display:block;
+              }
+              @include media($device){
+                display:none;
+              }
+            }</code>
           </pre>
         </section>
 
@@ -129,13 +130,17 @@
 
           <div id="colors">
             <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
-	    </p>
-	    <p>For example:</p>
-	    <pre class="code language-scss"><code class="code">.element {
-	      background-color: color(lilac);
-	    }</code></pre>
-	    <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
-	  </div>
+      </p>
+      <p>For example:</p>
+      <pre class="code language-scss">
+        <code class="code">
+          .element {
+            background-color: color(lilac);
+          }
+        </code>
+      </pre>
+      <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
+    </div>
         </section>
 
         <section id="typography-section">
