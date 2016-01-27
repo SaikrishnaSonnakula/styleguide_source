@@ -22,7 +22,7 @@ var breakPoints = {
     desktopMedium: true,
     desktopLarge: true
   },
-  '$handheld': {
+  '$device': {
     mobile: true,
     tablet: true
   },

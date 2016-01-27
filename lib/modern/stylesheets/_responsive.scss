@@ -24,7 +24,6 @@ $desktop-medium-up: new-breakpoint(min-width $desktop-medium-min, 12);
 
 $device: new-breakpoint(max-width $tablet-max, 12);
 $desktop: $desktop-small-up;
-$handheld: $device;
 
 $max-width: $desktop-medium-max - ($outer-gutter-spacing * 2);
 

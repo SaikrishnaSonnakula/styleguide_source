@@ -24,7 +24,7 @@ $action-color-light: #5FA621 !default;
 	overflow: hidden;
 	position: relative;
 	
-	@include media($handheld){
+	@include media($device){
 	  height: 0;
 	}
 
