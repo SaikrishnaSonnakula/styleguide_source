@@ -4,7 +4,7 @@
     <title>Web Design Styleguide</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <script src="modern.bundle.js"></script>
 
     <meta charset="UTF-8">
@@ -28,6 +28,7 @@
       <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
         <ul>
           <li><a href="#installation-section">Installation</a></li>
+          <li><a href="modern-ui-elements.html" target="_blank">JS UI Elements</a></li>
           <li><a href="#responsive-section">Responsive</a></li>
           <li><a href="#colors-section">Colors</a></li>
           <li><a href="#typography-section">Typography</a></li>
@@ -109,16 +110,17 @@
             }
             </code>
           </pre>
-          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$handheld</code>:
-          <pre class="code language-scss"><code class="code">
-.element{
-  @include media($desktop-large) {
-    display:block;
-  }
-  @include media($handheld){
-    display:none;
-  }
-}</code>
+          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
+          <pre class="code language-scss">
+          <code class="code">
+          .element{
+              @include media($desktop-large) {
+                display:block;
+              }
+              @include media($device){
+                display:none;
+              }
+            }</code>
           </pre>
         </section>
 
@@ -129,13 +131,17 @@
 
           <div id="colors">
             <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
-	    </p>
-	    <p>For example:</p>
-	    <pre class="code language-scss"><code class="code">.element {
-	      background-color: color(lilac);
-	    }</code></pre>
-	    <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
-	  </div>
+      </p>
+      <p>For example:</p>
+      <pre class="code language-scss">
+        <code class="code">
+          .element {
+            background-color: color(lilac);
+          }
+        </code>
+      </pre>
+      <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
+    </div>
         </section>
 
         <section id="typography-section">
@@ -737,11 +743,15 @@
           </div>
         </section>
         <section id="layouts-section">
-          <h2 class="styleguide-section-heading">Layouts (Experimental)</h2>
+          <h2 class="styleguide-section-heading">Layouts</h2>
+          <p>Styleguide follows <a href="http://neat.bourbon.io/" target="_blank">Neat's</a> 12 column grid. We've created a few helper classes for common use-cases.
+          If you need a different variation than what you see below. Refer to <a href="http://neat.bourbon.io/examples/" target="_blank">Neat's documentation and examples</a>.
+          The color classes you see below are for demonstration purposes.</p>
 
           <h3 class="styleguide-subheading">
             Four column Layout
           </h3>
+          <p>Each column spans 3 grid columns</p>
 
           <div class="example">
             <div class="four-columns">
@@ -766,6 +776,7 @@
          <h3 class="styleguide-subheading">
             Three column Layout
           </h3>
+          <p>Each column spans 4 grid columns</p>
 
           <div class="example">
             <div class="three-columns">
@@ -786,6 +797,7 @@
           <h3 class="styleguide-subheading">
             Two column Layout
           </h3>
+          <p>Column 1 spans 4 grid columns. Column 2 spans 8.</p>
 
           <div class="example">
             <div class="two-columns">
@@ -800,6 +812,7 @@
             </div>
           </div>
 
+          <p>Each column spans 6 grid columns.</p>
           <div class="example">
             <div class="two-columns">
               <div class="-column grass">
@@ -813,6 +826,7 @@
             </div>
           </div>
 
+          <p>Column 1 spans 8 grid columns. Column 2 spans 4.</p>
           <div class="example">
             <div class="two-columns">
               <div class="-column grass">

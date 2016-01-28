@@ -23,6 +23,10 @@ $action-color-light: #5FA621 !default;
 
 	overflow: hidden;
 	position: relative;
+	
+	@include media($device){
+	  height: 0;
+	}
 
 	@include media($desktop) {
 		height: auto;
