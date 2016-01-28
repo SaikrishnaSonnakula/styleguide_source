@@ -78,7 +78,7 @@ $feed-item-border-size: 3px;
       color: $link-color;
       position: absolute;
       opacity: 0;
-      right: 0;
+      right: $mobile-item-icon-padding;
       top: 0;
     }
   }
