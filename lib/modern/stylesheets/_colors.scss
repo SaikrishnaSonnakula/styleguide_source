@@ -8,42 +8,42 @@
 // please add it to the list in add_colors.js
 
 $colors: (
-	"interactive-blue": #3e66f7,
-	"kp-blue": #006ba6,
-	"interactive-blue-dark": #3A60E9,
-	"interactive-blue-darker": #3659D9,
-	"disable-blue": #829cfb,
-	"inky-blue": #0D1C3D,
-	"dolphin": #6B7487,
-	"graphite-dark": #D3D6DC,
-	"graphite": #E9EBEE,
-	"graphite-light": #F4F5F6,
-	"pebble": #FAFAFA,
-	"lilac": #8B4BBF,
-	"fuchsia": #C11666,
-	"tiger-lily": #D64400,
-	"grass": #448400,
-	"aqua": #00838A,
-	"dusk": #5F6E90,
-	"plum": #44116C,
-	"acai": #7B1350,
-	"burnt-sienna": #972900,
-	"moss": #255200,
-	"ocean": #005358,
-	"midnight": #334161,
-	"lavender": #E3C6FB,
-	"rose": #FF9FBA,
-	"tangerine": #FFEAC6,
-	"leaf": #DBFDB7,
-	"robin-egg": #D9FFFA,
-	"sky": #BDECFF
+  "interactive-blue": #3e66f7,
+  "kp-blue": #006ba6,
+  "interactive-blue-dark": #3A60E9,
+  "interactive-blue-darker": #3659D9,
+  "disable-blue": #829cfb,
+  "inky-blue": #0D1C3D,
+  "dolphin": #6B7487,
+  "graphite-dark": #D3D6DC,
+  "graphite": #E9EBEE,
+  "graphite-light": #F4F5F6,
+  "pebble": #FAFAFA,
+  "lilac": #8B4BBF,
+  "fuchsia": #C11666,
+  "tiger-lily": #D64400,
+  "grass": #448400,
+  "aqua": #00838A,
+  "dusk": #5F6E90,
+  "plum": #44116C,
+  "acai": #7B1350,
+  "burnt-sienna": #972900,
+  "moss": #255200,
+  "ocean": #005358,
+  "midnight": #334161,
+  "lavender": #E3C6FB,
+  "rose": #FF9FBA,
+  "tangerine": #FFEAC6,
+  "leaf": #DBFDB7,
+  "robin-egg": #D9FFFA,
+  "sky": #BDECFF
 );
 
 @function color($key){
-	@if not map-has-key($colors, $key){
-		@warn "Color `#{$key}` is not defined in color map";
-	}
-	@return map-get($colors, $key);
+  @if not map-has-key($colors, $key){
+    @warn "Color `#{$key}` is not defined in color map";
+  }
+  @return map-get($colors, $key);
 }
 
 @function set-text-color($bgcolor) {
@@ -55,12 +55,12 @@ $colors: (
 }
 
 @each $name, $bgcolor in $colors {
-	.#{$name} {
-		background-color: $bgcolor !important;
-		color: set-text-color($bgcolor);
-		&.-inverted {
-		  background-color: color(graphite-light) !important;
-		  color: $bgcolor;
-		}
-	}
+  .#{$name} {
+    background-color: $bgcolor;
+    color: set-text-color($bgcolor);
+    &.-inverted {
+      background-color: color(graphite-light);
+      color: $bgcolor;
+    }
+  }
 }
