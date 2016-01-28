@@ -3,7 +3,6 @@
   position: relative;
   background-color: white;
   max-width: $max-width;
-  z-index: $midground;
 
   @include media($desktop){
     margin-left: $outer-gutter-spacing;
@@ -27,8 +26,8 @@
       left: 0px;
       width: 100%;
       margin: 0;
-      z-index: 10;
-      overflow: auto;  
+      z-index: $midground;
+      overflow: auto;
     }
     .feature-content {
       display: none;
