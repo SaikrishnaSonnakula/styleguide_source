@@ -28,3 +28,14 @@
 @import "notifications";
 @import "fancy-select";
 @import "accordions";
+
+@each $name, $bgcolor in $colors {
+  .#{$name} {
+    background-color: $bgcolor;
+    color: set-text-color($bgcolor);
+    &.-inverted {
+      background-color: color(graphite-light);
+      color: $bgcolor;
+    }
+  }
+}
