@@ -30,7 +30,7 @@
     @extend %list-unstyled;
   
   li {
-      display: inline-block;
+      display: block;
       padding-bottom : $small-spacing;
   }
 
