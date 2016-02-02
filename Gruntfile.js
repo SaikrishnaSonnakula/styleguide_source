@@ -2,16 +2,18 @@
 
 var buildPlugin = require('build-plugin/webpack');
 var path = require('path');
+var entryPaths = {
+  main: path.resolve(__dirname, 'app/scripts/legacy/index.js'),
+  modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
+};
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
 
   buildPlugin(grunt, {
     webpack: {
-      entry: {
-        main: path.resolve(__dirname, 'app/scripts/legacy/index.js'),
-        modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
-      },
+      entry: entryPaths,
+      devEntry: entryPaths,
       root: [path.resolve('vendor')],
       loaders: [{
         test: require.resolve('./vendor/fixedsticky'),
@@ -32,8 +34,8 @@ module.exports = function(grunt) {
             title: function(path){
               var extractedTitleFromPath = path.substring(path.lastIndexOf('/')+1, path.lastIndexOf('.'));
               var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text){
-                  return text.charAt(0).toUpperCase() +
-                  text.substr(1).toLowerCase();
+return text.charAt(0).toUpperCase() +
+  text.substr(1).toLowerCase();
               });
               return nameInTitleCase;
             }
