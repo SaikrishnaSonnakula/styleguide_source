@@ -34,8 +34,7 @@ module.exports = function(grunt) {
             title: function(path){
               var extractedTitleFromPath = path.substring(path.lastIndexOf('/')+1, path.lastIndexOf('.'));
               var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text){
-return text.charAt(0).toUpperCase() +
-  text.substr(1).toLowerCase();
+                return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
               });
               return nameInTitleCase;
             }
