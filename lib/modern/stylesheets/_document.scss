@@ -10,12 +10,12 @@ html {
 
 // set base body font values
 body {
-  font-size: $tiny-font-size;
+  font-size: $base-mobile-font-size;
   font-family: $base-font-family;
   line-height: 1.33;
 
   @include media($desktop) {
-    font-size: $small-font-size;
+    font-size: $base-font-size;
   }
 }
 

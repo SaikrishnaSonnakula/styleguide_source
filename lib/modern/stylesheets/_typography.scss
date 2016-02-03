@@ -1,5 +1,6 @@
 $base-font-size: 16px;
 $em-base: $base-font-size; // used for bourbon
+$base-mobile-font-size: 15px;
 
 $extra-tiny-font-px: 12px;
 $tiny-font-px: 13px;
@@ -22,34 +23,34 @@ $bold-font-family: "Gotham 7r";
 
 // HEADING CLASSES
 .page-heading {
-  font-size: $large-font-size;
+  font-size: $medium-font-size;
   font-weight: bold;
   color: color(inky-blue);
+
+  @include media($desktop) {
+    font-size: $large-font-size;
+  }
+}
+
+.item-heading {
+  margin-bottom: $tiny-spacing;
+  font-size: $small-font-size;
+  letter-spacing: -1px;
+  color: color(inky-blue);
+  font-weight: normal;
 
   @include media($desktop) {
     font-size: $medium-font-size;
   }
 }
 
-.item-heading {
-  margin-bottom: $tiny-spacing;
-  font-size: $medium-font-size;
-  letter-spacing: -1px;
-  color: color(inky-blue);
-  font-weight: normal;
-
-  @include media($desktop) {
-    font-size: $small-font-size;
-  }
-}
-
 .section-heading {
-  font-size: $medium-font-size;
+  font-size: $small-font-size;
   letter-spacing: -0.75px;
   color: color(dolphin);
   font-weight: normal;
   @include media($desktop) {
-    font-size: $small-font-size;
+    font-size: $medium-font-size;
   }
 }
 // FONT STYLE CLASSES
