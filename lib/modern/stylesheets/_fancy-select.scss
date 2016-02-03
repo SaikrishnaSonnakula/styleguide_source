@@ -30,7 +30,7 @@ $select-options-max-height: 300px !default;
   &.-single {
     .-value:after{
       display: none;
-    } 
+    }
   }
   .-value {
     @include decorated-selection;
@@ -47,7 +47,7 @@ $select-options-max-height: 300px !default;
       }
     }
   }
-  
+
   .-options {
     @include transition(all 0.4s $ease-in-out-cubic);
 
@@ -74,11 +74,11 @@ $select-options-max-height: 300px !default;
   &.-open .-options {
     max-height: $select-options-max-height;
   }
-}
 
-.-item {
-  @include decorated-selection;
-  text-align: left;
-  border-bottom: solid 1px white;
+  .-item {
+    @include decorated-selection;
+    text-align: left;
+    border-bottom: solid 1px white;
 
+  }
 }
