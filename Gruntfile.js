@@ -80,7 +80,6 @@ module.exports = function(grunt) {
         dest: 'lib/modern/assets/fonts',
         destCss: 'lib/modern/stylesheets',
         options: {
-          autoHint: false,
           font: 'kp-icons',
           rename: function(name) {
             return path.basename(name).toLowerCase();
@@ -97,6 +96,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('prebuild', ['md2html', 'webfont']);
+  grunt.registerTask('prebuild', ['md2html']);
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
 };
