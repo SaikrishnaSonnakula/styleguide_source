@@ -9,6 +9,7 @@ var entryPaths = {
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
+  grunt.loadNpmTasks('grunt-webfont');
 
   buildPlugin(grunt, {
     webpack: {
@@ -72,6 +73,30 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('prebuild', ['md2html']);
+  grunt.config.merge({
+    webfont: {
+      icons: {
+        src: 'icons/*.svg',
+        dest: 'lib/modern/assets/fonts',
+        destCss: 'lib/modern/stylesheets',
+        options: {
+          autoHint: false,
+          font: 'kp-icons',
+          rename: function(name) {
+            return path.basename(name).toLowerCase();
+          },
+          stylesheet: 'scss',
+          relativeFontPath: 'assets/fonts',
+          types: 'eot,woff,ttf,svg',
+          syntax: 'bootstrap',
+          htmlDemoTemplate: '_icons-template.html',
+          htmlDemoFilename: 'icons',
+          destHtml: 'target/dist/'
+        }
+      }
+    }
+  });
+
+  grunt.registerTask('prebuild', ['md2html', 'webfont']);
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
 };

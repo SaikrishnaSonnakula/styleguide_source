@@ -20,14 +20,14 @@ $dropdown-mobile-height: 50px;
     }
 
     &:after {
-      @extend .kp-icon;
       @include transition(all 0.4s $ease-out-cubic);
-      display: inline-block;
-      font-size: $tiny-font-size;
-      color: color(interactive-blue);
-      content: $dropdown-character;
-      line-height: $dropdown-mobile-height;
+      @extend .icon-arrow-down:before;
       background-color: transparent;
+      color: color(interactive-blue);
+      display: inline-block;
+      font-family: 'kp-icons';
+      font-size: $tiny-font-size;
+      line-height: $dropdown-mobile-height;
 
       @include media($desktop) {
         line-height: inherit;

@@ -11,6 +11,7 @@ import _fixedSticky from 'fixedsticky';
 import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 import accordion from 'lib/modern/scripts/accordion';
+import { setIconClickHandler } from './icons';
 
 $(function() {
   $(".fixedsticky").fixedsticky();
@@ -21,6 +22,10 @@ $(function() {
   addSpacing();
   addFontSizes();
   responsiveTable();
+
+  if($('.icons-listing')){
+    setIconClickHandler();
+  }
 
   fancySelect($("#select-from"));
   fancySelect($("#select-from-with-default"));

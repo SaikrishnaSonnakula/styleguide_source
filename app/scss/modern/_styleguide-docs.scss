@@ -367,3 +367,32 @@ table.table {
 .xxl-font-size { font-size: $xxl-font-size; }
 .base-font-family { font-family: $base-font-family; }
 .bold-font-family { font-family: $bold-font-family; }
+
+.icons-listing {
+  @include outer-container();
+  font-family: $base-font-family;
+
+  .-icon {
+    @include omega(4n);
+    @include span-columns(3);
+    padding: $tiny-spacing;
+
+    .-name {
+      font-size: $tiny-font-size;
+    }
+  }
+
+  .-icon,
+  .-icon i {
+    cursor: pointer;
+  }
+
+  .-icon:hover {
+    @extend .interactive-blue.-inverted;
+  }
+
+  .-icon i {
+    margin: $tiny-spacing;
+    font-size: $large-font-size;
+  }
+}

@@ -14,3 +14,4 @@ test/coverage/browser.json
 test/coverage/contract.json
 test/coverage/unit.json
 *.swp
+lib/modern/assets/fonts/kp-icons*
