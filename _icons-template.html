@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KP Styleguide Icons</title>
+    <script src="modern.bundle.js"></script>
+    <style>
+<%= styles %>
+    </style>
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <span class="desktop-only">Styleguide</span> Icons
+    </header>
+    <main class="styleguide-main" style="display: none">
+    <article class="styleguide-content">
+
+      <h1 class="styleguide-section-heading">Example Usage</h1>
+      <p class="tangerine">Please advise the editorial team for the appropriate screenreader-only content.</p>
+      <div class="example -minor -padded" id="usage">
+
+        <i class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %>">
+          <span class="screenreader-only"><%= glyphs[0] %></span></i>
+        Default size
+        <hr>
+
+        <i class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %> icon-md">
+          <span class="screenreader-only"><%= glyphs[0] %></span></i>
+        Medium size
+        <hr>
+
+        <i class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %> icon-lg">
+          <span class="screenreader-only"><%= glyphs[0] %></span></i>
+        Large size
+
+      </div>
+
+      <h1 class="styleguide-section-heading">Available Icons</h1>
+
+      <p class="tangerine">
+      <strong>Note:</strong> Icons that say FPO ICON are not yet approved.<br />
+      What you see are placeholders which will be updated when the icon is approved.
+      <br />
+      If you don't see an icon name listed here, please contact <a href="mailto:Jennifer.Beasley@kp.org">Jennifer.Beasley@kp.org</a> for more information.
+      </p>
+
+      <div class="icons-listing" id="icons">
+        <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+        <div class="-icon" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <span class="-name"><%= classPrefix %><%= glyph %></span></div>
+        <% } %>
+      </div>
+    </article>
+    </main>
+  </body>
+</html>

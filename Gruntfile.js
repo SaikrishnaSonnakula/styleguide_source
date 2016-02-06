@@ -9,6 +9,7 @@ var entryPaths = {
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
+  grunt.loadNpmTasks('grunt-webfont');
 
   buildPlugin(grunt, {
     webpack: {
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
             title: function(path){
               var extractedTitleFromPath = path.substring(path.lastIndexOf('/')+1, path.lastIndexOf('.'));
               var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text){
-                return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
               });
               return nameInTitleCase;
             }
@@ -58,6 +59,12 @@ module.exports = function(grunt) {
   });
 
   grunt.config.merge({
+    watch: {
+      files: ['icons/*.svg', '_icons-template.html'],
+      tasks: ['webfont']
+    }
+  });
+  grunt.config.merge({
     copy: {
       dist: {
         files: [
@@ -70,6 +77,29 @@ module.exports = function(grunt) {
         ]
       }
     },
+  });
+
+  grunt.config.merge({
+    webfont: {
+      icons: {
+        src: 'icons/*.svg',
+        dest: 'lib/modern/assets/fonts',
+        destCss: 'lib/modern/stylesheets',
+        options: {
+          font: 'kp-icons',
+          rename: function(name) {
+            return path.basename(name).toLowerCase();
+          },
+          stylesheet: 'scss',
+          relativeFontPath: 'assets/fonts',
+          types: 'eot,woff,ttf,svg',
+          syntax: 'bootstrap',
+          htmlDemoTemplate: '_icons-template.html',
+          htmlDemoFilename: 'icons',
+          destHtml: 'app/'
+        }
+      }
+    }
   });
 
   grunt.registerTask('prebuild', ['md2html']);
