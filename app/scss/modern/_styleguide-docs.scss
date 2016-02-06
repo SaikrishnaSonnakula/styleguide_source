@@ -382,15 +382,6 @@ table.table {
     }
   }
 
-  .-icon,
-  .-icon i {
-    cursor: pointer;
-  }
-
-  .-icon:hover {
-    @extend .interactive-blue.-inverted;
-  }
-
   .-icon i {
     margin: $tiny-spacing;
     font-size: $large-font-size;
