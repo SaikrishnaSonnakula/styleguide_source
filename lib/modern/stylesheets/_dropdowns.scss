@@ -21,7 +21,7 @@ $dropdown-mobile-height: 50px;
 
     &:after {
       @include transition(all 0.4s $ease-out-cubic);
-      @extend .icon-arrow-down:before;
+      @extend .icon-chevron-down:before;
       background-color: transparent;
       color: color(interactive-blue);
       display: inline-block;
