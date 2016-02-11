@@ -72,7 +72,7 @@ $feed-item-border-size: 3px;
     }
 
     &:after {
-      @extend .icon-cancel:before;
+      @include icon-for("close");
       line-height: $small-font-size;
       font-size: $large-font-size;
       color: $link-color;

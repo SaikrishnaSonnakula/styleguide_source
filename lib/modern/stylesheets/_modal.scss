@@ -43,9 +43,11 @@ $button-mobile-color: white;
     background: white;
     margin: 0;
     overflow: auto;
+
     &:focus {
-      border:2px color(kp-blue) solid;
+      border: 2px color(kp-blue) solid;
     }
+
     @include media($desktop) {
       @include transform(translateY(20px));
       @include transition(transform 0.2s ease);
@@ -85,7 +87,7 @@ $button-mobile-color: white;
 
       padding: $gutter-spacing $small-spacing 0 $small-spacing;
       margin-bottom: $small-spacing;
-      
+
       @include media($device) {
         display: flex;
         flex-flow: column;
@@ -122,7 +124,7 @@ $button-mobile-color: white;
           color: $text-dark;
           background: $button-mobile-color;
           border-color: $button-mobile-color;
- 
+
           @include media($desktop) {
             color: white;
             background-color: color(interactive-blue);
