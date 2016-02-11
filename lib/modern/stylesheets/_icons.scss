@@ -1,6 +1,11 @@
 $feature-icon-desktop-size: 70px;
 $feature-icon-mobile-size: 45px;
 
+@mixin icon-for($icon-name){
+  @extend .icon-#{$icon-name}:before;
+  font-family: 'kp-icons';
+}
+
 .feature-icon {
   @include display(flex);
   @include align-items(center);

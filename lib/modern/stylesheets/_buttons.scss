@@ -43,7 +43,7 @@ $action-color-light: color(interactive-blue) !default;
     color: white;
     border-color: $button-hover-color;
   }
-  
+
   &.-action {
     background-color: transparent;
     border-color: white;
@@ -104,8 +104,12 @@ $action-color-light: color(interactive-blue) !default;
   @extend %button-unstyled;
   color: $link-color;
 }
+
 .-close {
-  @extend .icon-cancel;
+  &:before {
+    @include icon-for("close");
+  }
+
   border: none;
   background: none;
   cursor: pointer;
