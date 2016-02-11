@@ -106,7 +106,10 @@ $action-color-light: color(interactive-blue) !default;
 }
 
 .-close {
-  @include icon-for("close");
+  &:before {
+    @include icon-for("close");
+  }
+
   border: none;
   background: none;
   cursor: pointer;
