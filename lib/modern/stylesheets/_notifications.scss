@@ -1,22 +1,57 @@
-$icon-radius: $feature-icon-mobile-size;
-
-.notifications-container {
-  @include outer-container(100%);
-  border: 1px solid color(graphite-light);
+@mixin notification($icon, $color) {
+  $background-color: color(#{$color});
+  border: $feed-item-border-size solid color(graphite-light);
   padding: $small-spacing;
+  display: flex;
 
-  .-action-buttons {
-    float: right;
-    position: relative;
-    bottom: $xl-spacing;
-
-    @include media($device){
-      float: none;
-      position: relative;
-      top: $small-spacing;
-      left: -$small-spacing;
+  .-icon {
+    @extend %rounded-icon;
+    border-radius: 50%;
+    background: color(#{$color});
+    flex-shrink: 0;
+    margin-right: $small-spacing;
+    @include media($desktop) {
+      margin-right: $medium-spacing;
     }
 
-
+    &:before {
+      max-width: 50%;
+      @include icon-for(#{$icon});
+      color: set-text-color($background-color);
+      @if $icon == "exclamation" {
+	margin-left: $feature-icon-mobile-size/5;
+	@include media($desktop){
+	  margin-left: $feature-icon-desktop-size/5;
+	}
+      }
+    }
   }
+  .-heading {
+    font-weight: bold;
+  }
+}
+
+$hard-interruption-icon: "exclamation";
+$hard-interruption-icon-color: "tiger-lily";
+$soft-interruption-icon: "info";
+$soft-interruption-icon-color: "midnight";
+$system-error-icon: "exclamation";
+$system-error-icon-color: "graphite-dark";
+$validation-error-icon: "exclamation";
+$validation-error-icon-color: "burnt-sienna";
+
+.notification.-hard-interruption {
+  @include notification($hard-interruption-icon, $hard-interruption-icon-color);
+}
+
+.notification.-soft-interruption {
+  @include notification($soft-interruption-icon, $soft-interruption-icon-color);
+}
+
+.notification.-system-error {
+  @include notification($system-error-icon, $system-error-icon-color);
+}
+
+.notification.-validation-error {
+  @include notification($validation-error-icon, $validation-error-icon-color);
 }
