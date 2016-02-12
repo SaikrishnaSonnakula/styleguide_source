@@ -6,11 +6,14 @@ $feature-icon-mobile-size: 45px;
   font-family: 'kp-icons';
 }
 
-%rounded-icon {
+%centered-icon {
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
+}
 
+%rounded-icon {
+  @extend %centered-icon;
   width: $feature-icon-mobile-size;
   height: $feature-icon-mobile-size;
   border-radius: 50%;

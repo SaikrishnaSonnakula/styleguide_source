@@ -1,12 +1,20 @@
-@mixin notification($icon, $color) {
-  $background-color: color(#{$color});
+@mixin notification($icon, $icon-background-color: "", $icon-color: "") {
   border: $feed-item-border-size solid color(graphite-light);
   padding: $small-spacing;
   display: flex;
 
   .-icon {
-    @extend %rounded-icon;
-    background: color(#{$color});
+    @if $icon-background-color != "" {
+      $icon-background-color: color(#{$icon-background-color});
+      $icon-color: set-text-color($icon-background-color);
+    }
+
+    @if $icon-color != "" {
+      $icon-color: color($icon-color);
+    }
+
+    background: $icon-background-color;
+
     flex-shrink: 0;
     margin-right: $small-spacing;
     @include media($desktop) {
@@ -14,9 +22,8 @@
     }
 
     &:before {
-      max-width: 50%;
       @include icon-for(#{$icon});
-      color: set-text-color($background-color);
+      color: $icon-color;
     }
   }
   .-heading {
@@ -28,23 +35,47 @@ $hard-interruption-icon: "exclamation";
 $hard-interruption-icon-color: "tiger-lily";
 $soft-interruption-icon: "info";
 $soft-interruption-icon-color: "midnight";
-$system-error-icon: "exclamation";
+$system-error-icon: "alert";
 $system-error-icon-color: "graphite-dark";
-$validation-error-icon: "exclamation";
+$validation-error-icon: "alert";
 $validation-error-icon-color: "burnt-sienna";
 
 .notification.-hard-interruption {
-  @include notification($hard-interruption-icon, $hard-interruption-icon-color);
+  @include notification($hard-interruption-icon, $icon-background-color: $hard-interruption-icon-color);
+  .-icon {
+    @extend %rounded-icon;
+  }
 }
 
 .notification.-soft-interruption {
-  @include notification($soft-interruption-icon, $soft-interruption-icon-color);
+  @include notification($soft-interruption-icon, $icon-background-color: $soft-interruption-icon-color);
+  .-icon {
+    @extend %rounded-icon;
+  }
 }
 
 .notification.-system-error {
-  @include notification($system-error-icon, $system-error-icon-color);
+  @include notification($system-error-icon, $icon-color: $system-error-icon-color);
+  .-icon {
+    @extend %centered-icon;
+    &:before {
+      font-size: $xl-font-size;
+      @include media($desktop){
+	font-size: $xxl-font-size;
+      }
+    }
+  }
 }
 
 .notification.-validation-error {
-  @include notification($validation-error-icon, $validation-error-icon-color);
+  @include notification($validation-error-icon, $icon-color: $validation-error-icon-color);
+  .-icon {
+    @extend %centered-icon;
+    &:before {
+      font-size: $xl-font-size;
+      @include media($desktop){
+	font-size: $xxl-font-size;
+      }
+    }
+  }
 }
