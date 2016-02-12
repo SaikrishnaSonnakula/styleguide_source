@@ -105,12 +105,6 @@ $button-mobile-color: white;
           color: color(interactive-blue);
           background-color: white;
           border-color: color(interactive-blue);
-
-          @include media($desktop) {
-            color: color(interactive-blue);
-            background-color: white;
-            border-color: color(interactive-blue);
-          }
         }
 
         &.-action.-inverted {
@@ -118,10 +112,6 @@ $button-mobile-color: white;
           color: white;
           background: color(interactive-blue);
 
-          @include media($desktop) {
-            color: white;
-            background-color: color(interactive-blue);
-          }
         }
 
         @include media($desktop-medium-up) {
