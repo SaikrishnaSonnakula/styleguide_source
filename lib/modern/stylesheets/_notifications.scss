@@ -6,7 +6,6 @@
 
   .-icon {
     @extend %rounded-icon;
-    border-radius: 50%;
     background: color(#{$color});
     flex-shrink: 0;
     margin-right: $small-spacing;
@@ -18,12 +17,6 @@
       max-width: 50%;
       @include icon-for(#{$icon});
       color: set-text-color($background-color);
-      @if $icon == "exclamation" {
-	margin-left: $feature-icon-mobile-size/5;
-	@include media($desktop){
-	  margin-left: $feature-icon-desktop-size/5;
-	}
-      }
     }
   }
   .-heading {
