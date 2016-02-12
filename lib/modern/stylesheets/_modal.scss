@@ -57,11 +57,6 @@ $button-mobile-color: white;
       width: 50%;
     }
 
-    @include media($device) {
-      background: color(inky-blue);
-      opacity: 0.9;
-    }
-
     .content {
       padding: $gutter-spacing;
       margin-bottom: $gutter-spacing;
@@ -71,7 +66,6 @@ $button-mobile-color: white;
 
       @include media($device) {
         font-size: $small-font-size;
-        color: white;
         position: fixed;
         top: 10%;
         left: 10%;
@@ -108,9 +102,9 @@ $button-mobile-color: white;
 
         &.-action {
           order: 2;
-          color: $button-mobile-color;
-          background: transparent;
-          border-color: $button-mobile-color;
+          color: color(interactive-blue);
+          background-color: white;
+          border-color: color(interactive-blue);
 
           @include media($desktop) {
             color: color(interactive-blue);
@@ -121,9 +115,8 @@ $button-mobile-color: white;
 
         &.-action.-inverted {
           order: 1;
-          color: $text-dark;
-          background: $button-mobile-color;
-          border-color: $button-mobile-color;
+          color: white;
+          background: color(interactive-blue);
 
           @include media($desktop) {
             color: white;
