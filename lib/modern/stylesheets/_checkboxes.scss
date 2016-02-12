@@ -1,4 +1,4 @@
-$checkbox-border-width: 3px;
+$checkbox-border-width: 2px;
 $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
 
 [type="checkbox"].form-control:not(:checked),
@@ -23,34 +23,33 @@ $checkbox-size-mobile: $tiny-font-px + ($checkbox-border-width * 2);
       content: '';
       z-index: $midground;
       position: absolute;
-      left:0;
-      top: 2px;
+      top: $checkbox-border-width;
+      left: $checkbox-border-width;
       width: $checkbox-size-mobile;
       height: $checkbox-size-mobile;
       border: $checkbox-border-width solid color(dolphin);
       background: white;
 
       &:hover {
-        border-color: color(inky-blue);
+	border-color: color('inky-blue');
       }
     }
 
     &:after {
+      @include icon-for("checkmark");
       z-index: $midground;
-      content: '✔';
       position: absolute;
-      top: 6px;
-      left: 3px;
-      font-size: 18px;
-      line-height: 0.8;
-      color: color(inky-blue);
+      top: $checkbox-border-width/2;
+      left: $checkbox-border-width*2;
+      font-size: $tiny-font-size;
+      color: color('inky-blue');
       transition: all .2s;
     }
   }
 
   &:focus {
     & + label:before {
-      border: $checkbox-border-width solid color(inky-blue);
+      border: $checkbox-border-width solid color('inky-blue');
     }
   }
 }
