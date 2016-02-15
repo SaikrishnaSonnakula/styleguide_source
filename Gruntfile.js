@@ -87,12 +87,11 @@ return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
         destCss: 'lib/modern/stylesheets',
         options: {
           font: 'kp-icons',
-	  template: 'icons/_template.css',
-	  templateOptions: {
-	    baseClass: 'icon',
-	    classPrefix: 'icon-',
-	    mixinPrefix: 'icon-'
-	  },
+          template: 'icons/_template.css',
+          templateOptions: {
+            classPrefix: 'icon-',
+            mixinPrefix: 'icon-'
+          },
           rename: function(name) {
             return path.basename(name).toLowerCase();
           },
@@ -100,7 +99,7 @@ return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
           relativeFontPath: 'assets/fonts',
           types: 'eot,woff,ttf,svg',
           syntax: 'bootstrap',
-	  htmlDemoTemplate: 'icons/_template.html',
+          htmlDemoTemplate: 'icons/_template.html',
           htmlDemoFilename: 'icons',
           destHtml: 'app/'
         }
