@@ -30,19 +30,7 @@
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 }
-//Animation of loading icon
 
-$loading-icon-size: 1em;
-$loading-icon-speed: 1s;
-$loading-icon-thickness: 0.45em; 
-
-@mixin rotate-forever {
-  0%    { @include transform(rotate(0deg)); }
-  100%  { @include transform(rotate(360deg)); }
-}
-@-webkit-keyframes rotate-forever { @include rotate-forever; }
-@-moz-keyframes rotate-forever { @include rotate-forever; }
-@keyframes rotate-forever { @include rotate-forever; }
 
 
 // Icons
@@ -676,23 +664,3 @@ $loading-icon-thickness: 0.45em;
 	content:"\f169";
 }
 
-
-.icon-loading {
-    color: $text-light;
-
-    &:before {
-	    content: " ";
-    	background: url('../lib/modern/assets/images/loading-icon.svg') no-repeat;
-   	 	background-size: 1.5em;
-	    @include size (1.5em);
-	    @include animation-duration($loading-icon-speed);
-	    @include animation-iteration-count(infinite);
-	    @include animation-name(rotate-forever);
-	    @include animation-timing-function(linear);
-    }
-
-    .message {
-	    line-height: $loading-icon-size;
-	    vertical-align: baseline;
-  }
-}
