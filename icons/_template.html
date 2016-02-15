@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KP Styleguide Icons</title>
+    <script src="modern.bundle.js"></script>
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <span class="desktop-only">Styleguide</span> Icons
+    </header>
+    <main class="styleguide-main" style="display: none">
+    <article class="styleguide-content">
+
+      <h1 class="styleguide-section-heading">Example Usage</h1>
+      <p class="styleguide-note">Advise the editorialist for your team and feature when deciding what screenreader-only content to include.</p>
+      <div class="example -minor -padded" id="usage">
+
+	<div class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %>">
+	  <span class="screenreader-only"><%= glyphs[0] %></span></div>
+	Default size
+	<hr>
+
+	<div class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %> icon-md">
+	  <span class="screenreader-only"><%= glyphs[0] %></span></div>
+	Medium size
+	<hr>
+
+	<div class="<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><%= glyphs[0] %> icon-lg">
+	  <span class="screenreader-only"><%= glyphs[0] %></span></div>
+	Large size
+
+      </div>
+
+      <h1 class="styleguide-section-heading">Available Icons</h1>
+
+      <p class="styleguide-note">
+      <strong>Icons that say FPO ICON are not yet approved.</strong><br />
+      What you see are placeholders which will be updated when the icon is approved. If you don't see an icon name listed here, please contact <a href="mailto:Jennifer.Beasley@kp.org" class="icon-message">Jennifer.Beasley@kp.org</a> for more information.
+      </p>
+
+      <div class="icons-listing" id="icons">
+	<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+	<div class="-icon" data-name="<%= glyph %>"><div class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></div> <span class="-name"><%= classPrefix %><%= glyph %></span></div>
+	<% } %>
+      </div>
+    </article>
+    </main>
+  </body>
+</html>
