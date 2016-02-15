@@ -21,8 +21,6 @@
 [class^="<%= classPrefix %>"]:before,
 [class*=" <%= classPrefix %>"]:before {
   font-family: "<%= fontBaseName %>";
-  display: inline-block;
-  line-height: 1;
   font-weight: normal;
   font-style: normal;
   speak: none;
