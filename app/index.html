@@ -470,6 +470,7 @@
               </div>
             </div>
           </div>
+<<<<<<< f640b708f9ab6c4b77ab59aa57941fb5704f869e
 	</div>
       </section>
 
@@ -625,6 +626,169 @@
 	      </div>
 	      <div class="-footer item-tag">
 		Tagz
+=======
+        </section>
+
+        <section id="forms-section">
+          <h2 class="styleguide-section-heading">Forms</h2>
+          <h3 class="styleguide-subheading">
+            Form Controls
+          </h3>
+
+          <div class="example -minor -padded">
+            <input type="text" class="form-control" placeholder="Name"/>
+          </div>
+
+          <div class="example -minor -padded">
+	    <input type="checkbox" id="unselected" class="form-control"/>
+	    <label for="unselected">This is an unselected checkbox</label>
+	    <br />
+	    <input type="checkbox" id="selected" class="form-control" checked/>
+	    <label for="selected">I'm selected already!</label>
+          </div>
+
+          <div class="example -minor -padded">
+	    <input type="checkbox" id="unselected-disabled" class="form-control" disabled/>
+	    <label for="unselected-disabled">Can't touch this.</label>
+	    <br />
+	    <input type="checkbox" id="selected-disabled" class="form-control" checked disabled/>
+	    <label for="selected-disabled">I was once selected but no longer enabled.</label>
+          </div>
+
+          <h3 class="styleguide-subheading">Horizontal Form</h3>
+          <div class="example -padded">
+            <div class="horizontal-form">
+              <input class="form-control" placeholder="Username"></input>
+              <input type="password" class="form-control" placeholder="Password"></input>
+              <button class="button">
+                Submit
+              </button>
+            </div>
+          </div
+        </section>
+
+        <section id="features-section">
+          <h2 class="styleguide-section-heading">Features</h2>
+          <h3 class="styleguide-subheading">
+            Feature Layout
+          </h3>
+
+          <p>
+            Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
+          </p>
+          <div class="example">
+            <div class="feature">
+              <div class="action-box">
+                <h3 class="action-message">Action Message</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Active action box
+          </h3>
+
+          <p>
+            In device mode, active action box occupies full screen and hides feature-content.
+            In desktop mode, active action box pushes feature-content down.
+            To activate the action box, add <code>-action-box-active</code> to the feature element.
+          </p>
+
+          <div class="example">
+            <div class="feature -action-box-active">
+              <div class="action-box">
+                <h3 class="action-message">Action Message in Active Action Box</h3>
+              </div>
+              <div class="feature-content">
+                <h1 class="page-heading">My Feature</h1>
+                <p>
+                  This is a feature
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Action Box
+          </h3>
+
+          <p>
+            Action buttons will show as fixed buttons on the bottom of the screen for the device.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-action-button-pair">Toggle Example
+            </button>
+          </p>
+
+          <div class="example -padded -hide-action-buttons" id="action-button-pair">
+            <div class="action-box">
+              <div class="action-button">
+                <button class="button -action">
+                  Yes!
+                </button>
+                <button class="button -action -inverted">
+                  No
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Main action buttons will show as fixed buttons on the bottom of the screen for device.
+          </p>
+
+          <p class="device-only">
+            <button class="button" id="toggle-primary-action-button">Toggle Example
+            </button>
+          </p>
+
+          <div class="example -padded -hide-action-buttons" id="action-button">
+            <div class="action-box">
+              <button class="primary-action">
+                Primary Action
+              </button>
+            </div>
+          </div>
+
+          <p>
+           Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.
+          </p>
+
+          <div class="example -padded">
+            <div class="action-box">
+              <div class="-center-piece fuchsia">Fancy Center Piece</div>
+            </div>
+          </div>
+
+          <h3 class="styleguide-subheading">
+            Feed Items
+          </h3>
+
+          <div class="example">
+            <div class="feed-item">
+              <div class="-gutter">
+                <div class="feature-icon aqua">WW</div>
+              </div>
+
+              <div class="-main">
+                <h3 class="item-heading">
+                  You have a Feed Item
+                </h3>
+                <p>Sub heading text</p>
+                <div class="-body">
+                  This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+                </div>
+                <div class="-footer item-tag">
+                  Tagz
+                </div>
+>>>>>>> [STYLE-3: Pam] Adds enabled and disabled color states
               </div>
             </div>
           </div>
