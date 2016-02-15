@@ -1,3 +1,21 @@
+.notification {
+  &.-hard-interruption {
+    @extend %hard-interruption;
+  }
+
+  &.-soft-interruption {
+    @extend %soft-interruption;
+  }
+
+  &.-system-error {
+    @extend %system-error;
+  }
+
+  &.-validation-error {
+    @extend %validation-error;
+  }
+}
+
 .-hide-action-buttons {
   @include media($device) {
     .action-button, .primary-action {

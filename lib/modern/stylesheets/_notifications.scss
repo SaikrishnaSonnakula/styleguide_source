@@ -81,22 +81,22 @@ $validation-error-icon-color: "deep-red";
   }
 }
 
-.notification.-hard-interruption {
+%hard-interruption {
   @include notification($hard-interruption-icon, $icon-background-color: $hard-interruption-icon-color);
   @extend %rounded-error-icon;
 }
 
-.notification.-soft-interruption {
+%soft-interruption {
   @include notification($soft-interruption-icon, $icon-background-color: $soft-interruption-icon-color);
   @extend %rounded-error-icon;
 }
 
-.notification.-system-error {
+%system-error {
   @include notification($system-error-icon, $icon-color: $system-error-icon-color);
   @extend %centered-error-icon;
 }
 
-.notification.-validation-error {
+%validation-error {
   @include notification($validation-error-icon, $icon-color: $validation-error-icon-color);
   @extend %centered-error-icon;
 }

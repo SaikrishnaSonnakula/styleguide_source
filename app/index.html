@@ -725,11 +725,35 @@
       <section id="notifications-section">
 	<h2 class="styleguide-section-heading">Notifications</h2>
 
+	<p><a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">Placeholder classes</a> are available in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets/_notifications.scss" target="_blank">_notifications.scss</a> for the base notification styles available for Styleguide.</p>
+
 	<h3 class="styleguide-subheading">
 	  Errors
 	</h3>
 
-	<div class="example">
+	<p>To create static CSS classes for error notifications you can defined them in your Sass by extending the placeholder styles.</p>
+	<div class="prism-show-language">
+	  <pre class="language-scss"><code>.notification {
+  &.-hard-interruption {
+    @extend %hard-interruption;
+  }
+
+  &.-soft-interruption {
+    @extend %soft-interruption;
+  }
+
+  &.-system-error {
+    @extend %system-error;
+  }
+
+  &.-validation-error {
+    @extend %validation-error;
+  }
+}</code></pre>
+	</div>
+
+       <p>These classes will be processed and can be used in this fashion.</p>
+       <div class="example">
 	  <div class="notification -hard-interruption">
 	    <div class="-icon"><span class="screenreader-only">action incomplete</span></div>
 	    <div class="-main">
