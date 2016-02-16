@@ -15,21 +15,11 @@
       <h1 class="styleguide-section-heading">Example Usage</h1>
       <p class="styleguide-note">Advise the editorialist for your team and feature when deciding what screenreader-only content to include.</p>
       <div class="example -minor -padded" id="usage">
-
-	<div class="<%= classPrefix %><%= glyphs[0] %>">
-          <span class="screenreader-only"><%= glyphs[0] %></span></div>
-        Default size
+        <i class="<%= classPrefix %><%= glyphs[0] %>"><span class="screenreader-only"><%= glyphs[0] %></span></i> Default size
         <hr>
-
-	<div class="<%= classPrefix %><%= glyphs[0] %> icon-md">
-          <span class="screenreader-only"><%= glyphs[0] %></span></div>
-        Medium size
+        <i class="<%= classPrefix %><%= glyphs[0] %> icon-md"> <span class="screenreader-only"><%= glyphs[0] %></span></i> Medium size
         <hr>
-
-	<div class="<%= classPrefix %><%= glyphs[0] %> icon-lg">
-          <span class="screenreader-only"><%= glyphs[0] %></span></div>
-        Large size
-
+        <i class="<%= classPrefix %><%= glyphs[0] %> icon-lg"> <span class="screenreader-only"><%= glyphs[0] %></span></i> Large size
       </div>
 
       <h1 class="styleguide-section-heading">Available Icons</h1>
@@ -41,7 +31,7 @@
 
       <div class="icons-listing" id="icons">
         <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
-	<div class="-icon" data-name="<%= glyph %>"><div class="<%= classPrefix %><%= glyph %>"></div> <span class="-name"><%= classPrefix %><%= glyph %></span></div>
+        <div class="-icon" data-name="<%= glyph %>"><i class="<%= classPrefix %><%= glyph %>"></i><span class="screenreader-only"><%= glyph %> icon</span><span class="-name"><%= classPrefix %><%= glyph %></span></div>
         <% } %>
       </div>
     </article>
