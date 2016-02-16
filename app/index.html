@@ -639,6 +639,7 @@
             <input type="text" class="form-control" placeholder="Name"/>
           </div>
 
+	  <p>Base styling for checkboxes can be applied with the form-control class. These checkboxes are 20px squares.</p>
           <div class="example -minor -padded">
 	    <input type="checkbox" id="unselected" class="form-control"/>
 	    <label for="unselected">This is an unselected checkbox</label>
@@ -654,6 +655,17 @@
 	    <input type="checkbox" id="selected-disabled" class="form-control" checked disabled/>
 	    <label for="selected-disabled">I was once selected but no longer enabled.</label>
           </div>
+
+	  <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
+	  <pre class="code language-scss"><code>@include checkbox('my-30-px-checkbox', 30px, $medium-font-size);</code></pre>
+	  <div class="example -minor -padded">
+	    <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
+	    <label for="30px-enabled">This checkbox is so big.</label>
+	    <br />
+	    <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked disabled/>
+	    <label for="30px-disabled">This checkbox is so big and disabled.</label>
+	  </div>
+
 
           <h3 class="styleguide-subheading">Horizontal Form</h3>
           <div class="example -padded">
