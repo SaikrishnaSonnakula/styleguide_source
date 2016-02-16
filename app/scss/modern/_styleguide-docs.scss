@@ -387,3 +387,14 @@ table.table {
     font-size: $large-font-size;
   }
 }
+.styleguide-note {
+  $note-bg-color: color("fuchsia");
+
+  padding: $medium-spacing;
+  background-color: $note-bg-color;
+  color: set-text-color($note-bg-color);
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
