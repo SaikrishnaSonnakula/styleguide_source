@@ -88,13 +88,15 @@ $validation-error-icon-color: "deep-red";
   }
 }
 
-%centered-error-icon {
+%error-icon {
   .-icon {
-    @extend %centered-icon;
     &:before {
+      line-height: $notification-icon-mobile-size;
       font-size: $notification-icon-mobile-size;
+
       @include media($desktop){
-	font-size: $notification-icon-desktop-size;
+        line-height: $notification-icon-desktop-size;
+        font-size: $notification-icon-desktop-size;
       }
     }
   }
@@ -112,10 +114,10 @@ $validation-error-icon-color: "deep-red";
 
 %system-error {
   @include notification($system-error-icon, $icon-color: $system-error-icon-color);
-  @extend %centered-error-icon;
+  @extend %error-icon;
 }
 
 %validation-error {
   @include notification($validation-error-icon, $icon-color: $validation-error-icon-color);
-  @extend %centered-error-icon;
+  @extend %error-icon;
 }
