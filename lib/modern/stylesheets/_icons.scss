@@ -6,16 +6,17 @@ $feature-icon-mobile-size: 45px;
   font-family: 'kp-icons';
 }
 
-.feature-icon {
+%centered-icon {
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
+}
 
+%rounded-icon {
+  @extend %centered-icon;
   width: $feature-icon-mobile-size;
   height: $feature-icon-mobile-size;
   border-radius: 50%;
-  background-color: color(graphite);
-
   @include media($desktop) {
     width: $feature-icon-desktop-size;
     height: $feature-icon-desktop-size;
@@ -26,6 +27,11 @@ $feature-icon-mobile-size: 45px;
       height: $feature-icon-mobile-size;
     }
   }
+}
+
+.feature-icon {
+  @extend %rounded-icon;
+  background-color: color(graphite);
 }
 
 @keyframes fa-spin {

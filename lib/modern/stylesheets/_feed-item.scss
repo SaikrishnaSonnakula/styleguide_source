@@ -4,6 +4,22 @@ $desktop-item-icon-padding: $medium-spacing;
 $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
 $feed-item-border-size: 3px;
 
+@mixin gutter($width, $padding, $mobile-width, $mobile-padding) {
+  @extend %-section;
+
+  width: $mobile-width;
+  float: left;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+
+  @include media($desktop) {
+    width: $width;
+    float: left;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
 .feed-item {
   @include transition(position 0.3s ease-in-out);
   @include media($desktop){
@@ -17,19 +33,7 @@ $feed-item-border-size: 3px;
   }
 
   .-gutter {
-    @extend %-section;
-
-    width: $mobile-item-gutter-width;
-    float: left;
-    padding-left: $mobile-item-icon-padding;
-    padding-right: $mobile-item-icon-padding;
-
-    @include media($desktop) {
-      width: $desktop-item-gutter-width;
-      float: left;
-      padding-left: $desktop-item-icon-padding;
-      padding-right: $desktop-item-icon-padding;
-    }
+    @include gutter($desktop-item-gutter-width, $desktop-item-icon-padding, $mobile-item-gutter-width, $mobile-item-icon-padding);
   }
 
   .-main {
@@ -38,11 +42,6 @@ $feed-item-border-size: 3px;
     margin-left: $mobile-item-gutter-width;
     margin-top: $medium-spacing;
     margin-bottom: $medium-spacing;
-
-    .-errorheading {
-      font-weight: bold;
-    }
-
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
     }
@@ -51,14 +50,6 @@ $feed-item-border-size: 3px;
   .-body {
     color: color(dolphin);
     font-size: $base-font-size;
-
-    &.-errorbody {
-      max-width: 60%;
-
-      @include media($mobile) {
-        max-width: 100%;
-      }
-    }
   }
 
   .-click-to-expand {

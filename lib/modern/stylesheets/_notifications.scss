@@ -1,22 +1,123 @@
-$icon-radius: $feature-icon-mobile-size;
+$notification-rounded-icon-desktop-font-size: $large-font-size;
 
-.notifications-container {
-  @include outer-container(100%);
-  border: 1px solid color(graphite-light);
+$notification-icon-desktop-size: 50px;
+$notification-icon-mobile-size: 25px;
+
+@mixin notification($icon, $icon-background-color: transparent, $icon-color: white) {
+  border: $feed-item-border-size solid color(graphite-light);
   padding: $small-spacing;
+  display: flex;
+  flex-direction: column;
+  @include media($desktop) {
+    flex-direction: row;
+  }
 
-  .-action-buttons {
-    float: right;
-    position: relative;
-    bottom: $xl-spacing;
-
-    @include media($device){
-      float: none;
-      position: relative;
-      top: $small-spacing;
-      left: -$small-spacing;
+  .-icon {
+    @if $icon-background-color != transparent {
+      $icon-background-color: color(#{$icon-background-color});
     }
 
+    @if $icon-color != white {
+      $icon-color: color($icon-color);
+    }
 
+    background: $icon-background-color;
+    flex-shrink: 0;
+
+    margin-right: $small-spacing;
+    @include media($desktop) {
+      margin-right: $medium-spacing;
+    }
+
+    &:before {
+      @include icon-for(#{$icon});
+      color: $icon-color;
+    }
   }
+
+  .-heading {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .-main {
+    display: flex;
+  }
+
+  .-action-buttons {
+    align-self: center;
+    margin: $small-spacing 0 0 0;
+
+    @include media($desktop) {
+      flex-shrink: 0;
+      margin: 0 0 0 $medium-spacing;
+    }
+  }
+}
+
+$hard-interruption-icon: "exclamation";
+$hard-interruption-icon-color: "burnt-sienna";
+$soft-interruption-icon: "info";
+$soft-interruption-icon-color: "kp-blue";
+$system-error-icon: "alert";
+$system-error-icon-color: "dolphin";
+$validation-error-icon: "alert";
+$validation-error-icon-color: "deep-red";
+
+%rounded-error-icon {
+  .-icon {
+    @extend %rounded-icon;
+
+    width: $notification-icon-mobile-size;
+    height: $notification-icon-mobile-size;
+
+    &:before {
+      margin-top: -$notification-icon-mobile-size/4;
+    }
+
+    @include media($desktop) {
+      width: $notification-icon-desktop-size;
+      height: $notification-icon-desktop-size;
+      &:before {
+	font-size: $notification-rounded-icon-desktop-font-size;
+	margin-top: -$notification-icon-desktop-size/4;
+      }
+
+
+    }
+  }
+}
+
+%error-icon {
+  .-icon {
+    &:before {
+      line-height: $notification-icon-mobile-size;
+      font-size: $notification-icon-mobile-size;
+
+      @include media($desktop){
+        line-height: $notification-icon-desktop-size;
+        font-size: $notification-icon-desktop-size;
+      }
+    }
+  }
+}
+
+%hard-interruption {
+  @include notification($hard-interruption-icon, $icon-background-color: $hard-interruption-icon-color);
+  @extend %rounded-error-icon;
+}
+
+%soft-interruption {
+  @include notification($soft-interruption-icon, $icon-background-color: $soft-interruption-icon-color);
+  @extend %rounded-error-icon;
+}
+
+%system-error {
+  @include notification($system-error-icon, $icon-color: $system-error-icon-color);
+  @extend %error-icon;
+}
+
+%validation-error {
+  @include notification($validation-error-icon, $icon-color: $validation-error-icon-color);
+  @extend %error-icon;
 }

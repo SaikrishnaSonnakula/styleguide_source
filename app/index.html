@@ -25,83 +25,83 @@
     </div>
 
     <main class="styleguide-main" style="display: none">
-      <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
-        <ul>
-          <li><a href="#installation-section">Installation</a></li>
-          <li><a href="modern-ui-elements.html" target="_blank">JS UI Elements</a></li>
-          <li><a href="#responsive-section">Responsive</a></li>
-          <li><a href="#colors-section">Colors</a></li>
-          <li><a href="#typography-section">Typography</a></li>
-          <li><a href="#spacing-section">Spacing</a></li>
-          <li><a href="#buttons-section">Buttons</a></li>
-          <li><a href="#lists-section">Lists</a></li>
-          <li><a href="#modal-section">Modal</a></li>
-          <li><a href="#forms-section">Forms</a></li>
-          <li><a href="#features-section">Features</a></li>
-          <li><a href="#dropdowns-section">Dropdowns</a></li>
-          <li><a href="#errors-section">Notifications</a></li>
-          <li><a href="#layouts-section">Layouts</a></li>
-          <li><a href="icons.html">Icons</a></li>
-        </ul>
-      </nav>
+    <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
+      <ul>
+	<li><a href="#installation-section">Installation</a></li>
+	<li><a href="modern-ui-elements.html" target="_blank">JS UI Elements</a></li>
+	<li><a href="#responsive-section">Responsive</a></li>
+	<li><a href="#colors-section">Colors</a></li>
+	<li><a href="#typography-section">Typography</a></li>
+	<li><a href="#spacing-section">Spacing</a></li>
+	<li><a href="#buttons-section">Buttons</a></li>
+	<li><a href="#lists-section">Lists</a></li>
+	<li><a href="#modal-section">Modal</a></li>
+	<li><a href="#forms-section">Forms</a></li>
+	<li><a href="#features-section">Features</a></li>
+	<li><a href="#dropdowns-section">Dropdowns</a></li>
+	<li><a href="#notifications-section">Notifications</a></li>
+	<li><a href="#layouts-section">Layouts</a></li>
+	<li><a href="icons.html">Icons</a></li>
+      </ul>
+    </nav>
 
-      <article class="styleguide-content">
-        <section id="about-section">
-          <h2 class="styleguide-section-heading">
-            About
-          </h2>
-          <p>
-            The Web Design Styleguide (or as we call it, the styleguide) is both a styleguide document, which you can see here on this site, <em>and</em> a library of styling assets, like images, fonts, and stylesheets. This document was built with the same assets that are imported into responsive KP applications.
-          </p>
-          <p>
-            If you're interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk</a> on Styleguide Driven Development by Nicole Sullivan.
-          </p>
+    <article class="styleguide-content">
+      <section id="about-section">
+	<h2 class="styleguide-section-heading">
+	  About
+	</h2>
+	<p>
+	The Web Design Styleguide (or as we call it, the styleguide) is both a styleguide document, which you can see here on this site, <em>and</em> a library of styling assets, like images, fonts, and stylesheets. This document was built with the same assets that are imported into responsive KP applications.
+	</p>
+	<p>
+	If you're interested in learning more about this concept, listen to <a href="https://www.youtube.com/watch?v=ldW7zVmqu5g">this talk</a> on Styleguide Driven Development by Nicole Sullivan.
+	</p>
 
-          <h3 class="styleguide-section-subheading">Javascript UI elements</h3>
+	<h3 class="styleguide-section-subheading">Javascript UI elements</h3>
 
-          <p>We have added a new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, these are patterns that require the use of Javascript for specific behavior, for example, accordions and custom select menus.</p>
+	<p>We have added a new page for <a href="modern-ui-elements.html">Javascript UI elements</a>, these are patterns that require the use of Javascript for specific behavior, for example, accordions and custom select menus.</p>
 
-          <p class="tangerine"><strong>If you are looking for legacy <a href="legacy.html">here it is</a></strong></p>
-        </section>
+	<p class="tangerine"><strong>If you are looking for legacy <a href="legacy.html">here it is</a></strong></p>
+      </section>
 
-        <section id="installation-section">
-          <h2 class="styleguide-section-heading">
-            Installation
-          </h2>
+      <section id="installation-section">
+	<h2 class="styleguide-section-heading">
+	  Installation
+	</h2>
 
-          <p>
-            The styleguide is a NPM module. You can add it as a dependency to your project by running the following command in your project directory:
-          </p>
+	<p>
+	The styleguide is a NPM module. You can add it as a dependency to your project by running the following command in your project directory:
+	</p>
 
-          <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
+	<pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
 
-          <p>
-            Then, include the styles in your sass file:
-          </p>
+	<p>
+	Then, include the styles in your sass file:
+	</p>
 
-          <pre><code class="language-scss">@import "styleguide/modern"</code></pre>
+	<pre><code class="language-scss">@import "styleguide/modern"</code></pre>
 
-          <p>
-            Since the styleguide contains a variety of front-end assets, which all need to be handled the
-            right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
+	<p>
+	Since the styleguide contains a variety of front-end assets, which all need to be handled the
+	right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
 
-            If you are using the Build Plugin, you're all set!
-          </p>
-          <p>
-            If for some reason you cannot use the Build Plugin, you will need to build the assets manually out for AEM integration.
-            We will soon be documenting this process, but in the mean time, please let us know in the HipChat Room "Styleguide Core"
-          </p>
-        </section>
+	If you are using the Build Plugin, you're all set!
+	</p>
+	<p>
+	If for some reason you cannot use the Build Plugin, you will need to build the assets manually out for AEM integration.
+	We will soon be documenting this process, but in the mean time, please let us know in the HipChat Room "Styleguide Core"
+	</p>
+      </section>
 
-        <section id="responsive-section">
-          <h2 class="styleguide-section-heading">Responsive</h2>
-          <p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
-          <div id="responsive-table">
-          </div>
+      <section id="responsive-section">
+	<h2 class="styleguide-section-heading">Responsive</h2>
+	<p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
+	<div id="responsive-table">
+	</div>
 
-          <h4>Usage</h4>
-          If you want to apply a specific style to let's say the <code>$mobile</code> view try this:
-          <pre class="code language-scss" data-langauge="scss">
+	<h4>Usage</h4>
+	If you want to apply a specific style to let's say the <code>$mobile</code> view try this:
+	<pre class="code language-scss" data-langauge="scss">
             <code class="code">
             .element{
               @include media($mobile) {
@@ -109,9 +109,9 @@
               }
             }
             </code>
-          </pre>
-          Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
-          <pre class="code language-scss">
+	</pre>
+	Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
+	<pre class="code language-scss">
           <code class="code">
           .element{
               @include media($desktop-large) {
@@ -121,312 +121,312 @@
                 display:none;
               }
             }</code>
-          </pre>
-        </section>
+	</pre>
+      </section>
 
-        <section id="colors-section">
-          <h2 class="styleguide-section-heading">
-            Colors
-          </h2>
+      <section id="colors-section">
+	<h2 class="styleguide-section-heading">
+	  Colors
+	</h2>
 
-          <div id="colors">
-            <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
-      </p>
-      <p>For example:</p>
-      <pre class="code language-scss">
+	<div id="colors">
+	  <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
+	  </p>
+	  <p>For example:</p>
+	  <pre class="code language-scss">
         <code class="code">
           .element {
             background-color: color(lilac);
           }
         </code>
-      </pre>
-      <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
-    </div>
-        </section>
+	  </pre>
+	  <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
+	</div>
+      </section>
 
-        <section id="typography-section">
-          <h2 class="styleguide-section-heading">Typography</h2>
-          <p>
-            These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
-          </p>
-          <h3 class="styleguide-subheading">
-            Font Family Variables
+      <section id="typography-section">
+	<h2 class="styleguide-section-heading">Typography</h2>
+	<p>
+	These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
+	</p>
+	<h3 class="styleguide-subheading">
+	  Font Family Variables
+	</h3>
+	<div class="font-variables">
+	  <div class="font-variable">
+	    <div class="base-font-family">Base Font Family</div>
+	    <code>$base-font-family</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="bold-font-family">Bold Font Family</div>
+	    <code>$bold-font-family</code>
+	  </div>
+	</div>
+	<h3 class="styleguide-subheading">
+	  Text Styles
+	</h3>
+	<p>
+	There are a variety of heading classes that can be applied to any
+	element to give it the style of a heading. Use <code>h1</code>, <code>h2</code>, <code>h3</code>, etc, for semantic meaning, not for styling. Text sizing will adjust depending on screen size.
+	</p>
+	<div class="example -minor -padded">
+	  <h3 class="page-heading">
+	    Page Heading
           </h3>
-          <div class="font-variables">
-            <div class="font-variable">
-              <div class="base-font-family">Base Font Family</div>
-              <code>$base-font-family</code>
-            </div>
 
-            <div class="font-variable">
-              <div class="bold-font-family">Bold Font Family</div>
-              <code>$bold-font-family</code>
+	</div>
+	<div class="example -minor -padded">
+	  <h4 class="section-heading">
+	    Section Heading
+	  </h4>
+	</div>
+	<div class="example -minor -padded">
+	  <h4 class="item-heading">
+	    Item Heading
+	  </h4>
+	</div>
+	<div class="example -minor -padded">
+	  <span class="item-tag">
+	    Tag (also used for dates)
+	  </span>
+	</div>
+	<div class="example -minor -padded">
+	  <span class="auxiliary-text">
+	    Auxiliary text
+	  </span>
+	</div>
+
+	<h3 class="styleguide-subheading">
+	  Font Size Variables
+	</h3>
+	<p>Use with responsive media queries. Talk to your designer before using these variables.</p>
+	<div class="font-variables">
+	  <div class="font-variable">
+	    <div class="extra-tiny-font-size">Extra Tiny</div>
+	    <code>$extra-tiny-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="tiny-font-size">Tiny</div>
+	    <code>$tiny-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="small-font-size">Small</div>
+	    <code>$small-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="medium-font-size">Medium</div>
+	    <code>$medium-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="large-font-size">Large</div>
+	    <code>$large-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="xl-font-size">XL</div>
+	    <code>$xl-font-size</code>
+	  </div>
+
+	  <div class="font-variable">
+	    <div class="xxl-font-size">XXL</div>
+	    <code>$xxl-font-size</code>
+	  </div>
+	</div>
+      </section>
+      <section id="spacing-section">
+	<h2 class="styleguide-section-heading">Spacing</h2>
+	<p>There are several variables that can help you more effectively choose
+	spacing for your feature-specific styling. <strong>Hover over an element
+	  to see the spacing highlighted.</strong></p>
+	<div class="spacing-examples">
+	  <div class="spacing-example -tiny">
+	    <div class="spacing-highlight">
+	      <h3 class="item-heading">
+		Tiny Spacing
+	      </h3>
+	      <h3 class="item-subheading">
+		example
+	      </h3>
             </div>
+	    <p>
+	    <code>$tiny-spacing</code> is the smallest amount of spacing between two elements. Elements separated by tiny spacing will have a strong spacial connection, such as in this heading and subheading.
+	    </p>
           </div>
-           <h3 class="styleguide-subheading">
-            Text Styles
-          </h3>
-          <p>
-            There are a variety of heading classes that can be applied to any
-            element to give it the style of a heading. Use <code>h1</code>, <code>h2</code>, <code>h3</code>, etc, for semantic meaning, not for styling. Text sizing will adjust depending on screen size.
-          </p>
-          <div class="example -minor -padded">
-            <h3 class="page-heading">
-              Page Heading
-            </h3>
 
-          </div>
-          <div class="example -minor -padded">
-            <h4 class="section-heading">
-              Section Heading
-            </h4>
-          </div>
-          <div class="example -minor -padded">
-            <h4 class="item-heading">
-              Item Heading
-            </h4>
-          </div>
-          <div class="example -minor -padded">
-            <span class="item-tag">
-              Tag (also used for dates)
-            </span>
-          </div>
-          <div class="example -minor -padded">
-            <span class="auxiliary-text">
-              Auxiliary text
-            </span>
+	  <div class="spacing-example -small">
+	    <div class="spacing-highlight">
+	      <p>Small spacing</p>
+	      <p>the spacing between paragraphs.</p>
+            </div>
+
+	    <p>
+	    <code>$small-spacing</code> is small amount of spacing between two elements. Elements separated by small spacing will have a slight spacial connection, such as between paragraphs of body text. That's why you can also use the variable <code>$paragraph-spacing</code>.
+	    </p>
           </div>
 
-          <h3 class="styleguide-subheading">
-            Font Size Variables
-          </h3>
-          <p>Use with responsive media queries. Talk to your designer before using these variables.</p>
-          <div class="font-variables">
-            <div class="font-variable">
-              <div class="extra-tiny-font-size">Extra Tiny</div>
-              <code>$extra-tiny-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="tiny-font-size">Tiny</div>
-              <code>$tiny-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="small-font-size">Small</div>
-              <code>$small-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="medium-font-size">Medium</div>
-              <code>$medium-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="large-font-size">Large</div>
-              <code>$large-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="xl-font-size">XL</div>
-              <code>$xl-font-size</code>
-            </div>
-
-            <div class="font-variable">
-              <div class="xxl-font-size">XXL</div>
-              <code>$xxl-font-size</code>
-            </div>
-          </div>
-        </section>
-        <section id="spacing-section">
-          <h2 class="styleguide-section-heading">Spacing</h2>
-          <p>There are several variables that can help you more effectively choose
-          spacing for your feature-specific styling. <strong>Hover over an element
-          to see the spacing highlighted.</strong></p>
-          <div class="spacing-examples">
-            <div class="spacing-example -tiny">
+	  <div class="spacing-example -medium">
+	    <div class="feed-item">
               <div class="spacing-highlight">
-                <h3 class="item-heading">
-                  Tiny Spacing
-                </h3>
-                <h3 class="item-subheading">
-                  example
-                </h3>
+		<p class="item-body medium-spacing">
+		Medium spacing
+		</p>
               </div>
-              <p>
-                <code>$tiny-spacing</code> is the smallest amount of spacing between two elements. Elements separated by tiny spacing will have a strong spacial connection, such as in this heading and subheading.
-              </p>
+	      <div class="item-tag">example</div>
+            </div>
+	    <p>
+	    <code>$medium-spacing</code> can be used if you need a larger amount of spacing between two elements than is between paragraphs.
+	    </p>
+	  </div>
+
+	  <div class="spacing-example -large">
+	    <div class="spacing-highlight">
+	      <h3 class="large-spacing">
+		Large Spacing
+	      </h3>
+	      <div class="feed-item-tag">example.</div>
             </div>
 
-            <div class="spacing-example -small">
-              <div class="spacing-highlight">
-                <p>Small spacing</p>
-                <p>the spacing between paragraphs.</p>
-              </div>
+	    <p>
+	    <code>$large-spacing</code> can space out element groups from each other.
+	    </p>
+	  </div>
 
-              <p>
-                <code>$small-spacing</code> is small amount of spacing between two elements. Elements separated by small spacing will have a slight spacial connection, such as between paragraphs of body text. That's why you can also use the variable <code>$paragraph-spacing</code>.
-              </p>
+	  <div class="spacing-example -xl">
+	    <div class="spacing-highlight">
+	      <h3>XL Spacing</h3>
+	      <div class="xl-spacing">
+		example!
+              </div>
             </div>
 
-            <div class="spacing-example -medium">
-              <div class="feed-item">
-                <div class="spacing-highlight">
-                  <p class="item-body medium-spacing">
-                    Medium spacing
-                  </p>
-                </div>
-                <div class="item-tag">example</div>
-              </div>
-              <p>
-                <code>$medium-spacing</code> can be used if you need a larger amount of spacing between two elements than is between paragraphs.
-              </p>
-            </div>
-
-            <div class="spacing-example -large">
-              <div class="spacing-highlight">
-                <h3 class="large-spacing">
-                  Large Spacing
-                </h3>
-                <div class="feed-item-tag">example.</div>
-              </div>
-
-              <p>
-                <code>$large-spacing</code> can space out element groups from each other.
-              </p>
-            </div>
-
-            <div class="spacing-example -xl">
-              <div class="spacing-highlight">
-                <h3>XL Spacing</h3>
-                <div class="xl-spacing">
-                  example!
-                </div>
-              </div>
-
-              <p>
-                <code>$xl-spacing</code> is used to give a lot of visual separation, such as the gutter for hero elements.
-              </p>
-            </div>
-            <div class="spacing-example -xxl">
-              <div class="spacing-highlight">
-                <h3>XXL Spacing</h3>
-                <div class="xxl-spacing">
-                  example!
-                </div>
-              </div>
-              <p>
-                <code>$xxl-spacing</code> is used to give a lot of visual separation, such as the gutter for hero elements.
-              </p>
-            </div>
+	    <p>
+	    <code>$xl-spacing</code> is used to give a lot of visual separation, such as the gutter for hero elements.
+	    </p>
           </div>
-        </section>
+	  <div class="spacing-example -xxl">
+	    <div class="spacing-highlight">
+	      <h3>XXL Spacing</h3>
+	      <div class="xxl-spacing">
+		example!
+	      </div>
+	    </div>
+	    <p>
+	    <code>$xxl-spacing</code> is used to give a lot of visual separation, such as the gutter for hero elements.
+	    </p>
+	  </div>
+	</div>
+      </section>
 
-        <section id="buttons-section">
-          <h2 class="styleguide-section-heading">Buttons</h2>
-          <p>
-            <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
-          </p>
-          <div class="example -element -padded">
-            <button class="button">
-              Button!
-            </button>
-          </div>
-          <div class="example -element -padded">
-            <a class="button">
-              Anchor Button
-            </a>
-          </div>
+      <section id="buttons-section">
+	<h2 class="styleguide-section-heading">Buttons</h2>
+	<p>
+	<code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
+	</p>
+	<div class="example -element -padded">
+	  <button class="button">
+	    Button!
+	  </button>
+	</div>
+	<div class="example -element -padded">
+	  <a class="button">
+	    Anchor Button
+	  </a>
+	</div>
 
-          <p>
-            For an inverted color, use the <code>-inverted</code> class.
-          </p>
-          <div class="example -element -padded">
-            <button class="button -inverted">
-              Inverted Button
-            </button>
-          </div>
+	<p>
+	For an inverted color, use the <code>-inverted</code> class.
+	</p>
+	<div class="example -element -padded">
+	  <button class="button -inverted">
+	    Inverted Button
+	  </button>
+	</div>
 
-          <p>
-            You can also make a <code>&lt;button&gt;</code> look like a link:
-          </p>
-          <div class="example -element -padded">
-            <button class="link">
-              Link Button
-            </button>
-          </div>
+	<p>
+	You can also make a <code>&lt;button&gt;</code> look like a link:
+	</p>
+	<div class="example -element -padded">
+	  <button class="link">
+	    Link Button
+	  </button>
+	</div>
 
-          <p>
-              You can make a close button look this:
-          </p>
+	<p>
+	You can make a close button look this:
+	</p>
 
-          <div class="example -element -padded">
-              <button class="-close" role="button">
-                <span class="screenreader-only">close</span>
-              </button>
-          </div>
+	<div class="example -element -padded">
+	  <button class="-close" role="button">
+	    <span class="screenreader-only">close</span>
+	  </button>
+	</div>
 
-          <p>
-            If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
-          </p>
-          <div class="example -element">
-            <button class="button -block">
-              Block button
-            </button>
-          </div>
+	<p>
+	If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
+	</p>
+	<div class="example -element">
+	  <button class="button -block">
+	    Block button
+	  </button>
+	</div>
 
-          <p>
-            If you need a disabled button you can add the following class <code>-disabled</code>
-          </p>
-          <div class="example -element">
-            <button class="button -disabled" disabled>
-              Disabled button
-            </button>
-          </div>
-        </section>
+	<p>
+	If you need a disabled button you can add the following class <code>-disabled</code>
+	</p>
+	<div class="example -element">
+	  <button class="button -disabled" disabled>
+	    Disabled button
+	  </button>
+	</div>
+      </section>
 
-        <section id="lists-section">
-          <h2 class="styleguide-section-heading">Lists</h2>
-          <h3 class="styleguide-subheading">Horizontal</h3>
-          <div class="example -padded">
-            <ul class="horizontal-list">
-              <li>Seattle</li>
-              <li>San Francisco</li>
-              <li>Los Angeles</li>
-            </ul>
-          </div>
+      <section id="lists-section">
+	<h2 class="styleguide-section-heading">Lists</h2>
+	<h3 class="styleguide-subheading">Horizontal</h3>
+	<div class="example -padded">
+	  <ul class="horizontal-list">
+	    <li>Seattle</li>
+	    <li>San Francisco</li>
+	    <li>Los Angeles</li>
+	  </ul>
+	</div>
 
-          <div class="example -padded">
-            <ul class="horizontal-list -divided">
-              <li>Seattle</li>
-              <li>San Francisco</li>
-              <li>Los Angeles</li>
-            </ul>
-          </div>
+	<div class="example -padded">
+	  <ul class="horizontal-list -divided">
+	    <li>Seattle</li>
+	    <li>San Francisco</li>
+	    <li>Los Angeles</li>
+	  </ul>
+	</div>
 
-         <h3 class="styleguide-subheading">Vertical</h3>
-          <div class="example -padded">
-            <ul class="vertical-list">
-              <li>Seattle</li>
-              <li>San Francisco</li>
-              <li>Los Angeles</li>
-            </ul>
-          </div>
+	<h3 class="styleguide-subheading">Vertical</h3>
+	<div class="example -padded">
+	  <ul class="vertical-list">
+	    <li>Seattle</li>
+	    <li>San Francisco</li>
+	    <li>Los Angeles</li>
+	  </ul>
+	</div>
 
-          <div class="example -padded">
-            <ul class="vertical-list -divided">
-              <li>Seattle</li>
-              <li>San Francisco</li>
-              <li>Los Angeles</li>
-            </ul>
-          </div>
-        </section>
+	<div class="example -padded">
+	  <ul class="vertical-list -divided">
+	    <li>Seattle</li>
+	    <li>San Francisco</li>
+	    <li>Los Angeles</li>
+	  </ul>
+	</div>
+      </section>
 
-        <section id="modal-section">
-          <h2 class="styleguide-section-heading">Modal</h2>
+      <section id="modal-section">
+	<h2 class="styleguide-section-heading">Modal</h2>
 
-          <div class="example -padded">
-            <pre class="code language-javascript">
+	<div class="example -padded">
+	  <pre class="code language-javascript">
                 var focusedElementBeforeModal = null;
                 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -448,431 +448,481 @@
                   focusedElementBeforeModal.focus();
                   ev.preventDefault();
                 });
-            </pre>
+	  </pre>
 
-            <button id="modal-button" class="button">
-              Bring in the modal
-            </button>
+	  <button id="modal-button" class="button">
+	    Bring in the modal
+	  </button>
 
-            <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
-              <div class="modal-fade-screen">
-                <div class="modal-inner">
-                  <div id="modal-description" class="content">
-                    Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
-                  <div class="modal-buttons">
-                    <button id="nothing" class="button -action">
-                      Secondary Action
-                    </button>
-                    <button id="do-something" class="button -action -inverted">
-                      Primary Action
-                    </button>
-                  </div>
+	  <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+	    <div class="modal-fade-screen">
+	      <div class="modal-inner">
+		<div id="modal-description" class="content">
+		  Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
+		<div class="modal-buttons">
+		  <button id="nothing" class="button -action">
+		    Secondary Action
+		  </button>
+		  <button id="do-something" class="button -action -inverted">
+		    Primary Action
+		  </button>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+	</div>
+      </section>
 
-        <section id="forms-section">
-          <h2 class="styleguide-section-heading">Forms</h2>
-          <h3 class="styleguide-subheading">
-            Form Controls
-          </h3>
+      <section id="forms-section">
+	<h2 class="styleguide-section-heading">Forms</h2>
+	<h3 class="styleguide-subheading">
+	  Form Controls
+	</h3>
 
-          <div class="example -minor -padded">
-            <input type="text" class="form-control" placeholder="Name"/>
-          </div>
+	<div class="example -minor -padded">
+	  <input type="text" class="form-control" placeholder="Name"/>
+	</div>
 
-          <div class="example -minor -padded">
-            <input type="checkbox" id="day" class="form-control"/>
-            <label for="day">Check if you're having a good day.</label>
-          </div>
+	<div class="example -minor -padded">
+	  <input type="checkbox" id="day" class="form-control"/>
+	  <label for="day">Check if you're having a good day.</label>
+	</div>
 
-          <div class="example -minor -padded">
-            <input type="checkbox" id="kp-fan" class="form-control" checked disabled/>
-            <label for="kp-fan">Are you a fan of KP?</label>
-          </div>
+	<div class="example -minor -padded">
+	  <input type="checkbox" id="kp-fan" class="form-control" checked disabled/>
+	  <label for="kp-fan">Are you a fan of KP?</label>
+	</div>
 
-          <h3 class="styleguide-subheading">Horizontal Form</h3>
-          <div class="example -padded">
-            <div class="horizontal-form">
-              <input class="form-control" placeholder="Username"></input>
-              <input type="password" class="form-control" placeholder="Password"></input>
-              <button class="button">
-                Submit
-              </button>
-            </div>
-          </div
-        </section>
+	<h3 class="styleguide-subheading">Horizontal Form</h3>
+	<div class="example -padded">
+	  <div class="horizontal-form">
+	    <input class="form-control" placeholder="Username"></input>
+	    <input type="password" class="form-control" placeholder="Password"></input>
+	    <button class="button">
+	      Submit
+	    </button>
+	  </div>
+	</div
+      </section>
 
-        <section id="features-section">
-          <h2 class="styleguide-section-heading">Features</h2>
-          <h3 class="styleguide-subheading">
-            Feature Layout
-          </h3>
+      <section id="features-section">
+	<h2 class="styleguide-section-heading">Features</h2>
+	<h3 class="styleguide-subheading">
+	  Feature Layout
+	</h3>
 
-          <p>
-            Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
-          </p>
-          <div class="example">
-            <div class="feature">
-              <div class="action-box">
-                <h3 class="action-message">Action Message</h3>
-              </div>
-              <div class="feature-content">
-                <h1 class="page-heading">My Feature</h1>
-                <p>
-                  This is a feature
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="styleguide-subheading">
-            Active action box
-          </h3>
-
-          <p>
-            In device mode, active action box occupies full screen and hides feature-content.
-            In desktop mode, active action box pushes feature-content down.
-            To activate the action box, add <code>-action-box-active</code> to the feature element.
-          </p>
-
-          <div class="example">
-            <div class="feature -action-box-active">
-              <div class="action-box">
-                <h3 class="action-message">Action Message in Active Action Box</h3>
-              </div>
-              <div class="feature-content">
-                <h1 class="page-heading">My Feature</h1>
-                <p>
-                  This is a feature
-                </p>
-              </div>
+	<p>
+	Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
+	</p>
+	<div class="example">
+	  <div class="feature">
+	    <div class="action-box">
+	      <h3 class="action-message">Action Message</h3>
+	    </div>
+	    <div class="feature-content">
+	      <h1 class="page-heading">My Feature</h1>
+	      <p>
+	      This is a feature
+	      </p>
             </div>
           </div>
+	</div>
 
-          <h3 class="styleguide-subheading">
-            Action Box
-          </h3>
+	<h3 class="styleguide-subheading">
+	  Active action box
+	</h3>
 
-          <p>
-            Action buttons will show as fixed buttons on the bottom of the screen for the device.
-          </p>
+	<p>
+	In device mode, active action box occupies full screen and hides feature-content.
+	In desktop mode, active action box pushes feature-content down.
+	To activate the action box, add <code>-action-box-active</code> to the feature element.
+	</p>
 
-          <p class="device-only">
-            <button class="button" id="toggle-action-button-pair">Toggle Example
-            </button>
-          </p>
+	<div class="example">
+	  <div class="feature -action-box-active">
+	    <div class="action-box">
+	      <h3 class="action-message">Action Message in Active Action Box</h3>
+	    </div>
+	    <div class="feature-content">
+	      <h1 class="page-heading">My Feature</h1>
+	      <p>
+	      This is a feature
+	      </p>
+            </div>
+          </div>
+	</div>
 
-          <div class="example -padded -hide-action-buttons" id="action-button-pair">
-            <div class="action-box">
-              <div class="action-button">
-                <button class="button -action">
-                  Yes!
-                </button>
-                <button class="button -action -inverted">
-                  No
-                </button>
+	<h3 class="styleguide-subheading">
+	  Action Box
+	</h3>
+
+	<p>
+	Action buttons will show as fixed buttons on the bottom of the screen for the device.
+	</p>
+
+	<p class="device-only">
+	<button class="button" id="toggle-action-button-pair">Toggle Example
+	</button>
+	</p>
+
+	<div class="example -padded -hide-action-buttons" id="action-button-pair">
+	  <div class="action-box">
+	    <div class="action-button">
+	      <button class="button -action">
+		Yes!
+	      </button>
+	      <button class="button -action -inverted">
+		No
+	      </button>
+            </div>
+          </div>
+	</div>
+
+	<p>
+	Main action buttons will show as fixed buttons on the bottom of the screen for device.
+	</p>
+
+	<p class="device-only">
+	<button class="button" id="toggle-primary-action-button">Toggle Example
+	</button>
+	</p>
+
+	<div class="example -padded -hide-action-buttons" id="action-button">
+	  <div class="action-box">
+	    <button class="primary-action">
+	      Primary Action
+	    </button>
+          </div>
+	</div>
+
+	<p>
+	Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.
+	</p>
+
+	<div class="example -padded">
+	  <div class="action-box">
+	    <div class="-center-piece fuchsia">Fancy Center Piece</div>
+          </div>
+	</div>
+
+	<h3 class="styleguide-subheading">
+	  Feed Items
+	</h3>
+
+	<div class="example">
+	  <div class="feed-item">
+	    <div class="-gutter">
+	      <div class="feature-icon aqua">WW</div>
+	    </div>
+
+	    <div class="-main">
+	      <h3 class="item-heading">
+		You have a Feed Item
+	      </h3>
+	      <p>Sub heading text</p>
+	      <div class="-body">
+		This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+	      </div>
+	      <div class="-footer item-tag">
+		Tagz
               </div>
             </div>
           </div>
+	</div>
 
-          <p>
-            Main action buttons will show as fixed buttons on the bottom of the screen for device.
-          </p>
+	<p>
+	For feed items with collapsible content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
+	elements with the <code>collapsible-content</code> class.
+	</p>
 
-          <p class="device-only">
-            <button class="button" id="toggle-primary-action-button">Toggle Example
-            </button>
-          </p>
-
-          <div class="example -padded -hide-action-buttons" id="action-button">
-            <div class="action-box">
-              <button class="primary-action">
-                Primary Action
-              </button>
-            </div>
-          </div>
-
-          <p>
-           Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.
-          </p>
-
-          <div class="example -padded">
-            <div class="action-box">
-              <div class="-center-piece fuchsia">Fancy Center Piece</div>
-            </div>
-          </div>
-
-          <h3 class="styleguide-subheading">
-            Feed Items
-          </h3>
-
-          <div class="example">
-            <div class="feed-item">
-              <div class="-gutter">
-                <div class="feature-icon aqua">WW</div>
-              </div>
-
-              <div class="-main">
-                <h3 class="item-heading">
-                  You have a Feed Item
-                </h3>
-                <p>Sub heading text</p>
-                <div class="-body">
-                  This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-                </div>
-                <div class="-footer item-tag">
-                  Tagz
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p>
-            For feed items with collapsible content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
-            elements with the <code>collapsible-content</code> class.
-          </p>
-
-          <div class="example">
-            <pre class="code language-javascript">
+	<div class="example">
+	  <pre class="code language-javascript">
               var feedItemId = $("#my-collapsible-feed-item");
               var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
 
               feedItemHeading.on('click', function() {
                 feedItemId.toggleClass("-open");
               });
-            </pre>
+	  </pre>
 
-            <div id="my-collapsible-feed-item" class="feed-item -collapsible">
-              <div class="-gutter">
-                <div class="feature-icon fuchsia">IJ</div>
-              </div>
+	  <div id="my-collapsible-feed-item" class="feed-item -collapsible">
+	    <div class="-gutter">
+	      <div class="feature-icon fuchsia">IJ</div>
+	    </div>
 
-              <div class="-main">
-                <button class="-click-to-expand">
-                  <h3 class="item-heading">
-                    Feed Item with Additional Content
-                    <span class="screenreader-only">toggle additional content</span>
-                  </h3>
+	    <div class="-main">
+	      <button class="-click-to-expand">
+		<h3 class="item-heading">
+		  Feed Item with Additional Content
+		  <span class="screenreader-only">toggle additional content</span>
+		</h3>
 
-                  <h4 class="item-subheading">
-                    from Styleguide
-                  </h4>
+		<h4 class="item-subheading">
+		  from Styleguide
+		</h4>
 
-                  <div class="-body">
-                    Click me to see the extra content!
-                  </div>
-                </button>
+		<div class="-body">
+		  Click me to see the extra content!
+		</div>
+	      </button>
 
-                <p class="-body -collapsible">
-                  Extra content.
-                </p>
+	      <p class="-body -collapsible">
+	      Extra content.
+	      </p>
 
-                <div class="-footer item-tag">
-                  Tagz
-                </div>
+	      <div class="-footer item-tag">
+		Tagz
               </div>
             </div>
           </div>
-        </section>
+	</div>
+      </section>
 
-        <section id="dropdowns-section">
-          <h2 class="styleguide-section-heading">
-            Dropdowns
-          </h2>
-          <p>
-           Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
-          </p>
-          <div class="example -padded-desktop">
-            <pre class="code language-javascript">
+      <section id="dropdowns-section">
+	<h2 class="styleguide-section-heading">
+	  Dropdowns
+	</h2>
+	<p>
+	Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
+	</p>
+	<div class="example -padded-desktop">
+	  <pre class="code language-javascript">
               $("#best-nba-team .-value").click(function() {
                 $("#best-nba-team").toggleClass("-open");
               });
-            </pre>
+	  </pre>
 
-            <div id="best-nba-team" class="dropdown">
-              <button class="-value">
-                Golden State Warriors
-              </button>
-              <ul class="-options">
-                <li class="-active"><a href="#warriors">Golden State Warriors</a></li>
-                <li><a href="#lakers">LA Lakers</a></li>
-                <li><a href="#clippers">LA Clippers</a></li>
-              </ul>
+	  <div id="best-nba-team" class="dropdown">
+	    <button class="-value">
+	      Golden State Warriors
+	    </button>
+	    <ul class="-options">
+	      <li class="-active"><a href="#warriors">Golden State Warriors</a></li>
+	      <li><a href="#lakers">LA Lakers</a></li>
+	      <li><a href="#clippers">LA Clippers</a></li>
+	    </ul>
+          </div>
+	</div>
+
+	<p>
+	Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
+	</p>
+
+	<div class="example -padded-desktop">
+	  <div id="neighborhood" class="dropdown -heading">
+	    <button class="-value">
+	      San Francisco
+	    </button>
+	    <ul class="-options">
+	      <li class="-active"><a href="#mission">Mission</a></li>
+	      <li><a href="#haight">Haight</a></li>
+	      <li><a href="#nob-hill">Nob Hill</a></li>
+	    </ul>
+          </div>
+	</div>
+      </section>
+
+      <section id="notifications-section">
+	<h2 class="styleguide-section-heading">Notifications</h2>
+
+	<p><a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">Placeholder classes</a> are available in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets/_notifications.scss" target="_blank">_notifications.scss</a> for the base notification styles available for Styleguide.</p>
+
+	<h3 class="styleguide-subheading">
+	  Errors
+	</h3>
+
+	<p>To create static CSS classes for error notifications you can defined them in your Sass by extending the placeholder styles.</p>
+
+  <pre class="code language-scss" data-langauge="scss"><code>.notification {
+  &.-hard-interruption {
+    @extend %hard-interruption;
+  }
+
+  &.-soft-interruption {
+    @extend %soft-interruption;
+  }
+
+  &.-system-error {
+    @extend %system-error;
+  }
+
+  &.-validation-error {
+    @extend %validation-error;
+  }
+}</code></pre>
+
+  <p>These classes will be processed and can be used in this fashion.</p>
+  <div class="example">
+    <div class="notification -hard-interruption">
+      <div class="-main">
+        <div class="-icon"><span class="screenreader-only">action incomplete</span></div>
+        <div class="-body">
+          <h4 class="-heading">Use this for a WIM-hard interruption scenario</h4>
+          The user needs to know this action cannot be completed because of some regulation,
+          timing or other business parameter.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="notification -soft-interruption">
+      <div class="-main">
+        <div class="-icon"><span class="screenreader-only">action incomplete</span></div>
+        <div class="-body">
+          <h4 class="-heading">Use this for a WIM-soft interruption scenario</h4>
+          The user needs to know this action cannot be completed. User may be able to continue the action later, depending on the particular scenario.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="notification -system-error">
+      <div class="-main">
+        <div class="-icon"><span class="screenreader-only">system error alert</span></div>
+        <div class="-body">
+          <h4 class="-heading">Use this for a system error scenario</h4>
+          An unpredictable error has occured here and the user needs to be informed of what has happened.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="notification -validation-error">
+      <div class="-main">
+        <div class="-icon"><span class="screenreader-only">input error</span></div>
+        <div class="-body">
+          <h4 class="-heading">Use this for input/validation input errors</h4>
+          <ul>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="notification -hard-interruption">
+      <div class="-main">
+        <div class="-icon"><span class="screenreader-only">error</span></div>
+        <div class="-body">
+          <h4 class="-heading">You can include action buttons in notifications that can be retried or dismissed</h4>
+          The icon is independent of the action buttons, please make sure you use the appropriate icon class.
+        </div>
+      </div>
+      <div class="-action-buttons">
+        <button class="button -small -inverted">Cancel</button>
+        <button class="button -small">Retry</button>
+      </div>
+    </div>
+  </div>
+
+      </section>
+
+      <section id="layouts-section">
+	<h2 class="styleguide-section-heading">Layouts</h2>
+	<p>Styleguide follows <a href="http://neat.bourbon.io/" target="_blank">Neat's</a> 12 column grid. We've created a few helper classes for common use-cases.
+	If you need a different variation than what you see below, refer to <a href="http://neat.bourbon.io/examples/" target="_blank">Neat's documentation and examples</a>.
+	The color classes you see below are for demonstration purposes.</p>
+
+	<h3 class="styleguide-subheading">
+	  Four column Layout
+	</h3>
+	<p>Each column spans 3 grid columns</p>
+
+	<div class="example">
+	  <div class="four-columns">
+	    <div class="-column grass">
+	      Column 1
+	    </div>
+
+	    <div class="-column aqua">
+	      Column 2
+	    </div>
+
+	    <div class="-column fuchsia">
+	      Column 3
+	    </div>
+
+	    <div class="-column tangerine">
+	      Column 4
             </div>
           </div>
+	</div>
 
-          <p>
-           Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
-          </p>
+	<h3 class="styleguide-subheading">
+	  Three column Layout
+	</h3>
+	<p>Each column spans 4 grid columns</p>
 
-          <div class="example -padded-desktop">
-            <div id="neighborhood" class="dropdown -heading">
-              <button class="-value">
-                San Francisco
-              </button>
-              <ul class="-options">
-                <li class="-active"><a href="#mission">Mission</a></li>
-                <li><a href="#haight">Haight</a></li>
-                <li><a href="#nob-hill">Nob Hill</a></li>
-              </ul>
+	<div class="example">
+	  <div class="three-columns">
+	    <div class="-column grass">
+	      Column 1
+	    </div>
+
+	    <div class="-column fuchsia">
+	      Column 2
+	    </div>
+
+	    <div class="-column tangerine">
+	      Column 3
             </div>
           </div>
-        </section>
+	</div>
 
-        <section id="errors-section">
-          <h2 class="styleguide-section-heading">Notifications</h2>
+	<h3 class="styleguide-subheading">
+	  Two column Layout
+	</h3>
+	<p>Column 1 spans 4 grid columns. Column 2 spans 8.</p>
 
-          <h3 class="styleguide-subheading">
-            Generic Errors
-          </h3>
+	<div class="example">
+	  <div class="two-columns">
+	    <div class="-column -aside grass">
+	      Column 1
+	    </div>
 
-          <div class="example">
-            <div class="notifications-container">
-              <div class="feed-item">
-                <div class="-gutter">
-                  <div class="feature-icon aqua">EE</div>
-                </div>
-                  <div class="-main">
-                    <h4 class="item-heading -errorheading">
-                      You have a Feed Item
-                    </h4>
-                    <div class="-body -errorbody">
-                      This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-                    </div>
-                    <div class="-action-buttons">
-                      <button class="button -small">Retry</button>
-                      <button class="button -small -inverted">Cancel</button>
-                    </div>
-                  </div>
-               </div>
-             </div>
-           </div>
-
-           <h3 class="styleguide-subheading">
-             Alerts-Information
-           </h3>
-
-           <div class="example">
-             <div class="notifications-container">
-               <div class="feed-item">
-                 <div class="-gutter">
-                   <div class="feature-icon aqua">AI</div>
-                 </div>
-                 <div class="-main">
-                   <h4 class="item-heading -errorheading">
-                     You have a Feed Item
-                   </h4>
-                   <div class="-body">
-                     This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-                   </div>
-                 </div>
-              </div>
+	    <div class="-column aqua">
+	      Column 2
             </div>
+
           </div>
-        </section>
-        <section id="layouts-section">
-          <h2 class="styleguide-section-heading">Layouts</h2>
-          <p>Styleguide follows <a href="http://neat.bourbon.io/" target="_blank">Neat's</a> 12 column grid. We've created a few helper classes for common use-cases.
-          If you need a different variation than what you see below. Refer to <a href="http://neat.bourbon.io/examples/" target="_blank">Neat's documentation and examples</a>.
-          The color classes you see below are for demonstration purposes.</p>
+	</div>
 
-          <h3 class="styleguide-subheading">
-            Four column Layout
-          </h3>
-          <p>Each column spans 3 grid columns</p>
+	<p>Each column spans 6 grid columns.</p>
+	<div class="example">
+	  <div class="two-columns">
+	    <div class="-column grass">
+	      Column 1
+	    </div>
 
-          <div class="example">
-            <div class="four-columns">
-              <div class="-column grass">
-                Column 1
-              </div>
+	    <div class="-column aqua">
+	      Column 2
+	    </div>
 
-              <div class="-column aqua">
-                Column 2
-              </div>
+	  </div>
+	</div>
 
-              <div class="-column fuchsia">
-                Column 3
-              </div>
-
-              <div class="-column tangerine">
-                Column 4
-              </div>
+	<p>Column 1 spans 8 grid columns. Column 2 spans 4.</p>
+	<div class="example">
+	  <div class="two-columns">
+	    <div class="-column grass">
+	      Column 1
             </div>
+
+	    <div class="-column -aside aqua">
+	      Column 2
+	    </div>
+
           </div>
+	</div>
 
-         <h3 class="styleguide-subheading">
-            Three column Layout
-          </h3>
-          <p>Each column spans 4 grid columns</p>
-
-          <div class="example">
-            <div class="three-columns">
-              <div class="-column grass">
-                Column 1
-              </div>
-
-              <div class="-column fuchsia">
-                Column 2
-              </div>
-
-              <div class="-column tangerine">
-                Column 3
-              </div>
-            </div>
-          </div>
-
-          <h3 class="styleguide-subheading">
-            Two column Layout
-          </h3>
-          <p>Column 1 spans 4 grid columns. Column 2 spans 8.</p>
-
-          <div class="example">
-            <div class="two-columns">
-              <div class="-column -aside grass">
-                Column 1
-              </div>
-
-              <div class="-column aqua">
-                Column 2
-              </div>
-
-            </div>
-          </div>
-
-          <p>Each column spans 6 grid columns.</p>
-          <div class="example">
-            <div class="two-columns">
-              <div class="-column grass">
-                Column 1
-              </div>
-
-              <div class="-column aqua">
-                Column 2
-              </div>
-
-            </div>
-          </div>
-
-          <p>Column 1 spans 8 grid columns. Column 2 spans 4.</p>
-          <div class="example">
-            <div class="two-columns">
-              <div class="-column grass">
-                Column 1
-              </div>
-
-              <div class="-column -aside aqua">
-                Column 2
-              </div>
-
-            </div>
-          </div>
-
-        </section>
-      </article>
+      </section>
+    </article>
     </main>
   </body>
 </html>
