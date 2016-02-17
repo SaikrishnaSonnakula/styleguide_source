@@ -1,3 +1,5 @@
+@include checkbox('my-30-px-checkbox', 30px, $medium-font-size);
+
 .notification {
   &.-hard-interruption {
     @extend %hard-interruption;
