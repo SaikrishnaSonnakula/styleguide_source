@@ -4,18 +4,20 @@
 // WARNING: Rules here can have unforseen effects. Keep as minimal as possible.
 
 // Set base font size on html for rem calculation
-html {
-  font-size: $base-font-size;
-}
-
-// set base body font values
-body {
-  font-size: $base-mobile-font-size;
-  font-family: $base-font-family;
-  line-height: 1.33;
-
-  @include media($desktop) {
+@at-root {
+  html {
     font-size: $base-font-size;
+  }
+
+  // set base body font values
+  body {
+    font-size: $base-mobile-font-size;
+    font-family: $base-font-family;
+    line-height: 1.33;
+
+    @include media($desktop) {
+      font-size: $base-font-size;
+    }
   }
 }
 
