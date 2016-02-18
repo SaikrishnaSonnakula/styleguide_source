@@ -79,7 +79,9 @@ $(function() {
 
   var bannerAlert = function() {
     var $banner = $('.banner-alert');
-    setTimeout(function(){ $banner.hide() }, 8000);
-  }
+    setTimeout(function() {
+      $banner.hide();
+    }, 8000);
+  };
   bannerAlert();
 });
