@@ -1,0 +1,16 @@
+// this is part of neat grid/box_sizing and must be included
+// at-root for neat to work in a namespace
+
+@at-root {
+  html { // http://bit.ly/1qk2tVR
+    box-sizing: border-box;
+  }
+
+  * {
+    &,
+    &::after,
+    &::before {
+      box-sizing: inherit;
+    }
+  }
+}

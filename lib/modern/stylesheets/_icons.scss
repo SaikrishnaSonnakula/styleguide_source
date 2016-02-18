@@ -34,12 +34,14 @@ $feature-icon-mobile-size: 45px;
   background-color: color(graphite);
 }
 
-@keyframes fa-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
+@at-root {
+  @keyframes fa-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
   }
 }
 
