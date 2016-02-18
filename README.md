@@ -92,32 +92,31 @@ We have a whole suite of Icons approved by design and brand. We're working on di
 
 Refer to `/modern.html#icons-section`
 
-<a name="#namespacing"></a>
 
-##Namespacing your app
+
+##<a name="#namespacing"></a>Namespacing your app
 It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. If you are using webpack version of modern [Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_modern-webpack.scss) then you will need to add an attribute to your webpack config.
 
 Go into your Gruntfile.js for your app and add the following attribute.
 
-```
-      webpack: {
-      ...
-        cssNamespace: '#my-awesome-app'
-      ...
-      }
-```
+        webpack: {
+        ...
+          cssNamespace: '#my-awesome-app'
+        ...
+        }
+
 [https://stash.kp.org/projects/RWD/repos/my-medical-record/browse/ui.resources/Gruntfile.js#63](Reference this gruntfile from the appointment-center project) (thanks Duda).
 
 What this will do is generate the styles of styleguide inside of your that CSS ID
 
-```
+
         //exmaple
         #my-awesome-app {
           .button{...}
           ...
           //all the styles fall in here
         }
-```
+
 
 ##Todo
 - icons documentation
