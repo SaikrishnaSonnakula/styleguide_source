@@ -9,6 +9,22 @@ $main-max-width: $desktop-small-max;
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
 $mobile-header-height: 50px;
 
+.banner-alert{
+  @include outer-container();
+  display: block;
+  position: fixed;
+  top:0;
+  width:100%;
+  padding-top: $small-spacing;
+  padding-bottom: $small-spacing;
+  background-color: color("fuchsia");
+  color:#fff;
+  text-align: center;
+  z-index: $foreground;
+  a{
+    color: black;
+  }
+}
 code {
   line-height: $medium-font-size;
   padding: 2px;
