@@ -28,6 +28,7 @@ $dropdown-mobile-height: 50px;
       font-family: 'kp-icons';
       font-size: $tiny-font-size;
       line-height: $dropdown-mobile-height;
+      margin-left: $small-spacing;
 
       @include media($desktop) {
         line-height: inherit;
@@ -88,7 +89,7 @@ $dropdown-mobile-height: 50px;
 
     &:after {
       float: right;
-      margin: $tiny-spacing 0 0 $medium-spacing;
+      margin: $tiny-spacing 0 0 $small-spacing;
 
       @include media($desktop) {
         font-size: $medium-font-size;
