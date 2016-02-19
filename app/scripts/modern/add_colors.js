@@ -14,6 +14,9 @@ var colorSections = [
     '$button-hover-color'
   ],
   [
+    'interactive-blue-darker'
+  ],
+  [
     'disable-blue',
     '$button-disable-color'
   ],
@@ -73,11 +76,14 @@ var colorSections = [
 ];
 
 var getHex = function($el) {
-  var rgb = $el.css('backgroundColor').match(/\d+/g);
-  var r   = parseInt(rgb[0], 10);
-  var g   = parseInt(rgb[1], 10);
-  var b   = parseInt(rgb[2], 10);
-  return '#'+ r.toString(16) + g.toString(16) + b.toString(16);
+  const background = $el.css('backgroundColor');
+  const rgb = background.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+  function parseHexSinglet(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+
+  return ("#" + parseHexSinglet(rgb[1]) + parseHexSinglet(rgb[2]) + parseHexSinglet(rgb[3])).toUpperCase();
 };
 
 function appendColor(color, $section) {
