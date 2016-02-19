@@ -45,7 +45,7 @@ $button-mobile-color: white;
     overflow: auto;
 
     &:focus {
-      border: 2px color(kp-blue) solid;
+      border: 2px color(interactive-blue) solid;
     }
 
     @include media($desktop) {

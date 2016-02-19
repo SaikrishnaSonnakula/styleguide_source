@@ -4,22 +4,20 @@ var colorSections = [
   {
     name: "KP Colors",
     colors: [
-      'kp-blue',
       [
-        'interactive-blue',
-        '$link-color'
+        'interactive-blue'
       ],
       [
         'interactive-blue-dark',
         '$button-hover-color'
       ],
       [
-        'disable-blue',
-        '$button-disable-color'
-      ],
-      [
         'interactive-blue-darker',
         '$link-hover-color'
+      ],
+      [
+        'disable-blue',
+        '$button-disable-color'
       ],
       [
         'inky-blue',

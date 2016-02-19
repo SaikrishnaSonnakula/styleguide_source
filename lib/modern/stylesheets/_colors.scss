@@ -8,8 +8,7 @@
 // please add it to the list in add_colors.js
 
 $colors: (
-  "interactive-blue": #3e66f7,
-  "kp-blue": #006ba6,
+  "interactive-blue": #003B71,
   "interactive-blue-dark": #3A60E9,
   "interactive-blue-darker": #3659D9,
   "disable-blue": #829cfb,
@@ -42,6 +41,10 @@ $colors: (
 
 @function color($key){
   @if not map-has-key($colors, $key){
+    @if $key == 'kp-blue' {
+      @warn "Color `#{$key}` is no longer supported, use interactive-blue";
+      @return map-get($colors, "interactive-blue");
+    }
     @warn "Color `#{$key}` is not defined in color map";
   }
   @return map-get($colors, $key);
