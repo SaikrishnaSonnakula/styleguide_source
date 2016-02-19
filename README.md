@@ -98,12 +98,13 @@ Refer to `/modern.html#icons-section`
 It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. If you are using webpack version of modern [Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_modern-webpack.scss) then you will need to add an attribute to your webpack config.
 
 Go into your Gruntfile.js for your app and add the following attribute.
-
-        webpack: {
-        ...
-          cssNamespace: '#my-awesome-app'
-        ...
-        }
+    
+        require('build-plugin/webpack')(
+          grunt, {
+            webpack: { ... },
+            cssNamespace: '#my-awesome-app'
+            }
+        )
 
 [https://stash.kp.org/projects/RWD/repos/my-medical-record/browse/ui.resources/Gruntfile.js#63](Reference this gruntfile from the appointment-center project) (thanks Duda).
 
