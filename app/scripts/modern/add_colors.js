@@ -2,60 +2,74 @@ import $ from "jquery";
 
 var colorSections = [
   {
-    name: "KP Colors",
-    colors: [
-      [
-        'interactive-blue'
-      ],
-      [
-        'interactive-blue-dark',
-        '$button-hover-color'
-      ],
-      [
-        'interactive-blue-darker',
-        '$link-hover-color'
-      ],
-      [
-        'disable-blue',
-        '$button-disable-color'
-      ],
-      [
-        'inky-blue',
-        '$text-dark'
-      ],
-      [
-        'dolphin',
-        '$text-light'
-      ],
-      'graphite-dark',
-      'graphite',
-      'graphite-light',
-      'pebble'
-    ]
-  },
-  {
-    name: "Feature Colors",
-    colors: [
-      'moss',
-      'grass',
-      'leaf',
-      'ocean',
-      'aqua',
-      'robin-egg',
-      'midnight',
-      'dusk',
-      'sky',
-      'plum',
-      'lilac',
-      'lavender',
-      'acai',
-      'fuchsia',
-      'rose',
-      'burnt-sienna',
-      'tiger-lily',
-      'tangerine',
-    ]
-  }
+  name: "Typography and Interactive Colors",
+  colors: [
+    [
+    'interactive-blue',
+    '$link-color'
+  ],
+  [
+    'interactive-blue-dark',
+    '$link-hover-color',
+    '$button-hover-color'
+  ],
+  [
+    'disable-blue',
+    '$button-disable-color'
+  ],
+  [
+    'inky-blue',
+    '$text-dark'
+  ],
+  [
+    'dolphin',
+    '$text-light'
+  ]
+  ]
+},
+{
+  name: "Main Section Colors",
+  colors: [
+    'midnight',
+    'interactive-blue',
+    'sky',
+    'moss',
+    'grass',
+    'leaf',
+    'burnt-sienna',
+    'tiger-lily',
+    'tangerine',
+    'ocean',
+    'aqua',
+    'robin-egg',
+    'acai',
+    'fuchsia',
+    'rose',
+    'plum',
+    'lilac',
+    'lavender'
+  ]
+},
+{
+  name: 'Decorative Element Colors',
+  colors: [
+    'graphite-dark',
+    'graphite',
+    'graphite-light',
+    'pebble'
+  ]
+},
+{
+  name: 'Supplemental Colors',
+  colors: [
+    'black',
+    'deep-chalk',
+    'mid-chalk',
+    'light-chalk',
+    'mid-aqua',
+    'light-aqua'
+  ]
+}
 ];
 
 var getHex = function($el) {
