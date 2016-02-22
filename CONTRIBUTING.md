@@ -1,24 +1,11 @@
 # Contributing to Styleguide
 
-Welcome to contributing! We welcome all in the KP developer community contribute to styleguide. Please contact us via hipchat room "Styleguide Core" if you haven't already. You can ask questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
-
-##Ways you are contributing to...
-- Raising issues - bugs, defects, typos or just bad grammer. You can help us correct this.
-- New features - you've worked on something in your own project at KP, and you think it would be useful for other projects you can added at feature. But please remember to consult with a UX person like Jennifer Beasely or Bob Altman to get their head-nod. They would most likely have an idea that your feature maybe used in other parts of KP development.
-- Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. =)
-
-##Submitting Pull Requests
-Pull requests are awesome! The way you would pull request is to fork Styleguide then clone it to your local and work on it there. When you're ready, you click on Pull request in Styleguide repo and go through the screens. You need a minimum of 2 approvers to approver and merge your PR.
-###commit messges
-###not breaking things
-###tests?
-
-## Example Javascript block
+Welcome to contributing! We welcome all in the KP developer community contribute to styleguide. Please contact us via Hipchat for questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
 
 ### Quicklinks
 
-* [Feature Roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md)
-* [Hipchat](https://kpmcoe.hipchat.com/chat/room/2258656)
+* [Feature Roadmap](https://jira.kp.org/secure/RapidBoard.jspa?rapidView=50&projectKey=STYLE)
+* [Hipchat](https://hipchat.kp.org/chat/room/19)
 
 ## Guideline Contents
 
@@ -36,24 +23,25 @@ There are lots and lots of ways to get involved, this document covers:
 <a name="raising-issues"></a>
 ## Raising Issues
 
-Did you find a bug, defect, typo? Help us by bringing it up in Hipchat and check to see if it has been identified in our [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md).
+Did you find a bug, defect, typo? Help us by bringing it up in Hipchat and check to see if it has been identified in our [roadmap](https://jira.kp.org/secure/RapidBoard.jspa?rapidView=50&projectKey=STYLE).
 If you have a proposed solution, let us know by [submitting a pull-request](#pull-requests).
 
 <a name="features"></a>
 ## Feature Requests
 
-Please take a look at the [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md) to see if your suggestion is in our backlog.
+Please take a look at the [roadmap](https://jira.kp.org/secure/RapidBoard.jspa?rapidView=50&projectKey=STYLE) to see if your suggestion is in our backlog.
 
 <a name="changes"></a>
 ## Change Requests
 
-Please take a look at the [roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md) to see if your suggestion is in our backlog or reach out to us via Hipchat.
+Please take a look at the [roadmap](https://jira.kp.org/secure/RapidBoard.jspa?rapidView=50&projectKey=STYLE) to see if your suggestion is in our backlog or reach out to us via Hipchat.
 
 ## Writing Documentation
 
 If you think there's a better way to explain the process of contributing to Styleguide, please let us know and help us write. You don't even have to be too technical on this one. =)
 
 <a name="pull-requests"></a>
+
 ## Submitting Pull Requests for new Features and Bug Fixes
 
 If you have a new feature you'd like to merge into Styleguide please consult a UX designer like Jennifer Beasely or Bob Altman to get their thumbs up on having your work shared across projects that use Styleguide.
@@ -68,11 +56,15 @@ To make sure your PR is accepted as quickly as possible, please take a minute to
 
 ##### Need Help?
 
-If you're not completely clear on how to submit / update / *do* Pull Requests, please check out Stash's [Pull Request guide](https://confluence.atlassian.com/display/STASHSOURCE/Using+pull+requests+in+Stash), or visit [Hipchat](https://kpmcoe.hipchat.com/chat/room/2258656) and we'll help you out.
+If you're not completely clear on how to submit / update / *do* Pull Requests, please check out Stash's [Pull Request guide](https://confluence.atlassian.com/display/STASHSOURCE/Using+pull+requests+in+Stash), or visit [Hipchat](https://hipchat.kp.org/chat/room/19) and we'll help you out.
 
 
 <a name="testing"></a>
 ### Testing and Quality Assurance
+
+Before opening a pull request, make sure all tests are green.
+If your pull request is adding a new javascript module, make sure you unit test the functionality.
+``` grunt ci ```
 
 #### Checking out a Pull Request
 
