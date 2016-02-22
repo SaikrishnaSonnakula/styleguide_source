@@ -134,16 +134,12 @@
 	</h2>
 
 	<div id="colors">
-	  <p>Colors can be included in css by calling the colors Sass function and passing in one of the color names below. <br />
+	  <p>Include the colors below by using the following Sass function. Pass in one of the color names below as a parameter to get its calculated hex value. <br />
 	  </p>
 	  <p>For example:</p>
-	  <pre class="code language-scss">
-        <code class="code">
-          .element {
-            background-color: color(lilac);
-          }
-        </code>
-	  </pre>
+	  <pre class="code language-scss"><code class="code">.element {
+    background-color: color("robin-egg");
+  }</code></pre>
 	  <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
 	</div>
       </section>

@@ -8,10 +8,9 @@
 // please add it to the list in add_colors.js
 
 $colors: (
-  "interactive-blue": #3e66f7,
-  "kp-blue": #006ba6,
+  "interactive-blue": #006BA6,
   "interactive-blue-dark": #3A60E9,
-  "interactive-blue-darker": #3659D9,
+  "interactive-blue-darker": #003B71,
   "disable-blue": #829cfb,
   "inky-blue": #0D1C3D,
   "dolphin": #6B7487,
@@ -19,29 +18,38 @@ $colors: (
   "graphite": #E9EBEE,
   "graphite-light": #F4F5F6,
   "pebble": #FAFAFA,
-  "lilac": #8B4BBF,
-  "fuchsia": #C11666,
-  "tiger-lily": #D64400,
-  "grass": #448400,
-  "aqua": #00838A,
-  "dusk": #5F6E90,
-  "plum": #44116C,
-  "acai": #7B1350,
+  "midnight": #003B71,
+  "sky": #BDECFF,
+  "moss": #4A7628,
+  "grass": #57A635,
+  "leaf": #AADE33,
   "burnt-sienna": #D14A0C,
-  "deep-red": #B63125,
-  "moss": #255200,
-  "ocean": #005358,
-  "midnight": #334161,
+  "tiger-lily": #FF9E16,
+  "tangerine": #FFD200,
+  "ocean": #10625C,
+  "aqua": #00A19B,
+  "robin-egg": #5BDBD6,
+  "acai": #BB1654,
+  "fuchsia": #F05674,
+  "rose": #FFA4B4,
+  "plum": #472F91,
+  "lilac": #606FB1,
   "lavender": #E3C6FB,
-  "rose": #FF9FBA,
-  "tangerine": #FFEAC6,
-  "leaf": #DBFDB7,
-  "robin-egg": #D9FFFA,
-  "sky": #BDECFF
+  "deep-red": #B63125,
+  "black": #000,
+  "deep-chalk": #585858,
+  "mid-chalk": #666,
+  "light-chalk": #D8D1CA,
+  "mid-aqua": #CEECFD,
+  "light-aqua": #E9F7FE
 );
 
 @function color($key){
   @if not map-has-key($colors, $key){
+    @if $key == 'kp-blue' {
+      @warn "Color `#{$key}` is no longer supported, use interactive-blue";
+      @return map-get($colors, "interactive-blue");
+    }
     @warn "Color `#{$key}` is not defined in color map";
   }
   @return map-get($colors, $key);

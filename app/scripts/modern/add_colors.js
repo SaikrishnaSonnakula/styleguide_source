@@ -2,70 +2,88 @@ import $ from "jquery";
 
 var colorSections = [
   {
-    name: "KP Colors",
-    colors: [
-      'kp-blue',
-      [
-        'interactive-blue',
-        '$link-color'
-      ],
-      [
-        'interactive-blue-dark',
-        '$button-hover-color'
-      ],
-      [
-        'disable-blue',
-        '$button-disable-color'
-      ],
-      [
-        'interactive-blue-darker',
-        '$link-hover-color'
-      ],
-      [
-        'inky-blue',
-        '$text-dark'
-      ],
-      [
-        'dolphin',
-        '$text-light'
-      ],
-      'graphite-dark',
-      'graphite',
-      'graphite-light',
-      'pebble'
-    ]
-  },
-  {
-    name: "Feature Colors",
-    colors: [
-      'moss',
-      'grass',
-      'leaf',
-      'ocean',
-      'aqua',
-      'robin-egg',
-      'midnight',
-      'dusk',
-      'sky',
-      'plum',
-      'lilac',
-      'lavender',
-      'acai',
-      'fuchsia',
-      'rose',
-      'burnt-sienna',
-      'tiger-lily',
-      'tangerine',
-    ]
-  }
+  name: "Typography and Interactive Colors",
+  colors: [
+    [
+    'interactive-blue',
+    '$link-color'
+  ],
+  [
+    'interactive-blue-dark',
+    '$link-hover-color',
+    '$button-hover-color'
+  ],
+  [
+    'interactive-blue-darker'
+  ],
+  [
+    'disable-blue',
+    '$button-disable-color'
+  ],
+  [
+    'inky-blue',
+    '$text-dark'
+  ],
+  [
+    'dolphin',
+    '$text-light'
+  ]
+  ]
+},
+{
+  name: "Main Section Colors",
+  colors: [
+    'midnight',
+    'interactive-blue',
+    'sky',
+    'moss',
+    'grass',
+    'leaf',
+    'burnt-sienna',
+    'tiger-lily',
+    'tangerine',
+    'ocean',
+    'aqua',
+    'robin-egg',
+    'acai',
+    'fuchsia',
+    'rose',
+    'plum',
+    'lilac',
+    'lavender'
+  ]
+},
+{
+  name: 'Decorative Element Colors',
+  colors: [
+    'graphite-dark',
+    'graphite',
+    'graphite-light',
+    'pebble'
+  ]
+},
+{
+  name: 'Supplemental Colors',
+  colors: [
+    'black',
+    'deep-chalk',
+    'mid-chalk',
+    'light-chalk',
+    'mid-aqua',
+    'light-aqua'
+  ]
+}
 ];
 
 var getHex = function($el) {
-  var rgb = $el.css('backgroundColor').match(/\d+/g);
-  var r   = parseInt(rgb[0], 10);
-  var g   = parseInt(rgb[1], 10);
-  var b   = parseInt(rgb[2], 10);
-  return '#'+ r.toString(16) + g.toString(16) + b.toString(16);
+  const background = $el.css('backgroundColor');
+  const rgb = background.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+  function parseHexSinglet(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+
+  return ("#" + parseHexSinglet(rgb[1]) + parseHexSinglet(rgb[2]) + parseHexSinglet(rgb[3])).toUpperCase();
 };
 
 function appendColor(color, $section) {
