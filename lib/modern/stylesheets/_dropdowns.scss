@@ -18,7 +18,7 @@ $dropdown-min-mobile-height: $small-spacing;
       line-height: $medium-spacing;
       padding: 0px;
     }
-    & div {
+    & .current-selection {
       display: inline-block;
     }
     &:after {
