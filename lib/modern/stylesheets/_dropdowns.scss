@@ -1,15 +1,14 @@
 $dropdown-options-max-height: 200px !default;
 $dropdown-mobile-height: $medium-spacing;
+$dropdown-min-mobile-height: $small-spacing;
 
 .dropdown {
-  padding: $small-spacing;
-
   .-value {
     @extend %button-unstyled;
     display: flex;
     cursor: pointer;
     width: 100%;
-    height: $dropdown-mobile-height;
+    padding: $small-spacing;
     line-height: $dropdown-mobile-height;
     outline: none;
 
