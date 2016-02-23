@@ -10,7 +10,6 @@ $dropdown-min-mobile-height: $small-spacing;
     width: 100%;
     padding: $small-spacing;
     line-height: $dropdown-mobile-height;
-    outline: none;
 
     @include media($desktop) {
       width: auto;
