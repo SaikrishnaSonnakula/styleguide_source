@@ -14,9 +14,6 @@ var colorSections = [
     '$button-hover-color'
   ],
   [
-    'interactive-blue-darker'
-  ],
-  [
     'disable-blue',
     '$button-disable-color'
   ],
@@ -34,7 +31,7 @@ var colorSections = [
   name: "Main Section Colors",
   colors: [
     'midnight',
-    'interactive-blue',
+    'kp-blue',
     'sky',
     'moss',
     'grass',
