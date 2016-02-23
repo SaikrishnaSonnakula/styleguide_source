@@ -1,21 +1,21 @@
 $dropdown-options-max-height: 200px !default;
-$dropdown-mobile-height: 50px;
+$dropdown-mobile-height: $medium-spacing;
+$dropdown-min-mobile-height: $small-spacing;
 
 .dropdown {
   .-value {
     @extend %button-unstyled;
+    display: flex;
     cursor: pointer;
     width: 100%;
-    height: $dropdown-mobile-height;
+    padding: $small-spacing;
     line-height: $dropdown-mobile-height;
-    padding-left: $small-spacing;
-    padding-right: $small-spacing;
     outline: none;
 
     @include media($desktop) {
       width: auto;
       height: auto;
-      line-height: inherit;
+      line-height: $medium-spacing;
       padding: 0px;
     }
 
@@ -24,14 +24,14 @@ $dropdown-mobile-height: 50px;
       @extend .icon-chevron-down:before;
       background-color: transparent;
       color: color(interactive-blue);
-      display: inline-block;
+      align-self: center;
       font-family: 'kp-icons';
       font-size: $tiny-font-size;
       line-height: $dropdown-mobile-height;
       margin-left: $small-spacing;
 
       @include media($desktop) {
-        line-height: inherit;
+        line-height: $medium-spacing;
       }
     }
   }
@@ -45,7 +45,7 @@ $dropdown-mobile-height: 50px;
     @include transition(max-height 0.4s $ease-out-cubic);
     overflow: hidden;
     margin-top: 0px;
-    max-height: 0px;
+    display: none;
     padding-left: $small-spacing;
 
     @include media($device) {
@@ -72,7 +72,8 @@ $dropdown-mobile-height: 50px;
   }
 
   &.-open .-options {
-    max-height: $dropdown-options-max-height;
+    margin-top: $small-spacing;
+    display: block;
   }
 }
 
@@ -82,25 +83,25 @@ $dropdown-mobile-height: 50px;
     background-color: color(graphite);
     font-family: $bold-font-family;
     font-weight: normal;
+    display: flex;
 
     @include media($desktop) {
       background-color: transparent;
     }
 
     &:after {
-      float: right;
-      margin: $tiny-spacing 0 0 $small-spacing;
+      margin-left: $small-spacing;
+      align-self: center;
 
       @include media($desktop) {
         font-size: $medium-font-size;
-        float: none;
       }
     }
   }
 
   .-options {
     @include media($desktop) {
-      margin-top: $large-spacing;
+      margin-top: $small-spacing;
       font-size: $medium-font-size;
     }
   }
