@@ -5,7 +5,7 @@ $dropdown-min-mobile-height: $small-spacing;
 .dropdown {
   .-value {
     @extend %button-unstyled;
-    display: flex;
+    display: inline;
     cursor: pointer;
     width: 100%;
     padding: $small-spacing;
@@ -17,17 +17,20 @@ $dropdown-min-mobile-height: $small-spacing;
       line-height: $medium-spacing;
       padding: 0px;
     }
-
+    & .current-selection {
+      display: inline-block;
+    }
     &:after {
       @include transition(all 0.4s $ease-out-cubic);
       @extend .icon-chevron-down:before;
       background-color: transparent;
       color: color(interactive-blue);
-      align-self: center;
       font-family: 'kp-icons';
       font-size: $tiny-font-size;
       line-height: $dropdown-mobile-height;
       margin-left: $small-spacing;
+      display: inline-block;
+      vertical-align: text-top;
 
       @include media($desktop) {
         line-height: $medium-spacing;
@@ -35,8 +38,39 @@ $dropdown-min-mobile-height: $small-spacing;
     }
   }
 
+  &.-heading {
+    .-value {
+      @extend .page-heading;
+      background-color: color(graphite);
+      font-family: $bold-font-family;
+      font-weight: normal;
+
+      @include media($desktop) {
+        background-color: transparent;
+      }
+
+      &:after {
+        margin-left: $small-spacing;
+        vertical-align: baseline;
+
+        @include media($desktop) {
+          font-size: $medium-font-size;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+
+    .-options {
+      @include media($desktop) {
+        margin-top: $small-spacing;
+        font-size: $medium-font-size;
+      }
+    }
+  }
+
   &.-open .-value:after{
     @include transform(rotate(-180deg));
+    vertical-align: bottom;
   }
 
   .-options {
@@ -73,35 +107,5 @@ $dropdown-min-mobile-height: $small-spacing;
   &.-open .-options {
     margin-top: $small-spacing;
     display: block;
-  }
-}
-
-.dropdown.-heading {
-  .-value {
-    @extend .page-heading;
-    background-color: color(graphite);
-    font-family: $bold-font-family;
-    font-weight: normal;
-    display: flex;
-
-    @include media($desktop) {
-      background-color: transparent;
-    }
-
-    &:after {
-      margin-left: $small-spacing;
-      align-self: center;
-
-      @include media($desktop) {
-        font-size: $medium-font-size;
-      }
-    }
-  }
-
-  .-options {
-    @include media($desktop) {
-      margin-top: $small-spacing;
-      font-size: $medium-font-size;
-    }
   }
 }
