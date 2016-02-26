@@ -2,12 +2,12 @@
 
 Welcome to contributing! We welcome all in the KP developer community contribute to styleguide. Please contact us via hipchat room "Styleguide Core" if you haven't already. You can ask questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
 
-##Ways you are contributing...
+## Ways you are contributing...
 - Raising issues - bugs, defects, typos or just bad grammer. You can help us correct this.
 - New features - you've worked on something in your own project at KP, and you think it would be useful for other projects you can added at feature. But please remember to consult with a UX person like Jennifer Beasely or Bob Altman to get their head-nod. They would most likely have an idea that your feature maybe used in other parts of KP development.
 - Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. =)
 
-##Before You begin
+## Before You begin
 Make sure you have:
 
 * Access to Stash and the Style guide repo and the build plugin
@@ -22,14 +22,14 @@ Make sure you have:
 	* Screen Shot 2016-02-19 at 11.46.25 AM.png
 	* Server is: hipchat.kp.org (No http:// or https://)​​
 	* Enter Your Work email and SSO password.
-##Process of Editing or Submitting
+## Process of Editing or Submitting
 
-###Summary
+### Summary
 The Current process is: fork the project, create a Pull Request, have the RWD styleguide team review, recieve minimum of 2 approvals, and merge the Pull Request.
 
 Note: you can still use the method of creating a branch however the team is slowly moving away from this process.
 
-###Detailed Steps
+### Detailed Steps
 1. In the styleguide repository fork the project to your own account
 2. Pull down your forked version of styleguide locally to your machine
 3. In your Styleg Guide> Git  directory , update the config file to the following so you can fetch pull requests, sync with upstream,and stay up to date with the latest code:
