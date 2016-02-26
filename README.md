@@ -67,22 +67,10 @@ For more information on how to contribute. Read the [Contributing](https://stash
 
 ## Namespacing your app
 <a name="#namespacing"></a>
-It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. If you are using webpack version of modern [Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_modern-webpack.scss) then you will need to add an attribute to your webpack config.
-
-Go into your Gruntfile.js for your app and add the following attribute 
-
-        require('build-plugin/webpack')(
-          grunt, {
-            webpack: { ... },
-            cssNamespace: '#my-awesome-app'
-            }
-        )
-
-[Reference this gruntfile from the appointment-center project](https://stash.kp.org/projects/RWD/repos/my-medical-record/browse/ui.resources/Gruntfile.js#63) (thanks Duda).
-
-What this will do is generate the styles of styleguide inside of your that CSS ID
+It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. Example, in your main.scss
 
         #my-awesome-app {
+          // include styleguide and what else
           .button{...}
           ...
           //all the styles fall in here
