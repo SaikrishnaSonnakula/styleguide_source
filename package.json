@@ -44,7 +44,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
     "bourbon": "^4.2.4",
-    "bourbon-neat": "^1.7.2",
+    "bourbon-neat": "1.7.2",
     "jquery": "^2.1.4"
   }
 }
