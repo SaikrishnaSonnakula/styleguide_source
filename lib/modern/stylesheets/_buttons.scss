@@ -1,10 +1,10 @@
-$button-color: color(interactive-blue);
+$button-color: color("interactive-blue");
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-border-size: 2px;
-$action-color-bg: color(interactive-blue) !default;
-$action-color-light: color(interactive-blue) !default;
+$action-color-bg: color("interactive-blue") !default;
+$action-color-light: color("interactive-blue") !default;
 
 %rounded-input {
   @include appearance(none);
@@ -86,6 +86,17 @@ $action-color-light: color(interactive-blue) !default;
       color: white;
       cursor: not-allowed;
       border-color: $button-disable-color;
+    }
+
+    &.-inverted {
+      background-color: white;
+      color: $button-disable-color;
+      border-color: $button-disable-color;
+
+      &:hover, &:focus {
+        background-color: $button-disable-color;
+        color: white;
+      }
     }
   }
 }

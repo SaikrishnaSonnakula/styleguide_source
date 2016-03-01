@@ -5,9 +5,9 @@
 // NOTE: if you want a variable here to be added to the docs
 // please add it to the list in add_colors.js
 
-$link-color: color(interactive-blue);
-$link-hover-color: color(interactive-blue-dark);
-$button-hover-color: color(interactive-blue-dark);
-$button-disable-color: color(disable-blue);
-$text-dark: color(inky-blue);
-$text-light: color(dolphin);
+$link-color: color("interactive-blue");
+$link-hover-color: color("interactive-blue-dark");
+$button-hover-color: color("interactive-blue-dark");
+$button-disable-color: color("graphite-dark");
+$text-dark: color("inky-blue");
+$text-light: color("dolphin");
