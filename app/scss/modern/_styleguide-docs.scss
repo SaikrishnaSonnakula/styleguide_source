@@ -203,34 +203,46 @@ code {
 }
 
 .font-variables {
-  @include clearfix;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include media($desktop){
+    flex-direction: row;
+  }
 
   .font-variable {
-    margin-bottom: $paragraph-spacing;
     background-color: color(pebble);
+    margin: $small-spacing 0;
+    flex: 0 0 auto;
 
     div {
-      padding-left: $small-spacing;
+      padding: 0 $small-spacing;
       vertical-align: bottom;
-      line-height: 60px;
+      line-height: $xl-spacing;
     }
 
     code {
       display: block;
     }
 
-    @include media($tablet) {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-
     @include media($desktop) {
-      @include span-columns(4);
-      @include omega(3n);
+      margin: $small-spacing 0 0 $small-spacing;
+      flex-direction: row;
+    }
+  }
+
+  &.-families {
+    .font-variable {
+      @include media($desktop) {
+        &:first-of-type {
+          flex: 1 1 100%;
+        }
+      }
     }
   }
 }
-
 .responsive-docs {
   .-mobile-min {
     top: 0;
