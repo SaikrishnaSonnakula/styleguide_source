@@ -211,7 +211,7 @@ describe('fancy-select component', function() {
           });
         },
         stop: function() {}
-      }
+      };
     }, {
       noRoutes: true
     });
