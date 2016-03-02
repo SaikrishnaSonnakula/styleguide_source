@@ -129,7 +129,7 @@ describe('accordion component', function() {
           });
         },
         stop: function() {}
-      }
+      };
     }, {
       noRoutes: true
     });
