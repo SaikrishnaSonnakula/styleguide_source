@@ -14,7 +14,7 @@ var colorSections = [
     '$button-hover-color'
   ],
   [
-    'disable-blue',
+    'graphite-dark',
     '$button-disable-color'
   ],
   [

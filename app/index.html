@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="banner-alert">
-      Important updates for SPAs! Please read about <strong><a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse#namespacing">namespacing</a></strong>
+      Important updates for AEM SPAs! <strong><a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/README.md">Namespace your app to avoid style conflicts with other AEM apps.</a></strong>
     </div>
     <header class="styleguide-header">
       <span id="menu-button" class="device-menu-button icon-menu"></span>
@@ -143,22 +143,30 @@
       <section id="typography-section">
 	<h2 class="styleguide-section-heading">Typography</h2>
 	<p>
-	These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.
+  These variables represent the different sizes and styles of fonts in KP apps. If you are modifying <code>font-size</code> or <code>font-family</code>, use these variables to maintain consistency.<br />
+  Note the body's font family is set to $base-font-family. HTML elements inherit this font family by default.
 	</p>
 	<h3 class="styleguide-subheading">
 	  Font Family Variables
 	</h3>
-	<div class="font-variables">
-	  <div class="font-variable">
-	    <div class="base-font-family">Base Font Family</div>
-	    <code>$base-font-family</code>
-	  </div>
-
-	  <div class="font-variable">
-	    <div class="bold-font-family">Bold Font Family</div>
-	    <code>$bold-font-family</code>
-	  </div>
-	</div>
+  <div class="font-variables -families">
+    <div class="font-variable">
+      <div class="base-font-family">Base Font Family</div>
+      <code>$base-font-family</code>
+    </div>
+    <div class="font-variable">
+      <div class="light-font-family">Light Font Family</div>
+      <code>$light-font-family</code>
+    </div>
+    <div class="font-variable">
+      <div class="medium-font-family">Medium Font Family</div>
+      <code>$medium-font-family</code>
+    </div>
+    <div class="font-variable">
+      <div class="bold-font-family">Bold Font Family</div>
+      <code>$bold-font-family</code>
+    </div>
+  </div>
 	<h3 class="styleguide-subheading">
 	  Text Styles
 	</h3>
