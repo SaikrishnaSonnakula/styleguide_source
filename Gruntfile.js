@@ -60,7 +60,7 @@ return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
 
   grunt.config.merge({
     watch: {
-      files: ['icons/*.svg', '_icons-template.html'],
+      files: ['icons/*.svg', '_template.css', '_template.html'],
       tasks: ['webfont']
     }
   });
