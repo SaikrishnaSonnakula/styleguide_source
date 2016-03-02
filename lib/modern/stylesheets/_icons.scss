@@ -11,13 +11,12 @@ $mobile-icon-border-size: 2px;
 }
 
 %centered-icon {
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 %rounded-icon {
-  @extend %centered-icon;
   width: $feature-icon-mobile-size;
   height: $feature-icon-mobile-size;
   font-size: $feature-icon-mobile-size/2;
@@ -32,6 +31,7 @@ $mobile-icon-border-size: 2px;
 
 @mixin feature-icon($color, $style: $default-icon-style) {
   @extend %rounded-icon;
+  @extend %centered-icon;
   background-color: color($color);
   color: set-text-color(color($color));
   @if $style == "hollow" {
@@ -85,5 +85,9 @@ $mobile-icon-border-size: 2px;
 
 .feature-icon {
   @include feature-icon("graphite");
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
   font-size: $medium-font-size;
 }

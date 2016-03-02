@@ -66,6 +66,7 @@ $validation-error-icon-color: "deep-red";
 %rounded-error-icon {
   .-icon {
     @extend %rounded-icon;
+    @extend %centered-icon;
 
     width: $notification-icon-mobile-size;
     height: $notification-icon-mobile-size;
