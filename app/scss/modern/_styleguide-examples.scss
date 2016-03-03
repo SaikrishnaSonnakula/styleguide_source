@@ -1,5 +1,16 @@
 @include checkbox('my-30-px-checkbox', 30px, $medium-font-size);
 
+.copay-icon {
+  @include feature-icon("interactive-blue", "compact");
+}
+
+.sidebar-icon {
+  @include feature-icon("graphite-dark", "hollow");
+}
+
+.appointment-feed-icon {
+  @include feature-icon("moss");
+}
 .notification {
   &.-hard-interruption {
     @extend %hard-interruption;

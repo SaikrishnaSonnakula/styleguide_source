@@ -1,5 +1,11 @@
-$feature-icon-desktop-size: 70px;
-$feature-icon-mobile-size: 45px;
+$feature-icon-desktop-size: 60px;
+$feature-icon-mobile-size: 50px;
+$compact-icon-size: 40px;
+$tooltip-icon-size: 15px;
+$tooltip-icon-font-size: 14px;
+$default-icon-style: "solid";
+$desktop-icon-border-size: 3px;
+$mobile-icon-border-size: 2px;
 
 @mixin icon-for($icon-name){
   @extend .icon-#{$icon-name}:before;
@@ -7,31 +13,63 @@ $feature-icon-mobile-size: 45px;
 }
 
 %centered-icon {
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
-}
-
-%rounded-icon {
-  @extend %centered-icon;
-  width: $feature-icon-mobile-size;
-  height: $feature-icon-mobile-size;
-  border-radius: 50%;
-  @include media($desktop) {
-    width: $feature-icon-desktop-size;
-    height: $feature-icon-desktop-size;
-    font-size: $medium-font-size;
-
-    &.-small {
-      width: $feature-icon-mobile-size;
-      height: $feature-icon-mobile-size;
-    }
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  &:before {
+    vertical-align: -moz-middle-with-baseline;
   }
 }
 
-.feature-icon {
+%rounded-icon {
+  width: $feature-icon-mobile-size;
+  height: $feature-icon-mobile-size;
+  font-size: $feature-icon-mobile-size/2;
+  border-radius: 50%;
+
+  @include media($desktop) {
+    width: $feature-icon-desktop-size;
+    height: $feature-icon-desktop-size;
+    font-size: $feature-icon-desktop-size/2;
+  }
+}
+
+@mixin feature-icon($color, $style: $default-icon-style) {
   @extend %rounded-icon;
-  background-color: color(graphite);
+  @extend %centered-icon;
+  background-color: color($color);
+  color: set-text-color(color($color));
+
+  @if $style == "hollow" {
+    color: color($color);
+    background-color: transparent;
+    border: $mobile-icon-border-size solid color($color);
+    @include media($desktop) {
+      border: $desktop-icon-border-size solid color($color);
+    }
+  }
+
+  @if $style == "compact" {
+    width: $compact-icon-size;
+    height: $compact-icon-size;
+    font-size: $compact-icon-size/2;
+  }
+}
+
+@mixin tooltip-icon($color, $style: $default-icon-style) {
+  @extend %centered-icon;
+  background-color: color($color);
+  color: set-text-color(color($color));
+  width: $tooltip-icon-size;
+  height: $tooltip-icon-size;
+  font-size: $tooltip-icon-font-size;
+  border-radius: 50%;
+
+  @if $style == "hollow" {
+    color: color($color);
+    background-color: transparent;
+    border: $mobile-icon-border-size solid color($color);
+  }
 }
 
 @at-root {
@@ -55,4 +93,13 @@ $feature-icon-mobile-size: 45px;
 
 .icon-lg {
   font-size: $xxl-font-size;
+}
+
+.feature-icon {
+  @include feature-icon("graphite");
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  font-size: $medium-font-size;
 }

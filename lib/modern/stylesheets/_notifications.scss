@@ -1,5 +1,4 @@
 $notification-rounded-icon-desktop-font-size: $large-font-size;
-
 $notification-icon-desktop-size: 50px;
 $notification-icon-mobile-size: 25px;
 
@@ -67,6 +66,7 @@ $validation-error-icon-color: "deep-red";
 %rounded-error-icon {
   .-icon {
     @extend %rounded-icon;
+    @extend %centered-icon;
 
     width: $notification-icon-mobile-size;
     height: $notification-icon-mobile-size;
@@ -79,11 +79,9 @@ $validation-error-icon-color: "deep-red";
       width: $notification-icon-desktop-size;
       height: $notification-icon-desktop-size;
       &:before {
-	font-size: $notification-rounded-icon-desktop-font-size;
-	margin-top: -$notification-icon-desktop-size/4;
+        font-size: $notification-rounded-icon-desktop-font-size;
+        margin-top: -$notification-icon-desktop-size/4;
       }
-
-
     }
   }
 }
