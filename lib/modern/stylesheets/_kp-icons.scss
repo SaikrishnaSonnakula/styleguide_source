@@ -2,16 +2,18 @@
 
 
   
-@font-face {
-  font-family: "kp-icons";
-  src: url("assets/fonts/kp-icons.eot?016a6bac9aac9e82396c3d4852931b8b");
-  src: url("assets/fonts/kp-icons.eot?#iefix") format("embedded-opentype"),
-		url("assets/fonts/kp-icons.woff?016a6bac9aac9e82396c3d4852931b8b") format("woff"),
-		url("assets/fonts/kp-icons.ttf?016a6bac9aac9e82396c3d4852931b8b") format("truetype"),
-		url("assets/fonts/kp-icons.svg?016a6bac9aac9e82396c3d4852931b8b#kp-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+  @at-root {
+    @font-face {
+      font-family: "kp-icons";
+      src: url("assets/fonts/kp-icons.eot?48495dfcc806cc3a2b924b18247ead2c");
+      src: url("assets/fonts/kp-icons.eot?#iefix") format("embedded-opentype"),
+		url("assets/fonts/kp-icons.woff?48495dfcc806cc3a2b924b18247ead2c") format("woff"),
+		url("assets/fonts/kp-icons.ttf?48495dfcc806cc3a2b924b18247ead2c") format("truetype"),
+		url("assets/fonts/kp-icons.svg?48495dfcc806cc3a2b924b18247ead2c#kp-icons") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
 
 
 [class^="icon-"]:before,
