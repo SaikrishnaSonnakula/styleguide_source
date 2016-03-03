@@ -2,7 +2,7 @@
 
 The styleguide to rule them all!
 
-To view deployed examples of different components bookmark [this page](https://wppdev1.kaiserpermanente.org/styleguide/) or deploy this repository locally with ``` grunt serve ```.
+To view deployed examples of different components bookmark [this page](https://dev10.kaiserpermanente.org/styleguide/) or deploy this repository locally with ``` grunt serve ```.
 
 ## Install
 ### NPM
