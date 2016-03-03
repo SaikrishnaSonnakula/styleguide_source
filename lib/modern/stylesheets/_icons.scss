@@ -1,6 +1,8 @@
 $feature-icon-desktop-size: 60px;
 $feature-icon-mobile-size: 50px;
-$tooltip-icon-size: 40px;
+$compact-icon-size: 40px;
+$tooltip-icon-size: 15px;
+$tooltip-icon-font-size: 14px;
 $default-icon-style: "solid";
 $desktop-icon-border-size: 3px;
 $mobile-icon-border-size: 2px;
@@ -37,6 +39,7 @@ $mobile-icon-border-size: 2px;
   @extend %centered-icon;
   background-color: color($color);
   color: set-text-color(color($color));
+
   @if $style == "hollow" {
     color: color($color);
     background-color: transparent;
@@ -44,6 +47,12 @@ $mobile-icon-border-size: 2px;
     @include media($desktop) {
       border: $desktop-icon-border-size solid color($color);
     }
+  }
+
+  @if $style == "compact" {
+    width: $compact-icon-size;
+    height: $compact-icon-size;
+    font-size: $compact-icon-size/2;
   }
 }
 
@@ -53,7 +62,7 @@ $mobile-icon-border-size: 2px;
   color: set-text-color(color($color));
   width: $tooltip-icon-size;
   height: $tooltip-icon-size;
-  font-size: $tooltip-icon-size/2;
+  font-size: $tooltip-icon-font-size;
   border-radius: 50%;
 
   @if $style == "hollow" {

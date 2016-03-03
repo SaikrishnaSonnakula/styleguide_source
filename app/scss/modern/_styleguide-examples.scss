@@ -1,10 +1,7 @@
 @include checkbox('my-30-px-checkbox', 30px, $medium-font-size);
 
 .copay-icon {
-  @include tooltip-icon("interactive-blue");
-  &.-hollow {
-    @include tooltip-icon("interactive-blue", "hollow");
-  }
+  @include feature-icon("interactive-blue", "compact");
 }
 
 .sidebar-icon {
