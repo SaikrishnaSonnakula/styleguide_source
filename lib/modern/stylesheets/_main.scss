@@ -30,6 +30,7 @@
 @import "loader";
 @import "fancy-select";
 @import "accordions";
+@import "tooltip";
 
 @each $name, $bgcolor in $colors {
   .#{$name} {
