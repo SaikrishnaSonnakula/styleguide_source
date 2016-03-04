@@ -5,9 +5,9 @@ $content-top-offset: $xl-spacing;
 $action-color-bg: $grass !default;
 $action-color-light: #5FA621 !default;
 
-.action-color {
-	color: white;
-	background-color: $action-color-bg;
+@mixin action-color($color:white, $color-bg:$action-color-bg) {
+  color: $color;
+  background-color: $color-bg;
 }
 
 .action-message{
@@ -19,11 +19,11 @@ $action-color-light: #5FA621 !default;
 }
 
 .action-box {
-	@extend .action-color;
+  @include action-color;
 
 	overflow: hidden;
 	position: relative;
-	
+
 	@include media($desktop) {
 		height: auto;
 		min-height: $action-box-height;
@@ -70,7 +70,7 @@ $action-color-light: #5FA621 !default;
 	@include media($device) {
 		@include outer-container;
 		z-index: $foreground;
-		
+
 		position: $action-button-mobile-position;
 		left: 0px;
 		right: 0px;
@@ -83,7 +83,7 @@ $action-color-light: #5FA621 !default;
 				border-color: color(interactive-blue);
 				background-color: white;
 				color: color(interactive-blue);
-				
+
 				&.-inverted {
 					background-color: color(interactive-blue);
 					border-color: color(interactive-blue);
@@ -119,4 +119,73 @@ $action-color-light: #5FA621 !default;
   @include media($desktop){
     @include outer-container(80%);
   }
+}
+
+// New action area style
+
+@mixin action-area-container($color, $color-bg) {
+  @include action-color($color, $color-bg);
+}
+
+%action-area {
+  @extend %center-content;
+  @extend .two-columns;
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  overflow: hidden;
+  position: relative;
+
+  @include media($desktop) {
+    height: auto;
+    min-height: $action-box-height;
+    text-align: center;
+  }
+
+  .action-messages {
+    @extend .-column;
+    padding: 0;
+
+    @include media($device) {
+      display: none;
+    }
+
+    .heading {
+      margin-top: $xl-spacing;
+      margin-bottom: $xxl-spacing;
+      font-size: $large-font-px;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .subheading{
+      margin-top: $xxl-spacing;
+      margin-bottom: $xxl-spacing;
+      text-align: left;
+    }
+  }
+
+  .action-buttons {
+    @extend .-column.-aside;
+    vertical-align: bottom;
+    padding-bottom: $xl-spacing;
+    @include media($device){
+      padding: 0;
+    }
+    .-primary-action {
+      @include media($device){
+        z-index: $foreground;
+        @include position($action-button-mobile-position, inherit 0px 0px 0px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.styleguide-main .example-action-area-container {
+  @include action-area-container(color(inky-blue), color(graphite-light));
+}
+
+.styleguide-main .example-action-area {
+  @extend %action-area;
 }

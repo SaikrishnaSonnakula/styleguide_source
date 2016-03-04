@@ -528,6 +528,52 @@
         <p>
         Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
         </p>
+
+        <h3 class="styleguide-subheading">New Action Area</h3>
+        <p>
+          The Action Area is a replacement for the old Action Box.
+        </p>
+
+        <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
+        <div id="action-area-example" class="example -hide-action-buttons">
+          <div class="example-action-area-container">
+            <div class="example-action-area">
+              <div class="action-messages">
+                <div class="heading">Action Heading</div>
+                <div class="subheading">Some hint for action</div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="button -primary-action">
+                  Let's do something
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-content">
+            <h1 class="page-heading">My Feature</h1>
+            <p>
+              This is a feature
+            </p>
+          </div>
+        </div>
+        <p>
+          In the example above we have an <code>.example-action-area-container</code> which @includes the <code>action-area-container</code> mixin, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a>
+        </p>
+
+        <pre class="code language-scss" data-langauge="scss"><code>.example-action-area-container {
+  @include action-area-container(color(inky-blue), color(graphite-light));
+}
+
+.example-action-area {
+  @extend %action-area;
+}</code></pre>
+
+        <p class="fuchsia" style="padding: 15px;">ATTENTION: <br />
+          The following Action Box is going away. Please use the action area above.
+        </p>
+
         <div class="example">
           <div class="feature">
             <div class="action-box">
@@ -536,7 +582,7 @@
             <div class="feature-content">
               <h1 class="page-heading">My Feature</h1>
               <p>
-              This is a feature
+                This is a feature
               </p>
             </div>
           </div>
