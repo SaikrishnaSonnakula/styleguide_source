@@ -1,0 +1,64 @@
+%action-area-container{
+  @extend %action-color;
+}
+
+%action-area {
+  @extend %center-content;
+  @extend .two-columns;
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  overflow: hidden;
+  position: relative;
+
+  @include media($desktop) {
+    height: auto;
+    min-height: $action-box-height;
+    text-align: center;
+  }
+
+  .action-messages {
+    @extend .-column;
+    padding: 0;
+
+    @include media($device) {
+      display: none;
+    }
+
+    .heading {
+      margin-top: $xl-spacing;
+      margin-bottom: $xxl-spacing;
+      font-size: $large-font-px;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .subheading{
+      margin-top: $xxl-spacing;
+      margin-bottom: $xxl-spacing;
+      text-align: left;
+    }
+  }
+
+  .action-buttons {
+    @extend .-column.-aside;
+    vertical-align: bottom;
+    padding-bottom: $xl-spacing;
+    @include media($device){
+      padding: 0;
+    }
+    .-primary-action {
+      @include media($device){
+        z-index: $foreground;
+        @include position($action-button-mobile-position, inherit 0px 0px 0px);
+        width: 100%;
+      }
+
+      &:hover, &:focus {
+        color: color(grass);
+        background-color: white;
+      }
+    }
+
+  }
+}
