@@ -27,7 +27,7 @@ $action-area-button-color-bg: color(interactive-blue);
 
   .action-area-heading {
     margin-top: $xl-spacing;
-    margin-bottom: $xxl-spacing;
+    margin-bottom: $xl-spacing;
     font-size: $xl-font-size;
     font-family: $medium-font-family;
     font-weight: bolder;
@@ -39,7 +39,7 @@ $action-area-button-color-bg: color(interactive-blue);
 
   .actions-container {
     @extend .two-columns;
-    margin-top: $xxl-spacing;
+    margin-top: $xl-spacing;
     margin-bottom: $xxl-spacing;
 
     @include media($device) {
