@@ -1,5 +1,6 @@
 $action-area-min-height: 150px;
 $action-area-color-fg: color(inky-blue);
+$action-area-color-highlighted: color(interactive-blue-dark);
 $action-area-color-bg: color(graphite-light);
 $action-area-button-color-fg: color(pebble);
 $action-area-button-color-bg: color(interactive-blue);
@@ -13,7 +14,6 @@ $action-area-button-color-bg: color(interactive-blue);
 
 %action-area {
   @extend %center-content;
-  @extend .two-columns;
 
   padding-top: 0;
   padding-bottom: 0;
@@ -27,51 +27,52 @@ $action-area-button-color-bg: color(interactive-blue);
     text-align: center;
   }
 
-  .action-messages {
-    @extend .-column;
-    padding: 0;
-
-    @include media($device) {
-      display: none;
-    }
-
-    .heading {
-      margin-top: $xl-spacing;
-      margin-bottom: $xxl-spacing;
-      font-size: $large-font-px;
-      font-weight: bolder;
-      text-align: left;
-    }
-    .subheading{
-      margin-top: $xxl-spacing;
-      margin-bottom: $xxl-spacing;
-      text-align: left;
-    }
+  .action-area-heading {
+    margin-top: $xl-spacing;
+    margin-bottom: $xxl-spacing;
+    font-size: $xl-font-size;
+    font-family: $medium-font-family;
+    font-weight: bolder;
+    text-align: left;
   }
 
-  .action-buttons {
-    @extend .-column.-aside;
-    vertical-align: bottom;
-    padding-bottom: $xl-spacing;
-    @include media($device){
+  .actions-container {
+    @extend .two-columns;
+    margin-top: $xxl-spacing;
+    margin-bottom: $xxl-spacing;
+
+    .action-messages {
+      @extend .-column;
       padding: 0;
-    }
-    .-primary-action {
-      @include media($device){
-        z-index: $foreground;
-        @include position(fixed, inherit 0px 0px 0px);
-        width: 100%;
+
+      @include media($device) {
+        display: none;
       }
 
-      &:hover, &:focus {
-        color: $action-area-button-color-bg;
+     .subheading{
+        text-align: left;
+        font-size: $medium-font-size;
+      }
+    }
+
+    .action-buttons {
+      @extend .-column;
+      padding: 0;
+      .-primary-action {
+        @include media($device){
+          z-index: $foreground;
+          @include position(fixed, inherit 0px 0px 0px);
+          width: 100%;
+        }
+
+        &:hover, &:focus {
+          background-color: $action-area-color-highlighted;
+          border-color: $action-area-color-highlighted;
+        }
+        color: $action-area-button-color-fg;
         border-color: $action-area-button-color-bg;
-        background-color: $action-area-button-color-fg;
+        background-color: $action-area-button-color-bg;
       }
-      color: $action-area-button-color-fg;
-      border-color: $action-area-button-color-bg;
-      background-color: $action-area-button-color-bg;
     }
-
   }
 }
