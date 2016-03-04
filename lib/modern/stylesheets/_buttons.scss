@@ -29,6 +29,10 @@ $action-color-light: color("interactive-blue") !default;
 }
 
 .button {
+  @extend %button;
+}
+
+%button {
   @extend %rounded-input;
   @include transition(background-color 0.2s ease,
                       color 0.2s ease,

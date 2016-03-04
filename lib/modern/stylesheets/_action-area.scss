@@ -64,6 +64,7 @@ $action-area-button-color-bg: color(interactive-blue);
       @extend .-column;
       padding: 0;
       .-primary-action {
+        @extend %button;
         @include media($device){
           z-index: $foreground;
           @include position(fixed, inherit 0px 0px 0px);
