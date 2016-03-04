@@ -34,12 +34,19 @@ $action-area-button-color-bg: color(interactive-blue);
     font-family: $medium-font-family;
     font-weight: bolder;
     text-align: left;
+    @include media($device) {
+      display: none;
+    }
   }
 
   .actions-container {
     @extend .two-columns;
     margin-top: $xxl-spacing;
     margin-bottom: $xxl-spacing;
+
+    @include media($device) {
+      margin: 0;
+    }
 
     .action-messages {
       @extend .-column;
