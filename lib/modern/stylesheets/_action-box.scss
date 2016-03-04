@@ -181,11 +181,3 @@ $action-color-light: #5FA621 !default;
     }
   }
 }
-
-.styleguide-main .example-action-area-container {
-  @include action-area-container(color(inky-blue), color(graphite-light));
-}
-
-.styleguide-main .example-action-area {
-  @extend %action-area;
-}

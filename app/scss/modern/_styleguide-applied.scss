@@ -1,0 +1,10 @@
+// This file contains *applications* of the styleguide mixins and placeholders.
+// We keep it in a seperate file because these are examples of how to use the styleguide, not the styleguide itself.
+
+.example-action-area-container {
+  @include action-area-container(color(inky-blue), color(graphite-light));
+}
+
+.example-action-area {
+  @extend %action-area;
+}
