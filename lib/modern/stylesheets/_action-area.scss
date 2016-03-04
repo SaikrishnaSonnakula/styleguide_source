@@ -1,5 +1,14 @@
+$action-area-min-height: 150px;
+$action-area-color-fg: color(inky-blue);
+$action-area-color-bg: color(graphite-light);
+$action-area-button-color-fg: color(pebble);
+$action-area-button-color-bg: color(interactive-blue);
+
+
+
 %action-area-container{
-  @extend %action-color;
+  color: $action-area-color-fg;
+  background-color: $action-area-color-bg;
 }
 
 %action-area {
@@ -14,7 +23,7 @@
 
   @include media($desktop) {
     height: auto;
-    min-height: $action-box-height;
+    min-height: $action-area-min-height;
     text-align: center;
   }
 
@@ -50,14 +59,18 @@
     .-primary-action {
       @include media($device){
         z-index: $foreground;
-        @include position($action-button-mobile-position, inherit 0px 0px 0px);
+        @include position(fixed, inherit 0px 0px 0px);
         width: 100%;
       }
 
       &:hover, &:focus {
-        color: color(grass);
-        background-color: white;
+        color: $action-area-button-color-bg;
+        border-color: $action-area-button-color-bg;
+        background-color: $action-area-button-color-fg;
       }
+      color: $action-area-button-color-fg;
+      border-color: $action-area-button-color-bg;
+      background-color: $action-area-button-color-bg;
     }
 
   }
