@@ -5,11 +5,10 @@ $content-top-offset: $xl-spacing;
 $action-color-bg: $grass !default;
 $action-color-light: #5FA621 !default;
 
-@mixin action-color($color:white, $color-bg:$action-color-bg) {
-  color: $color;
-  background-color: $color-bg;
+.action-color {
+  color: white;
+  background-color: $action-color-bg;
 }
-
 .action-message{
 	font-size: $medium-font-size;
 	text-align: center;
@@ -19,7 +18,7 @@ $action-color-light: #5FA621 !default;
 }
 
 .action-box {
-  @include action-color;
+  @extend .action-color;
 
 	overflow: hidden;
 	position: relative;
