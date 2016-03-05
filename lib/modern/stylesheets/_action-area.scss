@@ -40,7 +40,7 @@ $action-area-button-color-bg: color(interactive-blue);
   .actions-container {
     @extend .two-columns;
     margin-top: $xl-spacing;
-    margin-bottom: $xxl-spacing;
+    margin-bottom: $xl-spacing;
 
     @include media($device) {
       margin: 0;
