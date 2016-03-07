@@ -57,11 +57,3 @@ $tooltip-arrow-border-width: 10px;
     }
   }
 }
-
-.tooltip-top {
-  @include tooltip("interactive-blue", "top");
-}
-
-.tooltip-bottom {
-  @include tooltip("interactive-blue", "bottom");
-}

@@ -145,3 +145,12 @@
     color: color(interactive-blue);
   }
 }
+
+
+.tooltip-top {
+  @include tooltip("interactive-blue", "top");
+}
+
+.tooltip-bottom {
+  @include tooltip("interactive-blue", "bottom");
+}
