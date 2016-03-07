@@ -1,4 +1,3 @@
-$action-area-min-height: 150px;
 $action-area-color-fg: color(inky-blue);
 $action-area-color-highlighted: color(interactive-blue-dark);
 $action-area-color-bg: color(graphite-light);
@@ -19,19 +18,12 @@ $action-area-button-color-bg: color(interactive-blue);
   overflow: hidden;
   position: relative;
 
-  @include media($desktop) {
-    height: auto;
-    min-height: $action-area-min-height;
-    text-align: center;
-  }
-
   .action-area-heading {
     margin-top: $xl-spacing;
     margin-bottom: $xl-spacing;
     font-size: $xl-font-size;
     font-family: $medium-font-family;
     font-weight: bolder;
-    text-align: left;
     @include media($device) {
       display: none;
     }
@@ -63,6 +55,11 @@ $action-area-button-color-bg: color(interactive-blue);
     .action-buttons {
       @extend .-column;
       padding: 0;
+
+      @include media($desktop) {
+        text-align: center;
+      }
+
       .-primary-action {
         @extend %button;
         @include media($device){
