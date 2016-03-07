@@ -20,7 +20,7 @@ $tooltip-arrow-border-width: 10px;
   position: relative;
   background-color: white;
   color: color("inky-blue");
-  padding: 20px;
+  padding: $small-spacing;
   border: 2px solid color($tooltip-color);
   text-align: left;
 
