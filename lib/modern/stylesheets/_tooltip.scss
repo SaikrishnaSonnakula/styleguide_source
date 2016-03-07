@@ -1,4 +1,8 @@
 $tooltip-arrow-border-width: 10px;
+$tooltip-inner-arrow-border-color: white;
+$tooltip-background-color: white;
+$tooltip-font-color: inky-blue;
+
 @mixin tooltip-arrow($arrow-direction) {
   content: "";
   position: absolute;
@@ -18,8 +22,8 @@ $tooltip-arrow-border-width: 10px;
   box-sizing: content-box;
   display: inline-block;
   position: relative;
-  background-color: white;
-  color: color("inky-blue");
+  background-color: $tooltip-background-color;
+  color: color($tooltip-font-color);
   padding: $small-spacing;
   border: 2px solid color($tooltip-color);
   text-align: left;
@@ -32,7 +36,7 @@ $tooltip-arrow-border-width: 10px;
 
   &:before {
     @include tooltip-arrow($arrow-direction);
-    background-color: white;
+    background-color: $tooltip-background-color;
     z-index: -1;
 
     @if $arrow-direction == "bottom" {
@@ -49,10 +53,10 @@ $tooltip-arrow-border-width: 10px;
     z-index: 1;
 
     @if $arrow-direction == "bottom" {
-      border-top: $tooltip-arrow-border-width solid white;
+      border-top: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
       margin-top: -1px;
     } @else {
-      border-bottom: $tooltip-arrow-border-width solid white;
+      border-bottom: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
       margin-bottom: -2px;
     }
   }
