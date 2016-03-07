@@ -63,7 +63,7 @@ $button-border-size: 2px;
   }
 
   &.-inverted {
-    background-color: white;
+    background-color: transparent;
     color: $button-color;
     border-color: $button-color;
 
@@ -88,7 +88,7 @@ $button-border-size: 2px;
     }
 
     &.-inverted {
-      background-color: white;
+      background-color: transparent;
       color: $button-disable-color;
       border-color: $button-disable-color;
 
