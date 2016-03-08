@@ -2,7 +2,7 @@ $action-button-mobile-position: fixed !default;
 $action-box-height: 150px;
 $action-box-vertical-padding: $large-spacing;
 $content-top-offset: $xl-spacing;
-$action-color-bg: $grass !default;
+$action-color-bg: color(grass) !default;
 $action-color-light: #5FA621 !default;
 
 .action-color {
@@ -12,7 +12,7 @@ $action-color-light: #5FA621 !default;
 .action-message{
 	font-size: $medium-font-size;
 	text-align: center;
-	@include media($desktop){
+	@include media($desktop) {
 		font-size: $large-font-size;
 	}
 }
@@ -48,7 +48,7 @@ $action-color-light: #5FA621 !default;
 			color: color(interactive-blue);
 		}
 	}
-  @include media($desktop){
+  @include media($desktop) {
 	  @include outer-container;
 		@include span-columns(4.5);
 		@include shift(3.5);
