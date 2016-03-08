@@ -6,10 +6,9 @@ $action-color-bg: $grass !default;
 $action-color-light: #5FA621 !default;
 
 .action-color {
-	color: white;
-	background-color: $action-color-bg;
+  color: white;
+  background-color: $action-color-bg;
 }
-
 .action-message{
 	font-size: $medium-font-size;
 	text-align: center;
@@ -19,11 +18,11 @@ $action-color-light: #5FA621 !default;
 }
 
 .action-box {
-	@extend .action-color;
+  @extend .action-color;
 
 	overflow: hidden;
 	position: relative;
-	
+
 	@include media($desktop) {
 		height: auto;
 		min-height: $action-box-height;
@@ -70,7 +69,7 @@ $action-color-light: #5FA621 !default;
 	@include media($device) {
 		@include outer-container;
 		z-index: $foreground;
-		
+
 		position: $action-button-mobile-position;
 		left: 0px;
 		right: 0px;
@@ -83,7 +82,7 @@ $action-color-light: #5FA621 !default;
 				border-color: color(interactive-blue);
 				background-color: white;
 				color: color(interactive-blue);
-				
+
 				&.-inverted {
 					background-color: color(interactive-blue);
 					border-color: color(interactive-blue);

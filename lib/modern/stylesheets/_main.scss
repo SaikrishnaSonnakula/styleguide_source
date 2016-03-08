@@ -2,12 +2,13 @@
 //
 // Loads all styleguide files, besides third-party dependencies.
 
-@import "helpers";
+
 @import "colors";
 @import "color-aliases";
 @import "spacing";
 @import "z-index";
 @import "responsive";
+@import "helpers";
 @import "fonts";
 @import "typography";
 @import "kp-icons";
@@ -17,6 +18,7 @@
 
 @import "layouts";
 @import "buttons";
+@import "action-area";
 @import "action-box";
 @import "lists";
 @import "checkboxes";

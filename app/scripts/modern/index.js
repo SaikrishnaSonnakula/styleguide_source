@@ -67,6 +67,10 @@ $(function() {
     $("#neighborhood").toggleClass("-open");
   });
 
+  $("#toggle-action-area-button").click(function() {
+    $("#action-area-example").toggleClass("-hide-action-buttons");
+  });
+
   $("#toggle-action-button-pair").click(function() {
     $("#action-button-pair").toggleClass("-hide-action-buttons");
   });
