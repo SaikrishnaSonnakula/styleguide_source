@@ -2,7 +2,7 @@ $button-color: color("interactive-blue");
 $button-padding: $small-spacing;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
-$button-border-size: 2px;
+$button-border-size: 3px;
 
 %rounded-input {
   @include appearance(none);
