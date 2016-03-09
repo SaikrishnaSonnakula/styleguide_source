@@ -1,6 +1,6 @@
 # Contributing to Styleguide
 
-Welcome to contributing! We welcome all in the KP developer community contribute to styleguide. Please contact us via hipchat room "Styleguide Core" if you haven't already. You can ask questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
+Welcome to contributing! We welcome all in the KP developer community contribute to styleguide, all contributions are voluntary. Please contact us via [Hipchat](https://hipchat.kp.org/chat/room/19) room "Styleguide Core" if you haven't already. You can ask questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
 
 ## Ways you are contributing...
 - Raising issues - bugs, defects, typos or just bad grammer. You can help us correct this.
@@ -11,17 +11,19 @@ Welcome to contributing! We welcome all in the KP developer community contribute
 Make sure you have:
 
 * Access to Stash and the Style guide repo and the build plugin
-* <a href="https://stash.kp.org/plugins/servlet/ssh/account/keys" target="_blank">SSH keys</a> setup in Stash
-* Node.js <a href="https://nodejs.org/en/blog/release/v0.10.42/" target="_blank">v.0.10.42 download​</a>
-* Join the RWD Styleguide chat room
+* [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) setup in Stash
+* [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) to run the build plugin grunt taskrunner 
+* Join the RWD Styleguide chat room, use the node.js wizard to install onto your machine
 	* If you ​are using the latest version of hipchat
 	* Go to https://hipchat.kp.org/invite/1/27bf4d05b314fdfb36b4dc25f5752b28
 	* Fill out the following form and Complete the sign up process
 	* Launch the hipchat client.
 	* Click HipChat on the top bar, File > Login to Another Team
-	* Screen Shot 2016-02-19 at 11.46.25 AM.png
+	![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/hipchat-second-server.png)
 	* Server is: hipchat.kp.org (No http:// or https://)​​
 	* Enter Your Work email and SSO password.
+
+
 ## Process of Editing or Submitting
 
 ### Summary
@@ -32,6 +34,7 @@ Note: you can still use the method of creating a branch however the team is slow
 ### Detailed Steps
 1. In the styleguide repository fork the project to your own account
 2. Pull down your forked version of styleguide locally to your machine
+![Forking styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/fork-screenshot.png)
 3. In your Styleg Guide> Git  directory , update the config file to the following so you can fetch pull requests, sync with upstream,and stay up to date with the latest code:
 ```
 		[core]
@@ -54,27 +57,29 @@ Note: you can still use the method of creating a branch however the team is slow
 		email = your.email.used.instash.@kp.org
 ```
 
-4. Make your changes locally
+4. Make your changes locally in the new forked copy make the code changes and push code changes to your forked master branch
 5. Commit your forked project to your account make sure you do not commit to the upstream version aka the live version
-6. Create a <a href="https://www.atlassian.com/git/tutorials/making-a-pull-request/" target="_blank">pull request (PR )</a> using your forked repo:
+6. Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/) (PR ) using your forked repo
+![Create PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/create-pullRequest.png)
+![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/pullRequest-step2.png)
+7. In your Pull request provide detailed information about the reason for the fix, and a screenshot of the output from your local host.
 7. You need <strong> 2 approvals</strong> before you can merge your pull request 
-8. It's recommended to stay up-to-date in the RWD Styleguide hipcat room, the project is synced in Jira and hipchat.  Pull requests (PR), Merges, and commits alert everyone in the RWD Styleguide ​chatroom of activity.
-9. Code approved: Merge your code
+![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/approval-Pullrequest.png)
+8. It's recommended to stay up-to-date in the RWD [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19), the project is synced in Jira and hipchat.  Pull requests (PR), Merges, and commits alert everyone in the RWD Styleguide ​chatroom of activity.
+9. After your Code is approved by 2 reviewers: Merge your code
+10. Party cause you are now a contributing member of the Styleguide repo
 
-## More Details about Submitting Pull Requests
-Pull requests are awesome! The way you would pull request is to fork Styleguide then clone it to your local and work on it there. When you're ready, you click on Pull request in Styleguide repo and go through the screens. You need a minimum of 2 approvers to approver and merge your PR.
-
-Welcome to contributing! We welcome all in the KP developer community contribute to styleguide. Please contact us via Hipchat for questions about Styleguide and what you need to get it up and running as well as how best to Fork and get your contribution approved.
+Welcome to contributing! Looking forward to your contributions. Please send any questions or concerns via [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19).
 
 
 ### Resources and Helpful Links
-
-* [Feature Roadmap](https://stash.kp.org/projects/RWD/repos/styleguide/browse/ROADMAP.md)
-* [Hipchat](https://kpmcoe.hipchat.com/chat/room/2258656)
-* [Dev Site]: https://wppdev1.kaiserpermanente.org/styleguide​/
-* [Stash]: https://stash.kp.org/projects/RWD/repos/styleguide/browse​
-* [Feature Roadmap](https://jira.kp.org/secure/RapidBoard.jspa?rapidView=50&projectKey=STYLE)
-* [Hipchat](https://hipchat.kp.org/chat/room/19)
+* [jira board](https://jira.kp.org/browse/STYLE)
+* [Online Styleguide](http://dev10.kaiserpermanente.org/styleguide)
+* [Builds](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-AEM/
+http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-deploy-DEV10/)
+* [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19)
+* [Build Plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse)
+* [Current Styleguide PullRequests](https://stash.kp.org/projects/RWD/repos/styleguide/pull-requests)
 
 
 ## Additional Guidelines for Issues and Requests
