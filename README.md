@@ -1,18 +1,28 @@
 # KP Styleguide
 
-The styleguide to rule them all!
+The styleguide to rule them all! this document covers:
+
+* [Installing Styleguide](#installing)
+* [How to Use in your Projects](#usage)
+* [What's in Styleguide](#contents-styleguide)
+* [Setting up Namespacing in your project](#namespacing)
+* [Contributing](#contributing)
+* [Resources and Helpful Links](#resources)
+* [Questions](#questions)
 
 To view deployed examples of different components bookmark [this page](https://dev10.kaiserpermanente.org/styleguide/) or deploy this repository locally with ``` grunt serve ```.
 
-## Install
+## Installing Styleguide
+<a name="installing"></a>
 ### NPM
 
 The styleguide is NPM module. You can install it by running the following command in your project directory:
 
     npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
 
-## Usage
 
+## How to Use Styleguide in your Projects
+<a name="usage"></a>
 ### Modern Styles with Webpack
 
 If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
@@ -54,7 +64,7 @@ Then run `bower install` - watch all the front-end stuff bower installs. You sho
 Still figuring this out. You will experience import SASS errors when you import styleguide on a gulp project.
 
 ## What's in Styleguide
-
+<a name="contents-styleguide"></a>
 There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
 
 ### Bourbon / Neat
@@ -62,7 +72,7 @@ There is a lot that Styleguide comes with and does a lot so that you don't have 
 We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstrap. Instead, it's a library of _Mixins_ that allow one to have more control over styles. It's minimalistic in nature, but offers additional features through [Neat](http://neat.bourbon.io/) which is a Bourbon add-on that offers grids and layout helpers.
 
 ## Namespacing your app
-<a name="#namespacing"></a>
+<a name="namespacing"></a>
 It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. Example, in your main.scss
 
         #my-awesome-app {
@@ -73,6 +83,7 @@ It is very important to name space your styles for your APP. This will avoid con
         }
 
 ## Contributing to Styleguide
+<a name="contributing"></a>
 We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
 
 ## Before You begin
@@ -102,7 +113,8 @@ Summary of the current contribution process is:
 The [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md) has a more complete guide so that your contribution is seamless and painless.
 
 
-### Resources and Helpful Links
+## Resources and Helpful Links
+<a name="resources"></a>
 
 * [jira board](https://jira.kp.org/browse/STYLE)
 * [Online Styleguide Version](http://dev10.kaiserpermanente.org/styleguide)
@@ -114,10 +126,12 @@ The [Contributing documentation](https://stash.kp.org/projects/RWD/repos/stylegu
 
 
 ## Didn't Find what you are looking for?
-If you have something to add, a bug fix, or make a change [contribute to the Styleguide!](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md). The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed. 
+
+If you have something to add, a bug fix, or make a change [contribute to the Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)! The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed. 
 
 Check the [jira board](https://jira.kp.org/browse/STYLE) if you would like to see the currently open tasks and fixes that you can assign to yourself.
 
 ###Questions?
+<a name="questions"></a>
 
-Post questions to the chat room [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19)
+If you're not completely clear on how to use the Styleguide in your project or got lost in the [documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)  please  visit [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19) and we'll help you out.
