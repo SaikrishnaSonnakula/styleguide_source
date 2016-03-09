@@ -18,8 +18,7 @@ Make sure you have:
 	* Go to https://hipchat.kp.org/invite/1/27bf4d05b314fdfb36b4dc25f5752b28
 	* Fill out the following form and Complete the sign up process
 	* Launch the hipchat client.
-	* Click HipChat on the top bar, File > Login to Another Team
-	![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/hipchat-second-server.png)
+	* Click HipChat on the top bar, File > Login to Another Team ![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/hipchat-second-server.png)
 	* Server is: hipchat.kp.org (No http:// or https://)​​
 	* Enter Your Work email and SSO password.
 
@@ -63,8 +62,7 @@ Note: you can still use the method of creating a branch however the team is slow
 ![Create PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/create-pullRequest.png)
 ![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/pullRequest-step2.png)
 7. In your Pull request provide detailed information about the reason for the fix, and a screenshot of the output from your local host.
-7. You need <strong> 2 approvals</strong> before you can merge your pull request 
-![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/approval-Pullrequest.png)
+7. You need <strong> 2 approvals</strong> before you can merge your pull request ![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/approval-Pullrequest.png)
 8. It's recommended to stay up-to-date in the RWD [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19), the project is synced in Jira and hipchat.  Pull requests (PR), Merges, and commits alert everyone in the RWD Styleguide ​chatroom of activity.
 9. After your Code is approved by 2 reviewers: Merge your code
 10. Party cause you are now a contributing member of the Styleguide repo

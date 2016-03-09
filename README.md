@@ -75,19 +75,10 @@ It is very important to name space your styles for your APP. This will avoid con
 ## Contributing to Styleguide
 We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
 
-### Process of Editing and Submitting a change​
-
-Summary of the current contribution process is: 
-* Fork the project to your Stash account 
-![Forking styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/fork-screenshot.png)
-* In the new forked copy make the code changes and push code changes to your forked master branch
-* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/)
-![Create PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/create-pullRequest.png)
-* have the RWD styleguide team review and recieve a minimum of 2 approvals
-* Merge the Pull Request into the master branch.
-
 ## Before You begin
+
 Make sure you have:
+
 * Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
 * Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
 * Access to Stash and the Style guide repo and the build plugin
@@ -96,15 +87,27 @@ Make sure you have:
 * Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19) 
 * Access to [jira](https://jira.kp.org/browse/STYLE)
 
+### Process of Editing and Submitting a change​
+
+Summary of the current contribution process is: 
+
+* Fork the project to your Stash account ![Forking styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/fork-screenshot.png)
+* In the new forked copy make the code changes and push code changes to your forked master branch
+* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/) ![Create PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/create-pullRequest.png)
+* have the RWD styleguide team review and recieve a minimum of 2 approvals
+* Merge the Pull Request into the master branch.
+
+
 ### Detailed steps of How to Contribute
 The [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md) has a more complete guide so that your contribution is seamless and painless.
 
 
 ### Resources and Helpful Links
+
 * [jira board](https://jira.kp.org/browse/STYLE)
 * [Online Styleguide Version](http://dev10.kaiserpermanente.org/styleguide)
-* [Builds](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-AEM/
-http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-deploy-DEV10/)
+* [AEM Build](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-AEM/)
+* [Stylguide Build](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-deploy-DEV10/)
 * [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19)
 * [Build Plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse)
 * [Current Styleguide PullRequests](https://stash.kp.org/projects/RWD/repos/styleguide/pull-requests)
