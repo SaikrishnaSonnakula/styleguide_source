@@ -30,23 +30,24 @@
     <main class="styleguide-main" style="display: none">
     <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
       <ul>
-        <li><a href="#installation-section">Installation</a></li>
-        <li><a href="modern-ui-elements.html" target="_blank">JS UI Elements</a></li>
-        <li><a href="#responsive-section">Responsive</a></li>
-        <li><a href="#colors-section">Colors</a></li>
-        <li><a href="#typography-section">Typography</a></li>
-        <li><a href="#spacing-section">Spacing</a></li>
-        <li><a href="#buttons-section">Buttons</a></li>
-        <li><a href="#lists-section">Lists</a></li>
-        <li><a href="#modal-section">Modal</a></li>
-        <li><a href="#forms-section">Forms</a></li>
-        <li><a href="#features-section">Features</a></li>
-        <li><a href="#dropdowns-section">Dropdowns</a></li>
-        <li><a href="#notifications-section">Notifications</a></li>
-        <li><a href="#loader-section">Loader</a></li>
-        <li><a href="#layouts-section">Layouts</a></li>
-        <li><a href="icons.html">Icons</a></li>
-        <li><a href="#help-section">Help</a></li>
+      	<li><a href="#installation-section">Installation</a></li>
+      	<li><a href="modern-ui-elements.html" target="_blank">JS UI Elements</a></li>
+      	<li><a href="#responsive-section">Responsive</a></li>
+      	<li><a href="#colors-section">Colors</a></li>
+      	<li><a href="#typography-section">Typography</a></li>
+      	<li><a href="#spacing-section">Spacing</a></li>
+      	<li><a href="#buttons-section">Buttons</a></li>
+      	<li><a href="#lists-section">Lists</a></li>
+      	<li><a href="#modal-section">Modal</a></li>
+      	<li><a href="#forms-section">Forms</a></li>
+      	<li><a href="#features-section">Features</a></li>
+      	<li><a href="#dropdowns-section">Dropdowns</a></li>
+      	<li><a href="#notifications-section">Notifications</a></li>
+      	<li><a href="#loader-section">Loader</a></li>
+      	<li><a href="#layouts-section">Layouts</a></li>
+      	<li><a href="#tooltip">Tooltips</a></li>
+      	<li><a href="icons.html">Icons</a></li>
+      	<li><a href="#help-section">Help</a></li>
       </ul>
     </nav>
 
@@ -843,7 +844,6 @@
             </div>
           </div>
         </div>
-
         <div class="example">
           <div class="notification -hard-interruption">
             <div class="-main">
@@ -966,7 +966,31 @@
 
           </div>
         </div>
+      </section>
+      <section id="tooltip">
+        <h2 class="styleguide-section-heading">Tooltip</h2>
+        <p>Styleguide tooltips take the form of a mixin that take a border color and whether the tip should be on the top or bottom (can be extended later).
+          It is up to the each team to design the user experience for the tooltip display, for example on hover, click, etc.</p>
 
+        <h3 class="styleguide-subheading">
+      	  Tooltip Top
+      	</h3>
+        <pre><code class="language-scss">.tooltip-top { @include tooltip("interactive-blue", "top"); }</code></pre>
+        <div class="example -minor -padded">
+          <div class="tooltip-top">
+            Tooltip Top With Text
+          </div>
+        </div>
+
+        <h3 class="styleguide-subheading">
+      	  Tooltip Bottom
+      	</h3>
+        <pre><code class="language-scss">.tooltip-bottom { @include tooltip("interactive-blue", "bottom"); }</code></pre>
+        <div class="example -minor -padded">
+          <div class="tooltip-bottom">
+            Tooltip Bottom With Text
+          </div>
+        </div>
       </section>
       <section id="help-section">
         <h2 class="styleguide-section-heading">Help</h2>
