@@ -18,7 +18,7 @@ Make sure you have:
 	* Go to https://hipchat.kp.org/invite/1/27bf4d05b314fdfb36b4dc25f5752b28
 	* Fill out the following form and Complete the sign up process
 	* Launch the hipchat client.
-	* Click HipChat on the top bar, File > Login to Another Team ![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/hipchat-second-server.png)
+	* Click HipChat on the top bar, File > Login to Another Team ![hipchat setup](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Adding%20to%20the%20Style%20Guide/Screen%20Shot%202016-02-19%20at%2011.46.25%20AM.png)
 	* Server is: hipchat.kp.org (No http:// or https://)​​
 	* Enter Your Work email and SSO password.
 
@@ -33,7 +33,7 @@ Note: you can still use the method of creating a branch however the team is slow
 ### Detailed Steps
 1. In the styleguide repository fork the project to your own account
 2. Pull down your forked version of styleguide locally to your machine
-![Forking styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/fork-screenshot.png)
+![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Adding%20to%20the%20Style%20Guide/Screen%20Shot%202016-02-19%20at%2012.12.46%20PM.png)
 3. In your Styleg Guide> Git  directory , update the config file to the following so you can fetch pull requests, sync with upstream,and stay up to date with the latest code:
 ```
 		[core]
@@ -44,7 +44,7 @@ Note: you can still use the method of creating a branch however the team is slow
 		ignorecase = true
 		precomposeunicode = true
 		[remote "origin"]
-		url = ssh://git@stash.kp.org/~i004217/styleguide.git
+		url = ssh://git@stash.kp.org/~yourNUID/styleguide.git
 		[remote "upstream"]
 		url = ssh://git@stash.kp.org/rwd/styleguide.git
 		fetch = +refs/heads/*:refs/remotes/upstream/*
@@ -59,10 +59,10 @@ Note: you can still use the method of creating a branch however the team is slow
 4. Make your changes locally in the new forked copy make the code changes and push code changes to your forked master branch
 5. Commit your forked project to your account make sure you do not commit to the upstream version aka the live version
 6. Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/) (PR ) using your forked repo
-![Create PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/create-pullRequest.png)
-![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/pullRequest-step2.png)
+![Create PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Adding%20to%20the%20Style%20Guide/Screen%20Shot%202016-02-19%20at%2012.19.39%20PM.png)
+![Step2 PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Adding%20to%20the%20Style%20Guide/Screen%20Shot%202016-02-19%20at%2012.21.38%20PM.png)
 7. In your Pull request provide detailed information about the reason for the fix, and a screenshot of the output from your local host.
-7. You need <strong> 2 approvals</strong> before you can merge your pull request ![Step2 PullRequest](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/approval-Pullrequest.png)
+7. You need <strong> 2 approvals</strong> before you can merge your pull request ![Approval PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Adding%20to%20the%20Style%20Guide/Screen%20Shot%202016-02-19%20at%2012.28.17%20PM.png)
 8. It's recommended to stay up-to-date in the RWD [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19), the project is synced in Jira and hipchat.  Pull requests (PR), Merges, and commits alert everyone in the RWD Styleguide ​chatroom of activity.
 9. After your Code is approved by 2 reviewers: Merge your code
 10. Party cause you are now a contributing member of the Styleguide repo
