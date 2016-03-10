@@ -10,19 +10,27 @@ The styleguide to rule them all! this document covers:
 * [Resources and Helpful Links](#resources)
 * [Questions](#questions)
 
-To view deployed examples of different components bookmark [this page](https://dev10.kaiserpermanente.org/styleguide/) or deploy this repository locally with ``` grunt serve ```.
+To view deployed examples of different components [see the online version](https://dev10.kaiserpermanente.org/styleguide/) 
+
+<a name="installing"></a>
 
 ## Installing Styleguide
-<a name="installing"></a>
+Make sure you are running [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) to run npm and grunt commands
+
 ### NPM
 
-The styleguide is NPM module. You can install it by running the following command in your project directory:
+The styleguide is NPM module.  You can install it by running the following command in your project directory:
 
-    npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
+    `npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git`
 
+### Viewing the repository locally
 
-## How to Use Styleguide in your Projects
+* In Terminal/cmd  (if you have not already) get the NPM dev dependencies by running ` you@host:~ stylguide$ npm install`
+* Then to run `you@host:~ stylguide$grunt serve`
+* In any browser type in your local host at port `4502` example: `localhost:4502`
+
 <a name="usage"></a>
+## How to Use Styleguide in your Projects
 ### Modern Styles with Webpack
 
 If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
@@ -63,16 +71,16 @@ Then run `bower install` - watch all the front-end stuff bower installs. You sho
 
 Still figuring this out. You will experience import SASS errors when you import styleguide on a gulp project.
 
-## What's in Styleguide
 <a name="contents-styleguide"></a>
+## What's in Styleguide
 There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
 
 ### Bourbon / Neat
 
 We're using [bourbon.io](http://bourbon.io/). It's not a framework like Bootstrap. Instead, it's a library of _Mixins_ that allow one to have more control over styles. It's minimalistic in nature, but offers additional features through [Neat](http://neat.bourbon.io/) which is a Bourbon add-on that offers grids and layout helpers.
 
-## Namespacing your app
 <a name="namespacing"></a>
+## Namespacing your app
 It is very important to name space your styles for your APP. This will avoid conflict of your app integrating into AEM. Example, in your main.scss
 
         #my-awesome-app {
@@ -82,8 +90,9 @@ It is very important to name space your styles for your APP. This will avoid con
           //all the styles fall in here
         }
 
-## Contributing to Styleguide
+
 <a name="contributing"></a>
+## Contributing to Styleguide
 We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
 
 ## Before You begin
@@ -92,7 +101,6 @@ Make sure you have:
 
 * Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
 * Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
-* Access to Stash and the Style guide repo and the build plugin
 * [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) are setup in Stash
 * [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) is downloaded onto your machine to run the build plugin grunt taskrunner 
 * Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19) 
@@ -112,9 +120,8 @@ Summary of the current contribution process is:
 ### Detailed steps of How to Contribute
 The [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md) has a more complete guide so that your contribution is seamless and painless.
 
-
-## Resources and Helpful Links
 <a name="resources"></a>
+## Resources and Helpful Links
 
 * [jira board](https://jira.kp.org/browse/STYLE)
 * [Online Styleguide Version](http://dev10.kaiserpermanente.org/styleguide)
@@ -131,7 +138,7 @@ If you have something to add, a bug fix, or make a change [contribute to the Sty
 
 Check the [jira board](https://jira.kp.org/browse/STYLE) if you would like to see the currently open tasks and fixes that you can assign to yourself.
 
-###Questions?
 <a name="questions"></a>
+###Questions?
 
 If you're not completely clear on how to use the Styleguide in your project or got lost in the [documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)  please  visit [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19) and we'll help you out.
