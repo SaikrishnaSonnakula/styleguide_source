@@ -1,0 +1,63 @@
+$tooltip-arrow-border-width: 10px;
+$tooltip-inner-arrow-border-color: white;
+$tooltip-background-color: white;
+$tooltip-font-color: inky-blue;
+
+@mixin tooltip-arrow($arrow-direction) {
+  content: "";
+  position: absolute;
+  border-left: $tooltip-arrow-border-width solid transparent;
+  border-right: $tooltip-arrow-border-width solid transparent;
+  left: 50%;
+  margin-left: -$tooltip-arrow-border-width;
+
+  @if $arrow-direction == "bottom" {
+     top: 100%;
+   } @else {
+     bottom: 100%;
+   }
+}
+
+@mixin tooltip($tooltip-color, $arrow-direction) {
+  box-sizing: content-box;
+  display: inline-block;
+  position: relative;
+  background-color: $tooltip-background-color;
+  color: color($tooltip-font-color);
+  padding: $small-spacing;
+  border: 2px solid color($tooltip-color);
+  text-align: left;
+
+  // For hover State
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
+  @include transition-timing-function(linear);
+  @include transition-delay(initial);
+
+  &:before {
+    @include tooltip-arrow($arrow-direction);
+    background-color: $tooltip-background-color;
+    z-index: -1;
+
+    @if $arrow-direction == "bottom" {
+      border-top: $tooltip-arrow-border-width solid color($tooltip-color);
+      margin-top: 1px;
+    } @else {
+      border-bottom: $tooltip-arrow-border-width solid color($tooltip-color);
+      margin-bottom: 1px;
+    }
+  }
+
+  &:after {
+    @include tooltip-arrow($arrow-direction);
+    z-index: 1;
+
+    @if $arrow-direction == "bottom" {
+      border-top: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
+      margin-top: -1px;
+    } @else {
+      border-bottom: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
+      margin-bottom: -2px;
+    }
+  }
+}
