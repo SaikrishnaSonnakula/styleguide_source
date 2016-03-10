@@ -21,13 +21,13 @@ Make sure you are running [Node JS](https://nodejs.org/en/blog/release/v0.10.42/
 
 The styleguide is NPM module.  You can install it by running the following command in your project directory:
 
-    `npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git`
+    npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
 
 ### Viewing the repository locally
 
-* In Terminal/cmd  (if you have not already) get the NPM dev dependencies by running ` you@host:~ stylguide$ npm install`
-* Then to run `you@host:~ stylguide$grunt serve`
-* In any browser type in your local host at port `4502` example: `localhost:4502`
+* In Terminal/cmd  (if you cloned or forked the project) run npm` you@host:~ stylguide$ npm install`
+* Then `you@host:~ stylguide$grunt serve`
+* Open any browser type in your local host with port example: `localhost:4321`
 
 <a name="usage"></a>
 ## How to Use Styleguide in your Projects
@@ -91,12 +91,12 @@ It is very important to name space your styles for your APP. This will avoid con
         }
 
 
+
 <a name="contributing"></a>
 ## Contributing to Styleguide
 We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
 
-## Before You begin
-
+### Before You begin
 Make sure you have:
 
 * Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
@@ -107,7 +107,6 @@ Make sure you have:
 * Access to [jira](https://jira.kp.org/browse/STYLE)
 
 ### Process of Editing and Submitting a change​
-
 Summary of the current contribution process is: 
 
 * Fork the project to your Stash account ![Forking styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/_contributeme-imgs/fork-screenshot.png)
@@ -118,15 +117,16 @@ Summary of the current contribution process is:
 
 
 ### Detailed steps of How to Contribute
-The [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md) has a more complete guide so that your contribution is seamless and painless.
+More detailed steps included in the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
+
 
 <a name="resources"></a>
 ## Resources and Helpful Links
 
-* [jira board](https://jira.kp.org/browse/STYLE)
-* [Online Styleguide Version](http://dev10.kaiserpermanente.org/styleguide)
+* [Styleguide's jira board](https://jira.kp.org/browse/STYLE)
+* [Online Version](http://dev10.kaiserpermanente.org/styleguide)
 * [AEM Build](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-AEM/)
-* [Stylguide Build](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-deploy-DEV10/)
+* [Dev10 Build](http://xlzxdap0035x.lvdc.kp.org:8888/job/rwd-styleguide-deploy-DEV10/)
 * [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19)
 * [Build Plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse)
 * [Current Styleguide PullRequests](https://stash.kp.org/projects/RWD/repos/styleguide/pull-requests)
