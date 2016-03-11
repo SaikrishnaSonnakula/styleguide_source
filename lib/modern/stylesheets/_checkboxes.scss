@@ -58,7 +58,7 @@ $disabled-color: color("graphite");
     &:focus {
       & + label:before {
 	  border: $checkbox-border-width solid $enabled-color;
-    box-shadow: 0 0 0 2pt rgba(123, 183, 246, 0.8);
+      box-shadow: 0 0 0 2pt rgba(123, 183, 246, 0.8);
       }
     }
   }
