@@ -716,6 +716,40 @@
             </div>
           </div>
         </div>
+
+        <p>
+        An alternative feed items with collapsible content uses a @mixin with limited html requirements. Then add and remove <code>-open</code> to show and hide content within
+        elements with the <code>collapsible-content</code> class.
+        </p>
+
+        <div class="example">
+          <pre class="code language-javascript">
+            var expandingItemId = $("#expandable-feed-item");
+            var expandingItemContent = $(".expandable-feed-item__summary-content");
+            var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
+
+            expandingItemContent.on('click', function() {
+              expandingItemId.toggleClass("-open");
+            });
+
+            expandingItemCloseExpansion.on('click', function() {
+              expandingItemId.toggleClass("-open");
+            });
+          </pre>
+
+          <div id="expandable-feed-item" class="expandable-feed-item">
+            <button class="icon-close"></button>
+            <div class="expandable-feed-item__summary-content">
+              <i class="feature-icon fuchsia">NZ</i>
+              <h4 class="item-heading" style="width: 80%; margin: 0 0 0 15px; align-self: center;">There extra information if you click here<h4>
+            </div>
+            <div class="expandable-feed-item__hidden-content">
+              This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to the user to develop the feel and spacing for this internal content.
+              <button class="button">Confirm</button>
+              <button class="button -inverted">Cancel</button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="dropdowns-section">

@@ -33,6 +33,7 @@
 @import "fancy-select";
 @import "accordions";
 @import "tooltip";
+@import "expanding_item";
 
 @each $name, $bgcolor in $colors {
   .#{$name} {

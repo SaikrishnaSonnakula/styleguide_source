@@ -146,11 +146,14 @@
   }
 }
 
-
 .tooltip-top {
   @include tooltip("interactive-blue", "top");
 }
 
 .tooltip-bottom {
   @include tooltip("interactive-blue", "bottom");
+}
+
+.expandable-feed-item {
+  @include expanding-item();
 }
