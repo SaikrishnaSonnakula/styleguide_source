@@ -628,15 +628,19 @@
 
         <div class="example">
           <pre class="code language-javascript">
-        var feedItemId = $("#my-collapsible-feed-item");
-        var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
+          var feedItemId = $("#my-collapsible-feed-item");
+          var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
+          var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
 
-        feedItemHeading.on('click', function() {
-    feedItemId.toggleClass("-open");
-        });
+          feedItemHeading.on('click', function() {
+            feedItemId.toggleClass("-open");
+            var expanded = feedItemId.hasClass("-open");
+            feedItemId.attr("aria-expanded", expanded);
+            feedItemCollapsibleContent.attr("aria-hidden", !expanded);
+          });
           </pre>
 
-          <div id="my-collapsible-feed-item" class="feed-item -collapsible">
+          <div id="my-collapsible-feed-item" class="feed-item -collapsible" aria-expanded="false">
             <div class="-gutter">
               <div class="feature-icon fuchsia">IJ</div>
             </div>
@@ -657,7 +661,7 @@
                 </div>
               </button>
 
-              <p class="-body -collapsible">
+              <p class="-body -collapsible" aria-hidden="true">
               Extra content.
               </p>
 
