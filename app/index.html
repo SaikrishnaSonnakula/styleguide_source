@@ -718,22 +718,44 @@
         </div>
 
         <p>
-        An alternative feed items with collapsible content uses a @mixin with limited html requirements. Then add and remove <code>-open</code> to show and hide content within
-        elements with the <code>collapsible-content</code> class.
+        An alternative feed items with collapsible content uses a @mixin with limited html requirements.
+        The only requirements are: A button with class="icon-close", two divs one with your class appended by the post-fix '__summary-content' and one with your class appended by the post-fix '__hidden-content'.
+        Please refer to the example below.
         </p>
 
         <div class="example">
-          <pre class="code language-javascript">
+          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="true">
+            <button class="icon-close"></button>
+            <div class="expandable-feed-item__summary-content">
+              <i class="feature-icon fuchsia">NZ</i>
+              <h4 class="item-heading" style="width: 80%; margin: 0 0 0 25px; align-self: center;">There extra information if you click here<h4>
+            </div>
+            <div class="expandable-feed-item__hidden-content" aria-hidden="true">
+              This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to the user to develop the feel and spacing for this internal content.
+              <button class="button">Confirm</button>
+              <button class="button -inverted">Cancel</button>
+            </div>
+          </div>
+          <pre class="code language-javascript" data-langauge="scss">
             var expandingItemId = $("#expandable-feed-item");
             var expandingItemContent = $(".expandable-feed-item__summary-content");
             var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
+            var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
 
             expandingItemContent.on('click', function() {
-              expandingItemId.toggleClass("-open");
+              if(!expandingItemId.hasClass("-open")){
+                expandingItemId.toggleClass("-open");
+                var expanded = expandingItemId.hasClass("-open");
+                expandingItemId.attr("aria-expanded", expanded);
+                expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+              }
             });
 
             expandingItemCloseExpansion.on('click', function() {
               expandingItemId.toggleClass("-open");
+              var expanded = expandingItemId.hasClass("-open");
+              expandingItemId.attr("aria-expanded", expanded);
+              expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
             });
           </pre>
 
@@ -750,6 +772,7 @@
             </div>
           </div>
         </div>
+        <pre class="code language-scss" data-langauge="scss"><code>.expandable-feed-item { @include expanding-item(); }</code></pre>
       </section>
 
       <section id="dropdowns-section">
