@@ -13,6 +13,7 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
   display: flex;
   flex-direction: column;
   border: $expanding-table-invisible-border;
+  cursor: pointer;
 
   &:hover {
     border: $expanding-table-border-on-hover;
@@ -46,6 +47,7 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
   &.-open .icon-close {
     @extend %button-unstyled;
     color: $link-color;
+    cursor: pointer;
     display: block;
     align-self: flex-end;
     margin: $small-spacing $expanding-table-hidden-content-margin 0 $small-spacing;
@@ -86,6 +88,7 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
   }
 
   &.-open {
+    cursor: auto;
     border: $expanding-table-border-on-hover;
 
     @include media($mobile) {
