@@ -4,7 +4,9 @@ $desktop-item-icon-padding: $medium-spacing;
 $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
 $feed-item-border-size: 3px;
 $expanded-top-margin: $large-spacing;
-$expanded-close-icon-right-spacing: 20px;
+$feed-item-right-gutter-size: 20px;
+$expanded-close-icon-mobile-size: 20px;
+$expanded-close-icon-desktop-size: 25px;
 
 @mixin gutter($width, $padding, $mobile-width, $mobile-padding) {
   width: $mobile-width;
@@ -38,6 +40,7 @@ $expanded-close-icon-right-spacing: 20px;
     @include clearfix;
     margin-left: $mobile-item-gutter-width;
     margin-bottom: $medium-spacing;
+    margin-right: $feed-item-right-gutter-size;
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
     }
@@ -56,21 +59,23 @@ $expanded-close-icon-right-spacing: 20px;
     .item-heading {
       max-width: 99%;
       margin-top: 0;
+      font-family: $medium-font-family;
     }
 
     &:after {
       @include icon-for("close");
       outline: none;
       line-height: $small-font-size;
-      font-size: $large-font-size;
+      font-size: $expanded-close-icon-desktop-size;
       color: $link-color;
       position: absolute;
       opacity: 0;
-      right: $expanded-close-icon-right-spacing;
+      right: 0;
       top: 0;
       @include media($mobile) {
-        right: $expanded-close-icon-right-spacing;
+        right: 0;
         top: -$large-spacing;
+        font-size: $expanded-close-icon-mobile-size;
       }
     }
   }
