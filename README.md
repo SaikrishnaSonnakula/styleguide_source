@@ -109,10 +109,12 @@ Make sure you have:
 ### Process of Editing and Submitting a change​
 Summary of the current contribution process is: 
 
-* Fork the project to your Stash account ![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
+* Fork the project to your Stash account 
+![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
 
 * In the new forked copy make the code changes and push code changes to your forked master branch
-* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/)![Create PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.19.39%20PM.png)
+* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/)
+![Create PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.19.39%20PM.png)
 * have the RWD styleguide team review and recieve a minimum of 2 approvals
 * Merge the Pull Request into the master branch.
 
