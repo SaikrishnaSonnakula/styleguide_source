@@ -2,6 +2,11 @@ $checkbox-border-width: 2px;
 $checkbox-size-mobile: 20px;
 $enabled-color: color("dolphin");
 $disabled-color: color("graphite");
+$focus-color: rgba(123, 183, 246, 0.8);
+
+@mixin focus-outline {
+  box-shadow: 0 0 0 2pt $focus-color;
+}
 
 @mixin checkbox($class, $size, $label-size: $base-font-size) {
   [type="checkbox"].#{$class}:not(:checked),
@@ -58,7 +63,7 @@ $disabled-color: color("graphite");
     &:focus {
       & + label:before {
 	  border: $checkbox-border-width solid $enabled-color;
-      box-shadow: 0 0 0 2pt rgba(123, 183, 246, 0.8);
+      @include focus-outline;
       }
     }
   }
