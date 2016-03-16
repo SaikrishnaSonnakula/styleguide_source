@@ -60,11 +60,14 @@ $action-area-button-color-bg: color(interactive-blue);
         text-align: center;
       }
 
+      @include media($device){
+        z-index: $foreground;
+        @include position(fixed, inherit 0px 0px 0px);
+      }
+
       .-primary-action {
         @extend %button;
         @include media($device){
-          z-index: $foreground;
-          @include position(fixed, inherit 0px 0px 0px);
           width: 100%;
         }
 
