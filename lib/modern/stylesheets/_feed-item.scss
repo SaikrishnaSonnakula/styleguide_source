@@ -3,33 +3,33 @@ $mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-pa
 $desktop-item-icon-padding: $medium-spacing;
 $desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
 $feed-item-border-size: 3px;
+$expanded-top-margin: $large-spacing;
+$feed-item-right-gutter-size: 20px;
+$expanded-close-icon-mobile-size: 20px;
+$expanded-close-icon-desktop-size: 25px;
 
 @mixin gutter($width, $padding, $mobile-width, $mobile-padding) {
-  @extend %-section;
-
   width: $mobile-width;
   float: left;
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  padding: 0 $mobile-padding;
 
   @include media($desktop) {
     width: $width;
     float: left;
-    padding-left: $padding;
-    padding-right: $padding;
+    padding: 0 $padding;
   }
 }
 
 .feed-item {
+  padding: $small-spacing 0;
   @include transition(position 0.3s ease-in-out);
   @include media($desktop){
     border:  $feed-item-border-size solid transparent;
-  }
+    padding: $medium-spacing 0;
 
-
-  %-section {
-    margin-top: $medium-spacing;
-    margin-bottom: $medium-spacing;
+    &:hover {
+      border: $feed-item-border-size solid color(graphite-light);
+    }
   }
 
   .-gutter {
@@ -37,11 +37,10 @@ $feed-item-border-size: 3px;
   }
 
   .-main {
-    @extend %-section;
     @include clearfix;
     margin-left: $mobile-item-gutter-width;
-    margin-top: $medium-spacing;
     margin-bottom: $medium-spacing;
+    margin-right: $feed-item-right-gutter-size;
     @include media($desktop) {
       margin-left: $desktop-item-gutter-width;
     }
@@ -60,17 +59,24 @@ $feed-item-border-size: 3px;
     .item-heading {
       max-width: 99%;
       margin-top: 0;
+      font-family: $medium-font-family;
     }
 
     &:after {
       @include icon-for("close");
+      outline: none;
       line-height: $small-font-size;
-      font-size: $large-font-size;
+      font-size: $expanded-close-icon-desktop-size;
       color: $link-color;
       position: absolute;
       opacity: 0;
-      right: $mobile-item-icon-padding;
+      right: 0;
       top: 0;
+      @include media($mobile) {
+        right: 0;
+        top: -$large-spacing;
+        font-size: $expanded-close-icon-mobile-size;
+      }
     }
   }
 
@@ -97,14 +103,22 @@ $feed-item-border-size: 3px;
       z-index: $foreground;
 
       .-main {
-        position: absolute;
-        top: 0;
-        bottom: 0;
+        margin-top: $expanded-top-margin;
+        @include media($desktop) {
+          margin-top: 0;
+        }
+      }
+
+      .-gutter {
+        margin-top: $expanded-top-margin;
+        @include media($desktop) {
+          margin-top: 0;
+        }
       }
     }
   }
 
   &.-collapsible, &.-clickable {
-    &:hover, &.-open { border-color: color(graphite-light); }
+    &:hover, &.-open { border: $feed-item-border-size solid color(graphite-light); }
   }
 }

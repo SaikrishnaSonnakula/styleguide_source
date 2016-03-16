@@ -53,8 +53,15 @@ $(function() {
     ev.preventDefault();
   });
 
-  $("#my-collapsible-feed-item .-click-to-expand").click(function() {
-    $("#my-collapsible-feed-item").toggleClass("-open");
+  var feedItemId = $("#my-collapsible-feed-item");
+  var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
+  var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
+
+  feedItemHeading.on('click', function() {
+    feedItemId.toggleClass("-open");
+    var expanded = feedItemId.hasClass("-open");
+    feedItemId.attr("aria-expanded", expanded);
+    feedItemCollapsibleContent.attr("aria-hidden", !expanded);
   });
 
   $("#best-nba-team .-value").click(function() {
