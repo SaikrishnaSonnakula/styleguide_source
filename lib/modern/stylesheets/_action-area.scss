@@ -30,7 +30,7 @@ $action-area-button-color-bg: color(interactive-blue);
   }
 
   .actions-container {
-    @extend .two-columns;
+    @include row(table);
     margin-top: $xl-spacing;
     margin-bottom: $xl-spacing;
 
@@ -39,8 +39,9 @@ $action-area-button-color-bg: color(interactive-blue);
     }
 
     .action-messages {
-      @extend .-column;
-      padding: 0;
+      @include media($desktop) {
+        @include span-columns(6);
+      }
 
       @include media($device) {
         display: none;
@@ -53,21 +54,21 @@ $action-area-button-color-bg: color(interactive-blue);
     }
 
     .action-buttons {
-      @extend .-column;
-      padding: 0;
-
+      @include media($desktop) {
+        @include span-columns(6);
+      }
       @include media($desktop) {
         text-align: center;
       }
 
-      @include media($device){
+      @include media($device) {
         z-index: $foreground;
         @include position(fixed, inherit 0px 0px 0px);
       }
 
       .-primary-action {
         @extend %button;
-        @include media($device){
+        @include media($device) {
           width: 100%;
         }
 
