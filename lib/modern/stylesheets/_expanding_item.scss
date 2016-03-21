@@ -46,28 +46,8 @@ $expanding-table-left-content-gutter: 100px;
 
   &__hidden-content {
     display: none;
-  }
-
-  &.-open .icon-close {
-    @extend %button-unstyled;
-    color: $link-color;
-    cursor: pointer;
-    display: block;
-    align-self: flex-end;
-    margin: $small-spacing $expanding-table-hidden-content-margin 0 $small-spacing;
-    font-size: $expanding-table-icon-font-size-desktop;
-    @include media($mobile) {
-      font-size: $expanding-table-icon-font-size-mobile;
-    }
-  }
-
-  .-open &__hidden-content {
-    display: block;
     margin: 0 $expanding-table-hidden-content-margin 0 $expanding-table-left-content-gutter;
-
     @include media($mobile) {
-      display: flex;
-      flex-direction: column;
       height: 100%;
       margin-left: $small-spacing;
     }
@@ -91,6 +71,19 @@ $expanding-table-left-content-gutter: 100px;
     }
   }
 
+  &.-open .icon-close {
+    @extend %button-unstyled;
+    color: $link-color;
+    cursor: pointer;
+    display: block;
+    align-self: flex-end;
+    margin: $small-spacing $expanding-table-hidden-content-margin 0 $small-spacing;
+    font-size: $expanding-table-icon-font-size-desktop;
+    @include media($mobile) {
+      font-size: $expanding-table-icon-font-size-mobile;
+    }
+  }
+
   &.-open {
     cursor: auto;
     border: $expanding-table-border-on-hover;
@@ -110,6 +103,23 @@ $expanding-table-left-content-gutter: 100px;
     & .item-heading {
       @include media($mobile) {
         margin-top: $expanding-table-heading-margin-top-for-mobile;
+      }
+    }
+
+    div {
+      display: block;
+
+      &:first-of-type {
+        display: inherit
+      }
+
+      @include media($mobile) {
+        &:first-of-type {
+          display: inherit;
+          flex-direction: initial;
+        }
+        display: flex;
+        flex-direction: column;
       }
     }
   }
