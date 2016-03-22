@@ -179,21 +179,15 @@ code {
 .color-section {
   @include outer-container(100%);
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .color {
   margin-bottom: $paragraph-spacing;
   font-size: $small-font-size;
-
-  @include media($tablet) {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-
-  @include media($desktop) {
-    @include span-columns(4);
-    @include omega(3n);
-  }
+  margin-left: $small-spacing;
+  @include span-columns(3);
 
   .swatch {
     height: 80px;
