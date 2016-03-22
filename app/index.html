@@ -729,7 +729,7 @@
         </p>
 
         <div class="example">
-          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
+          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false" tabindex="0">
             <button class="icon-close"></button>
             <div class="expandable-feed-item__summary-content">
               <i class="feature-icon fuchsia">NZ</i>
@@ -743,11 +743,10 @@
           </div>
           <pre class="code language-javascript" data-langauge="scss">
             var expandingItemId = $("#expandable-feed-item");
-            var expandingItemContent = $(".expandable-feed-item__summary-content");
             var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
             var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
 
-            expandingItemContent.on('click', function() {
+            expandingItemId.on('click', function() {
               if(!expandingItemId.hasClass("-open")){
                 expandingItemId.toggleClass("-open");
                 var expanded = expandingItemId.hasClass("-open");

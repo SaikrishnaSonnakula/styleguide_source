@@ -51,24 +51,6 @@ $expanding-table-left-content-gutter: 100px;
       height: 100%;
       margin-left: $small-spacing;
     }
-
-    & button {
-      margin: $large-spacing $small-spacing $large-spacing 0;
-      display: inline-block;
-      width: 40%;
-
-      @include media($mobile) {
-        margin: 0 0 $small-spacing 0;
-        display: block;
-        width: 100%;
-      }
-    }
-
-    & button:first-of-type {
-      @include media($mobile) {
-        margin-top: auto;
-      }
-    }
   }
 
   &.-open .icon-close {
@@ -96,17 +78,13 @@ $expanding-table-left-content-gutter: 100px;
       z-index: $foreground;
     }
 
-    & .-body {
-      @include clearfix;
-    }
-
     & .item-heading {
       @include media($mobile) {
         margin-top: $expanding-table-heading-margin-top-for-mobile;
       }
     }
 
-    div {
+    > div {
       display: block;
 
       &:first-of-type {
