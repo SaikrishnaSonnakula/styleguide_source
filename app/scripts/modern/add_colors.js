@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-var colorSections = [
+const colorSections = [
   {
   name: "Typography and Interactive Colors",
   colors: [
@@ -72,7 +72,7 @@ var colorSections = [
 }
 ];
 
-var getHex = function($el) {
+const getHex = ($el) => {
   const background = $el.css('backgroundColor');
   const rgb = background.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
@@ -83,23 +83,25 @@ var getHex = function($el) {
   return ("#" + parseHexSinglet(rgb[1]) + parseHexSinglet(rgb[2]) + parseHexSinglet(rgb[3])).toUpperCase();
 };
 
-function appendColor(color, $section) {
-  var $color = $('<div class="color"></div>');
-  var colors = [].concat(color);
+const appendColor = (color, $section) => {
+
+  const $color = $('<div class="color"></div>');
+  let colors = [].concat(color);
   $section.append($color);
 
-  var $swatch = $('<div class="swatch '+ colors[0] +'"></div>');
+  const $swatch = $('<div class="swatch '+ colors[0] +'"></div>');
   $color.append($swatch);
 
   colors.forEach(function(color) {
     $color.append('<code>' + color + '</code><br/>');
   });
-  $color.append('<code>' + getHex($swatch) + '</code>');
-}
 
-export default function() {
+  $color.append('<code>' + getHex($swatch) + '</code>');
+};
+
+export default () => {
   colorSections.forEach(function(section){
-    var $section = $('<div class="color-section"></div>');
+    const $section = $('<div class="color-section"></div>');
 
     $('#colors').append($section);
     $section.before('<h3 class="styleguide-subheading">' + section.name + '</h3>');
@@ -108,4 +110,4 @@ export default function() {
       appendColor(color, $section);
     });
   });
-}
+};

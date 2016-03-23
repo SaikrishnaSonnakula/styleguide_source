@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-webfont');
 
   buildPlugin(grunt, {
+    useEslint: true,
     webpack: {
       entry: entryPaths,
       devEntry: entryPaths,
