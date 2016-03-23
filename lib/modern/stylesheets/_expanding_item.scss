@@ -40,7 +40,7 @@ $expanding-table-left-content-gutter: 100px;
 
   &__summary-content {
     @include clearfix;
-    display: inherit;
+    display: flex;
     padding: $medium-spacing $small-spacing;
   }
 
@@ -50,6 +50,11 @@ $expanding-table-left-content-gutter: 100px;
     @include media($mobile) {
       height: 100%;
       margin-left: $small-spacing;
+      position: absolute;
+    }
+
+    &.-open {
+      display: block;
     }
   }
 
@@ -81,23 +86,6 @@ $expanding-table-left-content-gutter: 100px;
     & .item-heading {
       @include media($mobile) {
         margin-top: $expanding-table-heading-margin-top-for-mobile;
-      }
-    }
-
-    > div {
-      display: block;
-
-      &:first-of-type {
-        display: inherit
-      }
-
-      @include media($mobile) {
-        &:first-of-type {
-          display: inherit;
-          flex-direction: initial;
-        }
-        display: flex;
-        flex-direction: column;
       }
     }
   }
