@@ -24,7 +24,7 @@ $medium-font-family: "Gotham 5r";
 $bold-font-family: "Gotham 7r";
 
 // HEADING CLASSES
-.page-heading {
+%page-heading {
   font-size: $medium-font-size;
   font-weight: bold;
   color: color(inky-blue);
@@ -33,8 +33,11 @@ $bold-font-family: "Gotham 7r";
     font-size: $large-font-size;
   }
 }
+.page-heading{
+  @extend %page-heading;
+}
 
-.item-heading {
+%item-heading {
   margin-bottom: $tiny-spacing;
   font-size: $small-font-size;
   letter-spacing: -1px;
@@ -45,8 +48,11 @@ $bold-font-family: "Gotham 7r";
     font-size: $medium-font-size;
   }
 }
+.item-heading {
+  @extend item-heading;
+}
 
-.section-heading {
+%section-heading {
   font-size: $small-font-size;
   letter-spacing: -0.75px;
   color: color(dolphin);
@@ -55,9 +61,12 @@ $bold-font-family: "Gotham 7r";
     font-size: $medium-font-size;
   }
 }
+.section-heading{
+  @extend %section-heading;
+}
 // FONT STYLE CLASSES
 
-.item-tag {
+%item-tag {
   text-transform: uppercase;
   font-size: $extra-tiny-font-size;
   color: color(dolphin);
@@ -65,16 +74,21 @@ $bold-font-family: "Gotham 7r";
     font-size: $tiny-font-size;
   }
 }
-
-.auxiliary-text {
+.item-tag {
+  @extend %item-tag;
+}
+%auxiliary-text {
   font-size: $tiny-font-size;
   color: color(dolphin);
   @include media($desktop) {
     font-size: $tiny-font-size;
   }
 }
+.auxiliary-text{
+  @extend %auxiliary-text;
+}
 
-.inverted-link {
+%inverted-link {
   &, &:visited {
     color: $text-light;
   }
@@ -82,4 +96,7 @@ $bold-font-family: "Gotham 7r";
   &:hover, &:focus {
     color: color(interactive-blue);
   }
+}
+.inverted-link{
+  @extend %inverted-link;
 }
