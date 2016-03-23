@@ -7,10 +7,10 @@ $expanding-table-icon-color: $link-color;
 $expanding-table-border-on-hover: $feed-item-border-size solid color(graphite-light);
 $expanding-table-invisible-border: $feed-item-border-size solid transparent;
 $expanding-table-heading-margin-top-for-mobile: 10px;
-
+$expanding-table-left-content-gutter: 100px;
 
 @mixin expanding-item() {
-  display: flex;
+  @include display(flex);
   flex-direction: column;
   border: $expanding-table-invisible-border;
   cursor: pointer;
@@ -21,12 +21,16 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
 
   & .feature-icon {
     margin: 0 $expanding-table-icon-right-margin 0 0;
+    min-width: 50px;
+
+    @include media($desktop) {
+      min-width: 60px;
+    }
   }
 
   & .item-heading {
     font-family: $medium-font-family;
     margin: 0;
-    width: 75%;
     align-self: center;
   }
 
@@ -36,12 +40,22 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
 
   &__summary-content {
     @include clearfix;
-    display: inherit;
+    @include display(flex);
     padding: $medium-spacing $small-spacing;
   }
 
   &__hidden-content {
     display: none;
+    margin: 0 $expanding-table-hidden-content-margin 0 $expanding-table-left-content-gutter;
+    @include media($mobile) {
+      height: 100%;
+      margin-left: $small-spacing;
+      position: absolute;
+    }
+
+    &.-open {
+      display: block;
+    }
   }
 
   &.-open .icon-close {
@@ -54,36 +68,6 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
     font-size: $expanding-table-icon-font-size-desktop;
     @include media($mobile) {
       font-size: $expanding-table-icon-font-size-mobile;
-    }
-  }
-
-  &.-open &__hidden-content {
-    display: block;
-    margin: 0 $expanding-table-hidden-content-margin;
-
-    @include media($mobile) {
-      display: flex;
-      flex-direction: column;
-          height: 100%;
-    }
-
-    & button {
-      margin: $large-spacing $medium-spacing $large-spacing 0;
-      display: inline-block;
-      width: 40%;
-      align-self: flex-end;
-
-      @include media($mobile) {
-        margin: $small-spacing 0;
-        display: block;
-        width: 100%;
-      }
-    }
-
-    & button:first-child {
-      @include media($mobile) {
-        margin-top: auto;
-      }
     }
   }
 
