@@ -96,7 +96,7 @@ const appendColor = (color, $section) => {
     $color.append('<code>' + color + '</code><br/>');
   });
 
-  $color.append('<code>' + getHex($swatch) + '</code>');
+  // $color.append('<code>' + getHex($swatch) + '</code>');
 };
 
 export default () => {
