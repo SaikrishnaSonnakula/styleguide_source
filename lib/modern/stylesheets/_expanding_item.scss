@@ -10,7 +10,7 @@ $expanding-table-heading-margin-top-for-mobile: 10px;
 $expanding-table-left-content-gutter: 100px;
 
 @mixin expanding-item() {
-  display: flex;
+  @include display(flex);
   flex-direction: column;
   border: $expanding-table-invisible-border;
   cursor: pointer;
@@ -40,7 +40,7 @@ $expanding-table-left-content-gutter: 100px;
 
   &__summary-content {
     @include clearfix;
-    display: flex;
+    @include display(flex);
     padding: $medium-spacing $small-spacing;
   }
 
