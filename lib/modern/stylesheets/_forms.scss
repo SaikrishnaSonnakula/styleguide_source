@@ -1,9 +1,14 @@
 $input-border-width: 1px;
 
-.form-control {
+%form-control {
+  @include checkbox($checkbox-size-mobile);
   padding: $small-spacing - $input-border-width;
   border: solid $input-border-width color(graphite);
   vertical-align: middle;
   color: color(dolphin);
   margin-right: $small-spacing;
+}
+
+.form-control {
+  @extend %form-control;
 }

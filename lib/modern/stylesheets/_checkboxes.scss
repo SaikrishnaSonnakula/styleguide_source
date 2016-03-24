@@ -8,9 +8,9 @@ $focus-color: rgba(123, 183, 246, 0.8);
   box-shadow: 0 0 0 2pt $focus-color;
 }
 
-@mixin checkbox($class, $size, $label-size: $base-font-size) {
-  [type="checkbox"].#{$class}:not(:checked),
-  [type="checkbox"].#{$class}:checked {
+@mixin checkbox($size, $label-size: $base-font-size) {
+  &[type="checkbox"]:not(:checked),
+  &[type="checkbox"]:checked {
     // hide the real checkbox
     position: absolute;
     left: -9999px;
@@ -27,78 +27,77 @@ $focus-color: rgba(123, 183, 246, 0.8);
       min-width: $size;
 
       &.-screenreader {
-	padding-left: 0;
+        padding-left: 0;
       }
 
       &:before {
-	overflow: hidden;
-	content: '';
-	z-index: $midground;
-	position: absolute;
-	top: $checkbox-border-width;
-	left: $checkbox-border-width;
-	width: $size;
-	height: $size;
-	border: $checkbox-border-width solid $enabled-color;
-	border-radius: $checkbox-border-width;
-	background-color: $enabled-color;
+        overflow: hidden;
+        content: '';
+        z-index: $midground;
+        position: absolute;
+        top: $checkbox-border-width;
+        left: $checkbox-border-width;
+        width: $size;
+        height: $size;
+        border: $checkbox-border-width solid $enabled-color;
+        border-radius: $checkbox-border-width;
+        background-color: $enabled-color;
 
-	&:hover {
-	  border-color: $enabled-color;
-	}
+        &:hover {
+          border-color: $enabled-color;
+        }
       }
 
       &:after {
-	@include icon-for("checkmark");
-	z-index: $midground;
-	position: absolute;
-	top: $checkbox-border-width;
-	left: (($size/2) + $checkbox-border-width)/2;
-	font-size: $size * 0.65;
-	background-color: $enabled-color;
-	color: white;
+        @include icon-for("checkmark");
+        z-index: $midground;
+        position: absolute;
+        top: $checkbox-border-width;
+        left: (($size/2) + $checkbox-border-width)/2;
+        font-size: $size * 0.65;
+        background-color: $enabled-color;
+        color: white;
       }
     }
 
     &:focus {
       & + label:before {
-	  border: $checkbox-border-width solid $enabled-color;
-      @include focus-outline;
+        border: $checkbox-border-width solid $enabled-color;
+        @include focus-outline;
       }
     }
   }
 
-  [type="checkbox"].#{$class}:not(:checked) + label:before {
+  &[type="checkbox"]:not(:checked) + label:before {
     background-color: white;
   }
 
   //disabled
-  [type="checkbox"].#{$class}:disabled:checked + label:before {
+  &[type="checkbox"]:disabled:checked + label:before {
     border: $checkbox-border-width solid $disabled-color;
     background-color: $disabled-color;
   }
 
-  [type="checkbox"].#{$class}:disabled:not(:checked) + label:before,
-  [type="checkbox"].#{$class}:disabled:checked + label:before {
+  &[type="checkbox"]:disabled:not(:checked) + label:before,
+  &[type="checkbox"]:disabled:checked + label:before {
     border: $checkbox-border-width solid $disabled-color;
   }
 
-  [type="checkbox"].#{$class}:disabled:checked + label:after {
+  &[type="checkbox"]:disabled:checked + label:after {
     background-color: $disabled-color;
     color: white;
   }
 
-  [type="checkbox"].#{$class}:disabled + label {
+  &[type="checkbox"]:disabled + label {
     cursor: not-allowed !important;
   }
 
-  [type="checkbox"].#{$class}:not(:checked) + label:after {
+  &[type="checkbox"]:not(:checked) + label:after {
     opacity: 0;
   }
 
-  [type="checkbox"].#{$class}:checked + label:after {
+  &[type="checkbox"]:checked + label:after {
     opacity: 1;
   }
 }
 
-@include checkbox('form-control', $checkbox-size-mobile);
