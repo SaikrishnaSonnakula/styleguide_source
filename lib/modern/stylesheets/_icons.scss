@@ -17,8 +17,13 @@ $mobile-icon-border-size: 2px;
   text-align: center;
   vertical-align: middle;
   line-height: normal;
+  
   &:before {
     vertical-align: -moz-middle-with-baseline;
+  }
+
+  @media screen and (min-width:0\0) {
+    line-height: 2;
   }
 }
 
