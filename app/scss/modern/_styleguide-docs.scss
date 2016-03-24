@@ -399,7 +399,7 @@ table.table {
 
 .icons-listing {
   @include outer-container();
-  display: flex;
+  @include display(flex);
   flex-wrap: wrap;
   font-family: $base-font-family;
 
