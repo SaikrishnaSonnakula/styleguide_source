@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 961.5 1000" style="enable-background:new 0 0 961.5 1000;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#231F20;}
-</style>
-<title>exclamation</title>
-<g>
-	<path class="st0" d="M340.9,859.9c-0.1,77.2,62.4,140,139.6,140.1c77.2,0.1,140-62.4,140.1-139.6s-62.4-140-139.6-140.1
-		c0,0-0.1,0-0.1,0c-77-0.3-139.7,61.8-140,138.7C340.9,859.3,340.9,859.6,340.9,859.9z"/>
-	<rect x="366.9" class="st0" width="227.8" height="614.3"/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="exclamation">
+	<g id="exclamation_1_">
+		<path style="fill:#231F20;" d="M230.358,479.294c0,38.675,31.037,69.63,69.629,69.63c38.612,0,69.655-30.955,69.655-69.63
+			c0-38.586-31.043-69.528-69.655-69.528C261.395,409.766,230.358,440.708,230.358,479.294z"/>
+		<rect x="243.285" y="51.076" style="fill:#231F20;" width="113.424" height="305.866"/>
+	</g>
+</g>
+<g id="Layer_1">
 </g>
 </svg>

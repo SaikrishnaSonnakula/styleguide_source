@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="961.539px" height="1000px" viewBox="0 0 961.539 1000" style="enable-background:new 0 0 961.539 1000;"
-	 xml:space="preserve">
-<g id="KP_x5F_Heart_x5F_icon">
-	<g>
-		<path style="fill:#020202;" d="M703.99,65.45c-96.142,0-179.973,53.308-223.255,132.059
-			C437.521,118.758,353.758,65.45,257.479,65.45c-140.599,0-254.611,114.013-254.611,254.61
-			c0,360.984,477.867,614.489,477.867,614.489s477.936-253.505,477.936-614.489C958.671,179.463,844.554,65.45,703.99,65.45"/>
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="heart">
+	<g id="heart_1_">
+		<g>
+			<path style="fill:#020202;" d="M416.775,72.701c-50.267,0-94.152,27.879-116.801,69.097
+				c-22.597-41.218-66.43-69.097-116.801-69.097C109.63,72.701,50,132.331,50,205.874c0,188.827,249.974,321.425,249.974,321.425
+				S550,394.701,550,205.926C550,132.383,490.318,72.701,416.775,72.701"/>
+		</g>
 	</g>
 </g>
 <g id="Layer_1">
