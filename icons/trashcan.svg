@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="961.539px" height="1000px" viewBox="0 0 961.539 1000" style="enable-background:new 0 0 961.539 1000;"
-	 xml:space="preserve">
-<g id="KP_x5F_Trashcan_x5F_icon">
-	<path style="fill:#1C1B1A;" d="M149.086,999.818l661.44,0.182V255.42H151.014L149.086,999.818z M214.856,319.248h531.827v616.951
-		H214.856V319.248z M682.896,85.228V0.118H278.671v85.11H129.732v85.082h702.074V85.228H682.896z M640.335,85.228H321.232V42.68
-		h319.103V85.228z M597.772,851.089h63.843v-468.04h-63.843V851.089z M448.862,851.089h63.843v-468.04h-63.843V851.089z
-		 M299.951,851.089h63.843v-468.04h-63.843V851.089z"/>
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="trashcan">
+	<g id="trashcan_1_">
+		<path style="fill:#1C1B1A;" d="M134.158,549.9l330.733,0.1V177.663H135.109L134.158,549.9z M167.062,209.566h265.927v308.531
+			H167.062V209.566z M401.085,92.554V50h-202.12v42.554h-74.507v42.554h351.085V92.554H401.085z M379.783,92.554H220.217V71.302
+			h159.566L379.783,92.554L379.783,92.554z M358.531,475.543h31.903V241.469h-31.903V475.543z M284.073,475.543h31.903V241.469
+			h-31.903L284.073,475.543L284.073,475.543z M209.616,475.543h31.903V241.469h-31.903V475.543z"/>
+	</g>
 </g>
 <g id="Layer_1">
 </g>

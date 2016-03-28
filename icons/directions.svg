@@ -1,4 +1,13 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.47 31.47">
-  <title>directions</title>
-  <path d="M34.11,16.82L20.37,3.08a2,2,0,0,0-2.83,0L3.81,16.82a2,2,0,0,0,0,2.83l4.74,4.74v-6A2.41,2.41,0,0,1,11,16h9.51V10.9l7.35,7.35L20.46,25.6V20.79H13.37v8.44l4.17,4.17a2,2,0,0,0,2.83,0L34.11,19.65a2,2,0,0,0,0-2.83" transform="translate(-3.22 -2.5)"/>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="directions">
+	<path id="directions_1_" d="M540.736,277.533L322.473,59.256c-12.364-12.342-32.577-12.342-44.943,0L59.277,277.533
+		c-12.364,12.356-12.364,32.579,0,44.927l75.249,75.273v-95.626c0-21.192,17.174-38.366,38.365-38.366h151.041v-80.267
+		l116.71,116.71l-116.71,116.724v-76.451H211.257v134.008l66.273,66.274c12.366,12.349,32.579,12.349,44.943,0L540.736,322.46
+		C553.084,310.112,553.084,289.889,540.736,277.533"/>
+</g>
+<g id="Layer_1">
+</g>
 </svg>

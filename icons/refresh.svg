@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="961.539px" height="1000px" viewBox="0 0 961.539 1000" style="enable-background:new 0 0 961.539 1000;"
-	 xml:space="preserve">
-<g id="KP_x5F_Refresh_x5F_icon">
-	<path style="fill:#1C1B1A;" d="M804.088,639.815c-35.473,143.713-165.093,250.719-319.56,250.719
-		c-181.68,0-329.474-147.81-329.474-329.523c0-181.664,147.793-329.426,329.474-329.426v-0.21h1.166v172.124l331.742-199.045
-		L485.694,5.408v122.28h-1.166v-0.161c-1.296,0-2.56,0.161-3.855,0.161h-4.438v0.227c-235.2,4.471-425.24,196.891-425.24,433.095
-		c0,239.104,194.478,433.581,433.533,433.581c212.102,0,388.793-153.235,426.016-354.776H804.088z"/>
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="refresh">
+	<g id="refresh_1_">
+		<path style="fill:#1C1B1A;" d="M463.44,370.663c-17.944,72.634-83.451,126.719-161.545,126.719
+			c-91.842,0-166.549-74.707-166.549-166.549s74.707-166.498,166.549-166.498v-0.101h0.607v86.989l167.661-100.586L302.502,50
+			v61.818h-0.607v-0.101c-0.657,0-1.314,0.101-1.971,0.101H297.7v0.101c-118.884,2.275-214.921,99.525-214.921,218.914
+			C82.779,451.688,181.091,550,301.895,550c107.208,0,196.522-77.436,215.326-179.337H463.44z"/>
+	</g>
 </g>
 <g id="Layer_1">
 </g>
