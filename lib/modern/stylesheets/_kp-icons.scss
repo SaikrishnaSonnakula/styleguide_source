@@ -5,11 +5,19 @@
   @at-root {
     @font-face {
       font-family: "kp-icons";
+<<<<<<< 16664bb3b0907242db90f8a8bb294aa4d951248f
       src: url("assets/fonts/kp-icons.eot?76885bb2d8640bded2a3508eaed0c584");
       src: url("assets/fonts/kp-icons.eot?#iefix") format("embedded-opentype"),
 		url("assets/fonts/kp-icons.woff?76885bb2d8640bded2a3508eaed0c584") format("woff"),
 		url("assets/fonts/kp-icons.ttf?76885bb2d8640bded2a3508eaed0c584") format("truetype"),
 		url("assets/fonts/kp-icons.svg?76885bb2d8640bded2a3508eaed0c584#kp-icons") format("svg");
+=======
+      src: url("assets/fonts/kp-icons.eot?705c9a8c6da3c759cc0c5e511c699f10");
+      src: url("assets/fonts/kp-icons.eot?#iefix") format("embedded-opentype"),
+		url("assets/fonts/kp-icons.woff?705c9a8c6da3c759cc0c5e511c699f10") format("woff"),
+		url("assets/fonts/kp-icons.ttf?705c9a8c6da3c759cc0c5e511c699f10") format("truetype"),
+		url("assets/fonts/kp-icons.svg?705c9a8c6da3c759cc0c5e511c699f10#kp-icons") format("svg");
+>>>>>>> Add Back a few extra icons
       font-weight: normal;
       font-style: normal;
     }
@@ -225,7 +233,11 @@
 .icon-membercard:before {
   content:"\f141";
 }
+<<<<<<< 16664bb3b0907242db90f8a8bb294aa4d951248f
 .icon-message:before {
+=======
+.icon-minus:before {
+>>>>>>> Add Back a few extra icons
   content:"\f142";
 }
 .icon-more:before {
@@ -261,6 +273,7 @@
 .icon-play-video:before {
   content:"\f14d";
 }
+<<<<<<< 16664bb3b0907242db90f8a8bb294aa4d951248f
 .icon-preferences:before {
   content:"\f14e";
 }
@@ -357,4 +370,105 @@
 .icon-yoga:before {
   content:"\f16d";
 }
+=======
+.icon-plus:before {
+  content:"\f14e";
+}
+.icon-preferences:before {
+  content:"\f14f";
+}
+.icon-prescription:before {
+  content:"\f150";
+}
+.icon-print:before {
+  content:"\f151";
+}
+.icon-questionnaire:before {
+  content:"\f152";
+}
+.icon-questions:before {
+  content:"\f153";
+}
+.icon-refresh:before {
+  content:"\f154";
+}
+.icon-reply:before {
+  content:"\f155";
+}
+.icon-research:before {
+  content:"\f156";
+}
+.icon-routine-care:before {
+  content:"\f157";
+}
+.icon-ruler:before {
+  content:"\f158";
+}
+.icon-rx-form:before {
+  content:"\f159";
+}
+.icon-rx:before {
+  content:"\f15a";
+}
+.icon-savings:before {
+  content:"\f15b";
+}
+.icon-search:before {
+  content:"\f15c";
+}
+.icon-shoppingcart:before {
+  content:"\f15d";
+}
+.icon-specialty-care:before {
+  content:"\f15e";
+}
+.icon-star:before {
+  content:"\f15f";
+}
+.icon-stethoscope:before {
+  content:"\f160";
+}
+.icon-syringe:before {
+  content:"\f161";
+}
+.icon-test-tubes:before {
+  content:"\f162";
+}
+.icon-time-urgent:before {
+  content:"\f163";
+}
+.icon-time:before {
+  content:"\f164";
+}
+.icon-touch:before {
+  content:"\f165";
+}
+.icon-trafficlight:before {
+  content:"\f166";
+}
+.icon-trashcan:before {
+  content:"\f167";
+}
+.icon-unlocked:before {
+  content:"\f168";
+}
+.icon-video-camera:before {
+  content:"\f169";
+}
+.icon-walk-together:before {
+  content:"\f16a";
+}
+.icon-walk:before {
+  content:"\f16b";
+}
+.icon-wifi:before {
+  content:"\f16c";
+}
+.icon-xray:before {
+  content:"\f16d";
+}
+.icon-yoga:before {
+  content:"\f16e";
+}
+>>>>>>> Add Back a few extra icons
 
