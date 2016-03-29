@@ -15,8 +15,8 @@ import expandingItem from 'lib/modern/scripts/expanding-item';
 
 
 $(function() {
-  $(".fixedsticky").fixedsticky();
-  if($("#colors-section") && $("#colors-section").length!==0){
+  $('.fixedsticky').fixedsticky();
+  if($('#colors-section') && $('#colors-section').length!==0){
     addColors();
   }
   createExamples();
@@ -25,71 +25,71 @@ $(function() {
   responsiveTable();
   expandingItem();
 
-  fancySelect($("#select-from"));
-  fancySelect($("#select-from-with-default"));
-  fancySelect($("#select-from-with-only-one"));
-  fancySelect($("#select-from-with-default-but-selected"));
+  fancySelect($('#select-from'));
+  fancySelect($('#select-from-with-default'));
+  fancySelect($('#select-from-with-only-one'));
+  fancySelect($('#select-from-with-default-but-selected'));
 
-  $("#menu-button, #navbar a").click(function() {
-    $("#navbar").toggleClass("hidden");
+  $('#menu-button, #navbar a').click(function() {
+    $('#navbar').toggleClass('hidden');
   });
 
   var focusedElementBeforeModal = null;
-  var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+  var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 
-  $("#modal-button").click(function() {
-    $("#my-modal").addClass("modal-showing");
-    $("#my-modal").attr('aria-hidden','false');
-    $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+  $('#modal-button').click(function() {
+    $('#my-modal').addClass('modal-showing');
+    $('#my-modal').attr('aria-hidden','false');
+    $('.styleguide-main .current-breakpoint, .styleguide-header').attr('aria-hidden','true');
     focusedElementBeforeModal = $(':focus');
-    var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
+    var lastElem = $('#my-modal').find('*').filter(focusableElementsString).filter(':visible').last();
     lastElem.focus();
   });
 
-  $("#nothing, #do-something").click(function(ev) {
-    $("#my-modal").removeClass("modal-showing");
-    $("#my-modal").attr("aria-hidden", 'true');
-    $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
-    $(".modal-inner #modal-description").removeAttr('tabindex');
-    $("#modal-button").attr('tabindex', '0');
+  $('#nothing, #do-something').click(function(ev) {
+    $('#my-modal').removeClass('modal-showing');
+    $('#my-modal').attr('aria-hidden', 'true');
+    $('.styleguide-main, .current-breakpoint, .styleguide-header').attr('aria-hidden','false');
+    $('.modal-inner #modal-description').removeAttr('tabindex');
+    $('#modal-button').attr('tabindex', '0');
     focusedElementBeforeModal.focus();
     ev.preventDefault();
   });
 
-  var feedItemId = $("#my-collapsible-feed-item");
-  var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
-  var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
+  var feedItemId = $('#my-collapsible-feed-item');
+  var feedItemHeading = $('#my-collapsible-feed-item .-click-to-expand');
+  var feedItemCollapsibleContent = $('#my-collapsible-feed-item .-collapsible');
 
   feedItemHeading.on('click', function() {
-    feedItemId.toggleClass("-open");
-    var expanded = feedItemId.hasClass("-open");
-    feedItemId.attr("aria-expanded", expanded);
-    feedItemCollapsibleContent.attr("aria-hidden", !expanded);
+    feedItemId.toggleClass('-open');
+    var expanded = feedItemId.hasClass('-open');
+    feedItemId.attr('aria-expanded', expanded);
+    feedItemCollapsibleContent.attr('aria-hidden', !expanded);
   });
 
-  $("#best-nba-team .-value").click(function() {
-    $("#best-nba-team").toggleClass("-open");
+  $('#best-nba-team .-value').click(function() {
+    $('#best-nba-team').toggleClass('-open');
   });
 
-  accordion($("#hipstaccordion"));
+  accordion($('#hipstaccordion'));
 
-  $("#neighborhood .-value").click(function() {
-    $("#neighborhood").toggleClass("-open");
+  $('#neighborhood .-value').click(function() {
+    $('#neighborhood').toggleClass('-open');
   });
 
-  $("#toggle-action-area-button").click(function() {
-    $("#action-area-example").toggleClass("-hide-action-buttons");
+  $('#toggle-action-area-button').click(function() {
+    $('#action-area-example').toggleClass('-hide-action-buttons');
   });
 
-  $("#toggle-action-button-pair").click(function() {
-    $("#action-button-pair").toggleClass("-hide-action-buttons");
+  $('#toggle-action-button-pair').click(function() {
+    $('#action-button-pair').toggleClass('-hide-action-buttons');
   });
 
-  $("#toggle-primary-action-button").click(function() {
-    $("#action-button").toggleClass("-hide-action-buttons");
+  $('#toggle-primary-action-button').click(function() {
+    $('#action-button').toggleClass('-hide-action-buttons');
   });
 
-  $("main").show();
+  $('main').show();
 
   var bannerAlert = function() {
     var $banner = $('.banner-alert');

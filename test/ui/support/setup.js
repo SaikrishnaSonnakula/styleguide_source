@@ -1,6 +1,6 @@
 mocha.setup('bdd');
-mocha.slow("300ms");
-mocha.timeout("5s");
+mocha.slow('300ms');
+mocha.timeout('5s');
 mocha.checkLeaks();
 mocha.globals(['jQuery*', 'HTMLCS*', 'elements', 'found', 'LiveReload']);
 
@@ -17,17 +17,20 @@ _.mixin(_string.exports());
 chai.use(chaiAsPromised);
 chai.use(chaiSpies);
 chai.config.truncateThreshold = 0;
-chai.use(chaiAccessible({standard: 'WCAG2AAA'}));
+chai.use(chaiAccessible({
+  standard: 'WCAG2AAA'
+}));
 
 window.$ = jQuery;
-chai.use(function(chai, utils) {
+chai.use((chai, utils) => {
   return chaiJquery(chai, utils, $);
 });
 
 window.expect = chai.expect;
 window.assert = chai.assert;
-window.currentURL = function() {
-  return window.location.hash.replace("#", "");
+window.currentURL = () => {
+  return window.location.hash.replace('#', '');
 };
-var testsContext = require.context("../", true, /_spec$/);
+
+const testsContext = require.context('../', true, /_spec$/);
 testsContext.keys().forEach(testsContext);
