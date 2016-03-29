@@ -1,32 +1,40 @@
-.feature-content {
+%feature-content {
   @extend %content-container;
   @extend %center-content;
   position: relative;
   background-color: white;
 
-  @include media($desktop){
-    &:empty{
+  @include media($desktop) {
+    &:empty {
       padding: 0;
     }
   }
 }
+%feature {
+  &.-action-box-active {
+    @include media($device) {
+      .action-box {
+        @include position(absolute, 0px 0px 0px 0px);
+        width: 100%;
+        margin: 0;
+        z-index: $midground;
+        overflow: auto;
+      }
+      .feature-content {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    @include media($desktop) {
+      .feature-content {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+.feature-content {
+  @extend %feature-content;
+}
 .feature.-action-box-active {
-  @include media($device){
-    .action-box{
-      @include position(absolute, 0px 0px 0px 0px);
-      width: 100%;
-      margin: 0;
-      z-index: $midground;
-      overflow: auto;
-    }
-    .feature-content {
-      display: none;
-      visibility: hidden;
-    }
-  }
-  @include media($desktop){
-    .feature-content{
-      margin-top: 0px;
-    }
-  }
+    @extend %feature.-action-box-active;
 }
