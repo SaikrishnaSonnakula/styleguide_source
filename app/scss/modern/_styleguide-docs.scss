@@ -294,6 +294,7 @@ table.table {
     padding: $small-padding;
 
     // Make spacing variables available to auto document.
+    &.-extra-tiny { top: $extra-tiny-spacing; }
     &.-tiny { top: $tiny-spacing; }
     &.-small { top: $small-spacing; }
     &.-medium { top: $medium-spacing; }
@@ -307,9 +308,14 @@ table.table {
     }
 
     @include media($desktop) {
-      @include span-columns(4);
+      @include span-columns(2);
       @include omega(3n);
     }
+
+    .feed-item {
+      padding: 0;
+    }
+
   }
 
   .spacing-value {
@@ -327,6 +333,7 @@ table.table {
 
 
   .spacing-example.-tiny .item-subheading { margin-bottom: 0; }
+  .extra-tiny-spacing { margin-bottom: $extra-tiny-spacing; }
   .medium-spacing { margin-bottom: $medium-spacing !important; }
   .large-spacing { margin-bottom: $large-spacing; }
   .xl-spacing { margin-top: $xl-spacing; }
