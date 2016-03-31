@@ -287,6 +287,9 @@ table.table {
 
 .spacing-examples {
   @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 
   .spacing-example {
     margin-bottom: $paragraph-spacing;
@@ -302,14 +305,9 @@ table.table {
     &.-xl { top: $xl-spacing; }
     &.-xxl { top: $xxl-spacing; }
 
-    @include media($tablet) {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-
     @include media($desktop) {
-      @include span-columns(2);
-      @include omega(3n);
+      width: 30%;
+      margin-right: $small-spacing;
     }
 
   }
