@@ -287,6 +287,9 @@ table.table {
 
 .spacing-examples {
   @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 
   .spacing-example {
     margin-bottom: $paragraph-spacing;
@@ -294,6 +297,7 @@ table.table {
     padding: $small-padding;
 
     // Make spacing variables available to auto document.
+    &.-extra-tiny { top: $extra-tiny-spacing; }
     &.-tiny { top: $tiny-spacing; }
     &.-small { top: $small-spacing; }
     &.-medium { top: $medium-spacing; }
@@ -301,15 +305,11 @@ table.table {
     &.-xl { top: $xl-spacing; }
     &.-xxl { top: $xxl-spacing; }
 
-    @include media($tablet) {
-      @include span-columns(6);
-      @include omega(2n);
+    @include media($desktop) {
+      width: 30%;
+      margin-right: $small-spacing;
     }
 
-    @include media($desktop) {
-      @include span-columns(4);
-      @include omega(3n);
-    }
   }
 
   .spacing-value {
@@ -327,6 +327,7 @@ table.table {
 
 
   .spacing-example.-tiny .item-subheading { margin-bottom: 0; }
+  .extra-tiny-spacing { margin-bottom: $extra-tiny-spacing; }
   .medium-spacing { margin-bottom: $medium-spacing !important; }
   .large-spacing { margin-bottom: $large-spacing; }
   .xl-spacing { margin-top: $xl-spacing; }
