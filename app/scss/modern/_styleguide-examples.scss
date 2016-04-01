@@ -2,7 +2,6 @@
   @include checkbox(30px, $medium-font-size);
 }
 
-
 .copay-icon {
   @include feature-icon("interactive-blue", "compact");
 }

@@ -23,8 +23,8 @@ define(['jquery'], function($){
       $extraCodeEl.removeClass('code');
       $extraCodeEl.remove();
       if($extraCodeEl.html()) {
-	$extraCode = $('<pre></pre>').append($('<code></code>').text(trimMarkup($extraCodeEl.html())));
-	$extraCode.attr('class', $extraCodeEl.attr('class'));
+        $extraCode = $('<pre></pre>').append($('<code></code>').text(trimMarkup($extraCodeEl.html())));
+        $extraCode.attr('class', $extraCodeEl.attr('class'));
       }
 
       $code.append($extraCode);
