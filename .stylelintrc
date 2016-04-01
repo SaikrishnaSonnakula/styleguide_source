@@ -1,4 +1,5 @@
 {
+  "ignoreFiles": "lib/modern/stylesheets/_kp-icons.scss",
   "rules": {
     "color-no-invalid-hex": true,
     "declaration-colon-space-after": ["always", {
