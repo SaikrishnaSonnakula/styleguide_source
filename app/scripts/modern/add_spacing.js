@@ -3,10 +3,13 @@ import $ from 'jquery';
 export function addSpacing() {
   $('.spacing-example').each(function(i, el){
     var $example = $(el);
-    var value = $example.css('top'); //hack to get info to Javascript to display on html
-    var $value = $('<div class="spacing-value">' + value + '</div>');
-
-    $example.append($value);
+    let value;
+    let $value;
+    setTimeout(function(){
+      value = $example.css('top'); //hack to get info to Javascript to display on html
+      $value = $('<div class="spacing-value">').html(value);
+      $example.append($value);
+    }, 200);
   });
 }
 
