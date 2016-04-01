@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "main": "_main-npm.scss",
   "scripts": {
-    "preserve": "npm run lint",
-    "serve": "grunt serve",
+    "prestart": "npm run lint",
+    "start": "grunt serve",
     "lint": "stylelint lib/modern/stylesheets/*.scss --syntax scss",
     "prebuild": "npm run lint",
     "build": "grunt build"
