@@ -15,7 +15,7 @@ $tooltip-font-color: inky-blue;
      top: 100%;
    } @else {
      bottom: 100%;
-   }
+  }
 }
 
 @mixin tooltip($tooltip-color, $arrow-direction) {
@@ -34,30 +34,32 @@ $tooltip-font-color: inky-blue;
   @include transition-timing-function(linear);
   @include transition-delay(initial);
 
-  &:before {
-    @include tooltip-arrow($arrow-direction);
-    background-color: $tooltip-background-color;
-    z-index: -1;
+  @if $arrow-direction != "no-arrow" {
+    &:before {
+      @include tooltip-arrow($arrow-direction);
+      background-color: $tooltip-background-color;
+      z-index: 0;
 
-    @if $arrow-direction == "bottom" {
-      border-top: $tooltip-arrow-border-width solid color($tooltip-color);
-      margin-top: 1px;
-    } @else {
-      border-bottom: $tooltip-arrow-border-width solid color($tooltip-color);
-      margin-bottom: 1px;
+      @if $arrow-direction == "bottom" {
+        border-top: $tooltip-arrow-border-width solid color($tooltip-color);
+        margin-top: 1px;
+      } @else if $arrow-direction == "top"  {
+        border-bottom: $tooltip-arrow-border-width solid color($tooltip-color);
+        margin-bottom: 1px;
+      }
     }
-  }
 
-  &:after {
-    @include tooltip-arrow($arrow-direction);
-    z-index: 1;
+    &:after {
+      @include tooltip-arrow($arrow-direction);
+      z-index: 1;
 
-    @if $arrow-direction == "bottom" {
-      border-top: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
-      margin-top: -1px;
-    } @else {
-      border-bottom: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
-      margin-bottom: -2px;
+      @if $arrow-direction == "bottom" {
+        border-top: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
+        margin-top: -1px;
+      } @else if $arrow-direction == "top" {
+        border-bottom: $tooltip-arrow-border-width solid $tooltip-inner-arrow-border-color;
+        margin-bottom: -2px;
+      }
     }
   }
 }
