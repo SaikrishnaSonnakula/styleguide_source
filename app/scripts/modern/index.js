@@ -89,13 +89,14 @@ $(function() {
     $("#action-button").toggleClass("-hide-action-buttons");
   });
 
-  $("main").show();
 
-  var bannerAlert = function() {
-    var $banner = $('.banner-alert');
+  $('main').show();
+  function bannerAlert() {
+    var $el = $('.banner-alert');
+    $el.show();
     setTimeout(function() {
-      $banner.hide();
-    }, 8000);
-  };
+      $el.hide();
+    }, 5000);
+  }
   bannerAlert();
 });

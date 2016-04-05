@@ -10,7 +10,7 @@ $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter
 $mobile-header-height: 50px;
 
 .banner-alert {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   width: 100%;
