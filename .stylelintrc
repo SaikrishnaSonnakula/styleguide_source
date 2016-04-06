@@ -1,0 +1,16 @@
+{
+  "ignoreFiles": "lib/modern/stylesheets/_kp-icons.scss",
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-colon-space-after": ["always", {
+    "severity": "warning"
+    }],
+    "max-empty-lines": [2, {
+      "severity": "warning"
+    }],
+    "indentation": [2, {
+      "severity": "warning",
+      "except": ["value"]
+    }]
+  }
+}

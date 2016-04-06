@@ -1,7 +1,7 @@
 $mobile-item-icon-padding: $small-spacing;
 $mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-padding);
 $desktop-item-icon-padding: $medium-spacing;
-$desktop-item-gutter-width:  $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
+$desktop-item-gutter-width: $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
 $feed-item-border-size: 3px;
 $expanded-top-margin: $large-spacing;
 $feed-item-right-gutter-size: 20px;
@@ -24,7 +24,7 @@ $expanded-close-icon-desktop-size: 25px;
   padding: $small-spacing 0;
   @include transition(position 0.3s ease-in-out);
   @include media($desktop){
-    border:  $feed-item-border-size solid transparent;
+    border: $feed-item-border-size solid transparent;
     padding: $medium-spacing 0;
 
     &:hover {

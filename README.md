@@ -4,13 +4,14 @@ The styleguide to rule them all! this document covers:
 
 * [Installing Styleguide](#installing)
 * [How to Use in your Projects](#usage)
+* [Command Documentation](#commands)
 * [What's in Styleguide](#contents-styleguide)
 * [Setting up Namespacing in your project](#namespacing)
 * [Contributing](#contributing)
 * [Resources and Helpful Links](#resources)
 * [Questions](#questions)
 
-To view deployed examples of different components [see the online version](https://dev10.kaiserpermanente.org/styleguide/) 
+To view deployed examples of different components [see the online version](https://dev10.kaiserpermanente.org/styleguide/)
 
 <a name="installing"></a>
 
@@ -71,6 +72,26 @@ Then run `bower install` - watch all the front-end stuff bower installs. You sho
 
 Still figuring this out. You will experience import SASS errors when you import styleguide on a gulp project.
 
+<a name="commands"></a>
+## Commands to Develop and Contribute to Styleguide
+The styleguide has moved over to use NPM scripts to make building, serving and linting the project easier for new contributors. There are currently three commands that can be run but more can be added to the package.json as needed.
+
+### Linting the Project
+  This command will lint the scss files in lib/modern.
+
+    npm run lint
+
+### Building the Project
+  This command will lint and build the project.
+
+    npm run build
+
+### Serving the Project
+  This command will lint and serve the project on port :4321.
+
+    npm start
+
+
 <a name="contents-styleguide"></a>
 ## What's in Styleguide
 There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
@@ -102,14 +123,14 @@ Make sure you have:
 * Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
 * Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
 * [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) are setup in Stash
-* [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) is downloaded onto your machine to run the build plugin grunt taskrunner 
-* Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19) 
+* [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) is downloaded onto your machine to run the build plugin grunt taskrunner
+* Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19)
 * Access to [jira](https://jira.kp.org/browse/STYLE)
 
 ### Process of Editing and Submitting a change​
-Summary of the current contribution process is: 
+Summary of the current contribution process is:
 
-* Fork the project to your Stash account 
+* Fork the project to your Stash account
 ![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
 
 * In the new forked copy make the code changes and push code changes to your forked master branch
@@ -137,7 +158,7 @@ More detailed steps included in the [Contributing documentation](https://stash.k
 
 ## Didn't Find what you are looking for?
 
-If you have something to add, a bug fix, or make a change [contribute to the Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)! The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed. 
+If you have something to add, a bug fix, or make a change [contribute to the Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)! The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed.
 
 Check the [jira board](https://jira.kp.org/browse/STYLE) if you would like to see the currently open tasks and fixes that you can assign to yourself.
 
