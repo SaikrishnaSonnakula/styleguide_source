@@ -11,7 +11,7 @@ $expanding-table-left-content-gutter: 100px;
 
 @mixin expanding-item() {
   @include display(flex);
-  flex-direction: column;
+  @include flex-direction(column);
   border: $expanding-table-invisible-border;
   cursor: pointer;
 
@@ -60,10 +60,10 @@ $expanding-table-left-content-gutter: 100px;
 
   &.-open .icon-close {
     @extend %button-unstyled;
+    @include align-self(flex-end);
     color: $link-color;
     cursor: pointer;
     display: block;
-    align-self: flex-end;
     margin: $small-spacing $expanding-table-hidden-content-margin 0 $small-spacing;
     font-size: $expanding-table-icon-font-size-desktop;
     @include media($mobile) {
