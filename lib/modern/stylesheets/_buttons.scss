@@ -101,7 +101,6 @@ $button-font-family: $medium-font-family;
     }
 
     &.-inverted {
-      background-color: green;
       color: $button-disable-color;
       border: $button-border-size solid $button-disable-color;
       &:hover, &:focus {
