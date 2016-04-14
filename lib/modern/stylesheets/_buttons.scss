@@ -1,8 +1,14 @@
 $button-color: color("interactive-blue");
-$button-padding: $small-spacing;
+$button-padding: 15px;
+$button-inverted-padding:12px;
+
+$button-padding-desktop: 19px;
+$button-inverted-padding-desktop:16px;
+
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-border-size: 3px;
+$button-font-family: $medium-font-family;
 
 %rounded-input {
   @include appearance(none);
@@ -19,6 +25,9 @@ $button-border-size: 3px;
   vertical-align: middle;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
+  @include media($tablet-up) {
+    padding: $button-padding-desktop;
+  }
 }
 
 .-block {
@@ -35,15 +44,12 @@ $button-border-size: 3px;
   @include transition(background-color 0.2s ease,
   color 0.2s ease,
   border-color 0.2s ease);
-
+  font-family: $button-font-family;
   background-color: $button-color;
   color: white;
-  border: $button-border-size solid transparent;
-
   &:hover, &:focus {
     background-color: $button-hover-color;
     color: white;
-    border-color: $button-hover-color;
   }
 
   &.-action {
@@ -69,12 +75,15 @@ $button-border-size: 3px;
   &.-inverted {
     background-color: transparent;
     color: $button-color;
-    border-color: $button-color;
-
+    border: $button-border-size solid $button-color;
+    padding:$button-inverted-padding;
     &:hover, &:focus {
       background-color: $button-hover-color;
       border-color: $button-hover-color;
       color: white;
+    }
+    @include media($tablet-up) {
+      padding: $button-inverted-padding-desktop;
     }
   }
 
@@ -92,10 +101,9 @@ $button-border-size: 3px;
     }
 
     &.-inverted {
-      background-color: transparent;
+      background-color: green;
       color: $button-disable-color;
-      border-color: $button-disable-color;
-
+      border: $button-border-size solid $button-disable-color;
       &:hover, &:focus {
         background-color: $button-disable-color;
         color: white;
