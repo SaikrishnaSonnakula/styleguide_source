@@ -136,7 +136,7 @@ code {
   @include media($desktop) {
     @include span-columns(2);
     top: $styleguide-gutter;
-    display: block;
+    display: inline-block;
   }
 }
 
