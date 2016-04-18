@@ -32,7 +32,7 @@ $dropdown-min-mobile-height: $small-spacing;
       font-family: 'kp-icons';
       font-size: $tiny-font-size;
       line-height: $dropdown-mobile-height;
-      margin-left: $small-spacing;
+      margin-left: $extra-tiny-spacing;
       display: inline-block;
       vertical-align: text-top;
 
@@ -50,7 +50,7 @@ $dropdown-min-mobile-height: $small-spacing;
       font-weight: normal;
 
       &:after {
-        margin-left: $small-spacing;
+        margin-left: $extra-tiny-spacing;
         vertical-align: baseline;
 
         @include media($desktop) {
@@ -78,11 +78,12 @@ $dropdown-min-mobile-height: $small-spacing;
     box-shadow: 2px 2px 1px rgba(#6B7487, .65);
     width: auto;
     max-width: 375px;
+    border-radius: 3px;
 
     @include media($device) {
       margin-bottom: 0;
     }
-    
+
     @include media($mobile) {
       margin-right: 20px;
       margin-left: 20px;
@@ -105,7 +106,7 @@ $dropdown-min-mobile-height: $small-spacing;
       &:before {
         @include icon-for(checkmark)
         position: absolute;
-        left: -$small-spacing;
+        left: -(16px + $extra-tiny-spacing);
         color: color(interactive-blue);
       }
 

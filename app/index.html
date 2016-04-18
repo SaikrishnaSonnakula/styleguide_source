@@ -13,12 +13,10 @@
     <div class="banner-alert">
       <p>Styleguide is a KP Open Contribution Project and it needs your help. Learn about how you can <a href="CONTRIBUTING.html">contribute</a>.</p>
     </div>
-
     <header class="styleguide-header">
-      <span id="menu-button" class="device-menu-button icon-menu"></span>
-      <span class="desktop-only">Web Design</span> Styleguide
+        <span id="menu-button" class="device-menu-button icon-menu"></span>
+        <span class="desktop-only">Web Design</span> Styleguide
     </header>
-
     <div class="current-breakpoint">
       Current Breakpoint:
       <span class="mobile-only">Mobile</span>
@@ -42,7 +40,8 @@
       	<li><a href="#modal-section">Modal</a></li>
       	<li><a href="#forms-section">Forms</a></li>
       	<li><a href="#features-section">Features</a></li>
-      	<li><a href="#dropdowns-section">Dropdowns</a></li>
+      	<li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
+      	<li><a href="modern-ui-elements.html#accordion">Accordion</a></li>
       	<li><a href="#notifications-section">Notifications</a></li>
       	<li><a href="#loader-section">Loader</a></li>
       	<li><a href="#tooltip">Tooltips</a></li>
@@ -789,185 +788,6 @@ expandingItemCloseExpansion.on('click', function() {
           </code></pre>
         </div>
         <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
-      </section>
-
-      <section id="dropdowns-section">
-        <h2 class="styleguide-section-heading">
-          Dropdowns
-        </h2>
-        <p>
-        Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
-        </p>
-          <pre><code class="language-javascript">
-import $ from 'jquery';
-const dropdownButtonSelector = '.-value';
-const currentSelectedOption = '.current-selection';
-const optionListSelector = '.-options li';
-const dropdownOpenClass = '-open';
-const activeOptionClass = '-active';
-const ENTER_KEY = 13;
-
-const setupDropdown = (element) => {
-  const dropdownButton = $(element).find(dropdownButtonSelector);
-  const optionList = $(element).find(optionListSelector);
-  const lastOptionIndex = optionList.length - 1;
-
-  let currentOptionIndex = 0;
-  let selectedOption = optionList[0];
-  let focusedOption;
-
-  const toggleDropdown = () => {
-    $(element).toggleClass(dropdownOpenClass);
-
-    if(!isDropdownOpen()) {
-      dropdownButton.attr('aria-expanded', false);
-      $(element).find('ul').attr('aria-hidden', true);
-      focusOn(dropdownButton);
-    } else {
-      dropdownButton.attr('aria-expanded', true);
-      $(element).find('ul').attr('aria-hidden', false);
-    }
-  };
-
-  const setActiveOption = () =>  {
-    $(optionListSelector).each((index, option) => {
-      const optionLink = $(option).find('a');
-
-      if (option === selectedOption) {
-        optionLink.attr('aria-selected', true);
-        optionLink.attr('aria-checked', true);
-        $(option).toggleClass(activeOptionClass);
-      } else {
-        optionLink.attr('aria-selected', false);
-        optionLink.attr('aria-checked', false);
-      }
-    });
-  };
-
-  const select = (option) => {
-    $(selectedOption).toggleClass(activeOptionClass);
-    selectedOption = option;
-    $(element).find(currentSelectedOption).text($(option).text());
-    setActiveOption();
-    toggleDropdown();
-  };
-
-  const focusOn = (optionToFocusOn) => {
-    $(optionToFocusOn).focus();
-  };
-
-  const isDropdownOpen = () => {
-    return $(element).hasClass(dropdownOpenClass);
-  };
-
-  const handleUpKey = () => {
-    let isOnFirstOption = currentOptionIndex === 0;
-    let prevOptionIndex = isOnFirstOption ? lastOptionIndex : currentOptionIndex - 1;
-
-    handleArrowKey(prevOptionIndex);
-  };
-
-  const handleDownKey = () => {
-    let isOnLastOption = currentOptionIndex === lastOptionIndex;
-    let nextOptionIndex = isOnLastOption ? 0 : currentOptionIndex + 1;
-
-    handleArrowKey(nextOptionIndex);
-  };
-
-  const handleArrowKey = (newOptionIndex) => {
-    focusedOption = optionList[newOptionIndex];
-    currentOptionIndex = newOptionIndex;
-    focusOn($(optionList[newOptionIndex]).find('a'));
-  };
-
-  const handleSpace = () => {
-    select(optionList[currentOptionIndex]);
-  };
-
-  const handleCloseKeys = () => {
-    toggleDropdown();
-    focusOn(dropdownButton);
-  };
-
-  const KEY_HANDLERS = {
-    40: handleDownKey,
-    38: handleUpKey,
-    32: handleSpace,
-    27: handleCloseKeys, //Escape Key Handler
-    9: handleCloseKeys   //Tab Key Handler
-  };
-
-  optionList.each((index, option) => {
-    $(option).attr('role', 'presentation');
-    $(option).find('a').attr('role', 'option');
-
-    $(option).find('a').on('click keydown', ($event) => {
-      if(!$event.keyCode || $event.keyCode === ENTER_KEY) {
-        const optionSelected = $event.target.parentElement;
-        $event.preventDefault();
-
-        select(optionSelected);
-      }
-    });
-  });
-
-  dropdownButton.on('click', () => {
-    toggleDropdown();
-    if(isDropdownOpen()){
-      currentOptionIndex = 0;
-      focusedOption = optionList[0];
-      focusOn($(focusedOption).find('a'));
-    }
-  });
-
-  $(element).on('keydown', ($event) => {
-    const keyCode = $event.keyCode;
-
-    if(isDropdownOpen() && KEY_HANDLERS[keyCode]){
-      $event.preventDefault();
-
-      KEY_HANDLERS[keyCode]();
-    };
-  });
-};
-
-$(document).ready(() => {
-  setTimeout(() => {
-    $('.dropdown').each((index, dropdown) => {
-      setupDropdown(dropdown);
-    });
-  }, 2000);
-});
-          </code></pre>
-        <div class="example -padded-desktop">
-          <div id="best-nba-team" class="dropdown">
-            <button class="-value" aria-expanded="false">
-              <div class="current-selection">Golden State Warriors</div>
-            </button>
-            <ul class="-options" aria-hidden="true" role="listbox" aria-label="NBA Options">
-              <li class="-active"><a aria-checked="true" href="#warriors">Golden State Warriors</a></li>
-              <li><a aria-checked="false" href="#lakers">LA Lakers</a></li>
-              <li><a aria-checked="false" href="#clippers">LA Clippers</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p>
-        Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
-        </p>
-
-        <div class="example -padded-desktop">
-          <div id="neighborhood" class="dropdown -form">
-            <button class="-value" aria-expanded="false">
-              <div class="current-selection">San Francisco</div>
-            </button>
-            <ul class="-options" aria-hidden="true" role="listbox">
-              <li class="-active"><a href="#mission">Mission</a></li>
-              <li><a href="#haight">Haight</a></li>
-              <li><a href="#nob-hill">Nob Hill</a></li>
-            </ul>
-          </div>
-        </div>
       </section>
 
       <section id="notifications-section">
