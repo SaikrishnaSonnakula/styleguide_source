@@ -1,8 +1,10 @@
 $dropdown-options-max-height: 200px !default;
-$dropdown-mobile-height: $medium-spacing;
+$dropdown-mobile-height: $small-spacing;
 $dropdown-min-mobile-height: $small-spacing;
 
 .dropdown {
+  position: relative;
+
   .-value {
     @extend %button-unstyled;
     display: inline;
@@ -14,10 +16,12 @@ $dropdown-min-mobile-height: $small-spacing;
     @include media($desktop) {
       width: auto;
       height: auto;
-      line-height: $medium-spacing;
+      line-height: $small-spacing;
       padding: 0px;
     }
     & .current-selection {
+      font-family: $medium-font-family;
+      font-size: 16px;
       display: inline-block;
     }
     &:after {
@@ -33,21 +37,17 @@ $dropdown-min-mobile-height: $small-spacing;
       vertical-align: text-top;
 
       @include media($desktop) {
-        line-height: $medium-spacing;
+        line-height: $small-spacing;
       }
     }
   }
 
-  &.-heading {
+  &.-form {
     .-value {
-      @extend .page-heading;
-      background-color: color(graphite);
-      font-family: $bold-font-family;
+      background-color: color(pebble);
+      padding: $tiny-spacing $tiny-spacing;
+      font-family: $medium-font-family;
       font-weight: normal;
-
-      @include media($desktop) {
-        background-color: transparent;
-      }
 
       &:after {
         margin-left: $small-spacing;
@@ -57,13 +57,6 @@ $dropdown-min-mobile-height: $small-spacing;
           font-size: $medium-font-size;
           vertical-align: text-bottom;
         }
-      }
-    }
-
-    .-options {
-      @include media($desktop) {
-        margin-top: $small-spacing;
-        font-size: $medium-font-size;
       }
     }
   }
@@ -77,22 +70,31 @@ $dropdown-min-mobile-height: $small-spacing;
     @extend %list-unstyled;
     @include transition(max-height 0.4s $ease-out-cubic);
     overflow: hidden;
-    margin-top: 0px;
+    margin-top: $extra-tiny-spacing;
     display: none;
-    padding-left: $small-spacing;
+    padding: $tiny-spacing 40px;
+    background-color: white;
+    border: 1px solid color(graphite-dark);
+    box-shadow: 2px 2px 1px rgba(#6B7487, .65);
+    width: auto;
+    max-width: 375px;
 
     @include media($device) {
       margin-bottom: 0;
     }
-
-    @include media($desktop) {
-      padding-left: 0;
+    
+    @include media($mobile) {
+      margin-right: 20px;
+      margin-left: 20px;
     }
 
     > li {
-      color: $text-light;
-      margin-top: $small-spacing;
-      margin-bottom: $small-spacing;
+      position: relative;
+      font-family: $base-font-family;
+      font-size: 16px;
+      color: color(dolphin);
+      margin-top: $tiny-spacing;
+      margin-bottom: $tiny-spacing;
     }
 
     a, button {
@@ -100,12 +102,22 @@ $dropdown-min-mobile-height: $small-spacing;
     }
 
     .-active {
-      font-weight: bold;
+      &:before {
+        @include icon-for(checkmark)
+        position: absolute;
+        left: -$small-spacing;
+        color: color(interactive-blue);
+      }
+
+      > a{
+        color: color(inky-blue);
+        font-weight: bold;
+      }
     }
   }
 
   &.-open .-options {
-    margin-top: $small-spacing;
     display: block;
+    position: absolute;
   }
 }

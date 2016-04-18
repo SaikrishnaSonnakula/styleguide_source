@@ -12,6 +12,7 @@ import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 import accordion from 'lib/modern/scripts/accordion';
 import expandingItem from 'lib/modern/scripts/expanding-item';
+import dropdown from 'lib/modern/scripts/dropdown';
 
 
 $(function() {
@@ -67,15 +68,15 @@ $(function() {
     feedItemCollapsibleContent.attr('aria-hidden', !expanded);
   });
 
-  $('#best-nba-team .-value').click(function() {
-    $('#best-nba-team').toggleClass('-open');
-  });
+  // $('#best-nba-team .-value').click(function() {
+  //   $('#best-nba-team').toggleClass('-open');
+  // });
 
   accordion($('#hipstaccordion'));
 
-  $('#neighborhood .-value').click(function() {
-    $('#neighborhood').toggleClass('-open');
-  });
+  // $('#neighborhood .-value').click(function() {
+  //   $('#neighborhood').toggleClass('-open');
+  // });
 
   $('#toggle-action-area-button').click(function() {
     $('#action-area-example').toggleClass('-hide-action-buttons');
