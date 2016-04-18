@@ -13,12 +13,10 @@
     <div class="banner-alert">
       <p>Styleguide is a KP Open Contribution Project and it needs your help. Learn about how you can <a href="CONTRIBUTING.html">contribute</a>.</p>
     </div>
-
     <header class="styleguide-header">
-      <span id="menu-button" class="device-menu-button icon-menu"></span>
-      <span class="desktop-only">Web Design</span> Styleguide
+        <span id="menu-button" class="device-menu-button icon-menu"></span>
+        <span class="desktop-only">Web Design</span> Styleguide
     </header>
-
     <div class="current-breakpoint">
       Current Breakpoint:
       <span class="mobile-only">Mobile</span>
@@ -28,7 +26,7 @@
       <span class="large-desktop-only">Large Desktop</span>
     </div>
 
-    <main class="styleguide-main" style="display: none">
+  <main class="styleguide-main" style="display: none">
     <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
       <ul>
       	<li><a href="#installation-section">Installation</a></li>
@@ -42,7 +40,8 @@
       	<li><a href="#modal-section">Modal</a></li>
       	<li><a href="#forms-section">Forms</a></li>
       	<li><a href="#features-section">Features</a></li>
-      	<li><a href="#dropdowns-section">Dropdowns</a></li>
+      	<li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
+      	<li><a href="modern-ui-elements.html#accordion">Accordion</a></li>
       	<li><a href="#notifications-section">Notifications</a></li>
       	<li><a href="#loader-section">Loader</a></li>
       	<li><a href="#tooltip">Tooltips</a></li>
@@ -79,13 +78,13 @@
         The styleguide is a NPM module. You can add it as a dependency to your project by running the following command in your project directory:
         </p>
 
-        <pre class="language-bash"><code >npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
+        <pre><code class="language-bash">npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git</code></pre>
 
         <p>
         Then, include the styles in your sass file:
         </p>
 
-        <pre><code class="language-scss">@import "styleguide/modern"</code></pre>
+        <pre><code class="language-sass">@import "styleguide/modern"</code></pre>
 
         <p>
         Since the styleguide contains a variety of front-end assets, which all need to be handled the
@@ -103,22 +102,25 @@
 
         <h4>Usage</h4>
         If you want to apply a specific style to let's say the <code>$mobile</code> view try this:
-        <pre class="code language-scss" data-langauge="scss"><code class="code">.element {
-       @include media($mobile) {
-        background-color: black;
-      }
-    }</code></pre>
+        <pre><code class="language-sass">
+.element {
+  @include media($mobile) {
+    background-color: black;
+  }
+}
+        </code></pre>
         Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
-        <pre class="code language-scss">
-    <code class="code">.element{
-        @include media($desktop-large) {
+        <pre>
+    <code class="language-sass">
+.element{
+  @include media($desktop-large) {
     display:block;
-        }
-              @include media($device){
+  }
+  @include media($device){
     display:none;
-        }
-      }</code>
-        </pre>
+  }
+}
+    </code></pre>
       </section>
 
       <section id="colors-section">
@@ -130,9 +132,11 @@
           <p>Include the colors below by using the following Sass function. Pass in one of the color names below as a parameter to get its calculated hex value. <br />
           </p>
           <p>For example:</p>
-          <pre class="code language-scss"><code class="code">.element {
-    background-color: color("robin-egg");
-  }</code></pre>
+          <pre><code class="language-sass">
+.element {
+  background-color: color("robin-egg");
+}
+          </code></pre>
           <p>Some colors, like <code>interactive-blue</code>, have aliases defined as variables (<code>$link-color</code>) that can be used on their own without calling the colors function.</p>
         </div>
       </section>
@@ -434,31 +438,31 @@
       <section id="modal-section">
         <h2 class="styleguide-section-heading">Modal</h2>
 
+
+          <pre><code class="language-javascript">
+var focusedElementBeforeModal = null;
+var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+$("#modal-button").click(function() {
+  $("#my-modal").addClass("modal-showing");
+  $("#my-modal").attr('aria-hidden','false');
+  $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+  focusedElementBeforeModal = $(':focus');
+  var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
+  lastElem.focus();
+});
+
+$("#nothing").click(function(ev) {
+  $("#my-modal").removeClass("modal-showing");
+  $("#my-modal").attr("aria-hidden", 'true');
+  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+  $(".modal-inner #modal-description").removeAttr('tabindex');
+  $("#modal-button").attr('tabindex', '0');
+  focusedElementBeforeModal.focus();
+  ev.preventDefault();
+});
+          </pre></code>
         <div class="example -padded">
-          <pre class="code language-javascript">
-    var focusedElementBeforeModal = null;
-    var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
-
-                $("#modal-button").click(function() {
-                  $("#my-modal").addClass("modal-showing");
-                  $("#my-modal").attr('aria-hidden','false');
-                  $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
-                  focusedElementBeforeModal = $(':focus');
-                  var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
-                  lastElem.focus();
-                });
-
-                $("#nothing").click(function(ev) {
-                  $("#my-modal").removeClass("modal-showing");
-                  $("#my-modal").attr("aria-hidden", 'true');
-                  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
-                  $(".modal-inner #modal-description").removeAttr('tabindex');
-                  $("#modal-button").attr('tabindex', '0');
-      focusedElementBeforeModal.focus();
-      ev.preventDefault();
-    });
-          </pre>
-
           <button id="modal-button" class="button">
             Bring in the modal
           </button>
@@ -511,9 +515,11 @@
 
         <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
 
- <pre class="code language-scss"><code>.my-30-px-checkbox {
+ <pre class="code language-sass"><code>
+.my-30-px-checkbox {
   @include checkbox(30px, $medium-font-size);
-}</code></pre>
+}
+  </code></pre>
 
         <div class="example -minor -padded">
           <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
@@ -578,13 +584,15 @@
           In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a>
         </p>
 
-        <pre class="code language-scss" data-langauge="scss"><code>.example-action-area-container {
+        <pre><code class="language-sass">
+.example-action-area-container {
   @extend %action-area-container;
 }
 
 .example-action-area {
   @extend %action-area;
-}</code></pre>
+}
+        </code></pre>
 
         <p class="example-note" style="padding: 15px;">ATTENTION: <br />
           The following Action Box is going away. Please use the action area above.
@@ -691,19 +699,19 @@
         elements with the <code>collapsible-content</code> class.
         </p>
 
-        <div class="example">
-          <pre class="code language-javascript">
-          var feedItemId = $("#my-collapsible-feed-item");
-          var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
-          var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
+          <pre><code class="language-javascript">
+var feedItemId = $("#my-collapsible-feed-item");
+var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
+var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
 
-          feedItemHeading.on('click', function() {
-            feedItemId.toggleClass("-open");
-            var expanded = feedItemId.hasClass("-open");
-            feedItemId.attr("aria-expanded", expanded);
-            feedItemCollapsibleContent.attr("aria-hidden", !expanded);
-          });
-          </pre>
+feedItemHeading.on('click', function() {
+  feedItemId.toggleClass("-open");
+  var expanded = feedItemId.hasClass("-open");
+  feedItemId.attr("aria-expanded", expanded);
+  feedItemCollapsibleContent.attr("aria-hidden", !expanded);
+});
+        </pre></code>
+          <div class="example">
 
           <div id="my-collapsible-feed-item" class="feed-item -collapsible" aria-expanded="false">
             <div class="-gutter">
@@ -753,77 +761,33 @@
               <span class="-body">This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to individual teams to design the feel and spacing for this internal content in accordance with DED redlines / comps.</span>
             </div>
           </div>
-          <pre class="code language-javascript" data-langauge="scss">
-            var expandingItemId = $("#expandable-feed-item");
-            var expandingItemContent = $(".expandable-feed-item__summary-content");
-            var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
-            var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
+          <pre><code class="language-javascript">
+var expandingItemId = $("#expandable-feed-item");
+var expandingItemContent = $(".expandable-feed-item__summary-content");
+var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
+var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
 
-            expandingItemContent.on('click', function() {
-              if(!expandingItemId.hasClass("-open")){
-                expandingItemId.toggleClass("-open");
-                expandingItemCollapsibleContent.toggleClass("-open");
-                var expanded = expandingItemId.hasClass("-open");
-                expandingItemContent.attr("aria-expanded", expanded);
-                expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-                expandingItemCloseExpansion.focus();
-              }
-            });
+expandingItemContent.on('click', function() {
+  if(!expandingItemId.hasClass("-open")){
+    expandingItemId.toggleClass("-open");
+    expandingItemCollapsibleContent.toggleClass("-open");
+    var expanded = expandingItemId.hasClass("-open");
+    expandingItemContent.attr("aria-expanded", expanded);
+    expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+    expandingItemCloseExpansion.focus();
+  }
+});
 
-            expandingItemCloseExpansion.on('click', function() {
-              expandingItemId.toggleClass("-open");
-              expandingItemCollapsibleContent.toggleClass("-open");
-              var expanded = expandingItemId.hasClass("-open");
-              expandingItemContent.attr("aria-expanded", expanded);
-              expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-            });
-          </pre>
+expandingItemCloseExpansion.on('click', function() {
+  expandingItemId.toggleClass("-open");
+  expandingItemCollapsibleContent.toggleClass("-open");
+  var expanded = expandingItemId.hasClass("-open");
+  expandingItemContent.attr("aria-expanded", expanded);
+  expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+});
+          </code></pre>
         </div>
-        <pre class="code language-scss" data-langauge="scss"><code>.expandable-feed-item { @include expanding-item(); }</code></pre>
-      </section>
-
-      <section id="dropdowns-section">
-        <h2 class="styleguide-section-heading">
-          Dropdowns
-        </h2>
-        <p>
-        Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
-        </p>
-        <div class="example -padded-desktop">
-          <pre class="code language-javascript">
-        $("#best-nba-team .-value").click(function() {
-    $("#best-nba-team").toggleClass("-open");
-        });
-          </pre>
-
-          <div id="best-nba-team" class="dropdown">
-            <button class="-value">
-              <div class="current-selection">Golden State Warriors</div>
-            </button>
-            <ul class="-options">
-              <li class="-active"><a href="#warriors">Golden State Warriors</a></li>
-              <li><a href="#lakers">LA Lakers</a></li>
-              <li><a href="#clippers">LA Clippers</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p>
-        Add <code>.-heading</code> to the dropdown to style it as the main dropdown used on the top of many features.
-        </p>
-
-        <div class="example -padded-desktop">
-          <div id="neighborhood" class="dropdown -heading">
-            <button class="-value">
-              <div class="current-selection">San Francisco</div>
-            </button>
-            <ul class="-options">
-              <li class="-active"><a href="#mission">Mission</a></li>
-              <li><a href="#haight">Haight</a></li>
-              <li><a href="#nob-hill">Nob Hill</a></li>
-            </ul>
-          </div>
-        </div>
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
       </section>
 
       <section id="notifications-section">
@@ -837,7 +801,8 @@
 
         <p>To create static CSS classes for error notifications you can defined them in your Sass by extending the placeholder styles.</p>
 
-        <pre class="code language-scss" data-langauge="scss"><code>.notification {
+        <pre><code class="code language-sass">
+.notification {
   &.-hard-interruption {
     @extend %hard-interruption;
   }
@@ -853,7 +818,8 @@
   &.-validation-error {
     @extend %validation-error;
   }
-}</code></pre>
+}
+        </code></pre>
 
         <p>These classes will be processed and can be used in this fashion.</p>
         <div class="example">
@@ -941,7 +907,7 @@
         <h3 class="styleguide-subheading">
       	  Tooltip Top
       	</h3>
-        <pre><code class="language-scss">.tooltip-top { @include tooltip("interactive-blue", "top"); }</code></pre>
+        <pre><code class="language-sass">.tooltip-top { @include tooltip("interactive-blue", "top"); }</code></pre>
         <div class="example -minor -padded">
           <div class="tooltip-top">
             Tooltip Top With Text
@@ -951,7 +917,7 @@
         <h3 class="styleguide-subheading">
       	  Tooltip Bottom
       	</h3>
-        <pre><code class="language-scss">.tooltip-bottom { @include tooltip("interactive-blue", "bottom"); }</code></pre>
+        <pre><code class="language-sass">.tooltip-bottom { @include tooltip("interactive-blue", "bottom"); }</code></pre>
         <div class="example -minor -padded">
           <div class="tooltip-bottom">
             Tooltip Bottom With Text
