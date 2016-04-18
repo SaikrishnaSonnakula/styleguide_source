@@ -82,6 +82,9 @@ $button-font-family: $medium-font-family;
       border-color: $button-hover-color;
       color: white;
     }
+   &:disabled, .-disabled {
+    background-color: $button-inverted-disable-color;
+   }
     @include media($tablet-up) {
       padding: $button-inverted-padding-desktop;
     }
