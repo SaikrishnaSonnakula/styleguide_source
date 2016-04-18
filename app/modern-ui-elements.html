@@ -90,7 +90,7 @@
           Dropdown
         </h2>
         <p>
-        Dropdown that contains a list of links used for navigation. <b>Note: There are also dropdowns that represent select boxes. Those will require custom javascript widgets, which we will be building soon.</b>
+        Dropdown that contains a list of links used for navigation.
         </p>
           <pre><code class="language-javascript">
 import $ from 'jquery';
@@ -246,9 +246,9 @@ $(document).ready(() => {
               <div class="current-selection">Golden State Warriors</div>
             </button>
             <ul class="-options" aria-hidden="true" role="listbox" aria-label="NBA Options">
-              <li class="-active"><a aria-checked="true" href="#warriors">Golden State Warriors</a></li>
-              <li><a aria-checked="false" href="#lakers">LA Lakers</a></li>
-              <li><a aria-checked="false" href="#clippers">LA Clippers</a></li>
+              <li role="presentation" class="-active"><a role="option" aria-checked="true" aria-selected="true" href="#warriors">Golden State Warriors</a></li>
+              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#lakers">LA Lakers</a></li>
+              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#clippers">LA Clippers</a></li>
             </ul>
           </div>
         </div>
@@ -263,9 +263,9 @@ $(document).ready(() => {
               <div class="current-selection">San Francisco</div>
             </button>
             <ul class="-options" aria-hidden="true" role="listbox">
-              <li class="-active"><a href="#mission">Mission</a></li>
-              <li><a href="#haight">Haight</a></li>
-              <li><a href="#nob-hill">Nob Hill</a></li>
+              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#mission">Mission</a></li>
+              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#haight">Haight</a></li>
+              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#nob-hill">Nob Hill</a></li>
             </ul>
           </div>
         </div>
