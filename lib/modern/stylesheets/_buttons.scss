@@ -106,10 +106,6 @@ $button-font-family: $medium-font-family;
     &.-inverted {
       color: $button-disable-color;
       border: $button-border-size solid $button-disable-color;
-      &:hover, &:focus {
-        background-color: $button-disable-color;
-        color: white;
-      }
     }
   }
 }
