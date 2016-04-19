@@ -10,15 +10,14 @@ $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter
 $mobile-header-height: 50px;
 
 .banner-alert {
+  @include clearfix;
   display: block;
-  position: fixed;
-  top: 0;
   width: 100%;
-  padding-top: $small-spacing;
-  padding-bottom: $small-spacing;
   background-color: color("fuchsia");
   color: white;
   text-align: center;
+  padding-top:$tiny-spacing;
+  padding-bottom:$tiny-spacing;
   z-index: $foreground;
   a {
     color: color("inky-blue");
