@@ -157,7 +157,7 @@
 }
 
 .tooltip-no-arrow {
-  @include tooltip("interactive-blue", "no-arrow");
+  @include tooltip("interactive-blue");
 }
 
 .expandable-feed-item {

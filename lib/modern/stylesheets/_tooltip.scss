@@ -18,7 +18,7 @@ $tooltip-font-color: inky-blue;
   }
 }
 
-@mixin tooltip($tooltip-color, $arrow-direction) {
+@mixin tooltip($tooltip-color, $arrow-direction:"no-arrow") {
   box-sizing: content-box;
   display: inline-block;
   position: relative;
