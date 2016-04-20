@@ -345,12 +345,6 @@
             Button!
           </button>
         </div>
-        <div class="example -element -padded">
-          <a class="button">
-            Anchor Button
-          </a>
-        </div>
-
         <p>
         For an inverted color, use the <code>-inverted</code> class.
         </p>
@@ -374,7 +368,7 @@
         </p>
 
         <div class="example -element -padded">
-          <button class="-close" role="button">
+          <button class="-close">
             <span class="screenreader-only">close</span>
           </button>
         </div>
@@ -392,13 +386,13 @@
         If you need a disabled button you can add the following class <code>-disabled</code>
         </p>
         <div class="example -element">
-          <button class="button -disabled" disabled>
+          <button class="button -disabled" disabled="true">
             Disabled button
           </button>
         </div>
 
         <div class="example -element">
-          <button class="button -disabled -inverted" disabled>
+          <button class="button -disabled -inverted" disabled="true">
             Disabled button
           </button>
         </div>
@@ -512,10 +506,10 @@ $("#nothing").click(function(ev) {
         </div>
 
         <div class="example -minor -padded">
-          <input type="checkbox" id="unselected-disabled" class="form-control" disabled/>
+          <input type="checkbox" id="unselected-disabled" class="form-control" disabled="true"/>
           <label for="unselected-disabled">Can't touch this.</label>
           <br />
-          <input type="checkbox" id="selected-disabled" class="form-control" checked disabled/>
+          <input type="checkbox" id="selected-disabled" class="form-control" checked="true" disabled="true"/>
           <label for="selected-disabled">I was once selected but no longer enabled.</label>
         </div>
 
@@ -531,7 +525,7 @@ $("#nothing").click(function(ev) {
           <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
           <label for="30px-enabled">This checkbox is so big.</label>
           <br />
-          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked disabled/>
+          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true"/>
           <label for="30px-disabled">This checkbox is so big and disabled.</label>
         </div>
 
