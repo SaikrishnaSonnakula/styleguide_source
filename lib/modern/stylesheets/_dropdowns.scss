@@ -28,7 +28,7 @@ $dropdown-menu-z-index: 999;
     & .current-selection {
       font-family: $medium-font-family;
       font-size: 16px;
-      display: inline-block;
+      display: inline;
     }
     &:after {
       @include transition(all 0.4s $ease-out-cubic);
