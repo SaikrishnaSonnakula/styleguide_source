@@ -1,6 +1,12 @@
 $dropdown-options-max-height: 200px !default;
 $dropdown-mobile-height: $small-spacing;
+$dropdown-option-menu-max-width: 375px;
+$dropdown-option-menu-border-radius: 3px;
+$dropdown-option-menu-box-shadow: 2px 2px 1px rgba(#6B7487, .65);
+$dropdown-form-background-color: color(graphite-light);
 $dropdown-min-mobile-height: $small-spacing;
+$dropdown-chevron-size: 1rem;
+$dropdown-menu-z-index: 999;
 
 .dropdown {
   position: relative;
@@ -22,7 +28,7 @@ $dropdown-min-mobile-height: $small-spacing;
     & .current-selection {
       font-family: $medium-font-family;
       font-size: 16px;
-      display: inline-block;
+      display: inline;
     }
     &:after {
       @include transition(all 0.4s $ease-out-cubic);
@@ -30,7 +36,7 @@ $dropdown-min-mobile-height: $small-spacing;
       background-color: transparent;
       color: color(interactive-blue);
       font-family: 'kp-icons';
-      font-size: $tiny-font-size;
+      font-size: $dropdown-chevron-size;
       line-height: $dropdown-mobile-height;
       margin-left: $extra-tiny-spacing;
       display: inline-block;
@@ -43,18 +49,27 @@ $dropdown-min-mobile-height: $small-spacing;
   }
 
   &.-form {
+    max-width: $dropdown-option-menu-max-width;
+
+    .-options {
+      width: 100%;
+    }
+
     .-value {
-      background-color: color(pebble);
+      background-color: $dropdown-form-background-color;
       padding: $tiny-spacing $tiny-spacing;
       font-family: $medium-font-family;
       font-weight: normal;
+      max-width: $dropdown-option-menu-max-width;
+      width: 100%;
 
       &:after {
         margin-left: $extra-tiny-spacing;
         vertical-align: baseline;
+        font-size: $dropdown-chevron-size;
+        float: right;
 
         @include media($desktop) {
-          font-size: $medium-font-size;
           vertical-align: text-bottom;
         }
       }
@@ -64,6 +79,7 @@ $dropdown-min-mobile-height: $small-spacing;
   &.-open .-value:after{
     @include transform(rotate(-180deg));
     vertical-align: bottom;
+    font-size: $dropdown-chevron-size;
   }
 
   .-options {
@@ -75,10 +91,10 @@ $dropdown-min-mobile-height: $small-spacing;
     padding: $tiny-spacing 40px;
     background-color: white;
     border: 1px solid color(graphite-dark);
-    box-shadow: 2px 2px 1px rgba(#6B7487, .65);
+    box-shadow: $dropdown-option-menu-box-shadow;
     width: auto;
-    max-width: 375px;
-    border-radius: 3px;
+    max-width: $dropdown-option-menu-max-width;
+    border-radius: $dropdown-option-menu-border-radius;
 
     @include media($device) {
       margin-bottom: 0;
@@ -120,5 +136,6 @@ $dropdown-min-mobile-height: $small-spacing;
   &.-open .-options {
     display: block;
     position: absolute;
+    z-index: $dropdown-menu-z-index;
   }
 }

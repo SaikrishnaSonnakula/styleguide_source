@@ -12,7 +12,7 @@ import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 import accordion from 'lib/modern/scripts/accordion';
 import expandingItem from 'lib/modern/scripts/expanding-item';
-import dropdown from 'lib/modern/scripts/dropdown';
+import dropdownSetup from 'lib/modern/scripts/dropdown';
 
 
 $(function() {
@@ -99,4 +99,13 @@ $(function() {
       $el.hide();
     }, 5000);
   }
+});
+
+
+$(document).ready(() => {
+  setTimeout(() => {
+    $('.dropdown').each((index, dropdown) => {
+      dropdownSetup(dropdown);
+    });
+  }, 2000);
 });
