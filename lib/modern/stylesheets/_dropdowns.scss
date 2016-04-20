@@ -1,8 +1,10 @@
 $dropdown-options-max-height: 200px !default;
 $dropdown-mobile-height: $small-spacing;
 $dropdown-min-mobile-height: $small-spacing;
+$dropdown-chevron-size: 1rem;
 
 .dropdown {
+  display:inline;
   position: relative;
 
   .-value {
@@ -30,7 +32,7 @@ $dropdown-min-mobile-height: $small-spacing;
       background-color: transparent;
       color: color(interactive-blue);
       font-family: 'kp-icons';
-      font-size: $tiny-font-size;
+      font-size: $dropdown-chevron-size;
       line-height: $dropdown-mobile-height;
       margin-left: $extra-tiny-spacing;
       display: inline-block;
@@ -43,18 +45,27 @@ $dropdown-min-mobile-height: $small-spacing;
   }
 
   &.-form {
+    max-width: 375px;
+
+    .-options {
+      width: 100%;
+    }
+
     .-value {
-      background-color: color(pebble);
+      background-color: color(graphite-light);
       padding: $tiny-spacing $tiny-spacing;
       font-family: $medium-font-family;
       font-weight: normal;
+      max-width: 375px;
+      width: 100%;
 
       &:after {
         margin-left: $extra-tiny-spacing;
         vertical-align: baseline;
+        font-size: $dropdown-chevron-size;
+        float: right;
 
         @include media($desktop) {
-          font-size: $medium-font-size;
           vertical-align: text-bottom;
         }
       }
@@ -64,6 +75,7 @@ $dropdown-min-mobile-height: $small-spacing;
   &.-open .-value:after{
     @include transform(rotate(-180deg));
     vertical-align: bottom;
+    font-size: $dropdown-chevron-size;
   }
 
   .-options {
@@ -120,5 +132,6 @@ $dropdown-min-mobile-height: $small-spacing;
   &.-open .-options {
     display: block;
     position: absolute;
+    z-index: 1;
   }
 }
