@@ -1,7 +1,13 @@
 $action-color-bg: #448400;
 $action-color-light: #5FA621;
 
-@import "../../../modern-webpack";
+@import '../../../vendor/normalize';
+@import '../../../vendor/fixedsticky';
+@import "../../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "../../../bower_components/neat/app/assets/stylesheets/_neat";
+@import "../../../lib/modern/stylesheets/neatfix";
+@import '../../../lib/modern/stylesheets/main';
+
 @import "styleguide-docs";
 @import "styleguide-examples";
 @import "styleguide-applied";

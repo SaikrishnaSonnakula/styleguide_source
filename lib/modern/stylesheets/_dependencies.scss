@@ -4,6 +4,6 @@
 // used with grunt-sass and gulp-sass style preprocessors.
 
 @import '../../../vendor/normalize';
-@import "bourbon";
-@import "neat";
+@import "../../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "../../../bower_components/neat/app/assets/stylesheets/_neat";
 @import "./neatfix";
