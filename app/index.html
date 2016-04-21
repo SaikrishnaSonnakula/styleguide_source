@@ -14,8 +14,8 @@
       Styleguide is a KP Open Contribution Project and it needs your help. Learn about how you can <a href="CONTRIBUTING.html">contribute</a>.
     </div>
     <header class="styleguide-header">
-        <span id="menu-button" class="device-menu-button icon-menu"></span>
-        <span class="desktop-only">Web Design</span> Styleguide
+      <span id="menu-button" class="device-menu-button icon-menu"></span>
+      <span class="desktop-only">Web Design</span> Styleguide
     </header>
     <div class="current-breakpoint">
       Current Breakpoint:
@@ -249,14 +249,14 @@
           to see the spacing highlighted.</strong></p>
         <div class="spacing-examples">
           <div class="spacing-example -extra-tiny">
-              <div class="spacing-highlight">
-                <p class="item-body extra-tiny-spacing">
-                  Extra tiny spacing
-                </p>
-              </div>
-              <div class="item-tag">example</div>
+	    <div class="spacing-highlight">
+	      <p class="item-body extra-tiny-spacing">
+	      Extra tiny spacing
+	      </p>
+	    </div>
+	    <div class="item-tag">example</div>
             <p>
-              <code>$extra-tiny-spacing</code> </p>
+	    <code>$extra-tiny-spacing</code> </p>
           </div>
           <div class="spacing-example -tiny">
             <div class="spacing-highlight">
@@ -284,12 +284,12 @@
           </div>
 
           <div class="spacing-example -medium">
-              <div class="spacing-highlight">
-                <p class="item-body medium-spacing">
-                Medium spacing
-                </p>
-              </div>
-              <div class="item-tag">example</div>
+	    <div class="spacing-highlight">
+	      <p class="item-body medium-spacing">
+	      Medium spacing
+	      </p>
+	    </div>
+	    <div class="item-tag">example</div>
             <p>
             <code>$medium-spacing</code> can be used if you need a larger amount of spacing between two elements than is between paragraphs.
             </p>
@@ -438,7 +438,7 @@
         <h2 class="styleguide-section-heading">Modal</h2>
 
 
-          <pre><code class="language-javascript">
+	<pre><code class="language-javascript">
 var focusedElementBeforeModal = null;
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -460,29 +460,29 @@ $("#nothing").click(function(ev) {
   focusedElementBeforeModal.focus();
   ev.preventDefault();
 });
-          </pre></code>
-        <div class="example -padded">
-          <button id="modal-button" class="button">
-            Bring in the modal
-          </button>
+      </pre></code>
+      <div class="example -padded">
+	<button id="modal-button" class="button">
+	  Bring in the modal
+	</button>
 
-          <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
-            <div class="modal-fade-screen">
-              <div class="modal-inner">
-                <div id="modal-description" class="content">
-                  Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
-                <div class="modal-buttons">
-                  <button id="nothing" class="button -action">
-                    Secondary Action
-                  </button>
-                  <button id="do-something" class="button -action -inverted">
-                    Primary Action
-                  </button>
-                </div>
+	<div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+	  <div class="modal-fade-screen">
+	    <div class="modal-inner">
+	      <div id="modal-description" class="content">
+		Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
+	      <div class="modal-buttons">
+		<button id="nothing" class="button -action">
+		  Secondary Action
+		</button>
+		<button id="do-something" class="button -action -inverted">
+		  Primary Action
+		</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       <section id="forms-section">
@@ -491,8 +491,12 @@ $("#nothing").click(function(ev) {
           Form Controls
         </h3>
 
+	<p>Always associate a label with a form field with the purpose of the field.</p>
         <div class="example -minor -padded">
-          <input type="text" class="form-control" placeholder="Name"/>
+	  <div class="form-group">
+	    <label for="exampleInputEmail">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail" value="Happy.Member@kp.org" placeholder="primary.email@example.com">
+	  </div>
         </div>
 
         <p>Base styling for checkboxes can be applied with the form-control class. These checkboxes are 20px squares.</p>
@@ -514,11 +518,11 @@ $("#nothing").click(function(ev) {
 
         <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
 
- <pre class="code language-sass"><code>
+	<pre class="code language-sass"><code>
 .my-30-px-checkbox {
   @include checkbox(30px, $medium-font-size);
 }
-  </code></pre>
+	</code></pre>
 
         <div class="example -minor -padded">
           <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
@@ -550,7 +554,7 @@ $("#nothing").click(function(ev) {
 
         <h3 class="styleguide-subheading">New Action Area</h3>
         <p>
-          The Action Area is a replacement for the old Action Box.
+	The Action Area is a replacement for the old Action Box.
         </p>
 
         <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
@@ -568,19 +572,19 @@ $("#nothing").click(function(ev) {
                     Let's do something
                   </button>
                 </div>
-            </div>
+	      </div>
             </div>
           </div>
 
           <div class="feature-content">
             <h1 class="page-heading">My Feature</h1>
             <p>
-              This is a feature
+	    This is a feature
             </p>
           </div>
         </div>
         <p>
-          In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a>
+	In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a>
         </p>
 
         <pre><code class="language-sass">
@@ -594,7 +598,7 @@ $("#nothing").click(function(ev) {
         </code></pre>
 
         <p class="example-note" style="padding: 15px;">ATTENTION: <br />
-          The following Action Box is going away. Please use the action area above.
+	The following Action Box is going away. Please use the action area above.
         </p>
 
         <div class="example">
@@ -605,7 +609,7 @@ $("#nothing").click(function(ev) {
             <div class="feature-content">
               <h1 class="page-heading">My Feature</h1>
               <p>
-                This is a feature
+	      This is a feature
               </p>
             </div>
           </div>
@@ -736,6 +740,8 @@ expandingItemCloseExpansion.on('click', function() {
   expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
 });
         </code></pre>
+
+      <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
       </section>
 
       <section id="notifications-section">
@@ -848,11 +854,11 @@ expandingItemCloseExpansion.on('click', function() {
       <section id="tooltip">
         <h2 class="styleguide-section-heading">Tooltip</h2>
         <p>Styleguide tooltips take the form of a mixin that take a border color and whether the tip should be on the top or bottom (can be extended later).
-          It is up to the each team to design the user experience for the tooltip display, for example on hover, click, etc.</p>
+	It is up to the each team to design the user experience for the tooltip display, for example on hover, click, etc.</p>
 
         <h3 class="styleguide-subheading">
-      	  Tooltip Top
-      	</h3>
+	  Tooltip Top
+	</h3>
         <pre><code class="language-sass">.tooltip-top { @include tooltip("interactive-blue", "top"); }</code></pre>
         <div class="example -minor -padded">
           <div class="tooltip-top">
@@ -861,8 +867,8 @@ expandingItemCloseExpansion.on('click', function() {
         </div>
 
         <h3 class="styleguide-subheading">
-      	  Tooltip Bottom
-      	</h3>
+	  Tooltip Bottom
+	</h3>
         <pre><code class="language-sass">.tooltip-bottom { @include tooltip("interactive-blue", "bottom"); }</code></pre>
         <div class="example -minor -padded">
           <div class="tooltip-bottom">
