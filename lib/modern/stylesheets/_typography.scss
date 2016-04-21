@@ -49,7 +49,7 @@ $bold-font-family: "Gotham 7r";
   }
 }
 .item-heading {
-  @extend item-heading;
+  @extend %item-heading;
 }
 
 %section-heading {
