@@ -38,7 +38,9 @@ nav {
   &, {
     display: none;
   }
-
+  ul {
+    @extend .list-unstyled; //BOOTSTRAP...
+  }
   @include media($largest-screen) {
     @include span-columns(3);
     top: $styleguide-gutter;
@@ -48,7 +50,6 @@ nav {
       font-size: 14pt;
       font-weight: bold;
       align: left;
-      @extend .list-unstyled; //BOOTSTRAP...
     }
 
     a {

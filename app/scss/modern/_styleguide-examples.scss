@@ -44,7 +44,6 @@
   margin-bottom: 2em;
 
   .code {
-    @extend .doc;
     font-size: $tiny-font-size;
 
     pre {
@@ -54,7 +53,6 @@
   }
 
   .result {
-    @extend .doc;
     width: 100%;
 
     .result-pane {
@@ -97,8 +95,6 @@
   }
 
   &.-large-element {
-    @extend .minor;
-
     @include media($desktop-medium-up) {
       .result {
         .result-pane {
