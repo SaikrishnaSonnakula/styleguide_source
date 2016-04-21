@@ -152,6 +152,10 @@
   @include tooltip("interactive-blue", "bottom");
 }
 
+.tooltip-no-arrow {
+  @include tooltip("interactive-blue");
+}
+
 .expandable-feed-item {
   @include expanding-item();
 }
