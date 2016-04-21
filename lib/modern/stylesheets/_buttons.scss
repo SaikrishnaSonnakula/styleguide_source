@@ -19,7 +19,6 @@ $button-font-family: $medium-font-family;
   font-weight: bold;
   cursor: pointer;
   border: none;
-  text-decoration: none;
   user-select: none;
   text-align: center;
   vertical-align: middle;
@@ -98,7 +97,6 @@ $button-font-family: $medium-font-family;
   &:disabled, .-disabled {
     background-color: $button-disable-color;
     &:hover {
-      color: white;
       cursor: not-allowed;
       border-color: $button-disable-color;
     }
@@ -115,7 +113,6 @@ $button-font-family: $medium-font-family;
   @include appearance(none);
   border: 0px solid transparent;
   background-color: transparent;
-  text-decoration: none;
   text-align: left;
   padding: 0;
 }
