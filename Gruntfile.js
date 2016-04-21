@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
 var buildPlugin = require('build-plugin/webpack');
 var path = require('path');
 var entryPaths = {
-  main: path.resolve(__dirname, 'app/scripts/legacy/index.js'),
   modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
 };
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
   grunt.loadNpmTasks('grunt-webfont');
+  grunt.loadNpmTasks('grunt-sass');
 
   buildPlugin(grunt, {
     useEslint: true,
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         test: require.resolve('./vendor/fixedsticky'),
         loader: 'imports?jQuery=jquery'
       }],
-      alias:{
+      alias: {
         'chai-accessible': 'chai-accessible/src/chai-accessible'
       }
     }
@@ -33,9 +33,9 @@ module.exports = function(grunt) {
         options: {
           layout: '_md_layout.html',
           templateData: {
-            title: function(path){
-              var extractedTitleFromPath = path.substring(path.lastIndexOf('/')+1, path.lastIndexOf('.'));
-              var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text){
+            title: function(path) {
+              var extractedTitleFromPath = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
+              var nameInTitleCase = extractedTitleFromPath.replace(/\w\S*/g, function(text) {
                 return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
               });
               return nameInTitleCase;
@@ -68,19 +68,30 @@ module.exports = function(grunt) {
       tasks: ['webfont']
     }
   });
+
   grunt.config.merge({
     copy: {
       dist: {
-        files: [
-          { src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'] },
-          { cwd: 'lib/modern',
-            expand: true,
-            src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
-            dest: 'target/dist'
-          }
-        ]
+        files: [{
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
+        }, {
+          cwd: 'lib/modern',
+          expand: true,
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
+          dest: 'target/dist'
+        }]
       }
     },
+  });
+
+  grunt.config.merge({
+    sass: {
+      dist: {
+        files: {
+          'target/dist/main.css': 'app/scss/modern/index.scss'
+        }
+      }
+    }
   });
 
   grunt.config.merge({
@@ -111,6 +122,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('prebuild', ['md2html']);
+  grunt.registerTask('prebuild', ['sass', 'md2html']);
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
 };

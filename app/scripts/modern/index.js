@@ -1,7 +1,3 @@
-require('fixedsticky.css');
-require('prism.css');
-require('../../scss/modern/index.scss');
-
 import $ from 'jquery';
 import addColors from './add_colors';
 import createExamples from '../create_examples';
@@ -67,16 +63,7 @@ $(function() {
     feedItemId.attr('aria-expanded', expanded);
     feedItemCollapsibleContent.attr('aria-hidden', !expanded);
   });
-
-  // $('#best-nba-team .-value').click(function() {
-  //   $('#best-nba-team').toggleClass('-open');
-  // });
-
   accordion($('#hipstaccordion'));
-
-  // $('#neighborhood .-value').click(function() {
-  //   $('#neighborhood').toggleClass('-open');
-  // });
 
   $('#toggle-action-area-button').click(function() {
     $('#action-area-example').toggleClass('-hide-action-buttons');
@@ -90,7 +77,6 @@ $(function() {
     $('#action-button').toggleClass('-hide-action-buttons');
   });
 
-
   $('main').show();
   function bannerAlert() {
     var $el = $('.banner-alert');
@@ -100,7 +86,6 @@ $(function() {
     }, 5000);
   }
 });
-
 
 $(document).ready(() => {
   setTimeout(() => {
