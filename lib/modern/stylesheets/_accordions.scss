@@ -1,8 +1,10 @@
 $accordion-closed-character: '+';
 $accordion-opened-character: '-';
+
 .accordion {
   .-group {
     border-bottom: 2px solid color(graphite);
+    margin: 0 0 $tiny-spacing 0;
 
     &.-open {
       .-heading:before {
@@ -22,11 +24,16 @@ $accordion-opened-character: '-';
       cursor: pointer;
       position: relative;
       padding-left: $medium-spacing;
+      width: 100%;
+
+      .item-heading, .auxiliary-text {
+        margin: 0 0 $tiny-spacing 0;
+      }
 
       &:before {
-        color: color(interactive-blue);
+        color: color("interactive-blue");
         content: $accordion-closed-character;
-        display: block;
+        display: inline-block;
         font-size: $medium-font-size;
         left: 0;
         line-height: $large-font-size;
