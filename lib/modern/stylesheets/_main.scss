@@ -38,6 +38,10 @@
 @import "tooltip";
 @import "expanding_item";
 
+* {
+  box-sizing: border-box;
+}
+
 @each $name, $bgcolor in $colors {
   .#{$name} {
     background-color: $bgcolor;
