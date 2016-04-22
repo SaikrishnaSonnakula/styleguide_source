@@ -300,7 +300,7 @@
               <h3 class="large-spacing">
                 Large Spacing
               </h3>
-              <div class="feed-item-tag">example.</div>
+              <div>example.</div>
             </div>
 
             <p>
@@ -690,64 +690,14 @@ $("#nothing").click(function(ev) {
         </div>
         </div>
 
-        <p class="example-note" style="padding: 15px;">ATTENTION: <br />
-          The following Feed Item is going away. Please use the feed/expanding item below.
-        </p>
         <p>
-        For feed items with collapsible content, add the <code>-collapsible</code> class. Then add and remove <code>-open</code> to show and hide content within
-        elements with the <code>collapsible-content</code> class.
-        </p>
-
-          <pre><code class="language-javascript">
-var feedItemId = $("#my-collapsible-feed-item");
-var feedItemHeading = $("#my-collapsible-feed-item .-click-to-expand");
-var feedItemCollapsibleContent = $("#my-collapsible-feed-item .-collapsible");
-
-feedItemHeading.on('click', function() {
-  feedItemId.toggleClass("-open");
-  var expanded = feedItemId.hasClass("-open");
-  feedItemId.attr("aria-expanded", expanded);
-  feedItemCollapsibleContent.attr("aria-hidden", !expanded);
-});
-        </pre></code>
-          <div class="example">
-
-          <div id="my-collapsible-feed-item" class="feed-item -collapsible" aria-expanded="false">
-            <div class="-gutter">
-              <div class="feature-icon fuchsia">IJ</div>
-            </div>
-
-            <div class="-main">
-              <button class="-click-to-expand">
-                <h4 class="item-heading">
-                  Feed Item with Additional Content
-                  <span class="screenreader-only">toggle additional content</span>
-                </h4>
-
-                <div class="-body">
-                  Click me to see the extra content!
-                </div>
-              </button>
-
-              <p class="-body -collapsible" aria-hidden="true">
-              Extra content.
-              </p>
-
-              <div class="-footer item-tag">
-                Tagz
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p class="example-note" style="padding: 15px;">ATTENTION: <br />
-          The following Feed Item is replacing the above Feed Item. Please favor the implementation below.
-        </p>
-        <p>
-        This is a replacement for the above feed item with collapsible content uses a <code>@mixin</code> with limited html requirements.
-        The only requirements are: A button with <code>class="icon-close"</code>, two divs one with your class appended by the post-fix <code>__summary-content</code> and one with your class appended by the post-fix <code>__hidden-content</code>.
+        This feed item with collapsible content uses a <code>@mixin</code> with limited html content requirements.
+        The only requirements are: A button with <code>class="icon-close"</code>, two divs one with your class appended by the post-fix <code>__summary-content</code>
+        and one with your class appended by the post-fix <code>__hidden-content</code>.
         Please refer to the example below.
         </p>
+
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
 
         <div class="example">
           <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
@@ -760,7 +710,8 @@ feedItemHeading.on('click', function() {
               <span class="-body">This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to individual teams to design the feel and spacing for this internal content in accordance with DED redlines / comps.</span>
             </div>
           </div>
-          <pre><code class="language-javascript">
+        </div>
+        <pre><code class="language-javascript">
 var expandingItemId = $("#expandable-feed-item");
 var expandingItemContent = $(".expandable-feed-item__summary-content");
 var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
@@ -784,16 +735,12 @@ expandingItemCloseExpansion.on('click', function() {
   expandingItemContent.attr("aria-expanded", expanded);
   expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
 });
-          </code></pre>
-        </div>
-        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+        </code></pre>
       </section>
 
       <section id="notifications-section">
         <h2 class="styleguide-section-heading">Notifications</h2>
-
         <p><a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">Placeholder classes</a> are available in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets/_notifications.scss" target="_blank">_notifications.scss</a> for the base notification styles available for Styleguide.</p>
-
         <h3 class="styleguide-subheading">
           Errors
         </h3>
