@@ -61,6 +61,12 @@ code {
     text-align: center;
     position: relative;
   }
+  a {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .device-menu-button {

@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-
-    <script src="modern.bundle.js"></script>
     <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
   </head>
   <body>
     <div class="banner-alert">
@@ -87,17 +86,17 @@
 
         <pre><code class="language-sass">@import "styleguide/modern"</code></pre>
 
-        <p>
-        Since the styleguide contains a variety of front-end assets, which all need to be handled the
+        <p>Since the styleguide contains a variety of front-end assets, which all need to be handled the
         right way, we encourage you to use the <a href="https://stash.kp.org/projects/RWD/repos/build-plugin/browse">KP Build Plugin</a>.
 
-        If you are using the Build Plugin, you're all set!
-        </p>
+        If you are using the Build Plugin, you're all set!</p>
         <p>For discussion and help around including Styleguide for AEM integration, log into HipChat (with SSO credentials) and join <a href="https://hipchat.kp.org/chat/room/19">RWD Styleguide</a> or <a href="https://hipchat.kp.org/chat/room/21">RWD Build Plugin</a>.</p>
       </section>
+
       <section id="responsive-section">
         <h2 class="styleguide-section-heading">Responsive</h2>
         <p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
+
         <div id="responsive-table">
         </div>
 
@@ -111,8 +110,7 @@
 }
         </code></pre>
         Here's another example: if I want to apply  <code>$desktop-large</code> with display but hide the view in <code>$device</code>:
-        <pre>
-    <code class="language-sass">
+        <pre><code class="language-sass">
 .element{
   @include media($desktop-large) {
     display:block;
@@ -121,7 +119,7 @@
     display:none;
   }
 }
-    </code></pre>
+        </code></pre>
       </section>
 
       <section id="colors-section">
