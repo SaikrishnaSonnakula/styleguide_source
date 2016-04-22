@@ -61,12 +61,12 @@ export default function(init, harnessOptions) {
           var settledLeft = settlingCount;
 
           var interval = setInterval(function() {
-	    if (state.inRoute || state.pendingAsync > 0) {
+            if (state.inRoute || state.pendingAsync > 0) {
               settledLeft = settlingCount;
               return;
-	    } else {
+            } else {
               settledLeft -= 1;
-	      if (settledLeft <= 0) {
+              if (settledLeft <= 0) {
                 resolve();
                 clearInterval(interval);
               }
@@ -76,9 +76,9 @@ export default function(init, harnessOptions) {
       },
       visit: function(path) {
         this.andThen(function() {
-	  app.router.navigate(path, {
-	    trigger: true
-	  });
+          app.router.navigate(path, {
+            trigger: true
+          });
         });
 
         this.verify(function() {
@@ -89,7 +89,7 @@ export default function(init, harnessOptions) {
         this.andThen(function() {
           var $el = $(selector, root)[!!nth ? nth : 0];
 
-	  assert($el, `Could not find element with selector ${selector} to click.`);
+          assert($el, `Could not find element with selector ${selector} to click.`);
           $el.click();
         });
 
@@ -102,15 +102,15 @@ export default function(init, harnessOptions) {
       // Creates a Blob to stub file properties passed in fileAttrs
       // Returns the Blob file that was created.
       uploadFile: function(selector, fileAttrs) {
-	var file = new Blob(createKBArray(fileAttrs.kb), {
-	  type: fileAttrs.mimeType
-	});
+        var file = new Blob(createKBArray(fileAttrs.kb), {
+          type: fileAttrs.mimeType
+        });
         _.extend(file, fileAttrs);
 
         this.andThen(function() {
-	  $(selector, root).trigger('change', [
-	    [file]
-	  ]);
+          $(selector, root).trigger('change', [
+            [file]
+          ]);
         });
 
         return file;
@@ -118,7 +118,7 @@ export default function(init, harnessOptions) {
 
       fillIn: function(selector, value) {
         this.andThen(function() {
-	  $(selector, root).val('');
+          $(selector, root).val('');
           $(selector, root).autotype(value);
           $(selector, root).change();
         });
@@ -126,7 +126,7 @@ export default function(init, harnessOptions) {
       pasteText: function(selector, value) {
         this.andThen(function() {
           $(selector, root).val(value);
-	  $(selector, root).trigger('input');
+          $(selector, root).trigger('input');
         });
       },
       type: function(selector, value) {

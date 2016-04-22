@@ -8,11 +8,11 @@ describe('accordion component', function() {
   describe('closed', function() {
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="closed-accordion" class="accordion">' +
-	'<div class="-group">' +
-	'<div class="-heading">Default Accordion Heading</div>' +
-	'<div class="-content" aria-hidden="true" aria-expanded="false">' +
-	'<p>Hidden Accordion Content</p>' + '</div>', ['closed-accordion']);
+      this.harness = createTestHarnessWith('<div id="closed-accordion" class="accordion" role="tablist">' +
+        '<div class="-group">' +
+        '<button class="-heading" role="tab" aria-selected="false">Default Accordion Heading</button>' +
+        '<div class="-content" aria-hidden="true" role="tabpanel">' +
+        '<p>Hidden Accordion Content</p>' + '</div>', ['closed-accordion']);
     });
 
     afterEach(function() {
@@ -22,21 +22,21 @@ describe('accordion component', function() {
     it('content should be hidden', function() {
       return this.harness.run(function() {
         this.verify(function(root) {
-	  expect($('.accordion .-group.-open', root)).to.not.exist;
-	  expect($('.accordion .-content', root).attr('aria-hidden')).to.exist;
-	  expect($('.accordion .-content', root).attr('aria-hidden')).to.equal('true');
-	  expect($('.accordion .-content', root).attr('aria-expanded')).to.equal('false');
+          expect($('.accordion .-group.-open', root)).to.not.exist;
+          expect($('.accordion .-content', root).attr('aria-hidden')).to.exist;
+          expect($('.accordion .-content', root).attr('aria-hidden')).to.equal('true');
+          expect($('.accordion .-heading', root).attr('aria-selected')).to.equal('false');
         });
       });
     });
 
     it('reveals content when heading is clicked', function() {
       return this.harness.run(function() {
-	this.click('#closed-accordion .-heading');
+        this.click('#closed-accordion .-heading');
         this.verify(function(root) {
-	  expect($('.accordion .-group.-open', root)).to.exist;
-	  expect($('.accordion .-content', root).attr('aria-hidden')).to.not.exist;
-	  expect($('.accordion .-content', root).attr('aria-expanded')).to.equal('true');
+          expect($('.accordion .-group.-open', root)).to.exist;
+          expect($('.accordion .-content', root).attr('aria-hidden')).to.not.exist;
+          expect($('.accordion .-heading', root).attr('aria-selected')).to.equal('true');
         });
       });
     });
@@ -46,9 +46,9 @@ describe('accordion component', function() {
   describe('opened', function() {
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion"><div class="-group -open">' +
-	'<div class="-heading">Open Accordion Heading</div>' +
-	'<div class="-content" aria-expanded="true"><p>Accordion Content</p></div></div>', ['open-accordion']);
+      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion" role="tablist"><div class="-group -open">' +
+        '<button class="-heading" role="tab" aria-selected="true">Open Accordion Heading</button>' +
+        '<div class="-content" role="tabpanel"><p>Accordion Content</p></div></div>', ['open-accordion']);
     });
 
     afterEach(function() {
@@ -57,11 +57,11 @@ describe('accordion component', function() {
 
     it('conceals content when heading is clicked', function() {
       return this.harness.run(function() {
-	this.click('#open-accordion .-heading');
+        this.click('#open-accordion .-heading');
         this.verify(function(root) {
-	  expect($('.accordion .-group.-open', root)).to.not.exist;
-	  expect($('.accordion .-content', root).attr('aria-hidden')).to.equal('true');
-	  expect($('.accordion .-content', root).attr('aria-expanded')).to.equal('false');
+          expect($('.accordion .-group.-open', root)).to.not.exist;
+          expect($('.accordion .-content', root).attr('aria-hidden')).to.equal('true');
+          expect($('.accordion .-heading', root).attr('aria-selected')).to.equal('false');
         });
       });
     });
@@ -76,21 +76,21 @@ describe('accordion component', function() {
 
     it('reveals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-headings" class="accordion">' +
-	'<div class="-group">' +
-	'<div class="-heading">' + 'First Accordion Heading' + '</div>' +
-	'<div class="-content" aria-hidden="true" aria-expanded="false"><p>First Accordion Content</p></div>' +
-	'</div>' +
-	'<div class="-group">' +
-	'<div class="-heading">Second Accordion Heading</div>' +
-	'<div class="-content" aria-hidden="true" aria-expanded="false"><p>Second Hidden Accordion Content</p></div>' +
-	'</div></div>', ['multiple-headings']);
+        '<div class="-group" role="tablist">' +
+        '<button class="-heading" aria-selected="false" role="tab">' + 'First Accordion Heading' + '</button>' +
+        '<div class="-content" aria-hidden="true" role="tabpanel"><p>First Accordion Content</p></div>' +
+        '</div>' +
+        '<div class="-group" role="tablist">' +
+        '<button class="-heading" aria-selected="false" role="tab">Second Accordion Heading</button>' +
+        '<div class="-content" aria-hidden="true" role="tabpanel"><p>Second Hidden Accordion Content</p></div>' +
+        '</div></div>', ['multiple-headings']);
 
       return this.harness.run(function() {
-	this.click('#multiple-headings .-heading');
+        this.click('#multiple-headings .-heading');
         this.verify(function(root) {
-	  expect($('.accordion .-group.-open', root).length).to.equal(1);
-	  expect($('.accordion .-open .-heading', root).text()).to.equal('First Accordion Heading');
-	  expect($('.accordion .-open .-content', root).text()).to.equal('First Accordion Content');
+          expect($('.accordion .-group.-open', root).length).to.equal(1);
+          expect($('.accordion .-open .-heading', root).text()).to.equal('First Accordion Heading');
+          expect($('.accordion .-open .-content', root).text()).to.equal('First Accordion Content');
         });
       });
     });
@@ -98,22 +98,22 @@ describe('accordion component', function() {
 
     it('conceals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-open-headings" class="accordion">' +
-	'<div class="-group -open">' +
-	'<div class="-heading">' + 'First Open Heading' + '</div>' +
-	'<div class="-content"><p>First Accordion Content</p></div>' +
-	'</div>' +
-	'<div class="-group -open">' +
-	'<div class="-heading">Second Open Heading</div>' +
-	'<div class="-content"><p>Second Open Accordion Content</p></div>' +
-	'</div></div>', ['multiple-open-headings']);
+        '<div class="-group -open" role="tablist">' +
+        '<button class="-heading" role="tab">' + 'First Open Heading' + '</button>' +
+        '<div class="-content" role="tabpanel"><p>First Accordion Content</p></div>' +
+        '</div>' +
+        '<div class="-group -open" role="tablist">' +
+        '<button class="-heading" role="tab">Second Open Heading</button>' +
+        '<div class="-content" role="tabpanel"><p>Second Open Accordion Content</p></div>' +
+        '</div></div>', ['multiple-open-headings']);
 
       return this.harness.run(function() {
-	this.click('#multiple-open-headings .-heading');
+        this.click('#multiple-open-headings .-heading');
         this.verify(function(root) {
-	  expect($('.accordion .-group.-open', root).length).to.equal(1);
-	  expect($('.accordion .-open .-content', root).length).to.equal(1);
-	  expect($('.accordion .-open .-heading', root).text()).to.equal('Second Open Heading');
-	  expect($('.accordion .-open .-content', root).text()).to.equal('Second Open Accordion Content');
+          expect($('.accordion .-group.-open', root).length).to.equal(1);
+          expect($('.accordion .-open .-content', root).length).to.equal(1);
+          expect($('.accordion .-open .-heading', root).text()).to.equal('Second Open Heading');
+          expect($('.accordion .-open .-content', root).text()).to.equal('Second Open Accordion Content');
         });
       });
     });
@@ -127,7 +127,7 @@ describe('accordion component', function() {
         start: function() {
           root.append(markup);
           _.each(selectors, function(selector) {
-	    accordion($('#' + selector, root));
+            accordion($('#' + selector, root));
           });
         },
         stop: function() {}
