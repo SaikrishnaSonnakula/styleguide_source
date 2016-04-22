@@ -10,7 +10,6 @@ import accordion from 'lib/modern/scripts/accordion';
 import expandingItem from 'lib/modern/scripts/expanding-item';
 import dropdownSetup from 'lib/modern/scripts/dropdown';
 
-
 $(function() {
   $('.fixedsticky').fixedsticky();
   if($('#colors-section') && $('#colors-section').length!==0){
@@ -51,17 +50,6 @@ $(function() {
     $('#modal-button').attr('tabindex', '0');
     focusedElementBeforeModal.focus();
     ev.preventDefault();
-  });
-
-  var feedItemId = $('#my-collapsible-feed-item');
-  var feedItemHeading = $('#my-collapsible-feed-item .-click-to-expand');
-  var feedItemCollapsibleContent = $('#my-collapsible-feed-item .-collapsible');
-
-  feedItemHeading.on('click', function() {
-    feedItemId.toggleClass('-open');
-    var expanded = feedItemId.hasClass('-open');
-    feedItemId.attr('aria-expanded', expanded);
-    feedItemCollapsibleContent.attr('aria-hidden', !expanded);
   });
   accordion($('#hipstaccordion'));
 
