@@ -29,25 +29,31 @@
   <main class="styleguide-main">
     <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
       <ul>
-      	<li><a href="#installation-section">Installation</a></li>
-      	<li><a href="modern-ui-elements.html">JS UI Elements</a></li>
-      	<li><a href="#responsive-section">Responsive</a></li>
-      	<li><a href="#colors-section">Colors</a></li>
-      	<li><a href="#typography-section">Typography</a></li>
-      	<li><a href="#spacing-section">Spacing</a></li>
-      	<li><a href="#buttons-section">Buttons</a></li>
-      	<li><a href="#lists-section">Lists</a></li>
-      	<li><a href="#modal-section">Modal</a></li>
-      	<li><a href="#forms-section">Forms</a></li>
-      	<li><a href="#features-section">Features</a></li>
-      	<li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
-      	<li><a href="modern-ui-elements.html#accordion">Accordion</a></li>
-      	<li><a href="#notifications-section">Notifications</a></li>
-      	<li><a href="#loader-section">Loader</a></li>
-      	<li><a href="#tooltip">Tooltips</a></li>
-      	<li><a href="icons.html">Icons</a></li>
-      	<li><a href="#help-section">Help</a></li>
-        <li><a href="CONTRIBUTING.html">Contribute</a></li>
+        <li><h3>Getting Started</h3></li>
+        <li><a href="#installation-section">Installation</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="#help-section">Help</a></li>
+        <li><a href="contributing.html">Contributing</a></li>
+        <li><h3>Base</h3></li>
+        <li><a href="#responsive-section">Responsive</a></li>
+        <li><a href="#colors-section">Colors</a></li>
+        <li><a href="#typography-section">Typography</a></li>
+        <li><a href="#spacing-section">Spacing</a></li>
+        <li><h3>Elements</h3></li>
+        <li><a href="#buttons-section">Buttons</a></li>
+        <li><a href="#forms-section">Forms</a></li>
+        <li><a href="#lists-section">Lists</a></li>
+        <li><h3>JS Components</h3></li>
+        <li><a href="#modal-section">Modals</a></li>
+        <li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
+        <li><a href="modern-ui-elements.html#accordion">Accordions</a></li>
+        <li><h3>Messaging</h3></li>
+        <li><a href="#action-area-section">Action Area</a></li>
+        <li><a href="#feed-item-section">Feed Items</a></li>
+        <li><a href="#notifications-section">Notifications</a></li>
+        <li><a href="#loader-section">Loader/Spinner</a></li>
+        <li><a href="#tooltip">Tooltips</a></li>
+        <li><a href="icons.html">Icons</a></li>
       </ul>
     </nav>
 
@@ -92,7 +98,10 @@
         If you are using the Build Plugin, you're all set!</p>
         <p>For discussion and help around including Styleguide for AEM integration, log into HipChat (with SSO credentials) and join <a href="https://hipchat.kp.org/chat/room/19">RWD Styleguide</a> or <a href="https://hipchat.kp.org/chat/room/21">RWD Build Plugin</a>.</p>
       </section>
-
+      <section id="help-section">
+        <h2 class="styleguide-section-heading">Help</h2>
+        <p>If you're having any trouble getting started, open the <a href="https://hipchat.kp.org/chat/room/19">RWD Styleguide</a> Hipchat room to ask for additional help with Styleguide installation, contribution, etc. If you are having problems logging into Hipchat, email <a href="mailto:Tyson.Black@kp.org">Tyson Black</a></p>
+      </section>
       <section id="responsive-section">
         <h2 class="styleguide-section-heading">Responsive</h2>
         <p>For ease of development the following SASS variables are provided that contain defined breakpoints.</p>
@@ -533,17 +542,10 @@ $("#nothing").click(function(ev) {
         </div>
       </section>
 
-      <section id="features-section">
-        <h2 class="styleguide-section-heading">Features</h2>
-        <h3 class="styleguide-subheading">Feature Layout</h3>
-
+      <section id="action-area-section">
+        <h2 class="styleguide-section-heading">Action Area</h2>
         <p>
         Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.
-        </p>
-
-        <h3 class="styleguide-subheading">New Action Area</h3>
-        <p>
-	The Action Area is a replacement for the old Action Box.
         </p>
 
         <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
@@ -561,20 +563,16 @@ $("#nothing").click(function(ev) {
                     Let's do something
                   </button>
                 </div>
-	      </div>
+              </div>
             </div>
           </div>
 
           <div class="feature-content">
             <h1 class="page-heading">My Feature</h1>
-            <p>
-	    This is a feature
-            </p>
+            <p> This is a feature </p>
           </div>
         </div>
-        <p>
-	In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a>
-        </p>
+        <p> In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a> </p>
 
         <pre><code class="language-sass">
 .example-action-area-container {
@@ -660,8 +658,10 @@ $("#nothing").click(function(ev) {
             <div class="-center-piece fuchsia">Fancy Center Piece</div>
           </div>
         </div>
+      </section>
 
-        <h3 class="styleguide-subheading">Feed Items</h3>
+      <section id="feed-item-section" id="feed-item-section">
+        <h2 class="styleguide-section-heading">Feed Items</h2>
 
         <div class="example">
           <div class="feed-item">
@@ -730,7 +730,7 @@ expandingItemCloseExpansion.on('click', function() {
 });
         </code></pre>
 
-      <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
       </section>
 
       <section id="notifications-section">
@@ -874,10 +874,6 @@ expandingItemCloseExpansion.on('click', function() {
             Tooltip Box With Text
           </div>
         </div>
-      </section>
-      <section id="help-section">
-        <h2 class="styleguide-section-heading">Help</h2>
-        <p>Open the <a href="https://hipchat.kp.org/chat/room/19">RWD Styleguide</a> Hipchat room to ask for additional help with Styleguide installation, contribution, etc. If you are having problems logging into Hipchat, email <a href="mailto:Tyson.Black@kp.org">Tyson Black</a></p>
       </section>
     </article>
     </main>
