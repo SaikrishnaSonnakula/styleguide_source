@@ -5,6 +5,10 @@ var path = require('path');
 var entryPaths = {
   modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
 };
+var dirs = {
+  bourbon: require('node-bourbon').includePaths,
+  bourbonNeat: require('node-neat').includePaths
+}
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
@@ -70,6 +74,16 @@ module.exports = function(grunt) {
   });
 
   grunt.config.merge({
+    watch: {
+      files: ['**/*.scss'],
+      options: {
+        cwd: './'
+      },
+      tasks: ['sass']
+    }
+  });
+
+  grunt.config.merge({
     copy: {
       dist: {
         files: [{
@@ -86,10 +100,14 @@ module.exports = function(grunt) {
 
   grunt.config.merge({
     sass: {
-      dist: {
-        files: {
-          'target/dist/main.css': 'app/scss/modern/index.scss'
-        }
+      options: {
+        sourceMap: false,
+        includePaths: ['./node_modules'].concat(dirs.bourbonNeat)
+      },
+      dist:{
+        files:[
+          {'target/dist/main.css' : 'app/scss/modern/index.scss'},
+        ]
       }
     }
   });
