@@ -3,8 +3,8 @@ $action-color-light: #5FA621;
 
 @import '../../../vendor/normalize';
 @import '../../../vendor/fixedsticky';
-@import "../../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
-@import "../../../bower_components/neat/app/assets/stylesheets/_neat";
+@import "bourbon";
+@import "neat";
 @import "../../../lib/modern/stylesheets/neatfix";
 @import '../../../lib/modern/stylesheets/main';
 
