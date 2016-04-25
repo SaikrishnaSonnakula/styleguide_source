@@ -49,28 +49,34 @@
 
       <section id="accordion">
         <h2 class="styleguide-section-heading">Accordion</h2>
+        <p>Accordions are a treated as a group of expandable items in which opening one will reveal
+        content associated with its label. The markup below is required to acheive the functionality written in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/scripts/accordion.js">lib/scripts/modern/accordion.js</a></p>
+        <p>The expected keyboard functionality is required in order to make this pattern keyboard accessible:</p>
+        <ul>
+          <li>TAB key to enter/exit accordion</li>
+          <li>ARROW keys to change tabs</li>
+          <li>and ENTER or SPACEBAR to expand/collapse tabs</li>
+        </ul>
+        <pre><code class="language-javascript">import accordion from 'styleguide/lib/modern/scripts/accordion';
+accordion($("#hipstaccordion"));</code></pre>
         <div class="example -padded">
-          <pre><code class="language-javascript">
-import accordion from 'styleguide/lib/modern/scripts/accordion';
-accordion($("#hipstaccordion"));
-          </code></pre>
           <div id="hipstaccordion" class="accordion" role="tablist">
             <div class="-group">
-              <div class="-heading" role="tab">
+              <button class="-heading" aria-selected="false" role="tab">
                 <h3 class="item-heading">Fanny Pack Four Dollar Toast</h3>
                 <p class="auxiliary-text">Blue Bottle Sriracha</p>
-              </div>
-              <div class="-content" role="tabpanel" aria-expanded="false" aria-hidden="true">
+              </button>
+              <div class="-content" role="tabpanel" aria-hidden="true">
                 <h4 class="item-subheading">Cliche Flannel Tweet</h4>
                 <p class="auxiliary-text">Brunch offal bushwick chambray biodiesel pitchfork slow-carb vice chicharrones lomo paleo. Tacos offal chicharrones craft beer, fanny pack lo-fi yr meditation wayfarers pug bicycle rights. Occupy pop-up ennui, portland retro street art banjo kogi shabby chic 3 wolf moon. Crucifix echo park bespoke, ugh shoreditch semiotics neutra austin PBR&B etsy hella occupy. Banjo gentrify pop-up, kombucha poutine salvia quinoa shoreditch organic chambray art party ramps.</p>
               </div>
             </div>
             <div class="-group">
-              <div class="-heading" role="tab">
+              <button class="-heading" aria-selected="false" role="tab">
                 <h3 class="item-heading">Kombucha Church-Key Listicle</h3>
                 <p class="auxiliary-text">Disrupt Waistcoat Marfa</p>
-              </div>
-              <div class="-content" role="tabpanel" aria-expanded="false" aria-hidden="true">
+              </button>
+              <div class="-content" role="tabpanel" aria-hidden="true">
                 <h4 class="item-subheading">Pour-over Wolf VHS Helvetica</h4>
                 <p class="auxiliary-text">Kitsch keytar tacos hammock XOXO, austin meggings gentrify hoodie art party 3 wolf moon gochujang. Kombucha church-key listicle, typewriter forage mixtape locavore fingerstache synth you probably haven't heard of them leggings next level.</p>
               </div>

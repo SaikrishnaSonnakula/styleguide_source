@@ -15,10 +15,10 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-value', root)).to.exist;
-	expect($('.fancy-select select', root).val()).to.equal('B');
-	expect($('.fancy-select button.-option.-active', root)).to.contain('Banana');
-	expect($('.fancy-select .-value', root)).to.contain('Banana');
+        expect($('.fancy-select button.-value', root)).to.exist;
+        expect($('.fancy-select select', root).val()).to.equal('B');
+        expect($('.fancy-select button.-option.-active', root)).to.contain('Banana');
+        expect($('.fancy-select .-value', root)).to.contain('Banana');
       });
     });
   });
@@ -30,9 +30,9 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select.-single', root)).to.exist;
-	expect($('.fancy-select select', root)).to.contain('Dr. Only Me');
-	expect($('.fancy-select .-value', root)).to.contain('To: Dr. Only Me');
+        expect($('.fancy-select.-single', root)).to.exist;
+        expect($('.fancy-select select', root)).to.contain('Dr. Only Me');
+        expect($('.fancy-select .-value', root)).to.contain('To: Dr. Only Me');
       });
     });
   });
@@ -44,14 +44,14 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-value', root)).to.exist;
-	expect($('.fancy-select button.-option.-active', root)).to.contain('Apple');
-	expect($('.fancy-select .-value', root)).to.contain('Select: Apple');
+        expect($('.fancy-select button.-value', root)).to.exist;
+        expect($('.fancy-select button.-option.-active', root)).to.contain('Apple');
+        expect($('.fancy-select .-value', root)).to.contain('Select: Apple');
       });
 
       this.click('.fancy-select button.-option:eq(1)');
       this.verify(function(root) {
-	expect($('.fancy-select .-value', root)).to.contain('Select: Banana');
+        expect($('.fancy-select .-value', root)).to.contain('Select: Banana');
       });
     });
   });
@@ -63,11 +63,11 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select', root).length).to.equal(2);
-	expect($('.fancy-select .-value', root)).to.contain('Select: Apple');
-	expect($('.fancy-select .-value', root)).to.contain('Choose: Hello');
-	expect($('#my-select~.-options button', root).length).to.equal(2);
-	expect($('#choose-select~.-options button', root).length).to.equal(2);
+        expect($('.fancy-select', root).length).to.equal(2);
+        expect($('.fancy-select .-value', root)).to.contain('Select: Apple');
+        expect($('.fancy-select .-value', root)).to.contain('Choose: Hello');
+        expect($('#my-select~.-options button', root).length).to.equal(2);
+        expect($('#choose-select~.-options button', root).length).to.equal(2);
       });
     });
   });
@@ -81,14 +81,14 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-value', root)).to.exist;
-	expect($('.fancy-select .-value', root)).to.contain('To: Please select the following');
-	expect($('.fancy-select button.-option:eq(0)', root).html()).to.equal('Apple');
+        expect($('.fancy-select button.-value', root)).to.exist;
+        expect($('.fancy-select .-value', root)).to.contain('To: Please select the following');
+        expect($('.fancy-select button.-option:eq(0)', root).html()).to.equal('Apple');
       });
 
       this.click('.fancy-select button.-option:eq(1)');
       this.verify(function(root) {
-	expect($('.fancy-select .-value', root)).to.contain('To: Banana');
+        expect($('.fancy-select .-value', root)).to.contain('To: Banana');
       });
     });
   });
@@ -104,9 +104,9 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-value', root)).to.exist;
-	expect($('.fancy-select .-value', root)).to.contain('To: Banana');
-	expect($('.fancy-select button.-option:eq(0)', root).html()).to.equal('Apple');
+        expect($('.fancy-select button.-value', root)).to.exist;
+        expect($('.fancy-select .-value', root)).to.contain('To: Banana');
+        expect($('.fancy-select button.-option:eq(0)', root).html()).to.equal('Apple');
       });
     });
   });
@@ -122,8 +122,8 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-value', root)).to.exist;
-	expect($('.fancy-select .-value', root)).to.contain('To: Apple');
+        expect($('.fancy-select button.-value', root)).to.exist;
+        expect($('.fancy-select .-value', root)).to.contain('To: Apple');
       });
     });
   });
@@ -136,12 +136,12 @@ describe('fancy-select component', function() {
     return this.harness.run(function() {
       this.click('.fancy-select button.-value');
       this.verify(function(root) {
-	expect($('.fancy-select.-open', root)).to.exist;
+        expect($('.fancy-select.-open', root)).to.exist;
       });
 
       this.click('.fancy-select button.-value');
       this.verify(function(root) {
-	expect($('.fancy-select.-open', root)).to.not.exist;
+        expect($('.fancy-select.-open', root)).to.not.exist;
       });
     });
   });
@@ -153,8 +153,8 @@ describe('fancy-select component', function() {
 
     return this.harness.run(function() {
       this.verify(function(root) {
-	expect($('.fancy-select button.-option:eq(0)', root)).to.contain('A');
-	expect($('.fancy-select button.-option:eq(1)', root)).to.contain('B');
+        expect($('.fancy-select button.-option:eq(0)', root)).to.contain('A');
+        expect($('.fancy-select button.-option:eq(1)', root)).to.contain('B');
       });
     });
   });
@@ -173,10 +173,10 @@ describe('fancy-select component', function() {
       this.click('.fancy-select button.-option:eq(1)');
 
       this.verify(function(root) {
-	expect($('.fancy-select.-open', root)).to.not.exist;
-	expect($('.fancy-select button.-value', root)).to.contain('Banana');
-	expect($('.fancy-select button.-option.-active', root)).to.contain('Banana');
-	expect($('select', root).val()).to.equal('B');
+        expect($('.fancy-select.-open', root)).to.not.exist;
+        expect($('.fancy-select button.-value', root)).to.contain('Banana');
+        expect($('.fancy-select button.-option.-active', root)).to.contain('Banana');
+        expect($('select', root).val()).to.equal('B');
       });
     });
   });
@@ -206,7 +206,7 @@ describe('fancy-select component', function() {
         start: function() {
           root.append(markup);
           _.each(selectors, function(selector) {
-	    fancySelect($('#' + selector, root));
+            fancySelect($('#' + selector, root));
           });
         },
         stop: function() {}
