@@ -42,15 +42,15 @@ $(function() {
     lastElem.focus();
   });
 
-  $('#nothing, #do-something').click(function(ev) {
+  $('#nothing, #do-something, .-close').click(function(ev) {
     $('#my-modal').removeClass('modal-showing');
     $('#my-modal').attr('aria-hidden', 'true');
     $('.styleguide-main, .current-breakpoint, .styleguide-header').attr('aria-hidden','false');
     $('.modal-inner #modal-description').removeAttr('tabindex');
-    $('#modal-button').attr('tabindex', '0');
     focusedElementBeforeModal.focus();
     ev.preventDefault();
   });
+
   accordion($('#hipstaccordion'));
 
   $('#toggle-action-area-button').click(function() {

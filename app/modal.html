@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>KP Styleguide :: Modals</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="main.css" />
-    <script src="modern.bundle.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <header class="styleguide-header">
-      <a href="index.html">
-        <span class="desktop-only">Web Design</span> Styleguide
-      </a>
-    </header>
+<head>
+  <title>KP Styleguide :: Modals</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="main.css" />
+  <script src="modern.bundle.js"></script>
 
-    <main class="styleguide-main">
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="styleguide-header">
+    <a href="index.html">
+      <span class="desktop-only">Web Design</span> Styleguide
+    </a>
+  </header>
+
+  <main class="styleguide-main">
 
     <article class="styleguide-content">
       <section id="modal-section">
-        <h1 class="styleguide-section-heading">Modal</h1>
-
-        Below is the modal pattern we use on several KP apps. Use the HTML markup below to meet the following:
+        <h1 class="styleguide-section-heading">Modal</h1> Below is the <i>base</i> pattern for modal window <b>styling</b>.
+        <p class="styleguide-note">KP apps must adhere to the following guidelines and expected behavior in the context of modal windows.
+        Please note that Styleguide does not provide the code for the Javascript implementation.</p>
 
         <h2 id="html-requirements">HTML Requirements</h2>
         <ul>
@@ -33,21 +35,12 @@
           <li>Must contain at least one interactive element (this can be the close button).</li>
           <li>Must be labelled by an onscreen element (a heading for example) or explicit attribute.</li>
           <li>Must start heading hierarchy at level 2.</li>
-          <li>Must trap keyboard focus until closed.</li>
-          <li>Must add high-contrast mask over page background.</li>
+          <li>Must prevent the ability to click/touch anything outside of the modal until closed.</li>
+          <li>Must add high-contrast overlay on top of the page beneath.</li>
           <li>Must use appropriate ARIA role of dialog or alertdialog.</li>
         </ul>
 
-        Javascript is necessary in order to make the modal fully accessible to both keyboards and screenreaders.
-        For best practices, we expect behavior to meet the following criteria:
-
-        <h2 id="js-requirements">JS Requirements</h2>
-
-        <ul>
-          <li>Must only be opened on a click event or system event.</li>
-          <li>Must never be opened on hover/focus event.</li>
-        </ul>
-
+        <p>Triggering a modal should only be on a click event or system event and never on a hover/focus event.</p>
         <div class="example -padded">
           <button id="modal-button" class="button">
             Bring in the modal
@@ -56,8 +49,8 @@
           <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-title">
             <div class="modal-fade-screen" tabindex="-1">
               <div class="modal-inner" tabindex="0">
-                <header>
-                  <h1 id="modal-title">Modal Example</h1>
+                <header class="modal-header">
+                  <h2 id="modal-title">Modal Example</h2>
                   <button id="modal-close" class="-close">
                     <span class="screenreader-only">close modal</span>
                   </button>
@@ -77,8 +70,53 @@
             </div>
           </div>
         </div>
+        <h2 id="accessibility-requirements">Accessibility Best Practices</h2>
+        <p>You can find examples of how you would implement the following behaviors in the <a href="#javascript-examples">javascript examples section</a>.</p>
+        <h3 id="screenreader-requirements">Expected Screenreader Behavior</h3>
+        <ul>
+          <li>Screen reader reads the associated button label for the button trigger (no other aria attributes are required, e.g. do not use <code>aria-haspopup</code>).</li>
+          <li>When dialog opens, contents and role (dialog or alertdialog) are announced by screen reader, followed by the label of the first interactive control that gains keyboard focus.</li>
+          <li>Reads close button label when close button has focus.</li>
+          <li>Does not read anything outside of the contents of the dialog.</li>
+          <li>Announces "Leaving dialog" (or words to those affect) when keyboard focus leaves dialog (i.e. when dialog is closed).</li>
+        </ul>
+
+        <h3 id="keyboard-requirements">Expected Keyboard Behavior</h3>
+        <ul>
+          <li>Pressing SPACE or ENTER on modal trigger button will open the click-activated dialog.</li>
+          <li>When modal is opened, keyboard focus is immediately set on an interactive element inside of window (this is usually the close button).</li>
+          <li>Pressing TAB or SHIFT+TAB will cycle through all interactive elements inside of the dialog and nothing outside of the window.</li>
+          <li>Pressing ENTER or SPACE on close button, or pressing ESC at any time, will hide dialog; keyboard focus is returned to the element that had focus before dialog was opened.</li>
+        </ul>
+
+        <h2 id="javascript-examples">Javascript Examples</h2> Below are some implementations of screenreader accessibility, keyboard, and mouse event handling for modal windows.
+        <h3>Trapping Keyboard Focus</h3>
+        <p>
+          While open, a dialog must prevent keyboard focus from returning to the background page. <br /> In addition, keyboard focus must wrap from the last interactive element back to the first when tabbing, and vice versa when shift-tabbing.
+        </p>
+        <ul>
+          <li><a href="https://stash.kp.org/projects/KPWEB/repos/appointment-center/browse/ui.resources/app/scripts/services/tabbing_accessibility_service.es6.js" target="_blank">KP Appointment Center tabbing accessibility service</a> (AngularJS)</li>
+          <li><a href="https://github.com/ianmcburnie/jquery-keyboard-trap" target="_blank">jQuery example</a></li>
+        </ul>
+        <h3>Trapping Screen Reader Speech</h3>
+        <p>Any content that is not inside of the dialog element must be hidden from screen reader users by applying <code>aria-hidden="true"</code> to all direct descendants of the body element while the dialog is in an open state and removing it when the dialog is closed.</p>
+        <ul>
+          <li><a href="https://stash.kp.org/projects/KPWEB/repos/appointment-center/browse/ui.resources/app/scripts/directives/modal.es6.js" target="_blank">Appointment Center modal</a> (AngularJS directive)</li>
+          <li><a href="https://github.com/ianmcburnie/jquery-screenreader-trap" target="_blank">jQuery example</a></li>
+        </ul>
+        <h2 id="aria-reference">ARIA Reference</h2>
+        Use this ARIA reference guide for the attributes used in the modal context.
+        <ul>
+          <li><code>role=dialog</code>: Informs the assistive technology that the user is inside of a dialog.</li>
+          <li><code>role=document</code>: For backwards compatibility for older screen readers. Without this role they cannot navigate the virtual cursor inside of dialog window.</li>
+          <li><code>role=banner</code>: Identifies the banner/header section of the dialog. A user knows that this area typically contains the dialog heading and close button.</li>
+          <li><code>aria-labelledby</code>: Informs the assistive technology of the onscreen text used to label the dialog.</li>
+          <li><code>aria-label</code>: Sets an explicit label value for the dialog, overriding any onscreen labelling text.</li>
+          <li><code>aria-hidden</code>: Applied to all direct descendants of the body element (except the dialog element!) while dialog is in an open state, causing the screen reader to ignore any non-dialog content.</li>
+        </ul>
+        Many of the resources and information found in this article would not be possible without the help of <a href="https://ebay.gitbooks.io/mindpatterns/content/disclosure/dialog.html" target="_blank">eBay's MIND Patterns</a> documentation.
       </section>
     </article>
-    </main>
-  </body>
+  </main>
+</body>
 </html>
