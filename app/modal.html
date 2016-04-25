@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KP Styleguide :: Modals</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <a href="index.html">
+        <span class="desktop-only">Web Design</span> Styleguide
+      </a>
+    </header>
+
+    <main class="styleguide-main">
+
+    <article class="styleguide-content">
+      <section id="modal-section">
+        <h2 class="styleguide-section-heading">Modal</h2>
+
+        <pre><code class="language-javascript">
+var focusedElementBeforeModal = null;
+var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+$("#modal-button").click(function() {
+  $("#my-modal").addClass("modal-showing");
+  $("#my-modal").attr('aria-hidden','false');
+  $(".styleguide-main .current-breakpoint, .styleguide-header").attr('aria-hidden','true');
+  focusedElementBeforeModal = $(':focus');
+  var lastElem = $("#my-modal").find('*').filter(focusableElementsString).filter(':visible').last();
+  lastElem.focus();
+});
+
+$("#nothing").click(function(ev) {
+  $("#my-modal").removeClass("modal-showing");
+  $("#my-modal").attr("aria-hidden", 'true');
+  $(".styleguide-main, .current-breakpoint, .styleguide-header").attr('aria-hidden','false');
+  $(".modal-inner #modal-description").removeAttr('tabindex');
+  $("#modal-button").attr('tabindex', '0');
+  focusedElementBeforeModal.focus();
+  ev.preventDefault();
+});
+      </pre></code>
+
+      <div class="example -padded">
+        <button id="modal-button" class="button">
+          Bring in the modal
+        </button>
+
+        <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-description" aria-hidden="true">
+          <div class="modal-fade-screen">
+            <div class="modal-inner">
+              <div id="modal-description" class="content">
+                Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!</div>
+              <div class="modal-buttons">
+                <button id="nothing" class="button -action">
+                  Secondary Action
+                </button>
+                <button id="do-something" class="button -action -inverted">
+                  Primary Action
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </article>
+    </main>
+  </body>
+</html>
