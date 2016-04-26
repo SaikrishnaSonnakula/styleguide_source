@@ -5,10 +5,11 @@ var path = require('path');
 var entryPaths = {
   modern: path.resolve(__dirname, 'app/scripts/modern/index.js')
 };
+
 var dirs = {
   bourbon: require('node-bourbon').includePaths,
   bourbonNeat: require('node-neat').includePaths
-}
+};
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
