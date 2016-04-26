@@ -26,8 +26,9 @@ $(function() {
   fancySelect($('#select-from-with-only-one'));
   fancySelect($('#select-from-with-default-but-selected'));
 
-  $('#menu-button, #navbar a').click(function() {
+  $('#menu-button').click(function() {
     $('#navbar').toggleClass('hidden');
+    $('#navbar').toggleClass('fixedsticky');
   });
 
   var focusedElementBeforeModal = null;

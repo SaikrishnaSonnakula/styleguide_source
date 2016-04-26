@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>KP Styleguide :: JS Components</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" />
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
 
-<head>
-  <title>UI elements with Javascript</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="main.css" />
-  <script src="modern.bundle.js"></script>
-
-  <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-  <header class="styleguide-header">
-    <a href="index.html">
-      <span class="desktop-only">Web Design</span> Styleguide
-    </a>
-  </header>
-  <div class="current-breakpoint">
-    Current Breakpoint:
-    <span class="mobile-only">Mobile</span>
-    <span class="tablet-only">Tablet</span>
-    <span class="small-desktop-only">Small Desktop</span>
-    <span class="desktop-only">Desktop Medium</span>
-    <span class="large-desktop-only">Large Desktop</span>
-  </div>
-
-  <main class="styleguide-main">
-    <nav id="navbar" class="styleguide-navigation fixedsticky hidden">
+    <main class="styleguide-main">
+    <nav id="navbar" class="styleguide-navigation hidden">
       <ul>
         <li><a href="#accordion">Accordion</a></li>
         <li><a href="#dropdown">Dropdown</a></li>
@@ -40,8 +34,8 @@
     <article class="styleguide-content">
       <section id="about-section">
         <h2 class="styleguide-section-heading">
-            READ ME FIRST
-          </h2>
+          READ ME FIRST
+        </h2>
         <p class="fuchsia" style="padding: 15px;">ATTENTION: <br /> The following patterns are experimental & subject to change.<br /> If you find any issues with them, please contribute to fix them.
         </p>
         <p>The patterns on this page are ochestrated with javascript to fully function.</p>
@@ -90,7 +84,7 @@ accordion($("#hipstaccordion"));</code></pre>
           Dropdown
         </h2>
         <p>
-          Dropdown that contains a list of links used for navigation. Please find the corresponding Javascript below.
+        Dropdown that contains a list of links used for navigation. Please find the corresponding Javascript below.
         </p>
         <div class="example -padded-desktop">
           <div id="best-nba-team" class="dropdown">
@@ -106,7 +100,7 @@ accordion($("#hipstaccordion"));</code></pre>
         </div>
 
         <p>
-          Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features.
+        Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features.
         </p>
 
         <div class="example -padded-desktop">
@@ -127,7 +121,6 @@ import dropdownSetup from 'lib/modern/scripts/dropdown';
         </code></pre>
       </section>
     </article>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

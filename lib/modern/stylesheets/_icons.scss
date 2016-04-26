@@ -18,7 +18,7 @@ $icon-line-height: 2;
   text-align: center;
   vertical-align: middle;
   line-height: $icon-line-height;
-  
+
   @-moz-document url-prefix() {
     line-height: normal;
   }
