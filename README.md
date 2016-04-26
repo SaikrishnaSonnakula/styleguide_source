@@ -120,7 +120,7 @@ We welcome all in the KP developer community contribute to styleguide, all edits
 ### Before You begin
 Make sure you have:
 
-* Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
+* Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
 * Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
 * [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) are setup in Stash
 * [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) is downloaded onto your machine to run the build plugin grunt taskrunner
@@ -141,7 +141,7 @@ Summary of the current contribution process is:
 
 
 ### Detailed steps of How to Contribute
-More detailed steps included in the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)
+More detailed steps included in the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
 
 
 <a name="resources"></a>
@@ -158,11 +158,11 @@ More detailed steps included in the [Contributing documentation](https://stash.k
 
 ## Didn't Find what you are looking for?
 
-If you have something to add, a bug fix, or make a change [contribute to the Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)! The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed.
+If you have something to add, a bug fix, or make a change [contribute to the Styleguide](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)! The styleguide is maintained on a volunteer basis, any additional help is greatly welcomed.
 
 Check the [jira board](https://jira.kp.org/browse/STYLE) if you would like to see the currently open tasks and fixes that you can assign to yourself.
 
 <a name="questions"></a>
 ###Questions?
 
-If you're not completely clear on how to use the Styleguide in your project or got lost in the [documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/CONTRIBUTING.md)  please  visit [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19) and we'll help you out.
+If you're not completely clear on how to use the Styleguide in your project or got lost in the [documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)  please  visit [Hipchat Styleguide Room](https://hipchat.kp.org/chat/room/19) and we'll help you out.

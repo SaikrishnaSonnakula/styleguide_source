@@ -1,21 +1,22 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
+  <head>
+    <title>KP Styleguide :: Icons</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>KP Styleguide Icons</title>
-  <link rel="stylesheet" href="main.css" />
-  <script src="modern.bundle.js"></script>
-</head>
-
-<body>
-  <header class="styleguide-header">
-    <a href="index.html">
-      <span class="desktop-only">Webdesign</span> Styleguide
-    </a>
-  </header>
-  <main class="styleguide-main">
-    <article class="styleguide-content">
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <main class="styleguide-main">
+    <article>
       <h1 class="styleguide-section-heading">Icon Basic Usage</h1>
       <p class="styleguide-note">Advise the editorialist for your team and feature when deciding what screenreader-only content to include.</p>
 
@@ -59,18 +60,18 @@
       <h1 class="styleguide-section-heading">Available Icons</h1>
 
       <p class="styleguide-note">
-        <strong>Icons that say FPO ICON are not yet approved.</strong>
-        <br /> What you see are placeholders which will be updated when the icon is approved. If you don't see an icon name listed here, please contact
-        <a href="mailto:Jennifer.Beasley@kp.org" class="icon-message">Jennifer.Beasley@kp.org</a> for more information.
+      <strong>Icons that say FPO ICON are not yet approved.</strong>
+      <br /> What you see are placeholders which will be updated when the icon is approved. If you don't see an icon name listed here, please contact
+      <a href="mailto:Jennifer.Beasley@kp.org" class="icon-message">Jennifer.Beasley@kp.org</a> for more information.
       </p>
 
       <div class="icons-listing" id="icons">
         <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
-          <div class="-icon" data-name="<%= glyph %>"><i class="<%= classPrefix %><%= glyph %>"></i><span class="screenreader-only"><%= glyph %> icon</span><span class="-name"><%= classPrefix %><%= glyph %></span></div>
-          <% } %>
+        <div class="-icon" data-name="<%= glyph %>"><i class="<%= classPrefix %><%= glyph %>"></i><span class="screenreader-only"><%= glyph %> icon</span><span class="-name"><%= classPrefix %><%= glyph %></span></div>
+        <% } %>
       </div>
     </article>
-  </main>
-</body>
+    </main>
+  </body>
 
 </html>
