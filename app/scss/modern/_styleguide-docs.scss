@@ -10,12 +10,12 @@ $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter
 $mobile-header-height: 50px;
 
 .banner-alert {
-  display: none;
-  top: 0px;
-  width: 100%;
   background-color: color("fuchsia");
   color: white;
+  display: none;
   text-align: center;
+  top: 0;
+  width: 100%;
   @include media($desktop){
     display: block;
     padding: $tiny-spacing 0;
@@ -43,7 +43,7 @@ code {
   font-size: $medium-font-size;
   justify-content: space-between;
   line-height: $mobile-header-height;
-  padding: $gutter-spacing/4 $gutter-spacing;
+  padding: $gutter-spacing/4 $gutter-spacing/2;
   position: fixed;
   top: 0;
   width: 100%;
@@ -67,6 +67,9 @@ code {
       text-decoration: underline;
     }
   }
+  .logo {
+    margin: 0 auto;
+  }
 }
 .styleguide-content {
   @include outer-container($main-max-width);
@@ -78,11 +81,11 @@ code {
 
 .styleguide-main {
   @include clearfix;
-  margin: $styleguide-gutter-bottom $gutter-spacing;
-  @include media($styleguide-largest-screen) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $main-max-width;
+  margin: $styleguide-gutter-bottom 5%;
+  position: relative;
+
+  @include media($desktop) {
+    margin: $styleguide-gutter-bottom $gutter-spacing;
   }
 }
 
@@ -91,16 +94,19 @@ code {
 
   ul {
     @extend %list-unstyled;
-    align: left;
     font-size: $small-font-size;
     font-weight: bold;
-    margin-top: $tiny-spacing;
+    line-height: $large-font-size;
+    margin: 0 0 $medium-spacing 0;
   }
 
   a {
-    color: color('dolphin');
+    color: color('interactive-blue');
+    font-size: $base-font-size;
+    margin-left: 0.5em;
+
     &:hover {
-      color: color('interactive-blue');
+      color: color('interactive-blue-dark');
     }
   }
 
@@ -122,7 +128,7 @@ code {
   }
 
   @include media($desktop) {
-    @include span-columns(2);
+    @include span-columns(3);
     float: left;
   }
 }
@@ -130,15 +136,15 @@ code {
 .styleguide-nav-heading {
   color: color('inky-blue');
   font-size: $small-font-size;
-  margin: $extra-tiny-spacing 0;
 }
 
 .styleguide-content {
   padding: $content-padding-mobile 0;
+  width: 100%;
+
   @include media($desktop) {
-    @include clearfix;
-    @include span-columns(10);
-    float: right;
+    @include span-columns(9);
+    float:right;
   }
 }
 
@@ -160,7 +166,7 @@ code {
 
 .styleguide-subheading {
   margin-top: $large-spacing;
-  color: color(dolphin);
+  color: color('dolphin');
   font-size: $medium-font-size;
 }
 
@@ -195,7 +201,7 @@ code {
   }
 
   .font-variable {
-    background-color: color(pebble);
+    background-color: color('pebble');
     margin: $small-spacing 0;
     flex: 0 0 auto;
 
