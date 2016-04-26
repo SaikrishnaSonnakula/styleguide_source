@@ -52,7 +52,7 @@ For an indepth overview of how to set up your workspace [stream](https://kponlin
 
 ![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
 
-3. In your Styleg Guide> Git  directory , update the config file to the following so you can fetch pull requests, sync with upstream,and stay up to date with the latest code:
+3. In your StyleGuide> Git directory, update the config file to the following so you can fetch pull requests, sync with upstream, and stay up to date with the latest code:
 ```
     [core]
     repositoryformatversion = 0
@@ -61,15 +61,19 @@ For an indepth overview of how to set up your workspace [stream](https://kponlin
     logallrefupdates = true
     ignorecase = true
     precomposeunicode = true
+
     [remote "origin"]
     url = ssh://git@stash.kp.org/~yourNUID/styleguide.git
+
     [remote "upstream"]
     url = ssh://git@stash.kp.org/rwd/styleguide.git
     fetch = +refs/heads/*:refs/remotes/upstream/*
     fetch = +refs/pull-requests/*/from:refs/remotes/upstream/pr/*
+
     [branch "master"]
     remote = origin
     merge = refs/heads/master
+
     [user]
     email = your.email.used.instash.@kp.org
 ```
