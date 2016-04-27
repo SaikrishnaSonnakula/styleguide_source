@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>KP Styleguide :: Modals</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="main.css" />
+  <script src="modern.bundle.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+  </header>
+
+  <main class="styleguide-main">
+    <article>
+      <section>
+        <h1>Layouts</h1>
+        <p>We only have one type of layout for now. The action area is found at the top of KP apps and represents that app's (or feature's) main call to action.</p>
+      </section>
+      <section id="action-area">
+        <h2 class="styleguide-section-heading">Action Area</h2>
+        <p>Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.</p>
+
+        <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
+        <div id="action-area-example" class="example -hide-action-buttons">
+          <div class="example-action-area-container">
+            <div class="example-action-area">
+              <div class="action-area-heading">Action Heading</div>
+              <div class="actions-container">
+                <div class="action-messages">
+                  <div class="subheading">Some hint for action</div>
+                </div>
+
+                <div class="action-buttons">
+                  <button class="-primary-action">
+                    Let's do something
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-content">
+            <h1 class="page-heading">My Feature</h1>
+            <p>This is a feature </p>
+          </div>
+        </div>
+
+        <p>In the example above we have an <code>.example-action-area-container</code> which <code>@extend</code>s the <code>%action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which <code>@extend</code>s the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders" target="_blank">placeholder selector</a>.</p>
+
+        <pre><code class="language-sass">
+.example-action-area-container {
+  @extend %action-area-container;
+}
+
+.example-action-area {
+  @extend %action-area;
+}
+        </code></pre>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

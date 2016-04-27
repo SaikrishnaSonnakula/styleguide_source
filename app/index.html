@@ -43,12 +43,13 @@
         <li><a href="#buttons-section">Buttons</a></li>
         <li><a href="#forms-section">Forms</a></li>
         <li><a href="#lists-section">Lists</a></li>
+        <li class="styleguide-nav-heading">Layouts</li>
+        <li><a href="layout.html#action-area">Action Area</a></li>
         <li class="styleguide-nav-heading">JS Components</li>
         <li><a href="modal.html">Modals</a></li>
         <li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
         <li><a href="modern-ui-elements.html#accordion">Accordions</a></li>
         <li class="styleguide-nav-heading">Messaging</li>
-        <li><a href="#action-area-section">Action Area</a></li>
         <li><a href="#feed-item-section">Feed Items</a></li>
         <li><a href="#notifications-section">Notifications</a></li>
         <li><a href="#loader-section">Loader/Spinner</a></li>
@@ -487,48 +488,6 @@
           <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true"/>
           <label for="30px-disabled">This checkbox is so big and disabled.</label>
         </div>
-      </section>
-
-      <section id="action-area-section">
-        <h2 class="styleguide-section-heading">Action Area</h2>
-        <p>Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.</p>
-
-        <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
-        <div id="action-area-example" class="example -hide-action-buttons">
-          <div class="example-action-area-container">
-            <div class="example-action-area">
-              <div class="action-area-heading">Action Heading</div>
-              <div class="actions-container">
-                <div class="action-messages">
-                  <div class="subheading">Some hint for action</div>
-                </div>
-
-                <div class="action-buttons">
-                  <button class="-primary-action">
-                    Let's do something
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-content">
-            <h1 class="page-heading">My Feature</h1>
-            <p>This is a feature </p>
-          </div>
-        </div>
-
-        <p>In the example above we have an <code>.example-action-area-container</code> which <code>@extend</code>s the <code>%action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which <code>@extend</code>s the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders" target="_blank">placeholder selector</a>.</p>
-
-        <pre><code class="language-sass">
-.example-action-area-container {
-  @extend %action-area-container;
-}
-
-.example-action-area {
-  @extend %action-area;
-}
-        </code></pre>
       </section>
 
       <section id="feed-item-section">
