@@ -518,7 +518,7 @@
           </div>
         </div>
 
-        <p>In the example above we have an <code>.example-action-area-container</code> which @extends the <code>action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which @extends the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders">placeholder selector</a> </p>
+        <p>In the example above we have an <code>.example-action-area-container</code> which <code>@extend</code>s the <code>%action-area-container</code> placeholder selector, and a <code>.example-action-area</code> which <code>@extend</code>s the <code>%action-area</code> <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholders" target="_blank">placeholder selector</a>.</p>
 
         <pre><code class="language-sass">
 .example-action-area-container {
@@ -529,79 +529,6 @@
   @extend %action-area;
 }
         </code></pre>
-
-        <p class="example-note" style="padding: 15px;">ATTENTION: <br />
-	The following Action Box is going away. Please use the action area above.
-        </p>
-
-        <div class="example">
-          <div class="feature">
-            <div class="action-box">
-              <h3 class="action-message">Action Message</h3>
-            </div>
-            <div class="feature-content">
-              <h1 class="page-heading">My Feature</h1>
-              <p>This is a feature</p>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="styleguide-subheading">Active action box</h3>
-        <p>In device mode, active action box occupies full screen and hides feature-content.
-        In desktop mode, active action box pushes feature-content down.
-        To activate the action box, add <code>-action-box-active</code> to the feature element.</p>
-
-        <div class="example">
-          <div class="feature -action-box-active">
-            <div class="action-box">
-              <h3 class="action-message">Action Message in Active Action Box</h3>
-            </div>
-            <div class="feature-content">
-              <h1 class="page-heading">My Feature</h1>
-              <p>This is a feature</p>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="styleguide-subheading">Action Box</h3>
-        <p>Action buttons will show as fixed buttons on the bottom of the screen for the device.</p>
-
-        <p class="device-only"><button class="button" id="toggle-action-button-pair">Toggle Example</button></p>
-
-        <div class="example -padded -hide-action-buttons" id="action-button-pair">
-          <div class="action-box">
-            <div class="action-button">
-              <button class="button -action">
-                Yes!
-              </button>
-              <button class="button -action -inverted">
-                No
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <p>Main action buttons will show as fixed buttons on the bottom of the screen for device.</p>
-
-        <p class="device-only">
-        <button class="button" id="toggle-primary-action-button">Toggle Example</button>
-        </p>
-
-        <div class="example -padded -hide-action-buttons" id="action-button">
-          <div class="action-box">
-            <button class="primary-action">
-              Primary Action
-            </button>
-          </div>
-        </div>
-
-        <p>Add <code>.-center-piece</code> to center your feature content. Self-adjust to fit small form factor. Color only for indicating padding space purposes.</p>
-
-        <div class="example -padded">
-          <div class="action-box">
-            <div class="-center-piece fuchsia">Fancy Center Piece</div>
-          </div>
-        </div>
       </section>
 
       <section id="feed-item-section">
