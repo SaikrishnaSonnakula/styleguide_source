@@ -634,11 +634,13 @@ expandingItemCloseExpansion.on('click', function() {
             <div class="-main">
               <div class="-icon"><span class="screenreader-only">input error</span></div>
               <div class="-body">
-                <h4 class="-heading">Use this for input/validation input errors</h4>
+                <h4 class="-heading">Use this for input/validation input errors.</h4>
+                <p>Here's a list of errors that occured when a form was submitted. Each item includes a "Skip link" to the input where the error occurred.
+                Read more about error recovery on <a href="http://webaim.org/techniques/formvalidation/#error" target="_blank">WebAIM.org's guide to form validation</a>.
                 <ul>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
+                  <li>Invalid email. <a href="#email-field-id">Link to email form field</a>.</li>
+                  <li>Missing phone number. <a href="#phone-field-id">Link to phone number form field</a>.</li>
+                  <li>Please provide a valid zip code. <a href="#zip-field-id">Link to zip code form field</a>.</li>
                 </ul>
               </div>
             </div>
