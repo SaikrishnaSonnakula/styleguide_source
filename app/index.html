@@ -41,7 +41,7 @@
         <li><a href="#spacing-section">Spacing</a></li>
         <li class="styleguide-nav-heading">Elements</li>
         <li><a href="#buttons-section">Buttons</a></li>
-        <li><a href="#forms-section">Forms</a></li>
+        <li><a href="forms.html">Forms</a></li>
         <li><a href="#lists-section">Lists</a></li>
         <li class="styleguide-nav-heading">Layouts</li>
         <li><a href="layout.html#action-area">Action Area</a></li>
@@ -442,54 +442,6 @@
           </ul>
         </div>
       </section>
-      <section id="forms-section">
-        <h2 class="styleguide-section-heading">Forms</h2>
-        <h3 class="styleguide-subheading">
-          Form Controls
-        </h3>
-
-	<p>Always associate a label with a form field with the purpose of the field.</p>
-        <div class="example -minor -padded">
-	  <div class="form-group">
-	    <label for="exampleInputEmail">Email address</label>
-	    <input type="email" class="form-control" id="exampleInputEmail" value="Happy.Member@kp.org" placeholder="primary.email@example.com">
-	  </div>
-        </div>
-
-        <p>Base styling for checkboxes can be applied with the form-control class. These checkboxes are 20px squares.</p>
-        <div class="example -minor -padded">
-          <input type="checkbox" id="unselected" class="form-control"/>
-          <label for="unselected">This is an unselected checkbox</label>
-          <br />
-          <input type="checkbox" id="selected" class="form-control" checked/>
-          <label for="selected">I'm selected already!</label>
-        </div>
-
-        <div class="example -minor -padded">
-          <input type="checkbox" id="unselected-disabled" class="form-control" disabled="true"/>
-          <label for="unselected-disabled">Can't touch this.</label>
-          <br />
-          <input type="checkbox" id="selected-disabled" class="form-control" checked="true" disabled="true"/>
-          <label for="selected-disabled">I was once selected but no longer enabled.</label>
-        </div>
-
-        <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
-
-	<pre class="code language-sass"><code>
-.my-30-px-checkbox {
-  @include checkbox(30px, $medium-font-size);
-}
-	</code></pre>
-
-        <div class="example -minor -padded">
-          <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
-          <label for="30px-enabled">This checkbox is so big.</label>
-          <br />
-          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true"/>
-          <label for="30px-disabled">This checkbox is so big and disabled.</label>
-        </div>
-      </section>
-
       <section id="feed-item-section">
         <h2 class="styleguide-section-heading">Feed Items</h2>
 

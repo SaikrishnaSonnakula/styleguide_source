@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KP Styleguide :: Forms</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="main.css" />
+  <script src="modern.bundle.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="styleguide-header">
+    <button id="menu-button" class="device-menu-button">Menu</button>
+    <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
+    <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+  </header>
+
+  <main class="styleguide-main">
+    <article>
+      <section>
+        <h2 class="styleguide-section-heading">Forms</h2>
+        <h3 class="styleguide-subheading">
+          Form Controls
+        </h3>
+
+        <p>Always associate a label with a form field with the purpose of the field.</p>
+        <div class="example -minor -padded">
+          <div class="form-group">
+            <label for="exampleInputEmail">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" value="Happy.Member@kp.org" placeholder="primary.email@example.com">
+          </div>
+        </div>
+
+        <p>Base styling for checkboxes can be applied with the form-control class. These checkboxes are 20px squares.</p>
+        <div class="example -minor -padded">
+          <input type="checkbox" id="unselected" class="form-control" />
+          <label for="unselected">This is an unselected checkbox</label>
+          <br />
+          <input type="checkbox" id="selected" class="form-control" checked/>
+          <label for="selected">I'm selected already!</label>
+        </div>
+
+        <div class="example -minor -padded">
+          <input type="checkbox" id="unselected-disabled" class="form-control" disabled="true" />
+          <label for="unselected-disabled">Can't touch this.</label>
+          <br />
+          <input type="checkbox" id="selected-disabled" class="form-control" checked="true" disabled="true" />
+          <label for="selected-disabled">I was once selected but no longer enabled.</label>
+        </div>
+
+        <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
+
+        <pre class="code language-sass"><code>
+.my-30-px-checkbox {
+  @include checkbox(30px, $medium-font-size);
+}
+	</code></pre>
+
+        <div class="example -minor -padded">
+          <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox" />
+          <label for="30px-enabled">This checkbox is so big.</label>
+          <br />
+          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true" />
+          <label for="30px-disabled">This checkbox is so big and disabled.</label>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>
