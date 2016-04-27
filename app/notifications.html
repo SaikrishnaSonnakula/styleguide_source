@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>KP Styleguide :: Notifications</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+
+    <main class="styleguide-main">
+    <article>
+
+      <section id="notifications-section">
+        <h2 class="styleguide-section-heading">Notifications</h2>
+        <p><a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">Placeholder classes</a> are available in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets/_notifications.scss" target="_blank">_notifications.scss</a> for the base notification styles available for Styleguide.</p>
+        <h3 class="styleguide-subheading">
+          Errors
+        </h3>
+
+        <p>To create static CSS classes for error notifications you can defined them in your Sass by extending the placeholder styles.</p>
+
+        <pre><code class="code language-sass">
+.notification {
+  &.-hard-interruption {
+    @extend %hard-interruption;
+  }
+
+  &.-soft-interruption {
+    @extend %soft-interruption;
+  }
+
+  &.-system-error {
+    @extend %system-error;
+  }
+
+  &.-validation-error {
+    @extend %validation-error;
+  }
+}
+        </code></pre>
+
+        <p>These classes will be processed and can be used in this fashion.</p>
+        <div class="example">
+          <div class="notification -hard-interruption">
+            <div class="-main">
+              <div class="-icon"><span class="screenreader-only">action incomplete</span></div>
+              <div class="-body">
+                <h4 class="-heading">Use this for a WIM-hard interruption scenario</h4>
+                The user needs to know this action cannot be completed because of some regulation,
+                timing or other business parameter.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="notification -soft-interruption">
+            <div class="-main">
+              <div class="-icon"><span class="screenreader-only">action incomplete</span></div>
+              <div class="-body">
+                <h4 class="-heading">Use this for a WIM-soft interruption scenario</h4>
+                The user needs to know this action cannot be completed. User may be able to continue the action later, depending on the particular scenario.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="notification -system-error">
+            <div class="-main">
+              <div class="-icon"><span class="screenreader-only">system error alert</span></div>
+              <div class="-body">
+                <h4 class="-heading">Use this for a system error scenario</h4>
+                An unpredictable error has occured here and the user needs to be informed of what has happened.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="notification -validation-error">
+            <div class="-main">
+              <div class="-icon"><span class="screenreader-only">input error</span></div>
+              <div class="-body">
+                <h4 class="-heading">Use this for input/validation input errors.</h4>
+                <p>Here's a list of errors that occured when a form was submitted. Each item includes a "Skip link" to the input where the error occurred.
+                Read more about error recovery on <a href="http://webaim.org/techniques/formvalidation/#error" target="_blank">WebAIM.org's guide to form validation</a>.
+                <ul>
+                  <li>Invalid email. <a href="#email-field-id">Link to email form field</a>.</li>
+                  <li>Missing phone number. <a href="#phone-field-id">Link to phone number form field</a>.</li>
+                  <li>Please provide a valid zip code. <a href="#zip-field-id">Link to zip code form field</a>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example">
+          <div class="notification -hard-interruption">
+            <div class="-main">
+              <div class="-icon"><span class="screenreader-only">error</span></div>
+              <div class="-body">
+                <h4 class="-heading">You can include action buttons in notifications that can be retried or dismissed</h4>
+                The icon is independent of the action buttons, please make sure you use the appropriate icon class.
+              </div>
+            </div>
+            <div class="-action-buttons">
+              <button class="button -small -inverted">Cancel</button>
+              <button class="button -small">Retry</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    </main>
+  </body>
+</html>
