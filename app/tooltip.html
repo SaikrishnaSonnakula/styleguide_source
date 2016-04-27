@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KP Styleguide :: Tooltip</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="main.css" />
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="styleguide-header">
+    <button id="menu-button" class="device-menu-button">Menu</button>
+    <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
+    <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+  </header>
+
+  <main class="styleguide-main">
+    <article>
+      <section>
+        <h2 class="styleguide-section-heading">Tooltip</h2>
+        <p>Styleguide tooltips take the form of a mixin that take a border color and whether the tip should be on the top or bottom (can be extended later). It is up to the each team to design the user experience for the tooltip display, for example on hover, click, etc.</p>
+
+        <h3 class="styleguide-subheading">
+          Tooltip Top
+        </h3>
+        <pre><code class="language-sass">.tooltip-top { @include tooltip("interactive-blue", "top"); }</code></pre>
+        <div class="example -minor -padded">
+          <div class="tooltip-top">
+            Tooltip Top With Text
+          </div>
+        </div>
+
+        <h3 class="styleguide-subheading">
+          Tooltip Bottom
+        </h3>
+        <pre><code class="language-sass">.tooltip-bottom { @include tooltip("interactive-blue", "bottom"); }</code></pre>
+        <div class="example -minor -padded">
+          <div class="tooltip-bottom">
+            Tooltip Bottom With Text
+          </div>
+        </div>
+
+        <h3 class="styleguide-subheading">
+          Tooltip No Arrow
+        </h3>
+        <pre><code class="language-sass">.tooltip-no-arrow { @include tooltip("interactive-blue"); }</code></pre>
+        <div class="example -minor -padded">
+          <div class="tooltip-no-arrow">
+            Tooltip Box With Text
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
