@@ -45,12 +45,12 @@
         <li><a href="lists.html">Lists</a></li>
         <li class="styleguide-nav-heading">Layouts</li>
         <li><a href="layout.html#action-area">Action Area</a></li>
+        <li><a href="layout.html#feed-item">Feed Items</a></li>
         <li class="styleguide-nav-heading">JS Components</li>
         <li><a href="modal.html">Modals</a></li>
         <li><a href="modern-ui-elements.html#dropdown">Dropdowns</a></li>
         <li><a href="modern-ui-elements.html#accordion">Accordions</a></li>
         <li class="styleguide-nav-heading">Messaging</li>
-        <li><a href="#feed-item-section">Feed Items</a></li>
         <li><a href="#notification.html">Notifications</a></li>
         <li><a href="#loader-section">Loader/Spinner</a></li>
         <li><a href="#tooltip">Tooltips</a></li>
@@ -405,79 +405,6 @@
           </button>
         </div>
       </section>
-
-      <section id="feed-item-section">
-        <h2 class="styleguide-section-heading">Feed Items</h2>
-
-        <div class="example">
-          <div class="feed-item">
-            <div class="-gutter">
-              <div class="feature-icon aqua">WW</div>
-            </div>
-
-            <div class="-main">
-              <h3 class="item-heading">You have a Feed Item</h3>
-              <p>Sub heading text</p>
-              <div class="-body">
-                This is a feed item. It's used in all sorts of Kaiser Permanente applications.
-              </div>
-              <div class="-footer item-tag">
-                Tagz
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p>
-        This feed item with collapsible content uses a <code>@mixin</code> with limited html content requirements.
-        The only requirements are: A button with <code>class="icon-close"</code>, two divs one with your class appended by the post-fix <code>__summary-content</code>
-        and one with your class appended by the post-fix <code>__hidden-content</code>.
-        Please refer to the example below.
-        </p>
-
-        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
-
-        <div class="example">
-          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
-            <button class="icon-close"></button>
-            <div class="expandable-feed-item__summary-content" role="button" aria-expanded="false" tabindex="0">
-              <i class="feature-icon fuchsia">NZ</i>
-              <h4 class="item-heading">There extra information if you click here</h4>
-            </div>
-            <div class="expandable-feed-item__hidden-content" aria-hidden="true">
-              <span class="-body">This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to individual teams to design the feel and spacing for this internal content in accordance with DED redlines / comps.</span>
-            </div>
-          </div>
-        </div>
-        <pre><code class="language-javascript">
-var expandingItemId = $("#expandable-feed-item");
-var expandingItemContent = $(".expandable-feed-item__summary-content");
-var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
-var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
-
-expandingItemContent.on('click', function() {
-  if(!expandingItemId.hasClass("-open")){
-    expandingItemId.toggleClass("-open");
-    expandingItemCollapsibleContent.toggleClass("-open");
-    var expanded = expandingItemId.hasClass("-open");
-    expandingItemContent.attr("aria-expanded", expanded);
-    expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-    expandingItemCloseExpansion.focus();
-  }
-});
-
-expandingItemCloseExpansion.on('click', function() {
-  expandingItemId.toggleClass("-open");
-  expandingItemCollapsibleContent.toggleClass("-open");
-  var expanded = expandingItemId.hasClass("-open");
-  expandingItemContent.attr("aria-expanded", expanded);
-  expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-});
-        </code></pre>
-
-        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
-      </section>
-
       <section id="loader-section">
         <h2 class="styleguide-section-heading">Loader </h2>
         <p>A loader alerts a user to wait for an activity to complete</p>

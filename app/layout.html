@@ -16,20 +16,34 @@
 
 <body>
   <header class="styleguide-header">
-      <button id="menu-button" class="device-menu-button">Menu</button>
-      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
-      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    <button id="menu-button" class="device-menu-button">Menu</button>
+    <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
+    <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
   </header>
-
+  <div class="current-breakpoint">
+    Current Breakpoint:
+    <span class="mobile-only">Mobile</span>
+    <span class="tablet-only">Tablet</span>
+    <span class="small-desktop-only">Small Desktop</span>
+    <span class="desktop-only">Desktop Medium</span>
+    <span class="large-desktop-only">Large Desktop</span>
+  </div>
   <main class="styleguide-main">
-    <article>
+    <nav id="navbar" class="styleguide-navigation hidden">
+      <ul>
+        <li><a href="#action-area">Action Area</a></li>
+        <li><a href="#feed-items">Feed Items</a></li>
+      </ul>
+    </nav>
+    <article class="styleguide-content">
       <section>
         <h1>Layouts</h1>
-        <p>We only have one type of layout for now. The action area is found at the top of KP apps and represents that app's (or feature's) main call to action.</p>
+        <p>Below you will find examples of Styleguide patterns to compose a group of elements into commonly seen layouts across KP apps.</p>
       </section>
       <section id="action-area">
         <h2 class="styleguide-section-heading">Action Area</h2>
-        <p>Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.</p>
+        <p>The action area is found at the top of KP apps and represents that app's (or feature's) main call to action.</p>
+        <p class="styleguide-note">Note: This shows feature-content style up to $desktop-medium. Due to the width of the example display, the style is hidden with the example box.</p>
 
         <p class="device-only"><button class="button" id="toggle-action-area-button">Toggle Example</button></p>
         <div id="action-area-example" class="example -hide-action-buttons">
@@ -68,7 +82,76 @@
 }
         </code></pre>
       </section>
+      <section id="feed-items">
+        <h2 class="styleguide-section-heading">Feed Items</h2>
+        <div class="example">
+          <div class="feed-item">
+            <div class="-gutter">
+              <div class="feature-icon aqua">WW</div>
+            </div>
+
+            <div class="-main">
+              <h3 class="item-heading">You have a Feed Item</h3>
+              <p>Sub heading text</p>
+              <div class="-body">
+                This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+              </div>
+              <div class="-footer item-tag">
+                Tagz
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          This feed item with collapsible content uses a <code>@mixin</code> with limited html content requirements. The only requirements are: A button with <code>class="icon-close"</code>, two divs one with your class appended by the post-fix <code>__summary-content</code> and one with your class appended by the post-fix <code>__hidden-content</code>. Please refer to the example below.
+        </p>
+
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+
+        <div class="example">
+          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
+            <button class="icon-close"></button>
+            <div class="expandable-feed-item__summary-content" role="button" aria-expanded="false" tabindex="0">
+              <i class="feature-icon fuchsia">NZ</i>
+              <h4 class="item-heading">There extra information if you click here</h4>
+            </div>
+            <div class="expandable-feed-item__hidden-content" aria-hidden="true">
+              <span class="-body">This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to individual teams to design the feel and spacing for this internal content in accordance with DED redlines / comps.</span>
+            </div>
+          </div>
+        </div>
+        <pre><code class="language-javascript">
+var expandingItemId = $("#expandable-feed-item");
+var expandingItemContent = $(".expandable-feed-item__summary-content");
+var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
+var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
+
+expandingItemContent.on('click', function() {
+  if(!expandingItemId.hasClass("-open")){
+    expandingItemId.toggleClass("-open");
+    expandingItemCollapsibleContent.toggleClass("-open");
+    var expanded = expandingItemId.hasClass("-open");
+    expandingItemContent.attr("aria-expanded", expanded);
+    expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+    expandingItemCloseExpansion.focus();
+  }
+});
+
+expandingItemCloseExpansion.on('click', function() {
+  expandingItemId.toggleClass("-open");
+  expandingItemCollapsibleContent.toggleClass("-open");
+  var expanded = expandingItemId.hasClass("-open");
+  expandingItemContent.attr("aria-expanded", expanded);
+  expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+});
+        </code></pre>
+
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+      </section>
+
     </article>
   </main>
 </body>
+
 </html>
