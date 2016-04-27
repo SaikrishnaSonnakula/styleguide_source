@@ -40,9 +40,9 @@
         <li><a href="#typography-section">Typography</a></li>
         <li><a href="#spacing-section">Spacing</a></li>
         <li class="styleguide-nav-heading">Elements</li>
-        <li><a href="#buttons-section">Buttons</a></li>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="lists.html">Lists</a></li>
+        <li><a href="button.html">Buttons</a></li>
+        <li><a href="#forms-section">Forms</a></li>
+        <li><a href="#lists-section">Lists</a></li>
         <li class="styleguide-nav-heading">Layouts</li>
         <li><a href="layout.html#action-area">Action Area</a></li>
         <li><a href="layout.html#feed-items">Feed Items</a></li>
@@ -342,69 +342,163 @@
           </div>
         </div>
       </section>
-
-      <section id="buttons-section">
-        <h2 class="styleguide-section-heading">Buttons</h2>
-        <p>
-        <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
-        </p>
-        <div class="example -element -padded">
-          <button class="button">
-            Button!
-          </button>
-        </div>
-        <p>
-        For an inverted color, use the <code>-inverted</code> class.
-        </p>
-        <div class="example -element -padded">
-          <button class="button -inverted">
-            Inverted Button
-          </button>
+      <section id="lists-section">
+        <h2 class="styleguide-section-heading">Lists</h2>
+        <h3 class="styleguide-subheading">Horizontal</h3>
+        <div class="example -padded">
+          <ul class="horizontal-list">
+            <li>Seattle</li>
+            <li>San Francisco</li>
+            <li>Los Angeles</li>
+          </ul>
         </div>
 
-        <p>
-        You can also make a <code>&lt;button&gt;</code> look like a link:
-        </p>
-        <div class="example -element -padded">
-          <button class="link">
-            Link Button
-          </button>
+        <div class="example -padded">
+          <ul class="horizontal-list -divided">
+            <li>Seattle</li>
+            <li>San Francisco</li>
+            <li>Los Angeles</li>
+          </ul>
         </div>
 
-        <p>
-        You can make a close button look this:
-        </p>
-
-        <div class="example -element -padded">
-          <button class="-close">
-            <span class="screenreader-only">close</span>
-          </button>
+        <h3 class="styleguide-subheading">Vertical</h3>
+        <div class="example -padded">
+          <ul class="vertical-list">
+            <li>Seattle</li>
+            <li>San Francisco</li>
+            <li>Los Angeles</li>
+          </ul>
         </div>
 
-        <p>
-        If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
-        </p>
-        <div class="example -element">
-          <button class="button -block">
-            Block button
-          </button>
-        </div>
-
-        <p>
-        If you need a disabled button you can add the following class <code>-disabled</code>
-        </p>
-        <div class="example -element">
-          <button class="button -disabled" disabled="true">
-            Disabled button
-          </button>
-        </div>
-
-        <div class="example -element">
-          <button class="button -disabled -inverted" disabled="true">
-            Disabled button
-          </button>
+        <div class="example -padded">
+          <ul class="vertical-list -divided">
+            <li>Seattle</li>
+            <li>San Francisco</li>
+            <li>Los Angeles</li>
+          </ul>
         </div>
       </section>
+      <section id="forms-section">
+        <h2 class="styleguide-section-heading">Forms</h2>
+        <h3 class="styleguide-subheading">
+          Form Controls
+        </h3>
+
+	<p>Always associate a label with a form field with the purpose of the field.</p>
+        <div class="example -minor -padded">
+	  <div class="form-group">
+	    <label for="exampleInputEmail">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail" value="Happy.Member@kp.org" placeholder="primary.email@example.com">
+	  </div>
+        </div>
+
+        <p>Base styling for checkboxes can be applied with the form-control class. These checkboxes are 20px squares.</p>
+        <div class="example -minor -padded">
+          <input type="checkbox" id="unselected" class="form-control"/>
+          <label for="unselected">This is an unselected checkbox</label>
+          <br />
+          <input type="checkbox" id="selected" class="form-control" checked/>
+          <label for="selected">I'm selected already!</label>
+        </div>
+
+        <div class="example -minor -padded">
+          <input type="checkbox" id="unselected-disabled" class="form-control" disabled="true"/>
+          <label for="unselected-disabled">Can't touch this.</label>
+          <br />
+          <input type="checkbox" id="selected-disabled" class="form-control" checked="true" disabled="true"/>
+          <label for="selected-disabled">I was once selected but no longer enabled.</label>
+        </div>
+
+        <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
+
+	<pre class="code language-sass"><code>
+.my-30-px-checkbox {
+  @include checkbox(30px, $medium-font-size);
+}
+	</code></pre>
+
+        <div class="example -minor -padded">
+          <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox"/>
+          <label for="30px-enabled">This checkbox is so big.</label>
+          <br />
+          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true"/>
+          <label for="30px-disabled">This checkbox is so big and disabled.</label>
+        </div>
+      </section>
+
+      <section id="feed-item-section">
+        <h2 class="styleguide-section-heading">Feed Items</h2>
+
+        <div class="example">
+          <div class="feed-item">
+            <div class="-gutter">
+              <div class="feature-icon aqua">WW</div>
+            </div>
+
+            <div class="-main">
+              <h3 class="item-heading">You have a Feed Item</h3>
+              <p>Sub heading text</p>
+              <div class="-body">
+                This is a feed item. It's used in all sorts of Kaiser Permanente applications.
+              </div>
+              <div class="-footer item-tag">
+                Tagz
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+        This feed item with collapsible content uses a <code>@mixin</code> with limited html content requirements.
+        The only requirements are: A button with <code>class="icon-close"</code>, two divs one with your class appended by the post-fix <code>__summary-content</code>
+        and one with your class appended by the post-fix <code>__hidden-content</code>.
+        Please refer to the example below.
+        </p>
+
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+
+        <div class="example">
+          <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
+            <button class="icon-close"></button>
+            <div class="expandable-feed-item__summary-content" role="button" aria-expanded="false" tabindex="0">
+              <i class="feature-icon fuchsia">NZ</i>
+              <h4 class="item-heading">There extra information if you click here</h4>
+            </div>
+            <div class="expandable-feed-item__hidden-content" aria-hidden="true">
+              <span class="-body">This is where extra content would be placed and displayed to the user when the feed item is expanded. It is up to individual teams to design the feel and spacing for this internal content in accordance with DED redlines / comps.</span>
+            </div>
+          </div>
+        </div>
+        <pre><code class="language-javascript">
+var expandingItemId = $("#expandable-feed-item");
+var expandingItemContent = $(".expandable-feed-item__summary-content");
+var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
+var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
+
+expandingItemContent.on('click', function() {
+  if(!expandingItemId.hasClass("-open")){
+    expandingItemId.toggleClass("-open");
+    expandingItemCollapsibleContent.toggleClass("-open");
+    var expanded = expandingItemId.hasClass("-open");
+    expandingItemContent.attr("aria-expanded", expanded);
+    expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+    expandingItemCloseExpansion.focus();
+  }
+});
+
+expandingItemCloseExpansion.on('click', function() {
+  expandingItemId.toggleClass("-open");
+  expandingItemCollapsibleContent.toggleClass("-open");
+  var expanded = expandingItemId.hasClass("-open");
+  expandingItemContent.attr("aria-expanded", expanded);
+  expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
+});
+        </code></pre>
+
+        <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
+      </section>
+
+>>>>>>> removed button section
       <section id="loader-section">
         <h2 class="styleguide-section-heading">Loader </h2>
         <p>A loader alerts a user to wait for an activity to complete</p>
