@@ -71,9 +71,6 @@ code {
     margin: 0 auto;
   }
 }
-.styleguide-content {
-  @include outer-container($main-max-width);
-}
 
 .fixedsticky-dummy {
   display: none !important;
@@ -139,12 +136,13 @@ code {
 }
 
 .styleguide-content {
+  @include outer-container($main-max-width);
+
   padding: $content-padding-mobile 0;
   width: 100%;
 
   @include media($desktop) {
     @include span-columns(9);
-    float:right;
   }
 }
 
