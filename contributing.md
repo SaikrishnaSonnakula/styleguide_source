@@ -53,6 +53,7 @@ For an indepth overview of how to set up your workspace [stream](https://kponlin
 ![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
 
 3. In your StyleGuide> Git directory, update the config file to the following so you can fetch pull requests, sync with upstream, and stay up to date with the latest code:
+
 ```
     [core]
     repositoryformatversion = 0
@@ -77,6 +78,7 @@ For an indepth overview of how to set up your workspace [stream](https://kponlin
     [user]
     email = your.email.used.instash.@kp.org
 ```
+
 ## Building the project locally with grunt
 
 Now that you have your fork set up on the machine, install Styleguide's dependencies by running
