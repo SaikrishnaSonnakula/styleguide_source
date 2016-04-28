@@ -52,6 +52,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.5",
     "jquery": "^2.1.4",
+    "kp-icons-and-fonts": "git+ssh://git@stash.kp.org/kpweb/kp-icons-and-fonts.git",
     "node-bourbon": "^4.2.8",
     "node-neat": "^1.7.2"
   }
