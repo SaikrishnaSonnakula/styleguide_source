@@ -44,10 +44,6 @@ $button-mobile-color: white;
     margin: 0;
     overflow: auto;
 
-    &:focus {
-      border: 2px color(interactive-blue) solid;
-    }
-
     @include media($desktop) {
       @include transform(translateY(20px));
       @include transition(transform 0.2s ease);
@@ -110,14 +106,13 @@ $button-mobile-color: white;
           order: 2;
           color: $button-color;
           background-color: white;
-          border: $button-border-size solid $button-color;
+          border-color: $button-color;
         }
 
         &.-action.-inverted {
           order: 1;
           color: white;
           background: $button-color;
-
         }
 
         @include media($desktop-medium-up) {
