@@ -44,10 +44,6 @@ $button-mobile-color: white;
     margin: 0;
     overflow: auto;
 
-    &:focus {
-      border: 2px color(interactive-blue) solid;
-    }
-
     @include media($desktop) {
       @include transform(translateY(20px));
       @include transition(transform 0.2s ease);
@@ -77,7 +73,7 @@ $button-mobile-color: white;
         left: 10%;
         width: 80%;
       }
-      @include media($tablet){
+      @include media($tablet) {
         font-size: $medium-font-size;
       }
     }
@@ -100,7 +96,7 @@ $button-mobile-color: white;
       .button {
         margin-bottom: $gutter-spacing;
         width: 100%;
-        @include media($desktop){
+        @include media($desktop) {
           width: auto;
           margin-right: $small-spacing;
           margin-left: $small-spacing;
@@ -108,16 +104,15 @@ $button-mobile-color: white;
 
         &.-action {
           order: 2;
-          color: color(interactive-blue);
+          color: $button-color;
           background-color: white;
-          border-color: color(interactive-blue);
+          border-color: $button-color;
         }
 
         &.-action.-inverted {
           order: 1;
           color: white;
-          background: color(interactive-blue);
-
+          background: $button-color;
         }
 
         @include media($desktop-medium-up) {
