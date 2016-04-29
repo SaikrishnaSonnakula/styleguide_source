@@ -120,7 +120,8 @@ $button-font-family: $medium-font-family;
 
 .-close {
   &:before {
-    @include icon-for("close");
+  // STYLE-71
+    // @include icon-for("close");
   }
 
   border: none;

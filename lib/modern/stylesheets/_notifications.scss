@@ -29,7 +29,8 @@ $notification-icon-mobile-size: 25px;
     }
 
     &:before {
-      @include icon-for(#{$icon});
+  // STYLE-71
+      // @include icon-for(#{$icon});
       color: $icon-color;
     }
   }

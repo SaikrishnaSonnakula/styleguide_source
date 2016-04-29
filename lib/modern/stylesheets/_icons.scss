@@ -9,8 +9,7 @@ $mobile-icon-border-size: 2px;
 $icon-line-height: 2;
 
 @mixin icon-for($icon-name){
-  @extend .icon-#{$icon-name}:before;
-  font-family: 'kp-icons';
+  @extend .icon-#{$icon-name} !optional;
 }
 
 %centered-icon {
