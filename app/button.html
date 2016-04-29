@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Design Styleguide - Button</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
+    <main class="styleguide-main">
+    <article>
+      <section id="buttons-section">
+        <h2 class="styleguide-section-heading">Buttons</h2>
+        <p>
+          <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
+        </p>
+        <div class="example -element -padded">
+          <button class="button">
+          Button!
+          </button>
+        </div>
+        <p>
+          For an inverted color, use the <code>-inverted</code> class.
+        </p>
+        <div class="example -element -padded">
+          <button class="button -inverted">
+          Inverted Button
+          </button>
+        </div>
+        <p>
+          You can also make a <code>&lt;button&gt;</code> look like a link:
+        </p>
+        <div class="example -element -padded">
+          <button class="link">
+          Link Button
+          </button>
+        </div>
+        <p>
+          You can make a close button look this:
+        </p>
+        <div class="example -element -padded">
+          <button class="-close">
+          <span class="screenreader-only">close</span>
+          </button>
+        </div>
+        <p>
+          If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
+        </p>
+        <div class="example -element">
+          <button class="button -block">
+          Block button
+          </button>
+        </div>
+        <p>
+          If you need a disabled button you can add the following class <code>-disabled</code>
+        </p>
+        <div class="example -element">
+          <button class="button -disabled" disabled="true">
+          Disabled button
+          </button>
+        </div>
+        <div class="example -element">
+          <button class="button -disabled -inverted" disabled="true">
+          Disabled button
+          </button>
+        </div>
+      </section>
+    </article>
+    </main>
+  </body>
+</html>
