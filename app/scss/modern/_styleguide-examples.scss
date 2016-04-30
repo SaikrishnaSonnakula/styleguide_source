@@ -3,18 +3,15 @@
 }
 
 .copay-icon {
-  // STYLE-71
-  // @include feature-icon("interactive-blue", "compact");
+  @include feature-icon("interactive-blue", "compact");
 }
 
 .sidebar-icon {
-  // STYLE-71
-  // @include feature-icon("dolphin", "hollow");
+  @include feature-icon("dolphin", "hollow");
 }
 
 .appointment-feed-icon {
-  // STYLE-71
-  // @include feature-icon("moss");
+  @include feature-icon("moss");
 }
 .notification {
   &.-hard-interruption {

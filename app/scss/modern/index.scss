@@ -5,10 +5,6 @@ $action-color-light: #5FA621;
 @import '../../../vendor/fixedsticky';
 @import "bourbon";
 @import "neat";
-@import "icons-fonts/fonts/fonts.css"; // This is the path after the fonts have been copied to dist
-@import "icons-fonts/kp-icons.fallback.css"; // This is the path after the fonts have been copied to dist
-@import "icons-fonts/kp-icons.png.css"; // This is the path after the fonts have been copied to dist
-@import "icons-fonts/kp-icons.svg.css"; // This is the path after the fonts have been copied to dist
 @import "../../../lib/modern/stylesheets/neatfix";
 @import '../../../lib/modern/stylesheets/main';
 

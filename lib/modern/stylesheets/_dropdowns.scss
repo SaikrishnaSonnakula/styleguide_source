@@ -32,12 +32,10 @@ $dropdown-menu-z-index: 999;
     }
     &:after {
       @include transition(all 0.4s $ease-out-cubic);
-      // STYLE-71
-      // @extend .icon-chevron-down:before;
+      @extend .icon-chevron-down:before;
       background-color: transparent;
       color: color(interactive-blue);
-      // STYLE-71
-      // font-family: 'kp-icons';
+      font-family: 'kp-icons';
       font-size: $dropdown-chevron-size;
       line-height: $dropdown-mobile-height;
       margin-left: $extra-tiny-spacing;
@@ -128,7 +126,7 @@ $dropdown-menu-z-index: 999;
         color: color(interactive-blue);
       }
 
-      > a {
+      > a{
         color: color(inky-blue);
         font-weight: bold;
       }

@@ -13,6 +13,7 @@ var dirs = {
 
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-md2html');
+  grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-sass');
 
   buildPlugin(grunt, {
@@ -62,6 +63,17 @@ module.exports = function(grunt) {
       tasks: ['md2html']
     }
   });
+
+  grunt.config.merge({
+    watch: {
+      files: ['*.svg', '_template.css', '_template.html'],
+      options: {
+        cwd: 'icons'
+      },
+      tasks: ['webfont']
+    }
+  });
+
   grunt.config.merge({
     watch: {
       files: ['**/*.scss'],
@@ -74,12 +86,14 @@ module.exports = function(grunt) {
 
   grunt.config.merge({
     copy: {
-      'icons-fonts': {
+      dist: {
         files: [{
-          cwd: 'node_modules/kp-icons-and-fonts/dist',
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff']
+        }, {
+          cwd: 'lib/modern',
           expand: true,
-          src: ['**'],
-          dest: 'target/dist/icons-fonts'
+          src: ['**/*.html', '**/*.css', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff'],
+          dest: 'target/dist'
         }]
       }
     },
@@ -98,6 +112,35 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('prebuild', ['sass', 'md2html', 'copy:icons-fonts']);
+
+  grunt.config.merge({
+    webfont: {
+      icons: {
+        src: 'icons/*.svg',
+        dest: 'lib/modern/assets/fonts',
+        destCss: 'lib/modern/stylesheets',
+        options: {
+          font: 'kp-icons',
+          template: 'icons/_template.css',
+          templateOptions: {
+            classPrefix: 'icon-',
+            mixinPrefix: 'icon-'
+          },
+          rename: function(name) {
+            return path.basename(name).toLowerCase();
+          },
+          stylesheet: 'scss',
+          relativeFontPath: 'assets/fonts',
+          types: 'eot,woff,ttf,svg',
+          syntax: 'bootstrap',
+          htmlDemoTemplate: 'icons/_template.html',
+          htmlDemoFilename: 'icons',
+          destHtml: 'app/'
+        }
+      }
+    }
+  });
+
+  grunt.registerTask('prebuild', ['sass', 'md2html']);
   grunt.registerTask('ci', ['jshint', 'test:ui', 'build', 'package']);
 };

@@ -49,8 +49,7 @@ $focus-color: rgba(123, 183, 246, 0.8);
       }
 
       &:after {
-  // STYLE-71
-        // @include icon-for("checkmark");
+        @include icon-for("checkmark");
         z-index: $midground;
         position: absolute;
         top: $checkbox-border-width;
