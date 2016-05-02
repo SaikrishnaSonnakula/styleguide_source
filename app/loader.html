@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Design Styleguide - Button</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
+    <main class="styleguide-main">
+    <article>
+      <section id="loader-section">
+        <h2 class="styleguide-section-heading">Loader </h2>
+        <p>A loader alerts a user to wait for an activity to complete, </p>
+        <div class="example -minor -padded" id="usage">
+          <div class="icon-loading" aria-label="page loading indicator is visible" role="alertdialog" aria-busy="true" aria-live="assertive">
+            <span class="message" >Loading...</span>
+          </div>
+        </div>
+      </section>
+    </article>
+    </main>
+  </body>
+</html>
