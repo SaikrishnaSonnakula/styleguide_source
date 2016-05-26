@@ -14,6 +14,7 @@
     font-size: $base-mobile-font-size;
     font-family: $base-font-family;
     line-height: 1.33;
+    color:$text-dark;
 
     @include media($desktop) {
       font-size: $base-font-size;
