@@ -8,10 +8,10 @@ describe('accordion component', function() {
   describe('closed', function() {
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="closed-accordion" class="accordion" role="tablist">' +
+      this.harness = createTestHarnessWith('<div id="closed-accordion" class="accordion">' +
         '<div class="-group">' +
-        '<button class="-heading" role="tab" aria-selected="false">Default Accordion Heading</button>' +
-        '<div class="-content" aria-hidden="true" role="tabpanel">' +
+        '<button class="-heading" role="link" aria-selected="false">Default Accordion Heading</button>' +
+        '<div class="-content" aria-hidden="true" data-content="true">' +
         '<p>Hidden Accordion Content</p>' + '</div>', ['closed-accordion']);
     });
 
@@ -37,6 +37,7 @@ describe('accordion component', function() {
           expect($('.accordion .-group.-open', root)).to.exist;
           expect($('.accordion .-content', root).attr('aria-hidden')).to.not.exist;
           expect($('.accordion .-heading', root).attr('aria-selected')).to.equal('true');
+          expect($('.accordion .-heading', root).attr('aria-expanded')).to.equal('true');
         });
       });
     });
@@ -46,9 +47,9 @@ describe('accordion component', function() {
   describe('opened', function() {
 
     beforeEach(function() {
-      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion" role="tablist"><div class="-group -open">' +
-        '<button class="-heading" role="tab" aria-selected="true">Open Accordion Heading</button>' +
-        '<div class="-content" role="tabpanel"><p>Accordion Content</p></div></div>', ['open-accordion']);
+      this.harness = createTestHarnessWith('<div id="open-accordion" class="accordion"><div class="-group -open">' +
+        '<button class="-heading" role="link" aria-selected="true" aria-expanded="true">Open Accordion Heading</button>' +
+        '<div class="-content" data-content="true"><p>Accordion Content</p></div></div>', ['open-accordion']);
     });
 
     afterEach(function() {
@@ -62,6 +63,7 @@ describe('accordion component', function() {
           expect($('.accordion .-group.-open', root)).to.not.exist;
           expect($('.accordion .-content', root).attr('aria-hidden')).to.equal('true');
           expect($('.accordion .-heading', root).attr('aria-selected')).to.equal('false');
+          expect($('.accordion .-heading', root).attr('aria-expanded')).to.equal('false');
         });
       });
     });
@@ -76,12 +78,12 @@ describe('accordion component', function() {
 
     it('reveals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-headings" class="accordion">' +
-        '<div class="-group" role="tablist">' +
-        '<button class="-heading" aria-selected="false" role="tab">' + 'First Accordion Heading' + '</button>' +
+        '<div class="-group">' +
+        '<button class="-heading" aria-selected="false" role="link">' + 'First Accordion Heading' + '</button>' +
         '<div class="-content" aria-hidden="true" role="tabpanel"><p>First Accordion Content</p></div>' +
         '</div>' +
-        '<div class="-group" role="tablist">' +
-        '<button class="-heading" aria-selected="false" role="tab">Second Accordion Heading</button>' +
+        '<div class="-group">' +
+        '<button class="-heading" aria-selected="false" role="link">Second Accordion Heading</button>' +
         '<div class="-content" aria-hidden="true" role="tabpanel"><p>Second Hidden Accordion Content</p></div>' +
         '</div></div>', ['multiple-headings']);
 
@@ -98,12 +100,12 @@ describe('accordion component', function() {
 
     it('conceals content for direct adjacent sibling when heading is clicked', function() {
       this.harness = createTestHarnessWith('<div id="multiple-open-headings" class="accordion">' +
-        '<div class="-group -open" role="tablist">' +
-        '<button class="-heading" role="tab">' + 'First Open Heading' + '</button>' +
+        '<div class="-group -open">' +
+        '<button class="-heading" role="link">' + 'First Open Heading' + '</button>' +
         '<div class="-content" role="tabpanel"><p>First Accordion Content</p></div>' +
         '</div>' +
-        '<div class="-group -open" role="tablist">' +
-        '<button class="-heading" role="tab">Second Open Heading</button>' +
+        '<div class="-group -open">' +
+        '<button class="-heading" role="link">Second Open Heading</button>' +
         '<div class="-content" role="tabpanel"><p>Second Open Accordion Content</p></div>' +
         '</div></div>', ['multiple-open-headings']);
 
