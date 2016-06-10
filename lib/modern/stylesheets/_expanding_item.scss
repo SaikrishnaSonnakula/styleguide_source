@@ -1,7 +1,7 @@
 $expanding-table-icon: "close";
 $expanding-table-icon-font-size-mobile: 20px;
 $expanding-table-icon-font-size-desktop: 25px;
-$expanding-table-icon-right-margin: 25px;
+$expanding-table-icon-right-margin: 21px;
 $expanding-table-hidden-content-margin: 20px;
 $expanding-table-icon-color: $link-color;
 $expanding-table-border-on-hover: $feed-item-border-size solid color(graphite-light);
@@ -42,6 +42,10 @@ $expanding-table-left-content-gutter: 100px;
     @include clearfix;
     @include display(flex);
     padding: $medium-spacing $small-spacing;
+    &[aria-expanded="true"] {
+      padding-top: 0;
+      padding-bottom:0;
+    }
   }
 
   &__hidden-content {
