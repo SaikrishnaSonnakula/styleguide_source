@@ -40,6 +40,7 @@ const colorSections = [{
     'ocean',
     'aqua',
     'robin-egg',
+    'deep-red',
     'acai',
     'fuchsia',
     'rose',
@@ -53,7 +54,8 @@ const colorSections = [{
     'graphite-dark',
     'graphite',
     'graphite-light',
-    'pebble'
+    'pebble',
+    'pale-blue'
   ]
 }];
 
