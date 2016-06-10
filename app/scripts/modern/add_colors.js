@@ -55,16 +55,6 @@ const colorSections = [{
     'graphite-light',
     'pebble'
   ]
-}, {
-  name: 'Supplemental Colors',
-  colors: [
-    'black',
-    'deep-chalk',
-    'mid-chalk',
-    'light-chalk',
-    'mid-aqua',
-    'light-aqua'
-  ]
 }];
 
 const getHex = ($el) => {
