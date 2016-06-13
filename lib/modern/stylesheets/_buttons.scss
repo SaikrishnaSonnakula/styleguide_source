@@ -1,6 +1,6 @@
 $button-color: color("interactive-blue");
-$button-padding: $tiny-spacing;
-$button-padding-desktop: 19px;
+$button-padding: $extra-tiny-spacing+2;
+$button-padding-desktop: 16px;
 $button-border-size: 3px;
 
 $button-min-width: 10em;

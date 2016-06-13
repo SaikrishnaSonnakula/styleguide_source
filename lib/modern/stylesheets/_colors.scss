@@ -12,11 +12,11 @@ $colors: (
   "interactive-blue-dark": #003B71,
   "kp-blue": #006BA6,
   "inky-blue": #0D1C3D,
-  "dolphin": #6B7487,
+  "dolphin": #677083,
   "graphite-dark": #D3D6DC,
   "graphite": #E9EBEE,
   "graphite-light": #F4F5F6,
-  "pebble": #FAFAFA,
+  "pebble": #F7F7F7,
   "midnight": #003B71,
   "sky": #BDECFF,
   "moss": #4A7628,
@@ -40,7 +40,8 @@ $colors: (
   "mid-chalk": #666,
   "light-chalk": #D8D1CA,
   "mid-aqua": #CEECFD,
-  "light-aqua": #E9F7FE
+  "light-aqua": #E9F7FE,
+  "pale-blue": #F8FAFC
 );
 
 @function color($key){
