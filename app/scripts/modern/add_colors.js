@@ -40,6 +40,7 @@ const colorSections = [{
     'ocean',
     'aqua',
     'robin-egg',
+    'deep-red',
     'acai',
     'fuchsia',
     'rose',
@@ -53,17 +54,8 @@ const colorSections = [{
     'graphite-dark',
     'graphite',
     'graphite-light',
-    'pebble'
-  ]
-}, {
-  name: 'Supplemental Colors',
-  colors: [
-    'black',
-    'deep-chalk',
-    'mid-chalk',
-    'light-chalk',
-    'mid-aqua',
-    'light-aqua'
+    'pebble',
+    'pale-blue'
   ]
 }];
 
