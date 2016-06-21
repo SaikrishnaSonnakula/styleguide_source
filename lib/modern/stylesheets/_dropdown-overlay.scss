@@ -6,7 +6,7 @@ $dropdown-chevron-size: 1rem;
 .select-dropdown {
   background-color: #fff;
   line-height: 1;
-  padding: 0.75em 2em 0.75em 0.75em;
+  padding: $tiny-spacing;
   position: relative;
   max-width: $dropdown-option-menu-max-width;
   &.-form {
@@ -34,7 +34,7 @@ $dropdown-chevron-size: 1rem;
     i.icon-chevron-down {
       color: $link-color;
       font-size: $dropdown-chevron-size;
-      margin-left: 10px;
+      margin-left: $tiny-spacing;
     }
   }
   label {
