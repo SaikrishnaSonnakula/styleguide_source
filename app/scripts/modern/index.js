@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import dropdownOverlay from 'lib/modern/scripts/dropdown-overlay';
 import addColors from './add_colors';
 import createExamples from '../create_examples';
 import { addSpacing, addFontSizes } from './add_spacing';
@@ -9,20 +8,19 @@ import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 import accordion from 'lib/modern/scripts/accordion';
 import expandingItem from 'lib/modern/scripts/expanding-item';
-
+import dropdownSetup from 'lib/modern/scripts/dropdown';
 
 $(function() {
-  dropdownOverlay();
+  $('.fixedsticky').fixedsticky();
+  if($('#colors-section') && $('#colors-section').length!==0){
+    addColors();
+  }
   createExamples();
   addSpacing();
   addFontSizes();
   responsiveTable();
   expandingItem();
-  $('.fixedsticky').fixedsticky();
-  if($('#colors-section') && $('#colors-section').length!==0){
-    addColors();
-  }
-
+  dropdownOverlay();
 
   fancySelect($('#select-from'));
   fancySelect($('#select-from-with-default'));
@@ -79,3 +77,10 @@ $(function() {
   }
 });
 
+$(document).ready(() => {
+  setTimeout(() => {
+    $('.dropdown').each((index, dropdown) => {
+      dropdownSetup(dropdown);
+    });
+  }, 2000);
+});
