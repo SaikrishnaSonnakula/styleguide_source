@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>KP Styleguide :: JS Components</title>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="main.css" />
     <script src="modern.bundle.js"></script>
   </head>
+
   <body>
     <header class="styleguide-header">
       <button id="menu-button" class="device-menu-button">Menu</button>
@@ -24,103 +26,102 @@
     </div>
 
     <main class="styleguide-main">
-    <nav id="navbar" class="styleguide-navigation hidden">
-      <ul>
-        <li><a href="#accordion">Accordion</a></li>
-        <li><a href="#dropdown">Dropdown</a></li>
-      </ul>
-    </nav>
+      <nav id="navbar" class="styleguide-navigation hidden">
+        <ul>
+          <li><a href="#accordion">Accordion</a></li>
+          <li><a href="#dropdown">Dropdown</a></li>
+        </ul>
+      </nav>
 
-    <article class="styleguide-content">
-      <section id="about-section">
-        <h2 class="styleguide-section-heading">
+      <article class="styleguide-content">
+        <section id="about-section">
+          <h2 class="styleguide-section-heading">
           READ ME FIRST
         </h2>
-        <p class="fuchsia" style="padding: 15px;">ATTENTION: <br /> The following patterns are experimental & subject to change.<br /> If you find any issues with them, please contribute to fix them.
-        </p>
-        <p>The patterns on this page are ochestrated with javascript to fully function.</p>
-      </section>
+          <p class="fuchsia" style="padding: 15px;">ATTENTION:
+            <br /> The following patterns are experimental & subject to change.
+            <br /> If you find any issues with them, please contribute to fix them.
+          </p>
+          <p>The patterns on this page are ochestrated with javascript to fully function.</p>
+        </section>
 
-      <section id="accordion">
-        <h2 class="styleguide-section-heading">Accordion</h2>
-        <p>Accordions are a treated as a group of expandable items in which opening one will reveal
-        content associated with its label. The markup below is required to acheive the functionality written in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/scripts/accordion.js">lib/scripts/modern/accordion.js</a></p>
-        <p>The expected keyboard functionality is required in order to make this pattern keyboard accessible:</p>
-        <ul>
-          <li>TAB key to enter/exit accordion</li>
-          <li>ARROW keys to change tabs</li>
-          <li>and ENTER or SPACEBAR to expand/collapse tabs</li>
-        </ul>
-        <pre><code class="language-javascript">import accordion from 'styleguide/lib/modern/scripts/accordion';
+        <section id="accordion">
+          <h2 class="styleguide-section-heading">Accordion</h2>
+          <p>Accordions are a treated as a group of expandable items in which opening one will reveal content associated with its label. The markup below is required to acheive the functionality written in <a href="https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/scripts/accordion.js">lib/scripts/modern/accordion.js</a></p>
+          <p>The expected keyboard functionality is required in order to make this pattern keyboard accessible:</p>
+          <ul>
+            <li>TAB key to enter/exit accordion</li>
+            <li>ARROW keys to change tabs</li>
+            <li>and ENTER or SPACEBAR to expand/collapse tabs</li>
+          </ul>
+          <pre><code class="language-javascript">import accordion from 'styleguide/lib/modern/scripts/accordion';
 accordion($("#hipstaccordion"));</code></pre>
-        <div class="example -padded">
-          <div id="hipstaccordion" class="accordion">
-            <div class="-group">
-              <button class="-heading" aria-selected="false" role="link">
-                <h3 class="item-heading">Fanny Pack Four Dollar Toast</h3>
-                <p class="auxiliary-text">Blue Bottle Sriracha</p>
-              </button>
-              <div class="-content" role="region" aria-hidden="true">
-                <h4 class="item-subheading">Cliche Flannel Tweet</h4>
-                <p class="auxiliary-text">Brunch offal bushwick chambray biodiesel pitchfork slow-carb vice chicharrones lomo paleo. Tacos offal chicharrones craft beer, fanny pack lo-fi yr meditation wayfarers pug bicycle rights. Occupy pop-up ennui, portland retro street art banjo kogi shabby chic 3 wolf moon. Crucifix echo park bespoke, ugh shoreditch semiotics neutra austin PBR&B etsy hella occupy. Banjo gentrify pop-up, kombucha poutine salvia quinoa shoreditch organic chambray art party ramps.</p>
+          <div class="example -padded">
+            <div id="hipstaccordion" class="accordion">
+              <div class="-group">
+                <button class="-heading" aria-selected="false" role="link">
+                  <h3 class="item-heading">Fanny Pack Four Dollar Toast</h3>
+                  <p class="auxiliary-text">Blue Bottle Sriracha</p>
+                </button>
+                <div class="-content" data-content="true" aria-hidden="true">
+                  <h4 class="item-subheading">Cliche Flannel Tweet</h4>
+                  <p class="auxiliary-text">Brunch offal bushwick chambray biodiesel pitchfork slow-carb vice chicharrones lomo paleo. Tacos offal chicharrones craft beer, fanny pack lo-fi yr meditation wayfarers pug bicycle rights. Occupy pop-up ennui, portland retro street art
+                    banjo kogi shabby chic 3 wolf moon. Crucifix echo park bespoke, ugh shoreditch semiotics neutra austin PBR&B etsy hella occupy. Banjo gentrify pop-up, kombucha poutine salvia quinoa shoreditch organic chambray art party ramps.</p>
+                </div>
               </div>
-            </div>
-            <div class="-group">
-              <button class="-heading" aria-selected="false" role="link">
-                <h3 class="item-heading">Kombucha Church-Key Listicle</h3>
-                <p class="auxiliary-text">Disrupt Waistcoat Marfa</p>
-              </button>
-              <div class="-content" role="region" aria-hidden="true">
-                <h4 class="item-subheading">Pour-over Wolf VHS Helvetica</h4>
-                <p class="auxiliary-text">Kitsch keytar tacos hammock XOXO, austin meggings gentrify hoodie art party 3 wolf moon gochujang. Kombucha church-key listicle, typewriter forage mixtape locavore fingerstache synth you probably haven't heard of them leggings next level.</p>
+              <div class="-group">
+                <button class="-heading" aria-selected="false" role="link">
+                  <h3 class="item-heading">Kombucha Church-Key Listicle</h3>
+                  <p class="auxiliary-text">Disrupt Waistcoat Marfa</p>
+                </button>
+                <div class="-content" data-content="true" aria-hidden="true">
+                  <h4 class="item-subheading">Pour-over Wolf VHS Helvetica</h4>
+                  <p class="auxiliary-text">Kitsch keytar tacos hammock XOXO, austin meggings gentrify hoodie art party 3 wolf moon gochujang. Kombucha church-key listicle, typewriter forage mixtape locavore fingerstache synth you probably haven't heard of them leggings next level.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="dropdown">
-        <h2 class="styleguide-section-heading">
+        <section id="dropdown">
+          <h2 class="styleguide-section-heading">
           Dropdown
-        </h2>
-        <p>
-        Dropdown that contains a list of links used for navigation. Please find the corresponding Javascript below.
-        </p>
-        <div class="example -padded-desktop">
-          <div id="best-nba-team" class="dropdown">
-            <button class="-value" aria-expanded="false">
-              <div class="current-selection">Golden State Warriors</div>
-            </button>
-            <ul class="-options" aria-hidden="true" role="listbox" aria-label="NBA Options">
-              <li role="presentation" class="-active"><a role="option" aria-checked="true" aria-selected="true" href="#warriors">Golden State Warriors</a></li>
-              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#lakers">LA Lakers</a></li>
-              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#clippers">LA Clippers</a></li>
-            </ul>
+          </h2>
+          <p>Dropdown that contains a list of links used for navigation. </p>
+          <div class="example -padded-desktop">
+            <div class="select-dropdown">
+              <div class="dropdown-overlay" aria-hidden="true">
+                <span class="select-value" aria-hidden="true"></span>
+                <i class="icon-chevron-down" aria-hidden="true"></i>
+              </div>
+              <select id="select-dropdown form">
+                <option>Golden State Warriors</option>
+                <option>LA Lakers</option>
+                <option>LA Clippers</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <p>
-        Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features.
-        </p>
+          <p>
+            Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features.
+          </p>
+          <div class="example -padded-desktop">
+            <div class="select-dropdown -form">
+              <div class="dropdown-overlay " aria-hidden="true">
+                <span class="select-value" aria-hidden="true"></span>
+                <i class="icon-chevron-down" aria-hidden="true"></i>
+              </div>
+              <select id="select-dropdown form">
+                <option>Golden State Warriors</option>
+                <option>LA Lakers</option>
+                <option>LA Clippers</option>
+              </select>
 
-        <div class="example -padded-desktop">
-          <div id="neighborhood" class="dropdown -form">
-            <button class="-value" aria-expanded="false">
-              <div class="current-selection">San Francisco</div>
-            </button>
-            <ul class="-options" aria-hidden="true" role="listbox">
-              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#mission">Mission</a></li>
-              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#haight">Haight</a></li>
-              <li role="presentation"><a role="option" aria-checked="false" aria-selected="false" href="#nob-hill">Nob Hill</a></li>
-            </ul>
+            </div>
           </div>
-        </div>
-
-        <pre><code class="language-javascript">
-import dropdownSetup from 'lib/modern/scripts/dropdown';
-        </code></pre>
-      </section>
-    </article>
+        </section>
+      </article>
     </main>
   </body>
+
 </html>

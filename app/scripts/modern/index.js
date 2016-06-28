@@ -20,10 +20,7 @@ $(function() {
   addFontSizes();
   responsiveTable();
   expandingItem();
-<<<<<<< HEAD
   dropdownOverlay();
-=======
->>>>>>> parent of cd2ba24... added changes for dropdown per Chris land and Jenn B request
 
   fancySelect($('#select-from'));
   fancySelect($('#select-from-with-default'));
@@ -86,8 +83,4 @@ $(document).ready(() => {
       dropdownSetup(dropdown);
     });
   }, 2000);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> parent of cd2ba24... added changes for dropdown per Chris land and Jenn B request
