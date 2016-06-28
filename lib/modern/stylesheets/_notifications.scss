@@ -70,7 +70,6 @@ $validation-error-icon-color: "deep-red";
 
     width: $notification-icon-mobile-size;
     height: $notification-icon-mobile-size;
-    font-size: $notification-rounded-icon-desktop-font-size;
 
     &:before {
       margin-top: -$notification-icon-mobile-size/4;
@@ -80,6 +79,7 @@ $validation-error-icon-color: "deep-red";
       width: $notification-icon-desktop-size;
       height: $notification-icon-desktop-size;
       &:before {
+        font-size: $notification-rounded-icon-desktop-font-size;
         margin-top: -$notification-icon-desktop-size/4;
       }
     }
