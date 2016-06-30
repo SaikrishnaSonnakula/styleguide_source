@@ -56,7 +56,13 @@
                   </button>
                 </header>
                 <div id="modal-description" class="content">
-                  Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!
+                  <ul>
+                    <li>Screen reader reads the associated button label for the button trigger (no other aria attributes are required, e.g. do not use <code>aria-haspopup</code>).</li>
+                    <li>When dialog opens, contents and role (dialog or alertdialog) are announced by screen reader, followed by the label of the first interactive control that gains keyboard focus.</li>
+                    <li>Reads close button label when close button has focus.</li>
+                    <li>Does not read anything outside of the contents of the dialog.</li>
+                    <li>Announces "Leaving dialog" (or words to those affect) when keyboard focus leaves dialog (i.e. when dialog is closed).</li>
+                  </ul>
                 </div>
                 <div class="modal-buttons">
                   <button id="nothing" class="button -action">

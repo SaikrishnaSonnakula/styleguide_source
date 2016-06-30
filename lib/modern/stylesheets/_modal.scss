@@ -68,13 +68,20 @@ $button-mobile-color: white;
 
       @include media($device) {
         font-size: $small-font-size;
-        position: fixed;
-        top: 10%;
-        left: 10%;
+        @include position(fixed 10% null null 10%);
         width: 80%;
       }
       @include media($tablet) {
         font-size: $medium-font-size;
+      }
+      @include media($mobile) {
+        font-size: $medium-font-size;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        height: auto;
       }
     }
 
@@ -93,6 +100,15 @@ $button-mobile-color: white;
         margin-bottom: 0;
       }
 
+      @include media($mobile) {
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+      }
+      
       .button {
         margin-bottom: $gutter-spacing;
         width: 100%;
