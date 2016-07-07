@@ -88,40 +88,59 @@ accordion($("#hipstaccordion"));</code></pre>
           Dropdown
         </h2>
           <p>
-            Dropdown that contains a list of links used for navigation. Please find the corresponding Javascript below.
+            Dropdown that contains a list of links used for selection. Please find the corresponding Javascript below.
           </p>
+          <pre><code class="language-javascript">
+            $('.select-dropdown').each(function() {
+              var $element = $(this);
+              var $select = $element.find('select');
+              var $value = $element.find('.select-value');
+              // Bind event handlers to select
+              $select.on({
+                'change keyup': function() {
+                  $value.text($select.val());
+                },
+                'focus': function() {
+                  $element.addClass('focus');
+                },
+                'blur': function() {
+                  $element.removeClass('focus');
+                }
+              });
+              $select.trigger('change');
+            });
+          </code>
+        </pre>
           <div class="example -padded-desktop">
             <div class="select-dropdown">
-              <label id="select-form-label" for="select-dropdown form">choose a team</label>
               <div class="dropdown-overlay" aria-hidden="true">
+                <label class="select-form-label" for="select-dropdown">choose a team</label>
                 <span class="select-value" aria-hidden="true"></span>
                 <i class="icon-chevron-down" aria-hidden="true"></i>
               </div>
-              <select id="select-dropdown form">
+              <select class="select-menu">
                 <option value="Golden State Warriors">Golden State Warriors</option>
                 <option value="LA Lakers">LA Lakers</option>
                 <option value="LA Clippers" >LA Clippers</option>
               </select>
-
             </div>
           </div>
 
           <p>
-            Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features.
+            Add <code>.-form</code> to the dropdown to style it as the main dropdown used on the top of many features, meant to be used in forms.
           </p>
           <div class="example -padded-desktop">
             <div class="select-dropdown -form">
-              <label id="select-form-label" for="select-dropdown form">choose a team</label>
               <div class="dropdown-overlay " aria-hidden="true">
+                <label class="select-form-label" for="select-dropdown">choose a team</label>
                 <span class="select-value" aria-hidden="true"></span>
                 <i class="icon-chevron-down" aria-hidden="true"></i>
               </div>
-              <select id="select-dropdown form">
+              <select class="select-menu">
                 <option value="Golden State Warriors">Golden State Warriors</option>
                 <option value="LA Lakers">LA Lakers</option>
                 <option value="LA Clippers" >LA Clippers</option>
               </select>
-
             </div>
           </div>
         </section>
