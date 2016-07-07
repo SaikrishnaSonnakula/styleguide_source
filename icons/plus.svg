@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 5</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Test-details-page-graph" sketch:type="MSArtboardGroup" transform="translate(-691.000000, -1671.000000)">
-            <g id="Group-5" sketch:type="MSLayerGroup" transform="translate(692.000000, 1672.000000)">
-                <path d="M12.5,25 C19.4035594,25 25,19.4035594 25,12.5 C25,5.59644063 19.4035594,0 12.5,0 C5.59644063,0 0,5.59644063 0,12.5 C0,19.4035594 5.59644063,25 12.5,25 Z" id="Oval-17-Copy-2" stroke="#0D1C3D" stroke-width="2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-                <path d="M11.9616857,15.9068725 L11.9616857,13.1244345 L9.20001221,13.1244345 L9.20001221,11.9616246 L11.9616857,11.9616246 L11.9616857,9.19995117 L13.1383385,9.19995117 L13.1383385,11.9616246 L15.900012,11.9616246 L15.900012,13.1244345 L13.1383385,13.1244345 L13.1383385,15.9068725 L11.9616857,15.9068725 Z" id="+-copy" fill="#0D1C3D" sketch:type="MSShapeGroup"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<g id="plus">
+	<rect x="50" y="292.5" width="500" height="15"/>
+	<rect x="292.5" y="50" width="15" height="500"/>
+</g>
+<g id="Layer_1">
+</g>
 </svg>
