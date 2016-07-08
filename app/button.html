@@ -11,7 +11,7 @@
   <body>
     <header class="styleguide-header">
       <button id="menu-button" class="device-menu-button">Menu</button>
-      <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo"/>
+      <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
       <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
     </header>
     <div class="current-breakpoint">
@@ -23,62 +23,98 @@
       <span class="large-desktop-only">Large Desktop</span>
     </div>
     <main class="styleguide-main">
-    <article>
-      <section id="buttons-section">
-        <h2 class="styleguide-section-heading">Buttons</h2>
-        <p>
-          <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to another place, a button does something.
-        </p>
-        <div class="example -element -padded">
-          <button class="button">
-          Button!
-          </button>
-        </div>
-        <p>
-          For an inverted color, use the <code>-inverted</code> class.
-        </p>
-        <div class="example -element -padded">
-          <button class="button -inverted">
-          Inverted Button
-          </button>
-        </div>
-        <p>
-          You can also make a <code>&lt;button&gt;</code> look like a link:
-        </p>
-        <div class="example -element -padded">
-          <button class="link">
-          Link Button
-          </button>
-        </div>
-        <p>
-          You can make a close button look this:
-        </p>
-        <div class="example -element -padded">
-          <button class="-close">
-          <span class="screenreader-only">close</span>
-          </button>
-        </div>
-        <p>
-          If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
-        </p>
-        <div class="example -element">
-          <button class="button -block">
-          Block button
-          </button>
-        </div>
-        <p>
-          If you need a disabled button you can add the following class <code>-disabled</code>
-        </p>
-        <div class="example -element">
-          <button class="button -disabled" disabled="true">
-          Disabled button
-          </button>
-        </div>
-        <div class="example -element">
-          <button class="button -disabled -inverted" disabled="true">
-          Disabled button
-          </button>
-        </div>
+      <article>
+        <section id="buttons-section">
+          <h2 class="styleguide-section-heading">Buttons</h2>
+          <p>
+            <code>&lt;a&gt;</code> elements, <code>&lt;button&gt;</code> elements can be styled like a button. <b>Note:</b> These two elements have different semantic meaning; choose the one most appropriate for you. Rule of thumb: a link takes you to
+            another place, a button does something.
+          </p>
+          <div class="example -element -padded">
+            <button class="button">
+              Button!
+            </button>
+          </div>
+          <p>
+            For an inverted color, use the <code>-inverted</code> class.
+          </p>
+          <div class="example -element -padded">
+            <button class="button -inverted">
+              Inverted Button
+            </button>
+          </div>
+          <p>
+            You can also make a <code>&lt;button&gt;</code> look like a link:
+          </p>
+          <div class="example -element -padded">
+            <button class="link">
+              Link Button
+            </button>
+          </div>
+          <p>
+            You can make a close button look this:
+          </p>
+          <div class="example -element -padded">
+            <button class="-close">
+              <span class="screenreader-only">close</span>
+            </button>
+          </div>
+          <p>
+            If you need a button on block level - those that span the full width of a parent - use the <code>-block</code> class:
+          </p>
+          <div class="example -element">
+            <button class="button -block">
+              Block button
+            </button>
+          </div>
+          <p>
+            If you need a disabled button you can add the following class <code>-disabled</code>
+          </p>
+          <div class="example -element">
+            <button class="button -disabled" disabled="true">
+              Disabled button
+            </button>
+          </div>
+          <div class="example -element">
+            <button class="button -disabled -inverted" disabled="true">
+              Disabled button
+            </button>
+          </div>
+         <p>Append the class name <code>"kp-radio-btns"</code> to apend the styles of to your project radio buttons. Use the attribute <code>checked="checked"</code> to preselect a radio button. </p>
+          <div class="example -minor -padded">
+            <input class="kp-radio-btns" type="radio" value="0" name="radio-group" checked="checked" value="selected">
+            <label for="selected">I'm selected already!</label>
+            <br>
+            <input class="kp-radio-btns" type="radio" value="1" name="radio-group" value="default">
+            <label for="default">This is an default unselected radio button</label>
+          </div>
+          <p><code>Fieldset</code> and <code>legend </code>should only be used to associate groups of controls when a higher level description is needed. Do not use nested fieldsets. Single checkboxes or basic radio buttons that make sense from their labels alone do not require fieldset or legend.</p>
+          <div class="example -minor -padded">
+            <fieldset>
+              <legend>Choose your favorite basketball team:</legend>
+              <input class="kp-radio-btns" type="radio" name="basketball" value="Lakers">
+              <label for="Lakers">LA Lakers</label>
+              <br>
+              <input class="kp-radio-btns" type="radio" name="basketball" value="Warriors">
+              <label for="Warriors">Golden State Warriors</label>
+              <br>
+              <input class="kp-radio-btns" type="radio" name="basketball" value="Clippers">
+              <label for="Clippers">Clippers</label>
+            </fieldset>
+          </div>
+          <p>To create a disabled button that is compatiable with IE browsers, it is recommended to use the JQuery approach. Using the #read-only selector too designate which of the radio buttons are readonly. </p>
+          <div class="example -minor -padded">
+            <input id="read-only" type="radio" value="disabled" name="radio-disable">
+            <label for="disabled">I'm a disabled radio button option for read only purpose</label>
+          </div>
+          <p>Provided below is the JQuery to disable the radio button</p>
+          <pre>
+            <code class="language-javascript">
+              $("#read-only:radio").on("click", function() {
+                return false;
+              });
+          </code>
+        </pre>
       </section>
     </article>
     </main>
