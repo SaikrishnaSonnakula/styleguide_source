@@ -77,9 +77,5 @@ $(function() {
       $el.hide();
     }, 5000);
   }
-  //Disabled radio button
-  $("#read-only:radio").on("click", function() {
-    return false;
-  });
 });
 

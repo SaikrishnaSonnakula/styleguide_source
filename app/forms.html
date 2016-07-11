@@ -56,21 +56,47 @@
         <p>To create checkboxes of a different size, include the following mixin in your Sass. You must provide a classname, box size, and optionally a font-size.</p>
 
         <pre class="code language-sass"><code>
-.my-30-px-checkbox {
-  @include checkbox(30px, $medium-font-size);
-}
-	</code></pre>
-
-        <div class="example -minor -padded">
-          <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox" />
-          <label for="30px-enabled">This checkbox is so big.</label>
-          <br />
-          <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true" />
-          <label for="30px-disabled">This checkbox is so big and disabled.</label>
-        </div>
+          .my-30-px-checkbox {
+          @include checkbox(30px, $medium-font-size);
+          }
+        </code>
+      </pre>
+      <div class="example -minor -padded">
+        <input type="checkbox" id="30px-enabled" class="my-30-px-checkbox" />
+        <label for="30px-enabled">This checkbox is so big.</label>
+        <br />
+        <input type="checkbox" id="30px-disabled" class="my-30-px-checkbox" checked="true" disabled="true" />
+        <label for="30px-disabled">This checkbox is so big and disabled.</label>
+      </div>
+      <p>Append the class name <code>"radio-button"</code> to apend the styles of to your project radio buttons. Use the attribute <code>checked="checked"</code> to preselect a radio button. Basic radio buttons that make sense from their labels alone and use matching <code>name</code> attribute, do not require fieldset or legend. </p>
+      <div class="example -minor -padded">
+        <input class="radio-button" type="radio" value="0" name="radio-group" checked="checked" value="selected">
+        <label for="selected">I'm selected already!</label>
+        <br>
+        <input class="radio-button" type="radio" value="1" name="radio-group" value="default">
+        <label for="default">This is an default unselected radio button</label>
+      </div>
+      <p><code>Fieldset</code> and <code>legend</code>should only be used to associate groups of controls when a higher level description is needed. Do not use nested fieldsets.</p>
+      <div class="example -minor -padded">
+        <fieldset>
+          <legend>Choose your favorite basketball team:</legend>
+          <input class="radio-button" type="radio" name="basketball" value="Lakers">
+          <label for="Lakers">LA Lakers</label>
+          <br>
+          <input class="radio-button" type="radio" name="basketball" value="Warriors">
+          <label for="Warriors">Golden State Warriors</label>
+          <br>
+          <input class="radio-button" type="radio" name="basketball" value="Clippers">
+          <label for="Clippers">Clippers</label>
+        </fieldset>
+      </div>
+      <p>To create a disabled button use <code>disalbed="true"</code>  attribute </p>
+      <div class="example -minor -padded">
+        <input  type="radio" value="disabled-button" name="radio-read-only" disabled="true">
+        <label for="disabled-button">I'm a disabled radio button option for read only purpose</label>
+      </div>  
       </section>
     </article>
   </main>
 </body>
-
 </html>

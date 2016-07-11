@@ -7,11 +7,6 @@ $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-font-family: $medium-font-family;
 
-@mixin radio-button-shadow-color {
-  -webkit-box-shadow: 0px 0px 0px 2px $text-light;
-  -moz-box-shadow: 0px 0px 0px 2px $text-light;
-  box-shadow: 0px 0px 0px 2px $text-light;
-}
 
 %rounded-input {
   @include appearance(none);
@@ -135,29 +130,3 @@ $button-font-family: $medium-font-family;
 }
 
 
-// Radio Buttons
-input.kp-radio-btns {
-  -webkit-appearance: none;
-  @include size(20px);
-
-  &:after {
-    content: "";
-    @include size(15px);
-    border-radius: 15px;
-    @include position(relative 0 null null -1px);
-    display: inline-block;
-    visibility: visible;
-    @include radio-button-shadow-color ;
-    background-color: white;
-    border: 2px solid white;
-
-  }
-
-  &:checked:after {
-    content: "";
-    @include radio-button-shadow-color;
-    border-radius: 15px;
-    background-color: color("dolphin");
-    border: 2px solid white;
-  }
-}
