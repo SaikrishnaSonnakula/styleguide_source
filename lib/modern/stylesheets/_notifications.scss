@@ -62,6 +62,8 @@ $system-error-icon: "alert";
 $system-error-icon-color: "dolphin";
 $validation-error-icon: "alert";
 $validation-error-icon-color: "deep-red";
+$success-notification-icon: "checkmark";
+$success-notification-icon-color: "moss";
 
 %rounded-error-icon {
   .-icon {
@@ -118,4 +120,9 @@ $validation-error-icon-color: "deep-red";
 %validation-error {
   @include notification($validation-error-icon, $icon-color: $validation-error-icon-color);
   @extend %error-icon;
+}
+
+%success-notification {
+  @include notification($success-notification-icon, $icon-background-color: $success-notification-icon-color);
+  @extend %rounded-error-icon;
 }
