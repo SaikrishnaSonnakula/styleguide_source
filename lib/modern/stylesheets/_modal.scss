@@ -1,4 +1,6 @@
+$modal-gutter-padding: $gutter-spacing $small-spacing 0 $small-spacing;
 $button-mobile-color: white;
+
 .modal-showing {
   overflow: hidden;
 }
@@ -31,20 +33,24 @@ $button-mobile-color: white;
     }
   }
   .modal-inner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    @include transform(translateY(20px));
+    @include transition(transform 0.2s ease);
+    @include transition-delay(0.2s);
+    position: relative;
+    margin: auto;
+    width: 50%;
     background: white;
-    margin: 0;
-    overflow: auto;
-    @include media($desktop) {
-      @include transform(translateY(20px));
-      @include transition(transform 0.2s ease);
-      @include transition-delay(0.2s);
-      position: relative;
-      margin: auto;
-      width: 50%;
+    @include media($device) {
+      width: 90%;
+    }
+    @include media($mobile) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      margin: 0;
+      overflow: auto;
     }
     .modal-header {
       display: flex;
@@ -55,16 +61,14 @@ $button-mobile-color: white;
       }
     }
     .content {
-      padding: $gutter-spacing;
+      padding: 0 $large-spacing;
       margin: 0 auto;
       font-size: 16px;
+      color: $text-light;
       @include media($device) {
         font-size: 15px;
       }
-      @include media($tablet) {
-        right: 4%;
-        width: 100%;
-      }
+
       @include media($mobile) {
         @include position(fixed 0 null null 0);
         @include size(100% auto);
@@ -78,6 +82,7 @@ $button-mobile-color: white;
     }
     p {
       margin-top: 0;
+
     }
     .modal-title {
       font-size: $large-font-size;
@@ -93,13 +98,12 @@ $button-mobile-color: white;
       padding: $tiny-spacing $small-spacing;
     }
     .modal-buttons {
-      text-align: center;
-      padding: $gutter-spacing $small-spacing 0 $small-spacing;
+      padding: $modal-gutter-padding;
       margin-bottom: $small-spacing;
       @include media($device) {
         display: flex;
         flex-flow: column;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         margin-bottom: 0;
