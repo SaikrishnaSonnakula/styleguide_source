@@ -57,6 +57,9 @@ $focus-color: rgba(123, 183, 246, 0.8);
         font-size: $size * 0.65;
         background-color: $enabled-color;
         color: white;
+        @include media($mobile){
+          top: (($size/2.5) - $checkbox-border-width)/2;
+        }
       }
     }
 
