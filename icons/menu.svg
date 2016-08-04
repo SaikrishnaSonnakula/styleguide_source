@@ -2,9 +2,10 @@
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
-<g id="plus">
-	<rect x="50" y="292.5" width="500" height="15"/>
-	<rect x="292.5" y="50" width="15" height="500"/>
+<g id="menu">
+	<rect x="50" y="175.833" width="500" height="40"/>
+	<rect x="50" y="280" width="500" height="40"/>
+	<rect x="50" y="384.167" width="500" height="40"/>
 </g>
 <g id="Layer_1">
 </g>
