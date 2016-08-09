@@ -62,7 +62,7 @@ $button-mobile-color: white;
       justify-content: space-between;
       margin: $small-spacing $large-spacing 0;
       @include media($mobile) {
-        margin: $medium-spacing $small-spacing $large-spacing;
+        margin: $medium-spacing $small-spacing $small-spacing;
       }
     }
     .content {
