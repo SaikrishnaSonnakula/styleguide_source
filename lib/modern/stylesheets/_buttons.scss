@@ -122,11 +122,13 @@ $button-font-family: $medium-font-family;
   &:before {
     @include icon-for("close");
   }
-
   border: none;
   background: none;
   cursor: pointer;
-  font-size: $xl-font-size;
+  font-size: $large-font-size;
+  @include media($device){
+    font-size: $small-font-size;
+  }
 }
 
 
