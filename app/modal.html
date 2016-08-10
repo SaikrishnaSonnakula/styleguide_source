@@ -49,15 +49,20 @@
           <div class="kp-modal" role="dialog" id="my-modal" aria-describedby="modal-description" aria-labelledby="modal-title">
             <div class="modal-fade-screen" tabindex="-1">
               <div class="modal-inner" tabindex="0">
+                <button id="modal-close" class="-close">
+                  <span class="screenreader-only">close modal</span>
+                </button>
                 <header class="modal-header">
-                  <h2 id="modal-title">Modal Example</h2>
-                  <button id="modal-close" class="-close">
-                    <span class="screenreader-only">close modal</span>
-                  </button>
+                  <h2 class="modal-title">Modal Example</h2>
                 </header>
-                <div id="modal-description" class="content">
-                  Welcome to the modal space. How are you doing? This is a looonnnnnggg word! Hope you have a good day!
-                </div>
+                  <div id="modal-description" class="content">
+                    <span class="screenreader-only"> Beginning of dialog content </span>
+                    <p>Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Itaque earum rerum hic tenetur a sapiente delectus. Temporibus autem quibusdam et aut officiis debitis
+                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                    <p>Totam rem aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    <span class="screenreader-only"> End of dialog content </span>
+                  </div>
                 <div class="modal-buttons">
                   <button id="nothing" class="button -action">
                     Secondary Action

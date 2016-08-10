@@ -1,13 +1,12 @@
+$modal-gutter-padding: $gutter-spacing $small-spacing 0 $small-spacing;
 $button-mobile-color: white;
 
 .modal-showing {
   overflow: hidden;
 }
-
 .kp-modal {
   &.modal-showing {
     display: block;
-
     .modal-fade-screen {
       opacity: 1;
       visibility: visible;
@@ -19,80 +18,103 @@ $button-mobile-color: white;
       }
     }
   }
-
-  .modal-fade-screen { // overlay
+  .modal-fade-screen {
+    // overlay
     @include transition(opacity 0.4s $ease-out-cubic);
     @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, 0.65);
+    background: rgba(0, 0, 0, 0.65);
     opacity: 0;
     visibility: hidden;
     z-index: 99999999999;
     padding-top: 3em;
-
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
       cursor: pointer;
     }
   }
-
   .modal-inner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    @include transform(translateY(20px));
+    @include transition(transform 0.2s ease);
+    @include transition-delay(0.2s);
+    position: relative;
+    margin: auto;
+    width: 50%;
     background: white;
-    margin: 0;
-    overflow: auto;
-
-    @include media($desktop) {
-      @include transform(translateY(20px));
-      @include transition(transform 0.2s ease);
-      @include transition-delay(0.2s);
-      position: relative;
-      margin: auto;
-      width: 50%;
+    @include media($device) {
+      width: 90%;
     }
-
+    @include media($mobile) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      margin: 0;
+      overflow: auto;
+    }
     .modal-header {
       display: flex;
       justify-content: space-between;
-      margin: $gutter-spacing;
+      margin: $small-spacing $large-spacing 0;
+      @include media($mobile) {
+        margin: $medium-spacing $small-spacing $large-spacing;
+      }
     }
-
     .content {
-      padding: $gutter-spacing;
-      margin-bottom: $gutter-spacing;
-      margin-top: $gutter-spacing;
-
-      text-align: center;
-
+      padding: 0 $large-spacing;
+      margin: 0 auto;
+      font-size: 16px;
+      color: $text-light;
       @include media($device) {
-        font-size: $small-font-size;
-        position: fixed;
-        top: 10%;
-        left: 10%;
-        width: 80%;
+        font-size: 15px;
       }
-      @include media($tablet) {
-        font-size: $medium-font-size;
+
+      @include media($mobile) {
+        @include position(fixed 0 null null 0);
+        @include size(100% auto);
+        margin: 0;
+        padding: 0 $small-spacing;
       }
     }
+    ul {
+      margin: 0;
+      -webkit-padding-start: $small-spacing;
+    }
+    p {
+      margin-top: 0;
 
+    }
+    .modal-title {
+      font-size: $large-font-size;
+      @include media($mobile) {
+        font-size: $medium-font-size;
+        margin: 0;
+      }
+    }
+    .-close {
+      color: $button-color;
+      position: absolute;
+      right: 0;
+      padding: $tiny-spacing $small-spacing;
+    }
     .modal-buttons {
-      text-align: center;
-
-      padding: $gutter-spacing $small-spacing 0 $small-spacing;
+      padding: $modal-gutter-padding;
       margin-bottom: $small-spacing;
-
       @include media($device) {
         display: flex;
         flex-flow: column;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         margin-bottom: 0;
       }
-
+      @include media($mobile) {
+        display: flex;
+        flex-flow: column;
+        @include position(relative null null null 0);
+        width: 100%;
+        margin-bottom: 0;
+      }
       .button {
         margin-bottom: $gutter-spacing;
         width: 100%;
@@ -101,22 +123,21 @@ $button-mobile-color: white;
           margin-right: $small-spacing;
           margin-left: $small-spacing;
         }
-
         &.-action {
           order: 2;
           color: $button-color;
           background-color: white;
           border-color: $button-color;
         }
-
         &.-action.-inverted {
           order: 1;
           color: white;
           background: $button-color;
         }
-
         @include media($desktop-medium-up) {
-          .button { width: auto; }
+          .button {
+            width: auto;
+          }
         }
       }
     }
