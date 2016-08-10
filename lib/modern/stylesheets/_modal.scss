@@ -1,6 +1,14 @@
 $modal-gutter-padding: $gutter-spacing $small-spacing 0 $small-spacing;
 $button-mobile-color: white;
-
+@mixin full-screen-affect() {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  margin: 0;
+  overflow: auto;
+}
 .modal-showing {
   overflow: hidden;
 }
@@ -40,24 +48,21 @@ $button-mobile-color: white;
     margin: auto;
     width: 50%;
     background: white;
-    @include media($device) {
-      width: 90%;
+    // @include media($device) {
+    //   width: 90%;
+    // }
+    @include media($tablet) {
+      @include full-screen-affect;
     }
     @include media($mobile) {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background: white;
-      margin: 0;
-      overflow: auto;
+      @include full-screen-affect;
     }
     .modal-header {
       display: flex;
       justify-content: space-between;
       margin: $small-spacing $large-spacing 0;
       @include media($mobile) {
-        margin: $medium-spacing $small-spacing $large-spacing;
+        margin: $medium-spacing $small-spacing $small-spacing;
       }
     }
     .content {
@@ -143,3 +148,5 @@ $button-mobile-color: white;
     }
   }
 }
+
+
