@@ -1,134 +1,141 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>KP Styleguide :: tables</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="main.css" />
-  <script src="modern.bundle.js"></script>
-
-  <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-  <header class="styleguide-header">
-    <button id="menu-button" class="device-menu-button">Menu</button>
-    <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
-    <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
-  </header>
-  <div class="current-breakpoint">
-    Current Breakpoint:
-    <span class="mobile-only">Mobile</span>
-    <span class="tablet-only">Tablet</span>
-    <span class="small-desktop-only">Small Desktop</span>
-    <span class="desktop-only">Desktop Medium</span>
-    <span class="large-desktop-only">Large Desktop</span>
-  </div>
-  <main class="styleguide-main">
-    <article class="styleguide-content">
-      <section>
-        <h1>Tabels</h1>
-        <p>Below you will find examples of Styleguide patterns to compose a table to display some data on a website</p>
-          <table class="table--large ">
-            <thead>
+  <head>
+    <title>KP Styleguide :: Tables</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
+    <main class="styleguide-main">
+      <article>
+        <section>
+          <h1>Table</h1>
+          <p>Make sure to include the <code> data-th </code> attribute within with the corresponding<code> td</code> tag for mobile and tablet the column title will have the column title label repeating for a better user experience.</p>
+          <div class="example -padded">
+            <table class="table">
               <tr>
-                <th>Heading Col 1</th>
-                <th>Heading Col 2</th>
-                <th>Heading Col 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data Col 1a</td>
-                <td>Data Col 2a</td>
-                <td>Data Col 3a</td>
+                <th>Date</th>
+                <th>Categories</th>
+                <th>Description</th>
+                <th>Values</th>
               </tr>
               <tr>
-                <td>Data Col 1b</td>
-                <td>Data Col 2b</td>
-                <td>Data Col 3b</td>
+                <td data-th="Date">08/26/2015</td>
+                <td data-th="Categories">Medicare 40 </br>￼Member</br>Health</br> History</td>
+                <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values">102,935,665</td>
               </tr>
               <tr>
-                <td>Data Col 1c</td>
-                <td>Data Col 2c</td>
-                <td>Data Col 3c</td>
+                <td data-th="Date">03/18/1953</td>
+                <td data-th="Categories">Individual </br>Family Plans</br>Employers</br> Doctors</td>
+                <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values">115,000,000</td>
               </tr>
               <tr>
-                <td>Data Col 1d</td>
-                <td>Data Col 2d</td>
-                <td>Data Col 3d</td>
+                <td data-th="Date">03/30/1987</td>
+                <td data-th="Categories">Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</td>
+                <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values">147,154,233</td>
+              </tr>
+            </table>
+          </div>
+          <h2>Table with More Than 5 Columns</h2>
+          <p> For tables with more than 5 columns use the <code>--large</code> class to apply the adjusted padding between each column.</p>
+          <div class="example -padded">
+            <table class="table--large">
+              <tr>
+                <th>Date</th>
+                <th>Categories</th>
+                <th>Description</th>
+                <th>Values</th>
+                <th>Index</th>
+                <th>Comments</th>
               </tr>
               <tr>
-                <td>Data Col 1e</td>
-                <td>Data Col 2e</td>
-                <td>Data Col 3e</td>
+                <td data-th="Date">08/26/2015</td>
+                <td data-th="Categories"><p>Medicare 40 </br>￼Member</br>Health</br> History</p></td>
+                <td data-th="Description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values">102,935,665</td>
+                <td data-th="Index"> 137</td>
+                <td data-th="Comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
               </tr>
               <tr>
-                <td>Data Col 1f</td>
-                <td>Data Col 2f</td>
-                <td>Data Col 3f</td>
+                <td data-th="Date">03/18/1953</td>
+                <td data-th="Categories"><p>Individual </br>Family Plans</br>Employers</br> Doctors</p></td>
+                <td data-th="Description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values">115,000,000</td>
+                <td data-th="Index"> 154</td>
+                <td data-th="Comments"><p> Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
               </tr>
-            </tbody>
+              <tr>
+                <td data-th="Date">03/30/1987</td>
+                <td data-th="Categories"><p>Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</p></td>
+                <td data-th="Description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values">147,154,233</td>
+                <td data-th="Index"> 113</td>
+                <td data-th="Comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+              </tr>
+            </table>
+          </div>
+          <h2>Using the Table Sass Mixin</h2>
+          <p> Use the mixin <code>@extend %table-base</code> to apply your own unique styling to the table within your class that usess the double hyphen after the <code>.table</code> class name. In the example below the custom class name <code>--grey-even-row</code>            is appended to the defualt <code>.table</code> class</p>
+          <pre><code class="language-sass">
+          .table--grey-even-row {
+            @extend %table-base;
+            tr:nth-of-type(even) {
+              background: color("graphite-light");
+            }
+          }
+          </code></pre>
+          <table class="table--grey-even-row">
+            <tr>
+              <th>Date</th>
+              <th>Categories</th>
+              <th>Description</th>
+              <th>Values</th>
+            </tr>
+            <tr>
+              <td data-th="Date">08/26/2015</td>
+              <td data-th="Categories">Medicare 40 </br>￼Member</br>Health</br> History</td>
+              <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+              <td data-th="Values">102,935,665</td>
+            </tr>
+            <tr>
+              <td data-th="Date">03/18/1953</td>
+              <td data-th="Categories">Individual </br>Family Plans</br>Employers</br> Doctors</td>
+              <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+              <td data-th="Values">115,000,000</td>
+            </tr>
+            <tr>
+              <td data-th="Date">03/30/1987</td>
+              <td data-th="Categories">Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</td>
+              <td data-th="Description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+              <td data-th="Values">147,154,233</td>
+            </tr>
           </table>
-            
-            <p>Use the mixin 'responive-tables-large' and placehold 'responive-tables-large' to apply the styling sooner</p>
-           
-          <table>
-            <thead>
-              <tr>
-                <th>Heading Col 1</th>
-                <th>Heading Col 2</th>
-                <th>Heading Col 3</th>
-                <th>Heading Col 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data Col 1a</td>
-                <td>Data Col 2a</td>
-                <td>Data Col 3a</td>          
-              <td>Data Col 4a</td>
-              </tr>
-              <tr>
-                <td>Data Col 1b</td>
-                <td>Data Col 2b</td>
-                <td>Data Col 3b</td>
-                <td>Data Col 4b</td>
-              </tr>
-              <tr>
-                <td>Data Col 1c</td>
-                <td>Data Col 2c</td>
-                <td>Data Col 3c</td>
-                <td>Data Col 4c</td>
-              </tr>
-              <tr>
-                <td>Data Col 1d</td>
-                <td>Data Col 2d</td>
-                <td>Data Col 3d</td>
-                <td>Data Col 4d</td>
-              </tr>
-              <tr>
-                <td>Data Col 1e</td>
-                <td>Data Col 2e</td>
-                <td>Data Col 3e</td>
-                <td>Data Col 4e</td>
-              </tr>
-              <tr>
-                <td>Data Col 1f</td>
-                <td>Data Col 2f</td>
-                <td>Data Col 3f</td>
-                <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
-              </tr>
-            </tbody>
-            </table>   
-      </section>
-
-    </article>
-  </main>
-</body>
-
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>

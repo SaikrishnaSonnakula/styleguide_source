@@ -1,162 +1,99 @@
+//Mixins
+$table-padding--xl-large:$tiny-spacing $small-spacing;
+$table-padding--large:$tiny-spacing $extra-tiny-spacing;
+$table-padding--small:$extra-tiny-spacing 0 $tiny-spacing;
+$border--thick: 3px solid color("graphite");
+$border--thin: 1px solid color("graphite");
+$table-label-font-size: $tiny-font-size;
+@mixin children--padding {
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
 
-$border-color: color("graphite");
-$medium-up: 600px;
-$large-up: 1000px;
-$global-radius: 4px;
-$table-padding--medium: 10em;
-
-///BASIC TABLE STYLING
-table {
-
-  float: left;
-   margin: 0 0 2em;
+@mixin table {
+  width: 100%;
+  text-align: left;
   thead {
-    border-bottom: 3px solid $border-color
-    th {
-      padding: 0.35em 0 .35em;
-       font-weight: 400;
-      text-align: left;
-      font-size: 1.25em;
-    }
-    
+    border-bottom: $border--thick;
   }
-
-  tbody {
-    border-bottom: 3px solid $border-color;
-    tr {
-      border-bottom: 2px solid #ddd;
-       
-      td {
-        padding: .75em 0;
-      }
+  tr {
+    border-bottom: $border--thin;
+    &:last-child {
+      border-bottom: $border--thick;
+    }
+    @include media($device) {
+      border-top: $border--thick;
+      border-bottom: $border--thick;
     }
   }
-
-  tfoot {
-    td {
-      padding: 0.35em 0 .35em;
-
-      text-align: left;
-      font-size: 1.25em;
-    }
-  }
-}
-
-@media screen and (min-width: $large-up) {
-  table {
-    width: 100%;
-
-    thead {
-      border-bottom: 3px solid $border-color;
-      th {
-      }
-      
-    }
-
-    tbody {
-      tr {
-        border-bottom: 1px solid #ddd;
-        td {
-          
-        }
-      }
-    }
-  }
-}
-
-///RWD MIXIN BELOW
-@mixin rwd-first {
-  display: block;
-  
-  tbody {
-    border: none;
-  }
-    tbody, th, td, tr, tfoot {
-      display: block; 
-    }
-
-    thead {
+  th {
+    text-transform: uppercase;
+    color: $text-light;
+    font-size: $table-label-font-size;
+    padding: $table-padding--xl-large;
+    @include children--padding;
+    @include media($device) {
       display: none;
     }
-    tr {
-      float: left;
-      width: 100%;
-      margin: 0 0 1em;
-      border: 1px solid $border-color;
-      box-shadow: 0px 2px 5px 0px $border-color;
-      border-radius: $global-radius;
-      border-top: 1px solid $border-color;
-
-      td {
-          float:left;
-          width: 100%;
-        &:before {
-          width: 100%;
-          display: block;
-          float: left;
-          padding: .5em .5em .5em 0;
-          clear: both;
-          margin: -.5em 0 0 -100%;
-          font-size: 1.125em;
-
-        }
+  }
+  td {
+    display: table-cell;
+    padding: $table-padding--xl-large;
+    vertical-align: top;
+    @include children--padding;
+    @include media($device) {
+      display: block;
+      padding: $table-padding--small;
+      &:last-child {
+        padding-bottom: $small-spacing;
       }
     }
-}
-
-
-%responive-tables {
-  @include rwd-first;
-
-}
-
-%responive-tables-large {
-  @include rwd-first;
-
-}
-
-@mixin responive-tables($headings...) {
-  $list: $headings;
-
-  @each $list-headings in $list {
-    $i: index($list, $list-headings);
-    tbody tr td:nth-of-type(#{$i}):before { 
-      content: $list-headings; 
-    }
-    
-    @media screen and (min-width: $medium-up) { 
-      tbody tr td:nth-of-type(#{$i}):before { 
-        content: ''; 
+    &:before {
+      display: none;
+      @include media($device) {
+        content: attr(data-th)" ";
+        color: $text-light;
+        text-transform: uppercase;
+        font-size: $table-label-font-size;
+        width: 100%;
+        display: block;
       }
     }
-
+  }
+  p {
+  margin: 0;
   }
 }
 
-@mixin responive-tables-large($headings...) {
-  $list: $headings;
+%table-base {
+  @include table;
+}
 
-  @each $list-headings in $list {
-    $i: index($list, $list-headings);
-    tbody tr td:nth-of-type(#{$i}):before { 
-      content: $list-headings; 
-    }
-    
-    @media screen and (min-width: $large-up) { 
-      tbody tr td:nth-of-type(#{$i}):before { 
-        content: ''; 
+table,.table {
+  @extend %table-base;
+}
+
+.table--large {
+  @extend %table-base;
+  td,
+  th {
+    padding: $table-padding--large;
+    @include media($device) {
+      padding: $table-padding--small;
+      &:last-child {
+        padding-bottom: $small-spacing;
       }
     }
-
   }
 }
 
-.table--large  {
-  @extend %responive-tables;
-  @include responive-tables('Heading Col 1', 'Heading Col 2', 'Heading Col 3');
-}
-
-#rwd-table-large {
-  @extend %responive-tables-large;
-  @include responive-tables-large('Heading Col 1', 'Heading Col 2', 'Heading Col 3','Heading Col 4');
+.table--grey-even-row {
+  @extend %table-base;
+  tr:nth-of-type(even) {
+    background: color("graphite-light");
+  }
 }
