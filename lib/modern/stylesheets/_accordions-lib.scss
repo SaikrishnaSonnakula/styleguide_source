@@ -1,0 +1,52 @@
+$accordion-closed-character: '+';
+$accordion-opened-character: '-';
+
+%accordion {
+  .-group {
+    border-bottom: 2px solid color(graphite);
+    margin: 0 0 $tiny-spacing 0;
+
+    &.-open {
+      .-heading:before {
+        content: $accordion-opened-character;
+      }
+
+      .-content {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+
+    .-heading {
+      @extend %button-unstyled;
+      cursor: pointer;
+      position: relative;
+      padding-left: $medium-spacing;
+      width: 100%;
+
+      .item-heading, .auxiliary-text {
+        margin: 0 0 $tiny-spacing 0;
+      }
+
+      &:before {
+        color: color("interactive-blue");
+        content: $accordion-closed-character;
+        display: inline-block;
+        font-size: $medium-font-size;
+        left: 0;
+        line-height: $large-font-size;
+        position: absolute;
+      }
+    }
+
+    .-content {
+      height: 0;
+      padding-left: $medium-spacing;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(all 0.4s $ease-in-out-cubic);
+    }
+  }
+}

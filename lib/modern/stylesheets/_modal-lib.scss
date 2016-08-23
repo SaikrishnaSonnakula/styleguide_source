@@ -1,0 +1,152 @@
+$modal-gutter-padding: $gutter-spacing $small-spacing 0 $small-spacing;
+$button-mobile-color: white;
+@mixin full-screen-affect() {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  margin: 0;
+  overflow: auto;
+}
+.modal-showing {
+  overflow: hidden;
+}
+%kp-modal {
+  &.modal-showing {
+    display: block;
+    .modal-fade-screen {
+      opacity: 1;
+      visibility: visible;
+      overflow: auto;
+    }
+    .modal-fade-screen .modal-inner {
+      @include media($desktop) {
+        @include transform(translateY(50px));
+      }
+    }
+  }
+  .modal-fade-screen {
+    // overlay
+    @include transition(opacity 0.4s $ease-out-cubic);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999999999;
+    padding-top: 3em;
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+  .modal-inner {
+    @include transform(translateY(20px));
+    @include transition(transform 0.2s ease);
+    @include transition-delay(0.2s);
+    position: relative;
+    margin: auto;
+    width: 50%;
+    background: white;
+    // @include media($device) {
+    //   width: 90%;
+    // }
+    @include media($tablet) {
+      @include full-screen-affect;
+    }
+    @include media($mobile) {
+      @include full-screen-affect;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      margin: $small-spacing $large-spacing 0;
+      @include media($mobile) {
+        margin: $medium-spacing $small-spacing $small-spacing;
+      }
+    }
+    .content {
+      padding: 0 $large-spacing;
+      margin: 0 auto;
+      font-size: 16px;
+      color: $text-light;
+      @include media($device) {
+        font-size: 15px;
+      }
+
+      @include media($mobile) {
+        @include position(fixed 0 null null 0);
+        @include size(100% auto);
+        margin: 0;
+        padding: 0 $small-spacing;
+      }
+    }
+    ul {
+      margin: 0;
+      -webkit-padding-start: $small-spacing;
+    }
+    p {
+      margin-top: 0;
+
+    }
+    .modal-title {
+      font-size: $large-font-size;
+      @include media($mobile) {
+        font-size: $medium-font-size;
+        margin: 0;
+      }
+    }
+    .-close {
+      color: $button-color;
+      position: absolute;
+      right: 0;
+      padding: $tiny-spacing $small-spacing;
+    }
+    .modal-buttons {
+      padding: $modal-gutter-padding;
+      margin-bottom: $small-spacing;
+      @include media($device) {
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+      }
+      @include media($mobile) {
+        display: flex;
+        flex-flow: column;
+        @include position(relative null null null 0);
+        width: 100%;
+        margin-bottom: 0;
+      }
+      .button {
+        margin-bottom: $gutter-spacing;
+        width: 100%;
+        @include media($desktop) {
+          width: auto;
+          margin-right: $small-spacing;
+          margin-left: $small-spacing;
+        }
+        &.-action {
+          order: 2;
+          color: $button-color;
+          background-color: white;
+          border-color: $button-color;
+        }
+        &.-action.-inverted {
+          order: 1;
+          color: white;
+          background: $button-color;
+        }
+        @include media($desktop-medium-up) {
+          .button {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+

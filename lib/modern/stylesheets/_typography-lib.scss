@@ -1,0 +1,106 @@
+$base-font-size: 16px;
+$em-base: $base-font-size; // used for bourbon
+$base-mobile-font-size: 15px;
+
+$extra-tiny-font-px: 12px;
+$tiny-font-px: 13px;
+$small-font-px: 18px;
+$medium-font-px: 20px;
+$large-font-px: 28px;
+$xl-font-px: 36px;
+$xxl-font-px: 60px;
+
+$extra-tiny-font-size: rem($extra-tiny-font-px);
+$tiny-font-size: rem($tiny-font-px);
+$small-font-size: rem($small-font-px);
+$medium-font-size: rem($medium-font-px);
+$large-font-size: rem($large-font-px);
+$xl-font-size: rem($xl-font-px);
+$xxl-font-size: rem($xxl-font-px);
+
+$base-font-family: "Gotham 4r";
+$light-font-family: "Gotham 3r";
+$medium-font-family: "Gotham 5r";
+$bold-font-family: "Gotham 7r";
+
+// HEADING CLASSES
+%page-heading {
+  font-size: $medium-font-size;
+  font-weight: bold;
+  color: color(inky-blue);
+
+  @include media($desktop) {
+    font-size: $large-font-size;
+  }
+}
+
+%item-heading {
+  margin-bottom: $tiny-spacing;
+  font-size: $small-font-size;
+  letter-spacing: -1px;
+  color: color(inky-blue);
+  font-weight: normal;
+
+  @include media($desktop) {
+    font-size: $medium-font-size;
+  }
+}
+
+%section-heading {
+  font-size: $small-font-size;
+  letter-spacing: -0.75px;
+  color: color(dolphin);
+  font-weight: normal;
+  @include media($desktop) {
+    font-size: $medium-font-size;
+  }
+}
+
+// FONT STYLE CLASSES
+
+%item-tag {
+  text-transform: uppercase;
+  font-size: $extra-tiny-font-size;
+  color: color(dolphin);
+  @include media($desktop) {
+    font-size: $tiny-font-size;
+  }
+}
+
+%auxiliary-text {
+  font-size: $tiny-font-size;
+  color: color(dolphin);
+  @include media($desktop) {
+    font-size: $tiny-font-size;
+  }
+}
+
+
+%inverted-link {
+  &, &:visited {
+    color: $text-light;
+  }
+
+  &:hover, &:focus {
+    color: color(interactive-blue);
+  }
+}
+// Flat class versions of the the above placeholders, not to be used with library
+// .page-heading{
+//   @extend %page-heading;
+// }
+// .item-heading {
+//   @extend %item-heading;
+// }
+// .section-heading{
+//   @extend %section-heading;
+// }
+// .item-tag {
+//   @extend %item-tag;
+// }
+// .auxiliary-text{
+//   @extend %auxiliary-text;
+// }
+// .inverted-link{
+//   @extend %inverted-link;
+// }
