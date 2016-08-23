@@ -10,6 +10,9 @@ $dropdown-chevron-size: 1rem;
   max-width: $dropdown-option-menu-max-width;
   &.-form {
     background-color: $dropdown-form-background-color;
+    height: 50px;
+    min-width: $dropdown-option-menu-max-width;
+    padding: 5px $extra-tiny-spacing;
   }
   &.-form i.icon-chevron-down {
     float: right;
@@ -54,9 +57,8 @@ $dropdown-chevron-size: 1rem;
   // hide and overlay when JavaScript is enabled
   select {
     left: 0;
-    height: 100%;
-    min-height: 100%;
-    min-width: 100%;
+    //min-height: 100%;
+    //min-width: 100%;
     opacity: 0;
     position: absolute;
     top: 0;

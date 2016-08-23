@@ -1,12 +1,12 @@
 //Mixins
 $button-color: color("interactive-blue");
 $button-padding: $extra-tiny-spacing+2;
-$button-padding-desktop: 16px;
+$button-padding-desktop: 12px;
 $button-border-size: 3px;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-font-family: $medium-font-family;
-
+$button-max-height:50px;
 
 %rounded-input {
   @include appearance(none);
@@ -24,6 +24,7 @@ $button-font-family: $medium-font-family;
   -webkit-font-smoothing: antialiased;
   @include media($tablet-up) {
     padding: $button-padding-desktop;
+    max-height: 50px;
   }
 }
 
