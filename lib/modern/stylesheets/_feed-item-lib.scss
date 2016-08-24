@@ -1,6 +1,27 @@
-@import "_feed-item-lib";
+$mobile-item-icon-padding: $small-spacing;
+$mobile-item-gutter-width: $feature-icon-mobile-size + (2 * $mobile-item-icon-padding);
+$desktop-item-icon-padding: $medium-spacing;
+$desktop-item-gutter-width: $feature-icon-desktop-size + (2 * $desktop-item-icon-padding);
+$feed-item-border-size: 3px;
+$expanded-top-margin: $large-spacing;
+$feed-item-right-gutter-size: 20px;
+$expanded-close-icon-mobile-size: 20px;
+$expanded-close-icon-desktop-size: 25px;
 
-.feed-item {
+
+@mixin gutter($width, $padding, $mobile-width, $mobile-padding) {
+  width: $mobile-width;
+  float: left;
+  padding: 0 $mobile-padding;
+
+  @include media($desktop) {
+    width: $width;
+    float: left;
+    padding: 0 $padding;
+  }
+}
+
+%feed-item {
   padding: $small-spacing 0;
   @include transition(position 0.3s ease-in-out);
   @include media($desktop){
