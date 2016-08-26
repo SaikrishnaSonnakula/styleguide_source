@@ -1,0 +1,134 @@
+$button-color: color("interactive-blue");
+$button-padding: $extra-tiny-spacing+2;
+$button-padding-desktop: 16px;
+$button-border-size: 3px;
+
+$button-min-width: 10em;
+$button-small-min-width: 8em;
+
+$button-font-family: $medium-font-family;
+
+%rounded-input {
+  @include appearance(none);
+
+  display: inline-block;
+  padding: $button-padding;
+  min-width: $button-min-width;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  @include media($tablet-up) {
+    padding: $button-padding-desktop;
+  }
+}
+
+%button {
+  @extend %rounded-input;
+  @include transition(background-color 0.2s ease,
+  color 0.2s ease,
+  border-color 0.2s ease);
+  font-family: $button-font-family;
+  background-color: $button-color;
+  color: white;
+  border: $button-border-size transparent solid;
+
+  &:hover, &:focus {
+    background-color: $button-hover-color;
+    color: white;
+  }
+
+  &.-action {
+    background-color: transparent;
+    border-color: white;
+
+    &:hover, &:focus {
+      background-color: white;
+      color: $button-hover-color;
+    }
+
+    &.-inverted {
+      border-color: white;
+      color: $button-color;
+
+      &:hover, &:focus {
+        background-color: white;
+        color: $button-hover-color;
+      }
+    }
+  }
+
+  &.-inverted {
+    background-color: transparent;
+    color: $button-color;
+    border-color: $button-color;
+    &:hover, &:focus {
+      background-color: $button-hover-color;
+      border-color: $button-hover-color;
+      color: white;
+    }
+    &:disabled, .-disabled {
+      background-color: $button-inverted-disable-color;
+    }
+  }
+
+  &.-small {
+    min-width: $button-small-min-width;
+    font-size: $tiny-font-size;
+  }
+
+  &:disabled, .-disabled {
+    background-color: $button-disable-color;
+    &:hover {
+      cursor: not-allowed;
+      border-color: $button-disable-color;
+    }
+
+    &.-inverted {
+      color: $button-disable-color;
+      border: $button-border-size solid $button-disable-color;
+    }
+  }
+}
+
+
+%button-unstyled {
+  @include appearance(none);
+  border: 0px solid transparent;
+  background-color: transparent;
+  text-align: left;
+  padding: 0;
+}
+
+
+//Flatten classes not in for library
+// .-block {
+//   display: block;
+//   width: 100%;
+// }
+
+// .button {
+//   @extend %button;
+// }
+
+// .link {
+//   @extend %button-unstyled;
+//   color: $link-color;
+// }
+
+// .-close {
+//   &:before {
+//     @include icon-for("close");
+//   }
+//   border: none;
+//   background: none;
+//   cursor: pointer;
+//   font-size: $large-font-size;
+//   @include media($device){
+//     font-size: $small-font-size;
+//   }
+// }
