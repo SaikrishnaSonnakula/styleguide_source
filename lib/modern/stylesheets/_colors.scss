@@ -58,9 +58,3 @@ $colors: (
     @return #ffffff;
   }
 }
-
-@each $color-name, $hexcolor in $colors {
- .background-color-#{$color-name} {
- background-color: $hexcolor !important;
- }
-}
