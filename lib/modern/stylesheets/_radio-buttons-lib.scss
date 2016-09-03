@@ -13,8 +13,7 @@ input%radio-button {
     content: "";
     @include size(10px);
     border-radius: 10px;
-    @include position(relative 0 null null -1px);
-    top: -6px;
+    @include position(relative 0 6px null -1px);
     display: inline-block;
     visibility: visible;
     @include radio-button-shadow-color;
