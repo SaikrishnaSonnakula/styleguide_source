@@ -6,26 +6,25 @@
 
 // Radio Buttons
 input%radio-button {
-  -webkit-appearance: none;
   @include size(10px);
   margin: $extra-tiny-spacing;
 
   &:after {
-    content: "";
     @include size(10px);
+    @include position(relative 0 6px null -1px);
+    @include radio-button-shadow-color;
+    content: "";
     border-radius: 10px;
-    @include position(relative 0 null null -1px);
     display: inline-block;
     visibility: visible;
-    @include radio-button-shadow-color;
+
     background-color: white;
     border: 2px solid white;
-
   }
 
   &:checked:after {
-    content: "";
     @include radio-button-shadow-color;
+    content: "";
     border-radius: 15px;
     background-color: color("dolphin");
     border: 2px solid white;
