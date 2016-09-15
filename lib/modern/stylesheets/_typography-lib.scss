@@ -23,58 +23,108 @@ $light-font-family: "Gotham 3r";
 $medium-font-family: "Gotham 5r";
 $bold-font-family: "Gotham 7r";
 
-// HEADING CLASSES
-%page-heading {
-  font-size: $medium-font-size;
-  font-weight: bold;
-  color: color(inky-blue);
 
-  @include media($desktop) {
-    font-size: $large-font-size;
+
+
+// HEADING CLASSES
+%hero-heading {
+  font-family: $light-font-family;
+  color: color(inky-blue);
+  font-size: $xxl-font-size;
+  font-weight: 100;
+  letter-spacing:  -2.5px ;
+  line-height: 74px;
+
+  @include media($device) {
+    font-size: $xl-font-size;
+    letter-spacing: -1.5px;
+    line-height: 37px;
   }
+}
+.hero-heading{
+  @extend %hero-heading;
+}
+
+%page-heading {
+  color: color(inky-blue);
+  font-family: $light-font-family;
+  font-size: $xl-font-size;
+  letter-spacing: -1.5px;
+  line-height: 50px;
+
+  @include media($device) {
+    font-size: $large-font-size;
+    letter-spacing: -1px;
+    line-height: 44px;
+  }
+}
+.page-heading{
+  @extend %page-heading;
+}
+
+%section-heading {
+  font-size: $large-font-size;
+  color: color(inky-blue);
+  letter-spacing: -1px;
+  line-height: 42px;
+  font-weight: normal;
+
+  @include media($device) {
+    font-size: $medium-font-size;
+    letter-spacing: -0.5px;
+    line-height: 26px;
+  }
+}
+.section-heading{
+  @extend %section-heading;
 }
 
 %item-heading {
   margin-bottom: $tiny-spacing;
-  font-size: $small-font-size;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  line-height: 30px;
   color: color(inky-blue);
   font-weight: normal;
+  font-size: $medium-font-size;
 
-  @include media($desktop) {
-    font-size: $medium-font-size;
+  @include media($device) {
+    font-size: $small-font-size;
+    letter-spacing: -0.3px;
+    line-height: 25px;
   }
 }
-
-%section-heading {
-  font-size: $small-font-size;
-  letter-spacing: -0.75px;
-  color: color(dolphin);
-  font-weight: normal;
-  @include media($desktop) {
-    font-size: $medium-font-size;
-  }
+.item-heading {
+  @extend %item-heading;
 }
+
+
 
 // FONT STYLE CLASSES
 
 %item-tag {
   text-transform: uppercase;
   font-size: $extra-tiny-font-size;
-  color: color(dolphin);
+  color: color(inky-blue);
+  letter-spacing: -1px;
+  line-height: 16px;
   @include media($desktop) {
     font-size: $tiny-font-size;
   }
 }
-
+.item-tag {
+  @extend %item-tag;
+}
 %auxiliary-text {
   font-size: $tiny-font-size;
-  color: color(dolphin);
+  color: color(inky-blue);
+  line-height: 17px;
   @include media($desktop) {
     font-size: $tiny-font-size;
   }
 }
-
+.auxiliary-text{
+  @extend %auxiliary-text;
+}
 
 %inverted-link {
   &, &:visited {
@@ -84,6 +134,9 @@ $bold-font-family: "Gotham 7r";
   &:hover, &:focus {
     color: color(interactive-blue);
   }
+}
+.inverted-link{
+  @extend %inverted-link;
 }
 // Flat class versions of the the above placeholders, not to be used with library
 // .page-heading{
