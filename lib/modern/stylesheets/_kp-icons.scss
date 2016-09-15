@@ -5,11 +5,11 @@
   @at-root {
     @font-face {
       font-family: "kp-icons";
-      src: url("assets/fonts/kp-icons.eot?6c7b833de22f62d20b98700665b0c319");
+      src: url("assets/fonts/kp-icons.eot");
       src: url("assets/fonts/kp-icons.eot?#iefix") format("embedded-opentype"),
-		url("assets/fonts/kp-icons.woff?6c7b833de22f62d20b98700665b0c319") format("woff"),
-		url("assets/fonts/kp-icons.ttf?6c7b833de22f62d20b98700665b0c319") format("truetype"),
-		url("assets/fonts/kp-icons.svg?6c7b833de22f62d20b98700665b0c319#kp-icons") format("svg");
+		url("assets/fonts/kp-icons.woff") format("woff"),
+		url("assets/fonts/kp-icons.ttf") format("truetype"),
+		url("assets/fonts/kp-icons.svg#kp-icons") format("svg");
       font-weight: normal;
       font-style: normal;
     }
