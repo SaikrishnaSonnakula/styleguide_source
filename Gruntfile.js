@@ -129,6 +129,7 @@ module.exports = function(grunt) {
           rename: function(name) {
             return path.basename(name).toLowerCase();
           },
+          hashes: false,
           stylesheet: 'scss',
           relativeFontPath: 'assets/fonts',
           types: 'eot,woff,ttf,svg',
