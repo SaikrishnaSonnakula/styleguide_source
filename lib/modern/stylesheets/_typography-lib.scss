@@ -64,16 +64,17 @@ $font-weight-light: 100;
 }
 
 %section-heading {
-  font-size: $large-font-size;
+  margin-bottom: $tiny-spacing;
+  letter-spacing: -0.5px;
+  line-height: 30px;
   color: color(inky-blue);
-  letter-spacing: -1px;
-  line-height: 42px;
-  font-weight: $font-weight-light;
+  font-weight: normal;
+  font-size: $medium-font-size;
 
   @include media($device) {
-    font-size: $medium-font-size;
-    letter-spacing: -0.5px;
-    line-height: 26px;
+    font-size: $small-font-size;
+    letter-spacing: -0.3px;
+    line-height: 25px;
   }
 }
 .section-heading{
