@@ -1,0 +1,51 @@
+$input-border-width: 1px;
+$input-active-border-color: color("graphite-dark");
+$label-color: color("inky-blue");
+$placeholder-text-color: color("dolphin");
+$input-bg-color: color("graphite-light");
+$input-text-color: color("inky-blue");
+$label-line-height: 1.5em;
+$label-font-style: uppercase;
+
+%form-control {
+  @include checkbox($checkbox-size-mobile);
+  padding: $tiny-spacing - $input-border-width;
+  border: solid $input-border-width $input-bg-color;
+  background-color: $input-bg-color;
+  vertical-align: middle;
+  color: $input-text-color;
+  margin-bottom: $medium-spacing;
+  width: 100%;
+  @include media($desktop){
+    width: auto;
+  }
+
+  &:focus {
+    border-color: $input-active-border-color;
+    outline: 0;
+  }
+  &::-webkit-input-placeholder {
+    color: $placeholder-text-color;
+  }
+  &:-moz-placeholder {
+    color: $placeholder-text-color;
+  }
+}
+
+%form-group {
+  input {
+    @extend %form-control;
+  }
+
+  label {
+    font-size: $extra-tiny-font-size;
+    @include media($desktop) {
+      font-size: $tiny-font-size;
+    }
+    color: $label-color;
+    display: block;
+    line-height: $label-line-height;
+    margin-bottom: $extra-tiny-spacing;
+    text-transform: $label-font-style;
+  }
+}

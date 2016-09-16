@@ -1,7 +1,8 @@
-$tooltip-arrow-border-width: 10px;
+$tooltip-arrow-border-width: 12px;
 $tooltip-inner-arrow-border-color: white;
 $tooltip-background-color: white;
-$tooltip-font-color: inky-blue;
+$tooltip-font-color: color(dolphin);
+$tooltip-border-color: color(graphite-dark);
 
 @mixin tooltip-arrow($arrow-direction) {
   content: "";
@@ -23,10 +24,11 @@ $tooltip-font-color: inky-blue;
   display: inline-block;
   position: relative;
   background-color: $tooltip-background-color;
-  color: color($tooltip-font-color);
+  color: $tooltip-font-color;
   padding: $small-spacing;
-  border: 2px solid color($tooltip-color);
+  border: 1px solid $tooltip-border-color;
   text-align: left;
+  font-size: $tiny-font-size;
 
   // For hover State
   @include transition-property(opacity);
@@ -41,10 +43,10 @@ $tooltip-font-color: inky-blue;
       z-index: 0;
 
       @if $arrow-direction == "bottom" {
-        border-top: $tooltip-arrow-border-width solid color($tooltip-color);
+        border-top: $tooltip-arrow-border-width solid $tooltip-border-color;
         margin-top: 1px;
       } @else if $arrow-direction == "top"  {
-        border-bottom: $tooltip-arrow-border-width solid color($tooltip-color);
+        border-bottom: $tooltip-arrow-border-width solid $tooltip-border-color;
         margin-bottom: 1px;
       }
     }

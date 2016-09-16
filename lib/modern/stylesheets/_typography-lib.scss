@@ -140,3 +140,22 @@ $font-weight-light: 100;
 .inverted-link{
   @extend %inverted-link;
 }
+// Flat class versions of the the above placeholders, not to be used with library
+// .page-heading{
+//   @extend %page-heading;
+// }
+// .item-heading {
+//   @extend %item-heading;
+// }
+// .section-heading{
+//   @extend %section-heading;
+// }
+// .item-tag {
+//   @extend %item-tag;
+// }
+// .auxiliary-text{
+//   @extend %auxiliary-text;
+// }
+// .inverted-link{
+//   @extend %inverted-link;
+// }

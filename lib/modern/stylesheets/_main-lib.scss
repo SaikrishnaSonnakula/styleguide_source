@@ -1,0 +1,48 @@
+//Styleguide libraray
+//mixings, variables, placeholders, any non generated css
+
+@import "colors";
+@import "color-aliases";
+@import "spacing";
+@import "z-index";
+@import "responsive"; //refactor later
+@import "helpers";
+@import "typography-lib";
+@import "icons";
+@import "kp-icons"; //needs to be refactored no lib here
+
+//no _document.scss
+
+//UI elements
+@import "buttons-lib";
+@import "action-area";
+@import "lists-lib";
+@import "checkboxes"; //still using classes NOT LIB
+@import "forms-lib";
+//no-feeditem
+@import "accessibility"; //class not LIB
+//no dropdown old dropdown
+@import "dropdown-overlay-lib";
+@import "modal-lib";
+@import "notifications";
+@import "loader-lib";
+//deprecate fancy-select
+@import "accordions-lib";
+@import "tooltip";
+@import "expanding_item";
+@import "radio-buttons-lib";
+
+* {
+  box-sizing: border-box;
+}
+
+@each $name, $bgcolor in $colors {
+  .#{$name} {
+    background-color: $bgcolor;
+    color: set-text-color($bgcolor);
+    &.-inverted {
+      background-color: color(graphite-light);
+      color: $bgcolor;
+    }
+  }
+}
