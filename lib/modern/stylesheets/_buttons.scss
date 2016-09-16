@@ -118,7 +118,7 @@ $button-font-family: $medium-font-family;
   color: $link-color;
 }
 
-%close{
+%-close{
   &:before {
     @include icon-for("close");
   }
@@ -129,17 +129,17 @@ $button-font-family: $medium-font-family;
 
 }
 .-close {
-  @extend %close;
+  @extend %-close;
   @include media($device){
     font-size: $small-font-size;
   }
   &--large {
-  @extend %close;
+  @extend %-close;
     font-size: $large-font-size;
   }
 
   &--small {
-  @extend %close;
+  @extend %-close;
     font-size: $small-font-size;
   }
 }
