@@ -13,8 +13,7 @@ $table-label-font-size: $tiny-font-size;
     padding-right: 0;
   }
 }
-
-@mixin table {
+%table {
   width: 100%;
   text-align: left;
   thead {
@@ -69,16 +68,13 @@ $table-label-font-size: $tiny-font-size;
   }
 }
 
-%table-base {
-  @include table;
-}
 
 table,.table {
-  @extend %table-base;
+    @extend %table;
 }
 
 .table--large {
-  @extend %table-base;
+  @extend %table;
   td,
   th {
     padding: $table-padding--large;
@@ -92,7 +88,7 @@ table,.table {
 }
 
 .table--grey-even-row {
-  @extend %table-base;
+  @extend %table;
   tr:nth-of-type(even) {
     background: color("graphite-light");
   }
