@@ -98,10 +98,10 @@
             </table>
           </div>
           <h2>Using the Table Sass Mixin</h2>
-          <p> Use the mixin <code>@extend %table-base</code> to apply your own unique styling to the table within your class that usess the double hyphen after the <code>.table</code> class name. In the example below the custom class name <code>--grey-even-row</code>            is appended to the defualt <code>.table</code> class</p>
+          <p> Use the mixin <code>@extend %table</code> to apply your own unique styling to the table within your class that usess the double hyphen after the <code>.table</code> class name. In the example below the custom class name <code>--grey-even-row</code>            is appended to the defualt <code>.table</code> class</p>
           <pre><code class="language-sass">
           .table--grey-even-row {
-            @extend %table-base;
+            @extend %table;
             tr:nth-of-type(even) {
               background: color("graphite-light");
             }
