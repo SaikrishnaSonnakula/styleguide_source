@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KP Styleguide :: Tables</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <script src="modern.bundle.js"></script>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="styleguide-header">
+      <button id="menu-button" class="device-menu-button">Menu</button>
+      <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
+      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint:
+      <span class="mobile-only">Mobile</span>
+      <span class="tablet-only">Tablet</span>
+      <span class="small-desktop-only">Small Desktop</span>
+      <span class="desktop-only">Desktop Medium</span>
+      <span class="large-desktop-only">Large Desktop</span>
+    </div>
+    <main class="styleguide-main">
+      <article>
+        <section>
+          <h1>Table</h1>
+          <p>Make sure to include the <code> data-th </code> attribute within with the corresponding<code> td</code> tag for mobile and tablet the column title will have the column title label repeating for a better user experience. Accoriding to <a href= "https://kaiser.ssbbartgroup.com/public/standards/view_best_practice.php?violation_id=2441" target="_blank">AMP</a>, For complex tables with multiple levels/headers, split up a complex table into multiple simple tables, or identify header elements with an <code>id</code> so that each data cell <code> td</code> has a header attribute that references the id attributes of the th elements that are headers for the data cell.</p>
+          <div class="example -padded">
+            <table class="table">
+              <tr>
+                <th id="date">Date</th>
+                <th id="categories">Categories</th>
+                <th id="description">Description</th>
+                <th id="values">Values</th>
+              </tr>
+              <tr>
+                <td data-th="Date" headers="date">08/26/2015</td>
+                <td data-th="Categories" headers="categories">Medicare 40 </br>￼Member</br>Health</br> History</td>
+                <td data-th="Description"  headers="description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values" headers="values">102,935,665</td>
+              </tr>
+              <tr>
+                <td data-th="Date" headers="date">03/18/1953</td>
+                <td data-th="Categories" headers="categories">Individual </br>Family Plans</br>Employers</br> Doctors</td>
+                <td data-th="Description"  headers="description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values" headers="values">115,000,000</td>
+              </tr>
+              <tr>
+                <td data-th="Date" headers="date">03/30/1987</td>
+                <td data-th="Categories" headers="categories">Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</td>
+                <td data-th="Description"  headers="description"><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</td>
+                <td data-th="Values" headers="values">147,154,233</td>
+              </tr>
+            </table>
+          </div>
+          <h2>Table with More Than 5 Columns</h2>
+          <p> For tables with more than 5 columns use the <code>--large</code> class to apply the adjusted padding between each column.</p>
+          <div class="example -padded">
+            <table class="table--large">
+              <tr>
+                <th id="date">Date</th>
+                <th id="categories">Categories</th>
+                <th id="description">Description</th>
+                <th id="values">Values</th>
+                <th id="index">Index</th>
+                <th id="comments">Comments</th>
+              </tr>
+              <tr>
+                <td data-th="Date" headers="date">08/26/2015</td>
+                <td data-th="Categories" headers="categories"><p>Medicare 40 </br>￼Member</br>Health</br> History</p></td>
+                <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values" headers="values">102,935,665</td>
+                <td data-th="Index" headers="index"> 137</td>
+                <td data-th="Comments" headers="comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+              </tr>
+              <tr>
+                <td data-th="Date" headers="date">03/18/1953</td>
+                <td data-th="Categories" headers="categories"><p>Individual </br>Family Plans</br>Employers</br> Doctors</p></td>
+                <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values" headers="values">115,000,000</td>
+                <td data-th="Index" headers="index"> 154</td>
+                <td data-th="Comments" headers="comments"><p> Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+              </tr>
+              <tr>
+                <td data-th="Date">03/30/1987</td>
+                <td data-th="Categories"><p>Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</p></td>
+                <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+                <td data-th="Values" headers="values">147,154,233</td>
+                <td data-th="Index" headers="index"> 113</td>
+                <td data-th="Comments" headers="comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+              </tr>
+            </table>
+          </div>
+          <h2>Using the Table Sass Mixin</h2>
+          <p> Use the mixin <code>@extend %table</code> to apply your own unique styling to the table within your class that usess the double hyphen after the <code>.table</code> class name. In the example below the custom class name <code>--grey-even-row</code>            is appended to the defualt <code>.table</code> class</p>
+          <pre><code class="language-sass">
+          .table--grey-even-row {
+            @extend %table;
+            tr:nth-of-type(even) {
+              background: color("graphite-light");
+            }
+          }
+          </code></pre>
+          <table class="table--grey-even-row">
+            <tr>
+              <th id="date">Date</th>
+              <th id="categories">Categories</th>
+              <th id="description">Description</th>
+              <th id="values">Values</th>
+            </tr>
+            <tr>
+              <td data-th="Date" headers="date">08/26/2015</td>
+              <td data-th="Categories" headers="categories"><p>Medicare 40 </br>￼Member</br>Health</br> History</p></td>
+              <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+              <td data-th="Values" headers="values">102,935,665</td>
+              <td data-th="Index" headers="index"> 137</td>
+              <td data-th="Comments" headers="comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+            </tr>
+            <tr>
+              <td data-th="Date" headers="date">03/18/1953</td>
+              <td data-th="Categories" headers="categories"><p>Individual </br>Family Plans</br>Employers</br> Doctors</p></td>
+              <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+              <td data-th="Values" headers="values">115,000,000</td>
+              <td data-th="Index" headers="index"> 154</td>
+              <td data-th="Comments" headers="comments"><p> Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+            </tr>
+            <tr>
+              <td data-th="Date">03/30/1987</td>
+              <td data-th="Categories"><p>Medicade/Medi-Cal </br>Adminstration</br>Sponsored-Plans</br> History</p></td>
+              <td data-th="Description"  headers="description"><p><strong>Amet, consectetur 40 adipiscing elit</strong> Suspendiss porttitor tempus felis et varius. Suspendisse maximus augue sed efficitur aliquet.</p></td>
+              <td data-th="Values" headers="values">147,154,233</td>
+              <td data-th="Index" headers="index"> 113</td>
+              <td data-th="Comments" headers="comments"> <p>Nulla in semper nibh. Suspendisse potenti. Sed eget odio vulputate, tempus risus porta, interdum nisi. Praesent sit amet elit vitae ipsum fringilla faucibus a in felis.</p></td>
+            </tr>
+          </table>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

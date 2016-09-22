@@ -246,7 +246,7 @@ code {
     top: $tablet-max
   }
 }
-table.table {
+#responsive-table .table {
   border-collapse: collapse;
   margin: $small-spacing 0;
   width: 100%;
