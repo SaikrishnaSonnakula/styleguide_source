@@ -7,6 +7,7 @@ $notification-icon-mobile-size: 25px;
   border: $feed-item-border-size solid color(graphite-light);
   padding: $small-spacing;
   display: flex;
+  display: -ms-flexbox; 
   flex-direction: column;
   @include media($desktop) {
     flex-direction: row;
@@ -42,6 +43,8 @@ $notification-icon-mobile-size: 25px;
 
   .-main {
     display: flex;
+    display: -ms-flexbox; 
+
   }
 
   .-action-buttons {
@@ -50,6 +53,7 @@ $notification-icon-mobile-size: 25px;
 
     @include media($desktop) {
       flex-shrink: 0;
+      -webkit-flex-shrink: 0;
       margin: 0 0 0 $medium-spacing;
     }
   }
