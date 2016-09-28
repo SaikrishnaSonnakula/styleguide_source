@@ -44,9 +44,18 @@ $notification-icon-mobile-size: 25px;
   .-main {
     display: flex;
     display: -ms-flexbox; 
+    width: 100%;
 
   }
-
+  .-body {
+    width: 90%;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    -moz-box-flex: 1;
+  }
   .-action-buttons {
     align-self: center;
     margin: $small-spacing 0 0 0;
