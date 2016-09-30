@@ -112,7 +112,7 @@
         <div class="example">
           <div id="expandable-feed-item" class="expandable-feed-item" aria-expanded="false">
             <button class="icon-close"></button>
-            <div class="expandable-feed-item__summary-content" role="button" aria-expanded="false" tabindex="0">
+            <div class="expandable-feed-item__summary-content"  role=”link” aria-expanded="false" tabindex="0">
               <i class="feature-icon fuchsia">NZ</i>
               <h4 class="item-heading">There extra information if you click here</h4>
             </div>
@@ -122,30 +122,28 @@
           </div>
         </div>
         <pre><code class="language-javascript">
-var expandingItemId = $("#expandable-feed-item");
-var expandingItemContent = $(".expandable-feed-item__summary-content");
-var expandingItemCloseExpansion = $(".expandable-feed-item .icon-close");
-var expandingItemCollapsibleContent = $(".expandable-feed-item__hidden-content");
+          var expandingItemId = $('#expandable-feed-item');
+          var expandingItemContent = $('.expandable-feed-item__summary-content');
+          var expandingItemCloseExpansion = $('.expandable-feed-item .icon-close');
+          var expandingItemCollapsibleContent = $('.expandable-feed-item__hidden-content');
 
-expandingItemContent.on('click', function() {
-  if(!expandingItemId.hasClass("-open")){
-    expandingItemId.toggleClass("-open");
-    expandingItemCollapsibleContent.toggleClass("-open");
-    var expanded = expandingItemId.hasClass("-open");
-    expandingItemContent.attr("aria-expanded", expanded);
-    expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-    expandingItemCloseExpansion.focus();
-  }
-});
+          expandingItemContent.on('click', function() {
+              expandingItemId.toggleClass('-open');
+              expandingItemCollapsibleContent.toggleClass('-open');
+              var expanded = expandingItemId.hasClass('-open');
+              expandingItemContent.attr('aria-expanded', expanded);
+              expandingItemCollapsibleContent.attr('aria-hidden', !expanded);
+              expandingItemCloseExpansion.focus();
+          });
 
-expandingItemCloseExpansion.on('click', function() {
-  expandingItemId.toggleClass("-open");
-  expandingItemCollapsibleContent.toggleClass("-open");
-  var expanded = expandingItemId.hasClass("-open");
-  expandingItemContent.attr("aria-expanded", expanded);
-  expandingItemCollapsibleContent.attr("aria-hidden", !expanded);
-});
-        </code></pre>
+          expandingItemCloseExpansion.on('click', function() {
+            expandingItemId.toggleClass('-open');
+            expandingItemCollapsibleContent.toggleClass('-open');
+            var expanded = expandingItemId.hasClass('-open');
+            expandingItemContent.attr('aria-expanded', expanded);
+            expandingItemCollapsibleContent.attr('aria-hidden', !expanded);
+          });
+      </code></pre>
 
         <pre><code class="language-sass">.expandable-feed-item { @include expanding-item(); }</code></pre>
       </section>
