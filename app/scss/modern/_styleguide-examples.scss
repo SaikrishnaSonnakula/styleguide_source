@@ -104,14 +104,18 @@
       }
     }
   }
+   &.-background--dark {
 
+     .result-pane {
+        background-color: color(interactive-blue-dark);
+        padding:$small-spacing;
+      }
+  }
   &.-element {
     margin-bottom: 1em;
     border-bottom: 1px $border-color solid;
 
-    .result-pane {
-      border: none;
-    }
+ 
 
     @include media($desktop-medium-up) {
       .code {
