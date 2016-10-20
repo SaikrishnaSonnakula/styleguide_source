@@ -44,12 +44,27 @@
             </button>
           </div>
           <p>
+            For a button on a dark color background, use the <code>-inverted--white</code> class.
+          </p>
+          <div class="example -element -background--dark">
+            <button class="button -inverted--white">
+              Inverted White Button
+            </button>
+          </div>
+
+          <p>
             You can also make a <code>&lt;button&gt;</code> look like a link:
           </p>
           <div class="example -element -padded">
             <button class="link">
               Link Button
             </button>
+            <br>
+            <code>
+              .link {
+                @extend %button-unstyled;
+              }
+            </code>
           </div>
           <p>
             You can make a close button look this:

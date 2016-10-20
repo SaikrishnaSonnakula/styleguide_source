@@ -2,6 +2,7 @@ $button-color: color("interactive-blue");
 $button-padding: $extra-tiny-spacing+2;
 $button-padding-desktop: 16px;
 $button-border-size: 3px;
+$button-color--white: white;
 
 $button-min-width: 10em;
 $button-small-min-width: 8em;
@@ -91,6 +92,7 @@ $button-font-family: $medium-font-family;
     &.-inverted {
       color: $button-disable-color;
       border: $button-border-size solid $button-disable-color;
+
     }
   }
 }

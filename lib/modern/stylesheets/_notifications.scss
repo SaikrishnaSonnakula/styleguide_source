@@ -1,7 +1,8 @@
 @import "feed-item-lib";
 $notification-rounded-icon-desktop-font-size: $large-font-size;
 $notification-icon-desktop-size: 50px;
-$notification-icon-mobile-size: 25px;
+$notification-icon-mobile-size: 30px;
+$notification-rounded-icon-mobile-font-size: $small-font-size;
 
 @mixin notification($icon, $icon-background-color: transparent, $icon-color: white) {
   border: $feed-item-border-size solid color(graphite-light);
@@ -86,7 +87,7 @@ $success-notification-icon-color: "moss";
 
     width: $notification-icon-mobile-size;
     height: $notification-icon-mobile-size;
-
+    font-size: $notification-rounded-icon-mobile-font-size;
     &:before {
       margin-top: -$notification-icon-mobile-size/4;
     }
