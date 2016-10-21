@@ -6,7 +6,7 @@ $tooltip-icon-font-size: 14px;
 $default-icon-style: "solid";
 $desktop-icon-border-size: 3px;
 $mobile-icon-border-size: 2px;
-$icon-line-height: 2;
+$icon-line-height: 1.75;
 
 @mixin icon-for($icon-name){
   @extend .icon-#{$icon-name}:before;
