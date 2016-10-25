@@ -68,12 +68,11 @@ $table-label-font-size: $tiny-font-size;
   }
 }
 
-
-table,.table {
+.data-table {
     @extend %table;
 }
 
-.table--large {
+.data-table--large {
   @extend %table;
   td,
   th {
@@ -87,7 +86,7 @@ table,.table {
   }
 }
 
-.table--grey-even-row {
+.data-table--grey-even-row {
   @extend %table;
   tr:nth-of-type(even) {
     background: color("graphite-light");
