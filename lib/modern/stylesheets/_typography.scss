@@ -23,7 +23,7 @@ $light-font-family: "Gotham 3r";
 $medium-font-family: "Gotham 5r";
 $bold-font-family: "Gotham 7r";
 
-$font-weight-light: 100;
+
 
 
 // HEADING CLASSES
@@ -31,8 +31,8 @@ $font-weight-light: 100;
   font-family: $light-font-family;
   color: color(inky-blue);
   font-size: $xxl-font-size;
-  font-weight: $font-weight-light;
-  letter-spacing:  -2.5px;
+  font-weight: 100;
+  letter-spacing:  -2.5px ;
   line-height: 74px;
 
   @include media($device) {
@@ -51,7 +51,6 @@ $font-weight-light: 100;
   font-size: $xl-font-size;
   letter-spacing: -1.5px;
   line-height: 50px;
-  font-weight: $font-weight-light;
 
   @include media($device) {
     font-size: $large-font-size;
@@ -64,17 +63,16 @@ $font-weight-light: 100;
 }
 
 %section-heading {
-  margin-bottom: $tiny-spacing;
-  letter-spacing: -0.5px;
-  line-height: 30px;
+  font-size: $large-font-size;
   color: color(inky-blue);
+  letter-spacing: -1px;
+  line-height: 42px;
   font-weight: normal;
-  font-size: $medium-font-size;
 
   @include media($device) {
-    font-size: $small-font-size;
-    letter-spacing: -0.3px;
-    line-height: 25px;
+    font-size: $medium-font-size;
+    letter-spacing: -0.5px;
+    line-height: 26px;
   }
 }
 .section-heading{

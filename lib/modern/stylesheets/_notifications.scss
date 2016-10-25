@@ -1,12 +1,14 @@
 @import "feed-item-lib";
 $notification-rounded-icon-desktop-font-size: $large-font-size;
 $notification-icon-desktop-size: 50px;
-$notification-icon-mobile-size: 25px;
+$notification-icon-mobile-size: 30px;
+$notification-rounded-icon-mobile-font-size: $small-font-size;
 
 @mixin notification($icon, $icon-background-color: transparent, $icon-color: white) {
   border: $feed-item-border-size solid color(graphite-light);
   padding: $small-spacing;
   display: flex;
+  display: -ms-flexbox; 
   flex-direction: column;
   @include media($desktop) {
     flex-direction: row;
@@ -42,14 +44,26 @@ $notification-icon-mobile-size: 25px;
 
   .-main {
     display: flex;
-  }
+    display: -ms-flexbox; 
+    width: 100%;
 
+  }
+  .-body {
+    width: 90%;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    -moz-box-flex: 1;
+  }
   .-action-buttons {
     align-self: center;
     margin: $small-spacing 0 0 0;
 
     @include media($desktop) {
       flex-shrink: 0;
+      -webkit-flex-shrink: 0;
       margin: 0 0 0 $medium-spacing;
     }
   }
@@ -73,7 +87,7 @@ $success-notification-icon-color: "moss";
 
     width: $notification-icon-mobile-size;
     height: $notification-icon-mobile-size;
-
+    font-size: $notification-rounded-icon-mobile-font-size;
     &:before {
       margin-top: -$notification-icon-mobile-size/4;
     }

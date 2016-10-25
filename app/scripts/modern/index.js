@@ -9,6 +9,7 @@ import responsiveTable from './responsive_table';
 import fancySelect from 'lib/modern/scripts/fancy_select';
 import accordion from 'lib/modern/scripts/accordion';
 import expandingItem from 'lib/modern/scripts/expanding-item';
+import modalInit from 'lib/modern/scripts/modal';
 
 
 $(function() {
@@ -18,6 +19,7 @@ $(function() {
   addFontSizes();
   responsiveTable();
   expandingItem();
+  modalInit();
   $('.fixedsticky').fixedsticky();
   if($('#colors-section') && $('#colors-section').length!==0){
     addColors();
@@ -34,26 +36,7 @@ $(function() {
     $('#navbar').toggleClass('fixedsticky');
   });
 
-  var focusedElementBeforeModal = null;
-  var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
-
-  $('#modal-button').click(function() {
-    $('#my-modal').addClass('modal-showing');
-    $('#my-modal').attr('aria-hidden','false');
-    $('.styleguide-main .current-breakpoint, .styleguide-header').attr('aria-hidden','true');
-    focusedElementBeforeModal = $(':focus');
-    var lastElem = $('#my-modal').find('*').filter(focusableElementsString).filter(':visible').last();
-    lastElem.focus();
-  });
-
-  $('#nothing, #do-something, .-close').click(function(ev) {
-    $('#my-modal').removeClass('modal-showing');
-    $('#my-modal').attr('aria-hidden', 'true');
-    $('.styleguide-main, .current-breakpoint, .styleguide-header').attr('aria-hidden','false');
-    $('.modal-inner #modal-description').removeAttr('tabindex');
-    focusedElementBeforeModal.focus();
-    ev.preventDefault();
-  });
+ 
 
   accordion($('#hipstaccordion'));
 

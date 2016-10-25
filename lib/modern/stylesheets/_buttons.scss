@@ -1,12 +1,13 @@
 //Mixins
 $button-color: color("interactive-blue");
 $button-padding: $extra-tiny-spacing+2;
-$button-padding-desktop: 16px;
+$button-padding-desktop: 12px;
 $button-border-size: 3px;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-font-family: $medium-font-family;
-
+$button-max-height:50px;
+$button-color--white: white;
 
 %rounded-input {
   @include appearance(none);
@@ -24,6 +25,7 @@ $button-font-family: $medium-font-family;
   -webkit-font-smoothing: antialiased;
   @include media($tablet-up) {
     padding: $button-padding-desktop;
+    max-height: 50px;
   }
 }
 
@@ -83,6 +85,17 @@ $button-font-family: $medium-font-family;
     &:disabled, .-disabled {
       background-color: $button-inverted-disable-color;
     }
+
+    &--white {
+      color: $button-color--white;
+      border: $button-border-size solid $button-color--white;
+      background-color: transparent;
+      &:hover, &:focus {
+        background-color: $button-color--white;
+        border-color: $button-hover-color;
+        color: $button-hover-color;
+      }
+    }
   }
 
   &.-small {
@@ -118,15 +131,28 @@ $button-font-family: $medium-font-family;
   color: $link-color;
 }
 
-.-close {
+%-close{
   &:before {
     @include icon-for("close");
   }
+  color: $button-color;
+  font-size: $medium-font-size;
   border: none;
   background: none;
-  cursor: pointer;
-  font-size: $large-font-size;
+
+}
+.-close {
+  @extend %-close;
   @include media($device){
+    font-size: $small-font-size;
+  }
+  &--large {
+  @extend %-close;
+    font-size: $large-font-size;
+  }
+
+  &--small {
+  @extend %-close;
     font-size: $small-font-size;
   }
 }

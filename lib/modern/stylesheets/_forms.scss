@@ -6,6 +6,7 @@ $input-bg-color: color("graphite-light");
 $input-text-color: color("inky-blue");
 $label-line-height: 1.5em;
 $label-font-style: uppercase;
+$label-height: uppercase;
 
 %form-control {
   @include checkbox($checkbox-size-mobile);
@@ -18,6 +19,8 @@ $label-font-style: uppercase;
   width: 100%;
   @include media($desktop){
     width: auto;
+    min-height: 50px;
+    max-height: 50px;
   }
 
   &:focus {
