@@ -47,12 +47,15 @@ $bold-font-family: "Gotham 7r";
 }
 
 %section-heading {
-  font-size: $small-font-size;
-  letter-spacing: -0.75px;
+  font-size: $medium-font-size;
+  letter-spacing: -0.5px;
   color: color(dolphin);
   font-weight: normal;
+  line-height: 26px;
   @include media($desktop) {
-    font-size: $medium-font-size;
+    font-size: $large-font-size;
+    letter-spacing: -1px;
+    line-height: 42px;
   }
 }
 
