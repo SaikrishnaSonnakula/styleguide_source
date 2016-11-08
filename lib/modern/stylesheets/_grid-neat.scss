@@ -1,0 +1,84 @@
+$mobile-max: 414px;
+$tablet-max: 768px;
+$desktop-small-max: 1024px;
+$desktop-medium-max: 1280px;
+
+%container {
+   @include outer-container;
+    $visual-grid: true;
+    $gutter: 30px;
+    padding-right: $large-spacing;
+    padding-left: $large-spacing;
+    @include media($tablet)  {
+      padding-right: $medium-spacing;
+      padding-left: $medium-spacing;
+    }
+    @include media($mobile)  {
+      padding-right: $tiny-spacing;
+      padding-left: $tiny-spacing;
+    }
+}
+
+%column-12{
+  @include fill-parent();
+
+}
+
+%column-6{
+  @include span-columns(6);
+}
+
+%column-4{
+  @include span-columns(4);
+}
+%column-3{
+  @include span-columns(3);
+}
+%column-2{
+  @include span-columns(2); 
+}
+%column-1{
+@include span-columns(1);
+
+}
+.row{
+   @include row();
+
+}
+.container {
+  @extend %container;
+}
+
+.column-12{
+  @extend %column-12;
+}
+
+.column-6{
+  @extend %column-6;
+}
+
+.column-4{
+  @include span-columns(4 of 12);
+}
+.column-3{
+  @include span-columns(3 of 12);
+}
+.column-2{
+  @include span-columns(2 of 12); 
+}
+.column-1{
+@include span-columns(1 of 12);
+
+}
+
+//example scss
+ .box {
+    background: #34A1D0;
+    position: relative;
+    margin-bottom: 16px;
+    width: 100%;
+    min-height: 75px;
+    background: #34D0CB;
+    border-radius: 6px;
+}
+
