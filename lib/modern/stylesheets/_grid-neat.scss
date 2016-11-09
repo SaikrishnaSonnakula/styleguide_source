@@ -21,9 +21,25 @@ $desktop-medium-max: 1280px;
 
 %column-12{
   @include fill-parent();
+  @include omega();
+
 
 }
+%column-10{
+  @include span-columns(9); 
+  @include omega();
 
+}
+%column-9{
+  @include span-columns(9);
+  @include omega();
+
+}
+%column-8{
+  @include span-columns(8);
+  @include omega();
+
+}
 %column-6{
   @include span-columns(6);
 }
@@ -52,7 +68,15 @@ $desktop-medium-max: 1280px;
 .column-12{
   @extend %column-12;
 }
-
+.column-10{
+  @extend %column-10;
+}
+.column-9{
+  @extend %column-9;
+}
+.column-8{
+  @extend %column-8;
+}
 .column-6{
   @extend %column-6;
 }
@@ -64,7 +88,8 @@ $desktop-medium-max: 1280px;
   @include span-columns(3 of 12);
 }
 .column-2{
-  @include span-columns(2 of 12); 
+  @include span-columns(2 of 12);
+
 }
 .column-1{
 @include span-columns(1 of 12);

@@ -135,16 +135,35 @@
               </div>
             </div>
           </div>
-          <h2> Two column layout </h2>
+          <h2> Sidebar and main content  </h2>
           <p> To use the 2 column layout, use the <code>@include span-columns(6);</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.
             <div class="example -padded">
               <section class="container">
-                <div class="column-6">
-                  <code>@include span-columns(6);</code>
+                <div class="row">
+                  <div class="column-2">
+                    <div class="box">.column 2</div>
+                  </div>
+                  <div class="column-10">
+                    <div class="box">.column 10</div>
+                  </div>
                 </div>
-                <div class="column-6">
-                  <code>@include span-columns(6);<br></code>
+                <div class="row">
+                  <div class="column-3">
+                    <div class="box">.column 3</div>
+                  </div>
+                  <div class="column-9">
+                    <div class="box">.column 9</div>
+                  </div>
                 </div>
+                <div class="row">
+                <div class="column-4">
+                  <div class="box">.column 4</div>
+                </div>
+                <div class="column-8">
+                  <div class="box">.column 8</div>
+                </div>
+              </div>
+
               </section>
             </div>
         </section>

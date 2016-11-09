@@ -8,42 +8,6 @@ $demoHolly: rgba(102, 51, 255, 0.1);
 $demoHollyDark: rgba(102, 51, 255, 0.25);
 
 
-body {
-  color: #404040;
-  font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
-}
-
-.wrapper{
-  max-width: 1200px;
-  margin: auto;
-}
-
-h1, h2, h3, h4 {  
-  font-weight: 900;
-  color: #333;
-  margin: 1.5em 0 0.5em;
-}
-
-h1 {font-size: 2em;}
-h2 {font-size: 1.8em;}
-h3 {font-size: 1.5em;}
-h4 {font-size: 1.3em;}
-
-strong {font-weight: 600;}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: $demoMain;
-}
-
-.img-placeholder {
-  background-image: url("http://placehold.it/200x100/CC99CC/ffffff&text=Feature");
-  background-size: cover;
-  min-height: 100px;  // need to specify min-height and min-width
-  min-width: 100px;  
-}
-
 /*Basic Grid Styles*/
 .Grid {
   display: flex;
@@ -135,33 +99,7 @@ $gutter: 1em;
   align-self: center;
 }
 
-// Menu
-.navigation {
-  list-style: none;  
-  /*background: deepskyblue;*/
-  background: $demoHolly;
-  margin: 0 0 1em;
-  border: 1px solid $demoBorder;
-  border-radius: 3px;
 
-  display: flex;
-  
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
-    a {
-      text-decoration: none;
-      display: block;
-      padding: 1em;
-      color: #333;
-      &:hover {
-        background: darken($demoHolly, 10%);
-        border-radius:3px;
-      }
-    }
-  &:hover {
-    background: $demoHollyDark;
-  }
-}
 
 @media all and (max-width: 800px) {
   .navigation {
