@@ -19,7 +19,7 @@ $grid-flex-mobile: 0 0 100%;
 
 %grid {
   @include outer-container;
-  display: flex;
+  @include display(flex);
   display: -ms-flexbox;
   flex-flow: row;
   flex-wrap: wrap;
@@ -62,7 +62,7 @@ $grid-flex-mobile: 0 0 100%;
 
 }
 .column-1 {
-    flex: 0 0 16.66666667%;
+  flex: 0 0 16.66666667%;
   @include media($desktop-large) {
   flex: 0 0 8.33333333%;
   }
