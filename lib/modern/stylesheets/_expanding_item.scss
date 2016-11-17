@@ -54,7 +54,6 @@ $expanding-table-left-content-gutter: 100px;
     @include media($mobile) {
       height: 100%;
       margin-left: $small-spacing;
-      position: absolute;
     }
 
     &.-open {
