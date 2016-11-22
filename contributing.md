@@ -15,7 +15,7 @@ Join the [Hipchat](https://hipchat.kp.org/chat/room/19) room "RWD Styleguide" wh
 
 - Raising issues - bugs, defects, typos/bad grammar in documentation.
 - [JIRA Backlog](https://jira.kp.org/browse/STYLE) - check the backlog to see if something is on our roadmap and hasn't been picked up by anyone else.
-- New Features - If you code has been already integrated into the JKP project please follow the steps bellow to Fork this repo, create a pull request, and get 2 approvals on your code to have it added to styleguide.
+- New Features - If your code is already integrated into the JKP project please follow the steps bellow to fork this repo, create a pull request, and get 2 approvals on your code to have it added to styleguide.
 - Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. 
 
 ## Before You begin
@@ -24,7 +24,7 @@ Make sure you have:
 
 * Access to Stash and the Style guide repo and the build plugin
 * [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) setup in Stash
-* [Node JS](https://nodejs.org/) to run the Styleguide locally
+* [Node JS v5](https://nodejs.org/en/download/) to run the Styleguide locally
 * Join the RWD Styleguide chat room, use the node.js wizard to install onto your machine
   * If you're using the latest version of hipchat:
   * Go to https://hipchat.kp.org/invite/1/27bf4d05b314fdfb36b4dc25f5752b28
