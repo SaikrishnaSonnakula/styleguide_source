@@ -8,6 +8,7 @@ $styleguide-gutter-bottom: $xl-spacing;
 $main-max-width: $desktop-small-max;
 $styleguide-largest-screen: new-breakpoint($main-max-width + ($styleguide-gutter * 2), 12);
 $mobile-header-height: 50px;
+$styleguide-gutter-bottom-mobile:75px;
 
 .banner-alert {
   background-color: color("fuchsia");
@@ -80,9 +81,11 @@ code {
   @include clearfix;
   margin: $styleguide-gutter-bottom 5%;
   position: relative;
-
   @include media($desktop) {
     margin: $styleguide-gutter-bottom $gutter-spacing;
+  }
+  @include media($device) {
+    margin:  $styleguide-gutter-bottom-mobile $gutter-spacing;
   }
 }
 
@@ -110,11 +113,9 @@ code {
   @include media($device) {
     @include transition(all 0.2s $ease-out-cubic);
     background-color: color('graphite');
-    bottom: 0;
+    @include position(fixed, null 0  null 0);
     display: block;
-    left: 0;
     padding-left: $gutter-spacing;
-    position: fixed;
     top: $mobile-header-height + $gutter-spacing/2;
     width: 50%;
     z-index: $foreground;
@@ -265,9 +266,15 @@ table.table {
   }
   td:first-child {
     padding-left: $medium-spacing;
+    @include media($device) {
+    padding-left: 0;
+    }
   }
   td:last-child {
     padding-right: $medium-spacing;
+        @include media($device) {
+    padding-left: 0;
+    }
   }
   tr:last-child td {
     border-bottom: none;
