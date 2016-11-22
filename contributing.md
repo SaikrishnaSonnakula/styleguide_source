@@ -15,7 +15,7 @@ Join the [Hipchat](https://hipchat.kp.org/chat/room/19) room "RWD Styleguide" wh
 
 - Raising issues - bugs, defects, typos/bad grammar in documentation.
 - [JIRA Backlog](https://jira.kp.org/browse/STYLE) - check the backlog to see if something is on our roadmap and hasn't been picked up by anyone else.
-- New Features - If your code is already integrated into the JKP project please follow the steps bellow to fork this repo, create a pull request, and get 2 approvals on your code to have it added to styleguide.
+- New Features - if your code is already integrated into the JKP project please follow the steps bellow to fork this repo, create a pull request, and get 2 approvals on your code to have it added to styleguide.
 - Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. 
 
 ## Before You begin

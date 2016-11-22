@@ -69,7 +69,7 @@ The styleguide has moved over to use NPM scripts to make building, serving and l
 
 <a name="contents-styleguide"></a>
 ## What's in Styleguide
-There is a lot that Styleguide comes with and does a lot so that you don't have to. Babel and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
+There is a lot that Styleguide comes with and does a lot so that you don't have to. Babel and Bourbon are installed via Styleguide so your local projects need not include Babel and bourbon.
 
 
 ### Node / NPM
