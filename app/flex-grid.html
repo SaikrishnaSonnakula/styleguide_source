@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>KP Styleguide :: Layouts</title>
+    <title>KP Styleguide :: Grid</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -32,8 +32,16 @@
       <article class="styleguide-content">
         <h2>Basic Grid</h2>
         <p>Responsive grid with Flexbox. To understand more of this concept please look over the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes"> MDN's documentation on Flexbox.</a></p>
+        <pre><code class="language-sass">
+        .custom-main-container {
+         @extend %main-container;
+        }
+        .custom-row-for-columns-name {
+          @extend %grid;
+        }
+        </code></pre>
         <div class="example -padded">
-
+        <div class="container">
           <div class="grid">
             <div class="column">
               <div class="content-1of1">
@@ -134,7 +142,7 @@
             </div>
           </div>
         </div>
-
+      </div>
         <h3>Grid with Copy</h3>
         <div class="example -padded">
           <div class="grid">

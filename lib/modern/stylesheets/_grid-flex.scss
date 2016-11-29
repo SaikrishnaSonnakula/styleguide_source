@@ -17,8 +17,12 @@ $grid-flex-mobile: 0 0 100%;
   }
 }
 
+%main-container {
+@include outer-container;
+
+}
 %grid {
-  @include outer-container;
+ 
   @include display(flex);
   display: -ms-flexbox;
   flex-flow: row;
@@ -26,8 +30,10 @@ $grid-flex-mobile: 0 0 100%;
   flex-basis: fit-content;
   margin-left: -$gutter;
 }
-
-.grid, .container {
+ .container {
+   @extend %main-container;
+ }
+.grid{
   @extend %grid;
 }
 
