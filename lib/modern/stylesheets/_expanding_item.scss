@@ -54,7 +54,6 @@ $expanding-table-left-content-gutter: 100px;
     @include media($mobile) {
       height: 100%;
       margin-left: $small-spacing;
-      position: absolute;
     }
 
     &.-open {
@@ -80,7 +79,7 @@ $expanding-table-left-content-gutter: 100px;
     border: $expanding-table-border-on-hover;
 
     @include media($mobile) {
-      @include position(fixed, 0px 0px 0px 0px);
+      @include position(relative, 0px 0px 0px 0px);
       border: $expanding-table-invisible-border;
       background: white;
       overflow: auto;
