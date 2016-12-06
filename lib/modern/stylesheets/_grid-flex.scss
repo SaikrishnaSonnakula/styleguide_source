@@ -22,7 +22,7 @@ $grid-flex-mobile: 0 0 100%;
 
 }
 %grid {
- 
+ @include outer-container;
   @include display(flex);
   display: -ms-flexbox;
   flex-flow: row;
