@@ -118,10 +118,6 @@ $button-color--white: white;
   @extend %button;
 }
 
-@mixin button(){
-    @extend %button;
-}
-
 %button-unstyled {
   @include appearance(none);
   border: 0px solid transparent;

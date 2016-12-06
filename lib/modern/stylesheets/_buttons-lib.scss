@@ -97,9 +97,6 @@ $button-font-family: $medium-font-family;
   }
 }
 
-@mixin button(){
-    @extend %button;
-}
 %button-unstyled {
   @include appearance(none);
   border: 0px solid transparent;
