@@ -20,9 +20,16 @@ Make sure you are running [Node JS](https://nodejs.org/en/blog/release/v0.10.42/
 
 ### NPM
 
-The styleguide is NPM module.  You can install it by running the following command in your project directory:
+The styleguide is an NPM module.  It also has dependencies on other NPM modules.  We now store these and other modules in an NPM repository on Artifactory.  Artifactory also acts as a proxy for other dependencies normally found on the Internet.  By using Artifactory hosted on KP network, the installation should be much quicker for these modules.  To use the repository, you must update your local ~/.npmrc file.  Do this by running the following command in a terminal:
 
-    npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
+    cat > ~/.npmrc <<- EOM
+    registry= https://artifactory-fof.appl.kp.org/artifactory/api/npm/npm-virtual
+    always-auth=false
+    EOM
+
+You can now install styleguide by running the following command in your project directory: (note that the version could change with future updates)
+
+    npm install -D http://artifactory-fof.appl.kp.org/artifactory/npm-release/styleguide/-/styleguide-0.0.1.tgz
 
 ### Viewing the repository locally
 
