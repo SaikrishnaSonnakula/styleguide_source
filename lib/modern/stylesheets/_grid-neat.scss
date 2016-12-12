@@ -82,7 +82,7 @@ $desktop-medium-max: 1280px;
 }
 
 .column-4{
-@extend %column-6;
+@extend %column-4;
 }
 .column-3{
   @include span-columns(3 of 12);

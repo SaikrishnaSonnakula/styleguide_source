@@ -22,7 +22,6 @@ $grid-flex-mobile: 0 0 100%;
 }
 %grid {
   @include display(flex);
-  display: -ms-flexbox;
   flex-flow: row;
   flex-wrap: wrap;
   flex-basis: fit-content;
