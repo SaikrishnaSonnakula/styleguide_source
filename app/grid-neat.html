@@ -32,14 +32,24 @@
       <article class="styleguide-content">
         <section id="grid">
           <h1>Bourbon Grid Layout</h1>
-          <p>Below you will find examples of Styleguide patterns to compose a group of elements into commonly seen layouts across KP apps.</p> 
-          <p><span class="mobile">Mobile (up to 767px)</span><span class="tablet">Tablet (768px-1023px)</span><span class="desktop">Desktop (1024px+)</span> <br>Viewport width: <span id="dimensions">1112px</span></p>
+          <p>To use the 2 column layout, use the @include span-columns(6); within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class</p> 
+        <pre><code class="language-sass">
+        .custom-main-container {
+          @include outer-container;
+        }
+        .custom-row-for-columns-name {
+          @include row();
+        }
+        .custom-two-column-columns-name {
+         @include span-columns(2);
+        }
+        </code></pre>
           <div class="example -padded">
             <div class="container">
 
               <div class="row">
                 <div class="column-12">
-                  <div class="box">This grid is fluid with a max-width of 1360px</div>
+                  <div class="box"> @include fill-parent();</div>
                 </div>
               </div>
               <div class="row">
@@ -137,6 +147,8 @@
           </div>
           <h2> Sidebar and main content  </h2>
           <p> To use the 2 column layout, use the <code>@include span-columns(6);</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.
+          <h2> Sidebar and main content  </h2>
+          <p> To use the 2 column layout, use the <code>@include span-columns(6);</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.
             <div class="example -padded">
               <section class="container">
                 <div class="row">
@@ -144,7 +156,7 @@
                     <div class="box">@include span-columns(2);</div>
                   </div>
                   <div class="column-10">
-                    <div class="box">@include span-columns(10);/div>
+                    <div class="box">@include span-columns(10);</div>
                   </div>
                 </div>
                 <div class="row">
