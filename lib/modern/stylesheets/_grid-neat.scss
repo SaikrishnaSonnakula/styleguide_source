@@ -1,7 +1,50 @@
+$visual-grid: true !default;
+$visual-grid-index: front;
+$visual-grid-color: #eee !global;
+@include reset-all;
 $gutter-desktop: $large-spacing;
 $gutter-tablet: $small-spacing;
 $gutter-mobile: $tiny-spacing;
+$column-padding: modular-scale(1, 1em, $golden);
+$column-padding-mobile: modular-scale(1, 1em, $golden);
 
+$direction: get-direction($layout-direction, $default-layout-direction);
+ 
+ @for $i from 1 through $grid-columns {
+    %column-#{$i} {@include span-columns($i);
+     @include media($tablet) {
+    margin-#{$direction}:$gutter-tablet;  }
+    @include media($tablet) {
+    margin-#{$direction}:$gutter-mobile;
+  }  
+}
+ @if $i from 4 to 6 {
+    %column-#{$i} {  @include media($device) {
+    @include fill-parent();
+  } }
+  }    
+ @if $i == 2 or $i == 3 {
+    %column-#{$i} {  @include media($device) {
+      $column-width: 33.33333333%;
+      margin-#{$direction}:$gutter-tablet;
+  } }
+  }    
+
+  }    
+@for $i from 1 through $grid-columns {
+  .column-#{$i} { @extend %column-#{$i}; }
+} 
+
+
+
+
+%column-1 {
+  @include span-columns(1);
+  @include media($device) {
+    @include span-columns(3);
+    @include omega(4n);
+  }
+}
 %container {
   @include outer-container;
   padding-right: $gutter-desktop;
@@ -19,60 +62,7 @@ $gutter-mobile: $tiny-spacing;
   }
 }
 
-%column-12 {
-  @include fill-parent();
-  @include omega();
-}
 
-%column-10 {
-  @include span-columns(10);
-}
-
-%column-9 {
-  @include span-columns(9);
-}
-
-%column-8 {
-  @include span-columns(8);
-}
-
-%column-6 {
-  @include span-columns(6);
-  @include media($device) {
-    @include fill-parent();
-  }
-}
-
-%column-4 {
-  @include span-columns(4);
-  @include media($device) {
-    @include fill-parent();
-  }
-}
-
-%column-3 {
-  @include span-columns(3);
-  @include media($device) {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-}
-
-%column-2 {
-  @include span-columns(2);
-  @include media($device) {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-}
-
-%column-1 {
-  @include span-columns(1);
-  @include media($device) {
-    @include span-columns(3);
-    @include omega(4n);
-  }
-}
 
 .row {
   @include row();
@@ -82,41 +72,13 @@ $gutter-mobile: $tiny-spacing;
   @extend %container;
 }
 
-.column-12 {
-  @extend %column-12;
+
+
+
+.column-4-of-8 {
+  @include span-columns(4 of 8);
 }
 
-.column-10 {
-  @extend %column-10;
-}
-
-.column-9 {
-  @extend %column-9;
-}
-
-.column-8 {
-  @extend %column-8;
-}
-
-.column-6 {
-  @extend %column-6;
-}
-
-.column-4 {
-  @extend %column-4;
-}
-
-.column-3 {
-  @extend %column-3;
-}
-
-.column-2 {
-  @extend %column-2;
-}
-
-.column-1 {
-  @extend %column-1;
-}
 
 //example scss
 .box {

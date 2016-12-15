@@ -1,186 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>KP Styleguide :: Layouts</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width" name="viewport">
+  <link href="main.css" rel="stylesheet">
+  <script src="modern.bundle.js">
+  </script>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+  <header class="styleguide-header">
+    <button class="device-menu-button" id="menu-button">Menu</button> <img alt="Kaiser Permanente Logo" class="logo" src='assets/images/kp-icon.svg'> <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+  </header>
+  <div class="current-breakpoint">
+    Current Breakpoint: <span class="mobile-only">Mobile</span> <span class="tablet-only">Tablet</span> <span class="small-desktop-only">Small Desktop</span> <span class="desktop-only">Desktop Medium</span> <span class="large-desktop-only">Large Desktop</span>
+  </div>
+  <main class="styleguide-main">
+    <article class="styleguide-content">
+      <section id="grid">
+        <h1> Grid Layout</h1>
+        <p>To use your own class names and have a custom grid setup, use the <code>@include span-columns(#);</code> in your scss. What this include does is specifies the number of columns an element should span. If the selector is nested the number of columns of its parent element should be passed as an argument as well. Also You do not have to use the container class, Just use the include the @include outer-container to any parent container class. </p>
 
-  <head>
-    <title>KP Styleguide :: Layouts</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="main.css" />
-    <script src="modern.bundle.js"></script>
-
-    <meta charset="UTF-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-  </head>
-
-  <body>
-    <header class="styleguide-header">
-      <button id="menu-button" class="device-menu-button">Menu</button>
-      <img src='assets/images/kp-icon.svg' alt="Kaiser Permanente Logo" class="logo" />
-      <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
-    </header>
-    <div class="current-breakpoint">
-      Current Breakpoint:
-      <span class="mobile-only">Mobile</span>
-      <span class="tablet-only">Tablet</span>
-      <span class="small-desktop-only">Small Desktop</span>
-      <span class="desktop-only">Desktop Medium</span>
-      <span class="large-desktop-only">Large Desktop</span>
-    </div>
-    <main class="styleguide-main">
-      <article class="styleguide-content">
-        <section id="grid">
-          <h1>Bourbon Grid Layout</h1>
-          <p>To use the 2 column layout, use the @include span-columns(6); within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class</p> 
+        <p>If you prefer to use the class based system, please make sure to wrap your  <code>.column-#</code> class in <code>.row</code> then a parent <code>.container</code></p>
+        <p>For more examples of this please refer to the <a href="http://neat.bourbon.io/examples/" target="_blank"> bourbon/Neat grid</a></p>
+        <h3>Using the bourbon includes</h3>
         <pre><code class="language-sass">
-        .custom-main-container {
+        .custom-main-body-container {
           @include outer-container;
         }
-        .custom-row-for-columns-name {
+        .custom-row-for-columns {
           @include row();
         }
-        .custom-two-column-columns-name {
-         @include span-columns(2);
+        .custom-two-column-layout-name {
+         @include span-columns(6);
         }
         </code></pre>
-          <div class="example -padded">
-            <div class="container">
-
-              <div class="row">
-                <div class="column-12">
-                  <div class="box"> @include fill-parent();</div>
+        <h3>Using Classes</h3>
+        <pre><code class="language-sass">
+        .custom-main-body container {
+        }
+        .custom-name-parent row {
+        }
+        .custom--component-name column-4 {
+        }
+        </code></pre>
+        <div class="example -padded">
+          <div class="container">
+            <div class="row">
+              <div class="column-12">
+                <div class="box">
+                  Front End: @extend %column-6; <br/>
+                  In AEM Foundation: .column-6
                 </div>
               </div>
-              <div class="row">
-                <div class="column-6">
-                  <div class="box"> @include span-columns(6);</div>
-                </div>
-                <div class="column-6">
-                  <div class="box">@include span-columns(6);</div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="column-4">
-                  <div class="box">@include span-columns(4);</div>
-                </div>
-                <div class="column-4">
-                  <div class="box">@include span-columns(4);</div>
-                </div>
-                <div class="column-4">
-                  <div class="box">@include span-columns(4);</div>
+            </div>
+            <div class="row">
+              <div class="column-6">
+                <div class="box">
+                  Front End: @extend %column-6; <br/>
+                  In AEM Foundation: .column-6
                 </div>
               </div>
-              <div class="row">
-                <div class="column-3">
-                  <div class="box">@include span-columns(3);</div>
-                </div>
-                <div class="column-3">
-                  <div class="box">@include span-columns(3);</div>
-                </div>
-                <div class="column-3">
-                  <div class="box">@include span-columns(3);</div>
-                </div>
-                <div class="column-3">
-                  <div class="box">@include span-columns(3);</div>
+              <div class="column-6">
+                <div class="box">
+                  Front End: @extend %column-6; <br/>
+                  In AEM Foundation: .column-6
                 </div>
               </div>
-              <div class="row">
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
-                </div>
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
-                </div>
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
-                </div>
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
-                </div>
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
-                </div>
-                <div class="column-2">
-                  <div class="box">@include span-columns(2);</div>
+            </div>
+            <div class="row">
+              <div class="column-4">
+                <div class="box">
+                  .column-4
                 </div>
               </div>
-              <div class="row">
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              <div class="column-4">
+                <div class="box">
+                  .column-4
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-4">
+                <div class="box">
+                  .column-4
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-3">
+                <div class="box">
+                  .column-3
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  .column-3
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  .column-3
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  .column-3
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-2">
+                <div class="box">
+                  .column-2
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  .column-2
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  .column-2
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  .column-2
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  .column-2
                 </div>
-                <div class="column-1">
-                  <div class="box">@include span-columns(1);</div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  .column-2
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  .column-1
                 </div>
               </div>
             </div>
           </div>
-          <h2> Sidebar and main content  </h2>
-          <p> To use the 2 column layout, use the <code>@include span-columns(6);</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.
-          <h2> Sidebar and main content  </h2>
-          <p> To use the 2 column layout, use the <code>@include span-columns(6);</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.
-            <div class="example -padded">
-              <section class="container">
-                <div class="row">
-                  <div class="column-2">
-                    <div class="box">@include span-columns(2);</div>
-                  </div>
-                  <div class="column-10">
-                    <div class="box">@include span-columns(10);</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="column-3">
-                    <div class="box">@include span-columns(3);</div>
-                  </div>
-                  <div class="column-9">
-                    <div class="box">@include span-columns(9);</div>
-                  </div>
-                </div>
-                <div class="row">
-                <div class="column-4">
-                  <div class="box">@include span-columns(4);</div>
-                </div>
-                <div class="column-8">
-                  <div class="box">@include span-columns(8);</div>
+        </div>
+        <h2>Sidebar and main content</h2>
+        <p>Again to have a custom class layout just use <code>@include span-columns();</code> within a parent <code>@include row();</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.</p>
+        <div class="example -padded">
+          <section class="container">
+            <div class="row">
+              <div class="column-10">
+                <div class="box">
+                  <aside>
+                  @include span-columns(2);
+                  </aside>
                 </div>
               </div>
-
-              </section>
+              <div class="column-2">
+                <div class="box">
+                  @include span-columns(10);
+                </div>
+              </div>
             </div>
-        </section>
-      </article>
-    </main>
-  </body>
-
+            <div class="row">
+              <div class="column-2">
+                <div class="box">
+                  @include span-columns(2);
+                </div>
+              </div>
+              <div class="column-10">
+                <div class="box">
+                  @include span-columns(10);
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-3">
+                <div class="box">
+                  @include span-columns(3);
+                </div>
+              </div>
+              <div class="column-9">
+                <div class="box">
+                  @include span-columns(9);
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-4">
+                <div class="box">
+                  @include span-columns(4);
+                </div>
+              </div>
+              <div class="column-8">
+                <div class="box">
+                  @include span-columns(8);
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
 </html>
