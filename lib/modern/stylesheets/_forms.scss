@@ -25,7 +25,7 @@ $label-height: uppercase;
 
   &:focus {
     border-color: $input-active-border-color;
-    outline: 0;
+    // outline: 0;
   }
   &::-webkit-input-placeholder {
     color: $placeholder-text-color;
