@@ -34,7 +34,7 @@ You can now install styleguide by running the following command in your project 
 ### Viewing the repository locally
 
 * In Terminal/cmd  (if you cloned or forked the project) run npm` you@host:~ stylguide$ npm install`
-* Then `you@host:~ stylguide$grunt serve`
+* Then `you@host:~ stylguide$npm start`
 * Open any browser type in your local host with port example: `localhost:4321`
 
 <a name="usage"></a>
