@@ -7,7 +7,6 @@ The styleguide to rule them all! this document covers:
 * [Command Documentation](#commands)
 * [What's in Styleguide](#contents-styleguide)
 * [Setting up Namespacing in your project](#namespacing)
-* [Contributing](#contributing)
 * [Resources and Helpful Links](#resources)
 * [Questions](#questions)
 
@@ -117,39 +116,6 @@ It is very important to name space your styles for your APP. This will avoid con
           ...
           //all the styles fall in here
         }
-
-
-
-<a name="contributing"></a>
-## Contributing to Styleguide
-We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
-
-### Before You begin
-Make sure you have:
-
-* Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
-* Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
-* [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) are setup in Stash
-* [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) is downloaded onto your machine to run the build plugin grunt taskrunner
-* Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19)
-* Access to [jira](https://jira.kp.org/browse/STYLE)
-
-### Process of Editing and Submitting a change​
-Summary of the current contribution process is:
-
-* Fork the project to your Stash account
-![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
-
-* In the new forked copy make the code changes and push code changes to your forked master branch
-* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/)
-![Create PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.19.39%20PM.png)
-* have the RWD styleguide team review and recieve a minimum of 2 approvals
-* Merge the Pull Request into the master branch.
-
-
-### Detailed steps of How to Contribute
-More detailed steps included in the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
-
 
 <a name="resources"></a>
 ## Resources and Helpful Links
