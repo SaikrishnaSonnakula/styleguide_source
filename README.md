@@ -7,6 +7,7 @@ The styleguide to rule them all! this document covers:
 * [Command Documentation](#commands)
 * [What's in Styleguide](#contents-styleguide)
 * [Setting up Namespacing in your project](#namespacing)
+* [Contributing](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
 * [Resources and Helpful Links](#resources)
 * [Questions](#questions)
 
@@ -79,7 +80,7 @@ Then run `bower install` - watch all the front-end stuff bower installs. You sho
 Still figuring this out. You will experience import SASS errors when you import styleguide on a gulp project.
 
 <a name="commands"></a>
-## Commands to Develop and Contribute to Styleguide
+## Commands to Develop
 The styleguide has moved over to use NPM scripts to make building, serving and linting the project easier for new contributors. There are currently three commands that can be run but more can be added to the package.json as needed.
 
 ### Linting the Project
