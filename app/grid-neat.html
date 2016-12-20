@@ -29,17 +29,15 @@
         <p>For more examples of this please refer to the <a href="http://neat.bourbon.io/examples/" target="_blank"> bourbon/Neat grid</a></p>
         <h3>Using the bourbon includes</h3>
         <pre><code class="language-sass">
-        .custom-main-body-container {
-          @include outer-container;
-        }
-        .custom-row-for-columns {
-          @include row();
+        .custom-main-body-container-name {
+          @include grid__container;
         }
         .custom-two-column-layout-name {
-         @include span-columns(6);
-        }
+           @include grid__column-(6);
+          }
         </code></pre>
-        <h3>Using Classes</h3>
+        <h3>Using Classes from within KP Foundation</h3>
+        <p> To use the classes like <code> .column-2 </code> build your project in AEM and pull in the KP foundation package. The column classes are currently stored in the kp-foundation in order to cut down on size. </p>
         <pre><code class="language-sass">
         .custom-main-body container {
         }
@@ -48,165 +46,160 @@
         .custom--component-name column-4 {
         }
         </code></pre>
-        <div class="example -padded">
-          <div class="container">
+  <div class="container">
             <div class="row">
               <div class="column-12">
                 <div class="box">
-                  Front End: @extend %column-6; <br/>
-                  In AEM Foundation: .column-6
+                   grid__column-(12) <br/>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="column-6">
+              <div class="custom-two-column-layout-name">
                 <div class="box">
-                  Front End: @extend %column-6; <br/>
-                  In AEM Foundation: .column-6
+                  grid__column-(6) 
                 </div>
               </div>
-              <div class="column-6">
+              <div class="custom-two-column-layout-name">
                 <div class="box">
-                  Front End: @extend %column-6; <br/>
-                  In AEM Foundation: .column-6
+                 grid__column-(6) 
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-4">
                 <div class="box">
-                  .column-4
+                   grid__column-(4) 
                 </div>
               </div>
               <div class="column-4">
                 <div class="box">
-                  .column-4
+                 grid__column-(4) 
                 </div>
               </div>
               <div class="column-4">
                 <div class="box">
-                  .column-4
+                  grid__column-(4) 
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-3">
                 <div class="box">
-                  .column-3
+                 grid__column-(3) 
                 </div>
               </div>
               <div class="column-3">
                 <div class="box">
-                  .column-3
+                  grid__column-(3) 
                 </div>
               </div>
               <div class="column-3">
                 <div class="box">
-                  .column-3
+                  grid__column-(3) 
                 </div>
               </div>
               <div class="column-3">
                 <div class="box">
-                  .column-3
+                 grid__column-(3)
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                   grid__column-(2)
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                  grid__column-(2)
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                   grid__column-(2)
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                  grid__column-(2)
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                   grid__column-(2)
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  .column-2
+                   grid__column-(2)
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                   grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                   grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                 grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                   grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                  grid__column-(1)
                 </div>
               </div>
               <div class="column-1">
                 <div class="box">
-                  .column-1
+                   grid__column-(1)
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <h2>Sidebar and main content</h2>
         <p>Again to have a custom class layout just use <code>@include span-columns();</code> within a parent <code>@include row();</code> within your parent class. You do not have to use the container class. Just use the include the @include outer-container to any parent container class.</p>
         <div class="example -padded">
@@ -215,49 +208,49 @@
               <div class="column-10">
                 <div class="box">
                   <aside>
-                  @include span-columns(2);
+                   @include  grid__column-(10)
                   </aside>
                 </div>
               </div>
               <div class="column-2">
                 <div class="box">
-                  @include span-columns(10);
+                   @include  grid__column-(2)
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-2">
                 <div class="box">
-                  @include span-columns(2);
+                   @include  grid__column-(2)
                 </div>
               </div>
               <div class="column-10">
                 <div class="box">
-                  @include span-columns(10);
+                   @include grid__column-(10)
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-3">
                 <div class="box">
-                  @include span-columns(3);
+                   @include @include grid__column-(3)
                 </div>
               </div>
               <div class="column-9">
                 <div class="box">
-                  @include span-columns(9);
+                   @include  grid__column-(9)
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="column-4">
                 <div class="box">
-                  @include span-columns(4);
+                   @include  grid__column-(4)
                 </div>
               </div>
               <div class="column-8">
                 <div class="box">
-                  @include span-columns(8);
+                   @include grid__column-(9)
                 </div>
               </div>
             </div>

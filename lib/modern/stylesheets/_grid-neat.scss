@@ -1,56 +1,63 @@
-$visual-grid: true !default;
-$visual-grid-index: front;
-$visual-grid-color: #eee !global;
-@include reset-all;
+$large-desktop-breakpoint:1360px;
 $gutter-desktop: $large-spacing;
 $gutter-tablet: $small-spacing;
 $gutter-mobile: $tiny-spacing;
-$column-padding: modular-scale(1, 1em, $golden);
-$column-padding-mobile: modular-scale(1, 1em, $golden);
-
 $direction: get-direction($layout-direction, $default-layout-direction);
- 
- @for $i from 1 through $grid-columns {
-    %column-#{$i} {@include span-columns($i);
-     @include media($tablet) {
-    margin-#{$direction}:$gutter-tablet;  }
-    @include media($tablet) {
-    margin-#{$direction}:$gutter-mobile;
-  }  
-}
- @if $i from 4 to 6 {
-    %column-#{$i} {  @include media($device) {
-    @include fill-parent();
-  } }
-  }    
- @if $i == 2 or $i == 3 {
-    %column-#{$i} {  @include media($device) {
-      $column-width: 33.33333333%;
-      margin-#{$direction}:$gutter-tablet;
-  } }
-  }    
-
-  }    
 @for $i from 1 through $grid-columns {
-  .column-#{$i} { @extend %column-#{$i}; }
-} 
-
-
-
-
-%column-1 {
-  @include span-columns(1);
-  @include media($device) {
-    @include span-columns(3);
-    @include omega(4n);
+  %column-#{$i} {
+    @include span-columns($i);
+    @include media($tablet) {
+      $gutter: $small-spacing;
+    }
+    @include media($tablet) {
+      $gutter: $tiny-spacing;
+    }
+  }
+  @if $i from 4 to 6 {
+    %column-#{$i} {
+      @include media($device) {
+        @include fill-parent();
+      }
+    }
+  }
+  @if $i==2 or $i==3 {
+    %column-#{$i} {
+      @include media($device) {
+        @include span-columns(5.8);
+        @include omega(2n);
+        margin-#{$direction}: 5.2%;
+      }
+    }
+  }
+  @if $i==1 {
+    %column-#{$i} {
+      @include media($device) {
+        @include span-columns(1);
+        @include media($device) {
+          @include span-columns(3);
+          @include omega(4n);
+        }
+      }
+    }
   }
 }
-%container {
+
+@mixin grid__column-($i) {
+  @extend %column-#{$i};
+}
+
+@for $i from 1 through $grid-columns {
+  .column-#{$i} {
+    @include grid__column-($i)
+  }
+}
+
+@mixin grid__container {
   @include outer-container;
   padding-right: $gutter-desktop;
-  padding-left: $large-spacing;
+  padding-left: $gutter-desktop;
   @include media($desktop-large) {
-    max-width: 100%;
+    max-width: $large-desktop-breakpoint;
   }
   @include media($tablet) {
     padding-right: $gutter-tablet;
@@ -62,23 +69,17 @@ $direction: get-direction($layout-direction, $default-layout-direction);
   }
 }
 
-
-
-.row {
-  @include row();
-}
-
 .container {
-  @extend %container;
+  @include grid__container;
 }
 
-
-
+.custom-two-column-layout-name {
+  @include grid__column-(6);
+}
 
 .column-4-of-8 {
   @include span-columns(4 of 8);
 }
-
 
 //example scss
 .box {
