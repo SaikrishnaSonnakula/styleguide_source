@@ -43,10 +43,15 @@ $direction: get-direction($layout-direction, $default-layout-direction);
   }
 }
 
-@mixin grid__column-($i) {
+@mixin grid__column($i) {
   @extend %column-#{$i};
 }
 
+@for $i from 1 through $grid-columns {
+  .column-#{$i} {
+    @include grid__column($i)
+  }
+}
 
 @mixin grid__container {
   @include outer-container;
@@ -64,3 +69,5 @@ $direction: get-direction($layout-direction, $default-layout-direction);
     padding-left: $gutter-mobile;
   }
 }
+
+
