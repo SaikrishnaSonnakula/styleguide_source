@@ -34,7 +34,8 @@ $direction: get-direction($layout-direction, $default-layout-direction);
       @include media($device) {
         @include span-columns(1);
         @include media($device) {
-          @include span-columns(3);
+          @include span-columns(2.7);
+          margin-#{$direction}: 5.2%;
           @include omega(4n);
         }
       }
@@ -46,11 +47,6 @@ $direction: get-direction($layout-direction, $default-layout-direction);
   @extend %column-#{$i};
 }
 
-@for $i from 1 through $grid-columns {
-  .column-#{$i} {
-    @include grid__column-($i)
-  }
-}
 
 @mixin grid__container {
   @include outer-container;
@@ -67,27 +63,4 @@ $direction: get-direction($layout-direction, $default-layout-direction);
     padding-right: $gutter-mobile;
     padding-left: $gutter-mobile;
   }
-}
-
-.container {
-  @include grid__container;
-}
-
-.custom-two-column-layout-name {
-  @include grid__column-(6);
-}
-
-.column-4-of-8 {
-  @include span-columns(4 of 8);
-}
-
-//example scss
-.box {
-  margin-bottom: 16px;
-  width: 100%;
-  min-height: 75px;
-  background: #34D0CB;
-  border-radius: 6px;
-  font-size: 13px;
-  text-align: center;
 }
