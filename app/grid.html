@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>KP Styleguide :: Layouts</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="" name="description">
+    <meta content="width=device-width" name="viewport">
+    <link href="main.css" rel="stylesheet">
+    <script src="modern.bundle.js">
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+  </head>
+
+  <body>
+    <header class="styleguide-header">
+      <button class="device-menu-button" id="menu-button">Menu</button> <img alt="Kaiser Permanente Logo" class="logo" src='assets/images/kp-icon.svg'> <a href="index.html"><span class="desktop-only">Web Design</span> Styleguide</a>
+    </header>
+    <div class="current-breakpoint">
+      Current Breakpoint: <span class="mobile-only">Mobile</span> <span class="tablet-only">Tablet</span> <span class="small-desktop-only">Small Desktop</span> <span class="desktop-only">Desktop Medium</span> <span class="large-desktop-only">Large Desktop</span>
+    </div>
+    <main class="styleguide-main">
+      <article class="styleguide-content">
+        <section id="grid">
+          <h1> Grid Layout</h1>
+          <p>For ease of development the following SASS includes are provided that contain defined columns.This <code>@include grid__column(6);</code> specifies the number of columns an element should span in the 12 column grid. Make sure the column include
+            is nested with its parent element passing <code>@include grid__container; </code> as well </p>
+
+          <p>For more examples of how to extend upon this please refer to the <a href="http://thoughtbot.github.io/neat-docs/latest/" target="_blank"> bourbon/Neat documentation</a></p>
+          <h3> Scss</h3>
+          <p> Below you will find examples of the grid patterns to compose a group of elements into commonly seen layouts</p>
+          <pre><code class="language-sass">
+          .main__custom.container {
+          @include grid__container;
+          }
+          .layout__two-column--name {
+          @include grid__column(6);
+          }
+        </code></pre>
+          <h3>HTML</h3>
+          <div class="example -padded">
+            <div class="main__custom container">
+              <div class="layout__two-column--name">
+                <h2 class="page-heading">Column One</h2>
+                <p>Column one that will span 50% for desktop, then 100% for devices</p>
+                <button class="button __submit"> Let's do an Action</button>
+              </div>
+              <div class="layout__two-column--name">
+                <h2 class="page-heading">Column One</h2>
+                <p>Column one that will span 50% for desktop, then 100% for devices</p>
+                <button class="button __submit"> Let's do an Action</button>
+              </div>
+            </div>
+          </div>
+          <h2>Grid demo</h2>
+          <p> Below is an example of the full  12 column grid</p>
+          <div class="container">
+            <div class="row">
+              <div class="column-12">
+                <div class="box">
+                  grid__column(12)
+                  <br/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-6">
+                <div class="box">
+                  grid__column(6)
+                </div>
+              </div>
+              <div class="column-6">
+                <div class="box">
+                  grid__column(6)
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-4">
+                <div class="box">
+                  grid__column(4)
+                </div>
+              </div>
+              <div class="column-4">
+                <div class="box">
+                  grid__column(4)
+                </div>
+              </div>
+              <div class="column-4">
+                <div class="box">
+                  grid__column(4)
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-3">
+                <div class="box">
+                  grid__column(3)
+                </div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  grid__column(3)
+                </div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  grid__column(3)
+                </div>
+              </div>
+              <div class="column-3">
+                <div class="box">
+                  grid__column(3)
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="box">
+                  grid__column(2)
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                 (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                 (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                  (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                (1)
+                </div>
+              </div>
+              <div class="column-1">
+                <div class="box">
+                 (1)
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Using classes from KP Foundation</h2>
+          <p> To use the classes like <code> .column-2 </code> build your project in AEM and pull in the KP foundation package. The column classes are currently stored in the kp-foundation in order to cut down on file size. </p>
+          <pre><code class="language-sass">
+          .custom-main-body container {
+          }
+          .custom-name-parent row {
+          }
+          .custom--component-name column-4 {
+          }
+          </code></pre>
+        </section>
+      </article>
+    </main>
+  </body>
+
+</html>

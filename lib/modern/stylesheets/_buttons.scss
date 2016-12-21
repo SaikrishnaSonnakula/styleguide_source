@@ -34,9 +34,6 @@ $button-color--white: white;
   width: 100%;
 }
 
-.button {
-  @extend %button;
-}
 
 %button {
   @extend %rounded-input;
@@ -117,6 +114,9 @@ $button-color--white: white;
   }
 }
 
+.button {
+  @extend %button;
+}
 
 %button-unstyled {
   @include appearance(none);

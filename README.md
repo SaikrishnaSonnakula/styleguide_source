@@ -7,7 +7,7 @@ The styleguide to rule them all! this document covers:
 * [Command Documentation](#commands)
 * [What's in Styleguide](#contents-styleguide)
 * [Setting up Namespacing in your project](#namespacing)
-* [Contributing](#contributing)
+* [Contributing](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
 * [Resources and Helpful Links](#resources)
 * [Questions](#questions)
 
@@ -20,14 +20,24 @@ Make sure you are running [Node JS](https://nodejs.org) to run npm and grunt com
 
 ### NPM
 
-The styleguide is NPM module.  You can install it by running the following command in your project directory:
+The styleguide is an NPM module.  It also has dependencies on other NPM modules.  We now store these and other modules in an NPM repository on Artifactory.  Artifactory also acts as a proxy for other dependencies normally found on the Internet.  By using Artifactory hosted on KP network, the installation should be much quicker for these modules.  To use the repository, you must update your local ~/.npmrc file.  Do this by running the following command in a terminal:
 
-    npm install -D git+ssh://git@stash.kp.org/rwd/styleguide.git
+    cat > ~/.npmrc <<- EOM
+    registry= https://artifactory-fof.appl.kp.org/artifactory/api/npm/npm-virtual
+    always-auth=false
+    EOM
+
+You can now install styleguide by running the following command in your project directory: (note that the version could change with future updates)
+
+    npm install -D http://artifactory-fof.appl.kp.org/artifactory/npm-release/styleguide/-/styleguide-0.0.1.tgz
 
 ### Viewing the repository locally
 
 * In Terminal/cmd  (if you cloned or forked the project) run npm` npm install`
 * Then `npm start`
+=======
+* In Terminal/cmd  (if you cloned or forked the project) run npm` you@host:~ stylguide$ npm install`
+* Then `you@host:~ stylguide$npm start`
 * Open any browser type in your local host with port example: `localhost:4321`
 
 <a name="usage"></a>
@@ -48,7 +58,7 @@ Note: Legacy has been deprecated.
 Still figuring this out. You will experience import SASS errors when you import styleguide on a gulp project.
 
 <a name="commands"></a>
-## Commands to Develop and Contribute to Styleguide
+## Commands to Develop
 The styleguide has moved over to use NPM scripts to make building, serving and linting the project easier for new contributors. There are currently three commands that can be run but more can be added to the package.json as needed.
 
 ### Linting the Project
@@ -91,38 +101,6 @@ It is very important to name space your styles for your APP. This will avoid con
           ...
           //all the styles fall in here
         }
-
-
-
-<a name="contributing"></a>
-## Contributing to Styleguide
-We welcome all in the KP developer community contribute to styleguide, all edits/fixes/changes to the styleguide are on a voluntary basis.
-
-### Before You begin
-Make sure you have:
-
-* Read the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
-* Read the [Build-Plugin documentation](https://stash.kp.org/projects/RWD/repos/build-plugin/browse/README.md)
-* [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) are setup in Stash
-* [Node JS](https://nodejs.org/) is downloaded onto your machine to run the build plugin grunt taskrunner
-* Join the [Hipchat Styleguide Chat Room](https://hipchat.kp.org/chat/room/19)
-* Access to [jira](https://jira.kp.org/browse/STYLE)
-
-### Process of Editing and Submitting a change​
-Summary of the current contribution process is:
-
-* Fork the project to your Stash account
-![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
-
-* In the new forked copy make the code changes and push code changes to your forked master branch
-* Create a [Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request/)
-![Create PullRequest](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.19.39%20PM.png)
-* have the RWD styleguide team review and recieve a minimum of 2 approvals
-* Merge the Pull Request into the master branch.
-
-
-### Detailed steps of How to Contribute
-More detailed steps included in the [Contributing documentation](https://stash.kp.org/projects/RWD/repos/styleguide/browse/contributing.md)
 
 
 <a name="resources"></a>

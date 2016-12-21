@@ -97,7 +97,6 @@ $button-font-family: $medium-font-family;
   }
 }
 
-
 %button-unstyled {
   @include appearance(none);
   border: 0px solid transparent;
