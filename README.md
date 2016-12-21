@@ -102,7 +102,6 @@ It is very important to name space your styles for your APP. This will avoid con
           //all the styles fall in here
         }
 
-
 <a name="resources"></a>
 ## Resources and Helpful Links
 
