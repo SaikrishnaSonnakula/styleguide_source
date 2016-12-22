@@ -3,6 +3,7 @@ $gutter-desktop: $large-spacing;
 $gutter-tablet: $small-spacing;
 $gutter-mobile: $tiny-spacing;
 $direction: get-direction($layout-direction, $default-layout-direction);
+
 @for $i from 1 through $grid-columns {
   %column-#{$i} {
     @include span-columns($i);

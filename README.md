@@ -16,7 +16,7 @@ To view deployed examples of different components [see the online version](https
 <a name="installing"></a>
 
 ## Installing Styleguide
-Make sure you are running [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) to run npm and grunt commands
+Make sure you are running [Node JS](https://nodejs.org) to run npm and grunt commands. Consider installing [Node Version Manager](https://github.com/creationix/nvm)
 
 ### NPM
 
@@ -33,6 +33,9 @@ You can now install styleguide by running the following command in your project 
 
 ### Viewing the repository locally
 
+* In Terminal/cmd  (if you cloned or forked the project) run npm` npm install`
+* Then `npm start`
+=======
 * In Terminal/cmd  (if you cloned or forked the project) run npm` you@host:~ stylguide$ npm install`
 * Then `you@host:~ stylguide$npm start`
 * Open any browser type in your local host with port example: `localhost:4321`
@@ -41,39 +44,14 @@ You can now install styleguide by running the following command in your project 
 ## How to Use Styleguide in your Projects
 ### Modern Styles with Webpack
 
-If you're using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse) you'll be using webpack
-If you are using modern styles and using webpack then import the following sass file:
+If you are using modern styles and using webpack then import the following sass file. Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/repos/kp-header-component/browse):
 
-    @import "~styleguide/modern-webpack";
-
-Note: Legacy has been deprecated.
-
-Reference this example [kp-header-component](https://stash.kp.org/projects/CDS/repos/kp-header-component/browse)
-
-### Not on webpack or using our build-plugin
-
-    // modern
-    @import "styleguide/modern";
-
-The node_modules directory will have to be in your SCSS build path. This is particularly important if you're not using [build-plugin](https://stash.kp.org/projects/RWD/repos/build-plugin/browse).
+    @import "styleguide/modern-lib";
 
 You can view the list of SCSS styles in the repo: [Styleguide lib]:(https://stash.kp.org/projects/RWD/repos/styleguide/browse/lib/modern/stylesheets)
 
-### Bower (deprecated)
+Note: Legacy has been deprecated.
 
-Include this styleguide repo in your `bower.json`
-
-    "dependencies": {
-      "..." : "...",
-      "styleguide": "git+ssh://git@stash.kp.org/rwd/styleguide.git"
-    }
-
-Then run `bower install` - watch all the front-end stuff bower installs. You should see something similar to the following in your output:
-
-    bower styleguide#*  not-cached ssh://git@stash.kp.org/rwd/styleguide.git#*
-    bower styleguide#*  resolve ssh://git@stash.kp.org/rwd/styleguide.git#*
-    bower styleguide#*  checkout master
-    bower styleguide#*  resolved ssh://git@stash.kp.org/rwd/styleguide.git#19b64a1850
 
 ### Gulp
 
@@ -101,7 +79,13 @@ The styleguide has moved over to use NPM scripts to make building, serving and l
 
 <a name="contents-styleguide"></a>
 ## What's in Styleguide
-There is a lot that Styleguide comes with and does a lot so that you don't have to. Bootstrap and Bourbon are installed via Styleguide so your local projects need not include boostrap and bourbon.
+There is a lot that Styleguide comes with and does a lot so that you don't have to. Babel and Bourbon are installed via Styleguide so your local projects need not include Babel and bourbon.
+
+
+### Node / NPM
+
+The styleguide is NPM module, allowing users to consume and distribute JavaScript modules that are available on the [NPM Registry](https://www.npmjs.com/) . Packages on the NPM registry are in CommonJS format and include a metadata file in JSON format and can be included in project's Package.json.
+
 
 ### Bourbon / Neat
 
