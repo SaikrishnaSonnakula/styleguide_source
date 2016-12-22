@@ -1,5 +1,4 @@
-# Contributing to Styleguide (DRAFT)
-
+# Contributing to Styleguide 
 We're so glad you're thinking about contributing to an KP open source project!
 
 If you're unsure about anything, just ask us on Hipchat — or submit a pull request on Stash and we'll have a look.
@@ -16,8 +15,8 @@ Join the [Hipchat](https://hipchat.kp.org/chat/room/19) room "RWD Styleguide" wh
 
 - Raising issues - bugs, defects, typos/bad grammar in documentation.
 - [JIRA Backlog](https://jira.kp.org/browse/STYLE) - check the backlog to see if something is on our roadmap and hasn't been picked up by anyone else.
-- New Features - Have you developed a UI component for your app and think it will benefit other KP apps? Consult a UX designer like Jennifer Beasely or Bob Altman for the acceptance criteria for having it added to Styleguide for other teams to use.
-- Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. =)
+- New Features - if your code is already integrated into the JKP project please follow the steps bellow to fork this repo, create a pull request, and get 2 approvals on your code to have it added to styleguide.
+- Writing documentation - if you think there's a better way to explain the process please let us know and you can help us write. You don't even have to be too technical on this one. 
 
 ## Before You begin
 
@@ -25,7 +24,7 @@ Make sure you have:
 
 * Access to Stash and the Style guide repo and the build plugin
 * [SSH Keys](https://stash.kp.org/plugins/servlet/ssh/account/keys) setup in Stash
-* [Node JS](https://nodejs.org/en/blog/release/v0.10.42/) to run the Styleguide locally
+* [Node JS v5](https://nodejs.org/en/download/) to run the Styleguide locally
 * Join the RWD Styleguide chat room, use the node.js wizard to install onto your machine
   * If you're using the latest version of hipchat:
   * Go to https://hipchat.kp.org/invite/1/27bf4d05b314fdfb36b4dc25f5752b28
@@ -48,11 +47,30 @@ For an indepth overview of how to set up your workspace [stream](https://kponlin
 ## Development Setup
 
 1. In the styleguide repository fork the project to your own account
+
+### Commands to Develop and Contribute to Styleguide
+The styleguide has moved over to use NPM scripts to make building, serving and linting the project easier for new contributors. There are currently three commands that can be run but more can be added to the package.json as needed.
+
+#### Linting the Project
+  This command will lint the scss files in lib/modern.
+
+    npm run lint
+
+#### Building the Project
+  This command will lint and build the project.
+
+    npm run build
+
+#### Serving the Project
+  This command will lint and serve the project on port :4321.
+
+    npm start
+
 2. Pull down your forked version of styleguide locally to your machine
 
 ![Forking styleguide](https://sites.sp.kp.org/teams/dsg/creative/fed/SiteAssets/SitePages/Contributing%20to%20Styleguide/Screen%20Shot%202016-02-19%20at%2012.12.46.png)
 
-3. In your StyleGuide> Git directory, update the config file to the following so you can fetch pull requests, sync with upstream, and stay up to date with the latest code:
+3. In your StyleGuide > .git directory, update the git config file to the following so you can fetch pull requests, sync with upstream, and stay up to date with the latest code:
 
 ```
     [core]
@@ -109,10 +127,11 @@ Follow the [Apple guidelines](https://developer.apple.com/library/ios/technotes/
 
 ### Kaiser Accessibility Resources and Guidelines
 
+* [SSBART Group Toolbox](https://kaiser.ssbbartgroup.com/toolbox.php) -- Contact Mark Stimson or Pauline Kiet if you do not have access to this page.
 * [Mozilla Developer Network Getting Started with ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * [Practical ARIA Examples](http://heydonworks.com/practical_aria_examples)
 * [ARIA Screenreader Compatibility Chart](http://www.powermapper.com/tests/screen-readers/aria/)
-* [SSBART Group Toolbox](https://kaiser.ssbbartgroup.com/toolbox.php) -- Contact Mark Stimson or Pauline Kiet if you do not have access to this page.
+
 
 ## Opening a pull request
 
