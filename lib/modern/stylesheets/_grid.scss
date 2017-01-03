@@ -7,12 +7,6 @@ $direction: get-direction($layout-direction, $default-layout-direction);
 @for $i from 1 through $grid-columns {
   %column-#{$i} {
     @include span-columns($i);
-    @include media($tablet) {
-      $gutter: $small-spacing;
-    }
-    @include media($tablet) {
-      $gutter: $tiny-spacing;
-    }
   }
   @if $i from 4 to 6 {
     %column-#{$i} {
