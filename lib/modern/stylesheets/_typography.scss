@@ -23,16 +23,13 @@ $light-font-family: "Gotham 3r";
 $medium-font-family: "Gotham 5r";
 $bold-font-family: "Gotham 7r";
 
-
-
-
 // HEADING CLASSES
 %hero-heading {
   font-family: $light-font-family;
   color: color(inky-blue);
   font-size: $xxl-font-size;
   font-weight: 100;
-  letter-spacing:  -2.5px ;
+  letter-spacing: -2.5px ;
   line-height: 74px;
 
   @include media($device) {
@@ -96,8 +93,6 @@ $bold-font-family: "Gotham 7r";
 .item-heading {
   @extend %item-heading;
 }
-
-
 
 // FONT STYLE CLASSES
 

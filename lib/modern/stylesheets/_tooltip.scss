@@ -13,9 +13,9 @@ $tooltip-border-color: color(graphite-dark);
   margin-left: -$tooltip-arrow-border-width;
 
   @if $arrow-direction == "bottom" {
-     top: 100%;
-   } @else {
-     bottom: 100%;
+    top: 100%;
+  } @else {
+    bottom: 100%;
   }
 }
 

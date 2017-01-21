@@ -1,5 +1,5 @@
 $table-spacing: 10px;
-table.table{
+table.table {
   @include font-feature-settings("kern", "liga", "tnum");
   border-collapse: collapse;
   margin: $table-spacing 0;
