@@ -10,106 +10,106 @@ $action-color-light: #5FA621 !default;
   background-color: $action-color-bg;
 }
 .action-message{
-	font-size: $medium-font-size;
-	text-align: center;
-	@include media($desktop) {
-		font-size: $large-font-size;
-	}
+  font-size: $medium-font-size;
+  text-align: center;
+  @include media($desktop) {
+    font-size: $large-font-size;
+  }
 }
 
 .action-box {
   @extend .action-color;
 
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 
-	@include media($desktop) {
-		height: auto;
-		min-height: $action-box-height;
-		padding-top: $action-box-vertical-padding;
-		padding-bottom: $action-box-vertical-padding + $content-top-offset;
-		padding-left: $outer-gutter-spacing;
-		padding-right: $outer-gutter-spacing;
-		text-align: center;
-	}
+  @include media($desktop) {
+    height: auto;
+    min-height: $action-box-height;
+    padding-top: $action-box-vertical-padding;
+    padding-bottom: $action-box-vertical-padding + $content-top-offset;
+    padding-left: $outer-gutter-spacing;
+    padding-right: $outer-gutter-spacing;
+    text-align: center;
+  }
 }
 
 .primary-action {
-	@extend .button;
-	@include media($device) {
-		z-index: $foreground;
-		width: 100%;
-		position: $action-button-mobile-position;
-		left: 0px;
-		right: 0px;
-		bottom: 0px;
-		&:hover, &:focus {
-			background-color: white;
-			color: color(interactive-blue);
-		}
-	}
+  @extend .button;
+  @include media($device) {
+    z-index: $foreground;
+    width: 100%;
+    position: $action-button-mobile-position;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    &:hover, &:focus {
+      background-color: white;
+      color: color(interactive-blue);
+    }
+  }
   @include media($desktop) {
-	  @include outer-container;
-		@include span-columns(4.5);
-		@include shift(3.5);
+    @include outer-container;
+    @include span-columns(4.5);
+    @include shift(3.5);
 
-		color: white;
-		background-color: $action-color-bg;
-		border-color: white;
+    color: white;
+    background-color: $action-color-bg;
+    border-color: white;
 
-		&:hover, &:focus {
-			color: $action-color-bg;
-			border-color: white;
-			background-color: white;
-		}
+    &:hover, &:focus {
+      color: $action-color-bg;
+      border-color: white;
+      background-color: white;
+    }
   }
 }
 
 .action-button {
-	@include media($device) {
-		@include outer-container;
-		z-index: $foreground;
+  @include media($device) {
+    @include outer-container;
+    z-index: $foreground;
 
-		position: $action-button-mobile-position;
-		left: 0px;
-		right: 0px;
-		bottom: 0px;
-		margin: $tiny-spacing;
+    position: $action-button-mobile-position;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: $tiny-spacing;
 
-		.button {
-			@include span-columns(6);
-			&.-action {
-				border-color: color(interactive-blue);
-				background-color: white;
-				color: color(interactive-blue);
+    .button {
+      @include span-columns(6);
+      &.-action {
+        border-color: color(interactive-blue);
+        background-color: white;
+        color: color(interactive-blue);
 
-				&.-inverted {
-					background-color: color(interactive-blue);
-					border-color: color(interactive-blue);
-					color: white;
-					&:hover, &:focus {
-	        	background-color: white;
-  	      	color: color(interactive-blue);
-    	  	}
-				}
-			}
-		}
-	}
-	@include media($desktop){
-		.button {
-			margin-left: $tiny-spacing;
-			margin-right: $tiny-spacing;
-			&.-action:hover{
-				color: $action-color-bg;
-			}
-			&.-action.-inverted {
-				color: $action-color-bg;
-				&:hover, &:focus {
-        	color: $action-color-light;
-      	}
-			}
-		}
-	}
+        &.-inverted {
+          background-color: color(interactive-blue);
+          border-color: color(interactive-blue);
+          color: white;
+          &:hover, &:focus {
+            background-color: white;
+            color: color(interactive-blue);
+          }
+        }
+      }
+    }
+  }
+  @include media($desktop){
+    .button {
+      margin-left: $tiny-spacing;
+      margin-right: $tiny-spacing;
+      &.-action:hover{
+        color: $action-color-bg;
+      }
+      &.-action.-inverted {
+        color: $action-color-bg;
+        &:hover, &:focus {
+          color: $action-color-light;
+        }
+      }
+    }
+  }
 }
 
 .-center-piece {

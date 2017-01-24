@@ -27,22 +27,22 @@
 
 .vertical-list {
   
-    @extend %list-unstyled;
+  @extend %list-unstyled;
   
   li {
-      display: block;
-      padding-bottom : $small-spacing;
+    display: block;
+    padding-bottom : $small-spacing;
   }
 
   &.-divided {
-      li {
-        padding-bottom: $small-spacing;
-        border-bottom: 1px solid color(graphite-dark);
-        margin-bottom: $small-spacing;
+    li {
+      padding-bottom: $small-spacing;
+      border-bottom: 1px solid color(graphite-dark);
+      margin-bottom: $small-spacing;
 
-        li:last-child {
-          border: none;
-        }
+      li:last-child {
+        border: none;
       }
-   }
+    }
+  }
 }
