@@ -120,7 +120,7 @@ $dropdown-menu-z-index: 999;
 
     .-active {
       &:before {
-        @include icon-for(checkmark)
+        @include icon-for(checkmark);
         position: absolute;
         left: -(16px + $extra-tiny-spacing);
         color: color(interactive-blue);

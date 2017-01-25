@@ -20,8 +20,6 @@ $direction: get-direction($layout-direction, $default-layout-direction);
       @include media($mobile) {
         @include span-columns(5.84);
         @include omega(2n);
-                  //width: 47.6%;
-          //margin-right: 15px;
         margin-#{$direction}: 15px;
       }
     }

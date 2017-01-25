@@ -22,9 +22,9 @@ $dropdown-chevron-size: 1rem;
     border-top-color: #709AD0;
   }
   .select-form-label {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
   }
   .dropdown-overlay {
     width: 100%;
@@ -55,7 +55,7 @@ $dropdown-chevron-size: 1rem;
   select {
     @include position(absolute, 0 null null 0);
     opacity: 0;
-     @include size(100%);
+    @include size(100%);
     cursor: pointer;
     display: block;
   }

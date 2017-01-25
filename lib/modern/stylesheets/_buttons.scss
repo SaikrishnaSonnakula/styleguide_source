@@ -6,7 +6,7 @@ $button-border-size: 3px;
 $button-min-width: 10em;
 $button-small-min-width: 8em;
 $button-font-family: $medium-font-family;
-$button-max-height:50px;
+$button-max-height: 50px;
 $button-color--white: white;
 
 %rounded-input {
@@ -147,14 +147,12 @@ $button-color--white: white;
     font-size: $small-font-size;
   }
   &--large {
-  @extend %-close;
+    @extend %-close;
     font-size: $large-font-size;
   }
 
   &--small {
-  @extend %-close;
+    @extend %-close;
     font-size: $small-font-size;
   }
 }
-
-

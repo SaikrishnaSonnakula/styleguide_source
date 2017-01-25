@@ -8,7 +8,7 @@ $expanding-table-border-on-hover: $feed-item-border-size solid color(graphite-li
 $expanding-table-invisible-border: $feed-item-border-size solid transparent;
 $expanding-table-heading-margin-top-for-mobile: 10px;
 $expanding-table-left-content-gutter: 100px;
-$foreground-mobile-index:999;
+$foreground-mobile-index: 999;
 
 @mixin expanding-item() {
   @include display(flex);
@@ -45,7 +45,7 @@ $foreground-mobile-index:999;
     padding: $medium-spacing $small-spacing;
     &[aria-expanded="true"] {
       padding-top: 0;
-      padding-bottom:0;
+      padding-bottom: 0;
     }
   }
 

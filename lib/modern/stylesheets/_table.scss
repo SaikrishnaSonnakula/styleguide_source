@@ -1,7 +1,7 @@
 //Mixins
-$table-padding--xl-large:$tiny-spacing $small-spacing;
-$table-padding--large:$tiny-spacing $extra-tiny-spacing;
-$table-padding--small:$extra-tiny-spacing 0 $tiny-spacing;
+$table-padding--xl-large: $tiny-spacing $small-spacing;
+$table-padding--large: $tiny-spacing $extra-tiny-spacing;
+$table-padding--small: $extra-tiny-spacing 0 $tiny-spacing;
 $border--thick: 3px solid color("graphite");
 $border--thin: 1px solid color("graphite");
 $table-label-font-size: $tiny-font-size;
@@ -64,12 +64,12 @@ $table-label-font-size: $tiny-font-size;
     }
   }
   p {
-  margin: 0;
+    margin: 0;
   }
 }
 
 .data-table {
-    @extend %table;
+  @extend %table;
 }
 
 .data-table--large {
