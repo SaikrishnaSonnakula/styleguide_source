@@ -131,7 +131,6 @@ module.exports = function(grunt) {
           },
           hashes: false,
           stylesheet: 'scss',
-          relativeFontPath: 'assets/fonts',
           types: 'eot,woff,ttf,svg',
           syntax: 'bootstrap',
           htmlDemoTemplate: 'icons/_template.html',
