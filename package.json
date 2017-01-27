@@ -5,6 +5,10 @@
   "publishConfig": {
     "registry": "https://artifactory-fof.appl.kp.org/artifactory/api/npm/npm-release"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket-fof.appl.kp.org/projects/KPRWD/repos/styleguide/browse"
+  },
   "scripts": {
     "prestart": "npm run lint",
     "start": "grunt serve",
