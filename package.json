@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "_main-npm.scss",
   "publishConfig": {
     "registry": "https://artifactory-fof.appl.kp.org/artifactory/api/npm/npm-release"
