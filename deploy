@@ -1,0 +1,2 @@
+#!/bin/bash
+scp -rp target/dist/* www-data@cskpcloudxn1713.cloud.kp.org:/data/www/styleguide
