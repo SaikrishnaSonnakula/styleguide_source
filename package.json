@@ -16,7 +16,7 @@
     "prebuild": "npm run lint",
     "build": "grunt build",
     "test": "grunt test:ui",
-    "postpublish": "echo 'ready to postpublish this thing to a server!!!!PLEASE@@@@@'"
+    "postpublish": "./deploy"
   },
   "devDependencies": {
     "backbone": "~1.1.2",
