@@ -14,7 +14,6 @@ The styleguide to rule them all! this document covers:
 To view deployed examples of different components [see the online version](https://dev10.kaiserpermanente.org/styleguide/)
 
 <a name="installing"></a>
-
 ## Installing Styleguide
 Make sure you are running [Node JS](https://nodejs.org) to run npm and grunt commands. Consider installing [Node Version Manager](https://github.com/creationix/nvm)
 
